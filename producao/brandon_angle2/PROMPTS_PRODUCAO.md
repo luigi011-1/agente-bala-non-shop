@@ -1,5 +1,11 @@
 # holistic.brandon | Ângulo 2 (FityWell) | Pacote de Prompts
 
+> ⚠️ **ESTE ARQUIVO É O GABARITO DE FORMATO, NÃO DE CONTEÚDO.**
+> Copiar dele: a ORDEM das seções, a nomenclatura K/V/REF, as travas globais, o mapa de âncoras, a montagem e os gates.
+> **NÃO copiar duas práticas que foram revogadas depois de 18/08:**
+> 1. **Frase filler** (ver V02, "Because nobody ever explained this to you properly"). **PROIBIDO desde 2026-08-18.** Take curto se resolve requebrando o roteiro em fim de frase, nunca inventando palavra.
+> 2. **Um keyframe por take.** Desde 20/08 é **um keyframe por SETUP/BLOCO**.
+
 Vídeo modelo: `531403f2-4826-4586-8ba1-02906c2a73d0.mp4`
 
 Âncora de identidade: `C:\Users\luigi\Desktop\AVATARES NON-SHOP\holistic.brandon .png`

@@ -1,0 +1,162 @@
+---
+name: biblioteca-videos
+description: "Biblioteca dos 14 vídeos já clonados — cada caso com hook/estrutura/hero props/avatares produzidos + padrões de esqueleto recorrentes (inspeção comida, bebida matinal, testemunho antes/depois, antes/depois disfarçado, metáfora de limpeza)."
+metadata: 
+  node_type: memory
+  type: reference
+  originSessionId: 246ef273-2f24-4b5d-8e5e-51929be93030
+  modified: 2026-08-14T19:19:25.914Z
+---
+
+# Biblioteca de Vídeos Já Produzidos (casos reais)
+
+Memória dos vídeos já clonados. Serve de referência de estrutura e "receituário" de esqueletos que funcionam.
+
+## 1. Papada/ACV (04_08_50k_views)
+Hook: barriga/papada + ACV "derrete gordura". **Estabeleceu a regra:** "gere só o estado inicial; a transformação vai no vídeo" ([[regras-universais]] #9).
+
+## 2. Mel/listicle (cayenne + ACV + turmeric)
+Listicle de ingredientes. Ajuste de registro masculino no Melody.
+
+## 3. Fruta/inspeção Egito (Karim Nassar)
+Dicas de inspeção de fruta = o próprio ativo. Produzido fiel (a "dica" é o conteúdo).
+
+## 4. Fígado/bebida de beterraba (Karen_Parker)
+Hero props: modelo anatômico de fígado (cutaway translúcido segurado BAIXO sobre a barriga) + livro de ervas vintage. Receita: beterraba + gengibre + limão.
+
+## 5. Chá antes/depois (Elijah_Boone)
+**Testemunho antes/depois na MESMA cadeira.** Cliente (2ª pessoa) antes (barriga grande) e depois (abdômen definido), mesma cadeira/pose, só corpo muda; coach sozinho com xícara no CTA. Produzido para Brandon, Trevor e Melody.
+- **Maior risco de compliance** — antes/depois de corpo + "nada mais mudou" ([[compliance-riscos]] #1).
+
+## 6. Clareador dental caseiro (Andrew_Heals)
+Hook = insert macro de boca com dentes manchados que a água lava revelando dentes brancos (insert neutro, sem o avatar). Receita: óleo de coco + bicarbonato + limão em pasta. Produzido para Brandon, Trevor, Melody.
+
+## 7. Food safety "CTV_VALIDADO" (camarão/Fanta/maçã)
+Validado do Melody remodelado pra todos. Luvas azuis; 3 demos de inspeção com reveal nojento (vermes no camarão, mofo na Fanta, insetos na maçã); talking-head de autoridade + CTA. Produzido para Brandon, Trevor, Melody.
+
+## 8. Brócolis (The_Vitality_Guide)
+Hook: 2 brócolis erguidos → soak em água salgada em recipiente transparente → insert de insetos saindo → livro de remédios no CTA. Produzido para Melody.
+
+## 9. Disbiose intestinal (Connor_Briggs)
+Hook com 2ª pessoa (barriga estufada), coach aponta "não é gordura, é disbiose"; bebida ACV+mel em mason jar; CTA. 2ª pessoa mantida.
+- **Alto risco:** claim de diagnóstico ([[compliance-riscos]] #2).
+
+## 10. Braço/drink antes-depois DISFARÇADO (Connor_Briggs)
+**Caso-escola.** Hook: braço esticado no primeiro plano com a gordura embaixo encolhendo take a take; roupa muda de cor a cada take só pra fingir dias diferentes. Gerado em **estágios de imagem** (gordo→médio→definido). Produzido para Brandon e Trevor.
+- No original quem tem o braço é o coach; adaptamos pra cliente.
+- Ver [[metodo-puzzle]] caso especial + [[erros-recorrentes]] erro histórico #1 (lemos errado esse hook na primeira vez).
+
+## 11. Canela + abacaxi (Sage_Hippokrati)
+Hook: canela caindo em tigela de cerâmica de abacaxi; receita no liquidificador transparente (abacaxi→canela→água); copo do suco amarelo domina a 2ª metade. Melody.
+
+## 12. Canela dissolve açúcar (Sage_Hippokrati)
+Hook: pessoa deitada com barriga coberta de cristais de açúcar âmbar que a canela dissolve; receita copo+canela+limão; caneca âmbar no resto. Melody.
+- **Refinamos o hook** pra pedir MUITO volume de cristais ([[erros-recorrentes]] falha #7).
+
+## 13. Saúde íntima "kitty" (Erik_Cole)
+Hook: coach rega (regador) a cliente deitada, água escorre pra bandeja; receita cúrcuma+limão+mel numa panela; caneca âmbar + insert clínico; CTA.
+- **Ângulo coach** ("the women I coach"). Este vídeo teve muitos bloqueios de restrição no hook ([[restricoes-protocolo]]).
+- Regra definida aqui: avatar masculino NUNCA como usuário em produto feminino, sempre coach que prescreve.
+- Segundo erro histórico de leitura (água caía na virilha por cima da roupa, não "nos pés").
+
+## 14. pH/flora vaginal (Diane_R_Sullivan)
+Hook: líquido âmbar despejado num **modelo anatômico** do aparelho reprodutor feminino coberto de insetos, que são lavados. Maior parte talking-head. Ângulo coach ("15 years working with women", "the recipe I give every woman").
+- Cuidado: modelo anatômico tende a sair como coração/crânio ([[erros-recorrentes]] falha #6). Descrever FORMA (útero + trompas) e pôr negative "no heart model, no skull, no brain model".
+
+## 15. Escalda-pés com peróxido (snapinsta-1787665585342, 38,7s)
+Hook: peróxido despejado no **dorso do pé descalço** no chão, e a **espuma branca crescendo** dentro de um único take de 7,37s. Receita: meia xícara de peróxido + duas de água morna + uma colher de bicarbonato numa bacia. Depois ele senta num banquinho com os pés dentro, macro na espuma, e fecha listando 4 resultados. Growth puro: o CTA é follow + "comenta seu estado", sem produto e sem keyword.
+- **Herói = o crescimento da espuma**, não a garrafa. Reveal contínuo, uma imagem só do estado inicial.
+- Produzido para **Melody, Ângulo 1** em 2026-08-25 (`producao/melody_pes/`). Cenário movido do chuveiro pra **oficina**.
+- **Ponte nova e forte:** pé rachado e unha amarela são fim de linha de circulação, o pé é a ponta do cano, e o mesmo fluxo parou de chegar em outro lugar. Cadeia de 4 elos.
+- **O que não repetir:** rota 1 (a ordem errada), escalada de magnitude, desistência sem culpa, variabilidade de safra.
+
+## 16. Sal grosso no chão do chuveiro (9a493713, 56,6s)
+Hook: sal grosso despejado no chão do box e a **montanha crescendo** dentro do take. Protocolo: ficar dez minutos em cima, descalço. Insert nos pés (250 mil glândulas), mecanismo (água quente + sal puxam fluido e inflamação), cascata de resultados (**cortisol cai**, inflamação derrete, músculo solta, humor, mente), future pacing (pernas leves, ombros caem, o sono da noite).
+- **Herói = a montanha de sal crescendo**, não o pote. Reveal contínuo, uma imagem só do estado inicial.
+- **O CTA dele JÁ É `comment yes` + follow gate**, e ainda é um LOOP: promete outro protocolo três vezes mais eficaz. Ponte pro produto de graça.
+- **Duas alavancas de copy que valem roubar em qualquer nicho:** o **custo zero** ("você já fica dez minutos ali sem fazer nada") e a **validação da objeção** ("eu sei que parece loucura, mas").
+- Produzido para **Melody, Ângulo 1** em 2026-08-25 (`producao/melody_sal/`). Cenário **box de chuveiro**, não a oficina, porque a copy depende do chuveiro.
+- **Ponte:** cortisol é problema de vinte e quatro horas, não de dez minutos. Derivada da métrica de TEMPO do próprio vídeo.
+- **O que não repetir:** rota 3, perda ativa, custo real do caseiro, cadeia sem fiscalização.
+- ⚠️ **Erro do original que a gente NÃO copia:** ele é banhado de âmbar quente de teto, que é o que mais entrega cara de IA. Nosso clone vai com luz neutra de dia nublado.
+
+---
+
+---
+
+# ÂNGULO 3 (Auraly) — vídeos produzidos
+
+> ⚠️ **Registrar aqui SEMPRE, assim que o pacote fica pronto** (PORTÃO P10 do `CLAUDE.md`).
+> Em 2026-08-25 o Luigi mandou o mesmo vídeo modelo duas vezes e eu só peguei porque tinha a
+> transcrição salva no swipe por acaso. **É esta seção que faz o P1 funcionar.**
+
+## 17. O véu de fumaça · `producao/blake_veu/` · 2026-08-24
+- **Modelo:** `AQNw72u-N08pJ7ZDe6hq...mp4`, também baixado como `snapinsta-1787686217481.mp4`. **É o mesmo vídeo, dois arquivos.** 66,547s, uma cena contínua, 8 falsos cortes de chama.
+- **Fala de identificação:** *"Before you scroll, something extremely unusual is happening right now."*
+- **Esqueleto:** reveal mudo de 7,7s (sopra o maço de sálvia, fumaça engole o quadro e abre) → anti-skip → eleição → data específica → promessa datada → o trato → salvar → CTA.
+- **Avatar:** Blake Epeterson · **Ângulo de entrada:** o véu que se abre.
+- **Rota de fechamento:** não consome rota, o modelo não tem beat de fechamento argumentativo.
+- **Cinco ganchos aprovados:** véu puxado do retrato, polaroid revelando, fio vermelho, círculo de sal, envelope com lacre.
+- **NÃO REPETIR:** este esqueleto e estas frases estão queimados.
+
+## 19. O véu de fumaça, versão Kendra · `producao/kendra_veu/` · 2026-08-25
+- **Mesmo modelo e MESMA COPY do #17**, rodado na Kendra Collins. Primeiro uso do eixo **1 esqueleto × N ângulos × 2 avatares**.
+- **Nada de copy novo.** Trocou identidade, cenário, registro de voz e os parâmetros de rastreio.
+- **Experimento embutido:** `rt_ad` com prefixo `kendra_*` separa do Blake no RedTrack, e mede **qual avatar converte melhor com a mesma mensagem**.
+- **⚠️ Nunca publicar o #17 e o #19 na mesma conta.**
+
+## 18. A inicial no WhatsApp · `producao/blake_inicial/` · 2026-08-25
+- **Modelo:** `snapinsta-1787622485916.mp4`, leitora de tarô, 47,5s, uma cena contínua sem corte.
+- **Fala de identificação:** *"There's someone who thinks you've given up on them..."*
+- **Esqueleto:** hook com promessa da inicial → eleição por sincronicidade → o trato → a leitura (retrato psicológico) → **truque do WhatsApp** → CTA.
+- **Avatar:** Blake Epeterson · **Ângulo de entrada:** alguém que acha que ela desistiu dele.
+- **Novidade:** primeiro uso do **truque do WhatsApp**, o device mais forte do nicho.
+- **Cinco ganchos aprovados:** três cartas viradas, envelope com lacre, ímã e a carta, letrinhas, borra de café.
+- **NÃO REPETIR:** este esqueleto e estas frases estão queimados.
+
+## 20. A inicial no WhatsApp, versão Kendra · `producao/kendra_inicial/` · 2026-08-25
+- **Mesmo modelo e MESMA COPY do #18**, rodado na Kendra Collins.
+- **Nada de copy novo.** Trocou identidade, cenário, registro de voz e rastreio.
+- **Fecha o teste cruzado 2x2:** duas copies (véu e inicial) × dois avatares (Blake e Kendra). Responde **qual avatar converte mais com a mesma copy** e **qual copy converte mais com o mesmo avatar**.
+- **⚠️ Nunca publicar o #18 e o #20 na mesma conta.**
+- **Alerta de variedade:** o gancho do **envelope com lacre** agora roda nos quatro pacotes. Substituto pronto no `ROTEIRO.md`: o pêndulo sobre a carta.
+
+## 17. Rosto inchado derretendo / açúcar (snapinsta-1787707339628, 27,1s, ORIGINAL EM ESPANHOL)
+Hook: **escultura de uma cabeça humana muito inchada** na mesa, chá quente despejado por cima, e ela **derrete e desincha dentro de um único take de 7,17s** até virar um rosto magro. Receita de gengibre, cúrcuma e canela num bule de vidro. Fecha com um **livro de receitas antigo** aberto como prop de autoridade.
+- **Herói = o derretimento.** Reveal contínuo, uma imagem só do estado totalmente inchado.
+- 🔴 **O PROP DE MAIOR RISCO DE RESTRIÇÃO DA OPERAÇÃO INTEIRA.** Junta cabeça humana + careta de sofrimento + textura de carne + derretimento. **A mitigação principal é virar a expressão NEUTRA de olhos fechados**, tipo busto clássico: derruba a maior parte do risco e não custa nada visualmente, porque o herói é o inchaço e não a careta.
+- **Três coisas de copy que valem roubar:** o **beat do Walmart** ("e ninguém no supermercado está te contando. Mas eu estou"), que é conspiração leve mais autoridade mais geolocalização em duas frases; a **prova social agregada e vaga** ("em milhares de mulheres nos EUA já está acontecendo"); e o **CTA que entrega um LIVRO** com keyword temática, que é lead magnet e não link.
+- Produzido para **Melody, Ângulo 1** em 2026-08-25 (`producao/melody_rosto/`). **Segmentação virada por inteiro**: mulheres viraram homens 40+, papada virou mandíbula, glow virou a vontade das nove da noite.
+- **Ponte:** o rosto é o mostrador, e o que ele mostra é o desejo por açúcar. **Vende APETITE**, que é o claim mais defensável do açafrão e nunca tinha sido usado nesta conta.
+- **O que não repetir:** rota 4, pergunta sem saída, efeito colateral do caseiro, a prateleira de volume.
+
+---
+
+## Padrões de esqueleto que se repetem (atalhos mentais)
+
+### Inspeção de comida
+Demo + reveal nojento (insert) + autoridade/livro + CTA. **Luvas azuis** obrigatórias.
+
+### Bebida matinal que resolve X
+Hook (metáfora/demo) + receita + protocolo + resultado + CTA.
+
+### Testemunho antes/depois (mesma cadeira)
+2ª pessoa antes e depois, mesma pose; coach com produto no CTA. **Alto risco de compliance.**
+
+### Antes/depois DISFARÇADO de continuidade
+Herói encolhe take a take, roupa muda de cor pra fingir dias; gerar em estágios de imagem.
+
+### Metáfora de "limpeza"
+Algo sujo/infestado que o líquido lava (dente, modelo anatômico, brócolis). **O reveal é o herói.**
+
+### Reação química que denuncia o invisível
+Líquido despejado no corpo que **espuma/efervesce**, e a espuma é a prova de que havia algo ali. Parente da metáfora de limpeza, mas mais forte: não mostra sujeira saindo, mostra uma **reação**, que o espectador não consegue fingir que é edição. Caso 15. **A ponte natural pro Ângulo 1 é extremidade = fim da linha de circulação.**
+
+### Protocolo de custo zero (o esqueleto mais fácil de vender que existe)
+Nada se compra, nada se prepara, e o tempo já está sendo gasto: **"você já faz isso dez minutos por dia sem fazer nada"**. O beat de validação da objeção ("eu sei que parece loucura") vem colado. Casos 15 e 16. **A ponte pro produto nunca é "a receita não funciona", é sempre que ela é curta demais ou rasa demais** para o problema que o vídeo acabou de nomear.
+
+### O beat do "ninguém está te contando" (barato e forte)
+Duas frases entre o hook e a receita: **"e no seu país ninguém [no varejo] está te contando isso. Mas eu estou."** Faz três trabalhos de uma vez: conspiração leve, autoridade sem credencial, e geolocalização do público. Caso 17. **Custa um beat e a gente não tinha isso em nenhum roteiro.**
+
+### Movie Style (cena roteirizada com gatilho emocional)
+Não é receita/demo — é uma **mini-cena atuada**. 5 beats: pessoa em forma recebe atenção → alguém inseguro/traído reage → o avatar revela o "segredo" ("I just started following this old coach… he changed my life") → **corte pro script de saúde/produto**. Emoções que convertem: ciúme, traição, admiração. Hook = mostrar o estado desejado do homem + a atração de alguém por ele; close-up e cena simples (as mesmas regras de composição do hook valem). Congruência dura: avatar precisa de **autoridade** no demográfico (cenário de academia/boxe/militar constrói isso); avatar velho não faz atleta sem camisa → age-reversal. **Especificar a dor por parte do corpo** (barriga, braços finos, ginecomastia, pernas inchadas, etc.) e **mostrar a parte afetada na tela** antes de cortar pra solução. Esqueleto de diálogo fixo, troca-se só cenário/idade/dor. Playbook completo em [[playbook-completo]] (PLAYBOOK_COMPLETO/11_insights_otimizacao.md).

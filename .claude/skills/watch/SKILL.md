@@ -18,6 +18,20 @@ Este é o passo aprimorado da **Fase 2 (Decomposição)** da operação. Objetiv
   ```
 - O wrapper `run_watch.ps1` usa primeiro o Python da `.venv` e não depende de caminho de usuário fixo.
 
+## PORTAO P1 — ler ANTES de rodar o pipeline
+
+- `biblioteca-videos` → **este esqueleto ja foi produzido?** Se ja, qual variavel usamos e o que nao repetir
+- `erros-recorrentes` → os 3 erros historicos de leitura de hook
+
+## PORTAO P2 — depois da transcricao, ANTES de tocar na copy
+
+**Nada de metodo puzzle antes de reler estes.** Lista completa no PORTAO P2 do `CLAUDE.md`:
+`metodo-puzzle` · `feedback-copy-lapida-estrutura` (rodar o CRIVO) · `referencia-frameworks-copy` ·
+`congruencia-matriz` · `estilo-copy-sem-travessao` · a memoria do angulo · e, se houver fechamento,
+`banco-rotas-argumentativas` com o LOG + `banco-obstaculos` + `feedback-ponte-argumentada`.
+
+So depois disso a copy pode ser modificada e entregue pro Luigi aprovar ou ajustar.
+
 ## Passo a passo (siga na ordem)
 
 ### 1. Localizar o `.mp4`

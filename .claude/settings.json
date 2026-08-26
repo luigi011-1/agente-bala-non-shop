@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"c:/Users/luigi/Desktop/AGENTE NON-SHOP/.claude/hooks/gabarito_hook.py\" 2>/dev/null || true",
+            "timeout": 10,
+            "statusMessage": "Carregando gabarito de entrega..."
+          }
+        ]
+      }
+    ]
+  }
+}
