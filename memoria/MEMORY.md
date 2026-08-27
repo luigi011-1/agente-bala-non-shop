@@ -59,6 +59,10 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 - [Protocolo de restrições](restricoes_protocolo.md) — **Regra #0: o Luigi já tentou várias vezes, nunca sugerir retry.** Nunca listar termo sensível no negative (órgão, gore, logo, marca)
 - [Compliance e risco de conta](compliance_riscos.md) — hierarquia de risco, postura punchy + aviso
 
+## ⏳ EM ABERTO / ARMADILHAS CONHECIDAS (ler antes de commitar ou de "limpar falhas")
+- [sync_memoria.ps1 apaga o README](sync_memoria_apaga_readme.md) — **depois de todo sync, `git checkout -- memoria/README.md`**. Correcao em andamento desde 2026-08-26
+- [Faixa de palavras: piso em aberto](faixa_palavras_piso_aberto.md) — teto subiu pra **29** em 2026-08-26. O **piso de 13 nao foi decidido** e o linter reprova 26 takes antigos. Perguntar antes de reescrever
+
 ## 📚 CONSULTA (abrir quando fizer sentido, não obrigatório)
 - [Operação, playbook](operacao_playbook.md) — modelo de negócio, funil DM, ética
 - [Stack de ferramentas](stack_ferramentas.md) — Nano Banana, Veo/Flow, ffmpeg
