@@ -10,6 +10,8 @@ Copy, ângulos, obstáculos e rotas argumentativas ficam na memória. Aqui fica 
 1. Rodar `/watch` no `.mp4`.
 2. **Ler `producao/brandon_angle2/ROTEIRO.md` e `PROMPTS_PRODUCAO.md`.** São o gabarito vivo. Nunca reinventar o formato de memória.
 3. Perguntar o ângulo (1 Korella / 2 FityWell / 3 Auraly) e confirmar o avatar.
+   **Exceção do avatar:** `.mp4` + imagem de avatar na mesma mensagem já decide para quem é,
+   ver a seção do Ângulo 3. Nesse caso só resta perguntar o ângulo.
    **Ângulo 3 tem fluxo próprio**, ver a seção no fim deste arquivo. O passo 1 vira opcional lá.
 4. Criar a pasta `producao/<avatar>_<slug>/` e escrever os DOIS arquivos.
 
@@ -103,6 +105,8 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
   **o rosto da alma gêmea**, nunca o app: ela mandou uma mensagem ao universo, o universo respondeu, e o
   rosto só é revelado se ela clicar no link. Ângulo de entrada é livre, a **ponte pro rosto é obrigatória**.
 - **Roteiro final completo é a ÚLTIMA coisa da entrega**, depois de todos os prompts. E o último bloco de todos é sempre o **roteiro final em INGLÊS**, numerado por take mais a versão corrida só-fala. A tabela bilíngue vem antes dele, não no lugar dele.
+- **Entrega não fecha com FALHA no `checar_entrega.py`.** O linter lê do disco e sobrevive ao resumo
+  de contexto de sessão longa, que é exatamente quando eu esqueço regra.
 - **Nunca sugerir "tenta de novo"** quando o Luigi reporta bloqueio. Ele já tentou várias vezes.
 - **Nunca listar termo sensível no `negative`** (nome de órgão, gore, logo/marca). O classificador lê o token, não a negação.
 
@@ -165,6 +169,13 @@ Só depois disso a copy pode ser modificada e mandada pro Luigi aprovar ou ajust
 - `PLAYBOOK_COMPLETO/09_troubleshooting_restricoes.md`
 
 ### P9 · Fechando a entrega
+- **RODAR O LINTER, e só fechar com zero FALHAS:** `python checar_entrega.py producao/<avatar>_<slug>`
+  Ele checa do DISCO o que dá pra checar por máquina, então **não depende de eu lembrar de nada**:
+  travessão na copy, keyword do ângulo, 13 a 25 palavras por take, fala do prompt igual palavra por
+  palavra ao roteiro, JSON válido, bandeira dos EUA, `no captions`, termo sensível no negative,
+  seções na ordem, nomenclatura T/K/V/REF, os 5 blocos do prompt de vídeo, instrução de patch,
+  produto em quadro nos ângulos 2 e 3, e as travas do ângulo 3. Falso positivo se conserta no linter,
+  nunca se ignora.
 - `feedback-prompts-na-conversa` → arquivo E chat, linha curta antes de cada prompt
 - `feedback-roteiro-final` → roteiro final em inglês por último
 - Gate final da skill `/produzir`, colado preenchido
@@ -219,7 +230,7 @@ O **Blake Epeterson foi aposentado em 2026-08-25** e substituído pela Cody.
 
 **Registro: divino, nunca oculto.** Ver a lei em `angulo3-copy-auraly`.
 
-**🃏 Depois do take do gancho, o Blake segura a CARTA SOULMATE** (casal ilustrado, palavra SOULMATE na
+**🃏 Depois do take do gancho, a avatar segura a CARTA SOULMATE** (casal ilustrado, palavra SOULMATE na
 base, tons claros) e a mantém na mão até o fim. Gerar uma vez como `REF-CARTA` e anexar sempre, igual
 o Ângulo 1 faz com o `product.png`.
 
@@ -256,11 +267,11 @@ Não vale nos Ângulos 1 e 2, onde o herói do hook carrega argumento e não pod
 **Entregar de 8 a 10 variações**, ordenadas por congruência, clickbait puro no fim e marcado como tal.
 Banco dos 13 mecanismos em `producao/_swipe_auraly/BANCO_GANCHOS_VISUAIS.md`.
 
-**O formato da conta do Blake é PLANO ÚNICO, nunca split screen.** Câmera na altura do peito do outro
-lado da mesa: ele do peito pra cima em cima, a mesa no terço inferior do MESMO quadro, e **ele executa
+**O formato das contas do Ângulo 3 é PLANO ÚNICO, nunca split screen.** Câmera na altura do peito do outro
+lado da mesa: a avatar do peito pra cima em cima, a mesa no terço inferior do MESMO quadro, e **ela executa
 a ação do gancho com as próprias mãos enquanto fala**. Sem close isolado na mesa, sem B-roll separado.
 É a regra 1 do `checklist-composicao-visual`: herói no lower foreground, mais perto que o rosto.
-O gancho vive no **T1**. Do T2 em diante ele segura a carta e os takes **se reaproveitam** entre
+O gancho vive no **T1**. Do T2 em diante ela segura a carta e os takes **se reaproveitam** entre
 variações, então cada gancho novo custa **só 1 keyframe + 1 clipe**.
 
 **Terceiro arquivo, `DM.md`:** a mensagem que promete o rosto, a ponte pro link sem citar quiz/app,

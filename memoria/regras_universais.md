@@ -1,11 +1,11 @@
 ---
 name: regras-universais
-description: "10 regras fixas que valem para TODA produção — keyword por ângulo (yes nos ângulos 1 e 2, **222 no ângulo 3**), zero texto, reference_use, sem copo de vidro decorativo, realismo UGC, takes ~8s sem em dash, fala nunca é o problema, frame a frame denso, só estado inicial, trocar só o do avatar entre versões."
+description: "10 regras fixas que valem para TODA produção — keyword por ângulo (yes nos ângulos 1 e 2, **222 no ângulo 3**), zero texto, reference_use, sem copo de vidro decorativo, realismo UGC, takes ~8s sem em dash, fala nunca é o problema, frame a frame denso, só estado inicial, e entre avatares o esqueleto se mantém mas a COPY é ajustada por congruência (regra 10 reescrita em 2026-08-26)."
 metadata: 
   node_type: memory
   type: feedback
   originSessionId: 246ef273-2f24-4b5d-8e5e-51929be93030
-  modified: 2026-08-21T23:51:52.145Z
+  modified: 2026-08-26T23:40:00.000Z
 ---
 
 # Regras Universais Fixas (valem para TODOS os vídeos)
@@ -54,8 +54,24 @@ Nunca presumir estrutura. Nunca pattern-matching. Grades densas (0,3-0,5s no hoo
 ## 9. Gerar SÓ o estado inicial de cada take
 A transformação (líquido dissolvendo, água lavando, etc.) acontece no vídeo (Fase 7), não em imagens separadas. Exceção: os "estágios" do antes/depois disfarçado são takes DIFERENTES, cada um com sua imagem (correto).
 
-## 10. Ao produzir o mesmo vídeo para vários avatares
-Trocar SÓ o que é do avatar (cenário, cruz, registro, gênero da fala). Manter esqueleto e props idênticos.
+## 10. Ao produzir o mesmo vídeo para vários avatares (REVOGADA E REESCRITA em 2026-08-26)
+
+**A versão antiga desta regra dizia:** *"trocar SÓ o que é do avatar (cenário, cruz, registro,
+gênero da fala), manter esqueleto e props idênticos"*. **O Luigi revogou em 2026-08-26**, porque ela
+levou a portar copy palavra por palavra entre avatares (`kendra_veu` e `kendra_inicial` foram feitos
+assim, sob a regra antiga; se forem retomados, passar pelo ajuste de congruência).
+
+**Regra vigente:** o esqueleto e os props continuam idênticos, mas a **COPY é ajustada por
+congruência**, nunca copiada literalmente.
+
+- **Muda de redação:** beats de autoridade, eleição e prova social, porque dependem de vivência.
+  Idade, gênero e registro mudam o que soa crível na boca de cada avatar.
+- **Não muda:** beats de mecânica de funil (punição por inação, follow gate, CTA, fecho), porque
+  mecânica não tem idade.
+
+Abrir [[congruencia-matriz]] antes de portar. Exemplo trabalhado em
+`producao/cody_selos/ROTEIRO.md`, seção "O que mudou em relação à Kendra, e por quê".
+Mesma regra em [[avatares-fichas]] e no `CLAUDE.md`.
 
 ## Regras específicas por avatar (memória rápida)
 - **Brandon:** cruz de OURO (não force prata)

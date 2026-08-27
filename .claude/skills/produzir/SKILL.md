@@ -9,27 +9,42 @@ Esta skill existe por um motivo especifico: em 2026-08-21 o formato de entrega s
 
 ---
 
-## PASSO 0 — PORTAO P5: ler ANTES de escrever qualquer coisa
+## PASSO 0 — CARREGAR A MEMORIA INTEIRA, de uma vez, antes de tudo
 
 **Executar esta skill NAO substitui ler.** A skill e a ordem, os documentos sao o conteudo.
-Ler os nove itens do **PORTAO P5** do `CLAUDE.md`, sempre, mesmo achando que lembra:
+
+Ate 2026-08-26 este passo era uma lista de nove memorias pra abrir uma a uma (o PORTAO P5).
+Isso falhava por um motivo simples: **eu decidia o que era relevante ANTES de ler**, e errava a
+decisao. Regra que eu nao achava relevante era regra que eu nao abria.
+
+**Regra vigente: carregar TUDO. Um comando, uma chamada, antes de qualquer outra coisa.**
+
+```bash
+cd ~/.claude/projects/C--Users-luigi-Desktop-AGENTE-NON-SHOP/memory && for f in *.md; do echo "########## $f ##########"; cat "$f"; done
+```
+
+Sao 37 arquivos, ~257 KB, ~80k tokens. Custa segundos e menos de 1% do orcamento da sessao.
+**Nao existe desculpa de custo pra pular.** Nao ler custa retrabalho, que e mais caro.
+
+**Nao filtrar, nao ler por amostragem, nao abrir so os do angulo.** O ponto do passo e
+justamente eliminar o julgamento previo de relevancia.
+
+Depois de rodar, os PORTOES P1 a P9 continuam valendo, mas **como roteiro de APLICACAO**,
+nao de leitura: eles dizem em que momento cada regra e aplicada, e o conteudo ja esta carregado.
+
+**Ainda ler a parte, porque nao esta na memoria:**
 
 ```
-[ ] producao/brandon_angle2/ROTEIRO.md  (o gabarito vivo)
+[ ] producao/brandon_angle2/ROTEIRO.md        (o gabarito vivo, esta no repo)
 [ ] producao/brandon_angle2/PROMPTS_PRODUCAO.md
-[ ] memoria workflow-entrega-gabarito
-[ ] memoria checklist-composicao-visual
-[ ] memoria realismo-anti-cara-de-ia
-[ ] memoria prompts-imagem-json
-[ ] memoria erros-recorrentes (falhas 1 a 7)
-[ ] memoria avatares-fichas (tracos canonicos + caminho da ancora)
-[ ] memoria feedback-prompt-imagem-compartilhado + feedback-enquadramento-mais-proximo
+[ ] PLAYBOOK_COMPLETO/11_insights_otimizacao.md secao 3   (antes dos prompts de VIDEO, P6)
 ```
-
-**E antes dos prompts de VIDEO, o PORTAO P6:** `prompts-video-fase7`,
-`PLAYBOOK_COMPLETO/11_insights_otimizacao.md` secao 3, e `restricoes-protocolo`.
 
 **Depois da entrega, o PORTAO P10:** escrever no log de rotacao e na biblioteca de videos.
+
+> ⚠️ **Sessao longa:** se o contexto for resumido no meio da producao, o que foi lido aqui pode
+> ter sido comprimido. O `checar_entrega.py` do PASSO 7 nao depende disso, porque le do disco.
+> Se bater duvida sobre uma regra depois de muitas horas, reabrir o arquivo dela, nao chutar.
 
 ---
 
@@ -279,6 +294,34 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
 **Se travar restricao:** o Luigi ja tentou varias vezes antes de reportar. Nunca sugerir retry. Ir direto pro protocolo de `restricoes-protocolo`: enxugar a acao, neutralizar o alvo, separar em takes diferentes.
 
 **Keyword sempre `yes`.** Zero travessao. Angulo 2 nao mostra produto, Angulo 1 mostra sempre.
+
+---
+
+## PASSO 7 — RODAR O LINTER, antes de colar qualquer coisa na conversa
+
+**Obrigatorio. Nao e opcional e nao substitui os gates a olho, roda junto com eles.**
+
+```bash
+python checar_entrega.py producao/<avatar>_<slug>
+```
+
+Ele le os arquivos DO DISCO e checa o que da pra checar por maquina: travessao na copy,
+keyword do angulo, 13 a 25 palavras por take, **fala do prompt de video igual palavra por
+palavra ao roteiro**, JSON valido, bandeira dos EUA em todo keyframe com cenario, `no captions`
+no negative, termo sensivel no negative, secoes obrigatorias na ordem, nomenclatura T/K/V/REF,
+os 5 blocos do prompt de video, instrucao de patch, produto em quadro nos angulos 2 e 3, e as
+travas do angulo 3 (DM.md presente, sem "one-time", registro divino, rosto nunca revelado).
+
+**Zero FALHAS antes de entregar.** Se sobrar falha, corrigir e rodar de novo. Se a falha for
+falso positivo, **consertar o linter**, nao ignorar a saida: linter que se aprende a ignorar
+morre em uma semana.
+
+> Existe porque o carregamento do PASSO 0 pode ser comprimido numa sessao longa, e porque
+> regra lembrada e regra esquecida. O linter le do disco e nao depende de contexto nenhum.
+
+> ⚠️ O gabarito `producao/brandon_angle2/` **falha de proposito** em tres pontos, e isso e
+> esperado: a frase filler do V02 e o celular em quadro do K06 sao as **duas praticas revogadas**,
+> e cinco takes passam de 25 palavras. Copiar o FORMATO dele, nunca essas tres coisas.
 
 ---
 

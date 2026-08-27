@@ -13,7 +13,7 @@ metadata:
 **O que faz (uma frase):** produz vídeos verticais curtos (9:16, Reels/TikTok/Facebook) protagonizados por **avatares de IA (pessoas que NÃO existem)** que parecem influenciadores de saúde/wellness americanos, para o público dos EUA, e converte via funil comentário → DM → link de afiliado.
 
 ## Nicho e público
-- **Nicho:** saúde, bem-estar, "remédios naturais", receitas caseiras, detox, emagrecimento, saúde íntima, saúde digestiva. Existe braço espiritual/manifestação (mesmo método), que desde 2026-08-24 está mapeado como **Ângulo 3 (app Auraly, alma gêmea/lei da atração, mulheres EUA, avatar Blake Epeterson)** em [[angulo3-copy-auraly]].
+- **Nicho:** saúde, bem-estar, "remédios naturais", receitas caseiras, detox, emagrecimento, saúde íntima, saúde digestiva. Existe braço espiritual/manifestação (mesmo método), que desde 2026-08-24 está mapeado como **Ângulo 3 (app Auraly, alma gêmea/lei da atração, mulheres EUA, avatares Kendra Collins e Cody Miller; Blake Epeterson aposentado em 2026-08-25)** em [[angulo3-copy-auraly]].
 - **Público:** EUA, pessoas comuns, muitas vezes mais velhas, desconfiadas da indústria farmacêutica.
 - **Idioma do vídeo:** inglês americano natural e coloquial (nunca formal). Bastidor em português.
 - **Plataformas:** TikTok, Instagram Reels, Facebook Reels. Sempre 9:16 vertical.

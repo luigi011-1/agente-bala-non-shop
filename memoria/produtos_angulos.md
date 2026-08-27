@@ -1,19 +1,20 @@
 ---
 name: produtos-angulos
-description: "Os TRES produtos/ângulos que o Luigi vende e a regra de workflow de sempre perguntar qual ângulo adaptar. Ângulo 1 = nutra masculino Korella Saffron (Amazon, vitalidade/blood flow/ED). Ângulo 2 = app feminino FityWell 'Metabolic Reset 40+' (quiz, mulheres 40+, peso/inchaço/energia/parecer jovem) — inclui banco de insights de copy extraído do quiz (mecanismo hormônio/metabolismo/intestino, dores, frases emocionais, transformação). Ângulo 3 = app Auraly (alma gêmea/manifestação, mulheres EUA, avatar Blake Epeterson), doutrina completa em angulo3-copy-auraly."
+description: "Os TRES produtos/ângulos que o Luigi vende e a regra de workflow de sempre perguntar qual ângulo adaptar. Ângulo 1 = nutra masculino Korella Saffron (Amazon, vitalidade/blood flow/ED). Ângulo 2 = app feminino FityWell 'Metabolic Reset 40+' (quiz, mulheres 40+, peso/inchaço/energia/parecer jovem) — inclui banco de insights de copy extraído do quiz (mecanismo hormônio/metabolismo/intestino, dores, frases emocionais, transformação). Ângulo 3 = app Auraly (alma gêmea/manifestação, mulheres EUA, avatares Kendra Collins e Cody Miller; Blake Epeterson aposentado em 2026-08-25), doutrina completa em angulo3-copy-auraly. ATENÇÃO: keyword é 222 no Ângulo 3, yes só nos ângulos 1 e 2."
 metadata: 
   node_type: memory
   type: project
   originSessionId: 76ee2741-6b6a-48f5-af27-5498dbe6f622
-  modified: 2026-08-21T15:00:23.125Z
+  modified: 2026-08-26T23:40:00.000Z
 ---
 
 # Três produtos / três ângulos + regra de workflow
 
 ## REGRA DE WORKFLOW (sempre) — confirmada pelo Luigi
 Depois de analisar o vídeo que ele envia (com o avatar em anexo), **SEMPRE perguntar: adaptamos pro Ângulo 1, 2 ou 3?** e **explicar o que muda em cada** (copy, herói, dores atacadas, CTA/produto) antes de produzir. Só depois da escolha dele → roteiro cena a cena + prompts.
-- **O mesmo avatar pode rodar mais de um ângulo** (por isso perguntar sempre). Exceção: o Ângulo 3 roda com **Blake Epeterson e mais ninguém**.
-- **Keyword sempre `yes`** nos três.
+- **O mesmo avatar pode rodar mais de um ângulo** (por isso perguntar sempre). Exceção: o Ângulo 3 roda **só com Kendra Collins e Cody Miller** (corrigido em 2026-08-26; a versão antiga dizia "Blake Epeterson e mais ninguém", e o **Blake foi aposentado em 2026-08-25**).
+- **Keyword por ângulo:** `yes` nos Ângulos 1 e 2, **`222` no Ângulo 3** (corrigido em 2026-08-26; a versão antiga dizia "sempre `yes` nos três", revogada em 2026-08-24). Autoridade em [[regras-universais]] regra 1.
+- **📎 O anexo decide o avatar:** `.mp4` + imagem de avatar na mesma mensagem = produzir para aquele avatar, sem perguntar. Nesse caso a pergunta que resta é só o ângulo. Ver [[angulo3-copy-auraly]].
 - CTA no vídeo é sempre "comment yes"; **muda só o destino da DM**: Ângulo 1 → deep link Amazon do nutra; Ângulo 2 → link do quiz FityWell; Ângulo 3 → link do quiz Auraly.
 - Nunca copiar 100% — adaptar (método puzzle). Ver [[metodo-puzzle]] refinamento de seleção de fonte.
 

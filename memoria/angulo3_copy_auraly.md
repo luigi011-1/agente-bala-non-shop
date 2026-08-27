@@ -142,7 +142,7 @@ Segue valendo o roster do [[avatares-fichas]]: cruz cristã na parede, pingente 
 Aplicação nas 3 ações do CTA em [[angulo3-swipe-padroes]], que traz a tabela de tradução frase a frase.
 
 ## 🃏 TRAVA: A CARTA SOULMATE NA MÃO DEPOIS DO GANCHO (Luigi, 2026-08-24)
-**Regra fixa de todo vídeo do Ângulo 3.** Terminado o take do gancho, o Blake aparece **segurando a carta de tarô SOULMATE** e a mantém na mão até o fim do vídeo.
+**Regra fixa de todo vídeo do Ângulo 3.** Terminado o take do gancho, a avatar aparece **segurando a carta de tarô SOULMATE** e a mantém na mão até o fim do vídeo.
 
 **A carta:** ilustração de um **casal**, a palavra `SOULMATE` ou `TWINFLAME` na base, arte em **tons claros** (creme, dourado, rosa claro, azul claro). Cumpre a regra de carta em cor clara.
 

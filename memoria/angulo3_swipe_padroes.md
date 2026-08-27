@@ -108,7 +108,7 @@ O truque do WhatsApp (beat 5 do longo) cabe no micro e é o que mais entrega pro
 > ❌ **NÃO É SPLIT SCREEN.** Eu li errado as folhas de contato e inventei duas metades compostas.
 > ✅ **É UM QUADRO SÓ.**
 
-**Plano único, câmera na altura do peito do outro lado da mesa.** O Blake aparece do peito pra cima na parte de cima do quadro, e **a mesa ocupa o terço inferior do MESMO quadro**. Ele **executa a ação do gancho com as próprias mãos enquanto fala**, olhando pra lente.
+**Plano único, câmera na altura do peito do outro lado da mesa.** A avatar aparece do peito pra cima na parte de cima do quadro, e **a mesa ocupa o terço inferior do MESMO quadro**. Ela **executa a ação do gancho com as próprias mãos enquanto fala**, olhando pra lente.
 
 Não existe close-up isolado na mesa. Não existe clipe de B-roll separado. Não existe composição de duas metades no CapCut. **A ação e a fala acontecem juntas, no mesmo take, com o mesmo avatar em quadro.**
 

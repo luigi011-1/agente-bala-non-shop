@@ -114,7 +114,7 @@ Enquadramento sentada à mesa, plano médio, cara de UGC de celular.
 
 ## Kendra Collins — FICHA CANÔNICA (ÂNGULO 3)
 Fixada em 2026-08-25. **A fonte de verdade é a IMAGEM-ÂNCORA aprovada pelo Luigi nessa data.**
-Segundo avatar do Ângulo 3, ao lado do [[angulo3-copy-auraly]] Blake Epeterson.
+Avatar do Ângulo 3 ao lado da Cody Miller. O Blake Epeterson foi aposentado em 2026-08-25, ver [[angulo3-copy-auraly]].
 
 ### 📎 CAMINHO DA ÂNCORA
 `producao/_ancoras/KENDRA COLLINS .jpeg` (salva pelo Luigi em 2026-08-25). **Atenção ao espaço antes da extensão**, o nome do arquivo é esse mesmo.
