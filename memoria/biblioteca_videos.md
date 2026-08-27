@@ -79,6 +79,15 @@ Hook: sal grosso despejado no chão do box e a **montanha crescendo** dentro do 
 - **Ponte:** cortisol é problema de vinte e quatro horas, não de dez minutos. Derivada da métrica de TEMPO do próprio vídeo.
 - **O que não repetir:** rota 3, perda ativa, custo real do caseiro, cadeia sem fiscalização.
 - ⚠️ **Erro do original que a gente NÃO copia:** ele é banhado de âmbar quente de teto, que é o que mais entrega cara de IA. Nosso clone vai com luz neutra de dia nublado.
+## 21. Rosto inchado derretendo / açúcar (snapinsta-1787707339628, 27,1s, ORIGINAL EM ESPANHOL)
+Hook: **escultura de uma cabeça humana muito inchada** na mesa, chá quente despejado por cima, e ela **derrete e desincha dentro de um único take de 7,17s** até virar um rosto magro. Receita de gengibre, cúrcuma e canela num bule de vidro. Fecha com um **livro de receitas antigo** aberto como prop de autoridade.
+- **Herói = o derretimento.** Reveal contínuo, uma imagem só do estado totalmente inchado.
+- 🔴 **O PROP DE MAIOR RISCO DE RESTRIÇÃO DA OPERAÇÃO INTEIRA.** Junta cabeça humana + careta de sofrimento + textura de carne + derretimento. **A mitigação principal é virar a expressão NEUTRA de olhos fechados**, tipo busto clássico: derruba a maior parte do risco e não custa nada visualmente, porque o herói é o inchaço e não a careta.
+- **Três coisas de copy que valem roubar:** o **beat do Walmart** ("e ninguém no supermercado está te contando. Mas eu estou"), que é conspiração leve mais autoridade mais geolocalização em duas frases; a **prova social agregada e vaga** ("em milhares de mulheres nos EUA já está acontecendo"); e o **CTA que entrega um LIVRO** com keyword temática, que é lead magnet e não link.
+- Produzido para **Melody, Ângulo 1** em 2026-08-25 (`producao/melody_rosto/`). **Segmentação virada por inteiro**: mulheres viraram homens 40+, papada virou mandíbula, glow virou a vontade das nove da noite.
+- **Ponte:** o rosto é o mostrador, e o que ele mostra é o desejo por açúcar. **Vende APETITE**, que é o claim mais defensável do açafrão e nunca tinha sido usado nesta conta.
+- **O que não repetir:** rota 4, pergunta sem saída, efeito colateral do caseiro, a prateleira de volume.
+
 
 ---
 
@@ -99,12 +108,6 @@ Hook: sal grosso despejado no chão do box e a **montanha crescendo** dentro do 
 - **Cinco ganchos aprovados:** véu puxado do retrato, polaroid revelando, fio vermelho, círculo de sal, envelope com lacre.
 - **NÃO REPETIR:** este esqueleto e estas frases estão queimados.
 
-## 19. O véu de fumaça, versão Kendra · `producao/kendra_veu/` · 2026-08-25
-- **Mesmo modelo e MESMA COPY do #17**, rodado na Kendra Collins. Primeiro uso do eixo **1 esqueleto × N ângulos × 2 avatares**.
-- **Nada de copy novo.** Trocou identidade, cenário, registro de voz e os parâmetros de rastreio.
-- **Experimento embutido:** `rt_ad` com prefixo `kendra_*` separa do Blake no RedTrack, e mede **qual avatar converte melhor com a mesma mensagem**.
-- **⚠️ Nunca publicar o #17 e o #19 na mesma conta.**
-
 ## 18. A inicial no WhatsApp · `producao/blake_inicial/` · 2026-08-25
 - **Modelo:** `snapinsta-1787622485916.mp4`, leitora de tarô, 47,5s, uma cena contínua sem corte.
 - **Fala de identificação:** *"There's someone who thinks you've given up on them..."*
@@ -114,6 +117,12 @@ Hook: sal grosso despejado no chão do box e a **montanha crescendo** dentro do 
 - **Cinco ganchos aprovados:** três cartas viradas, envelope com lacre, ímã e a carta, letrinhas, borra de café.
 - **NÃO REPETIR:** este esqueleto e estas frases estão queimados.
 
+## 19. O véu de fumaça, versão Kendra · `producao/kendra_veu/` · 2026-08-25
+- **Mesmo modelo e MESMA COPY do #17**, rodado na Kendra Collins. Primeiro uso do eixo **1 esqueleto × N ângulos × 2 avatares**.
+- **Nada de copy novo.** Trocou identidade, cenário, registro de voz e os parâmetros de rastreio.
+- **Experimento embutido:** `rt_ad` com prefixo `kendra_*` separa do Blake no RedTrack, e mede **qual avatar converte melhor com a mesma mensagem**.
+- **⚠️ Nunca publicar o #17 e o #19 na mesma conta.**
+
 ## 20. A inicial no WhatsApp, versão Kendra · `producao/kendra_inicial/` · 2026-08-25
 - **Mesmo modelo e MESMA COPY do #18**, rodado na Kendra Collins.
 - **Nada de copy novo.** Trocou identidade, cenário, registro de voz e rastreio.
@@ -121,14 +130,19 @@ Hook: sal grosso despejado no chão do box e a **montanha crescendo** dentro do 
 - **⚠️ Nunca publicar o #18 e o #20 na mesma conta.**
 - **Alerta de variedade:** o gancho do **envelope com lacre** agora roda nos quatro pacotes. Substituto pronto no `ROTEIRO.md`: o pêndulo sobre a carta.
 
-## 17. Rosto inchado derretendo / açúcar (snapinsta-1787707339628, 27,1s, ORIGINAL EM ESPANHOL)
-Hook: **escultura de uma cabeça humana muito inchada** na mesa, chá quente despejado por cima, e ela **derrete e desincha dentro de um único take de 7,17s** até virar um rosto magro. Receita de gengibre, cúrcuma e canela num bule de vidro. Fecha com um **livro de receitas antigo** aberto como prop de autoridade.
-- **Herói = o derretimento.** Reveal contínuo, uma imagem só do estado totalmente inchado.
-- 🔴 **O PROP DE MAIOR RISCO DE RESTRIÇÃO DA OPERAÇÃO INTEIRA.** Junta cabeça humana + careta de sofrimento + textura de carne + derretimento. **A mitigação principal é virar a expressão NEUTRA de olhos fechados**, tipo busto clássico: derruba a maior parte do risco e não custa nada visualmente, porque o herói é o inchaço e não a careta.
-- **Três coisas de copy que valem roubar:** o **beat do Walmart** ("e ninguém no supermercado está te contando. Mas eu estou"), que é conspiração leve mais autoridade mais geolocalização em duas frases; a **prova social agregada e vaga** ("em milhares de mulheres nos EUA já está acontecendo"); e o **CTA que entrega um LIVRO** com keyword temática, que é lead magnet e não link.
-- Produzido para **Melody, Ângulo 1** em 2026-08-25 (`producao/melody_rosto/`). **Segmentação virada por inteiro**: mulheres viraram homens 40+, papada virou mandíbula, glow virou a vontade das nove da noite.
-- **Ponte:** o rosto é o mostrador, e o que ele mostra é o desejo por açúcar. **Vende APETITE**, que é o claim mais defensável do açafrão e nunca tinha sido usado nesta conta.
-- **O que não repetir:** rota 4, pergunta sem saída, efeito colateral do caseiro, a prateleira de volume.
+---
+
+## 22. Os três selos · `producao/kendra_selos/` · 2026-08-25
+- **Modelo:** `snapinsta-1787767048118.mp4`, 50,5s, **abertura MUDA de 2,87s** e depois 40s num plano só.
+- **Fala de identificação:** *"When you receive this blessing, keep your mouth shut. This is not for everybody."*
+- **Esqueleto:** é o **ESQUELETO UNIVERSAL do nicho quase inteiro**: anti-skip por segredo, eleição, punição por inação, promessa, prova social, as 3 ações com significado, ordem de salvar e loop de duas partes. Primeiro modelo que traz o esqueleto completo em vez de um pedaço.
+- **Avatar:** Kendra Collins · **Ângulo de entrada:** a bênção que já está a caminho e ninguém pode saber.
+- **A novidade de copy:** os **três selos**. O original usa like, save e send-to-yourself. Nós viramos pra **`222`, seguir e salvar**, que cobre o funil inteiro. "Selo" é palavra liberada quando sela um ACORDO, o que a lei proíbe é selar círculo de proteção.
+- **O beat que não existe no original e é todo nosso:** a ponte pro rosto no T5, *"a blessing is already moving toward you, and it is wearing a face"*. O modelo promete bênção vaga e nunca promete rosto.
+- **PRIMEIRO PACOTE COM CINCO GANCHOS DE UMA VEZ:** vela (o do modelo, corrigido), retrato no gelo, mel sobre a carta, terra soprada e espelho embaçado. O corpo (K02 e K03) serve os cinco sem regerar, então cada gancho custa 1 keyframe e 1 clipe.
+- **⚠️ CONFLITO RESOLVIDO, e ele vale pra sempre:** o modelo tem **círculo de sal com ervas queimando**, que colide com a proibição de círculo de proteção no `CLAUDE.md`. Mas o banco de ganchos registra CÍRCULO·cercar como o mecanismo mais repetido do swipe. **A saída não foi escolher um lado, foi trocar o que está DENTRO do círculo:** o sal cercando a carta SOULMATE lê como *marcar o que é dela*, o sal cercando ervas em chamas lê como ritual de proteção. **Mesmo prop, leitura oposta.** É a prova viva de que o teste é a leitura e não o objeto.
+- **Primeira DM derivada de um vídeo específico** em vez de puxada do banco das 10. Entra no `DM_PADRAO` como V11.
+- **NÃO REPETIR:** este esqueleto e estas frases estão queimados.
 
 ---
 
@@ -154,6 +168,9 @@ Líquido despejado no corpo que **espuma/efervesce**, e a espuma é a prova de q
 
 ### Protocolo de custo zero (o esqueleto mais fácil de vender que existe)
 Nada se compra, nada se prepara, e o tempo já está sendo gasto: **"você já faz isso dez minutos por dia sem fazer nada"**. O beat de validação da objeção ("eu sei que parece loucura") vem colado. Casos 15 e 16. **A ponte pro produto nunca é "a receita não funciona", é sempre que ela é curta demais ou rasa demais** para o problema que o vídeo acabou de nomear.
+
+### As 3 ações com significado (o motor nº1 do Ângulo 3)
+Cada métrica que o algoritmo premia ganha uma justificativa espiritual e vira um ato de fé. Comentar, seguir e salvar deixam de ser pedido de engajamento. Caso 22. **O device se aproveita, o vocabulário nunca:** o significado é sempre de **declaração, acordo e recebimento**, jamais de proteção contra o mal.
 
 ### O beat do "ninguém está te contando" (barato e forte)
 Duas frases entre o hook e a receita: **"e no seu país ninguém [no varejo] está te contando isso. Mas eu estou."** Faz três trabalhos de uma vez: conspiração leve, autoridade sem credencial, e geolocalização do público. Caso 17. **Custa um beat e a gente não tinha isso em nenhum roteiro.**

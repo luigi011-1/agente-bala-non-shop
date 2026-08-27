@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 246ef273-2f24-4b5d-8e5e-51929be93030
-  modified: 2026-08-15T02:46:00.730Z
+  modified: 2026-08-26T20:11:13.230Z
 ---
 
 # Fichas Canônicas dos Avatares
@@ -187,4 +187,14 @@ As regras visuais abaixo valem para os dois, integralmente ([[angulo3-copy-aural
 - **Luvas azuis de nitrila:** manter nos vídeos de inspeção de comida (credibilidade de inspetor/lab).
 
 ## Regra ao produzir mesmo vídeo pra vários avatares
-Trocar SÓ o que é do avatar (cenário, cruz, registro, gênero da fala). Manter esqueleto e props idênticos.
+
+**EDITADA em 2026-08-26.** A versão antiga dizia *"trocar SÓ o que é do avatar (cenário, cruz, registro, gênero da fala), manter esqueleto e props idênticos"*, e isso levou a copiar copy palavra por palavra (`kendra_veu`, `kendra_inicial`). **O Luigi revogou.**
+
+**Regra vigente:**
+- **Esqueleto e props: idênticos.** Isso não mudou.
+- **Copy: AJUSTADA para congruência com o novo avatar.** Nunca cópia palavra por palavra. Idade, gênero e registro mudam o que soa crível na boca de cada um. Ver [[congruencia-matriz]].
+- **Prompts de imagem e de vídeo: ajustados** (identidade, cenário, registro de voz, rastreio).
+
+**O que na prática costuma mudar de redação:** beats de autoridade, eleição e prova social, porque dependem de vivência. **O que não muda:** beats de mecânica de funil (punição por inação, follow gate, CTA, fecho), porque mecânica não tem idade.
+
+Exemplo trabalhado: `producao/cody_selos/ROTEIRO.md`, seção "O que mudou em relação à Kendra, e por quê".

@@ -88,6 +88,13 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
   duas ou três âncoras de fundo no máximo, luz **neutra de dia nublado** e nunca quente, negative carregando
   `no warm orange color cast, no yellow tint`, e partir sempre de algo real. Realismo é volume de regeneração.
 - **Rodar o gate de composição visual ANTES de escrever os prompts** (memória `checklist-composicao-visual`): herói no lower foreground mais perto que o rosto, sempre mais perto do que parece certo, 2ª pessoa cortada pelo quadro, cenário reconhecível e nunca inventariado. Reduzir fundo é com enquadramento, nunca com blur.
+- **Bandeira dos EUA em TODO prompt de imagem, discreta porém VISÍVEL e em foco.** Escrever no campo
+  `scene`, contando como uma das três âncoras de fundo. Única exceção: prompt de REF de prop isolado
+  (REF-CARTA, `product.png`), que não tem cenário e contaminaria todo keyframe que anexasse a REF.
+- **Prompt entregue é prompt COMPLETO.** Nunca "adicione X em todos os prompts", nunca colar só a linha
+  que mudou. Regra nova no meio da produção obriga **reescrever por inteiro todos os prompts afetados**,
+  no arquivo e no chat. Alternativa se entrega como dois prompts completos lado a lado, nunca como
+  um prompt mais a instrução de como virar o outro.
 - **Referências no título do prompt, em CAIXA ALTA.**
 - **Ângulo 3, lei do registro: divino, nunca oculto.** O teste é a LEITURA, não o objeto: prop que lê como
   manifestação entra (cartas, cristais, vela, defumador, tigela com pétalas), prop ou fala que lê como pacto não.
@@ -226,6 +233,15 @@ nunca como blur de câmera, senão colide com o `no blur` do negative.
 referência de identidade e cenário, exatamente como o Ângulo 1 anexa o `product.png`. A regra normal
 continua valendo: **`GERAR DO ZERO` no primeiro keyframe de cada setup** (com a âncora anexada),
 `EDITAR do K__` em todo o resto.
+
+**📎 SINAL DE ENTRADA: `.mp4` + IMAGEM DE AVATAR na mesma mensagem = produzir PARA AQUELE AVATAR primeiro.**
+Quando o Luigi manda o vídeo modelo junto de uma âncora, a âncora **diz para quem é**. Não perguntar,
+produzir para ela. O ciclo completo (roteiro, ganchos, prompts, DM) sai para esse avatar antes de qualquer outro.
+
+**Depois de fechar o primeiro, o MESMO vídeo modelo pode rodar no próximo avatar**, com:
+- **Ajustes de COPY para congruência com o novo avatar.** ⚠️ **Não é copiar palavra por palavra.**
+  Idade, gênero e registro mudam o que soa crível na boca de cada uma. Ver `congruencia-matriz`.
+- **Ajustes nos prompts de imagem e de vídeo** (identidade, cenário, registro de voz, rastreio).
 
 **PASSO EXTRA, SÓ NO ÂNGULO 3: sugestões de GANCHO VISUAL antes dos prompts.**
 Depois do roteiro aprovado e **antes de entregar qualquer prompt**, mandar sugestões de variações de

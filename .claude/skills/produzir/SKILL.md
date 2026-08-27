@@ -55,6 +55,19 @@ Nao seguir sem os quatro:
 Faltando qualquer um, parar e pedir. Roteiro nao aprovado torna todo prompt retrabalho garantido.
 
 
+## PASSO 1-B — QUAL AVATAR: o anexo decide
+
+**`.mp4` + imagem de avatar na mesma mensagem = produzir PARA AQUELE AVATAR.** Nao perguntar.
+Ciclo completo dele primeiro: roteiro, ganchos, prompts, DM.
+
+**Rodar o mesmo modelo no proximo avatar depois**, com:
+- **AJUSTES DE COPY para congruencia**, nunca copia palavra por palavra. Idade, genero e registro
+  mudam o que soa crivel na boca de cada avatar. Abrir `congruencia-matriz` antes de portar.
+- Ajustes de identidade, cenario, registro de voz e `rt_ad` nos prompts.
+
+> Regra corrigida pelo Luigi em 2026-08-25. Eu tinha gravado que a copy ficava identica entre
+> avatares (`kendra_veu` e `kendra_inicial` foram feitos assim). **A regra vigente e ajustar.**
+
 ## PASSO 1-A — SE FOR ANGULO 3 (Auraly), o que muda
 
 **O PROCESSO E O MESMO DOS ANGULOS 1 E 2. Nada aqui substitui o fluxo validado.**

@@ -64,3 +64,21 @@ Trocar SÓ o que é do avatar (cenário, cruz, registro, gênero da fala). Mante
 - **Luvas azuis de nitrila:** manter em vídeos de inspeção de comida (credibilidade)
 
 Ver fichas completas em [[avatares-fichas]].
+
+## 🇺🇸 BANDEIRA DOS EUA EM TODO PROMPT DE IMAGEM (Luigi, 2026-08-26)
+
+**Todo prompt de imagem leva a bandeira dos EUA no cenário. Discreta, porém VISÍVEL e em foco.**
+
+Discreta = pequena e periférica (bandeirinha de mesa em suporte, patch na roupa, adesivo no canto
+de um espelho). **Nunca desfocada, nunca cortada pela borda, nunca só implícita.**
+
+Escrever dentro do campo `scene` do JSON, contando como uma das âncoras de fundo. O teto do
+[[realismo-anti-cara-de-ia]] continua sendo **3 âncoras**, então a bandeira ocupa uma das três e
+o cenário fica cheio: nada mais entra depois dela.
+
+**Única exceção:** prompt de REF de prop isolado (REF-CARTA, `product.png` e afins), que não tem
+cenário nenhum. Colocar bandeira ali contamina o objeto de referência e ela vazaria para todo
+keyframe que anexasse aquela REF.
+
+Isso já valia como "bandeira US sutil" nas fichas do Ângulo 3 ([[avatares-fichas]]). **A regra
+agora é geral, vale para os três ângulos, e é obrigatória e não estética.**

@@ -238,6 +238,12 @@ Confirma a doutrina: a DM **não cita quiz, teste, app, plano nem preço**. O ob
 - **Blake aposentado**, com dois pacotes prontos e sem imagem gerada. Decisão pendente: migrar, aposentar ou rodar em paralelo.
 - O resto do roster espiritual segue descartado.
 
+### 📎 O ANEXO DECIDE O AVATAR (Luigi, 2026-08-25)
+`.mp4` + imagem de avatar na mesma mensagem = **produzir para aquele avatar primeiro**, ciclo completo. Não perguntar.
+Depois, o mesmo modelo roda no próximo avatar **com AJUSTES DE COPY para congruência**, nunca cópia palavra por palavra. Idade, gênero e registro mudam o que soa crível. Ver [[congruencia-matriz]].
+
+> ⚠️ **Regra corrigida.** Eu tinha gravado que a copy ficava idêntica entre avatares, e `kendra_veu` e `kendra_inicial` foram feitos assim, sob a regra antiga. Se forem retomados, passar pelo ajuste de congruência.
+
 **A Cody traz o que faltava:** idade vivida. A `congruencia-matriz` diz que claim de vivência exige avatar com a idade, e nenhum dos outros dois entregava isso. Mantidas as regras visuais validadas: cruz cristã na parede, pingente de cruz de prata, bandeira US sutil, enquadramento UGC, sem efeitos de luz sobrenatural, elementos místicos tratados como pesquisa e não como ritual. Ver [[avatares-fichas]].
 
 ## PRODUTO: NUNCA MOSTRAR (decisão do Luigi, 2026-08-24)
