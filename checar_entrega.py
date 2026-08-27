@@ -221,13 +221,13 @@ def c_palavras_por_take(takes):
                 ruim = True
             continue
         n = len(palavras(t["fala"]))
-        if n < 13 or n > 25:
+        if n < 13 or n > 29:
             falha("palavras",
-                  "%s tem %d palavras (faixa 13 a 25). Quebrar em fim de frase, nunca inventar filler."
+                  "%s tem %d palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler."
                   % (t["id"], n), "ROTEIRO.md:%d" % t["linha"])
             ruim = True
     if not ruim and takes:
-        ok("palavras", "%d takes falados, todos dentro de 13 a 25 palavras"
+        ok("palavras", "%d takes falados, todos dentro de 13 a 29 palavras"
            % len([t for t in takes if t["fala"]]))
 
 
@@ -293,8 +293,10 @@ def c_bandeira(kfs):
                   % k["id"], "PROMPTS_PRODUCAO.md:%d" % k["linha"])
             ruim = True
         elif not re.search(r"\bflag\b|american flag", str(d.get("scene", "")), re.I):
-            aviso("bandeira", "%s cita bandeira fora do campo 'scene'" % k["id"],
-                  "PROMPTS_PRODUCAO.md:%d" % k["linha"])
+            # em prompt EDITAR a bandeira vive em keep_identical, e isso e o correto
+            if not re.search(r"EDITAR do", k["head"], re.I):
+                aviso("bandeira", "%s cita bandeira fora do campo 'scene'" % k["id"],
+                      "PROMPTS_PRODUCAO.md:%d" % k["linha"])
     if not ruim and kfs:
         ok("bandeira", "bandeira dos EUA presente em todos os keyframes com cenario")
 

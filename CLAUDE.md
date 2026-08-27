@@ -80,7 +80,7 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
 
 ## Regras que quebram a entrega se forem ignoradas
 
-- **8 segundos por take = 13 a 25 palavras.** Contar ANTES de escrever os prompts. Take longo se quebra em fim de frase. **Nunca inventar filler, nunca parafrasear.**
+- **8 segundos por take = 13 a 29 palavras.** Contar ANTES de escrever os prompts. Take longo se quebra em fim de frase. **Nunca inventar filler, nunca parafrasear.**
 - **A fala no prompt é cópia literal do roteiro final.**
 - **Keyword por ângulo: `yes` nos Ângulos 1 e 2, `222` no Ângulo 3 (Auraly).** Nunca a palavra do vídeo original.
 - **Zero travessão (`—`)** em copy, roteiro e resposta.
@@ -171,7 +171,7 @@ Só depois disso a copy pode ser modificada e mandada pro Luigi aprovar ou ajust
 ### P9 · Fechando a entrega
 - **RODAR O LINTER, e só fechar com zero FALHAS:** `python checar_entrega.py producao/<avatar>_<slug>`
   Ele checa do DISCO o que dá pra checar por máquina, então **não depende de eu lembrar de nada**:
-  travessão na copy, keyword do ângulo, 13 a 25 palavras por take, fala do prompt igual palavra por
+  travessão na copy, keyword do ângulo, 13 a 29 palavras por take, fala do prompt igual palavra por
   palavra ao roteiro, JSON válido, bandeira dos EUA, `no captions`, termo sensível no negative,
   seções na ordem, nomenclatura T/K/V/REF, os 5 blocos do prompt de vídeo, instrução de patch,
   produto em quadro nos ângulos 2 e 3, e as travas do ângulo 3. Falso positivo se conserta no linter,

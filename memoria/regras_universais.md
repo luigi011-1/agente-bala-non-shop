@@ -43,7 +43,7 @@ Falas longas quebradas em takes. Nunca usar travessão "—". Frases curtas.
 ## 6B. Fala no prompt de video = copia exata do roteiro final
 O texto entre aspas dentro de cada prompt de video deve ser copia IDENTICA, palavra por palavra, do trecho correspondente no roteiro final. NUNCA reescrever, parafrasear ou "melhorar" a fala ao montar o prompt. Processo correto: escrever o roteiro final primeiro como fonte unica de verdade, depois copiar cada trecho para o prompt correspondente.
 
-**Inclui NAO adicionar frase filler** (reforcado pelo Luigi em 2026-08-18, depois que eu inventei uma frase pra encher um take curto). Se a fala nao couber em 8s ou ficar curta demais, a solucao e **requebrar o roteiro em trechos**, cortando em fim de frase. Alvo: 13 a 25 palavras por take (~3,3 palavras/segundo, 8s ≈ 26 palavras). Detalhe em [[prompts-video-fase7]] regra 7.
+**Inclui NAO adicionar frase filler** (reforcado pelo Luigi em 2026-08-18, depois que eu inventei uma frase pra encher um take curto). Se a fala nao couber em 8s ou ficar curta demais, a solucao e **requebrar o roteiro em trechos**, cortando em fim de frase. Alvo: **13 a 29 palavras por take** (~3,3 palavras/segundo, 8s ≈ 26 palavras). **Teto subido de 25 para 29 em 2026-08-26, por decisão do Luigi**: o gabarito `brandon_angle2` sempre teve takes de 26 a 29 e eles funcionam, então quem estava errado era a faixa, não os roteiros. Detalhe em [[prompts-video-fase7]] regra 7.
 
 ## 7. A fala NUNCA é o problema em restrições
 Nunca altere a fala pra destravar. Se o vídeo original foi gerado, aquela fala já passou uma vez. Ajustar APENAS a descrição da cena/ação. Regra inviolável. Ver [[restricoes-protocolo]].

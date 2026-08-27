@@ -29,7 +29,7 @@ Ele estava certo. Eu tinha abandonado o formato de entrega inteiro.
 5. **Perdi o Bloco Global de vídeo** e escrevi prompt de vídeo em prosa inglesa começando com "Start from the attached image", re-descrevendo enquadramento e cor. Isso é linguagem de prompt de IMAGEM. Ver [[prompts-video-fase7]].
 6. **Perdi três seções inteiras:** Mapa de âncoras, Montagem no CapCut e Gates de qualidade.
 7. **Perdi a tabela de esqueleto preservado.** É a prova de que o puzzle foi respeitado, e é justamente onde eu teria enxergado que estava repetindo a copy de um vídeo pro outro.
-8. **Não contei as palavras antes.** Escrevi o roteiro sem aplicar os 8s / 13 a 25 palavras, descobri depois de entregar os prompts, e tive que requebrar 15 takes em 21 com os prompts já na mão.
+8. **Não contei as palavras antes.** Escrevi o roteiro sem aplicar os 8s / 13 a 29 palavras, descobri depois de entregar os prompts, e tive que requebrar 15 takes em 21 com os prompts já na mão.
 
 ## A CAUSA RAIZ
 A memória cresceu muito em COPY (rotas, obstáculos, ponte, ângulo 2) e eu passei a operar por ela, parando de reler as de PROCESSO. Memória nova não substitui memória velha, ela soma.

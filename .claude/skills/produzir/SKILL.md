@@ -96,11 +96,13 @@ O que muda, e so isso:
 - **Keyword `222`** no lugar de `yes`.
 - **Nao mostra produto.** O objeto de desejo do CTA e o **rosto da alma gemea**, que chega **na DM**.
   O video nunca diz quiz, teste, app, plano nem preco.
-- **Angulo de entrada livre, ponte pro rosto obrigatoria.** Um avatar so (Blake Epeterson), entao o
-  eixo de variacao e 1 esqueleto x N angulos de entrada.
+- **Angulo de entrada livre, ponte pro rosto obrigatoria.** Dois avatares (**Kendra Collins** e
+  **Cody Miller**; o Blake Epeterson foi aposentado em 2026-08-25), entao o eixo de variacao e
+  **1 esqueleto x N angulos de entrada x 2 avatares**.
 - **Registro divino, nunca oculto.** Sem feitico, pacto, escudo, circulo de protecao.
-- **Ancora do Blake:** `producao/_ancoras/Man_sitting_at_table_4K_202608241610.jpeg`, anexada como
-  referencia de identidade e cenario (igual o Angulo 1 anexa o `product.png`).
+- **Ancoras:** Kendra em `producao/_ancoras/KENDRA COLLINS .jpeg`, Cody em
+  `producao/_ancoras/cody_ancora.jpeg`. Anexar a da avatar escolhida como referencia de identidade
+  e cenario (igual o Angulo 1 anexa o `product.png`).
 - **Terceiro arquivo `DM.md`** (ver PASSO 4-A), derivado de `producao/_dm_auraly/DM_PADRAO.md`.
 
 **Duracao, numero de takes e gramatica visual saem do VIDEO MODELO**, como sempre. Nao existe formato
@@ -128,7 +130,7 @@ Antes de escrever o bloco de venda, abrir:
 5. **Roteiro so-fala** (ingles corrido, pro TTS)
 6. **Notas de producao**: duracao, heroi do hook, compliance, o que cortar se ficar longo
 
-**Contar as palavras de cada take AGORA, nao depois.** 8s = 13 a 25 palavras. Passou de 26, quebrar em fim de frase.
+**Contar as palavras de cada take AGORA, nao depois.** 8s = 13 a 29 palavras. Passou de 29, quebrar em fim de frase.
 
 ## PASSO 3-B — SO NO ANGULO 3: sugestoes de GANCHO VISUAL antes dos prompts
 
@@ -306,7 +308,7 @@ python checar_entrega.py producao/<avatar>_<slug>
 ```
 
 Ele le os arquivos DO DISCO e checa o que da pra checar por maquina: travessao na copy,
-keyword do angulo, 13 a 25 palavras por take, **fala do prompt de video igual palavra por
+keyword do angulo, 13 a 29 palavras por take, **fala do prompt de video igual palavra por
 palavra ao roteiro**, JSON valido, bandeira dos EUA em todo keyframe com cenario, `no captions`
 no negative, termo sensivel no negative, secoes obrigatorias na ordem, nomenclatura T/K/V/REF,
 os 5 blocos do prompt de video, instrucao de patch, produto em quadro nos angulos 2 e 3, e as

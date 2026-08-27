@@ -40,6 +40,11 @@ Regra de uso: **nunca mandar a mesma variação duas vezes seguidas.** Girar em 
 
 ## AS 10 VARIAÇÕES
 
+> ⚠️ **Os links destas dez trazem `rt_ad` do Blake, que foi aposentado em 2026-08-25.**
+> Ao usar qualquer uma delas hoje, **trocar o `rt_ad` pelo prefixo da avatar que está rodando**
+> (`kendra_*` ou `cody_*`). O texto continua válido, o rastreio não.
+> Derivadas de vídeo específico: **V11** em `producao/kendra_selos/DM.md`, **V12** em `producao/cody_selos/DM.md`.
+
 ### V01 (a original, baseline)
 ```
 Your 222 opened a window between you two. 🤍
@@ -182,14 +187,17 @@ https://app.auralyapp.com/69ffd620e0e3690abc78c7ea?aff=u5bnoukb&utm_source=<PLAT
 | Campo | Valores pra girar |
 |---|---|
 | `utm_source` | `facebook` · `instagram` |
-| `rt_ad` | **Blake:** `Blake+Peterson` · `Blake+P` · `blake_dm` · `blake_222` · `blake_reveal` · `blake_soulmate`<br>**Kendra:** `Kendra+Collins` · `kendra_dm` · `kendra_222` · `kendra_reveal` · `kendra_soulmate` |
+| `rt_ad` | **Kendra:** `Kendra+Collins` · `kendra_dm` · `kendra_222` · `kendra_reveal` · `kendra_soulmate` · `kendra_selos`<br>**Cody:** `Cody+Miller` · `cody_dm` · `cody_222` · `cody_reveal` · `cody_soulmate` · `cody_selos`<br>**Blake (APOSENTADO em 2026-08-25, só para ler histórico):** `Blake+Peterson` · `Blake+P` · `blake_dm` · `blake_222` · `blake_reveal` · `blake_soulmate` |
 | `utm_term` | `bio` · `dm` · `dm222` · `reel` · `comment` |
 
 Combina uma variação de texto com uma de URL. **Bônus real:** cada `rt_ad` distinto vira uma linha própria
 no RedTrack, então você passa a saber qual variação de DM converte melhor, coisa que hoje não dá pra medir.
 
 ### 🔬 RASTREIO SEPARADO POR AVATAR (obrigatório)
-Blake e Kendra rodam **a mesma copy** em contas diferentes. **O `rt_ad` TEM que carregar o prefixo do avatar**, senão o RedTrack junta os dois e some a leitura de qual converte melhor com a mesma mensagem. É o experimento mais limpo da operação: mesma copy, única variável é quem fala.
+**Atualizado em 2026-08-26:** o roster vigente é **Kendra + Cody**, o Blake foi aposentado em 2026-08-25.
+Cada avatar novo entra aqui com o próprio prefixo antes de rodar, nunca depois.
+
+Os avatares rodam **o mesmo esqueleto** em contas diferentes. **O `rt_ad` TEM que carregar o prefixo do avatar**, senão o RedTrack junta os dois e some a leitura de qual converte melhor com a mesma mensagem. É o experimento mais limpo da operação: mesma copy, única variável é quem fala.
 
 ### Pareamento fixo (JÁ APLICADO em cada variação acima)
 O link já vem escrito embaixo de cada uma. **V01 é o link original do Luigi, sem alteração.**

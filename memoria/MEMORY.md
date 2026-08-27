@@ -49,7 +49,7 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 
 ## 🖼️ AO ESCREVER OS PROMPTS
 - [Prompts de imagem (JSON)](prompts_imagem_json.md) — campos, blocos padrão, referências no título em caixa alta
-- [Prompts de vídeo Fase 7](prompts_video_fase7.md) — os 5 blocos, 13 a 25 palavras por take, fala é cópia literal
+- [Prompts de vídeo Fase 7](prompts_video_fase7.md) — os 5 blocos, 13 a 29 palavras por take, fala é cópia literal
 - [Um prompt de imagem por BLOCO](feedback_prompt_imagem_compartilhado.md) — não por take. Reveal contínuo = uma imagem só
 - [GATE DE REALISMO, anti cara de IA](realismo_anti_cara_de_ia.md) — **rodar JUNTO com o gate de composição, antes do primeiro JSON.** Isolar o herói é a alavanca nº1, cores quentes e céu claro denunciam, partir sempre de algo real, realismo é volume de regeneração
 - [Prompt COMPLETO, nunca instrucao de patch](feedback_prompt_completo_sempre.md) — **nunca dizer "adicione X em todos os prompts".** Regra nova ja vem aplicada dentro de cada prompt, pronto pra copiar

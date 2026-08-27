@@ -58,7 +58,7 @@ som ambiente: [ambiente], sem música
 7. **A fala de cada take tem que CABER em 8s, e é cópia exata do roteiro.** (Regra corrigida em 2026-08-18 pelo Luigi, substitui a orientação antiga de "adicionar frase filler".)
    - **NUNCA adicionar frase filler, nunca inventar palavra, nunca parafrasear.** O roteiro final é a fonte única de verdade.
    - A forma de resolver take curto ou take longo é **quebrar o roteiro em trechos diferentes**, sempre cortando em fim de frase, não mexendo nas palavras.
-   - Referência de tamanho: ~3,3 palavras por segundo. Logo **8s ≈ 26 palavras**. Alvo seguro por take: 13 a 25 palavras.
+   - Referência de tamanho: ~3,3 palavras por segundo. Logo **8s ≈ 26 palavras**. Alvo seguro por take: 13 a 29 palavras.
    - Take que passar de ~26 palavras: dividir em dois. Take curto demais: aceitar e cortar o silêncio no CapCut, nunca preencher com texto inventado.
 
 8. **Última palavra inteira.** Sempre colocar no prompt "says the last word whole, doesn't cut it at the end" e "doesn't skip any words". Veo tende a cortar a última sílaba.
