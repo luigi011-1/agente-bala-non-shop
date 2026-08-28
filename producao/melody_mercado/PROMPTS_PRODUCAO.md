@@ -2,7 +2,7 @@
 
 Vídeo modelo: `f036698f-3446-482a-b9ac-cde212650d69.mp4`
 
-Âncora de identidade: `C:\Users\luigi\Desktop\AVATARES NON-SHOP\melody_carter_.png`
+Âncora de identidade: `C:\Users\luigi\Desktop\AVATARES NON-SHOP\melody carter .png`
 
 Referência de produto: `C:\Users\luigi\Desktop\B-ROLL PRODUTOS\product.png`
 

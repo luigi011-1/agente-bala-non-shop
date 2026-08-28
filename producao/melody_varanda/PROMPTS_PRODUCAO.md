@@ -2,7 +2,7 @@
 
 Vídeo modelo: `Joseph&Coco_Comment _BIG_ and I will_2004575490207097_1080p_20260822.mp4`
 
-Âncora de identidade: `C:\Users\luigi\Desktop\AVATARES NON-SHOP\melody_carter_.png`
+Âncora de identidade: `C:\Users\luigi\Desktop\AVATARES NON-SHOP\melody carter .png`
 
 Referência de produto: `C:\Users\luigi\Desktop\B-ROLL PRODUTOS\product.png`
 

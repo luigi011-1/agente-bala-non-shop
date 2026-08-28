@@ -8,3 +8,6 @@ entradas/
 *.mkv
 *.webm
 *.wav
+
+# saida do graphify (regeravel, nao e fonte de verdade)
+graphify-out/
