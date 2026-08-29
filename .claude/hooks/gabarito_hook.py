@@ -67,6 +67,16 @@ frases do video anterior. Beat de virada olha pra frente (escalada), nunca resum
 Keyword por angulo: `yes` nos angulos 1, 2 e 4, `222` no angulo 3 (Auraly). Zero travessao.
 Angulos 2 e 3 NAO mostram produto (no 3 o CTA promete o ROSTO da alma gemea, nunca o app).
 Roteiro final por ultimo.
+
+AUTOCOBRANCA DO GRAFO (desde 2026-08-29, quando o graphify entrou no fluxo):
+O grafo devolve rotulo e uma linha de trecho, NUNCA a copy. Ele orienta e cruza; o portao manda LER.
+Antes de citar qualquer regra de portao, responder a si mesmo: eu abri esse arquivo NESTA sessao,
+ou estou repetindo o que o grafo resumiu? Se foi o grafo, ainda nao li, e a resposta nao sai.
+Vale sobretudo para o gabarito, a doutrina do angulo e a ficha do avatar.
+Precedencia: PORTAO > grafo > lembranca.
+Esta linha existe porque o nudge do graphify se repete a cada busca e ganharia por volume.
+
+ZERO TRAVESSAO tambem na RESPOSTA no chat, nao so na copy entregue.
 """
 
 

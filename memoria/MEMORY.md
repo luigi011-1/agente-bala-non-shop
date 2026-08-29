@@ -17,6 +17,7 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 ---
 
 ## 🔴 ANTES DE QUALQUER ENTREGA DE PRODUÇÃO
+- [Autocobranca vai no canal repetido](autocobranca_no_canal_repetido.md) — **nunca pedir ao Luigi que fiscalize comportamento meu.** Regra que compete com instrucao repetida a cada turno tem que entrar no mesmo canal repetido, nao no `CLAUDE.md`
 - [⚠️ Workflow de entrega, o gabarito é lei](workflow_entrega_gabarito.md) — **LER PRIMEIRO SEMPRE.** As 8 coisas que eu perdi ao parar de conferir o gabarito. Nomenclatura T/K/V/REF
 - [Ordem de entrega padrão](ordem_entrega_padrao.md) — transcrição → roteiro (tabela bilíngue única) → só então prompts
 - [Prompts colados na conversa](feedback_prompts_na_conversa.md) — arquivo E chat, nunca só um. Linha curta descrevendo a cena antes de cada prompt
