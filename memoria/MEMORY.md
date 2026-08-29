@@ -63,7 +63,7 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 - [Compliance e risco de conta](compliance_riscos.md) — hierarquia de risco, postura punchy + aviso
 
 ## ⏳ EM ABERTO / ARMADILHAS CONHECIDAS (ler antes de commitar ou de "limpar falhas")
-- [Grafo: passada semantica pendente](grafo_pendencia_semantica.md) — **lembrar ANTES da proxima producao.** O grafo cobre memoria + producao, mas falta a aresta conceito-a-conceito entre os dois corpora. Adiado em 2026-08-29 por custo: ~1M tokens so nos docs
+- [Grafo: custo medido da passada semantica](grafo_pendencia_semantica.md) — **taxa de 10,1 tokens por palavra de corpus, usar antes de despachar subagente.** A parte cara virou casamento determinista. **NUNCA rodar a passada de imagens (~3M).** O que sobra e opcional: ~401k so nos ROTEIRO.md
 - [Faixa de palavras: 13 a 29, fechada](faixa_palavras_take.md) — a fonte e o `checar_entrega.py:230`. Teto 29 em 2026-08-26, **piso 13 confirmado em 2026-08-29**. Os 26 takes antigos abaixo do piso reprovam de proposito: **nao reescrever roteiro publicado**
 
 ## 📚 CONSULTA (abrir quando fizer sentido, não obrigatório)

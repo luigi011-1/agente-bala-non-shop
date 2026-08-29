@@ -1,50 +1,58 @@
 ---
 name: grafo-pendencia-semantica
-description: "PENDENTE, o Luigi pediu para ser lembrado ANTES da proxima producao: falta a passada semantica que cria arestas conceito-a-conceito entre memoria/ e producao/ no grafo do graphify. Custo estimado ~1M tokens so nos docs, ~100 subagentes a mais se incluir as imagens. Adiado em 2026-08-29 por custo."
-metadata: 
-  node_type: memory
+description: "Custos MEDIDOS da passada semantica do grafo e o que sobrou. A parte cara foi substituida por casamento determinista em 2026-08-29 (grafo_rotas.py). O que resta e opcional: ~401k tokens so nos ROTEIRO.md. NUNCA rodar a passada de imagens, ~3M de tokens pelo pior retorno do projeto."
+metadata:
   type: project
-  originSessionId: 743d3401-da9c-4753-ba54-509bfe4c9d13
-  modified: 2026-08-29T03:04:30.102Z
 ---
 
-# Grafo do graphify: a passada semantica que ficou pendente
+# Grafo: o que a passada semantica ainda renderia, e a que custo
 
-**Lembrar disto ANTES de comecar a proxima producao.** Foi pedido explicitamente pelo Luigi em
-2026-08-29: adiar por custo, mas nao deixar cair no esquecimento.
+**Lembrar antes da proxima producao.** O Luigi estava com 88% do limite semanal em
+2026-08-29, entao o custo aqui e decisao, nao detalhe.
 
-## O que ja esta pronto (nao refazer)
+## A taxa medida, que serve para qualquer estimativa futura
 
-`graphify-out/graph.json`: **1110 nos, 2239 arestas, 96 comunidades, 1 componente conexo, 0
-isolados**. Cobre `memoria/`, `PLAYBOOK_COMPLETO/` e `producao/`. Consulta via
-`graphify query`, `graphify explain` e `graphify path --undirected`. O `--undirected` e
-obrigatorio no `path`, senao responde "no path" com caminho existindo.
+A passada nos 54 arquivos de doutrina custou **689.783 tokens** para 68.324 palavras de
+corpus, ou seja **10,1 tokens por palavra**. Use essa taxa antes de despachar subagente.
 
-As duas metades foram unidas com `graphify merge-graphs`, mais **19 pontes de evidencia textual**
-(o rotulo do no de doutrina cita o slug da pasta, ou o arquivo de doutrina cita a pasta pelo nome)
-e um **esqueleto documental** (conceito, arquivo, pasta, projeto) que zerou os nos orfaos.
+| Alvo em `producao/` | Arquivos | Palavras | Tokens estimados |
+|---|---|---|---|
+| `PROMPTS_PRODUCAO.md` | 19 | 123.709 | **~1.249.000** |
+| `ROTEIRO.md` | 17 | 39.764 | ~401.000 |
+| outros `.md` | 8 | 11.228 | ~113.000 |
+| `DM.md` | 8 | 7.936 | ~80.000 |
+| imagens | 99 | | **~3.000.000** (menos confiavel) |
 
-## O que falta
+## O que JA foi resolvido de graca (nao refazer)
 
-**Arestas conceito-a-conceito atravessando os dois corpora.** Hoje da para ir de um video ate a
-doutrina, mas nao existe aresta ligando *cada* regra ao *cada* take que a aplicou. As duas metades
-foram extraidas em passadas separadas, entao nenhum subagente viu doutrina e producao juntas.
+`grafo_rotas.py`, 2026-08-29. Rota, gatilho de obstaculo e gatilho de virada sao
+**vocabulario fechado e numerado**, entao os dois lados do grafo casam por nome sem
+LLM nenhum. Rendeu 36 arestas: 7 por numero, 3 por texto descritivo e 34 mencoes
+literais nos `ROTEIRO.md`. Hoje `brandon_pulmao/ROTEIRO.md` alcanca
+`Rota 5: a data em que parou de funcionar` em **1 hop**.
 
-## Por que foi adiado: o custo, medido
+Antes disso, `grafo_memoria.py` (204 arestas de wikilink) e `grafo_producao.py`
+(287 takes). As duas metades do grafo sao reconstruiveis sem LLM.
 
-A passada sobre os **52 arquivos** de `memoria/` + `PLAYBOOK_COMPLETO/` custou **689.783 tokens**
-em 3 subagentes, e ainda assim **estourou o limite de sessao** no meio (um chunk teve de ser
-retomado). `producao/` tem ~85 documentos e ~100 imagens:
+## O que sobrou, e a recomendacao
 
-- so os documentos: ~4 subagentes, da ordem de **1M tokens**
-- com as imagens: **~100 subagentes a mais** (visao exige um chunk por imagem)
+**Opcional, ~401.000 tokens:** passada semantica so nos `ROTEIRO.md`. Renderia relacao
+de texto corrido que o vocabulario controlado nao pega (argumento, obstaculo descrito
+sem numero, device de copy).
+
+**NUNCA rodar a passada de imagens.** ~3M de tokens pelo pior retorno do projeto: as
+imagens sao ancoras e keyframes, e a copy mora nos `.md`.
+
+**Pular `PROMPTS_PRODUCAO.md`.** Sozinhos sao 1,25M dos 1,84M e sao encanamento ja
+coberto por [[workflow-entrega-gabarito]], pelo `checar_entrega.py` e pelo
+`grafo_producao.py`.
 
 ## How to apply
 
-Nao rodar isso no meio de uma producao, porque o limite de sessao e compartilhado e derruba os dois.
-Se for rodar, rodar sozinho e com a sessao fresca. Se o Luigi so quiser o ganho barato, os
-documentos de `producao/` sem as imagens ja entregam quase toda a ligacao semantica, porque a copy
-mora no `ROTEIRO.md`, no `PROMPTS_PRODUCAO.md` e no `DM.md`, nao nas ancoras.
+Nao despachar subagente com o limite semanal apertado. Em 2026-08-28 a passada
+**estourou o limite no meio** e um chunk queimou 156.374 tokens sem produzir arquivo:
+pagar e nao levar e o pior desfecho. Rodar sozinho, com sessao fresca, depois do reset.
 
-**Enquanto isso o grafo e um retrato de 2026-08-28:** producao nova nao entra sozinha. Tratar
-resposta do grafo como datada e conferir no arquivo o que for decisivo. Ver [[workflow-entrega-gabarito]].
+Antes de considerar qualquer passada por LLM, perguntar: **isso e vocabulario controlado?**
+Se for lista fechada, numerada ou nomeada, casa por string e custa zero. Ver
+[[autocobranca-no-canal-repetido]] para o principio irmao.
