@@ -1,0 +1,54 @@
+#!/bin/sh
+# pre-commit da operacao de videos.
+#
+# Existe porque os linters que escrevemos dependiam de alguem lembrar de roda-los,
+# que e a doenca que eles curam. O CLAUDE.md manda rodar sync_memoria.ps1 antes de
+# todo commit que envolva memoria; aqui isso deixa de ser regra lembrada.
+#
+# BLOQUEIA: drift da memoria e falha de entrega de producao.
+# NAO bloqueia: rotacao (P10) e frases queimadas, que sao advisory.
+#
+# Instalado com:  git config core.hooksPath .githooks
+# Pulado com:     git commit --no-verify   (usar so quando for consciente)
+#
+# Criado em 2026-08-29.
+
+set -u
+falhou=0
+staged=$(git diff --cached --name-only --diff-filter=ACMR)
+
+[ -z "$staged" ] && exit 0
+
+# ------------------------------------------------- memoria
+if echo "$staged" | grep -q '^memoria/'; then
+    echo "[pre-commit] memoria/ mudou, checando..."
+    if ! python checar_memoria.py; then
+        echo ""
+        echo "[pre-commit] BLOQUEADO: a memoria tem falha."
+        echo "             Se for drift do espelho, rodar:"
+        echo "               powershell -ExecutionPolicy Bypass -File sync_memoria.ps1"
+        echo "             e dar git add memoria/ de novo."
+        falhou=1
+    fi
+fi
+
+# ------------------------------------------------- entrega de producao
+pacotes=$(echo "$staged" | grep '^producao/[^_][^/]*/' | cut -d/ -f1,2 | sort -u)
+for p in $pacotes; do
+    [ -f "$p/ROTEIRO.md" ] || continue
+    echo "[pre-commit] checando entrega: $p"
+    if ! python checar_entrega.py "$p"; then
+        echo "[pre-commit] BLOQUEADO: $p tem FALHA no checar_entrega.py."
+        falhou=1
+    fi
+done
+
+# ------------------------------------------------- lembretes que nao bloqueiam
+if [ -n "$pacotes" ]; then
+    echo "[pre-commit] lembrete (nao bloqueia): PORTAO P10 e frases queimadas"
+    echo "             python checar_rotacao.py"
+    echo "             python checar_frases.py"
+    echo "             python grafo_producao.py    (grafo entra fresco)"
+fi
+
+exit $falhou

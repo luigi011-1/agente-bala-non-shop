@@ -108,6 +108,8 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
   **o rosto da alma gêmea**, nunca o app: ela mandou uma mensagem ao universo, o universo respondeu, e o
   rosto só é revelado se ela clicar no link. Ângulo de entrada é livre, a **ponte pro rosto é obrigatória**.
 - **Roteiro final completo é a ÚLTIMA coisa da entrega**, depois de todos os prompts. E o último bloco de todos é sempre o **roteiro final em INGLÊS**, numerado por take mais a versão corrida só-fala. A tabela bilíngue vem antes dele, não no lugar dele.
+- **Os gates de maquina rodam sozinhos no `pre-commit`** (`git config core.hooksPath .githooks`,
+uma vez por clone). Ele bloqueia commit com drift de memoria ou FALHA de entrega.
 - **Entrega não fecha com FALHA no `checar_entrega.py`.** O linter lê do disco e sobrevive ao resumo
   de contexto de sessão longa, que é exatamente quando eu esqueço regra.
 - **Nunca sugerir "tenta de novo"** quando o Luigi reporta bloqueio. Ele já tentou várias vezes.
@@ -131,6 +133,8 @@ momento do fluxo, ela não acontece e eu erro. Cada portão abaixo é obrigatór
 - `congruencia-matriz` → usuário x coach, e se o claim exige idade vivida
 - `estilo-copy-sem-travessao`
 - **Do ângulo:** 1 → `produtos-angulos` · 2 → `angulo2-copy-fitywell` · 3 → `angulo3-copy-auraly` + `angulo3-swipe-padroes` · 4 → `angulo4-copy-bodyhacks`
+- **Rodar `python checar_frases.py producao/<pacote>`**: compara o roteiro com os anteriores da
+  MESMA conta e aponta frase ja queimada. Ignora clone entre avatares e o beat de CTA
 - **Se o roteiro tiver fechamento:** `banco-rotas-argumentativas` (**conferir o LOG de rotação**) + `banco-obstaculos` + `feedback-ponte-argumentada`
 - **No beat de CTA:** `feedback-cta-produto`
 
@@ -179,6 +183,8 @@ Só depois disso a copy pode ser modificada e mandada pro Luigi aprovar ou ajust
   seções na ordem, nomenclatura T/K/V/REF, os 5 blocos do prompt de vídeo, instrução de patch,
   produto em quadro nos ângulos 2 e 3, e as travas do ângulo 3. Falso positivo se conserta no linter,
   nunca se ignora.
+- **Se a entrega mexeu em memoria, rodar `python checar_memoria.py`**: wikilink quebrado,
+  memoria fora do indice, drift do espelho. O `pre-commit` bloqueia, mas rodar antes evita surpresa
 - `feedback-prompts-na-conversa` → arquivo E chat, linha curta antes de cada prompt
 - `feedback-roteiro-final` → roteiro final em inglês por último
 - Gate final da skill `/produzir`, colado preenchido
@@ -187,6 +193,9 @@ Só depois disso a copy pode ser modificada e mandada pro Luigi aprovar ou ajust
 **Ninguém escreve nesses arquivos hoje, então eles envelhecem e eu repito rota sem saber.**
 - Escrever no **LOG de rotação** de `banco-rotas-argumentativas`: data, vídeo, ângulo, rota, obstáculo
 - Adicionar o vídeo em `biblioteca-videos` com o esqueleto usado
+- **Rodar `python checar_rotacao.py`**: lista o que esta em `producao/` e nao foi registrado no log
+  nem na biblioteca. Avisa, nunca reprova, porque o casamento e por heuristica
+- **Rodar `python grafo_memoria.py` e `python grafo_producao.py`** para o grafo entrar fresco
 - Se alguma prática foi revogada no caminho, **editar a memória velha**, nunca só adicionar
 
 ## Onde está o resto
