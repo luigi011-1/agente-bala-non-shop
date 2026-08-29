@@ -29,7 +29,8 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 - [Processo em 7 fases](processo_7_fases.md) — o pipeline inteiro
 
 ## 🎯 AO DEFINIR ÂNGULO E AVATAR
-- [Produtos e ângulos](produtos_angulos.md) — **SEMPRE perguntar: Ângulo 1, 2 ou 3?** Korella x FityWell x Auraly, banco de insights do quiz
+- [Produtos e ângulos](produtos_angulos.md) — **SEMPRE perguntar: Ângulo 1, 2, 3 ou 4?** Korella x FityWell x Auraly x Body Hacks, banco de insights do quiz
+- [Ângulo 4, doutrina Body Hacks For Men](angulo4_copy_bodyhacks.md) — só se for Ângulo 4. Ebook de receitas ancestrais que sobem testosterona, homens 40+ EUA, **Brandon como coach** (migrou do Ângulo 2 em 2026-08-27, a página dela é 97% homens). **Limite honesto BANIDO**, ponte do efeito colateral esquecido, nunca culpar a masculinidade dele, livro FÍSICO em quadro
 - [Ângulo 3, doutrina Auraly](angulo3_copy_auraly.md) — só se for Ângulo 3. Alma gêmea/manifestação, mulheres EUA, **avatares Kendra Collins e Cody Miller** (Blake aposentado). Escada de reveal lacrado, geo por IP, e a **trava de nunca dizer "one-time"**
 - [Swipe do Ângulo 3, 19 copies validadas](angulo3_swipe_padroes.md) — banco de COPY do nicho, o equivalente ao angulo2-copy-fitywell. **Não é processo:** duração e takes saem do vídeo modelo, como sempre. Esqueleto de 8 beats, ritualizar a métrica (follow=escudo, comentário=reivindicação, share=selo), truque do WhatsApp, punição por inação. 19 videos = 8 roteiros rodados em avatares diferentes
 - [Matriz de congruência](congruencia_matriz.md) — usuário x coach por categoria. Claim de idade vivida exige avatar com a idade
@@ -44,8 +45,8 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 - [Banco de rotas argumentativas](banco_rotas_argumentativas.md) — **CONFERIR O LOG DE ROTAÇÃO. Não repetir a rota nem as frases do vídeo anterior.** 8 rotas, 6 gatilhos de escalada, loops aninhados
 - [Banco de obstáculos](banco_obstaculos.md) — empilhar UM de cada rota de fuga, sempre
 - [Ponte argumentada, nunca afirmada](feedback_ponte_argumentada.md) — cadeia de 3 a 4 elos. Credibilidade se constrói com argumento, não com concessão
-- [CTA: 5 passos + produto](feedback_cta_produto.md) — **o produto NUNCA aparece insuficiente sozinho.** Limite honesto limita um claim
-- [Ângulo 2, doutrina FityWell](angulo2_copy_fitywell.md) — só se for Ângulo 2. Ponte das 3 causas, nunca culpar ela, não mostra produto
+- [CTA: 5 passos + produto](feedback_cta_produto.md) — **o produto NUNCA aparece insuficiente sozinho.** Limite honesto limita um claim nos Ângulos 1 e 2, e é **PROIBIDO no Ângulo 4**
+- [Ângulo 2, doutrina FityWell](angulo2_copy_fitywell.md) — só se for Ângulo 2. Ponte das 3 causas, nunca culpar ela, não mostra produto. ⚠️ **Sem avatar desde 2026-08-27**, a Brandon migrou pro Ângulo 4
 
 ## 🖼️ AO ESCREVER OS PROMPTS
 - [Prompts de imagem (JSON)](prompts_imagem_json.md) — campos, blocos padrão, referências no título em caixa alta
@@ -60,8 +61,7 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 - [Compliance e risco de conta](compliance_riscos.md) — hierarquia de risco, postura punchy + aviso
 
 ## ⏳ EM ABERTO / ARMADILHAS CONHECIDAS (ler antes de commitar ou de "limpar falhas")
-- [sync_memoria.ps1 apaga o README](sync_memoria_apaga_readme.md) — **depois de todo sync, `git checkout -- memoria/README.md`**. Correcao em andamento desde 2026-08-26
-- [Faixa de palavras: piso em aberto](faixa_palavras_piso_aberto.md) — teto subiu pra **29** em 2026-08-26. O **piso de 13 nao foi decidido** e o linter reprova 26 takes antigos. Perguntar antes de reescrever
+- [Faixa de palavras: 13 a 29, fechada](faixa_palavras_take.md) — a fonte e o `checar_entrega.py:230`. Teto 29 em 2026-08-26, **piso 13 confirmado em 2026-08-29**. Os 26 takes antigos abaixo do piso reprovam de proposito: **nao reescrever roteiro publicado**
 
 ## 📚 CONSULTA (abrir quando fizer sentido, não obrigatório)
 - [Operação, playbook](operacao_playbook.md) — modelo de negócio, funil DM, ética

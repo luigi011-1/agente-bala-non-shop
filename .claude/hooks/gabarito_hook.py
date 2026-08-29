@@ -53,7 +53,7 @@ IMAGEM = JSON. VIDEO = texto simples com os 5 blocos (fala com sotaque / trava d
 ultima palavra / o que acontece / camera / som ambiente sem musica). NUNCA misturar os dois.
 Prompt de video nao descreve enquadramento, cor nem composicao.
 
-CONTAR PALAVRAS ANTES: 8s por take = 13 a 25 palavras. Take longo se quebra em fim de frase.
+CONTAR PALAVRAS ANTES: 8s por take = 13 a 29 palavras (teto subiu em 2026-08-26). Take longo se quebra em fim de frase.
 Nunca inventar filler, nunca parafrasear.
 
 GERAR DO ZERO so no primeiro keyframe de cada setup. Todo o resto e EDITAR do K__.
@@ -64,7 +64,7 @@ le o token, nao a negacao. E nunca sugerir "tenta de novo": o Luigi ja tentou va
 FECHAMENTO: conferir o log de rotacao em banco-rotas-argumentativas e NAO repetir a rota nem as
 frases do video anterior. Beat de virada olha pra frente (escalada), nunca resume.
 
-Keyword por angulo: `yes` nos angulos 1 e 2, `222` no angulo 3 (Auraly). Zero travessao.
+Keyword por angulo: `yes` nos angulos 1, 2 e 4, `222` no angulo 3 (Auraly). Zero travessao.
 Angulos 2 e 3 NAO mostram produto (no 3 o CTA promete o ROSTO da alma gemea, nunca o app).
 Roteiro final por ultimo.
 """
