@@ -9,7 +9,7 @@ Copy, ângulos, obstáculos e rotas argumentativas ficam na memória. Aqui fica 
 
 1. Rodar `/watch` no `.mp4`.
 2. **Ler `producao/brandon_angle2/ROTEIRO.md` e `PROMPTS_PRODUCAO.md`.** São o gabarito vivo. Nunca reinventar o formato de memória.
-3. Perguntar o ângulo (1 Korella / 2 FityWell / 3 Auraly) e confirmar o avatar.
+3. Perguntar o ângulo (1 Korella / 2 FityWell / 3 Auraly / 4 Body Hacks For Men) e confirmar o avatar.
    **Exceção do avatar:** `.mp4` + imagem de avatar na mesma mensagem já decide para quem é,
    ver a seção do Ângulo 3. Nesse caso só resta perguntar o ângulo.
    **Ângulo 3 tem fluxo próprio**, ver a seção no fim deste arquivo. O passo 1 vira opcional lá.
@@ -82,7 +82,7 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
 
 - **8 segundos por take = 13 a 29 palavras.** Contar ANTES de escrever os prompts. Take longo se quebra em fim de frase. **Nunca inventar filler, nunca parafrasear.**
 - **A fala no prompt é cópia literal do roteiro final.**
-- **Keyword por ângulo: `yes` nos Ângulos 1 e 2, `222` no Ângulo 3 (Auraly).** Nunca a palavra do vídeo original.
+- **Keyword por ângulo: `yes` nos Ângulos 1, 2 e 4, `222` no Ângulo 3 (Auraly).** Nunca a palavra do vídeo original. No Ângulo 4 a keyword é provisória, ver a seção dele.
 - **Zero travessão (`—`)** em copy, roteiro e resposta.
 - **Reveal contínuo dentro de um take = UMA imagem** do estado inicial. Se o original corta, aí sim são imagens separadas.
 - **Um prompt de imagem por SETUP**, não por take.
@@ -101,7 +101,10 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
 - **Ângulo 3, lei do registro: divino, nunca oculto.** O teste é a LEITURA, não o objeto: prop que lê como
   manifestação entra (cartas, cristais, vela, defumador, tigela com pétalas), prop ou fala que lê como pacto não.
   Sem bruxa, feitiço, spell, shield, círculo de proteção. **Cartas sempre em dourado, branco, rosa claro ou azul claro.**
-- **Ângulos 2 e 3 não mostram produto.** Ângulo 1 mostra sempre. No Ângulo 3 o objeto de desejo do CTA é
+- **Ângulos 2 e 3 não mostram produto.** Ângulos 1 e 4 mostram sempre (no 4 é um **livro FÍSICO**, nunca mockup de ebook nem tela de celular).
+- **[ÂNGULO 4] LIMITE HONESTO É PROIBIDO.** Nenhuma ressalva, nenhum "isso não faz X". A dor prometida
+  e o mecanismo do produto são a mesma linha, então toda ressalva encosta na promessa. O take vai pra
+  autoridade, prova social, urgência ou escassez. No Ângulo 3 o objeto de desejo do CTA é
   **o rosto da alma gêmea**, nunca o app: ela mandou uma mensagem ao universo, o universo respondeu, e o
   rosto só é revelado se ela clicar no link. Ângulo de entrada é livre, a **ponte pro rosto é obrigatória**.
 - **Roteiro final completo é a ÚLTIMA coisa da entrega**, depois de todos os prompts. E o último bloco de todos é sempre o **roteiro final em INGLÊS**, numerado por take mais a versão corrida só-fala. A tabela bilíngue vem antes dele, não no lugar dele.
@@ -127,7 +130,7 @@ momento do fluxo, ela não acontece e eu erro. Cada portão abaixo é obrigatór
 - `referencia-frameworks-copy` → régua germânica, 3 relevâncias, loop aberto, os 4 vazamentos de venda
 - `congruencia-matriz` → usuário x coach, e se o claim exige idade vivida
 - `estilo-copy-sem-travessao`
-- **Do ângulo:** 1 → `produtos-angulos` · 2 → `angulo2-copy-fitywell` · 3 → `angulo3-copy-auraly` + `angulo3-swipe-padroes`
+- **Do ângulo:** 1 → `produtos-angulos` · 2 → `angulo2-copy-fitywell` · 3 → `angulo3-copy-auraly` + `angulo3-swipe-padroes` · 4 → `angulo4-copy-bodyhacks`
 - **Se o roteiro tiver fechamento:** `banco-rotas-argumentativas` (**conferir o LOG de rotação**) + `banco-obstaculos` + `feedback-ponte-argumentada`
 - **No beat de CTA:** `feedback-cta-produto`
 
@@ -278,3 +281,107 @@ variações, então cada gancho novo custa **só 1 keyframe + 1 clipe**.
 os obstáculos antecipados e o follow-up. Mestre em `producao/_dm_auraly/DM_PADRAO.md`.
 O `banco-rotas-argumentativas` e o `banco-obstaculos` continuam sendo consultados normalmente, e
 atendem o beat de fechamento onde ele existir, no vídeo ou no `DM.md`.
+
+---
+
+## ÂNGULO 4 (Body Hacks For Men), o que muda em relação aos outros
+
+**O PROCESSO É O MESMO.** `/watch` no modelo, método puzzle, mesma ordem de entrega, mesma estrutura
+de prompts, mesmas travas de realismo, mesmos 5 blocos no prompt de vídeo, **DOIS arquivos** (não tem
+`DM.md` obrigatório como o Ângulo 3). Duração, número de takes e gramática visual saem do vídeo modelo.
+Só troca o que é **do produto**. Doutrina completa em `angulo4-copy-bodyhacks`.
+
+**Produto:** `Body Hacks for Men 40+`, marca **FITYWELL** (mesma casa do Ângulo 2), um **PLAYBOOK
+DIGITAL** de **42 hacks de HÁBITO** em 7 áreas, 4 linhas e 2 minutos cada. Homens 40+ dos EUA.
+Landing: `https://bodyhacksformen.netlify.app/` · checkout **Hotmart embutido na própria página** ·
+**$9.90 uma vez**, ancorado em $47 launch price, sem renovação, garantia de 30 dias.
+
+**⚠️ NÃO são receitas ancestrais e NÃO é testosterona.** Foi a descrição inicial, e a landing
+desmentiu no mesmo dia. Os hacks são hábito e estratégia. Ler a seção 0 da doutrina antes de escrever
+qualquer copy, porque prometer receita e entregar hábito **quebra no clique**, que é o pior lugar.
+
+**Avatar: holistic.brandon, sempre COACH.** Ela **migrou de vez do Ângulo 2 em 2026-08-27**, porque a
+audiência da página dela é **97% homens dos EUA**. Nunca usuária, nunca "at our age". A autoridade dela
+é **volume observado**: "every man past forty who walks into my gym".
+
+**Keyword `yes`**, decidida pelo Luigi em 2026-08-27.
+
+**MOSTRA produto: livro FÍSICO como prop**, nunca print de tela nem mockup. Gerar uma vez como
+**`REF-LIVRO`** e anexar sempre, igual o Ângulo 1 faz com o `product.png`. **O nome nunca vem
+sozinho**, sempre colado ao descritor, no mesmo take e no mesmo gesto de levantar o livro.
+**Mas a FALA nunca promete objeto físico**, porque o produto é digital com entrega instantânea. De
+preferência o CTA diz que ele lê hoje à noite, no celular.
+
+**🚫 LIMITE HONESTO É BANIDO.** Ver a regra na lista acima.
+
+**🚫 NUNCA CULPAR A MASCULINIDADE DELE.** Espelho da regra do Ângulo 2 (lá era o esforço dela).
+Zero "você se deixou levar", zero "você parou de se cuidar", zero cobrança pelo que ele era aos 25.
+Vergonha é o que trava esse cara. O álibi é **o cano e a mesa, nunca o homem**.
+**Crivo antes de entregar:** *"essa copy sugere, em algum ponto, que ele deixou isso acontecer?"*
+
+**🔑 ED É O EIXO PRINCIPAL DE TODO VÍDEO DO ÂNGULO 4** (decisão do Luigi, 2026-08-27, reafirmada
+depois da análise da landing). A página sustenta: Men's Vitality é uma das 7 áreas e tem 6 hacks só
+dela, então "vários body hacks que resolvem isso" é verdade. **A promessa é ED, o mecanismo é o
+mostrador, e o produto é "vários hacks só pra isso mais 40 pro resto".** O mecanismo não esvazia a
+promessa, ele explica por que tudo que ele tentou falhou. Base fixa, variando a cada roteiro:
+promessa de ED → o mostrador → vários hacks pra isso no livro → comenta `yes` → eu mesmo mando na DM.
+
+**No CTA: `fix`, nunca `treat` nem `cure`** (o rodapé da landing diz que o produto não trata nem cura,
+e "the hacks for this" tem a mesma força sem o claim médico). E **cuidado com "eu te mando o livro"**:
+a DM entrega link de uma página de $9.90, não o livro de graça, e é o mesmo erro do "it is free" do
+Ângulo 2. **Dizer o preço joga a favor**, porque $9.90 com garantia de 30 dias mata a suspeita de
+upsell antes dela nascer.
+
+**A PONTE já está escrita dentro do produto, usar ela:** *"drive is a readout, not the problem"*
+(hack 39). Ele vinha tentando consertar o mostrador, e é por isso que nada pegou, inclusive o que vem
+em frasco. O motor é **sono, carga e cintura**, e são as três que ele controla sem receita.
+**Nunca usar a estrutura das 3 causas do Ângulo 2 aqui**, e nunca a ponte de testosterona: a própria
+página rejeita o frame hormonal por escrito.
+
+**O ÁLIBI também já está na página:** *"It's not your age. It's your playbook."* Mais a tabela
+25 playbook contra 40+ playbook, que é device de copy pronto.
+
+**O vazamento do ângulo, e o que o fecha:** o vídeo entrega um hack de graça e o produto tem 42.
+O que fecha é que **um hack conserta uma área e ele não sabe qual é a dele**, e que fazer mais coisa
+certa isolada **é o playbook dos 25**, que é justamente o erro que o produto nomeia.
+
+**A PONTE VERBAL com a página é obrigatória.** A landing é contida, nunca diz ED, o termo dela é
+**`drive and confidence`**. O vídeo pode ser mais quente, mas **o CTA tem que aterrissar nessa frase**,
+senão ele cai numa página que não parece falar do que ele acabou de ouvir.
+
+**Vocabulário, quem pode dizer o quê:** `champion`, `your soldier` e "the part of you that stopped
+answering" são liberados na boca dela. **`johnson` NUNCA sai da boca dela**, só em legenda. Nome
+clínico de órgão nunca, em lugar nenhum. Um beat de testemunha feminina por roteiro, **na escalada,
+nunca no hook**, e ela relata o que as esposas dos clientes dizem, nunca julga o espectador.
+
+**2ª pessoa em cena é homem 45+.** Tratamento no hook: `brother`, `man`, `my guy`.
+Nunca `ma'am`, `girl`, `honey`.
+
+## graphify, o grafo de conhecimento da operacao
+
+Existe um grafo em `graphify-out/` cobrindo `memoria/`, `PLAYBOOK_COMPLETO/` e `producao/`:
+**1110 nos, 2239 arestas, 96 comunidades**, um unico componente conexo. Ele liga doutrina a
+execucao, entao responde coisas que nenhum arquivo sozinho responde: qual rota ja foi usada em
+qual video, onde uma regra foi aplicada, se um esqueleto ja rodou.
+
+**Consultar o grafo ANTES de responder qualquer pergunta sobre a operacao.**
+
+- `graphify query "<pergunta>"` devolve o subgrafo relevante, mais barato que abrir os arquivos.
+  Se o resultado vier truncado, subir com `--budget 1500`.
+- `graphify path "<A>" "<B>" --undirected` mostra como duas coisas se ligam.
+  **O `--undirected` e obrigatorio**: sem ele a busca e direcionada e responde "no path"
+  mesmo existindo caminho.
+- `graphify explain "<conceito>"` abre um no e a vizinhanca dele.
+- `graphify-out/GRAPH_REPORT.md` so para visao geral, nunca como primeira parada.
+
+**O grafo NAO substitui os PORTOES DE CONSULTA.** Ele orienta e cruza; os portoes mandam ler o
+arquivo inteiro. Quando o portao diz "ler `producao/brandon_angle2/ROTEIRO.md`", e ler o arquivo,
+nao perguntar ao grafo sobre ele. Precedencia: **PORTAO > grafo > lembranca**.
+
+**Nos com nome de caminho** (`memoria/banco_obstaculos.md`, `memoria/`) sao o esqueleto documental,
+nao conceitos. Servem de indice e garantem que nenhum no fique orfao. Ignorar na leitura de conteudo.
+
+**O grafo envelhece igual a memoria, e pelo mesmo motivo do PORTAO P10.** `graphify update` aqui e
+AST-only e ignora markdown, entao **nao adianta** neste projeto. Depois de mexer em `memoria/` ou
+fechar uma producao, o grafo fica defasado ate uma reconstrucao semantica, que custa subagentes.
+Enquanto isso, tratar resposta do grafo como **datada**, e conferir no arquivo o que for decisivo.
