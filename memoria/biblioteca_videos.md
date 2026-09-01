@@ -1,11 +1,11 @@
 ---
 name: biblioteca-videos
-description: "Biblioteca dos 14 vídeos já clonados — cada caso com hook/estrutura/hero props/avatares produzidos + padrões de esqueleto recorrentes (inspeção comida, bebida matinal, testemunho antes/depois, antes/depois disfarçado, metáfora de limpeza)."
+description: "Biblioteca dos videos ja clonados — cada caso com hook/estrutura/hero props/avatares produzidos + padrões de esqueleto recorrentes (inspeção comida, bebida matinal, testemunho antes/depois, antes/depois disfarçado, metáfora de limpeza)."
 metadata: 
   node_type: memory
   type: reference
   originSessionId: 246ef273-2f24-4b5d-8e5e-51929be93030
-  modified: 2026-08-14T19:19:25.914Z
+  modified: 2026-08-27T21:34:58.766Z
 ---
 
 # Biblioteca de Vídeos Já Produzidos (casos reais)
@@ -143,6 +143,99 @@ Hook: **escultura de uma cabeça humana muito inchada** na mesa, chá quente des
 - **⚠️ CONFLITO RESOLVIDO, e ele vale pra sempre:** o modelo tem **círculo de sal com ervas queimando**, que colide com a proibição de círculo de proteção no `CLAUDE.md`. Mas o banco de ganchos registra CÍRCULO·cercar como o mecanismo mais repetido do swipe. **A saída não foi escolher um lado, foi trocar o que está DENTRO do círculo:** o sal cercando a carta SOULMATE lê como *marcar o que é dela*, o sal cercando ervas em chamas lê como ritual de proteção. **Mesmo prop, leitura oposta.** É a prova viva de que o teste é a leitura e não o objeto.
 - **Primeira DM derivada de um vídeo específico** em vez de puxada do banco das 10. Entra no `DM_PADRAO` como V11.
 - **NÃO REPETIR:** este esqueleto e estas frases estão queimados.
+
+## 24. A confissao em vinte e quatro horas · `producao/trevor_a3_confissao/` · 2026-08-29
+- **Modelo:** `DcjIIyWq3Bt_.mp4`, 36,663s, **uma cena continua, ZERO cortes, nenhum prop, nenhum reveal**.
+  O unico evento de tela e uma **seta vermelha de edicao aos 26,6s**.
+- **Fala de identificacao:** *"What the fuck have you been manifesting?"*
+- **Esqueleto:** anti-skip por acusacao com palavrao, eleicao, promessa de confissao, a leitura,
+  tensao, prazo de 24h, o trato, as acoes, o rosto, urgencia e escassez. **11 beats de ~3,3s, que
+  agrupamos em 6 takes.**
+- **Avatar:** Holistic Trevor (A3), primeira producao dela · **Angulo de entrada:** a confissao que ja esta a caminho.
+- **Rota de fechamento:** nao consome rota, o modelo nao tem beat de fechamento argumentativo.
+  Mesmo caso do #17.
+- 🔑 **O PRIMEIRO MODELO DO ANGULO 3 SEM MECANICA VISUAL NENHUMA.** O heroi do hook e a FRASE.
+  Consequencia pratica: o gancho visual do T1 vira ganho liquido em vez de substituicao, e este e o
+  cenario em que o passo dos ganchos do angulo rende mais.
+- **Duas coisas que este modelo entrega de graca e os anteriores nao:** ele **ja promete o ROSTO**
+  (no #22 esse beat foi inventado por nos) e **o `222` ja e a keyword dele**.
+- **CINCO GANCHOS APROVADOS:** a carta que cai sozinha do leque, as duas cartas grudadas que se
+  separam (inventado), a corrente com cadeado cortada, a peneira de sal sobre a carta, e o baralho
+  inteiro derrubado (inventado, clickbait puro). **Em todos a carta SOULMATE e o alvo da acao**, e e
+  ela que fica na mao do T2 em diante, o que amarra o gancho a trava do angulo de graca.
+- **Economia:** so o T1 muda entre as variacoes. **Cinco videos custam 10 clipes, nao 30.**
+- ⚠️ **DOIS RISCOS CUMULATIVOS NO MESMO VIDEO:** palavrao no primeiro segundo (regra que proibia isso
+  foi **revogada pelo Luigi em 2026-08-29**, ver [[angulo3-swipe-padroes]]) mais previsao sobre
+  terceiro identificavel com janela de 24h, que e o claim de maior risco do swipe inteiro.
+- **NAO REPETIR:** este esqueleto e estas frases estao queimados.
+
+## 25. A confissao em vinte e quatro horas, versao Karen A3 · `producao/karen_a3_confissao/` · 2026-08-29
+- **Mesmo modelo do #24** (`DcjIIyWq3Bt_.mp4`), rodado na **Karen Thompson (A3)**. Primeira producao dela.
+- ⚠️ **NAO e copia da copy do #24.** Aplicacao limpa da regra 10 reescrita em 2026-08-26: esqueleto e
+  props identicos, **copy AJUSTADA por congruencia**. T1, T2, T3 e T4 mudaram de redacao; **T5 e T6
+  ficaram identicos de proposito**, porque sao mecanica de funil (follow gate, o rosto, punicao por
+  inacao) e mecanica nao tem idade nem registro.
+- **O eixo do ajuste foi o REGISTRO, nao a idade.** A Trevor A3 e calorosa e falante, entao a
+  construcao condicional cabe nela. A Karen e contida e sobria, entao a copy dela vira declarativa
+  curta. **A Trevor fala baixo porque esta espantada; a Karen fala baixo porque e assim que ela fala**,
+  e o palavrao choca justamente por destoar dela.
+- **A gramatica visual tambem separa as duas, e isso e trava de producao:** a Trevor segura o **leque
+  na mao**, a Karen mantem o **leque aberto na MESA** e ergue so a carta SOULMATE. Cumpre a trava do
+  angulo sem perder a assinatura de cada uma.
+- **Os cinco ganchos sao os mesmos**, adaptados a gramatica dela. Ganchos sao prop, e prop e esqueleto,
+  entao nao voltaram pra escolha do Luigi.
+- **REF-CARTA reaproveitada do #24**, nunca regerada, senao a arte diverge entre as duas contas e a
+  congruencia com o quiz se perde.
+- ⚠️ **Esta versao sobe o risco em relacao ao #24 num ponto:** o T3 fecha com *"and it does not move
+  back"*, afirmacao de irreversibilidade. Ganha em copy, endurece o claim.
+- **Fecha o teste 2x1:** mesmo esqueleto, duas avatares, `rt_ad` separado (`trevor_a3_*` contra
+  `karen_a3_*`). Unica variavel e quem fala.
+- **NAO REPETIR:** este esqueleto e estas frases estao queimados. **Nunca publicar o #24 e o #25 na
+  mesma conta.**
+
+## 26. A confissao em vinte e quatro horas, versao Mark A3 · `producao/mark_a3_confissao/` · 2026-08-29
+- **Mesmo modelo do #24 e do #25** (`DcjIIyWq3Bt_.mp4`), rodado na **Mark Collins (A3)**. Primeira
+  producao dela. **Fecha o teste 3x1: um esqueleto, tres avatares, tres `rt_ad` separados.**
+- ⚠️ **MARK COLLINS E MULHER.** Nome masculino, caso inverso da Melody Carter.
+- **O terceiro eixo de registro.** Trevor A3 e calorosa e falante, Karen A3 e contida e solene, e a
+  **Mark e direta e sem cerimonia**, a mais nova das tres. O palavrao nela sai quase sem peso, como
+  constatacao, e e por isso que soa real. **Tres versoes do mesmo hook, tres leituras diferentes.**
+- ✅ **E A VERSAO DE MENOR RISCO DAS TRES.** O T3 da Karen fecha com *"and it does not move back"*,
+  afirmacao de irreversibilidade. Aqui fecha em *"they stop sitting on it"*, que descreve alguem
+  mudando de atitude e nao um desfecho garantido. **Mesma forca de copy, exposicao menor.**
+  **Recomendacao registrada: se for estrear o esqueleto em alguma conta, comecar por esta.**
+- **A gramatica visual e a terceira:** Trevor segura o **leque na mao**, Karen fica com as **maos
+  entrelacadas** acima do leque, Mark apoia as **maos SOBRE o leque, palma para baixo**. Mais a joia:
+  **ela e a unica das tres que usa a cruz de prata no pescoco**, e a unica com aneis chunky.
+- **A DM dela e a unica que fecha o loop com a expressao literal do roteiro:** o T3 diz *"they stop
+  sitting on it"* e a DM entrega *"the one who stopped sitting on it"*.
+- **REF-CARTA reaproveitada do #24**, nunca regerada.
+- **Os cinco ganchos sao os mesmos**, adaptados a gramatica dela.
+- **NAO REPETIR:** este esqueleto e estas frases estao queimados. **Nunca publicar #24, #25 e #26 na
+  mesma conta.**
+
+---
+
+# ÂNGULO 4 (Body Hacks for Men 40+) — vídeos produzidos
+
+## 23. A crosta no vinagre · `producao/brandon_crosta/` · 2026-08-27
+- **Modelo:** `holistic.brandon.mp4`, 51,7s, 12 segmentos, **solo, sem 2ª pessoa**. Já é do nicho de ED
+  e já usa `comment yes` mais follow gate com motivo, que é o nosso padrão.
+- **Fala de identificação:** *"This is what years of sugar buildup looks like inside your penis."*
+- **Esqueleto:** prop encrustado erguido → submerso no vinagre com nuvens saindo → em pé na linha
+  d'água → **a crosta é QUEBRADA COM AS MÃOS revelando o vaso vermelho e azul** → bancada de
+  ingredientes → receita (mel, alho, sal rosa) → protocolo → mecanismo com árvore vascular no
+  primeiro plano → pivô → ponte → CTA.
+- 🔴 **O HERÓI ESTÁ AOS 10s, NÃO AOS 6s.** A dissolução no vinagre é só o setup. O herói é a **quebra
+  manual da crosta**. Ler só até a dissolução e chamar aquilo de herói é exatamente o erro histórico
+  #3 (a caçamba), e eu quase cometi de novo.
+- **Avatar:** holistic.brandon como coach · **Rota:** 3, o manual que mudou · **Virada:** reversão do vilão.
+- **O device novo:** o **incidente com a desculpa** (T12 a T14), registrado em
+  [[banco-rotas-argumentativas]]. Substituiu um mecanismo em forma de lista que o Luigi reprovou.
+- **Prop de risco:** modelo anatômico encrustado. Resolvido pelo caminho do playbook 3.4, **o prop
+  fiel é o ambíguo**: descrito por forma, cor e material (`teaching model of a vascular bundle`,
+  `dried crust cracked like dried clay`), nunca pelo nome. A legenda faz o trabalho anatômico.
+- **O que NÃO repetir:** rota 3, reversão do vilão, e a frase *"and you said you were tired"*.
 
 ---
 

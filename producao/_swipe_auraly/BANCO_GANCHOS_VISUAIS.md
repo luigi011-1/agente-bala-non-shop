@@ -24,7 +24,7 @@ iguais em todas as variações, então **T2 até o fim se reaproveitam**. Cada g
 > de preferência como **alvo da ação**. Isso cria congruência com o **quiz da oferta**: ela vê a carta
 > no vídeo e cai numa página que fala a mesma língua visual. Artes possíveis: `SOULMATE` e `TWINFLAME`.
 
-Aparece na maioria dos ganchos. Carta ilustrada de um casal se abraçando, com a palavra `SOULMATE` embaixo, arte em tons claros (bege, dourado, rosa). É o herói recorrente e cumpre a regra de carta em cor clara.
+Aparece na maioria dos ganchos. Carta ilustrada de um casal, coração luminoso entre eles e arco de rosas, com a palavra `SOULMATE` na faixa da base, **borda metálica espelhada com reflexo de arco-íris e arte saturada** (estilo holográfico, 2026-08-29). É o herói recorrente.
 **Ela é o alvo da ação:** o que é cercado, selado, molhado, enterrado, queimado ou libertado.
 
 ## Gancho de tela (as famílias de texto)

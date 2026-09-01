@@ -1,6 +1,6 @@
 ---
 name: angulo3-copy-auraly
-description: "ÂNGULO 3 — app Auraly (astrologia / lei da atração / alma gêmea e twin flame), tráfego orgânico IG+FB nos EUA, avatares Kendra Collins e Cody Miller, **keyword `222`** (não `yes`), **nunca mostra o produto**, e a LEI DO REGISTRO: divino/manifestação sempre, oculto/bruxaria nunca (cartas em cores claras sim, pedra/cristal jamais). Banco de insights extraído dos 3 funis do quiz (sm-v16-8, sm-v16-14, lr-love-reading-2) em 2026-08-24: mecanismo do mapa astral, dores, frases emocionais, escada de reveal com lacre, pitch de $9, e a CONTRADIÇÃO de assinatura no checkout que limita o que pode ser dito na copy."
+description: "ÂNGULO 3 — app Auraly (astrologia / lei da atração / alma gêmea e twin flame), tráfego orgânico IG+FB nos EUA, avatares Kendra Collins e Cody Miller, **keyword `222`** (não `yes`), **nunca mostra o produto**, e a LEI DO REGISTRO: divino/manifestação sempre, oculto/bruxaria nunca (cartas holograficas/foil e saturadas desde 2026-08-29, pedra/cristal jamais). Banco de insights extraído dos 3 funis do quiz (sm-v16-8, sm-v16-14, lr-love-reading-2) em 2026-08-24: mecanismo do mapa astral, dores, frases emocionais, escada de reveal com lacre, pitch de $9, e a CONTRADIÇÃO de assinatura no checkout que limita o que pode ser dito na copy."
 metadata: 
   node_type: memory
   type: project
@@ -127,7 +127,7 @@ O sobrenatural que pode existir aqui é o **sinal**, a **resposta do universo**,
 
 **✅ Liberados** (todos se relacionam a manifestação, não a pacto):
 - **Cartas.** Prop validado do nicho, sinaliza adivinhação sem soar obscuro.
-  - **Única restrição de cor do ângulo: sempre claras e chamativas, dourado, branco, rosa claro, azul claro.** Nunca carta escura, preta, roxa profunda ou de arte sombria.
+  - **Cor LIBERADA em 2026-08-29: carta HOLOGRÁFICA / FOIL, arte saturada e chamativa.** Revoga a paleta pálida que valia antes (dourado, branco, rosa claro, azul claro). **A trava nunca foi a cor, é a LEITURA:** casal, coração, rosas, luz celeste. Azul-noite profundo com estrelas e lua crescente entra sem problema. Continua fora tudo que lê como pacto: preto gótico, caveira, corvo, serpente, espada, símbolo invertido, sigilo.
 - **Pedras e cristais.** Liberados. Se relacionam a manifestação.
 - **Defumador de sálvia** com fumaça visível, **tigela de água com pétalas de rosa**, **livro enterrado na terra**, **vela acesa**. Todos liberados.
 - Props do mesmo tipo que apareçam em copy validada nova: liberados por padrão, aplicando o mesmo teste.
@@ -144,24 +144,29 @@ Aplicação nas 3 ações do CTA em [[angulo3-swipe-padroes]], que traz a tabela
 ## 🃏 TRAVA: A CARTA SOULMATE NA MÃO DEPOIS DO GANCHO (Luigi, 2026-08-24)
 **Regra fixa de todo vídeo do Ângulo 3.** Terminado o take do gancho, a avatar aparece **segurando a carta de tarô SOULMATE** e a mantém na mão até o fim do vídeo.
 
-**A carta:** ilustração de um **casal**, a palavra `SOULMATE` ou `TWINFLAME` na base, arte em **tons claros** (creme, dourado, rosa claro, azul claro). Cumpre a regra de carta em cor clara.
+**A carta:** ilustração de um **casal**, a palavra `SOULMATE` ou `TWINFLAME` na faixa da base, **borda metálica espelhada com brilho holográfico de arco-íris** (ou foil dourado polido na variante) e arte **saturada**. Espec reescrita em 2026-08-29, abaixo.
 
 ### ⚠️ ESPEC DE ARTE, corrigida em 2026-08-24
 **Erro cometido:** eu escrevi `"soft storybook style with clean lines"` no prompt e o gerador entregou **carta de livro infantil**, com rostinhos fofos, roupa moderna e borda branca. O Luigi cortou.
 
 **O que faz uma carta ler como TARÔ DE VERDADE e não como desenho infantil:**
-- **Borda ornamentada** em dourado fosco, com arabesco gravado e floreio em cada canto. Nunca borda branca lisa
+- **Borda metálica LARGA** (2026-08-29): prata espelhada com brilho holográfico de arco-íris, ou foil dourado polido na variante, com arabesco gravado e floreio em cada canto. Nunca borda branca lisa, nunca dourado fosco apagado
 - **Numeral romano** em capitulares serifadas no topo
 - **Faixa de título na base** com a palavra em **capitulares serifadas espaçadas**
 - **Figuras em estilo simbólico chapado** com hachura fina de nanquim, não cartum arredondado
 - **Túnicas atemporais**, nunca roupa moderna (suéter, saia, jeans)
 - **Motivo celeste** atrás: sol estilizado, lua crescente, estrelas de cinco pontas
-- **Papel marfim envelhecido** com fibra visível e cantos levemente gastos. Nunca branco puro
-- **Paleta limitada e fosca**: dourado antigo, marfim, rosa empoeirado, azul pálido. Nunca pastel brilhante
+- **Cartão liso de baralho MODERNO de foil**, cantos arredondados, superfície impressa limpa (2026-08-29). Deixou de ser baralho antigo e gasto
+- **Paleta SATURADA e acabamento FOIL** (2026-08-29): carmim e rosa das rosas, lavanda, dourado quente e luz branca, sobre a borda metálica com reflexo de arco-íris. Nunca pastel apagado, nunca paleta fosca
+- **Coração luminoso branco** entre as cabeças do casal, raios de luz atrás e **arco de rosas** enquadrando os dois. É o que segura a leitura de amor mesmo com a cor mais gritante
 
-**Negative obrigatório:** `no cartoon style, no children's book illustration, no cute rounded faces, no modern clothing, no white border, no bright pastel colors, no comic art, no 3d render`
+**Negative obrigatório (reescrito em 2026-08-29):** `no cartoon style, no children's book illustration, no cute rounded faces, no modern clothing, no plain white border, no comic art, no 3d render, no gothic art, no skulls, no ravens, no snakes, no swords, no inverted symbols, no sigils`
 
-**⚠️ ARMADILHA TÉCNICA:** o negative padrão do projeto carrega `no words overlaid on the image`, que **mata a palavra da carta**. Neste prompt específico, trocar por `no captions, no subtitles, no watermark` e escrever explicitamente que **o único texto é a palavra do título na faixa da base**.
+**Saíram do negative em 2026-08-29:** `no bright pastel colors` virou risco de matar a saturação, e `no dark art` / `no black card` deixaram de valer porque azul-noite entrou. Quem carrega a lei do registro agora são os símbolos listados acima, não a cor.
+
+**⚠️ ARMADILHA TÉCNICA 1:** o negative padrão do projeto carrega `no words overlaid on the image`, que **mata a palavra da carta**. Neste prompt específico, trocar por `no captions, no subtitles, no watermark` e escrever explicitamente que **o único texto é a palavra do título na faixa da base**.
+
+**⚠️ ARMADILHA TÉCNICA 2 (2026-08-29, nasceu com o estilo holográfico):** o bloco de realismo do projeto carrega `no golden glow`, `no warm orange color cast`, `no sparkles` e `no glowing edges`. **No prompt da REF-CARTA essas quatro linhas ficam FORA**, senão matam o foil, o dourado da borda e o coração luminoso. Para não colidir com o gate de realismo, o brilho é descrito como **propriedade impressa do objeto** (foil metálico que reflete a luz), nunca como luz sobrenatural, e a **luz da cena continua neutra de dia nublado**. Nos keyframes da avatar segurando a carta o negative segue completo e normal: lá a arte já vem travada pela REF anexada.
 
 **Por que funciona:** ela é o **objeto do desejo em quadro** sem ser o produto. O Ângulo 3 não mostra app, então a carta ocupa esse lugar. E como o rosto do casal na carta é ilustração e não fotografia, ela **não viola a trava do rosto**: não é o rosto dele, é o símbolo do par.
 

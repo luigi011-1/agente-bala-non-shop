@@ -4,7 +4,7 @@ description: "Regra de CTA: SEMPRE mostrar o produto em todo video de venda (con
 metadata:
   type: feedback
   originSessionId: 3bf5f39c-3d1c-47cb-a10f-ec06a96b74b1
-  modified: 2026-08-22T15:38:06.861Z
+  modified: 2026-08-27T18:41:02.956Z
 ---
 
 ## Regra atual (substitui a regra anterior de "so mostrar se o original mostra")
@@ -70,6 +70,22 @@ O Luigi cortou: *"isso sem dúvida vai matar a conversão, está limitando o pro
 > "It is on Amazon. And it is the one thing that finally takes cortisol off your testosterone."
 
 **Nota de compliance:** o limite honesto também servia de almofada de risco. Tirar ele sobe um pouco a exposição. A postura da operação segue punchy com aviso registrado ([[compliance-riscos]]), decisão é do Luigi.
+
+### 🔴 TERCEIRA OCORRÊNCIA, e a regra endurece: no ÂNGULO 4 o limite honesto é BANIDO (2026-08-27)
+Eu escrevi pela terceira vez a mesma família de erro, agora abrindo a doutrina do Ângulo 4 (ebook Body Hacks For Men):
+
+> ERRADO: *"This does not give you twenty years back. Nothing does. What it does is take the brake off the pipe, and your body goes back to doing what it did on its own."*
+
+"your body goes back to doing what it did on its own" é literalmente o mesmo **"so your body can do the rest"** já cortado em 2026-08-22. O Luigi: *"pode cortar esse limite honesto, pois descredibiliza o nosso produto, a pessoa tem que acreditar que o que ela está comprando é a solução do problema que ela tem."*
+
+**Por que no Ângulo 4 não existe versão segura, e por isso vira proibição e não cuidado:** nos outros ângulos dava pra limitar um claim periférico. Ali **a dor prometida (desempenho) e o mecanismo do produto (testosterona) são a mesma linha**, então qualquer ressalva encosta na promessa por definição.
+
+**Regra:** limite honesto é **opcional e cirúrgico** nos Ângulos 1 e 2, e **proibido no Ângulo 4**. O take liberado vai pros quatro trabalhos que pagam: autoridade, prova social agregada, urgência ou escassez. Ver [[angulo4-copy-bodyhacks]].
+
+### Produto em quadro no ÂNGULO 4: livro FÍSICO, nunca mockup (2026-08-27)
+O Ângulo 4 **mostra produto**, então a regra do topo deste arquivo vale, com uma especificação: entra um **livro físico encadernado** na mão, nunca mockup de ebook, tela de celular ou print. O link chega na DM, então não há o que procurar, e livro na mão é o prop de autoridade mais forte da operação (casos #8 e #21 da [[biblioteca-videos]]). Print de tela entrega cara de anúncio no beat mais caro. Gerar uma vez como `REF-LIVRO` e anexar sempre.
+
+**O nome nunca vem sozinho.** "Body Hacks For Men" não diz a dor (o que é ativo de compliance e anti-vergonha), então soaria como listicle de fitness se dito solto. Sempre colado ao descritor, no mesmo take e no mesmo gesto de levantar o livro.
 
 ### Como desmerecer a RECEITA sem derrubar o mecanismo (pedido do Luigi, 2026-08-21)
 A direção dele: a receita **resolve sim** o problema, o mecanismo continua verdadeiro, mas **executar em casa tem consequências e objeções**, e por isso o produto é a melhor opção.

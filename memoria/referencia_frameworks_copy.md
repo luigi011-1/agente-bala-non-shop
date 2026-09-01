@@ -4,7 +4,7 @@ description: "Banco de frameworks de copy extraídos de 3 fontes analisadas em 2
 metadata: 
   node_type: memory
   type: reference
-  modified: 2026-08-23T15:11:25.104Z
+  modified: 2026-08-27T18:41:14.960Z
   originSessionId: 32e5549f-536c-4d15-8e9c-ed26d399e783
 ---
 
@@ -109,7 +109,13 @@ Levantado rodando o roteiro do Korella (Melody) contra os 3 frameworks. Ordem de
 
 **3 beats que não existiam no nosso processo e devem ser considerados no bloco de CTA:** álibi, breakdown de marca com fórmula travada, limite honesto.
 
+> ⚠️ **EDITADO EM 2026-08-27:** o **limite honesto saiu dessa lista no ÂNGULO 4** (ebook Body Hacks For Men), onde é **proibido**, não opcional. Lá a dor prometida e o mecanismo do produto são a mesma linha, então toda ressalva encosta na promessa. Nos Ângulos 1 e 2 o beat continua permitido e cirúrgico. Ver [[feedback-cta-produto]] e [[angulo4-copy-bodyhacks]].
+
 ## Nota de risco
 Empurrar pro vicious no nicho de ED sobe o risco de PLATAFORMA (Meta/TikTok), não o de geração. Postura da operação segue punchy com aviso registrado ([[compliance-riscos]]). O beat de limite honesto compensa parte desse risco.
+
+> ⚠️ **EDITADO EM 2026-08-27:** essa compensação **não existe mais no Ângulo 4**, porque o beat foi banido lá. O que recupera parte do risco naquele ângulo é outra coisa: o **claim explícito passa a ser testosterona e comida**, e o desejo por desempenho é construído por consequência e future pacing, sem o avatar afirmar cura. Detalhe em [[angulo4-copy-bodyhacks]] seção 12.
+
+> **Divergência de keyword, atualização de 2026-08-27:** a nota abaixo ("nós NÃO adotamos keyword temática") continua valendo nos Ângulos 1 e 2. **No Ângulo 4 a keyword temática voltou a ser recomendação em aberto**, pelo precedente do caso #21 da [[biblioteca-videos]], onde o CTA entrega um LIVRO. Decisão pendente do Luigi.
 
 Relacionado: [[feedback-copy-lapida-estrutura]], [[metodo-puzzle]], [[feedback-cta-produto]], [[compliance-riscos]]

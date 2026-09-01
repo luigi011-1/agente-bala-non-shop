@@ -158,7 +158,7 @@ def em_negacao(texto, idx, janela=110):
 # ---------------------------------------------------------------- checagens
 def detectar_angulo(roteiro, prompts):
     txt = (roteiro or "") + (prompts or "")
-    m = re.search(r"[ÂA]ngulo\s*([123])", txt)
+    m = re.search(r"[ÂA]ngulo\s*([1234])", txt)
     return int(m.group(1)) if m else None
 
 
@@ -187,6 +187,11 @@ def c_travessao(arquivos, takes):
         ok("travessao", "nenhum em dash nos arquivos")
 
 
+# Keyword por angulo. O Luigi decidiu manter 'yes' no Angulo 4 em 2026-08-27,
+# recusando a sugestao de keyword tematica.
+KEYWORD_POR_ANGULO = {1: "yes", 2: "yes", 3: "222", 4: "yes"}
+
+
 def c_keyword(angulo, arquivos, takes):
     """A keyword errada so conta se estiver na FALA de um take.
 
@@ -197,7 +202,8 @@ def c_keyword(angulo, arquivos, takes):
     if angulo is None:
         aviso("keyword", "angulo nao detectado, checagem pulada")
         return
-    esperada, proibida = ("222", "yes") if angulo == 3 else ("yes", "222")
+    esperada = KEYWORD_POR_ANGULO.get(angulo, "yes")
+    proibida = "yes" if esperada != "yes" else "222"
     txt = "\n".join(arquivos.values())
     if re.search(r'["\'`]%s["\'`]|\b%s\b' % (esperada, esperada), txt, re.I):
         ok("keyword", "keyword '%s' presente (angulo %d)" % (esperada, angulo))
@@ -541,6 +547,108 @@ def c_angulo3(angulo, arquivos, kfs):
         ok("angulo3", "travas do angulo 3 respeitadas")
 
 
+# Frases que fazem o produto parecer insuficiente sozinho. Banidas no Angulo 4:
+# la a dor prometida (desempenho) e o mecanismo (testosterona) sao a mesma linha,
+# entao toda ressalva encosta na promessa. Ver feedback-cta-produto, 2026-08-27.
+LIMITE_HONESTO_PAT = (r"nothing does\b|do(es)? the rest\b|by itself\b|on (its|their) own\b"
+                      r"|does not (give|fix|cure|solve|bring|repair)"
+                      r"|will not (give|fix|cure|solve|bring|repair)"
+                      r"|it is (just|only) a tool|is not a magic")
+# Culpar a virilidade dele e a regra inviolavel do angulo (espelho da do Angulo 2).
+CULPA_PAT = (r"you let (this|it|yourself)|you stopped (taking care|trying|caring)"
+             r"|your own fault|you did this to yourself|you gave up on")
+# O produto e um LIVRO FISICO. Mockup de ebook e tela de celular estao proibidos.
+EBOOK_DIGITAL_PAT = r"mockup|phone screen|app screenshot|tablet|kindle|e-?reader|screen of a phone"
+ORGAO_PAT = r"\bpenis\b|\berection\b|\bgenital"
+# Promessas que a landing NAO cumpre. Conferido em https://bodyhacksformen.netlify.app
+# em 2026-08-27: e um playbook de 42 hacks de HABITO, sem uma unica receita.
+INCONGRUENTE_PAT = r"ancestral"
+# 'recipe'/'ingredient' sao legitimos: o conteudo GRATIS do video costuma ser uma
+# receita. O que nao pode e o LIVRO ser descrito assim. Por isso e aviso, e so
+# quando cai perto do nome do produto.
+RECEITA_PERTO_DO_PRODUTO_PAT = (r"(body hacks|the (book|playbook))[^.]{0,60}"
+                                r"(recipes?|ingredients?)"
+                                r"|(recipes?|ingredients?)[^.]{0,60}(body hacks|the (book|playbook))")
+# Claim hormonal: a pagina rejeita o frame do frasco por escrito (hack 39), mas o
+# Luigi manteve ED como eixo principal em 2026-08-27, entao isto e AVISO e nao falha.
+HORMONIO_PAT = r"testosterone|\bhormones?\b"
+# So pega ENTREGA FISICA. "I send you the book" e o CTA aprovado pelo Luigi e a DM
+# de fato entrega o livro, entao nao entra aqui. O que quebra e objeto impresso chegando.
+ENTREGA_FISICA_PAT = r"\b(mail|ship)\b[^.]{0,20}\b(book|copy|it)\b|in the mail|to your door|printed copy"
+
+
+def c_angulo4(angulo, arquivos, takes, kfs):
+    if angulo != 4:
+        return
+    antes = len([f for f in FALHAS if f[0] == "angulo4"])
+    falas = [t for t in takes if t["fala"]]
+
+    for t in falas:
+        for pat, msg in (
+                (LIMITE_HONESTO_PAT, "LIMITE HONESTO e PROIBIDO no angulo 4"),
+                (CULPA_PAT, "culpa a masculinidade dele, regra inviolavel do angulo"),
+                (r"\bjohnson\b", "'johnson' NUNCA sai da boca dela, so em legenda"),
+                (ORGAO_PAT, "nome clinico de orgao nao entra em fala"),
+                (INCONGRUENTE_PAT,
+                 "a landing NAO vende isso. O produto e um playbook de 42 hacks de "
+                 "HABITO, sem uma unica receita. Promessa assim quebra no clique"),
+                (ENTREGA_FISICA_PAT,
+                 "o produto e DIGITAL com entrega instantanea. O livro e prop, "
+                 "a fala nunca promete objeto fisico")):
+            m = re.search(pat, t["fala"], re.I)
+            if m:
+                falha("angulo4", "%s usa '%s': %s" % (t["id"], m.group(0), msg),
+                      "ROTEIRO.md:%d" % t["linha"])
+
+    for t in falas:
+        m = re.search(RECEITA_PERTO_DO_PRODUTO_PAT, t["fala"], re.I)
+        if m:
+            aviso("angulo4", "%s descreve o LIVRO como receita ou ingrediente. O video pode "
+                             "entregar uma receita de graca, mas o produto e um playbook de "
+                             "hacks de habito." % t["id"], "ROTEIRO.md:%d" % t["linha"])
+        m = re.search(HORMONIO_PAT, t["fala"], re.I)
+        if m:
+            aviso("angulo4", "%s usa '%s'. A landing rejeita o frame hormonal por escrito "
+                             "(hack 39: 'more reliably than anything sold in a bottle'). "
+                             "O mecanismo sao os hacks, nao o hormonio."
+                  % (t["id"], m.group(0)), "ROTEIRO.md:%d" % t["linha"])
+        m = re.search(r"\b(treats?|treating|cures?|curing)\b", t["fala"], re.I)
+        if m:
+            aviso("angulo4", "%s usa '%s'. O rodape da landing diz que o produto NAO trata nem "
+                             "cura. 'Fix' e 'the hacks for this' carregam a mesma forca sem o "
+                             "claim medico." % (t["id"], m.group(0)), "ROTEIRO.md:%d" % t["linha"])
+
+    # A landing so fala 'drive and confidence'. O CTA tem que aterrissar nela,
+    # senao ele chega numa pagina que nao parece falar do que ele ouviu.
+    if falas and not re.search(r"drive and confidence|your drive\b|\bconfidence\b",
+                               " ".join(t["fala"] for t in falas), re.I):
+        aviso("angulo4", "nenhuma fala aterrissa em 'drive and confidence', "
+                         "que e a ponte verbal com a landing")
+
+    # O nome do produto tem que ser DITO em voz alta, e nunca sozinho.
+    if falas and not any(re.search(r"body hacks for men", t["fala"], re.I) for t in falas):
+        falha("angulo4", "o nome 'Body Hacks For Men' nao e dito em nenhuma fala. "
+                         "O produto tem que ser visto E ouvido.")
+
+    for k in kfs:
+        if not k["json_raw"]:
+            continue
+        try:
+            d = json.loads(k["json_raw"])
+        except Exception:
+            continue
+        corpo = " ".join(str(v) for campo, v in d.items()
+                         if campo not in ("negative", "reference_use"))
+        m = re.search(EBOOK_DIGITAL_PAT, corpo, re.I)
+        if m and not em_negacao(corpo, m.start(), janela=60):
+            falha("angulo4", "%s cita '%s'. O produto em quadro e um LIVRO FISICO, "
+                             "nunca mockup de ebook nem tela." % (k["id"], m.group(0)),
+                  "PROMPTS_PRODUCAO.md:%d" % k["linha"])
+
+    if len([f for f in FALHAS if f[0] == "angulo4"]) == antes:
+        ok("angulo4", "travas do angulo 4 respeitadas")
+
+
 # ---------------------------------------------------------------- runner
 def checar(pasta):
     global FALHAS, AVISOS, OKS
@@ -578,6 +686,7 @@ def checar(pasta):
     c_blocos_video(videos)
     c_patch(arquivos)
     c_angulo3(angulo, arquivos, kfs)
+    c_angulo4(angulo, arquivos, takes, kfs)
 
     print("=" * 82)
     print("  %s   (angulo %s | %d takes | %d keyframes | %d clipes)"

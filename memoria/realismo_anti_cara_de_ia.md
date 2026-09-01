@@ -24,6 +24,25 @@ metadata:
 - Reduzir fundo é com **enquadramento**, nunca com blur.
 - Nuance: close-up é regra do **hook e dos takes de reveal**, não do vídeo inteiro. Takes de fala podem abrir um pouco pra mostrar o cenário que dá autoridade.
 
+### ⚠ NUANCE ADICIONADA EM 2026-08-29: o inimigo é o inventário, não a bagunça
+O Luigi aprovou a âncora da **Holistic Trevor (A3)** com o quarto **visivelmente bagunçado** (cama
+desarrumada, cômoda, frascos, corredor ao fundo), porque ela lê como *"abriu a câmera e começou a
+gravar"*. Eu tinha reprovado essa âncora por poluição de cenário. **Estava errado sobre o motivo.**
+
+O que degrada a geração não é o cenário ser cheio, é o **prompt descrever muito objeto**. Cada
+substantivo novo é um detalhe que o gerador precisa inventar e pode errar. Bagunça que vem de uma
+**âncora real e é preservada por `EDITAR do K__`** não é inventada, então não paga esse custo, e ainda
+compra credibilidade de UGC, que é a regra-mãe do item 4 deste mesmo gate.
+
+**Como fica na prática:**
+- Cenário limpo **não é meta**. Cenário limpo demais lê como anúncio.
+- **Duas ou três âncoras de fundo continuam sendo o teto do que se DESCREVE no prompt.**
+- Cenário vivido se preserva escrevendo *"the same lived-in room as the reference image, unchanged"*,
+  nunca listando a bagunça item a item.
+- No **hook e nos takes de reveal**, o herói continua dominando o quadro. Isso não mudou.
+
+Ver [[avatares-fichas]], seção da Holistic Trevor (A3).
+
 ## 2. COR E LUZ QUE DENUNCIAM
 - **Cores quentes (amarelo, laranja, marrom) deixam com cara de IA.** Evitar "warm and even" como padrão.
 - **Céu branco ou claro SEMPRE denuncia.** Preferir `overcast sky` ou `cloudy`.

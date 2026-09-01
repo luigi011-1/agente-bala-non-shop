@@ -1,21 +1,21 @@
 ---
 name: produtos-angulos
-description: "Os TRES produtos/ângulos que o Luigi vende e a regra de workflow de sempre perguntar qual ângulo adaptar. Ângulo 1 = nutra masculino Korella Saffron (Amazon, vitalidade/blood flow/ED). Ângulo 2 = app feminino FityWell 'Metabolic Reset 40+' (quiz, mulheres 40+, peso/inchaço/energia/parecer jovem) — inclui banco de insights de copy extraído do quiz (mecanismo hormônio/metabolismo/intestino, dores, frases emocionais, transformação). Ângulo 3 = app Auraly (alma gêmea/manifestação, mulheres EUA, avatares Kendra Collins e Cody Miller; Blake Epeterson aposentado em 2026-08-25), doutrina completa em angulo3-copy-auraly. ATENÇÃO: keyword é 222 no Ângulo 3, yes só nos ângulos 1 e 2."
+description: "Os QUATRO produtos/ângulos que o Luigi vende e a regra de workflow de sempre perguntar qual ângulo adaptar. Ângulo 1 = nutra masculino Korella Saffron (Amazon, vitalidade/blood flow/ED). Ângulo 2 = app feminino FityWell 'Metabolic Reset 40+' (quiz, mulheres 40+), inclui banco de insights de copy extraído do quiz. Ângulo 3 = app Auraly (alma gêmea/manifestação, mulheres EUA, avatares Kendra Collins e Cody Miller; Blake Epeterson aposentado em 2026-08-25), doutrina em angulo3-copy-auraly. Ângulo 4 = ebook Body Hacks For Men (receitas ancestrais que potencializam testosterona, homens 40+ EUA, avatar holistic.brandon como coach), doutrina em angulo4-copy-bodyhacks. ATENÇÃO: keyword é 222 no Ângulo 3, yes nos ângulos 1, 2 e 4 (keyword temática do 4 em aberto)."
 metadata: 
   node_type: memory
   type: project
   originSessionId: 76ee2741-6b6a-48f5-af27-5498dbe6f622
-  modified: 2026-08-26T23:40:00.000Z
+  modified: 2026-08-27T19:59:40.520Z
 ---
 
-# Três produtos / três ângulos + regra de workflow
+# Quatro produtos / quatro ângulos + regra de workflow
 
 ## REGRA DE WORKFLOW (sempre) — confirmada pelo Luigi
-Depois de analisar o vídeo que ele envia (com o avatar em anexo), **SEMPRE perguntar: adaptamos pro Ângulo 1, 2 ou 3?** e **explicar o que muda em cada** (copy, herói, dores atacadas, CTA/produto) antes de produzir. Só depois da escolha dele → roteiro cena a cena + prompts.
+Depois de analisar o vídeo que ele envia (com o avatar em anexo), **SEMPRE perguntar: adaptamos pro Ângulo 1, 2, 3 ou 4?** e **explicar o que muda em cada** (copy, herói, dores atacadas, CTA/produto) antes de produzir. Só depois da escolha dele → roteiro cena a cena + prompts.
 - **O mesmo avatar pode rodar mais de um ângulo** (por isso perguntar sempre). Exceção: o Ângulo 3 roda **só com Kendra Collins e Cody Miller** (corrigido em 2026-08-26; a versão antiga dizia "Blake Epeterson e mais ninguém", e o **Blake foi aposentado em 2026-08-25**).
-- **Keyword por ângulo:** `yes` nos Ângulos 1 e 2, **`222` no Ângulo 3** (corrigido em 2026-08-26; a versão antiga dizia "sempre `yes` nos três", revogada em 2026-08-24). Autoridade em [[regras-universais]] regra 1.
+- **Keyword por ângulo:** `yes` nos Ângulos 1, 2 e 4, **`222` no Ângulo 3** (corrigido em 2026-08-26; a versão antiga dizia "sempre `yes` nos três", revogada em 2026-08-24). Autoridade em [[regras-universais]] regra 1. **No Ângulo 4 o Luigi decidiu manter `yes` em 2026-08-27**, recusando a sugestão de keyword temática.
 - **📎 O anexo decide o avatar:** `.mp4` + imagem de avatar na mesma mensagem = produzir para aquele avatar, sem perguntar. Nesse caso a pergunta que resta é só o ângulo. Ver [[angulo3-copy-auraly]].
-- CTA no vídeo é sempre "comment yes"; **muda só o destino da DM**: Ângulo 1 → deep link Amazon do nutra; Ângulo 2 → link do quiz FityWell; Ângulo 3 → link do quiz Auraly.
+- CTA no vídeo é sempre "comment yes" (menos no 3); **muda só o destino da DM**: Ângulo 1 → deep link Amazon do nutra; Ângulo 2 → link do quiz FityWell; Ângulo 3 → link do quiz Auraly; Ângulo 4 → link do ebook Body Hacks For Men (destino exato pendente).
 - Nunca copiar 100% — adaptar (método puzzle). Ver [[metodo-puzzle]] refinamento de seleção de fonte.
 
 ## ÂNGULO 1 — nutra masculino (Korella Saffron)
@@ -69,6 +69,13 @@ landing (promessa + prova) → gênero → idade (40+) → validação → goal 
 Sem print de app, sem celular em quadro, sem mockup. Exceção explícita à regra "sempre mostrar o produto" de [[feedback-cta-produto]], que segue valendo integral no Ângulo 1. O take de CTA é a Brandon em close falando direto na câmera, e o nome "FityWell" continua sendo dito em voz alta. Raciocínio completo em [[angulo2-copy-fitywell]].
 
 ### Avatar do Ângulo 2: BRANDON, sempre como COACH (decisão do Luigi, 2026-08-21)
+
+> 🔴 **REVOGADO EM 2026-08-27: a BRANDON MIGROU DE VEZ PRO ÂNGULO 4.** A audiência da página dela é
+> **97% homens dos EUA**, e o FityWell (mulheres 40+) estava queimando alcance. **O Ângulo 2 está sem
+> avatar.** Se voltar a rodar, precisa de decisão do Luigi sobre qual conta o recebe. A regra de
+> enquadramento abaixo continua correta e vale como referência, mas não descreve mais o que está no ar.
+> Ver [[angulo4-copy-bodyhacks]].
+
 Ela tem ~30 anos, então nunca fala em 1ª pessoa sobre os 40. As frases emocionais do quiz abaixo continuam valendo, mas **citadas na boca das clientes dela**, não como desabafo próprio.
 
 ### Doutrina de copy completa do Ângulo 2
@@ -86,3 +93,26 @@ Contexto completo da operação em [[operacao-playbook]] e [[metodo-puzzle]].
 - **Atenção:** o link do quiz é um **rotator de 3 funis** (dois de retrato de alma gêmea, um de cartas de tarô com a persona Master Aura Solenne).
 - **Trava de copy:** nunca dizer "one-time" ou "pagamento único". O checkout renova a $29/mês e a FAQ da própria página se contradiz.
 - **Doutrina completa, banco de dores, frases verbatim, escada de reveal e oferta:** [[angulo3-copy-auraly]].
+
+## ÂNGULO 4 — ebook Body Hacks for Men 40+ (aberto em 2026-08-27)
+- **Marca: FITYWELL**, mesma casa do Ângulo 2, linha de produto diferente.
+- **Produto:** `Body Hacks for Men 40+`, um **PLAYBOOK DIGITAL** de **42 hacks de HÁBITO** em
+  **7 áreas** (Energy, Strength, Lean Body, Circulation, Recovery, Focus, Men's Vitality), 4 linhas e
+  2 minutos cada. Landing: `https://bodyhacksformen.netlify.app/`
+- ⚠️ **NÃO são receitas ancestrais e NÃO é testosterona.** Essa foi a descrição inicial e a landing a
+  desmentiu no mesmo dia. Os hacks são hábito e estratégia (proteína no café da manhã, série pesada
+  primeiro, ordem do prato, caminhada pós-jantar, hora de wind down).
+- **Público:** homens dos EUA, 40+. **Dor de entrada: drive e confiança** (é 1 dos 8 sintomas do
+  self-check da página e 1 das 7 áreas).
+- **A ponte é a frase do próprio produto:** *"drive is a readout, not the problem"*. O motor é sono,
+  carga e cintura. O álibi também já está escrito: *"It's not your age. It's your playbook."*
+- **Avatar: holistic.brandon, sempre como COACH**, com um beat de testemunha feminina por roteiro.
+  Ela migrou do Ângulo 2 pra cá porque a audiência da página dela é 97% homens dos EUA.
+  Congruência de brinde: o produto é sono, treino e cintura, que é o terreno natural de uma treinadora.
+- **Mostra produto: SIM**, livro físico como prop, mas **a fala nunca promete objeto físico** (o
+  produto é digital, entrega instantânea).
+- **Funil:** comment `yes` → DM → landing → **checkout Hotmart embutido na própria página**.
+  **$9.90 uma vez**, ancorado em $47 launch price, sem renovação, garantia de 30 dias.
+- **Três travas que quebram o ângulo se ignoradas:** limite honesto é **banido**; nunca culpar a
+  masculinidade dele; `johnson` nunca sai da boca dela (só `champion` e `soldier`).
+- **Doutrina completa:** [[angulo4-copy-bodyhacks]].

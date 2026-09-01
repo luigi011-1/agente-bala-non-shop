@@ -100,7 +100,7 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
 - **Referências no título do prompt, em CAIXA ALTA.**
 - **Ângulo 3, lei do registro: divino, nunca oculto.** O teste é a LEITURA, não o objeto: prop que lê como
   manifestação entra (cartas, cristais, vela, defumador, tigela com pétalas), prop ou fala que lê como pacto não.
-  Sem bruxa, feitiço, spell, shield, círculo de proteção. **Cartas sempre em dourado, branco, rosa claro ou azul claro.**
+  Sem bruxa, feitiço, spell, shield, círculo de proteção. **Cartas HOLOGRÁFICAS / FOIL, arte saturada e chamativa** (2026-08-29, revoga a paleta pálida): borda metálica espelhada com reflexo de arco-íris ou foil dourado, faixa de título na base. **A trava é a LEITURA, não a cor:** casal, coração, rosas, luz. Azul-noite com estrelas entra; caveira, corvo, serpente, espada e símbolo invertido não.
 - **Ângulos 2 e 3 não mostram produto.** Ângulos 1 e 4 mostram sempre (no 4 é um **livro FÍSICO**, nunca mockup de ebook nem tela de celular).
 - **[ÂNGULO 4] LIMITE HONESTO É PROIBIDO.** Nenhuma ressalva, nenhum "isso não faz X". A dor prometida
   e o mecanismo do produto são a mesma linha, então toda ressalva encosta na promessa. O take vai pra
@@ -243,7 +243,7 @@ O **Blake Epeterson foi aposentado em 2026-08-25** e substituído pela Cody.
 **Registro: divino, nunca oculto.** Ver a lei em `angulo3-copy-auraly`.
 
 **🃏 Depois do take do gancho, a avatar segura a CARTA SOULMATE** (casal ilustrado, palavra SOULMATE na
-base, tons claros) e a mantém na mão até o fim. Gerar uma vez como `REF-CARTA` e anexar sempre, igual
+faixa da base, borda metálica holográfica, arte saturada) e a mantém na mão até o fim. Gerar uma vez como `REF-CARTA` e anexar sempre, igual
 o Ângulo 1 faz com o `product.png`.
 
 **🚫 O ROSTO NUNCA É REVELADO NO VÍDEO.** Só na DM, e só depois do `222`. Qualquer gancho que envolva

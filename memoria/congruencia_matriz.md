@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: a30f759a-1dd1-4bd6-9fb5-0eac27b7c86d
-  modified: 2026-08-22T15:28:33.865Z
+  modified: 2026-08-27T18:40:45.494Z
 ---
 
 # Matriz de Congruência por Avatar
@@ -28,7 +28,7 @@ Imagens-âncora confirmadas em 2026-08-12 (batem 100% com [[avatares-fichas]]).
 | Emagrecimento / gordura localizada | ✅ Usuário | ✅ Usuária | ✅ Usuário |
 | Digestão / inchaço / detox fígado | ✅ | ✅ | ✅ |
 | Açúcar no sangue / pressão / colesterol | ✅ | ✅ | ✅✅ (idade) |
-| Próstata / libido / disfunção erétil / testosterona | ✅ Usuário | 🔄 Coach ("os homens que acompanho") | ✅✅ Usuário (idade) |
+| Próstata / libido / disfunção erétil / testosterona | ✅ Usuário | 🔄 Coach **+ testemunha**, ver abaixo | ✅✅ Usuário (idade) |
 | **Saúde íntima feminina (pH/flora vaginal)** | 🔄 Coach ("as mulheres que treino") | ✅✅ Usuária | 🔄 Coach ("as mulheres que acompanho") |
 | Menopausa / hormônios femininos | 🔄 Coach | ✅ Usuária | 🔄 Coach |
 | Articulação / dor / anti-inflamatório | ✅ | ✅ | ✅✅ (idade) |
@@ -81,6 +81,27 @@ O original tem um personagem que passa a bola pro pitchman dizendo *"I took the 
 Correção aplicada: `one old American man` virou `one American coach who does nothing but this`. O descritor deixou de ser idade e passou a ser função, que é o que o Melody de fato é. Mesma função de beat, zero incongruência.
 
 **Checagem que entra no crivo:** o roteiro descreve alguém que aparece depois? Se sim, o descritor bate com a ficha do avatar?
+
+## A MOLDURA HÍBRIDA: quando ser mulher é vantagem, não obstáculo (2026-08-27)
+
+Aberta com o Ângulo 4 (ebook Body Hacks For Men, homens 40+). A matriz resolvia por eliminação: produto
+masculino com avatar feminina vira coach, e ponto. **Faltava notar que existe uma terceira posição, e
+que ela converte mais que as duas.**
+
+Um homem falando de disfunção erétil é mais um vendedor. **Uma mulher falando disso é a parte
+interessada**, e o que ela diz não soa como opinião, soa como veredito. Isso é alavanca que nenhum
+avatar masculino tem.
+
+**Como se aplica sem quebrar o registro do avatar:**
+- **Base do vídeo inteiro: coach.** "the men I train". No caso da Brandon é o cenário literal dela.
+- **UM beat de testemunha, na escalada, nunca no hook.** Ex.: *"here is the part no woman is going to
+  say to your face. She noticed before you did."*
+- **Três travas:** nunca 1ª pessoa sobre desejo dela ou parceiro dela; nunca julgar o espectador
+  (ela relata o que as esposas dos clientes dizem); **um golpe por roteiro**, dois vira outra conta.
+
+**A autoridade dela não vem de idade vivida, vem de VOLUME OBSERVADO** ("every man past forty who
+walks into my gym"), que é o mesmo mecanismo que o Ângulo 2 já provou ser mais forte que testemunho
+quando o frame é de diagnóstico. Detalhe em [[angulo4-copy-bodyhacks]].
 
 ## Nota sobre compliance
 Produtos íntimos femininos e antes/depois de corpo são os de maior risco ([[compliance-riscos]]). Congruência (Brandon como usuária) reduz o estranhamento, mas o risco de plataforma continua — registrar o aviso.

@@ -43,7 +43,7 @@ Regra de uso: **nunca mandar a mesma variação duas vezes seguidas.** Girar em 
 > ⚠️ **Os links destas dez trazem `rt_ad` do Blake, que foi aposentado em 2026-08-25.**
 > Ao usar qualquer uma delas hoje, **trocar o `rt_ad` pelo prefixo da avatar que está rodando**
 > (`kendra_*` ou `cody_*`). O texto continua válido, o rastreio não.
-> Derivadas de vídeo específico: **V11** em `producao/kendra_selos/DM.md`, **V12** em `producao/cody_selos/DM.md`.
+> Derivadas de vídeo específico: **V11** em `producao/kendra_selos/DM.md`, **V12** em `producao/cody_selos/DM.md`, **V13** em `producao/trevor_a3_confissao/DM.md`, **V14** em `producao/karen_a3_confissao/DM.md`, **V15** em `producao/mark_a3_confissao/DM.md`.
 
 ### V01 (a original, baseline)
 ```
@@ -187,7 +187,7 @@ https://app.auralyapp.com/69ffd620e0e3690abc78c7ea?aff=u5bnoukb&utm_source=<PLAT
 | Campo | Valores pra girar |
 |---|---|
 | `utm_source` | `facebook` · `instagram` |
-| `rt_ad` | **Kendra:** `Kendra+Collins` · `kendra_dm` · `kendra_222` · `kendra_reveal` · `kendra_soulmate` · `kendra_selos`<br>**Cody:** `Cody+Miller` · `cody_dm` · `cody_222` · `cody_reveal` · `cody_soulmate` · `cody_selos`<br>**Blake (APOSENTADO em 2026-08-25, só para ler histórico):** `Blake+Peterson` · `Blake+P` · `blake_dm` · `blake_222` · `blake_reveal` · `blake_soulmate` |
+| `rt_ad` | **Kendra:** `Kendra+Collins` · `kendra_dm` · `kendra_222` · `kendra_reveal` · `kendra_soulmate` · `kendra_selos`<br>**Cody:** `Cody+Miller` · `cody_dm` · `cody_222` · `cody_reveal` · `cody_soulmate` · `cody_selos`<br>**Holistic Trevor (A3), entrou em 2026-08-29:** `trevor_a3_confession` · `trevor_a3_dm` · `trevor_a3_222` · `trevor_a3_reveal` · `trevor_a3_soulmate` · `trevor_a3_followup`<br>**Karen Thompson (A3), entrou em 2026-08-29:** `karen_a3_confession` · `karen_a3_dm` · `karen_a3_222` · `karen_a3_reveal` · `karen_a3_soulmate` · `karen_a3_followup`<br>**Mark Collins (A3), entrou em 2026-08-29:** `mark_a3_confession` · `mark_a3_dm` · `mark_a3_222` · `mark_a3_reveal` · `mark_a3_soulmate` · `mark_a3_followup`<br>**Blake (APOSENTADO em 2026-08-25, só para ler histórico):** `Blake+Peterson` · `Blake+P` · `blake_dm` · `blake_222` · `blake_reveal` · `blake_soulmate` |
 | `utm_term` | `bio` · `dm` · `dm222` · `reel` · `comment` |
 
 Combina uma variação de texto com uma de URL. **Bônus real:** cada `rt_ad` distinto vira uma linha própria

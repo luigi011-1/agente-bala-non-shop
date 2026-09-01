@@ -130,7 +130,7 @@ Referência visual definitiva: o print que o Luigi mandou em 2026-08-24, círcul
   - **Micro (12 a 30s, 37 a 93 palavras):** uma afirmação + truque do WhatsApp + CTA. IG09 tem 12s e 37 palavras.
 - **Formato visual:** split screen (rosto em cima, B-roll simbólico embaixo) em metade dos casos. Legenda karaokê palavra a palavra com destaque amarelo. Números flutuando na tela (222, 11:11, 777, 555) como elemento gráfico constante.
 - **Props observados no swipe, TODOS liberados** (Luigi, 2026-08-24): cartas, pedras e cristais, vela, defumador de sálvia com fumaça visível, tigela de água com pétalas de rosa, livro enterrado na terra. Todos se relacionam a manifestação, não a pacto.
-  - **Única restrição de prop do ângulo: cartas sempre em cores claras e chamativas**, dourado, branco, rosa claro, azul claro. Nunca carta escura ou de arte sombria.
+  - **Restrição de cor REVOGADA em 2026-08-29: cartas HOLOGRÁFICAS / FOIL, arte saturada e chamativa.** A trava é a leitura (casal, coração, rosas, luz), nunca a cor. Espec em [[angulo3-copy-auraly]].
   - O que fica de fora é o **registro** (pacto, bruxaria, estética sombria), nunca o objeto. Teste completo em [[angulo3-copy-auraly]].
 
 ## KEYWORDS USADAS (dado real do swipe)
@@ -157,7 +157,13 @@ O beat 8 é o único que muda. **Os beats 1 a 7 podem ser aproveitados quase ver
 Estas copies são agressivas e não são um padrão de segurança. Ao adaptar:
 - Previsão sobre **terceiro identificável** ("ele vai te mandar mensagem amanhã entre 18h e 22h") é o claim de maior risco do lote.
 - **Promessa financeira** ("you are going to receive a large sum of money") soma risco de plataforma.
-- IG10 usa **palavrão** no hook. Não replicar.
+- ~~IG10 usa **palavrão** no hook. Não replicar.~~ **REVOGADO em 2026-08-29 pelo Luigi.**
+  O modelo `DcjIIyWq3Bt_` abre com *"What the fuck have you been manifesting?"* e o palavrão **É o herói
+  do hook**: o vídeo não tem prop, nem reveal, nem corte, então a frase carrega o scroll sozinha.
+  Apresentei os três caminhos (manter literal, trocar a palavra, trocar o eixo do hook) e ele escolheu
+  **manter literal**, ciente do risco de alcance e de conta. **Palavrão no hook está liberado no Ângulo 3.**
+  O que continua valendo é o resto desta seção: previsão sobre terceiro identificável segue sendo o claim
+  de maior risco do lote, e é cumulativo com o palavrão.
 - A promessa datada é o que dá força e é o que dá risco. Manter a **estrutura** de especificidade sem prometer evento verificável de terceiro é o trabalho fino aqui. Ver [[compliance-riscos]].
 
 Ver também: [[angulo3-copy-auraly]], [[metodo-puzzle]], [[referencia-frameworks-copy]], [[banco-rotas-argumentativas]].

@@ -59,9 +59,20 @@ foreach ($f in $fonte) {
     }
 }
 
+# Arquivos que sao SO DO REPO e nunca existiram na memoria viva. Sem esta lista o
+# laco abaixo os apaga em TODO sync, porque "nao esta na origem" e exatamente a
+# condicao de remover. Era o caso do README.md: morria a cada rodada e exigia um
+# `git checkout -- memoria/README.md` na mao depois. Corrigido em 2026-08-28.
+$preservados = @('README.md')
+
 # espelho de verdade: apaga o que nao existe mais na origem
 $nomesFonte = $fonte | ForEach-Object { $_.Name }
+$mantidos   = @()
 foreach ($e in $espelho) {
+    if ($preservados -contains $e.Name) {
+        $mantidos += $e.Name
+        continue
+    }
     if ($nomesFonte -notcontains $e.Name) {
         Remove-Item $e.FullName -Confirm:$false
         $removidos += $e.Name
@@ -77,6 +88,7 @@ Write-Host ""
 if ($novos.Count)     { Write-Host "NOVOS ($($novos.Count)):"       -ForegroundColor Green;  $novos     | ForEach-Object { Write-Host "  + $_" } }
 if ($mudados.Count)   { Write-Host "MUDADOS ($($mudados.Count)):"   -ForegroundColor Cyan;   $mudados   | ForEach-Object { Write-Host "  ~ $_" } }
 if ($removidos.Count) { Write-Host "REMOVIDOS ($($removidos.Count)):" -ForegroundColor Yellow; $removidos | ForEach-Object { Write-Host "  - $_" } }
+if ($mantidos.Count)  { Write-Host "PRESERVADOS ($($mantidos.Count)):"  -ForegroundColor DarkGray; $mantidos  | ForEach-Object { Write-Host "  = $_ (arquivo do repo, nao da memoria)" } }
 
 if (-not ($novos.Count -or $mudados.Count -or $removidos.Count)) {
     Write-Host "Espelho ja estava em dia. Nada a fazer." -ForegroundColor DarkGray

@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 32e5549f-536c-4d15-8e9c-ed26d399e783
-  modified: 2026-08-23T15:11:31.131Z
+  modified: 2026-08-27T21:34:43.017Z
 ---
 
 # Banco de rotas argumentativas (bloco de fechamento)
@@ -119,6 +119,36 @@ Antes de entregar qualquer roteiro, checar: **qual rota o último vídeo desta c
 | 2026-08-25 | Escalda-pés / peróxido (Melody) | 1 | **Rota 1** (a ordem errada). Virada por **escalada de magnitude** (gatilho 2). Obstáculos: desistência sem culpa + variabilidade de safra |
 | 2026-08-25 | Sal no chuveiro (Melody) | 1 | **Rota 3** (o manual que mudou). Virada por **perda ativa** (gatilho 4). Obstáculos: custo real do caseiro + cadeia sem fiscalização |
 | 2026-08-25 | Rosto inchado / açúcar (Melody) | 1 | **Rota 4** (a pesquisa foi feita em outra pessoa). Virada por **pergunta sem saída** (gatilho 6). Obstáculos: efeito colateral do caseiro + **a prateleira de volume, gatilho NOVO** |
+| 2026-08-27 | Crosta / vinagre (Brandon) | **4** | **Rota 3** (o manual que mudou). Virada por **reversão do vilão** (gatilho 3). Obstáculo: a ordem, não a informação. **Primeiro vídeo do Ângulo 4** |
+
+**Log de rotação da BRANDON especificamente** (mesma conta, não repetir):
+| Vídeo | Ângulo | Rota | Gatilho de virada |
+|---|---|---|---|
+| Fígado / cúrcuma | 2 | uma das três causas | (não registrado) |
+| Supermercado 3 dicas | 2 | rota 8, o rótulo que mentiu | (autodiagnóstico como recurso) |
+| Pulmão | 2 | rota 5, a data em que parou de funcionar | confissão (gatilho 5) |
+| Crosta / vinagre | 4 | rota 3, o manual que mudou | reversão do vilão (gatilho 3) |
+
+**Ainda disponíveis pra Brandon:** rotas 1, 2, 4, 6 e 7. Gatilhos: contagem quebrada, escalada de
+magnitude, perda ativa e pergunta sem saída.
+
+### O DEVICE NOVO DO ÂNGULO 4: o incidente com a desculpa (2026-08-27)
+Não é rota nem gatilho, é uma **camada que entra antes da ponte** e vale pra qualquer nicho de dor
+vergonhosa. O Luigi reprovou um mecanismo em forma de lista (*"seu sono, seu treino, sua cintura"*)
+dizendo que a pessoa não entende e rola a tela, e pediu **um incidente concreto que a persona viveu
+e nunca contou pra ninguém**.
+
+**As três camadas, na ordem, e a do meio é a que segura:**
+1. **A cena**, com a trava que impede virar acusação (*"you were ready in your head"*, separa o desejo
+   dele do corpo dele).
+2. **A desculpa que ele deu em voz alta** (*"and you said you were tired"`). Não é o fato que dói, é a
+   mentira. É a parte que ele nunca contou.
+3. **A testemunha**, que aparece como quem foi gentil e nunca como quem julga
+   (*"she knew, and she let that excuse stand"*).
+
+**E o incidente PROVA o mecanismo em vez de ilustrar:** o take seguinte usa aquela noite como
+evidência (*"the pipe was clean that night"*). Sem o incidente, a ponte vira afirmação, que é o erro
+de [[feedback-ponte-argumentada]]. Exemplo trabalhado em `producao/brandon_crosta/ROTEIRO.md` T12 a T14.
 
 **Log de rotação do MELODY especificamente** (mesma conta, não repetir):
 | Vídeo | Rota | Obstáculo |

@@ -11,3 +11,9 @@ entradas/
 
 # saida do graphify (regeravel, nao e fonte de verdade)
 graphify-out/
+
+# vault do Obsidian, scratch pessoal e nao parte da operacao
+Rei/
+
+# backups que o graphify deixa ao mexer em settings
+*.graphify-bak
