@@ -1,6 +1,6 @@
 ---
 name: angulo3-copy-auraly
-description: "ÂNGULO 3 — app Auraly (astrologia / lei da atração / alma gêmea e twin flame), tráfego orgânico IG+FB nos EUA, avatares Kendra Collins e Cody Miller, **keyword `222`** (não `yes`), **nunca mostra o produto**, e a LEI DO REGISTRO: divino/manifestação sempre, oculto/bruxaria nunca (cartas holograficas/foil e saturadas desde 2026-08-29, pedra/cristal jamais). Banco de insights extraído dos 3 funis do quiz (sm-v16-8, sm-v16-14, lr-love-reading-2) em 2026-08-24: mecanismo do mapa astral, dores, frases emocionais, escada de reveal com lacre, pitch de $9, e a CONTRADIÇÃO de assinatura no checkout que limita o que pode ser dito na copy."
+description: "ÂNGULO 3 — app Auraly (astrologia / lei da atração / alma gêmea e twin flame), tráfego orgânico IG+FB nos EUA, avatares Kendra Collins e Cody Miller, **keyword `222`** (não `yes`), **nunca mostra o produto**, **DOIS canais de CTA desde 2026-09-01** (comentar `222` E mandar pro Stories, aditivo e nesta ordem, com o Stories como degrau 2 da escada de reveal), e a LEI DO REGISTRO: divino/manifestação sempre, oculto/bruxaria nunca (cartas holograficas/foil e saturadas desde 2026-08-29, pedra/cristal jamais). Banco de insights extraído dos 3 funis do quiz (sm-v16-8, sm-v16-14, lr-love-reading-2) em 2026-08-24: mecanismo do mapa astral, dores, frases emocionais, escada de reveal com lacre, pitch de $9, e a CONTRADIÇÃO de assinatura no checkout que limita o que pode ser dito na copy."
 metadata: 
   node_type: memory
   type: project
@@ -206,6 +206,7 @@ Três takes, seguindo o esqueleto validado dos Ângulos 1 e 2 e casando com a DM
 > **T6 · O TRATO:** "Comment 222 below so the universe knows you are claiming it. Then send this video to yourself and save it."
 > **T7 · CTA:** "The second you comment 222, I send their face straight to your messages. That is where the reveal happens."
 > **T8 · FOLLOW GATE + ESCASSEZ:** "But follow me first, or it will not let me reach you. And I only have three readings left today."
+> **T9 · STORIES (novo em 2026-09-01):** "One last thing. Click on my profile picture and check my stories before they disappear, because the second part of this sign is waiting for you there."
 
 **Por que funciona, e o que não pode ser perdido ao variar:**
 - **Primeira pessoa no envio.** "I send their face" e nunca "their face comes". Passivo mata a promessa.
@@ -213,6 +214,12 @@ Três takes, seguindo o esqueleto validado dos Ângulos 1 e 2 e casando com a DM
 - **O objeto entregue é o ROSTO**, dito com essa palavra. Nunca leitura, nunca resultado, nunca app.
 - **Casamento take a take com a DM:** a janela do T5 é a janela que a DM abre, o rosto do T7 é o que a DM entrega, as três leituras do T8 são as da DM. Ver [[feedback-cta-produto]].
 - A escassez do T8 é **opcional no vídeo**: sai limpo se o Luigi quiser esse gatilho só na DM.
+- **O T9 é o segundo canal, e ele é ADITIVO.** Vem depois do follow gate, nunca antes do `222`.
+  Custa **zero keyframe e zero clipe**: fala mais legenda mais seta de edição no CapCut, tudo em cima
+  de take já produzido. **Cabe até em pacote fechado**, o que faz dele a mudança mais barata do ângulo.
+  Nove fechamentos validados e o que vai dentro do Stories em `producao/_stories_auraly/STORIES_PADRAO.md`.
+- **Se o roteiro estiver longo, o T9 funde no T8** usando a forma do IG14: "Comment 222, and tap my
+  profile picture to watch my stories now." Os dois canais sem gastar um take.
 
 ## A DM padrão (validada, 2026-08-24)
 Mensagem que o Luigi já dispara quando a pessoa comenta `222`. **Mestre em `producao/_dm_auraly/DM_PADRAO.md`**, com 10 variações anti-spam e rotação de URL. O `DM.md` de cada produção deriva dali.
@@ -262,7 +269,54 @@ A cadeia, nesta ordem, é a espinha de todo vídeo:
 
 O objeto de desejo do CTA é **o rosto**, nunca o app e nunca o quiz. O que ela ganha ao comentar não é acesso a um produto, é a revelação de uma pessoa.
 
-⚠️ **Ao adaptar copy validada de terceiros:** a maioria dos CTAs originais manda a pessoa pro **story do Instagram/Facebook** ("link on my story", "check my story"). **Esse mecanismo não é o nosso.** Traduzir sempre para comentar `222` → DM → mensagem com o rosto. A estrutura psicológica do original se preserva, o mecanismo de entrega se troca.
+### ♻️ REVOGADA EM 2026-09-01: a tradução obrigatória de story para DM
+
+> ~~"A maioria dos CTAs originais manda a pessoa pro story. **Esse mecanismo não é o nosso.**
+> Traduzir sempre para comentar `222` → DM → mensagem com o rosto."~~ (2026-08-24)
+
+**A regra caiu porque o dado a contradizia desde o começo.** Das 19 copies validadas do swipe,
+**15 fecham em stories via foto de perfil**, e a própria [[angulo3-swipe-padroes]] registrava
+"nenhuma manda pra DM". Nós éramos o único outlier do nicho, e estávamos jogando fora o canal que
+o nicho inteiro usa pra ganhar dinheiro.
+
+**REGRA VIGENTE: os dois canais, sempre, no mesmo vídeo.** Comentar `222` **e** mandar pro Stories.
+Não é escolha entre um e outro, é soma. Mestre em `producao/_stories_auraly/STORIES_PADRAO.md`.
+
+**Por que a soma paga mais que qualquer um sozinho:** as duas superfícies falham por motivos
+diferentes, então uma cobre o buraco da outra. O **Stories é imediato e efêmero** e pega quem está
+com vontade agora; a **DM é lenta e persistente**, chega como notificação e **fica na caixa esperando**,
+então pega quem só volta duas horas depois. Quem não clicar no Stories clica na notificação, e
+vice-versa (raciocínio do Luigi, 2026-09-01).
+
+🔑 **O STORIES É UM DEGRAU, NUNCA UM CANAL PARALELO.** Foi assim que o conflito com a trava do
+rosto se resolveu: se o Stories entrega o rosto, a trava cai e o `222` perde a razão de existir; se
+não entrega nada, ninguém abre. Então ele entra como **degrau 2 da escada de reveal** que o próprio
+funil da Auraly já roda:
+
+| Degrau | Onde | Entrega | Lacra |
+|---|---|---|---|
+| 1 | Vídeo | existe um rosto, e ele já foi escolhido | todo o resto |
+| 2 | **Stories** | a prova: inicial, traço físico, timing | **o rosto** |
+| 3 | DM + link | o rosto | o pagamento |
+
+🚫 **O rosto NUNCA aparece no Stories**, nem obscurecido. No vídeo o rosto velado é ganho porque é
+prop em cena; no Stories vira promessa entregue pela metade, e ela fecha achando que já viu.
+
+⚠️ **TRAVA: o comentário vem PRIMEIRO, o Stories depois.** O CTA de Stories é **aditivo e nunca
+substitui o `222`**, senão a automação de DM apaga e a operação perde o único canal com entrega
+garantida. Três motivos: comentar custa 2 segundos e **não tira ela do vídeo** (o tap tira), a DM
+persiste e o Stories evapora, e **é a ordem que as 15 copies validadas usam** (o beat 8 é sempre
+*"one last thing"*, depois das ações).
+
+✅ **O formato duplo já existe validado:** o **IG14** fecha em *"Comment, 222, and tap my profile
+picture to watch my stories now."* Os dois canais numa frase só, zero take a mais.
+
+🎁 **Bônus que ninguém tinha notado:** *"before they disappear"* é **a única urgência honesta da
+operação inteira.** O Stories expira em 24h de verdade, por regra da plataforma. Não é contador
+inventado nem escassez que o checkout desmente, então não custa credibilidade nenhuma.
+
+📊 **Rastreio obrigatório:** `rt_ad` separado por canal (`..._dm` contra `..._story`), mesmo
+destino e string diferente. Sem isso não dá pra saber qual canal paga.
 
 ### Keyword: `222`, permanente
 **`222` e não `yes`.** Exceção fixa à regra universal, já editada em [[regras-universais]]. O número é congruente com o próprio quiz, que sonda "repeating numbers (11:11, 444)" como sinal do universo. A keyword vira parte da mística, não um comando de automação.

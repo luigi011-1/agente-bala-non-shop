@@ -141,12 +141,16 @@ Formas de dizer: "comment 222", "**drop** a 222 down in the comments", "drop a t
 ## O QUE ESTAS COPIES NÃO FAZEM (e o Ângulo 3 precisa)
 1. **Nenhuma promete um ROSTO.** Prometem inicial, mensagem de texto, dinheiro, o retorno dele. O nosso diferencial é o rosto.
 2. **Nenhuma manda pra DM.** Todas mandam pra **story via foto de perfil**. Exceção: IG07 pede "comment love" mas ainda manda pra story.
+   > ♻️ **2026-09-01: este achado deixou de ser curiosidade e virou doutrina.** Durante 8 dias a
+   > gente traduziu story para DM em toda adaptação, ou seja, **descartava sistematicamente o canal
+   > que 15 dos 19 modelos usam.** Agora rodam os dois. O **IG14** já mostrava o formato duplo
+   > ("Comment, 222, and tap my profile picture") e passou despercebido. Ver [[angulo3-copy-auraly]].
 3. **Nenhuma mostra produto.** Confirma a trava do Ângulo 3.
 
 ### A tradução obrigatória
 | Original validado | Ângulo 3 |
 |---|---|
-| "check my stories before they disappear" | comentar `222` → **a mensagem com o rosto chega na DM** |
+| "check my stories before they disappear" | ♻️ **REVISTO EM 2026-09-01: os DOIS.** Comentar `222` → rosto na DM, **E** o CTA de Stories preservado como estava. Ver `producao/_stories_auraly/STORIES_PADRAO.md` |
 | "find out **who it is**" | "see **their face**" |
 | "the second part of this sign is waiting **there**" | "the second part is waiting **in your messages**" |
 | "what I left there" | "what I'm sending you" |

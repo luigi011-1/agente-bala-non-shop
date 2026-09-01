@@ -508,7 +508,7 @@ def c_patch(arquivos):
         ok("prompt-completo", "nenhuma instrucao de patch, prompts entregues inteiros")
 
 
-def c_angulo3(angulo, arquivos, kfs):
+def c_angulo3(angulo, arquivos, kfs, takes):
     if angulo != 3:
         return
     antes = len([f for f in FALHAS if f[0] == "angulo3"])
@@ -543,8 +543,48 @@ def c_angulo3(angulo, arquivos, kfs):
                 falha("angulo3",
                       "%s mostra retrato/rosto sem obscurecimento. O rosto NUNCA e revelado no video."
                       % k["id"], "PROMPTS_PRODUCAO.md:%d" % k["linha"])
+    c_angulo3_stories(takes)
     if len([f for f in FALHAS if f[0] == "angulo3"]) == antes:
         ok("angulo3", "travas do angulo 3 respeitadas")
+
+
+# CTA de Stories, segundo canal aberto pelo Luigi em 2026-09-01.
+# A PRESENCA e aviso e nao falha, de proposito: os 10 pacotes de Angulo 3 ja
+# produzidos nasceram sob a regra antiga (traduzir story para DM) e roteiro
+# publicado nao se reescreve. Mesma logica dos 26 takes abaixo do piso de palavras.
+# O que e FALHA e usar o canal ERRADO, porque ai a escada de reveal quebra.
+#
+# So olha a FALA dos takes, nunca a prosa dos arquivos. A primeira versao lia o
+# texto cru e reprovou os 6 pacotes existentes lendo notas de producao que
+# descreviam o comportamento CERTO ("no lugar de 'Check out the surprise in my
+# Stories': THE FACE IS IN YOUR MESSAGES"). Nota que explica a regra nao e copy.
+STORY_PAT = r"my stories|my profile picture|check my stor|watch my stor|access(ing)? my stor"
+
+
+def c_angulo3_stories(takes):
+    falas = [t for t in takes if t["fala"]]
+    if not falas:
+        return
+    i_story = next((i for i, t in enumerate(falas)
+                    if re.search(STORY_PAT, t["fala"], re.I)), None)
+    if i_story is None:
+        aviso("angulo3", "sem CTA de Stories na fala. Desde 2026-09-01 o Angulo 3 roda DOIS canais "
+                         "(comentar 222 E mandar pro Stories). Ver _stories_auraly/STORIES_PADRAO.md")
+        return
+    t_story = falas[i_story]
+    # 1. o comentario vem primeiro. Se o Stories aparece antes do 222, a automacao
+    #    de DM fica sem gatilho e o canal com entrega garantida apaga.
+    i_kw = next((i for i, t in enumerate(falas) if "222" in t["fala"]), None)
+    if i_kw is not None and i_story < i_kw:
+        falha("angulo3", "%s manda pro Stories ANTES de pedir o 222. O Stories e aditivo e vem "
+                         "depois: quem sai pro perfil pode nunca voltar pra comentar" % t_story["id"],
+              "ROTEIRO.md:%d" % t_story["linha"])
+    # 2. o rosto e o degrau 3 (DM), nunca o degrau 2 (Stories). Prometer o rosto no
+    #    Stories esvazia o 222 e o link, que e o que de fato monetiza.
+    if re.search(r"\bface\b", t_story["fala"], re.I):
+        falha("angulo3", "%s promete o ROSTO no Stories. O rosto e o degrau 3 (DM); o Stories "
+                         "entrega prova e LACRA o rosto (inicial, traco, timing)" % t_story["id"],
+              "ROTEIRO.md:%d" % t_story["linha"])
 
 
 # Frases que fazem o produto parecer insuficiente sozinho. Banidas no Angulo 4:
@@ -685,7 +725,7 @@ def checar(pasta):
     c_sem_produto(angulo, kfs)
     c_blocos_video(videos)
     c_patch(arquivos)
-    c_angulo3(angulo, arquivos, kfs)
+    c_angulo3(angulo, arquivos, kfs, takes)
     c_angulo4(angulo, arquivos, takes, kfs)
 
     print("=" * 82)

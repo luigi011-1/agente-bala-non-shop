@@ -166,8 +166,10 @@ Só depois disso a copy pode ser modificada e mandada pro Luigi aprovar ou ajust
 - `PLAYBOOK_COMPLETO/11_insights_otimizacao.md` seção 3 → **menos é mais na descrição da ação**, combinação de elementos é o gatilho invisível de moderação, o prop fiel é o ambíguo
 - `restricoes-protocolo` → escrever já evitando o que costuma travar
 
-### P7 · [ÂNGULO 3] ANTES de escrever o `DM.md`
+### P7 · [ÂNGULO 3] ANTES de escrever o `DM.md` e o CTA de STORIES
 - `producao/_dm_auraly/DM_PADRAO.md` → estrutura de 4 beats e rotação
+- `producao/_stories_auraly/STORIES_PADRAO.md` → **os 9 fechamentos validados, as 3 telas do Stories
+  e o `rt_ad` por canal.** O CTA de Stories é aditivo e entra DEPOIS do `222`, nunca no lugar dele
 - `banco-obstaculos` → objeções antecipadas
 - Travas de preço: nunca "one-time", nunca "pagamento único"
 
@@ -235,6 +237,21 @@ modelo tem split screen, o clone tem. Fidelidade de estrutura é a regra de semp
 **Não mostra produto.** O objeto de desejo do CTA é **o rosto da alma gêmea**, nunca o app: ela mandou
 uma mensagem ao universo, o universo respondeu, e o rosto chega **na mensagem que o Luigi manda na DM**.
 O vídeo nunca diz quiz, teste, app, plano nem preço.
+
+**📲 DOIS CANAIS NO MESMO VÍDEO: comentar `222` E mandar pro STORIES** (Luigi, 2026-09-01).
+Revoga a regra de traduzir story para DM. **15 das 19 copies validadas fecham em stories via foto de
+perfil**, e nós éramos o único outlier do nicho. Agora rodam os dois, porque falham por motivos
+diferentes: o Stories é imediato e efêmero, a DM chega como notificação e **fica esperando na caixa**.
+- **O Stories é DEGRAU, nunca canal paralelo.** Vídeo entrega que existe um rosto, **Stories entrega a
+  prova e lacra o rosto** (inicial, traço, timing), DM entrega o rosto. **O rosto NUNCA aparece no
+  Stories**, nem obscurecido.
+- ⚠️ **O comentário vem PRIMEIRO, o Stories depois. O CTA de Stories é ADITIVO e nunca substitui o
+  `222`**, senão a automação de DM apaga. Se o roteiro estiver longo, fundir no formato do IG14:
+  *"Comment 222, and tap my profile picture to watch my stories now."*
+- **Custa zero keyframe e zero clipe:** fala mais legenda mais seta de edição no CapCut. Cabe até em
+  pacote já fechado.
+- Nove fechamentos validados, as 3 telas do Stories e o `rt_ad` por canal em
+  `producao/_stories_auraly/STORIES_PADRAO.md`. **É o P7 agora, junto com o `DM_PADRAO.md`.**
 
 **Ângulo de entrada é livre, a ponte pro rosto é obrigatória.** Com **dois avatares** (Kendra Collins
 e Cody Miller), o eixo de variação é **1 esqueleto × N ângulos de entrada × 2 avatares**.
