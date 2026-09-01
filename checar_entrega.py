@@ -559,6 +559,13 @@ def c_angulo3(angulo, arquivos, kfs, takes):
 # descreviam o comportamento CERTO ("no lugar de 'Check out the surprise in my
 # Stories': THE FACE IS IN YOUR MESSAGES"). Nota que explica a regra nao e copy.
 STORY_PAT = r"my stories|my profile picture|check my stor|watch my stor|access(ing)? my stor"
+# O CTA nomeia o objeto: "his face is in there", "find out who it is".
+DECLARADO_PAT = r"\bface\b|who (it|he|she) is|(his|her|their) name|the initial"
+# A copy entregou um pedaco da identidade antes do CTA, o que autoriza declarar.
+# Inclui o truque do WhatsApp, que e como IG02 e IG14 ganham o direito de declarar.
+IDENTIDADE_PAT = (r"\bface\b|who (it|he|she) is|(his|her|their) name|the initial"
+                  r"|first letter|goes by|contact|whatsapp|\binitials?\b"
+                  r"|dark features|tall\b|he is coming|his eyes")
 
 
 def c_angulo3_stories(takes):
@@ -579,12 +586,26 @@ def c_angulo3_stories(takes):
         falha("angulo3", "%s manda pro Stories ANTES de pedir o 222. O Stories e aditivo e vem "
                          "depois: quem sai pro perfil pode nunca voltar pra comentar" % t_story["id"],
               "ROTEIRO.md:%d" % t_story["linha"])
-    # 2. o rosto e o degrau 3 (DM), nunca o degrau 2 (Stories). Prometer o rosto no
-    #    Stories esvazia o 222 e o link, que e o que de fato monetiza.
-    if re.search(r"\bface\b", t_story["fala"], re.I):
-        falha("angulo3", "%s promete o ROSTO no Stories. O rosto e o degrau 3 (DM); o Stories "
-                         "entrega prova e LACRA o rosto (inicial, traco, timing)" % t_story["id"],
-              "ROTEIRO.md:%d" % t_story["linha"])
+    # 2. congruencia de MODO (Luigi, 2026-09-01). O CTA de Stories tem dois modos:
+    #    DECLARADO (diz o que tem la dentro) e CURIOSIDADE (diz que tem algo).
+    #    Declarar so funciona se a copy ja entregou um pedaco da identidade dele,
+    #    porque ai nomear FECHA um loop aberto. Sem isso, nomear no ultimo segundo
+    #    introduz um objeto que o video nunca apresentou, e le como isca trocada.
+    #    No swipe a correlacao e limpa: os 3 que declaram (IG02, IG14, IG11) tinham
+    #    entregue identidade antes; nenhum dos que prometeu bencao vaga declarou.
+    #
+    #    ATENCAO: a versao anterior deste gate reprovava QUALQUER mencao a rosto no
+    #    take de Stories. Estava errado e apertado demais: confundia NOMEAR o rosto,
+    #    que e o objeto de desejo do angulo inteiro, com ENTREGAR a imagem dele.
+    #    A imagem e que nunca entra no Stories, e imagem nao se checa em roteiro.
+    if re.search(DECLARADO_PAT, t_story["fala"], re.I):
+        antes_do_story = " ".join(t["fala"] for t in falas[:i_story])
+        if not re.search(IDENTIDADE_PAT, antes_do_story, re.I):
+            falha("angulo3",
+                  "%s usa o CTA de Stories em modo DECLARADO (nomeia o rosto ou quem e), mas a copy "
+                  "nunca entregou identidade antes. Ou a copy ganha a prova parcial (inicial, traco, "
+                  "timing), ou o CTA cai pro modo CURIOSIDADE" % t_story["id"],
+                  "ROTEIRO.md:%d" % t_story["linha"])
 
 
 # Frases que fazem o produto parecer insuficiente sozinho. Banidas no Angulo 4:

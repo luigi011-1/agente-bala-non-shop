@@ -243,8 +243,16 @@ Revoga a regra de traduzir story para DM. **15 das 19 copies validadas fecham em
 perfil**, e nós éramos o único outlier do nicho. Agora rodam os dois, porque falham por motivos
 diferentes: o Stories é imediato e efêmero, a DM chega como notificação e **fica esperando na caixa**.
 - **O Stories é DEGRAU, nunca canal paralelo.** Vídeo entrega que existe um rosto, **Stories entrega a
-  prova e lacra o rosto** (inicial, traço, timing), DM entrega o rosto. **O rosto NUNCA aparece no
-  Stories**, nem obscurecido.
+  prova e lacra a IMAGEM do rosto** (dá inicial, traço, timing), DM entrega o rosto.
+- **NOMEAR o rosto ≠ ENTREGAR o rosto.** O Stories **pode dizer** que o rosto está ali; o que nunca
+  entra é **imagem de rosto**, nem obscurecida. O Stories é a porta, o botão do link é quem entrega.
+- **🎚️ O CTA tem DOIS MODOS e se adapta à copy.** **DECLARADO** (*"his face is revealed in there"*)
+  quando a copy **já entregou prova concreta de identidade**: a inicial, o traço, o timing, o truque do
+  WhatsApp. Aí nomear FECHA um loop aberto e pré-vende o clique no botão. **CURIOSIDADE**
+  (*"the second part of this sign"*) quando a promessa foi atmosférica (bênção, sinal, boa notícia),
+  porque nomear no último segundo introduz objeto que o vídeo nunca apresentou e lê como isca trocada.
+  No swipe, os 3 que declaram tinham identidade antes e nenhum dos de bênção vaga declarou.
+  **Declarado obriga o Story a ser sobre o rosto**, senão ela sai na primeira tela.
 - ⚠️ **O comentário vem PRIMEIRO, o Stories depois. O CTA de Stories é ADITIVO e nunca substitui o
   `222`**, senão a automação de DM apaga. Se o roteiro estiver longo, fundir no formato do IG14:
   *"Comment 222, and tap my profile picture to watch my stories now."*

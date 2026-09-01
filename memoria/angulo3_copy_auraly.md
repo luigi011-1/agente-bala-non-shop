@@ -315,6 +315,33 @@ picture to watch my stories now."* Os dois canais numa frase só, zero take a ma
 operação inteira.** O Stories expira em 24h de verdade, por regra da plataforma. Não é contador
 inventado nem escassez que o checkout desmente, então não custa credibilidade nenhuma.
 
+🎚️ **O CTA DE STORIES TEM DOIS MODOS, e ele se adapta à copy** (Luigi, 2026-09-01).
+
+| | **DECLARADO** | **CURIOSIDADE** |
+|---|---|---|
+| Diz | **o que tem lá dentro**: *"his face is revealed in there"* | **que tem algo lá**: *"the second part of this sign"* |
+| Ganha | o clique no **BOTÃO dentro do Stories**, porque ela chega sabendo o que o link faz | o **tap na foto de perfil**, porque ela abre por não saber |
+| Custo | endurece o claim, risco maior | perde quem abre, não entende a oferta e sai |
+
+**O critério não é gosto: a copy já entregou prova concreta de identidade?**
+> **Entregou** (a inicial, o traço físico, o timing, o truque do WhatsApp) → **DECLARA**. Ela já está
+> num loop aberto, e nomear o rosto **fecha** o loop.
+> **Prometeu algo atmosférico** (bênção, sinal, boa notícia) → **CURIOSIDADE**. Nomear no último
+> segundo introduz objeto que o vídeo nunca apresentou, e lê como isca trocada.
+
+**O swipe valida a correlação, e ela é limpa:** os **três** que declaram tinham entregue identidade
+antes (IG02 e IG14 pelo truque do WhatsApp, IG11 descrevendo a pessoa). **Nenhum** dos que prometeu
+bênção vaga declarou (IG03, IG06, IG08, IG12, IG04, IG17). Não é estilo, é congruência.
+
+⚠️ **NOMEAR o rosto ≠ ENTREGAR o rosto, e eu apertei demais isto na primeira redação de
+2026-09-01.** ~~"O rosto nunca aparece no Stories"~~ proibia a palavra, e a palavra é o objeto de
+desejo do ângulo inteiro. **A trava real é a IMAGEM:** o Stories pode e às vezes deve **dizer** que o
+rosto está ali, e **nunca** mostrar imagem de rosto, nem obscurecida. O Stories é a porta, o botão entrega.
+
+🔒 **Trava do modo declarado:** declarar obriga o Stories a ser **sobre o rosto**. CTA que promete
+rosto e Story que fala de outra coisa faz ela sair na primeira tela, e leva a credibilidade junto.
+No modo declarado as telas 2 e 3 podem virar uma só: **quem vem sabendo quer o caminho mais curto.**
+
 📊 **Rastreio obrigatório:** `rt_ad` separado por canal (`..._dm` contra `..._story`), mesmo
 destino e string diferente. Sem isso não dá pra saber qual canal paga.
 
