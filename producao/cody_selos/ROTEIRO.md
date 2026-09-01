@@ -1,6 +1,6 @@
 # Cody Miller | Ângulo 3 (Auraly) | Roteiro
 
-Vídeo modelo: `snapinsta-1787767048118.mp4` (círculo de sal e os três selos, 50,5s, abertura muda) · Biblioteca **#23**
+Vídeo modelo: `snapinsta-1787767048118.mp4` (círculo de sal e os três selos, 50,5s, abertura muda) · Biblioteca **#31**
 
 Avatar: **Cody Miller** · Âncora: `producao/_ancoras/cody_ancora.jpeg`
 

@@ -1,6 +1,6 @@
 # Kendra Collins | Ângulo 3 (Auraly) | Roteiro
 
-Vídeo modelo: `snapinsta-1787796334638.mp4` (a janela de 33 minutos, 69,9s, plano único com punch-in em 4,0s) · Swipe **IG19** · Biblioteca **#23**
+Vídeo modelo: `snapinsta-1787796334638.mp4` (a janela de 33 minutos, 69,9s, plano único com punch-in em 4,0s) · Swipe **IG19** · Biblioteca **#32**
 
 Avatar: **Kendra Collins** · Âncora: `producao/_ancoras/KENDRA COLLINS .jpeg`
 

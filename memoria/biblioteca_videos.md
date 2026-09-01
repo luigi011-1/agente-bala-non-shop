@@ -12,6 +12,13 @@ metadata:
 
 Memória dos vídeos já clonados. Serve de referência de estrutura e "receituário" de esqueletos que funcionam.
 
+> 🔢 **O número é ordem de REGISTRO, nunca ordem cronológica.** Cada entrada carrega a data real.
+> Renumerar quebraria as referências cruzadas dos `ROTEIRO.md`, então número atribuído não se mexe.
+>
+> 📌 **Toda entrada tem que citar o CAMINHO `producao/<pacote>/`.** É por ele que o
+> `checar_rotacao.py` casa pacote com registro. Sem o caminho o casamento vira heurística por token
+> do slug, que foi como `cody_selos` passou despercebido casando com `kendra_selos` até 2026-09-01.
+
 ## 1. Papada/ACV (04_08_50k_views)
 Hook: barriga/papada + ACV "derrete gordura". **Estabeleceu a regra:** "gere só o estado inicial; a transformação vai no vídeo" ([[regras-universais]] #9).
 
@@ -49,7 +56,7 @@ Hook com 2ª pessoa (barriga estufada), coach aponta "não é gordura, é disbio
 ## 11. Canela + abacaxi (Sage_Hippokrati)
 Hook: canela caindo em tigela de cerâmica de abacaxi; receita no liquidificador transparente (abacaxi→canela→água); copo do suco amarelo domina a 2ª metade. Melody.
 
-## 12. Canela dissolve açúcar (Sage_Hippokrati)
+## 12. Canela dissolve açúcar (Sage_Hippokrati) · `producao/melody_acucar/` · 2026-08-22
 Hook: pessoa deitada com barriga coberta de cristais de açúcar âmbar que a canela dissolve; receita copo+canela+limão; caneca âmbar no resto. Melody.
 - **Refinamos o hook** pra pedir MUITO volume de cristais ([[erros-recorrentes]] falha #7).
 
@@ -88,6 +95,76 @@ Hook: **escultura de uma cabeça humana muito inchada** na mesa, chá quente des
 - **Ponte:** o rosto é o mostrador, e o que ele mostra é o desejo por açúcar. **Vende APETITE**, que é o claim mais defensável do açafrão e nunca tinha sido usado nesta conta.
 - **O que não repetir:** rota 4, pergunta sem saída, efeito colateral do caseiro, a prateleira de volume.
 
+
+## 27. Kitty Queen / inchaco 40+ · `producao/brandon_angle2/` · 2026-08-18
+- **Modelo:** `531403f2-4826-4586-8ba1-02906c2a73d0.mp4` (saúde íntima feminina, 75s).
+- **Ângulo 2** · Avatar: holistic.brandon como **treinadora** ("the women I train").
+- **Variável trocada:** saúde íntima feminina vira **inchaço / hormônios / metabolismo travado após os 40**.
+  A placa anatômica pélvica vira placa de abdômen com intestino bloqueado, mesma função de herói.
+- **Esqueleto:** 3 sintomas "if" com 2ª pessoa ao lado → vergonha → prova social → mecanismo → escalada
+  → solução → autoridade → ponte com o quiz na mão → CTA com follow gate.
+- **Rota:** "uma das três causas" (hormônios + metabolismo + intestino).
+  **Obstáculo: o relógio hormonal que ela não consegue adivinhar**, e que explica por que todo plano
+  anterior falhou. É o obstáculo que amarra o quiz sem precisar atacar concorrente.
+- ⭐ **É UM DOS DOIS ARQUIVOS DO GABARITO VIVO** (`brandon_angle2/ROTEIRO.md` e `PROMPTS_PRODUCAO.md`),
+  o que o PORTÃO P5 manda abrir antes de todo primeiro JSON. Ficou 14 dias fora da biblioteca justamente
+  por ser tão familiar que ninguém se lembrou de registrar.
+- **O que NÃO repetir:** a rota das três causas e o beat "blaming themselves for a problem that was
+  never about willpower".
+
+## 28. Supermercado, 3 dicas de inspeção · `producao/brandon_mercado/` (2026-08-21) e `producao/melody_mercado/` (2026-08-22)
+- **Modelo:** `f036698f-3446-482a-b9ac-cde212650d69.mp4`, 44,6s, growth puro sobre qualidade de alimento.
+- **Um esqueleto, duas contas e DOIS ângulos diferentes**, que é o único caso assim da biblioteca:
+  Brandon no **Ângulo 2** (quiz FityWell) e Melody no **Ângulo 1** (Korella, deep link Amazon).
+- **As 3 dicas ficam intactas.** O que muda é só o bloco de venda enxertado no fim.
+- **Cenário virado por decisão do Luigi em 2026-08-21:** grava **dentro do supermercado**, nunca na box
+  nem na garagem. O CTA do original fala da próxima ida ao mercado e as dicas são de inspeção na hora
+  da compra, então fora da loja o vídeo perde credibilidade.
+- **Rotas, e elas são diferentes de propósito:** Brandon usa a **rota 8, o rótulo que mentiu**, com o
+  **autodiagnóstico ao vivo (rota 2)** como recurso de retenção. Melody usa **o quarto rótulo que mente**,
+  derivada do próprio tema, com escalada por **reversão do vilão**.
+- 🔑 **O padrão que este caso ensina:** quando o modelo é growth puro e as dicas são o ativo, o
+  esqueleto aguenta rodar em contas de ângulos diferentes sem canibalizar, **porque o bloco de venda
+  é a única parte que se toca.**
+- **O que NÃO repetir:** a rota 8 na Brandon, e a frase de dose escondida no rótulo no Melody.
+
+## 29. Varanda / câmera de campainha · `producao/melody_varanda/` · 2026-08-22
+- **Modelo:** `Joseph&Coco_Comment _BIG_...mp4`, 114,9s, **movie style + VSL de disfunção erétil**.
+- **Ângulo 1** · Avatar: Melody Carter (**HOMEM**), coach que também é usuário. Público: homens 50+.
+- **Variável trocada:** o "ancient remedy" sem nome vira **açafrão nomeado com o Korella em quadro**.
+- 🔴 **O ÚNICO HERÓI DE HOOK PURAMENTE TEXTUAL DA BIBLIOTECA.** Não é prop: é a legenda do
+  primeiro frame somada ao **formato de câmera de campainha**. Consequência: **legenda deixa de ser
+  opcional e vira obrigatória**, e o Setup A **não pode fechar o enquadramento**, exceção registrada à
+  regra de chegar sempre mais perto. Fechar mata a leitura de vazamento e o vídeo vira anúncio.
+- **Nenhum reveal físico no vídeo inteiro.** O único reveal é narrativo, no T4.
+- **Rota:** reversão do vilão (gatilho 3) · **Obstáculo:** absorção.
+- ⚠️ **O VÍDEO DE MAIOR RISCO DE PLATAFORMA DA OPERAÇÃO.** Disfunção erétil, eufemismo sexual
+  repetido, insinuação de infidelidade no hook, duas marcas reais nomeadas no T14, e um future pacing
+  (T27/T28) que é **escalada nossa**: o original para no curiosity gap e não faz claim de resultado nenhum.
+- 🔑 **A LIÇÃO DE COPY QUE NASCEU AQUI e virou regra:** o Luigi cortou o limite honesto
+  ("isso não conserta casamento") porque o vídeo inteiro constrói a dor como sendo a RELAÇÃO.
+  **O limite honesto nunca pode tocar a dor que o vídeo prometeu resolver.** É a origem direta da
+  proibição total dele no Ângulo 4. Ver [[feedback-cta-produto]].
+- **Descritor de terceiro é COPY, não estrutura:** "one OLD American man" virou "one American coach who
+  does nothing but this", porque o Melody tem 30 e poucos. Nunca herdar descritor sem checar o avatar.
+- **O que NÃO repetir:** reversão do vilão e o obstáculo de absorção na conta do Melody.
+
+## 30. Pulmão preto virando rosa · `producao/brandon_pulmao/` · 2026-08-24
+- **Modelo:** `snapinsta-1787581398049.mp4`, 32,1s, growth puro. Corte de cena em 7,37s.
+- **Ângulo 2** · Avatar: holistic.brandon como treinadora.
+- **Variável trocada:** pulmão de fumante vira **respiração travada pelo estresse**. **Mesmo prop e
+  mesmo reveal**, só a linha de segmentação muda. É o caso mais econômico da biblioteca: a troca de
+  público custou uma frase.
+- **Herói:** o modelo de pulmão indo de escuro a rosa **dentro de um único take**. Reveal contínuo,
+  uma imagem só do estado escuro.
+- **110s contra 32,1s do original**, porque o original é growth e o nosso é venda. O bloco inteiro de
+  venda (beats 6 e 7) **não existe no modelo**.
+- **Rota 5, a data em que parou de funcionar** · escalada por **confissão** (gatilho 5).
+- ⚠️ **Prop de risco:** modelo anatômico já travou duas vezes nesta operação. Saída aplicada aqui,
+  e ela vale pra sempre: descrever como **modelo didático de resina fosca**, por cor e material
+  (cinza-carvão fosco indo pra rosa suave), e **nenhum nome de órgão no negative**.
+- **O que NÃO repetir:** rota 5 e o gatilho de confissão na conta da Brandon. A frase "I do not
+  recognize myself in the mirror anymore" já estava queimada aqui, vinda do vídeo do fígado.
 
 ---
 
@@ -213,6 +290,68 @@ Hook: **escultura de uma cabeça humana muito inchada** na mesa, chá quente des
 - **Os cinco ganchos sao os mesmos**, adaptados a gramatica dela.
 - **NAO REPETIR:** este esqueleto e estas frases estao queimados. **Nunca publicar #24, #25 e #26 na
   mesma conta.**
+
+## 31. Os três selos, versão Cody · `producao/cody_selos/` · 2026-08-26
+- **Mesmo modelo do #22** (`snapinsta-1787767048118.mp4`), rodado na **Cody Miller**. Primeiro vídeo dela.
+- 📎 **PRIMEIRO CASO DA REGRA "O ANEXO DECIDE O AVATAR".** O `.mp4` veio com a âncora da Cody na
+  mesma mensagem, então o ciclo completo saiu pra ela sem perguntar. A regra nasceu aqui e virou a
+  exceção do passo 3 do `CLAUDE.md`.
+- ⚠️ **NÃO é porte palavra por palavra, e é aqui que a política virou.** A regra antiga de copy
+  idêntica entre avatares (que gerou `kendra_veu` e `kendra_inicial`) **foi revogada pelo Luigi em
+  2026-08-25**. **Sete dos onze takes falados mudaram de redação.** Este pacote é a primeira aplicação
+  da regra nova, e o `karen_a3_confissao` (#25) é a aplicação madura dela.
+- **Enquadramento:** Cody é quem **já viu isso acontecer muitas vezes**. Autoridade por vivência,
+  nunca por credencial nem por idade.
+- ✅ **Nenhuma frase queimada**, por ser avatar novo. O que trava a copy aqui é congruência, não histórico.
+- **Rota:** não consome rota, o modelo não tem beat de fechamento argumentativo. Mesmo caso do #17 e do #24.
+- **NÃO REPETIR:** este esqueleto e estas frases estão queimados. **Nunca publicar o #22 e o #31 na mesma conta.**
+
+## 32. A janela de 33 minutos · `producao/kendra_33min/` · 2026-08-26
+- **Modelo:** `snapinsta-1787796334638.mp4`, 69,9s, plano único com **punch-in em 4,0s que é o único
+  corte do vídeo inteiro** · Swipe **IG19**.
+- **Fala de identificação:** *"I don't know your name, but this video did not reach you... by accident."*
+- **Avatar:** Kendra Collins · **Ângulo de entrada:** o estranho que não sabe o nome dela, mas sabe quem
+  o universo acabou de alinhar com ela.
+- **Variável trocada:** a **explosão vaga de prosperidade em 33 minutos** vira **o rosto da alma gêmea
+  chegando na DM em 33 minutos**. Mesmo relógio, mesma punição por inação, **só que a nossa é entregável.**
+- ⚠️ **ESQUELETO NOVO nesta conta.** Não é o véu (#19), não é a inicial (#20), não é os selos (#22).
+- **As três coisas que este modelo trouxe e a operação não tinha:**
+  1. **O relógio de 33 minutos.** Todo o swipe promete "amanhã" ou "24 horas"; este promete dentro da
+     mesma rolagem, então a ação tem que ser agora.
+  2. **A punição que INVERTE.** O nicho diz "você cancela a bênção"; este diz que a notícia **se vira
+     contra você**. Mais pesado, e nunca usamos.
+  3. **A saudação de estranho.** Compra intimidade admitindo o anonimato em seis palavras, e rende um
+     **callback fechado dentro do próprio vídeo** no T8.
+- 🔑 **O TRUQUE DE LONGEVIDADE QUE VALE PRA TODO CLIPE DATADO:** o original diz a data em voz alta
+  e queima o clipe em 24h. Aqui **a fala diz "today" e a data vive na legenda do CapCut**, então o mesmo
+  clipe é repostável só trocando o texto. Zero perda de força, e o ativo passa a durar.
+- **Herói do hook:** a **chama viva da sálvia ao lado do rosto**, acesa do T1 ao T11. Não é a fumaça.
+  **Risco de geração registrado:** chama viva perto do rosto costuma travar moderação; a saída é
+  isolar o fogo no primeiro plano da mesa e tirar o rosto do raio da chama.
+- **Marca d'água fixa `222`** flutuando o vídeo inteiro, roubada do `✨AMEN✨` do original. Elemento
+  gráfico constante do nicho que nós nunca tínhamos usado.
+- **ONZE GANCHOS APROVADOS**, o maior lote da operação: ampulheta virada, o nome em branco, vidro fosco
+  que não abre, as mãos que esperam, cadeado cortado, leque com a carta virada, louro sobre o pedido,
+  ovo na água, romã aberta com as mãos, a segunda mão (clickbait) e o celular virado que acende
+  (**clickbait, e COLIDE com a regra escrita de não ter celular em quadro: decisão do Luigi**).
+- **Rota:** não consome rota, o modelo não tem beat de fechamento argumentativo.
+- **Compliance mais BAIXO que o do próprio modelo**, e de propósito: saiu a promessa financeira, saiu a
+  previsão de evento de terceiro (**nós prometemos uma mensagem que nós mesmos enviamos**, a única coisa
+  do nicho que sempre acontece) e "amen" virou `222`. O claim que sobrou é o T9, "on the day you meet them".
+- **NÃO REPETIR:** este esqueleto e estas frases estão queimados.
+
+### ⏳ EM PRODUÇÃO, ainda sem número: `producao/cody_1111/` (roteiro de 2026-08-29)
+**O telefone às onze e onze**, modelo `scarlletmorgantarot.mp4`, 87,4s, zero cortes. Cody Miller.
+A promessa de **dinheiro** ("you are about to become a millionaire") vira o rosto da alma gêmea; o
+`11:11` do modelo vira **hora em quadro**, nunca palavra a comentar, porque a keyword é `222`.
+
+**Só tem `ROTEIRO.md` e `GANCHOS.md`.** Faltam `PROMPTS_PRODUCAO.md` e `DM.md`, então reprova no
+`checar_entrega.py` e **não entra numerado**: número na biblioteca significa esqueleto QUEIMADO, e
+queimar um esqueleto que não foi ao ar faria a biblioteca mentir para o PORTÃO P1.
+
+⚠️ **O que já vale registrar mesmo inacabado:** do 49,68s em diante o modelo **é o IG04 e o IG17 do
+nosso swipe, palavra por palavra**. A frente (data, portal, milionária) é o enxerto novo.
+**Nunca produzimos essa família.**
 
 ---
 

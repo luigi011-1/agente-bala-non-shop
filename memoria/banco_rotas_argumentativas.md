@@ -112,18 +112,33 @@ Antes de entregar qualquer roteiro, checar: **qual rota o último vídeo desta c
 ## Log de rotas usadas
 | Data | Vídeo | Ângulo | Rota usada |
 |---|---|---|---|
+| 2026-08-18 | Kitty Queen / inchaço 40+ (Brandon) `producao/brandon_angle2/` | 2 | Rota "uma das três causas". Obstáculo: **o relógio hormonal que ela não consegue adivinhar** |
 | 2026-08-21 | Fígado / cúrcuma (Jupi) | 2 | Rota "uma das três causas" (a original) |
-| 2026-08-21 | Supermercado 3 dicas | 2 | **Rota 8** (o rótulo que mentiu) + rota 2 como recurso |
-| 2026-08-22 | Varanda / câmera de campainha (Melody) | 1 | Escalada por **reversão do vilão** (gatilho 3). Obstáculo: absorção |
-| 2026-08-22 | Sugar damage (Melody) | 1 | **Rota 6** (o corpo está te protegendo). Obstáculo: potência que morre na prateleira |
-| 2026-08-25 | Escalda-pés / peróxido (Melody) | 1 | **Rota 1** (a ordem errada). Virada por **escalada de magnitude** (gatilho 2). Obstáculos: desistência sem culpa + variabilidade de safra |
-| 2026-08-25 | Sal no chuveiro (Melody) | 1 | **Rota 3** (o manual que mudou). Virada por **perda ativa** (gatilho 4). Obstáculos: custo real do caseiro + cadeia sem fiscalização |
-| 2026-08-25 | Rosto inchado / açúcar (Melody) | 1 | **Rota 4** (a pesquisa foi feita em outra pessoa). Virada por **pergunta sem saída** (gatilho 6). Obstáculos: efeito colateral do caseiro + **a prateleira de volume, gatilho NOVO** |
-| 2026-08-27 | Crosta / vinagre (Brandon) | **4** | **Rota 3** (o manual que mudou). Virada por **reversão do vilão** (gatilho 3). Obstáculo: a ordem, não a informação. **Primeiro vídeo do Ângulo 4** |
+| 2026-08-21 | Supermercado 3 dicas (Brandon) `producao/brandon_mercado/` | 2 | **Rota 8** (o rótulo que mentiu) + rota 2 como recurso |
+| 2026-08-22 | Supermercado 3 dicas (Melody) `producao/melody_mercado/` | 1 | **O quarto rótulo que mente**, derivada do tema. Virada por **reversão do vilão** (gatilho 3) |
+| 2026-08-22 | Varanda / câmera de campainha (Melody) `producao/melody_varanda/` | 1 | Escalada por **reversão do vilão** (gatilho 3). Obstáculo: absorção |
+| 2026-08-22 | Sugar damage (Melody) `producao/melody_acucar/` | 1 | **Rota 6** (o corpo está te protegendo). Obstáculo: potência que morre na prateleira |
+| 2026-08-24 | Pulmão preto virando rosa (Brandon) `producao/brandon_pulmao/` | 2 | **Rota 5** (a data em que parou de funcionar). Virada por **confissão** (gatilho 5) |
+| 2026-08-25 | Escalda-pés / peróxido (Melody) `producao/melody_pes/` | 1 | **Rota 1** (a ordem errada). Virada por **escalada de magnitude** (gatilho 2). Obstáculos: desistência sem culpa + variabilidade de safra |
+| 2026-08-25 | Sal no chuveiro (Melody) `producao/melody_sal/` | 1 | **Rota 3** (o manual que mudou). Virada por **perda ativa** (gatilho 4). Obstáculos: custo real do caseiro + cadeia sem fiscalização |
+| 2026-08-25 | Rosto inchado / açúcar (Melody) `producao/melody_rosto/` | 1 | **Rota 4** (a pesquisa foi feita em outra pessoa). Virada por **pergunta sem saída** (gatilho 6). Obstáculos: efeito colateral do caseiro + **a prateleira de volume, gatilho NOVO** |
+| 2026-08-27 | Crosta / vinagre (Brandon) `producao/brandon_crosta/` | **4** | **Rota 3** (o manual que mudou). Virada por **reversão do vilão** (gatilho 3). Obstáculo: a ordem, não a informação. **Primeiro vídeo do Ângulo 4** |
+
+> 🟢 **O ÂNGULO 3 QUASE NUNCA APARECE NESTE LOG, E ISSO ESTÁ CERTO.** Os modelos do nicho de
+> alma gêmea não têm beat de fechamento argumentativo: eles fecham em ação ritualizada, não em
+> argumento. **Quem carrega o fechamento lá é o `DM.md`**, e o banco é consultado normalmente na hora
+> de escrever a DM. Confirmado nos pacotes `blake_veu`, `blake_inicial`, `kendra_veu`,
+> `kendra_inicial`, `kendra_selos`, `cody_selos`, `kendra_33min`, `trevor_a3_confissao`,
+> `karen_a3_confissao` e `mark_a3_confissao`, **todos sem rota consumida**.
+>
+> Consequência prática: o aviso do `checar_rotacao.py` para pacote de Ângulo 3 sem rota é esperado
+> e não é dívida. **Rota de Ângulo 3 só se registra quando o próprio vídeo tiver beat de argumento**,
+> o que ainda não aconteceu em nenhum modelo.
 
 **Log de rotação da BRANDON especificamente** (mesma conta, não repetir):
 | Vídeo | Ângulo | Rota | Gatilho de virada |
 |---|---|---|---|
+| Kitty Queen / inchaço 40+ | 2 | uma das três causas | (o relógio hormonal como obstáculo) |
 | Fígado / cúrcuma | 2 | uma das três causas | (não registrado) |
 | Supermercado 3 dicas | 2 | rota 8, o rótulo que mentiu | (autodiagnóstico como recurso) |
 | Pulmão | 2 | rota 5, a data em que parou de funcionar | confissão (gatilho 5) |
