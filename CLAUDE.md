@@ -369,9 +369,14 @@ Nunca `ma'am`, `girl`, `honey`.
 ## graphify, o grafo de conhecimento da operacao
 
 Existe um grafo em `graphify-out/` cobrindo `memoria/`, `PLAYBOOK_COMPLETO/` e `producao/`:
-**1110 nos, 2239 arestas, 96 comunidades**, um unico componente conexo. Ele liga doutrina a
-execucao, entao responde coisas que nenhum arquivo sozinho responde: qual rota ja foi usada em
-qual video, onde uma regra foi aplicada, se um esqueleto ja rodou.
+**1434 nos e 2802 arestas** depois da rodada de 2026-09-01 (`grafo_memoria.py` + `grafo_producao.py`).
+Ele liga doutrina a execucao, entao responde coisas que nenhum arquivo sozinho responde: qual rota ja
+foi usada em qual video, onde uma regra foi aplicada, se um esqueleto ja rodou.
+
+> ⚠️ **As COMUNIDADES e o `GRAPH_REPORT.md` estao ATRAS da contagem acima.** Os dois scripts sao
+> deterministas e so mexem em nos e arestas; comunidade e relatorio pedem reconstrucao semantica,
+> que custa subagentes. Ate la, tratar agrupamento e relatorio como datados. Contagem de nos e
+> arestas esta fresca.
 
 **Consultar o grafo ANTES de responder qualquer pergunta sobre a operacao.**
 
