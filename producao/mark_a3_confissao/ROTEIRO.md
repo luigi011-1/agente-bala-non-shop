@@ -85,6 +85,28 @@ Enquadramento do avatar: cartomante que lê em casa. Autoridade por leitura e po
 
 **Em todas as cinco a carta SOULMATE é o alvo da ação**, e é ela que fica na mão do T2 em diante.
 
+### 🚨 A1, A2 e A5 ficaram INVÁLIDOS em 2026-09-03
+
+A regra do baralho como traço de avatar fixou que o leque da mesa da Mark é **clássico de borda branca**, enquanto a carta herói segue **holográfica**, e proibiu por escrito **mostrar a carta herói saindo do maço da mesa**, porque a diferença de arte vira erro de continuidade em quadro.
+
+**A1** (a carta se solta do leque), **A2** (duas cartas levantadas de baixo da palma) e **A5** (o leque empurrado até a carta parar virada pra cima) fazem exatamente isso. **A3 e A4 seguem válidos**, porque neles a carta já está posta na mesa.
+
+### As cinco variações da LEVA 2 do Setup A (escolhidas pelo Luigi em 2026-09-05)
+
+Mesma copy, mesmo T1, mesmos T2 a T6. Só o gancho muda. **A carta SOULMATE já está posta na mesa nas cinco**, nunca tirada do leque, e o leque é o clássico da âncora dela.
+
+| Variação | Gancho | Mecanismo | A ação, na gramática da Mark |
+|---|---|---|---|
+| A7 | A vela de duas mechas | 6, FOGO (**inventado**) | vela branca de pilar com **duas mechas na mesma cera**. Ela acende as duas com um fósforo e **as duas chamas se inclinam uma para a outra** |
+| A8 | O geodo aberto em duas metades | 4 e 8, ABRIR (**inventado**) | uma pedra cinza fechada nas duas mãos. Ela **abre e as duas metades revelam o interior de ametista roxa** |
+| A9 | A roda zodiacal girada com o dedo | **inventado, ASTROLOGIA** | disco de latão com os doze signos gravados na borda. Ela **gira com o indicador e o disco desacelera até parar** com o ponteiro fixo apontando um signo |
+| A12 | O mel âmbar sobre a carta | 5, LÍQUIDO (validado B36) | a carta dentro de uma tigela rasa de vidro. Ela **derrama mel e a arte vai sumindo sob a camada** |
+| A14 | 🎣 A cascata de cartas | 9, CARTAS (**inventado, clickbait puro**) | ela faz o **bridge shuffle e as cartas caem em cascata de uma mão para a outra**, com a carta SOULMATE parada na mesa embaixo |
+
+**Por que esta leva existe:** o Luigi pediu ganchos ligados ao universo de astrologia e alma gêmea em vez de ligados à copy, porque neste ângulo a copy é o ativo e o gancho é descartável. **A7, A8 e A9 carregam o significado de duas metades ou de leitura astral sem depender de uma palavra da fala.** A12 e A14 são atração visual pura.
+
+**Custo:** 1 keyframe e 1 clipe cada. Os T2 a T6 já estão renderizados no vídeo que foi ao ar.
+
 ---
 
 ## Roteiro cena a cena
@@ -104,15 +126,43 @@ Enquadramento do avatar: cartomante que lê em casa. Autoridade por leitura e po
 
 *21 palavras*
 
-### T4 · O TRATO e A AÇÃO · TALKING · Setup B
-> "Your part is easy. Take the good energy I am putting on this. Comment two two two, and it is claimed."
+### T4 · O TRATO e O SELO · TALKING · Setup B
+> "Your part is easy. Take the good energy I am putting on this. Comment two two two, that is how this gets tied to your name."
+
+*26 palavras*
+
+> ♻️ **Reescrito em 2026-09-05, sob a LEI DO SELO de 2026-09-04.** A versão que foi ao ar dizia
+> *"Comment two two two, and it is claimed"*, e `claimed` é **rótulo**: batiza a ação sem dizer o que
+> ela provoca no que já está vindo pra ela. A lei exige **consequência**, que é o que faz ela querer
+> comentar sozinha.
+>
+> ⚠️ **A consequência tem que ser congruente com o GESTO REAL, e é aqui que já se errou antes.**
+> Comentar é **escrever**, então o gesto amarra ao **nome**, deixa registrado, assina. Nunca
+> *"claim it out loud"* nem qualquer coisa que sugira falar em voz alta.
+>
+> **Dois pedidos no roteiro inteiro, e é de propósito:** o `222` aqui e o follow no T5. A lei manda
+> poucos pedidos, uma linha cada. Enfileirar like e save num modelo de 29 segundos faria a lista ler
+> como pedido de engajamento, que é exatamente o que mata o efeito.
+
+### T5 · O SELO e O DESTINO · TALKING · Setup C
+> "Follow me so this stays open. Then tap my profile picture. Their face is already up in my stories right now."
 
 *21 palavras*
 
-### T5 · FOLLOW GATE e O ROSTO · TALKING · Setup C
-> "Follow me first, or it will not let me reach you. Then I send their face straight to your messages."
-
-*20 palavras*
+> ♻️ **Reescrito em 2026-09-05, sob a INVERSÃO DO FUNIL de 2026-09-04.** A versão que foi ao ar no
+> creative de 29/08 era *"Follow me so this stays open. Then tap my profile picture. Their face is already up in my stories right now."*, e ela morreu por dois motivos ao mesmo tempo: o follow gate usava o
+> **motivo técnico** de entrega da DM, que deixou de existir, e o rosto era entregue na DM, que virou
+> canal de recuperação. **O Stories é o destino agora.**
+>
+> **Modo DECLARADO**, e o critério não é gosto: o T2 já entregou prova concreta de identidade quando
+> disse *"the person you already have in your head right now"*. Quem já deu um pedaço da identidade
+> fecha o loop nomeando o rosto, em vez de abrir um loop novo no último segundo.
+>
+> **O follow perdeu o motivo técnico e ganhou o motivo do CAMINHO**, *"so this stays open"*. Follow sem
+> motivo nenhum continua proibido.
+>
+> **A ordem não mudou:** o `222` do T4 vem antes, porque o selo vem antes do destino, o comentário
+> custa dois segundos e não tira ela do vídeo, e a DM de recuperação só existe se ela comentar.
 
 ### T6 · PUNIÇÃO POR INAÇÃO · TALKING · Setup C
 > "Do it now. If you scroll past this, you cancel it, and somebody else discovers what was meant to be yours."
@@ -127,7 +177,7 @@ What the fuck have you been manifesting? Because you were not supposed to scroll
 
 Somebody is about to confess something to you. And it is the person you already have in your head right now. They have been sitting on it for a while. And in the next twenty four hours, they stop sitting on it.
 
-Your part is easy. Take the good energy I am putting on this. Comment two two two, and it is claimed. Follow me first, or it will not let me reach you. Then I send their face straight to your messages.
+Your part is easy. Take the good energy I am putting on this. Comment two two two, that is how this gets tied to your name. Follow me first, or it will not let me reach you. Then I send their face straight to your messages.
 
 Do it now. If you scroll past this, you cancel it, and somebody else discovers what was meant to be yours.
 

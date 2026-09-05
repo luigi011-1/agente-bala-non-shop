@@ -12,21 +12,31 @@ Funil: vídeo -> comment `222` -> DM -> link do quiz Auraly
 
 ## Índice de geração
 
-| Take | Keyframe | Ação de geração |
-|---|---|---|
-| ref | REF-CARTA | **Reaproveitar a REF-CARTA já aprovada** em `producao/trevor_a3_confissao`. Se ainda não existir, GERAR DO ZERO com o prompt abaixo. |
-| T1 (A1) | K01 | GERAR DO ZERO · ÂNCORA MARK COLLINS + REF-CARTA |
-| T1 (A2) | K02 | EDITAR do K01 (muda só o prop e as mãos) |
-| T1 (A3) | K03 | EDITAR do K01 (muda só o prop e as mãos) |
-| T1 (A4) | K04 | EDITAR do K01 (muda só o prop e as mãos) |
-| T1 (A5) | K05 | EDITAR do K01 (muda só o prop e as mãos) |
-| T2, T3, T4 | K06 | GERAR DO ZERO · ÂNCORA MARK COLLINS + REF-CARTA |
-| T5, T6 | K07 | EDITAR do K06 (muda só a distância de câmera e a altura da carta) |
+| Take | Keyframe | Ação de geração | 📎 Anexar |
+|---|---|---|---|
+| ref | REF-CARTA | **Reaproveitar a REF-CARTA já aprovada** em `producao/trevor_a3_confissao`. Se ainda não existir, GERAR DO ZERO com o prompt abaixo. | **NADA** |
+| T1 (A1) | K01 | GERAR DO ZERO | **2**: âncora Mark + REF-CARTA |
+| T1 (A2) | K02 | EDITAR do K01 (muda só o prop e as mãos) | **1**: o K01 aprovado |
+| T1 (A3) | K03 | EDITAR do K01 (muda só o prop e as mãos) | **1**: o K01 aprovado |
+| T1 (A4) | K04 | EDITAR do K01 (muda só o prop e as mãos) | **1**: o K01 aprovado |
+| T1 (A5) | K05 | EDITAR do K01 (muda só o prop e as mãos) | **1**: o K01 aprovado |
+| T2, T3, T4 | K06 | GERAR DO ZERO | **2**: âncora Mark + REF-CARTA |
+| T5, T6 | K07 | EDITAR do K06 (muda só a distância de câmera e a altura da carta) | **1**: o K06 aprovado |
+| **T1 (A7)** | **K08** | **GERAR DO ZERO** | **2**: âncora Mark + REF-CARTA |
+| **T1 (A8)** | **K09** | **EDITAR do K08** (muda só o prop e as mãos) | **1**: o K08 aprovado |
+| **T1 (A9)** | **K10** | **EDITAR do K08** (muda só o prop e as mãos) | **1**: o K08 aprovado |
+| **T1 (A12)** | **K11** | **EDITAR do K08** (muda só o prop e as mãos) | **1**: o K08 aprovado |
+| **T1 (A14)** | **K12** | **EDITAR do K08** (muda só o prop e as mãos) | **1**: o K08 aprovado |
 
-Total: 1 referência reaproveitada + 7 keyframes para 6 takes em 5 variações de vídeo.
+**Regra de bolso do anexo:** GERAR DO ZERO anexa âncora mais REF. EDITAR anexa **uma imagem só**, o keyframe de origem.
 
-**Os K02 a K05 saem todos do K01 original, nunca em cascata.**
+Total: 1 referência reaproveitada + 12 keyframes para 6 takes em **10 variações** de vídeo.
 
+**Os K02 a K05 saem todos do K01 original, nunca em cascata. Os K09 a K12 saem todos do K08 original, nunca em cascata.**
+
+🚨 **AS DUAS LEVAS DE GANCHO TÊM BARALHO DE MESA DIFERENTE, e isso é de propósito.** O K01 descreve o leque da mesa como **holográfico**, porque foi escrito em 29/08. Em **2026-09-03 o Luigi fixou que o baralho da MESA é traço de avatar**, e o da Mark é **clássico de borda branca e céu azul**, que é o que está na âncora dela. Por isso o **K08 é GERAR DO ZERO e não EDITAR do K01**: a leva nova nasce com o baralho certo em vez de herdar o errado. **A REF-CARTA segue holográfica nas duas levas**, e a diferença de arte entre a carta da mão e o leque da mesa é aceita, com a leitura de que ela puxou uma carta especial.
+
+🚨 **A1, A2 e A5 estão EM CONFLITO com essa mesma regra e não devem ser produzidos como estão.** Os três mostram a carta herói **saindo do maço da mesa**, e a regra de 2026-09-03 proíbe isso porque a arte diverge e vira erro de continuidade em quadro. **A3 e A4 seguem válidos.** As cinco da leva nova já nascem com a carta **posta na mesa**, nunca tirada do leque.
 ---
 
 ## Trava de identidade e continuidade
@@ -263,6 +273,120 @@ O take mais fechado do vídeo. Ombros pra cima, a carta subindo perto da lente.
 
 # Prompts de vídeo (Veo 3.1 via Flow)
 
+## K08 · T1 · GANCHO A7, A VELA DE DUAS MECHAS · GERAR DO ZERO · ÂNCORA MARK COLLINS + REF-CARTA
+
+> ### 📎 ANEXAR: **2 IMAGENS**
+> **1️⃣ ÂNCORA MARK COLLINS** `producao/_ancoras/MARK COLLINS .jpeg`
+> **2️⃣ REF-CARTA** já aprovada
+>
+> ### 🆕 GERAR DO ZERO
+> 🚫 NUNCA anexar o K01 aqui. O baralho da mesa muda de holográfico para clássico nesta leva.
+
+```json
+{
+  "shot_id": "K08_hook_a7_vela_duas_mechas",
+  "reference_use": "Use the first attached image ONLY for the woman face, identity, hair, wardrobe, jewelry and the room. Use the second attached image ONLY for the artwork of the SOULMATE tarot card so it is exactly the same card. Do NOT copy the pose or framing of either reference.",
+  "identity_main": "The EXACT woman from the first reference image, female, white American woman in her late thirties, slim with narrow shoulders, long wavy dark blonde hair with sun bleached lighter streaks and visible dark roots, soft curtain bangs parted in the middle, length past her shoulders to mid chest, natural undone beach texture, fair sun-worn skin with freckles across her nose and cheeks, visible pores, fine lines under the eyes, a small dark mole on her left cheek near the jawline, hazel green brown eyes, natural eyebrows darker than her hair, direct calm gaze.",
+  "wardrobe": "Cream ribbed tank top under an open dusty blue linen shirt with the sleeves rolled to the elbow and a chest pocket, natural linen creasing. A thin SILVER chain with an ornate silver cross pendant clearly visible at the center of her chest. Several chunky silver rings across both hands, including one wide oval moonstone ring on each hand, and textured bands on the other fingers.",
+  "prop": "A wide fan of face-up tarot cards spread open across the tabletop, printed in the classic style with a plain white border and pale blue sky illustrations. Standing on the table in front of the fan and close to the lens, one wide white pillar candle about twelve centimetres tall with TWO separate wicks rising side by side from the same flat wax surface, both wicks still unlit and dark. Her right hand holds a lit wooden match just above the left wick. The EXACT SOULMATE card from the second reference image lies face up flat on the tabletop beside the candle.",
+  "scene": "The same bright room as the reference image, unchanged. Three things read clearly behind her: a framed moon phase print in a thin wooden frame behind her right shoulder, a small wooden crucifix high on the right, and a low wooden console on the right holding a lit white candle in a glass cup, a small United States flag on a black stand and a raw quartz cluster, the flag clearly visible and in sharp focus. Off-white wall, sloped ceiling, a window at the left edge. A honey toned light wood table with a worn scratched top runs across the lower third of the frame, with a raw clear quartz stone at the front right corner.",
+  "posture": "She sits at the table facing the camera, chest up, both forearms resting on the tabletop, her left hand laid flat over the spread of cards palm down and her right hand raised just above the candle holding the match, low and close to the lens.",
+  "composition": "Chest-up framing from across the table. The tabletop crosses the lower third of the frame and the two-wick candle sits in the lower foreground, clearly closer to the lens than her face, so the candle and her ringed hands are unmistakably the hero. Her face occupies the upper portion of the frame. Only the moon print, the crucifix and the console are readable behind her.",
+  "camera": "chest level, straight-on, camera pushed in close from the other side of the table",
+  "state": "Start frame: the flame of the match is just about to touch the left wick. Both wicks are still unlit. She is looking down at the candle, about to speak.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day coming from the window on the left, evenly lighting her face, no warm cast. The candle on the console is a small point of light and does not light the room.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including the moon print, the crucifix, the flag, the rings and the cards.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no beauty smoothing, no de-aging, no skin smoothing, no second person, no gold jewelry"
+}
+```
+
+---
+
+## K09 · T1 · GANCHO A8, O GEODO ABERTO EM DUAS METADES · EDITAR do K08
+
+> ### 📎 ANEXAR: **1 IMAGEM**
+> **1️⃣ O K08 já aprovado**
+>
+> ### ✏️ EDITAR, muda só o prop do primeiro plano e as mãos
+> 🚫 NUNCA anexar o K09, K10, K11 ou K12 aqui. Os quatro saem do K08 original, nunca em cascata.
+
+```json
+{
+  "task": "edit the attached image, keep everything identical except the changes listed",
+  "keep_identical": "Keep the woman exactly the same: same face, same freckles and the small mole on her left cheek, same long wavy dark blonde hair with curtain bangs, same cream tank under the open dusty blue linen shirt, same silver chain with the ornate silver cross pendant, same chunky silver rings and moonstone rings on both hands, same seated position and same chest-up framing. Keep the SAME room exactly: framed moon phase print, wooden crucifix, wooden console with the lit candle in the glass cup, the small United States flag on its black stand and the quartz cluster, honey toned wood table, the raw quartz at the front right corner, the fan of classic white bordered tarot cards spread on the table, same lighting, same camera angle.",
+  "change_1": "The white two-wick candle and the wooden match are gone from the table. In their place she now holds a closed geode the size of a grapefruit in both hands, just above the tabletop in the lower foreground, closer to the lens than her face. It is a rough dull gray stone, round and heavy, with a visible seam running all the way around it. Her thumbs press on either side of the seam as if about to split it open. The stone is still completely closed and nothing of the inside is visible yet.",
+  "change_2": "The SOULMATE card stays face up flat on the tabletop directly below her hands, unchanged.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus. Do not make her skin darker, yellowish or orangish. Do not make the colors more saturated.",
+  "negative": "do not change the face, do not change identity, do not change the room, do not change the camera angle, no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no blur, no warm orange color cast, no yellow tint, no golden glow, no de-aging, no skin smoothing, no second person, no gold jewelry"
+}
+```
+
+---
+
+## K10 · T1 · GANCHO A9, A RODA ZODIACAL GIRADA COM O DEDO · EDITAR do K08
+
+> ### 📎 ANEXAR: **1 IMAGEM**
+> **1️⃣ O K08 já aprovado**
+>
+> ### ✏️ EDITAR, muda só o prop do primeiro plano e as mãos
+> 🚫 NUNCA anexar o K09, K10, K11 ou K12 aqui. Os quatro saem do K08 original, nunca em cascata.
+
+```json
+{
+  "task": "edit the attached image, keep everything identical except the changes listed",
+  "keep_identical": "Keep the woman exactly the same: same face, same freckles and the small mole on her left cheek, same long wavy dark blonde hair with curtain bangs, same cream tank under the open dusty blue linen shirt, same silver chain with the ornate silver cross pendant, same chunky silver rings and moonstone rings on both hands, same seated position and same chest-up framing. Keep the SAME room exactly: framed moon phase print, wooden crucifix, wooden console with the lit candle in the glass cup, the small United States flag on its black stand and the quartz cluster, honey toned wood table, the raw quartz at the front right corner, the fan of classic white bordered tarot cards spread on the table, same lighting, same camera angle.",
+  "change_1": "The white two-wick candle and the wooden match are gone from the table. In their place a flat round brass disc about twenty centimetres across lies flat on the tabletop in the lower foreground, closer to the lens than her face. Its outer rim is engraved and divided into twelve equal wedges, each wedge carrying a different engraved zodiac symbol, and the middle of the disc carries fine engraved concentric rings and radiating lines. A small fixed brass pointer sits at the top edge of the disc, mounted on the table and not touching the disc. The brass is aged and softly brushed, not shiny.",
+  "change_2": "Her right index finger rests on the outer rim of the disc, pressed sideways as if about to spin it. The disc is completely still. Her left hand stays laid flat over the fan of cards, palm down. The SOULMATE card stays face up flat on the tabletop, now leaning against the outer rim of the disc.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, realistic shadows and reflections, real brushed metal with fine engraved lines, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus. Do not make her skin darker, yellowish or orangish. Do not make the colors more saturated.",
+  "negative": "do not change the face, do not change identity, do not change the room, do not change the camera angle, no clock face, no clock hands, no numerals on the disc, no compass needle, no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no blur, no warm orange color cast, no yellow tint, no golden glow, no de-aging, no skin smoothing, no second person, no gold jewelry"
+}
+```
+
+---
+
+## K11 · T1 · GANCHO A12, O MEL ÂMBAR SOBRE A CARTA · EDITAR do K08
+
+> ### 📎 ANEXAR: **1 IMAGEM**
+> **1️⃣ O K08 já aprovado**
+>
+> ### ✏️ EDITAR, muda só o prop do primeiro plano e as mãos
+> 🚫 NUNCA anexar o K09, K10, K11 ou K12 aqui. Os quatro saem do K08 original, nunca em cascata.
+
+```json
+{
+  "task": "edit the attached image, keep everything identical except the changes listed",
+  "keep_identical": "Keep the woman exactly the same: same face, same freckles and the small mole on her left cheek, same long wavy dark blonde hair with curtain bangs, same cream tank under the open dusty blue linen shirt, same silver chain with the ornate silver cross pendant, same chunky silver rings and moonstone rings on both hands, same seated position and same chest-up framing. Keep the SAME room exactly: framed moon phase print, wooden crucifix, wooden console with the lit candle in the glass cup, the small United States flag on its black stand and the quartz cluster, honey toned wood table, the raw quartz at the front right corner, the fan of classic white bordered tarot cards spread on the table, same lighting, same camera angle.",
+  "change_1": "The white two-wick candle and the wooden match are gone from the table. In their place a wide shallow clear glass bowl sits on the tabletop in the lower foreground, closer to the lens than her face, and the SOULMATE card lies face up flat inside the empty bowl, fully readable, with nothing on it yet.",
+  "change_2": "Her right hand holds a small clear glass jar of pale amber honey tilted just above the bowl, and the first thread of honey is only now leaving the lip of the jar and has not touched the card. Her left hand stays laid flat over the fan of cards, palm down.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, real glass with true refraction and realistic reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus. Do not make her skin darker, yellowish or orangish. Do not make the colors more saturated. The honey is the only amber thing in frame and the light on her face stays neutral.",
+  "negative": "do not change the face, do not change identity, do not change the room, do not change the camera angle, no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no blur, no warm orange color cast, no yellow tint, no golden glow, no de-aging, no skin smoothing, no second person, no gold jewelry"
+}
+```
+
+---
+
+## K12 · T1 · GANCHO A14, A CASCATA DE CARTAS · EDITAR do K08
+
+> ### 📎 ANEXAR: **1 IMAGEM**
+> **1️⃣ O K08 já aprovado**
+>
+> ### ✏️ EDITAR, muda só o prop do primeiro plano e as mãos
+> 🚫 NUNCA anexar o K09, K10, K11 ou K12 aqui. Os quatro saem do K08 original, nunca em cascata.
+
+```json
+{
+  "task": "edit the attached image, keep everything identical except the changes listed",
+  "keep_identical": "Keep the woman exactly the same: same face, same freckles and the small mole on her left cheek, same long wavy dark blonde hair with curtain bangs, same cream tank under the open dusty blue linen shirt, same silver chain with the ornate silver cross pendant, same chunky silver rings and moonstone rings on both hands, same seated position and same chest-up framing. Keep the SAME room exactly: framed moon phase print, wooden crucifix, wooden console with the lit candle in the glass cup, the small United States flag on its black stand and the quartz cluster, honey toned wood table, the raw quartz at the front right corner, same lighting, same camera angle.",
+  "change_1": "The white two-wick candle and the wooden match are gone from the table, and the fan of cards has been gathered into a single stacked deck. She now holds that deck bent into a tall arch between both hands just above the tabletop in the lower foreground, closer to the lens than her face, her right hand above and her left hand waiting below to catch. The cards are the classic deck with a plain white border and pale blue sky illustrations, and the deck is held under tension with only the first two or three cards just beginning to spring free from the top hand.",
+  "change_2": "The SOULMATE card stays face up flat on the tabletop directly below her hands, apart from the deck and untouched by it.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, real printed cardstock with visible card edges, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus. Do not make her skin darker, yellowish or orangish. Do not make the colors more saturated.",
+  "negative": "do not change the face, do not change identity, do not change the room, do not change the camera angle, no motion blur, no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no blur, no warm orange color cast, no yellow tint, no golden glow, no de-aging, no skin smoothing, no second person, no gold jewelry"
+}
+```
+
+---
+
 ## Bloco global
 
 Colar em todo prompt:
@@ -378,7 +502,7 @@ som ambiente: cômodo silencioso de casa, sem música
 ### V08 · T4 · usa K06
 
 ```text
-a avatar (mulher) fala em inglês com sotaque americano de mulher branca da costa oeste, voz autêntica, dinâmica, apaixonada e emocional, como se exigisse ser ouvida, a seguinte frase: "Your part is easy. Take the good energy I am putting on this. Comment two two two, and it is claimed."
+a avatar (mulher) fala em inglês com sotaque americano de mulher branca da costa oeste, voz autêntica, dinâmica, apaixonada e emocional, como se exigisse ser ouvida, a seguinte frase: "Your part is easy. Take the good energy I am putting on this. Comment two two two, that is how this gets tied to your name."
 
 a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
 
@@ -392,11 +516,11 @@ som ambiente: cômodo silencioso de casa, sem música
 ### V09 · T5 · usa K07
 
 ```text
-a avatar (mulher) fala em inglês com sotaque americano de mulher branca da costa oeste, voz autêntica, dinâmica, apaixonada e emocional, como se exigisse ser ouvida, a seguinte frase: "Follow me first, or it will not let me reach you. Then I send their face straight to your messages."
+a avatar (mulher) fala em inglês com sotaque americano de mulher branca da costa oeste, voz autêntica, dinâmica, apaixonada e emocional, como se exigisse ser ouvida, a seguinte frase: "Follow me so this stays open. Then tap my profile picture. Their face is already up in my stories right now."
 
 a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
 
-o que acontece no vídeo: ela aponta o indicador esquerdo para a lente ao dizer follow me first, mantendo a carta erguida na mão direita, e mantém contato visual forte.
+o que acontece no vídeo: ela aponta o indicador esquerdo para a lente ao dizer follow me, mantendo a carta erguida na mão direita, e mantém contato visual forte.
 
 câmera: fixa, leve push-in
 
@@ -419,6 +543,78 @@ som ambiente: cômodo silencioso de casa, sem música
 
 ---
 
+### V11 · T1 · usa K08 · GANCHO A7, A VELA DE DUAS MECHAS
+
+```text
+a avatar (mulher) fala em inglês com sotaque americano de mulher branca da costa oeste, voz autêntica, dinâmica, apaixonada e emocional, como se exigisse ser ouvida, a seguinte frase: "What the fuck have you been manifesting? Because you were not supposed to scroll past this one today."
+
+a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
+
+o que acontece no vídeo: ela encosta o fósforo nas duas mechas, as duas acendem e as chamas se inclinam uma para a outra, e ela levanta o olhar para a lente enquanto fala.
+
+câmera: fixa, leve handheld
+
+som ambiente: cômodo silencioso de casa, sem música
+```
+
+### V12 · T1 · usa K09 · GANCHO A8, O GEODO
+
+```text
+a avatar (mulher) fala em inglês com sotaque americano de mulher branca da costa oeste, voz autêntica, dinâmica, apaixonada e emocional, como se exigisse ser ouvida, a seguinte frase: "What the fuck have you been manifesting? Because you were not supposed to scroll past this one today."
+
+a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
+
+o que acontece no vídeo: ela abre a pedra em duas metades com as duas mãos, o interior roxo aparece, e ela levanta o olhar para a lente enquanto fala.
+
+câmera: fixa, leve handheld
+
+som ambiente: cômodo silencioso de casa, sem música
+```
+
+### V13 · T1 · usa K10 · GANCHO A9, A RODA ZODIACAL
+
+```text
+a avatar (mulher) fala em inglês com sotaque americano de mulher branca da costa oeste, voz autêntica, dinâmica, apaixonada e emocional, como se exigisse ser ouvida, a seguinte frase: "What the fuck have you been manifesting? Because you were not supposed to scroll past this one today."
+
+a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
+
+o que acontece no vídeo: ela gira o disco com o dedo, o disco desacelera e para, e ela levanta o olhar para a lente enquanto fala.
+
+câmera: fixa, leve handheld
+
+som ambiente: cômodo silencioso de casa, sem música
+```
+
+### V14 · T1 · usa K11 · GANCHO A12, O MEL
+
+```text
+a avatar (mulher) fala em inglês com sotaque americano de mulher branca da costa oeste, voz autêntica, dinâmica, apaixonada e emocional, como se exigisse ser ouvida, a seguinte frase: "What the fuck have you been manifesting? Because you were not supposed to scroll past this one today."
+
+a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
+
+o que acontece no vídeo: ela inclina o pote e o mel escorre devagar sobre a carta dentro da tigela, e ela levanta o olhar para a lente enquanto fala.
+
+câmera: fixa, leve handheld
+
+som ambiente: cômodo silencioso de casa, sem música
+```
+
+### V15 · T1 · usa K12 · GANCHO A14, A CASCATA DE CARTAS
+
+```text
+a avatar (mulher) fala em inglês com sotaque americano de mulher branca da costa oeste, voz autêntica, dinâmica, apaixonada e emocional, como se exigisse ser ouvida, a seguinte frase: "What the fuck have you been manifesting? Because you were not supposed to scroll past this one today."
+
+a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
+
+o que acontece no vídeo: as cartas caem em cascata da mão de cima para a mão de baixo, ela junta o baralho na mesa e olha para a lente enquanto fala.
+
+câmera: fixa, leve handheld
+
+som ambiente: cômodo silencioso de casa, sem música
+```
+
+---
+
 ## Mapa de âncoras
 
 | Keyframe | Referências a anexar | Modelo |
@@ -431,18 +627,25 @@ som ambiente: cômodo silencioso de casa, sem música
 | K05 | K01 aprovado (**nunca do K02, K03 ou K04**) | Nano Banana 2, edição |
 | K06 | âncora Mark Collins + REF-CARTA | Nano Banana 2 |
 | K07 | K06 aprovado | Nano Banana 2, edição |
+| **K08** | **âncora Mark Collins + REF-CARTA** | Nano Banana **Pro**, várias variações |
+| **K09** | **K08 aprovado** | Nano Banana 2, edição |
+| **K10** | **K08 aprovado** (**nunca do K09**) | Nano Banana 2, edição |
+| **K11** | **K08 aprovado** (**nunca do K09 ou K10**) | Nano Banana 2, edição |
+| **K12** | **K08 aprovado** (**nunca do K09, K10 ou K11**) | Nano Banana 2, edição |
 
 ---
 
 ## Montagem no CapCut
 
 - Timeline 1080x1920, 30 fps.
-- **Cinco vídeos, um por gancho.** Cada um monta V0X seguido de V06, V07, V08, V09 e V10, que são os mesmos arquivos nos cinco.
+- **Dez vídeos, um por gancho.** Cada um monta o clipe do gancho seguido de V06, V07, V08, V09 e V10, que são os mesmos arquivos nos dez. Leva 1: V01 a V05. **Leva 2: V11 a V15.**
 - Cortes duros entre todos os takes, com peso só no corte do gancho para o V06.
 - Cortar o silêncio inicial de cada clipe para a fala começar imediatamente.
 - Legenda karaokê palavra a palavra com destaque amarelo na altura do peito, no estilo do vídeo modelo. **Nunca cobrir a carta nem as mãos**, que é onde estão os anéis.
-- Caixa de gancho branca no topo, uma por variação: A1 `SCROLL PAST THIS` · A2 `MAN HIDING TWO` · A3 `ASKING WHY THEY` · A4 `TO SHARE THIS` · A5 `SKIP THIS Y'ALL`.
+- Caixa de gancho branca no topo, uma por variação. Leva 1: A1 `SCROLL PAST THIS` · A2 `MAN HIDING TWO` · A3 `ASKING WHY THEY` · A4 `TO SHARE THIS` · A5 `SKIP THIS Y'ALL`. **Leva 2: A7 `SKIP THIS Y'ALL` · A8 `PAST THIS VIDEO` · A9 `SITTING EXACTLY WHERE` · A12 `TO SHARE THIS` · A14 `MAN HIDING TWO`.** **Nunca rodar duas variações com a mesma caixa na mesma conta.**
 - Gráfico flutuante `222` fixo no canto superior o vídeo inteiro, e `222` isolado na tela no CTA.
+- **Camada de Stories no T5, três coisas ao mesmo tempo e nenhuma delas é keyframe novo:** a fala do V09, uma **legenda fixa** `Check out the surprise in my Stories` entrando junto com a fala e ficando até o fim, e uma **seta vermelha de edição** apontando para o canto da foto de perfil. Custo zero em geração.
+- **Sem celular em quadro.** Quem aponta para a foto de perfil é a seta na edição, nunca um aparelho na mão dela.
 - **Nunca publicar duas variações na mesma conta, e NUNCA publicar este pacote nas contas que rodarem o `trevor_a3_confissao` ou o `karen_a3_confissao`.** É o mesmo esqueleto.
 - Color grading: temp -3, tint +2, saturação -6, exposição -3, contraste +12, highlight -35, shadow +18, fade +6.
 
@@ -464,3 +667,22 @@ som ambiente: cômodo silencioso de casa, sem música
 14. `222` está dito na fala do T4 e isolado na tela no CTA.
 15. **O rosto da alma gêmea nunca aparece no vídeo.**
 16. Nenhuma leitura de pacto ou feitiço. A carta é clara, e aqui o registro é carregado pelo crucifixo na parede E pela cruz no pescoço.
+
+### Gates que valem só para a LEVA 2 (K08 a K12, V11 a V15)
+
+17. **O leque da mesa é CLÁSSICO, borda branca e céu azul**, nunca holográfico. É o traço de avatar fixado em 2026-09-03 e é o que está na âncora dela.
+18. **A carta SOULMATE nunca é mostrada saindo do maço da mesa.** Ela já está posta na mesa em todos os cinco keyframes. A arte da carta da mão é holográfica e a do leque é clássica, e mostrar a troca vira erro de continuidade.
+19. **K09 a K12 saíram todos do K08 original, nunca em cascata.**
+20. **A vela de duas mechas do K08 tem as duas mechas APAGADAS no frame inicial.** O acendimento e a inclinação das chamas acontecem no vídeo, nunca na imagem.
+21. **O disco do K10 não tem número, ponteiro de relógio nem agulha de bússola.** São doze símbolos gravados na borda e um ponteiro fixo na mesa.
+22. **No K11 o mel é a única coisa âmbar em quadro.** A luz do rosto dela continua neutra de dia nublado.
+
+### Gates do CTA reescrito (T5 e V09, 2026-09-05)
+
+23. **O `222` do T4 vem ANTES do tap do T5.** O selo antes do destino, sempre.
+23b. **O `222` do T4 carrega CONSEQUÊNCIA, não rótulo**, e a consequência é congruente com o gesto de escrever: amarra ao nome. Nunca falar em voz alta.
+24. **O follow carrega motivo do CAMINHO**, `so this stays open`, nunca o motivo técnico de entrega de DM.
+25. **O T5 NOMEIA o rosto e o Stories nunca MOSTRA imagem de rosto**, nem obscurecida. Quem entrega é o botão do link.
+26. **Modo DECLARADO no vídeo obriga o Story 2 a ser sobre o rosto.** Se o Story falar de outra coisa, ela sai na primeira tela.
+27. A fala não diz **quiz, teste, app, plano nem preço**, e nunca `one-time`.
+28. O Stories tem `rt_ad` próprio, com sufixo `_story`, separado do `_dm`.
