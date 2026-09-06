@@ -36,7 +36,8 @@ async function waitTab(id){
 }
 async function prepare(job){
   const {avatarTabs={}}=await chrome.storage.local.get('avatarTabs');
-  const slot=avatarTabs[job.avatar];
+  const key=job.avatar_key||job.avatar;
+  const slot=avatarTabs[key];
   // A user-authorized retry gets a fresh tab; keep the uncertain conversation intact.
   let id=job.retry_of ? null : slot?.id;
   if(id){
@@ -49,7 +50,7 @@ async function prepare(job){
   }else{
     const tab=await chrome.tabs.create({url:'https://chatgpt.com/',active:false}); id=tab.id;
   }
-  avatarTabs[job.avatar]={id,job_id:job.id}; await chrome.storage.local.set({avatarTabs});
+  avatarTabs[key]={id,job_id:job.id}; await chrome.storage.local.set({avatarTabs});
   await api(`jobs/${job.id}`,{status:'preparing',tab_id:id});
   await waitTab(id);
   const image=await anchor(job);

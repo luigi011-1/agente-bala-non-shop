@@ -3,7 +3,6 @@ import json
 import tempfile
 import subprocess
 import unittest
-import zipfile
 import httpx
 from pathlib import Path
 from unittest.mock import patch
@@ -13,7 +12,7 @@ from PIL import Image
 
 from . import engine, provider, storage
 from .app import TOKEN, app
-from .rules import validate_analysis, validate_plan, validate_script, video_prompt
+from .rules import validate_analysis, validate_imageset, validate_script, video_prompt
 
 
 def fixture():
@@ -22,16 +21,17 @@ def fixture():
         "Comment two two two to save this reflection, then follow me and check my stories for more.",
         "Keep this thought with you today, and come back whenever you want a moment for yourself."]
     script = {'takes': [{'id': f'T{i+1}', 'speech': s, 'beat': 'Beat', 'translation': 'Tradução',
-                          'action': 'Ela olha para a lente.', 'setup': ['A','B','C'][i]}
-                         for i,s in enumerate(speech)], 'notes': 'Fixture', 'identity_lock': 'Identity', 'continuity': 'Same room'}
-    prompt = {'scene': 'A United States flag in the room', 'state': 'Initial state',
-              'negative': 'no captions, no subtitles', 'realism': 'natural'}
-    plan = {'notes': 'Test', 'frames': [
-        {'id':'REF-CARTA','title':'Reference','role':'reference','parent':None,'takes':[], 'hook_id':None,'prompt':prompt},
-        {'id':'K01','title':'Hook','role':'hook','parent':None,'takes':['T1'], 'hook_id':'H1','prompt':prompt},
-        {'id':'K02','title':'Body','role':'body','parent':None,'takes':['T2'], 'hook_id':None,'prompt':prompt},
-        {'id':'K03','title':'CTA','role':'cta','parent':'K02','takes':['T3'], 'hook_id':None,'prompt':prompt}]}
-    return script, plan
+                         'action': 'Ela olha para a lente.', 'setup': ['A', 'B', 'C'][i]}
+                        for i, s in enumerate(speech)],
+              'notes': 'Fixture', 'continuity': 'Mesma sala e figurino em todos os takes.'}
+    prompt = {'scene': 'A United States flag on the wall behind the table', 'composition': 'chest-up',
+              'state': 'Initial state before the action', 'lighting': 'neutral daylight',
+              'realism': 'natural skin', 'negative': 'no captions, no subtitles'}
+    imageset = {'notes': 'Test', 'frames': [
+        {'id': 'K01', 'title': 'Hook', 'role': 'hook', 'hook_id': 'H1', 'takes': ['T1'], 'prompt': prompt},
+        {'id': 'BODY', 'title': 'Body', 'role': 'body', 'hook_id': None, 'takes': ['T2'], 'prompt': prompt},
+        {'id': 'CTA', 'title': 'CTA', 'role': 'cta', 'hook_id': None, 'takes': ['T3'], 'prompt': prompt}]}
+    return script, imageset
 
 
 class StudioTests(unittest.TestCase):
@@ -39,10 +39,10 @@ class StudioTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.data_patch = patch.object(storage, 'DATA', Path(self.temp.name))
         self.data_patch.start()
-        provider.configure('', 'gpt-5.4', kie_key='', gemini_key='', allow_temp_upload=False, text_provider='auto')
+        provider.configure('', 'gpt-5.4', gemini_key='', text_provider='auto')
         self.client = TestClient(app)
-        self.headers = {'X-Studio-Token':TOKEN}
-        self.p = storage.create('Test', 'Shelby', '')
+        self.headers = {'X-Studio-Token': TOKEN}
+        self.p = storage.create('Test', '')
         self.pid = self.p['id']
 
     def tearDown(self):
@@ -50,124 +50,125 @@ class StudioTests(unittest.TestCase):
         self.data_patch.stop()
         self.temp.cleanup()
 
-    def ready(self):
-        script, plan = fixture()
-        Image.new('RGB',(120,200),'white').save(storage.folder(self.pid)/'anchor.png')
-        storage.write_json(storage.folder(self.pid)/'ANALISE.json', {'hero':'Test'})
-        storage.change(self.pid, script=script, plan=plan, selected=['H1'], sources=[],
-                       hooks=[{'id':'H1','action':'Ela abre o envelope.'}], max_attempts=2, status='plan_ready')
-        return script, plan
+    def ready_imageset(self):
+        script, imageset = fixture()
+        folder = storage.folder(self.pid)
+        (folder / 'avatars').mkdir()
+        avatars = []
+        for aid in ('a1b2c3d4', 'e5f6a7b8'):
+            Image.new('RGB', (120, 200), 'white').save(folder / 'avatars' / f'{aid}.png')
+            avatars.append({'id': aid, 'name': f'Avatar {aid}', 'file': f'avatars/{aid}.png'})
+        storage.change(self.pid, script=script, imageset=imageset, selected=['H1'],
+                       hooks=[{'id': 'H1', 'action': 'Ela abre o envelope.'}],
+                       avatars=avatars, status='imageset_ready')
+        return script, imageset
 
     def test_csrf_and_origin(self):
-        self.assertEqual(self.client.post('/api/config',json={'api_key':'secret'}).status_code,403)
-        self.assertEqual(self.client.post('/api/config',json={'api_key':'secret'},headers={**self.headers,'Origin':'https://evil.example'}).status_code,403)
-        r=self.client.post('/api/config',json={'api_key':'secret-test'},headers=self.headers)
-        self.assertEqual(r.status_code,200)
-        self.assertNotIn('secret-test',r.text)
-        self.assertNotIn('secret-test',self.client.get('/api/config').text)
+        self.assertEqual(self.client.post('/api/config', json={'api_key': 'secret'}).status_code, 403)
+        self.assertEqual(self.client.post('/api/config', json={'api_key': 'secret'},
+            headers={**self.headers, 'Origin': 'https://evil.example'}).status_code, 403)
+        r = self.client.post('/api/config', json={'api_key': 'secret-test'}, headers=self.headers)
+        self.assertEqual(r.status_code, 200)
+        self.assertNotIn('secret-test', r.text)
+        self.assertNotIn('secret-test', self.client.get('/api/config').text)
 
-    def test_browser_upload_with_empty_optional_anchor(self):
-        anchor = storage.folder(self.pid) / 'registered.png'
-        Image.new('RGB', (120, 200), 'white').save(anchor)
+    def test_upload_needs_only_a_video(self):
         probe = subprocess.CompletedProcess([], 0, json.dumps({
             'streams': [{'codec_type': 'video'}], 'format': {'duration': '29'}}), '')
-        with patch('studio.app.AVATARS', {'shelby': ('Shelby', anchor)}), \
-             patch('studio.app.subprocess.run', return_value=probe), \
+        with patch('studio.app.subprocess.run', return_value=probe), \
              patch('studio.app.snapshot', return_value=[]):
             r = self.client.post('/api/projects', headers=self.headers,
-                data={'title': 'Browser upload', 'avatar': 'shelby'},
-                files={'video': ('test.mp4', b'local-test', 'video/mp4'),
-                       'anchor': ('', b'', 'application/octet-stream')})
+                data={'title': 'Video only'},
+                files={'video': ('test.mp4', b'local-test', 'video/mp4')})
         self.assertEqual(r.status_code, 200, r.text)
         self.assertEqual(r.json()['status'], 'uploaded')
+        self.assertEqual(r.json()['avatars'], [])
 
     def test_no_path_escape(self):
-        with self.assertRaises(ValueError): storage.artifact(self.pid,'../studio.sqlite3')
+        with self.assertRaises(ValueError): storage.artifact(self.pid, '../studio.sqlite3')
         with self.assertRaises(ValueError): storage.folder('../')
 
     def test_script_gate_and_exact_speech(self):
-        script,_=fixture()
+        script, _ = fixture()
         validate_script(script)
-        for t in script['takes']: self.assertIn('"'+t['speech']+'"',video_prompt(t,t['action']))
-        bad=copy.deepcopy(script);bad['takes'][0]['speech']='Short.'
+        for t in script['takes']:
+            self.assertIn('"' + t['speech'] + '"', video_prompt(t, t['action']))
+        bad = copy.deepcopy(script); bad['takes'][0]['speech'] = 'Short.'
         with self.assertRaises(ValueError): validate_script(bad)
-        bad=copy.deepcopy(script);bad['takes'][1]['speech']=bad['takes'][1]['speech'].replace('two two two','yes')
+        bad = copy.deepcopy(script)
+        bad['takes'][1]['speech'] = bad['takes'][1]['speech'].replace('two two two', 'yes')
         with self.assertRaises(ValueError): validate_script(bad)
 
-    def test_dependency_and_take_coverage(self):
-        script,plan=fixture();validate_plan(plan,['H1'],script)
-        bad=copy.deepcopy(plan);bad['frames'][-1]['parent']='K99'
-        with self.assertRaises(ValueError): validate_plan(bad,['H1'],script)
-        bad=copy.deepcopy(plan);bad['frames'][-1]['takes']=['T2']
-        with self.assertRaises(ValueError): validate_plan(bad,['H1'],script)
+    def test_imageset_gate(self):
+        script, imageset = fixture()
+        validate_imageset(imageset, ['H1'], script)
+        bad = copy.deepcopy(imageset); bad['frames'][0]['hook_id'] = 'H9'
+        with self.assertRaises(ValueError): validate_imageset(bad, ['H1'], script)
+        bad = copy.deepcopy(imageset); bad['frames'][1]['takes'] = ['T3']
+        with self.assertRaises(ValueError): validate_imageset(bad, ['H1'], script)
+        bad = copy.deepcopy(imageset); bad['frames'][0]['parent'] = 'K00'
+        with self.assertRaises(ValueError): validate_imageset(bad, ['H1'], script)
+        bad = copy.deepcopy(imageset); bad['frames'][2]['prompt'] = dict(bad['frames'][2]['prompt'], negative='')
+        with self.assertRaises(ValueError): validate_imageset(bad, ['H1'], script)
 
-    def test_approval_gates_and_key_requirement(self):
-        r=self.client.post(f'/api/projects/{self.pid}/run/generate',json={},headers=self.headers)
-        self.assertEqual(r.status_code,400)
-        storage.change(self.pid,status='analysis_ready',analysis={'ambiguity':True})
-        r=self.client.post(f'/api/projects/{self.pid}/approve/analysis',json={},headers=self.headers)
-        self.assertEqual(r.status_code,400)
-        r=self.client.post(f'/api/projects/{self.pid}/approve/analysis',json={'clarification':'O envelope é o herói.'},headers=self.headers)
-        self.assertEqual(r.status_code,200)
-        r=self.client.post(f'/api/projects/{self.pid}/run/script',json={},headers=self.headers)
-        self.assertEqual(r.status_code,400)
+    def test_run_imageset_blocked_before_hook_selection(self):
+        r = self.client.post(f'/api/projects/{self.pid}/run/imageset', json={}, headers=self.headers)
+        self.assertEqual(r.status_code, 400)
+        storage.change(self.pid, status='analysis_ready', analysis={'ambiguity': True})
+        r = self.client.post(f'/api/projects/{self.pid}/approve/analysis', json={}, headers=self.headers)
+        self.assertEqual(r.status_code, 400)
+        r = self.client.post(f'/api/projects/{self.pid}/approve/analysis',
+            json={'clarification': 'O envelope é o herói.'}, headers=self.headers)
+        self.assertEqual(r.status_code, 200)
+        r = self.client.post(f'/api/projects/{self.pid}/run/script', json={}, headers=self.headers)
+        self.assertEqual(r.status_code, 400)  # no think key configured
         self.assertFalse(storage.get(self.pid)['busy'])
 
-    def test_generate_export_resume_no_duplicate(self):
-        script,plan=self.ready()
+    def test_script_stage_is_avatar_agnostic(self):
         provider.configure('test')
-        def image(pid,prompt,refs,dest):
-            dest.parent.mkdir(exist_ok=True)
-            Image.new('RGB',(120,200),'white').save(dest)
-        review={'pass':True,'issues':[], 'checks':{k:True for k in ['identity','hands','prop','initial_state','composition','kit','text']}}
-        with patch.object(provider,'image',side_effect=image) as generator, patch.object(provider,'think',return_value=review):
-            engine.generate(self.pid)
-            self.assertEqual(generator.call_count,4)
-            engine.generate(self.pid)
-            self.assertEqual(generator.call_count,4)
-        p=storage.get(self.pid)
-        self.assertEqual(p['status'],'complete')
-        with zipfile.ZipFile(storage.folder(self.pid)/'auraly-flow.zip') as z:
-            self.assertIn('hook/K01.png',z.namelist())
-            self.assertIn('cta/K03.png',z.namelist())
-            self.assertIn('FLOW_PROMPTS.txt',z.namelist())
-            manifest=json.loads(z.read('manifest.json'))
-            for clip in manifest['clips']:
-                t=next(t for t in script['takes'] if t['id']==clip['take'])
-                self.assertIn('"'+t['speech']+'"',clip['prompt'])
+        storage.change(self.pid, status='analysis_approved', analysis={'hero': 'Envelope'},
+                       transcript=[{'start': 0, 'text': 'x'}], direction='')
+        script, _ = fixture()
+        with patch.object(provider, 'think', return_value=script) as thinker:
+            engine.script(self.pid)
+        self.assertEqual(thinker.call_args.args[3] if len(thinker.call_args.args) > 3 else (), ())
+        self.assertNotIn('avatar', thinker.call_args.args[2])
+        self.assertEqual(storage.get(self.pid)['status'], 'script_ready')
 
-    def test_received_image_not_regenerated_after_reviewer_failure(self):
-        self.ready();provider.configure('test')
-        def image(pid,prompt,refs,dest):
-            dest.parent.mkdir(exist_ok=True);Image.new('RGB',(120,200),'white').save(dest)
-        with patch.object(provider,'image',side_effect=image) as generator, patch.object(provider,'think',side_effect=ValueError('review unavailable')):
-            with self.assertRaises(ValueError): engine.generate(self.pid)
-            self.assertEqual(storage.get(self.pid)['assets']['REF-CARTA']['status'],'review_pending')
-            with self.assertRaises(ValueError): engine.generate(self.pid)
-            self.assertEqual(generator.call_count,1)
-
-    def test_interrupted_image_requires_explicit_retry(self):
-        self.ready();provider.configure('test')
-        storage.change(self.pid,assets={'REF-CARTA':{'status':'generating','attempts':[{'status':'generating'}]}})
-        with patch.object(provider,'image') as generator:
-            with self.assertRaises(ValueError): engine.generate(self.pid)
-            generator.assert_not_called()
-
-    def test_retry_limit_only_applies_to_selected_image(self):
-        self.ready()
-        attempts = [{'status': 'rejected'}, {'status': 'rejected'}]
-        storage.change(self.pid, assets={'REF-CARTA': {'status': 'rejected', 'attempts': attempts}})
-        r = self.client.post(f'/api/projects/{self.pid}/assets/REF-CARTA/review',
-                             json={'decision': 'retry'}, headers=self.headers)
-        self.assertEqual(r.status_code, 200)
+    def test_imageset_stage_builds_frames_from_selected_hooks(self):
+        provider.configure('test')
+        script, imageset = fixture()
+        storage.change(self.pid, status='hooks_selected', script=script, selected=['H1'],
+                       hooks=[{'id': 'H1', 'action': 'a', 'title': 't'}])
+        with patch.object(provider, 'think', return_value=imageset):
+            engine.imageset(self.pid)
         p = storage.get(self.pid)
-        self.assertEqual(p['max_attempts'], 2)
-        self.assertEqual(p['retry_limits'], {'REF-CARTA': 3})
+        self.assertEqual(p['status'], 'imageset_ready')
+        self.assertEqual([f['id'] for f in p['imageset']['frames']], ['K01', 'BODY', 'CTA'])
 
-    def test_reference_cannot_contain_spoken_takes(self):
-        script, plan = fixture()
-        plan['frames'][0]['takes'] = ['T1']
-        with self.assertRaises(ValueError): validate_plan(plan, ['H1'], script)
+    def test_add_and_remove_avatars(self):
+        script, imageset = fixture()
+        storage.change(self.pid, status='imageset_ready', script=script, imageset=imageset,
+                       selected=['H1'], hooks=[{'id': 'H1', 'action': 'a'}])
+        import io
+        png = io.BytesIO(); Image.new('RGB', (100, 160), 'white').save(png, format='JPEG')
+        r = self.client.post(f'/api/projects/{self.pid}/avatars', headers=self.headers,
+            files=[('files', ('Shelby Turner.jpeg', png.getvalue(), 'image/jpeg')),
+                   ('files', ('Kris.jpeg', png.getvalue(), 'image/jpeg'))])
+        self.assertEqual(r.status_code, 200, r.text)
+        avatars = storage.get(self.pid)['avatars']
+        self.assertEqual([a['name'] for a in avatars], ['Shelby Turner', 'Kris'])
+        self.assertTrue((storage.folder(self.pid) / avatars[0]['file']).is_file())
+        r = self.client.delete(f'/api/projects/{self.pid}/avatars/{avatars[0]["id"]}', headers=self.headers)
+        self.assertEqual(r.status_code, 200)
+        self.assertEqual(len(storage.get(self.pid)['avatars']), 1)
+
+    def test_prepare_queue_requires_avatars(self):
+        script, imageset = fixture()
+        storage.change(self.pid, status='imageset_ready', script=script, imageset=imageset,
+                       selected=['H1'], hooks=[{'id': 'H1', 'action': 'a'}], avatars=[])
+        r = self.client.post(f'/api/projects/{self.pid}/queue', json={'ids': [self.pid]}, headers=self.headers)
+        self.assertEqual(r.status_code, 400)
 
     def test_empty_transcript_stops_extraction_gate(self):
         folder = storage.folder(self.pid) / 'watch'
@@ -191,7 +192,7 @@ class StudioTests(unittest.TestCase):
         analysis = {'hero': 'Envelope', 'hero_evidence': [.2], 'beats': [{'start': 0, 'end': 2,
             'visual': 'Envelope', 'label': 'HOOK', 'type': 'TALKING', 'change': 'Abre'}], 'ambiguity': False}
         with patch.object(provider, 'think', side_effect=[
-            {'peak_times': []}, {'peak_times': []}, {'peak_times': []}, {}, {}, analysis]) as thinker:
+                {'peak_times': []}, {'peak_times': []}, {'peak_times': []}, {}, {}, analysis]) as thinker:
             engine.analyze(self.pid)
             self.assertEqual(thinker.call_count, 6)
             seen = [path.name for call in thinker.call_args_list for path in
@@ -246,53 +247,22 @@ class StudioTests(unittest.TestCase):
 
     def test_call_limit_prevents_network_request(self):
         provider.configure('test')
-        storage.change(self.pid, call_limits={'text': 1, 'image': 1}, calls=[{'route': 'responses'}])
+        storage.change(self.pid, call_limits={'text': 1}, calls=[{'route': 'responses'}])
         with patch('studio.provider.httpx.Client') as client:
             with self.assertRaises(ValueError): provider.request(self.pid, 'responses', json={})
             client.assert_not_called()
         self.assertEqual(len(storage.get(self.pid)['calls']), 1)
 
-    def test_pause_preserves_asset_state_before_next_call(self):
-        self.ready(); provider.configure('test')
-        storage.change(self.pid, pause_requested=True)
-        with patch.object(provider, 'image') as image:
-            with self.assertRaises(ValueError): engine.generate(self.pid)
-            image.assert_not_called()
-        self.assertEqual(storage.get(self.pid)['assets'], {})
-
     def test_verify_access_only_consults_catalog(self):
         provider.configure('test', 'gpt-6-astra', 'medium')
         with patch('studio.provider.httpx.Client') as client:
             connection = client.return_value.__enter__.return_value
-            connection.get.side_effect = [httpx.Response(200, json={'id': 'gpt-6-astra'}),
-                                          httpx.Response(200, json={'id': 'gpt-image-2'})]
+            connection.get.side_effect = [httpx.Response(200, json={'id': 'gpt-6-astra'})]
             result = provider.verify_access()
             connection.post.assert_not_called()
-            self.assertEqual(connection.get.call_count, 2)
+            self.assertEqual(connection.get.call_count, 1)
         self.assertEqual(result['kind'], 'catalog_only')
         self.assertEqual(storage.get(self.pid)['calls'], [])
-
-    def test_directed_correction_and_original_anchor_in_derived_edits(self):
-        self.ready(); provider.configure('test')
-        folder = storage.folder(self.pid)
-        Image.new('RGB', (120, 200), 'white').save(folder / 'ref.png')
-        Image.new('RGB', (120, 200), 'white').save(folder / 'rejected.png')
-        storage.change(self.pid, assets={
-            'REF-CARTA': {'status': 'approved', 'file': 'ref.png', 'attempts': []},
-            'K01': {'status': 'rejected', 'file': 'rejected.png', 'correction': 'Fix only the hand.',
-                    'feedback': [{'text': 'Fix only the hand.'}], 'attempts': [{'status': 'rejected'}]}})
-        def image(pid, prompt, refs, dest):
-            dest.parent.mkdir(exist_ok=True); Image.new('RGB', (120, 200), 'white').save(dest)
-        review = {'pass': True, 'issues': [], 'checks': {k: True for k in
-            ['identity','hands','prop','initial_state','composition','kit','text']}}
-        with patch.object(provider, 'image', side_effect=image) as generator, \
-             patch.object(provider, 'think', return_value=review):
-            engine.generate(self.pid)
-        first = generator.call_args_list[0]
-        self.assertIn('Fix only the hand.', first.args[1])
-        self.assertEqual(first.args[2][0], folder / 'rejected.png')
-        self.assertIn(folder / 'anchor.png', generator.call_args_list[-1].args[2])
-        self.assertEqual(storage.get(self.pid)['assets']['K01']['feedback'][0]['text'], 'Fix only the hand.')
 
     def test_analysis_rejects_gaps_and_fake_timestamps(self):
         analysis = {'hero': 'Card', 'hero_evidence': [.2], 'ambiguity': False,
@@ -305,4 +275,5 @@ class StudioTests(unittest.TestCase):
         with self.assertRaises(ValueError): validate_analysis(bad, 3)
 
 
-if __name__ == '__main__': unittest.main()
+if __name__ == '__main__':
+    unittest.main()

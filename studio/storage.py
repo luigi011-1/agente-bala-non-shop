@@ -75,12 +75,13 @@ def all_projects():
     return [json.loads(row[0]) for row in rows]
 
 
-def create(title, avatar, direction):
+def create(title, direction):
     pid = uuid.uuid4().hex
     folder(pid).mkdir()
-    return save({'id': pid, 'title': title, 'avatar': avatar, 'direction': direction,
-                 'status': 'uploaded', 'busy': False, 'events': [], 'assets': {},
-                 'calls': [], 'selected': [], 'created': now(), 'error': None})
+    return save({'id': pid, 'title': title, 'direction': direction,
+                 'status': 'uploaded', 'busy': False, 'events': [],
+                 'calls': [], 'hooks': [], 'selected': [], 'avatars': [],
+                 'created': now(), 'error': None})
 
 
 def artifact(pid, relative):

@@ -1,5 +1,26 @@
 # Evolução do Auraly Studio
 
+## Atualização 0.7.0 — 2026-09-06
+
+- Pedido do Luigi: um pipeline único, linear, com a geração feita por ele no ChatGPT do
+  Chrome. Fim do caminho de API de imagem.
+- **Removidos**: geração/edição de imagem OpenAI, todo o adaptador Kie.ai (imagem e
+  texto), upload tmpfiles, `engine.generate`/`engine.plan`, `batches.py` e o modo de
+  lote, `console.py` e a página `/console`, o registro fixo de avatares (`AVATARS`).
+- **Fluxo novo**: upload só do `.mp4` → /watch → análise → **roteiro bilíngue
+  avatar-agnóstico** (com "Ajustar a copy") → **ganchos** (escolher até 5, valem para
+  todos) → **conjunto de imagens** (`engine.imageset`: 1 por gancho + BODY + CTA, sem
+  REF-CARTA) → **subir N âncoras .jpeg na própria tela** → fila do Chrome, uma aba por
+  avatar.
+- `browser_queue` agora fan-out por `(projeto, avatar, frame)`; âncora por avatar,
+  `avatar_key` = produção+avatar, ZIP por avatar. `standalone_prompt` simplificado:
+  único anexo é a âncora, e a carta da mesa entra na mão dela.
+- Só texto: OpenAI Astra com fallback Gemini em 429 tipado. Limite por projeto vira só
+  chamadas de texto (padrão 200).
+- 37 testes Python + 11 da extensão aprovados. Sem chamada paga nesta atualização.
+- Próximo passo: rodar uma produção real pequena ponta a ponta (vídeo → roteiro → 2
+  avatares → ZIP) e testar os clipes manualmente no Flow.
+
 ## Atualização 0.6.0 — 2026-09-06
 
 - Prioridade confirmada por Luigi nesta sessão: finalizar a geração pelo ChatGPT no Chrome e o pacote para Flow.

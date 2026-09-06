@@ -4,13 +4,14 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="studio-token" content="__TOKEN__">
   <title>Auraly Studio · Da referência ao frame</title>
-  <link rel="stylesheet" href="/static/style.css"><script defer src="/static/app.js"></script><script defer src="/static/batches.js"></script>
+  <link rel="stylesheet" href="/static/style.css"><link rel="stylesheet" href="/static/console.css">
+  <script defer src="/static/app.js"></script>
 </head>
 <body>
   <aside class="sidebar">
     <a href="/" class="brand"><span class="brand-mark">✳</span><span>Auraly<span class="brand-sub">PRODUCTION STUDIO</span></span></a>
     <button class="primary new-project" data-action="new">＋ Nova produção</button>
-    <a class="connection" href="/browser">🎨 Gerar no meu Chrome</a>
+    <a class="connection" href="/browser">🎨 Conectar o Chrome</a>
     <div class="nav-label">SEU WORKSPACE <span id="project-count">0</span></div>
     <nav id="projects" aria-label="Produções"></nav>
     <div class="sidebar-footer"><span class="status-dot"></span> Workspace local<span class="muted small">Seus arquivos, no seu computador.</span><button class="text-button" data-action="settings">⚙ Conexão e modelos</button></div>
@@ -22,37 +23,29 @@
   <dialog id="new-dialog">
     <form id="upload-form">
       <div class="dialog-heading"><div><div class="eyebrow">COMECE PELA REFERÊNCIA</div><h2>Uma nova produção.</h2></div><button type="button" class="icon-button" data-action="close-new" aria-label="Fechar">×</button></div>
-      <label>Nome da produção<input name="title" required maxlength="120" placeholder="Ex.: Shelby · A confissão em 24 horas"></label>
+      <label>Nome da produção<input name="title" required maxlength="120" placeholder="Ex.: A confissão em 24 horas"></label>
       <label class="dropzone" id="dropzone"><span class="upload-icon">↥</span><strong id="file-label">Arraste seu vídeo ou clique para escolher</strong><span>MP4 · até 500 MB · até 3 minutos</span><input type="file" id="video-file" name="video" accept="video/mp4,.mp4" required></label>
-      <div class="form-grid"><label>Avatar<select name="avatar" id="avatar-select"></select></label><label>Âncora personalizada <span class="optional">opcional</span><input type="file" name="anchor" id="anchor-file" accept="image/png,image/jpeg,image/webp"></label></div>
-      <label id="custom-name-label" hidden>Nome do avatar personalizado<input name="avatar_name" maxlength="100" value="Avatar personalizado"></label>
       <label>Direção criativa <span class="optional">opcional</span><textarea name="direction" rows="3" maxlength="5000" placeholder="O que você quer preservar ou adaptar neste vídeo?"></textarea></label>
-      <p class="small muted">O video original fica local. Na analise, frames e transcricao sao enviados a OpenAI ou Gemini. As imagens sao geradas com OpenAI ou Kie.ai.</p>
+      <p class="small muted">O vídeo original fica local. Na análise, frames e transcrição são enviados à OpenAI ou Gemini. As imagens você mesmo gera no seu ChatGPT, no Chrome.</p>
       <progress id="upload-progress" max="100" value="0" hidden></progress>
       <div class="dialog-footer"><span id="upload-status" class="small muted">Ângulo 3 · Auraly</span><button type="submit" id="upload-button" class="primary">Criar produção ↗</button></div>
     </form>
   </dialog>
   <dialog id="settings-dialog"><form id="settings-form">
     <div class="dialog-heading"><div><div class="eyebrow">CONEXÃO</div><h2>Seu estúdio, conectado.</h2></div><button type="button" class="icon-button" data-action="close-settings" aria-label="Fechar">×</button></div>
-    <p class="muted">A extracao /watch roda no computador. Analise e roteiro usam OpenAI ou Gemini (fallback). Imagens usam OpenAI ou Kie.ai (fallback). Cobranca nas suas contas de API.</p>
-    <label>Provedor de análise, roteiro e revisão<select id="text-provider"><option value="auto">Automático: OpenAI → Google Gemini → Kie.ai Gemini</option><option value="openai">Somente OpenAI · Astra</option><option value="gemini">Somente Google · Gemini 3.5 Flash</option><option value="kie">Somente Kie.ai · Gemini 3.5 Flash (thinking)</option></select></label>
-    <p class="small muted">Kie.ai recebe os frames e documentos de análise quando selecionada ou usada como alternativa. Cobrança conforme sua conta. Até 3 tentativas para HTTP 502/503/504, com espera visível e pausa; 429 troca de fornecedor no modo automático. Transporte incerto não é reenviado automaticamente.</p>
+    <p class="muted">A extração /watch roda no computador. Análise, roteiro, ganchos e conjunto de imagens usam OpenAI ou Google Gemini (fallback). Cobrança nas suas contas de API. A geração de imagem é feita por você, no ChatGPT do Chrome.</p>
+    <label>Provedor de análise, roteiro e ganchos<select id="text-provider"><option value="auto">Automático: OpenAI → Google Gemini</option><option value="openai">Somente OpenAI · Astra</option><option value="gemini">Somente Google · Gemini 3.5 Flash</option></select></label>
+    <p class="small muted">Até 3 tentativas para HTTP 502/503/504, com espera visível e pausa; 429 troca de fornecedor no modo automático. Transporte incerto não é reenviado automaticamente.</p>
     <label>Chave OpenAI<input type="password" id="api-key" name="api_key" autocomplete="off" placeholder="sk-…" maxlength="500"></label>
     <p class="small muted">As chaves salvas são protegidas pelo Windows DPAPI para seu usuário. Campo vazio mantém a conexão existente. Também é possível usar OPENAI_API_KEY no ambiente.</p>
-    <div class="divider-label">INTELIGENCIA GEMINI (ANALISE E ROTEIRO)</div>
+    <div class="divider-label">INTELIGÊNCIA GEMINI (FALLBACK DE TEXTO)</div>
     <label>Chave Google Gemini <span class="optional">alternativa de texto</span><input type="password" id="gemini-key" name="gemini_key" autocomplete="off" placeholder="AIza…" maxlength="500"></label>
-    <p class="small muted">Quando a OpenAI retornar erro 429, as etapas de analise, roteiro, ganchos e plano usam gemini-3.5-flash automaticamente, com custos e limites da conta Google. Pega sua chave em aistudio.google.com/apikey. Tambem aceita GEMINI_API_KEY no ambiente.</p>
-    <div class="divider-label">FALLBACK DE IMAGEM</div>
-    <label>Chave Kie.ai <span class="optional">fallback</span><input type="password" id="kie-key" name="kie_key" autocomplete="off" placeholder="pcsk_…" maxlength="500"></label>
-    <p class="small muted">Quando a OpenAI retornar erro HTTP 429 (limite ou cota), a geracao de imagem muda automaticamente para o Kie.ai. Tambem aceita KIE_API_KEY no ambiente.</p>
-    <label><input type="checkbox" id="allow-temp-upload"> Autorizo enviar referências ao tmpfiles.org para uso na Kie.ai. Os arquivos ficam acessíveis por link externo; não há remoção controlada pelo Studio.</label>
+    <p class="small muted">Quando a OpenAI retornar erro 429, as etapas de texto usam gemini-3.5-flash automaticamente, com custos e limites da conta Google. Pega sua chave em aistudio.google.com/apikey. Também aceita GEMINI_API_KEY no ambiente.</p>
     <label>Modelo de análise e roteiro<input id="text-model" name="text_model" value="gpt-6-astra" required pattern="[a-zA-Z0-9._-]+"></label>
     <label>Raciocínio<select id="reasoning-effort"><option value="low">Baixo</option><option value="medium" selected>Médio</option><option value="high">Alto</option><option value="xhigh">Muito alto</option><option value="max">Máximo</option></select></label>
-    <div class="model-lock"><span>Geração e edição de imagens</span><strong>GPT Image 2 <span class="muted small">(OpenAI + Kie.ai fallback)</span></strong></div>
     <p class="small muted">As chaves são salvas criptografadas pelo Windows. Astra usa o raciocínio selecionado; Gemini usa sua configuração própria, sem equivalência garantida. Nunca cole chaves em chats ou no briefing.</p>
     <button type="button" data-action="verify-connection">Verificar catálogo OpenAI</button>
-    <p id="verification-result" class="small muted">A consulta verifica acesso ao catálogo dos dois modelos; não gera imagens nem comprova saldo ou qualidade.</p>
-    <p class="small muted">O assistente integrado executa o workflow com os documentos locais. Este chat pode inspecionar os mesmos arquivos; a aplicação não reutiliza automaticamente a sessão do Codex.</p>
+    <p id="verification-result" class="small muted">A consulta verifica acesso ao catálogo do modelo de texto; não gera imagens nem comprova saldo ou qualidade.</p>
     <div class="dialog-footer"><button type="button" class="text-button" data-action="disconnect">Desconectar</button><button class="primary" type="submit">Salvar conexão</button></div>
   </form></dialog>
   <dialog id="lightbox"><button class="lightbox-close" data-action="close-lightbox" aria-label="Fechar imagem">×</button><img id="lightbox-image" alt="Imagem em resolução original"></dialog>

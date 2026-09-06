@@ -3,9 +3,11 @@ import hmac
 import io
 import json
 import os
+import re
 import secrets
 import shutil
 import subprocess
+import uuid
 from concurrent.futures import ThreadPoolExecutor
 from contextlib import asynccontextmanager
 from pathlib import Path
@@ -15,22 +17,17 @@ from fastapi import FastAPI, File, Form, HTTPException, Request, UploadFile
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.exceptions import RequestValidationError
-from PIL import Image
+from PIL import Image, ImageOps
 from pydantic import BaseModel, Field
 
-from . import console, engine, provider, batches, browser_queue, storage as store
-from .rules import ROOT, snapshot, validate_script
+from . import engine, provider, browser_queue, storage as store
+from .rules import snapshot, validate_script
 
 TOKEN = secrets.token_urlsafe(32)
 POOL = ThreadPoolExecutor(max_workers=2)
 STATIC = Path(__file__).parent / 'static'
 MAX_UPLOAD = 500 * 1024 * 1024
-AVATARS = {
-    'shelby': ('Shelby Turner', ROOT / 'producao/_ancoras/ShelbyTurner.us .jpeg'),
-    'kris': ('Kris Walker', ROOT / 'producao/_ancoras/Kris.Walker_us .jpeg'),
-    'robin': ('Robin Matthews', ROOT / 'producao/_ancoras/Robin.Matthewsus .jpeg'),
-    'casey': ('Casey Harrisson', ROOT / 'producao/_ancoras/casey.harrisson_us .jpeg'),
-}
+VERSION = '0.7.0'
 
 
 @asynccontextmanager
@@ -39,7 +36,7 @@ async def lifespan(app):
     browser_queue.recover()
     for p in store.all_projects():
         if p.get('busy'):
-            store.change(p['id'], busy=False, queue_state='attention', error='Servidor reiniciado. Retome o lote/etapa; resultados anteriores preservados.')
+            store.change(p['id'], busy=False, error='Servidor reiniciado. Retome a etapa; resultados anteriores preservados.')
     yield
 
 
@@ -53,7 +50,7 @@ async def local_boundary(request: Request, call_next):
         return JSONResponse({'detail': 'Somente acesso local.'}, status_code=403)
     origin = request.headers.get('origin')
     bridge = request.url.path.startswith('/api/browser/agent/')
-    extension = bool(origin and __import__('re').fullmatch(r'chrome-extension://[a-p]{32}', origin))
+    extension = bool(origin and re.fullmatch(r'chrome-extension://[a-p]{32}', origin))
     if bridge and request.method == 'OPTIONS' and extension:
         return JSONResponse({}, headers={'Access-Control-Allow-Origin': origin,
             'Access-Control-Allow-Headers': 'content-type,x-auraly-browser-token',
@@ -103,15 +100,12 @@ def index():
     return (STATIC / 'index.html').read_text(encoding='utf-8').replace('__TOKEN__', TOKEN)
 
 
-@app.get('/console', response_class=HTMLResponse)
-def console_page():
-    return (STATIC / 'console.html').read_text(encoding='utf-8').replace('__TOKEN__', TOKEN)
-
-
 @app.get('/browser', response_class=HTMLResponse)
 def browser_page():
     return (STATIC / 'browser.html').read_text(encoding='utf-8').replace('__TOKEN__', TOKEN)
 
+
+# ------------------------------------------------------------------ browser queue
 
 class BrowserQueue(BaseModel):
     ids: list[str] = Field(min_length=1, max_length=4)
@@ -149,10 +143,10 @@ def browser_result(jid: str):
     return FileResponse(browser_queue.result_file(jid))
 
 
-@app.post('/api/browser/projects/{pid}/export')
-def browser_export(pid: str):
-    path = browser_queue.export_package(pid)
-    return FileResponse(path, media_type='application/zip', filename=f'auraly-{pid[:8]}-flow.zip')
+@app.post('/api/browser/projects/{pid}/avatars/{aid}/export')
+def browser_export(pid: str, aid: str):
+    path = browser_queue.export_package(pid, aid)
+    return FileResponse(path, media_type='application/zip', filename=path.name)
 
 
 @app.post('/api/browser/jobs/{jid}/recover')
@@ -210,65 +204,21 @@ async def browser_image(jid: str, request: Request):
     return await asyncio.to_thread(browser_queue.receive, jid, bytes(raw))
 
 
-class ConsoleQueue(BaseModel):
-    ids: list[str] = Field(min_length=1, max_length=8)
-
-
-class ConsoleStep(BaseModel):
-    step: dict
-
-
-class ClipboardFile(BaseModel):
-    path: str
-
-
-@app.post('/api/console/queue')
-def console_queue(data: ConsoleQueue):
-    return {'steps': console.queue(data.ids)}
-
-
-@app.post('/api/console/clipboard')
-def console_clipboard(data: ClipboardFile):
-    root = str(store.DATA.resolve())
-    target = Path(data.path).resolve()
-    if not str(target).startswith(root):
-        raise ValueError('Caminho fora do diretório do projeto.')
-    return {'copied': console.copy_file_to_clipboard(target)}
-
-
-@app.post('/api/console/watch')
-def console_watch(data: ConsoleStep):
-    console.start_watch(data.step)
-    return console.watch_state()
-
-
-@app.post('/api/console/watch/stop')
-def console_watch_stop():
-    console.stop_watch()
-    return console.watch_state()
-
-
-@app.get('/api/console/watch')
-def console_watch_state():
-    return console.watch_state()
-
-
 app.mount('/static', StaticFiles(directory=STATIC), name='static')
 
+
+# ------------------------------------------------------------------ config
 
 @app.get('/api/config')
 def config():
     ff = shutil.which('ffmpeg') or str(Path(os.environ.get('LOCALAPPDATA', '')) / 'Microsoft/WinGet/Links/ffmpeg.exe')
     return {**provider.settings(), 'ffmpeg': Path(ff).is_file(),
-            'avatars': [{'id': key, 'name': v[0]} for key, v in AVATARS.items() if v[1].is_file()],
-            'data_dir': str(store.DATA), 'version': '0.6.0'}
+            'data_dir': str(store.DATA), 'version': VERSION}
 
 
 class Settings(BaseModel):
-    text_provider: str | None = Field(default=None, pattern='^(auto|openai|gemini|kie)$')
-    allow_temp_upload: bool | None = None
+    text_provider: str | None = Field(default=None, pattern='^(auto|openai|gemini)$')
     api_key: str | None = Field(default=None, max_length=500)
-    kie_key: str | None = Field(default=None, max_length=500)
     gemini_key: str | None = Field(default=None, max_length=500)
     text_model: str = Field(default=provider.DEFAULT_MODEL, pattern=r'^[a-zA-Z0-9._-]+$', max_length=80)
     reasoning_effort: str = Field(default='medium', pattern=r'^(low|medium|high|xhigh|max)$')
@@ -279,8 +229,7 @@ def set_config(data: Settings):
     if any(p.get('busy') for p in store.all_projects()):
         raise ValueError('Aguarde as etapas em andamento antes de trocar a conexão.')
     provider.configure(data.api_key, data.text_model, data.reasoning_effort,
-                       kie_key=data.kie_key, gemini_key=data.gemini_key,
-                       allow_temp_upload=data.allow_temp_upload, text_provider=data.text_provider)
+                       gemini_key=data.gemini_key, text_provider=data.text_provider)
     provider.save_preferences()
     return provider.settings()
 
@@ -290,9 +239,13 @@ def verify_config():
     return provider.verify_access()
 
 
+# ------------------------------------------------------------------ projects
+
 @app.get('/api/projects')
 def projects():
-    return [{k: p.get(k) for k in ['id', 'title', 'avatar', 'status', 'busy', 'updated', 'progress', 'error', 'batch_source', 'batch_id', 'queue_state', 'active_text_provider']}
+    return [{k: p.get(k) for k in ['id', 'title', 'status', 'busy', 'updated', 'progress',
+                                   'error', 'queue_state', 'active_text_provider']}
+            | {'avatars': len(p.get('avatars', []))}
             for p in store.all_projects()]
 
 
@@ -301,65 +254,13 @@ def project(pid: str):
     return store.get(pid)
 
 
-class BatchCreate(BaseModel):
-    avatars: list[str] = Field(min_length=1, max_length=4)
-    variations: int = Field(default=3, ge=1, le=5)
-    request_id: str = Field(pattern=r'^[a-f0-9-]{36}$')
-
-
-class BatchRun(BaseModel):
-    ids: list[str] = Field(min_length=1, max_length=4)
-    produce: bool = False
-
-
-@app.post('/api/projects/{pid}/batch')
-def create_batch(pid: str, data: BatchCreate):
-    return {'ids': batches.create(pid, data.avatars, AVATARS, data.variations, data.request_id)}
-
-
-@app.post('/api/batches/run')
-def run_batch(data: BatchRun):
-    return {'queued': batches.enqueue(data.ids, POOL, data.produce)}
-
-
-@app.post('/api/batches/pause')
-def pause_batch(data: BatchRun):
-    for pid in data.ids:
-        pause(pid)
-    return {'paused': data.ids}
-
-
 @app.post('/api/projects')
-async def upload(title: str = Form(...), avatar: str = Form('shelby'),
-                 avatar_name: str = Form('Avatar personalizado'), direction: str = Form(''),
-                 video: UploadFile = File(...), anchor: UploadFile | None = File(None)):
-    # Browsers include an empty file field when an optional upload is untouched.
-    if anchor is not None and not anchor.filename:
-        await anchor.close()
-        anchor = None
+async def upload(title: str = Form(...), direction: str = Form(''), video: UploadFile = File(...)):
     if not (video.filename or '').lower().endswith('.mp4'):
         raise ValueError('Envie um arquivo .mp4.')
-    if not title.strip() or len(title) > 120 or len(direction) > 5000 or len(avatar_name) > 100:
+    if not title.strip() or len(title) > 120 or len(direction) > 5000:
         raise ValueError('Título ou briefing inválido.')
-    if not anchor and avatar not in AVATARS:
-        raise ValueError('Selecione um avatar cadastrado ou envie uma âncora.')
-    if anchor:
-        raw = await anchor.read(20 * 1024 * 1024 + 1)
-        if len(raw) > 20 * 1024 * 1024:
-            raise ValueError('Âncora: máximo 20 MB.')
-        avatar_label = avatar_name.strip() or 'Avatar personalizado'
-    else:
-        avatar_label, anchor_path = AVATARS[avatar]
-        raw = anchor_path.read_bytes()
-    try:
-        with Image.open(io.BytesIO(raw)) as im:
-            if im.width * im.height > 40_000_000:
-                raise ValueError('Âncora muito grande: máximo 40 megapixels.')
-            from PIL import ImageOps
-            normalized = ImageOps.exif_transpose(im).convert('RGB')
-    except Exception:
-        raise ValueError('Âncora inválida. Use PNG, JPEG ou WebP.') from None
-    p = store.create(title.strip(), avatar_label, direction)
+    p = store.create(title.strip(), direction)
     folder = store.folder(p['id'])
     total = 0
     try:
@@ -369,7 +270,6 @@ async def upload(title: str = Form(...), avatar: str = Form('shelby'),
                 if total > MAX_UPLOAD:
                     raise ValueError('O vídeo ultrapassou 500 MB.')
                 f.write(chunk)
-        normalized.save(folder / 'anchor.png')
         ffprobe = shutil.which('ffprobe') or str(Path(os.environ.get('LOCALAPPDATA', '')) / 'Microsoft/WinGet/Links/ffprobe.exe')
         result = await asyncio.to_thread(subprocess.run,
             [ffprobe, '-v', 'error', '-show_format', '-show_streams', '-of', 'json', str(folder / 'source.mp4')],
@@ -383,20 +283,93 @@ async def upload(title: str = Form(...), avatar: str = Form('shelby'),
         sources = await asyncio.to_thread(snapshot, folder / 'sources.md')
         store.change(p['id'], sources=sources, duration=duration, original_name=video.filename,
                      status='uploaded')
-        store.event(p['id'], 'Vídeo e âncora recebidos. Inicie a extração /watch.')
+        store.event(p['id'], 'Vídeo recebido. Inicie a extração /watch.')
     except Exception as exc:
         store.change(p['id'], status='upload_error', error=str(exc))
         raise
     finally:
         await video.close()
-        if anchor:
-            await anchor.close()
     return store.get(p['id'])
 
 
-ALLOWED = {'extract': ['uploaded'], 'analyze': ['extracted'], 'script': ['analysis_approved'],
-           'hooks': ['script_approved'], 'plan': ['hooks_selected'],
-           'generate': ['plan_ready', 'generating', 'complete']}
+def _normalize_anchor(raw):
+    try:
+        with Image.open(io.BytesIO(raw)) as im:
+            if im.width * im.height > 40_000_000:
+                raise ValueError('Âncora muito grande: máximo 40 megapixels.')
+            return ImageOps.exif_transpose(im).convert('RGB')
+    except ValueError:
+        raise
+    except Exception:
+        raise ValueError('Âncora inválida. Use PNG, JPEG ou WebP.') from None
+
+
+@app.post('/api/projects/{pid}/avatars')
+async def add_avatars(pid: str, files: list[UploadFile] = File(...)):
+    with store.LOCK:
+        p = store.get(pid)
+        if p['status'] not in ('imageset_ready',) or p.get('busy'):
+            raise ValueError('Suba as âncoras depois que o conjunto de imagens estiver pronto.')
+        if browser_queue.has_jobs(pid):
+            raise ValueError('A fila já foi preparada. Pause e limpe a fila para trocar os avatares.')
+    if not 1 <= len(files) <= 8:
+        raise ValueError('Envie de 1 a 8 arquivos .jpeg de avatar.')
+    added = []
+    for upload in files:
+        raw = await upload.read(20 * 1024 * 1024 + 1)
+        await upload.close()
+        if len(raw) > 20 * 1024 * 1024:
+            raise ValueError('Cada âncora tem no máximo 20 MB.')
+        normalized = _normalize_anchor(raw)
+        aid = uuid.uuid4().hex[:8]
+        folder = store.folder(pid) / 'avatars'
+        folder.mkdir(exist_ok=True)
+        normalized.save(folder / f'{aid}.png')
+        name = re.sub(r'\.[a-zA-Z0-9]+$', '', upload.filename or '').strip() or f'Avatar {aid}'
+        added.append({'id': aid, 'name': name[:80], 'file': f'avatars/{aid}.png'})
+    with store.LOCK:
+        p = store.get(pid)
+        p.setdefault('avatars', []).extend(added)
+        store.save(p)
+        store.event(pid, f'{len(added)} avatar(es) adicionado(s): {", ".join(a["name"] for a in added)}.')
+    return store.get(pid)
+
+
+@app.delete('/api/projects/{pid}/avatars/{aid}')
+def remove_avatar(pid: str, aid: str):
+    with store.LOCK:
+        p = store.get(pid)
+        if browser_queue.has_jobs(pid):
+            raise ValueError('A fila já foi preparada. Pause e limpe a fila para remover avatares.')
+        p['avatars'] = [a for a in p.get('avatars', []) if a['id'] != aid]
+        store.save(p)
+    path = store.folder(pid) / 'avatars' / f'{aid}.png'
+    if path.is_file():
+        path.unlink()
+    return store.get(pid)
+
+
+@app.post('/api/projects/{pid}/queue')
+def prepare_queue(pid: str, data: BrowserQueue | None = None):
+    with store.LOCK:
+        p = store.get(pid)
+        if p['status'] != 'imageset_ready':
+            raise ValueError('Monte o conjunto de imagens antes de preparar a fila.')
+        if not p.get('avatars'):
+            raise ValueError('Suba ao menos uma âncora de avatar.')
+    limit = data.limit if data else None
+    return browser_queue.enqueue([pid], limit)
+
+
+@app.post('/api/projects/{pid}/queue/clear')
+def clear_queue(pid: str):
+    store.get(pid)
+    return browser_queue.clear(pid)
+
+
+ALLOWED = {'extract': ['uploaded'], 'analyze': ['extracted'],
+           'script': ['analysis_approved', 'script_ready', 'script_approved'],
+           'hooks': ['script_approved'], 'imageset': ['hooks_selected']}
 
 
 def worker(pid, action):
@@ -418,13 +391,8 @@ def run(pid: str, action: str):
             raise ValueError('Etapa indisponível. Conclua e aprove a etapa anterior.')
         if p['busy']:
             raise HTTPException(409, 'Este projeto já possui uma etapa em andamento.')
-        if action == 'generate':
-            browser_queue.api_generation_allowed(pid)
-            provider.require_image_key()
-        elif action != 'extract':
+        if action != 'extract':
             provider.require_think_key()
-        if action == 'generate':
-            store.change(pid, status='generating', max_attempts=p.get('max_attempts', 2))
         store.change(pid, busy=True, error=None, last_action=action, pause_requested=False)
         POOL.submit(worker, pid, action)
     return {'started': action}
@@ -432,6 +400,7 @@ def run(pid: str, action: str):
 
 class Approval(BaseModel):
     clarification: str = Field(default='', max_length=5000)
+    copy_note: str = Field(default='', max_length=5000)
     script: dict | None = None
     selected: list[str] = Field(default_factory=list, max_length=5)
 
@@ -446,11 +415,12 @@ def approve(pid: str, stage: str, data: Approval):
             if p['analysis']['ambiguity'] and not data.clarification.strip():
                 raise ValueError('Responda à dúvida sobre o hook/reveal antes de aprovar.')
             store.change(pid, clarification=data.clarification, status='analysis_approved', error=None)
-        elif stage == 'script' and p['status'] == 'script_ready':
+        elif stage == 'script' and p['status'] in ('script_ready', 'script_approved'):
             value = validate_script(data.script or p['script'])
-            store.change(pid, script=value, script_approved_at=store.now(), status='script_approved', error=None)
+            store.change(pid, script=value, script_approved_at=store.now(), status='script_approved',
+                         copy_note='', error=None)
             store.write_json(store.folder(pid) / 'ROTEIRO.json', value)
-        elif stage == 'hooks' and p['status'] == 'hooks_ready':
+        elif stage == 'hooks' and p['status'] in ('hooks_ready', 'hooks_selected'):
             ids = {h['id'] for h in p['hooks']}
             if not data.selected or len(set(data.selected)) != len(data.selected) or any(i not in ids for i in data.selected):
                 raise ValueError('Selecione de 1 a 5 ganchos diferentes.')
@@ -461,39 +431,23 @@ def approve(pid: str, stage: str, data: Approval):
     return store.get(pid)
 
 
-class AssetReview(BaseModel):
-    decision: str = Field(pattern='^(approve|retry)$')
-    correction: str = Field(default='', max_length=2000)
-
-
-@app.post('/api/projects/{pid}/assets/{fid}/review')
-def review_asset(pid: str, fid: str, data: AssetReview):
+@app.post('/api/projects/{pid}/adjust-copy')
+def adjust_copy(pid: str, data: Approval):
     with store.LOCK:
         p = store.get(pid)
-        if p['busy'] or fid not in p['assets']:
-            raise ValueError('Imagem indisponível para revisão.')
-        asset = p['assets'][fid]
-        if asset['status'] == 'approved':
-            raise ValueError('Imagem já aprovada. Crie uma nova produção para alterar dependências aprovadas.')
-        if data.decision == 'approve':
-            store.artifact(pid, asset.get('file', ''))
-            asset.update(status='approved', human_approved_at=store.now())
-        else:
-            asset['status'] = 'rejected'
-            if data.correction.strip():
-                asset['correction'] = data.correction.strip()
-                asset.setdefault('feedback', []).append({'text': data.correction.strip(), 'time': store.now()})
-            limits = p.setdefault('retry_limits', {})
-            limits[fid] = max(limits.get(fid, p.get('max_attempts', 2)), len(asset.get('attempts', [])) + 1)
-        p.update(error=None, status='generating')
-        store.save(p)
-        store.event(pid, f'{fid}: {"aprovação manual" if data.decision == "approve" else "nova tentativa autorizada"}.')
-    return p
+        if p['busy'] or p['status'] not in ('script_ready', 'script_approved'):
+            raise ValueError('O roteiro precisa estar entregue para ajustar a copy.')
+        if not data.copy_note.strip():
+            raise ValueError('Descreva o ajuste desejado na copy.')
+        provider.require_think_key()
+        store.change(pid, copy_note=data.copy_note.strip(), busy=True, error=None,
+                     last_action='script', pause_requested=False)
+        POOL.submit(worker, pid, 'script')
+    return {'started': 'script'}
 
 
 class CallLimits(BaseModel):
     text: int = Field(ge=1, le=1000)
-    image: int = Field(ge=1, le=100)
 
 
 @app.post('/api/projects/{pid}/limits')
@@ -503,14 +457,14 @@ def update_limits(pid: str, data: CallLimits):
         if p['busy']:
             raise ValueError('Pause e aguarde a etapa antes de alterar os limites.')
         store.change(pid, call_limits=data.model_dump())
-        store.event(pid, f'Limites registrados: {data.text} chamadas de texto e {data.image} de imagem, no projeto inteiro.')
+        store.event(pid, f'Limite registrado: {data.text} chamadas de texto no projeto inteiro.')
     return store.get(pid)
 
 
 @app.post('/api/projects/{pid}/pause')
 def pause(pid: str):
     store.change(pid, pause_requested=True)
-    store.event(pid, 'Pausa solicitada. A chamada já enviada pode concluir e ser cobrada; nenhuma nova chamada será iniciada.')
+    store.event(pid, 'Pausa solicitada. A chamada já enviada pode concluir; nenhuma nova chamada será iniciada.')
     return store.get(pid)
 
 

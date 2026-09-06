@@ -13,10 +13,10 @@ function Open-StudioWindow {
 }
 try {
     $studioHealth = Invoke-RestMethod "$studioUrl/api/config" -TimeoutSec 2
-    if ($studioHealth.version -eq '0.6.0') { Open-StudioWindow; exit 0 }
+    if ($studioHealth.version -eq '0.7.0') { Open-StudioWindow; exit 0 }
 } catch { }
-if ($studioHealth -and $studioHealth.version -ne '0.6.0') {
-    throw 'Há uma versão anterior aberta. Encerre o servidor antigo antes de iniciar a 0.6.0. Fechar apenas a aba não encerra o servidor.'
+if ($studioHealth -and $studioHealth.version -ne '0.7.0') {
+    throw 'Há uma versão anterior aberta. Encerre o servidor antigo antes de iniciar a 0.7.0. Fechar apenas a aba não encerra o servidor.'
 }
 if (-not (Test-Path -LiteralPath $studioPython)) {
     & python -m venv --system-site-packages (Join-Path $PSScriptRoot '.venv')
@@ -34,6 +34,6 @@ for ($studioAttempt=0; $studioAttempt -lt 30; $studioAttempt++) {
     Start-Sleep -Milliseconds 500
     if ($studioProcess.HasExited) { throw 'O servidor não iniciou. Consulte studio/data/server-06-error.log.' }
     try { $studioReady = Invoke-RestMethod "$studioUrl/api/config" -TimeoutSec 1 } catch { continue }
-    if ($studioReady.version -eq '0.6.0') { Open-StudioWindow; exit 0 }
+    if ($studioReady.version -eq '0.7.0') { Open-StudioWindow; exit 0 }
 }
 throw 'Servidor demorou para iniciar. Consulte studio/data/server-06-error.log.'
