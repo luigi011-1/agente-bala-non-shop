@@ -110,6 +110,9 @@ Bate com o que já estava registrado e eu não apliquei: Iha princípio 3 (loop 
 Antes de entregar qualquer roteiro, checar: **qual rota o último vídeo desta conta usou? Não repetir a rota nem as frases.** Frase que já foi ao ar uma vez está queimada pra aquela conta.
 
 ## Log de rotas usadas
+
+**2026-09-05, PREPARADO, sem publicação confirmada:** `producao/shelby_confissao/`, Shelby Turner, Ângulo 3. Acusação de manifestação → identificação por pensamento → confissão em 24 h → selo 222/like/save/follow → Stories → consequência por inação. Cinco hooks escolhidos: louro, cartas, acrílico, envelope, ampulheta. Sem rota de produto dos Ângulos 1/2. Stories e recuperação usam `shelby_confissao_story` e `shelby_confissao_dm`. Não marcar frases como já publicadas sem confirmação.
+
 | Data | Vídeo | Ângulo | Rota usada |
 |---|---|---|---|
 | 2026-08-18 | Kitty Queen / inchaço 40+ (Brandon) `producao/brandon_angle2/` | 2 | Rota "uma das três causas". Obstáculo: **o relógio hormonal que ela não consegue adivinhar** |

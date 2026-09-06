@@ -4,7 +4,7 @@ description: "Padrões extraídos de 19 copies VALIDADAS do nicho de alma gêmea
 metadata: 
   node_type: memory
   type: reference
-  modified: 2026-08-24T18:28:13.436Z
+  modified: 2026-09-05T02:39:04.801Z
   originSessionId: 35741d33-8b83-4947-a661-f71261849cf0
 ---
 
@@ -58,6 +58,26 @@ Como aparece no swipe (estrutura certa, vocabulário errado pra nós):
 ⚠️ **REGISTRO OBRIGATÓRIO: divino, nunca oculto.** Lei completa em [[angulo3-copy-auraly]]. Várias frases do swipe estão no registro errado pra nós ("shield", "seals the circle of protection", "breaks the interference", "after the spell", "the magician only responds to"). **O device se aproveita, o vocabulário não.**
 
 **Nunca pedir engajamento sem dar significado pra ele.** Mas o significado é sempre de **declaração, acordo e recebimento**, nunca de proteção contra o mal nem de ritual.
+
+### 🔒 A LEI DO SELO (Luigi, 2026-09-04). Isto ENDURECE o motor nº1, não substitui.
+
+Palavras dele: *"não pedimos pra pessoa somente curtir ou comentar no vídeo sem motivo, sempre deixamos
+claro o motivo astral para ela mesma desejar comentar, sem pedirmos muitos e sem enrolação demais."*
+
+1. **Significado é CONSEQUÊNCIA, não rótulo.** Não basta batizar a ação. A frase tem que dizer **o que
+   a ação provoca no que já está vindo pra ela**, pra ela querer fazer sozinha.
+   ❌ *"comment 222 to claim it"* · ✅ *"comment two two two, that's how this gets tied to your name"*
+   ❌ *"save this"* · ✅ *"like it and save it, and the blessing coming to you gets stronger"*
+2. ⚠️ **A consequência tem que ser congruente com o GESTO REAL, e este é o erro que já foi cometido.**
+   Eu escrevi *"comment 222, that's you claiming it out loud"* e o Luigi cortou: **comentar é escrever,
+   não falar.** Quem digita **amarra ao nome**, **deixa registrado**, **assina**. Nunca fala em voz alta.
+   Vale pra todas: curtir e salvar **guardam e fortalecem**, seguir **mantém aberto**, compartilhar
+   **espalha**. Verbo espiritual que contradiz o gesto físico quebra a suspensão de descrença na hora.
+3. **Poucos pedidos, uma linha cada, sem enrolação.** Lista longa lê como pedido de engajamento e mata
+   o efeito. Agrupar quando couber ("like it and save it") é melhor que enfileirar três frases.
+4. **A ordem continua: o selo antes do destino.** Ver [[angulo3-copy-auraly]], INVERSÃO DO FUNIL.
+
+Primeiro roteiro escrito sob esta lei: `producao/kris_confissao/`.
 
 | Registro do swipe (NÃO usar) | Registro do Ângulo 3 (usar) |
 |---|---|

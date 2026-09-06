@@ -271,8 +271,6 @@ O take mais fechado do vídeo. Ombros pra cima, a carta subindo perto da lente.
 
 ---
 
-# Prompts de vídeo (Veo 3.1 via Flow)
-
 ## K08 · T1 · GANCHO A7, A VELA DE DUAS MECHAS · GERAR DO ZERO · ÂNCORA MARK COLLINS + REF-CARTA
 
 > ### 📎 ANEXAR: **2 IMAGENS**
@@ -386,6 +384,8 @@ O take mais fechado do vídeo. Ombros pra cima, a carta subindo perto da lente.
 ```
 
 ---
+
+# Prompts de vídeo (Veo 3.1 via Flow)
 
 ## Bloco global
 

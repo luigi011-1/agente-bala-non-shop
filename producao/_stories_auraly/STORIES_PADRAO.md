@@ -11,25 +11,28 @@ de cada produção, e a DM continua vivendo em `producao/_dm_auraly/DM_PADRAO.md
 
 ---
 
-## A DECISÃO QUE ORGANIZA TUDO: O STORIES É UM DEGRAU, NÃO UM CANAL PARALELO
+## 🔄 A DECISÃO QUE ORGANIZA TUDO (reescrita em 2026-09-04): O STORIES É A SALA
 
-O conflito que precisava ser resolvido antes de escrever qualquer linha:
+> ♻️ **Arquitetura anterior, de 2026-09-01, REVOGADA:** ~~"o Stories é um DEGRAU, não um canal
+> paralelo. Degrau 1 vídeo, degrau 2 Stories entregando a prova e lacrando a imagem do rosto, degrau 3
+> DM + link entregando o rosto."~~ Ela existia pra resolver um conflito com a trava de que o rosto só
+> era revelado na DM. **Essa trava caiu**, então o conflito deixou de existir.
 
-> A trava dura do ângulo diz que **o rosto só é revelado na DM, depois do `222`**.
-> Se o Stories entrega o rosto, a trava cai e o `222` perde a razão de existir.
-> Se o Stories não entrega nada, ninguém abre e o canal não paga.
+**Decisão do Luigi em 2026-09-04:** *"vamos dar quase 100% de foco em fazer a pessoa clicar na minha
+foto de perfil e checar meus stories, pois a revelação vai estar lá e não na DM."*
 
-**A saída é a escada de reveal que o próprio funil da Auraly já roda**, e que a doutrina manda o vídeo
-imitar. O funil nunca entrega, ele **lacra mais perto**. Então:
+**O Stories deixou de ser o degrau do meio e virou o destino do vídeo.** O que segura a arquitetura de
+pé agora não é a escada de lacre, é **o selo**: as três ações (`222`, follow, save) ganham significado
+espiritual próprio e param de existir como mecanismo de entrega de DM.
 
 | Degrau | Onde | O que entrega | O que lacra |
 |---|---|---|---|
-| 1 | **Vídeo** | existe um rosto, e ele já foi escolhido | tudo o resto |
-| 2 | **Stories** | a prova de que ele existe: inicial, traço físico, timing | **a imagem do rosto** |
-| 3 | **DM + link** | o rosto | o pagamento |
+| 1 | **Vídeo** | existe um rosto, ele já foi escolhido, e **as três ações que selam o acordo** | **onde ele está** |
+| 2 | **Stories** | **a revelação**, nomeada, mais o **botão do link** | o pagamento |
+| 3 | **DM** | **recuperação** de quem selou e não abriu o Stories | idem |
 
-**Consequência prática:** o Stories não repete o vídeo e não substitui a DM. Ele é a **segunda parte do
-sinal**, que é exatamente a promessa que 4 das copies validadas já fazem com essas palavras.
+**Consequência prática:** o Stories não repete o vídeo e não é um extra. Ele é **onde o vídeo termina**.
+E a DM não some: ela continua disparando pelo `222` e vira a rede que pega quem não deu o tap.
 
 ### ⚠️ CORRIGIDO EM 2026-09-01: nomear o rosto é diferente de entregar o rosto
 
@@ -66,15 +69,16 @@ passa a pedir **as duas coisas que empurram alcance**, em vez de uma.
 
 ## ⚠️ A TRAVA QUE NÃO PODE SER PERDIDA: O COMENTÁRIO VEM PRIMEIRO
 
-**O CTA de Stories é ADITIVO. Ele nunca substitui o `222`.**
+**O SELO vem antes do DESTINO. As três ações primeiro, o Stories depois.**
 
-Se o Stories tomar o lugar do comentário, a automação de DM apaga e a operação perde o canal que já é
-dela, que é o único com entrega garantida. **A ordem é sempre comentário e depois Stories**, e ela tem
-três motivos:
+> ♻️ **A razão mudou em 2026-09-04, o gate não.** Redação anterior: ~~"o CTA de Stories é ADITIVO e
+> nunca substitui o `222`"~~. Ele deixou de ser aditivo e virou o destino, mas **continua vindo
+> depois**, e os três motivos abaixo continuam de pé, dois deles com mais força que antes.
 
 1. **O comentário custa 2 segundos e não tira ela do vídeo.** O tap na foto de perfil tira. Quem sai
-   primeiro pode nunca voltar pra comentar.
-2. **A DM persiste, o Stories evapora.** Garantir primeiro o canal que espera por ela.
+   primeiro pode nunca voltar pra comentar, e agora que o tap é o objetivo isso ficou **mais** provável.
+2. **A DM de recuperação só existe se ela comentar.** Sem `222` não há segunda chance pra quem não deu
+   o tap, e a operação fica com um canal só.
 3. **É o que as 15 copies validadas fazem.** O beat 8 do esqueleto universal é sempre
    *"one last thing"*, depois das ações. Nenhuma delas abre pelo Stories.
 
@@ -195,9 +199,13 @@ If you just came from the video, you are in the right place.
 This is the part I could not put out there. 🤍
 ```
 
-### Story 2 · O DEGRAU (a prova, com a imagem do rosto ainda lacrada)
-É o degrau 2 da escada. **Entrega traço, inicial ou timing. Nunca a imagem.**
+### Story 2 · A REVELAÇÃO (nomeada, com a imagem do rosto ainda lacrada)
+É onde o vídeo termina. **Entrega traço, inicial ou timing, e o botão. Nunca a imagem.**
 **O Story 2 tem que estar no MESMO MODO do CTA do vídeo**, senão ela chega e não reconhece o lugar.
+
+> ♻️ **2026-09-04:** este era o "degrau 2" e virou **o destino**. O conteúdo da tela não muda muito,
+> mas o peso sim: **o botão do link tem que estar NESTA tela**, não só na seguinte. Quem veio pelo
+> tap veio pra isto, e cada tela a mais entre ela e o botão é chance de sair.
 
 **Se o CTA foi CURIOSIDADE:**
 ```

@@ -5,6 +5,28 @@ Este arquivo é o mestre. O `DM.md` de cada produção deriva daqui.
 
 ---
 
+## 🔄 2026-09-04: A DM VIROU CANAL DE RECUPERAÇÃO
+
+**A INVERSÃO DO FUNIL mudou o papel desta mensagem, não o texto dela.** O vídeo passou a mandar a
+pessoa pro **Stories**, que é onde a revelação está. Então a DM deixou de ser a entrega prometida e
+virou **a rede que pega quem selou o `222` e não deu o tap na foto de perfil**.
+
+**O que isso muda na prática, e é pouco:**
+- **Os 4 beats continuam válidos**, e as 10 variações também. Elas nunca disseram "o rosto está nesta
+  mensagem", elas sempre entregaram **pelo link**, e o link é o mesmo dos dois lados.
+- **O beat 1 confirma o SELO**, não a janela da DM. "Your 222 opened a window" continua perfeito,
+  porque é exatamente isso que o vídeo agora chama de reivindicar em voz alta.
+- **Beat novo e opcional, entre o 1 e o 2: a PONTE PRO STORIES.** Uma linha só, pra quem ainda não
+  abriu: *"If you have not opened my stories yet, that is where it is waiting."* Ela custa nada e
+  fecha o circuito nos dois sentidos.
+- ⚠️ **Nunca fazer a DM prometer uma coisa que o vídeo prometeu em outro lugar.** Se o vídeo disse
+  que a revelação está no Stories, a DM não pode dizer que está na DM. É o casamento take a take do
+  `feedback-cta-produto`, e ele continua valendo com o destino novo.
+
+Ver `producao/_stories_auraly/STORIES_PADRAO.md` e a memória `angulo3-copy-auraly`.
+
+---
+
 ## A ESTRUTURA (4 beats, não mudar)
 
 | # | Beat | Função | Original |
@@ -43,7 +65,13 @@ Regra de uso: **nunca mandar a mesma variação duas vezes seguidas.** Girar em 
 > ⚠️ **Os links destas dez trazem `rt_ad` do Blake, que foi aposentado em 2026-08-25.**
 > Ao usar qualquer uma delas hoje, **trocar o `rt_ad` pelo prefixo da avatar que está rodando**
 > (`kendra_*` ou `cody_*`). O texto continua válido, o rastreio não.
-> Derivadas de vídeo específico: **V11** em `producao/kendra_selos/DM.md`, **V12** em `producao/cody_selos/DM.md`, **V13** em `producao/trevor_a3_confissao/DM.md`, **V14** em `producao/karen_a3_confissao/DM.md`, **V15** em `producao/mark_a3_confissao/DM.md`.
+> Derivadas de vídeo específico: **V11** em `producao/kendra_selos/DM.md`, **V12** em `producao/cody_selos/DM.md`, **V13** em `producao/trevor_a3_confissao/DM.md`, **V14** em `producao/karen_a3_confissao/DM.md`, **V15** em `producao/mark_a3_confissao/DM.md`, **V16** em `producao/casey_1111/DM.md`.
+
+> 🔴 **ATENÇÃO, 2026-09-03: quatro avatares foram aposentados.** Kendra Collins, Cody Miller,
+> Holistic Trevor (A3) e Karen Thompson (A3) saíram do roster. **Os `rt_ad` delas não entram em
+> disparo novo**, só servem para ler histórico no RedTrack. O roster vigente é **Shelby Turner,
+> Casey Harrisson, Kris Walker, Robin Matthews e Mark Collins**, e das cinco **só a Mark e a Casey
+> têm pacote com DM pronta**. Ver `avatares_fichas.md`.
 
 ### V01 (a original, baseline)
 ```
@@ -194,8 +222,17 @@ Combina uma variação de texto com uma de URL. **Bônus real:** cada `rt_ad` di
 no RedTrack, então você passa a saber qual variação de DM converte melhor, coisa que hoje não dá pra medir.
 
 ### 🔬 RASTREIO SEPARADO POR AVATAR (obrigatório)
-**Atualizado em 2026-08-26:** o roster vigente é **Kendra + Cody**, o Blake foi aposentado em 2026-08-25.
+**Atualizado em 2026-09-03:** o roster vigente é **Shelby Turner, Casey Harrisson, Kris Walker,
+Robin Matthews e Mark Collins**. Kendra, Cody, Holistic Trevor (A3), Karen Thompson (A3) e Blake
+estão **aposentados**, e os prefixos deles ficam abaixo só para leitura de histórico.
 Cada avatar novo entra aqui com o próprio prefixo antes de rodar, nunca depois.
+
+**Prefixos das cinco ativas:**
+- **Casey Harrisson (conta `casey.harrisson_us`), entrou em 2026-09-03:** `casey_a3_1111` · `casey_a3_222` · `casey_a3_reveal` · `casey_a3_followup` · `casey_a3_dm` · `casey_a3_soulmate`
+- **Shelby Turner (conta `ShelbyTurner.us`):** `shelby_a3_dm` · `shelby_a3_222` · `shelby_a3_reveal` · `shelby_a3_soulmate` · `shelby_a3_followup`
+- **Kris Walker (conta `Kris.Walker_us`):** `kris_a3_dm` · `kris_a3_222` · `kris_a3_reveal` · `kris_a3_soulmate` · `kris_a3_followup`
+- **Robin Matthews (conta `Robin.Matthewsus`):** `robin_a3_dm` · `robin_a3_222` · `robin_a3_reveal` · `robin_a3_soulmate` · `robin_a3_followup`
+- **Mark Collins:** os `mark_a3_*` que já estão na tabela abaixo
 
 Os avatares rodam **o mesmo esqueleto** em contas diferentes. **O `rt_ad` TEM que carregar o prefixo do avatar**, senão o RedTrack junta os dois e some a leitura de qual converte melhor com a mesma mensagem. É o experimento mais limpo da operação: mesma copy, única variável é quem fala.
 

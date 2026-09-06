@@ -10,6 +10,11 @@ metadata:
 
 # Biblioteca de Vídeos Já Produzidos (casos reais)
 
+## Pacote preparado em 2026-09-05: Shelby, confissão
+
+`producao/shelby_confissao/` · Ângulo 3 · modelo `ctv MARK COLLINS - 29.08-3.mp4`, 29,001 s. Roteiro e hooks aprovados. Cinco T1: louro em caminho aberto, cartas varridas, acrílico leitoso, envelope, ampulheta. Sete keyframes de cena, uma referência auxiliar e dez prompts de clipe; T2–T6 compartilhados. Destino Stories, DM de recuperação. Status: pacote de prompts concluído, mídia não gerada e publicação não confirmada. Reutiliza o esqueleto de confissão já registrado para Mark/Kris; não tratar como estrutura nova.
+
+
 Memória dos vídeos já clonados. Serve de referência de estrutura e "receituário" de esqueletos que funcionam.
 
 > 🔢 **O número é ordem de REGISTRO, nunca ordem cronológica.** Cada entrada carrega a data real.

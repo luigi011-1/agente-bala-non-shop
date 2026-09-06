@@ -1,11 +1,11 @@
 ---
 name: avatares-fichas
-description: "Fichas canônicas fixas dos avatares de IA — Melody Carter (homem, garagem, cruz prata), holistic.brandon (mulher, box, cruz OURO), holistic.trevor (homem, cozinha, SEM cruz), FICHAS CANONICAS do Angulo 3: Kendra Collins (buzzcut platinado), Cody Miller (60 anos, grisalha), Mark Collins (MULHER, fim dos trinta, ondas loiras, aneis de prata), Holistic Trevor A3 (MULHER, nao confundir com o holistic.trevor HOMEM do Angulo 1) e Karen Thompson A3 (nao confundir com a Karen da Jupi), mais Blake Epeterson aposentado. DUAS COLISOES DE NOME ativas. Kendra Collins (buzzcut platinado, oculos pretos, camisa de linho, cruz de PRATA, quarto com quadros de astrologia) e Jupi Hydration. Traços exatos pros prompts."
+description: "Fichas canônicas fixas dos avatares de IA — Melody Carter (homem, garagem, cruz prata), holistic.brandon (mulher, box, cruz OURO), holistic.trevor (homem, cozinha, SEM cruz). ANGULO 3, as CINCO confirmadas por imagem em 2026-09-03: Shelby Turner (tatuagem de lua no pulso, senta no chao com caixote), Casey Harrisson (21 anos, money piece loiro, acne, bau e pisca-pisca), Kris Walker (24, box braids com mechas mel, quarto de DIA), Robin Matthews (72 anos, bob prateado, cozinha de carvalho) e Mark Collins (MULHER, fim dos trinta, ondas loiras, aneis de prata). APOSENTADAS em 2026-09-03 por decisao explicita, fichas mantidas so como historico: Kendra Collins, Cody Miller, Holistic Trevor A3 (MULHER) e Karen Thompson A3, mais o Blake Epeterson. O baralho da MESA e traco de avatar (Casey e Shelby holograficas, Kris, Robin e Mark classicas), e a REF-CARTA segue holografica em todas. DUAS COLISOES DE NOME ativas: Trevor A3 mulher contra holistic.trevor homem, e Karen A3 contra a Karen da Jupi. Traços exatos pros prompts."
 metadata: 
   node_type: memory
   type: reference
   originSessionId: 246ef273-2f24-4b5d-8e5e-51929be93030
-  modified: 2026-08-27T18:41:21.877Z
+  modified: 2026-09-03T20:25:50.375Z
 ---
 
 # Fichas Canônicas dos Avatares
@@ -76,6 +76,11 @@ Citar este caminho em todo `PROMPTS_PRODUCAO.md` do Ângulo 3, do mesmo jeito qu
 É a imagem a anexar em praticamente toda geração do ângulo.
 
 ## Cody Miller — FICHA CANÔNICA (ÂNGULO 3)
+
+> 🔴 **APOSENTADA EM 2026-09-03.** Fora do roster do Ângulo 3 por decisão explícita do Luigi.
+> Ficha mantida só como referência histórica. **Não usar em produção nova.** A âncora dela foi
+> apagada de `producao/_ancoras/`, então retomar exigiria regerar do zero. Ver o roster no fim.
+
 Fixada em 2026-08-25. **A fonte de verdade é a IMAGEM-ÂNCORA aprovada pelo Luigi nessa data.**
 **Entrou no lugar do Blake Epeterson.**
 
@@ -118,6 +123,11 @@ Enquadramento sentada à mesa, plano médio, cara de UGC de celular.
 | Comum às duas | **prata no pescoço**, cruz na parede, bandeira US sutil, mesa de madeira clara | |
 
 ## Kendra Collins — FICHA CANÔNICA (ÂNGULO 3)
+
+> 🔴 **APOSENTADA EM 2026-09-03.** Fora do roster do Ângulo 3 por decisão explícita do Luigi.
+> Ficha mantida só como referência histórica. **Não usar em produção nova.** A âncora dela foi
+> apagada de `producao/_ancoras/`, então retomar exigiria regerar do zero. Ver o roster no fim.
+
 Fixada em 2026-08-25. **A fonte de verdade é a IMAGEM-ÂNCORA aprovada pelo Luigi nessa data.**
 Avatar do Ângulo 3 ao lado da Cody Miller. O Blake Epeterson foi aposentado em 2026-08-25, ver [[angulo3-copy-auraly]].
 
@@ -197,9 +207,10 @@ Anexar em praticamente toda geração dela, exatamente como a Kendra e a Cody fa
 ### Cenário canônico (sala de leitura em casa)
 - **Mesa de madeira clara** de tampo gasto e arranhado, tom mel, ocupando o **terço inferior** do quadro,
   mais perto da lente que o rosto. As mãos dela ficam apoiadas nela, palma para baixo.
-- **Leque largo de cartas de tarô viradas para cima**, do **mesmo baralho holográfico** da carta herói:
-  borda metálica espelhada com reflexo de arco-íris e arte ilustrada saturada (2026-08-29, revoga o
-  baralho de céu azul claro e borda branca que valia antes).
+- **Leque largo de cartas de tarô viradas para cima**, de **arte CLÁSSICA de borda branca e céu azul**.
+  ⚠️ **Corrigido em 2026-09-03.** Esta linha dizia "mesmo baralho holográfico da carta herói" e
+  **contradizia a própria seção "o que a âncora mudou" logo abaixo**, que sempre registrou borda branca.
+  A imagem-âncora foi conferida de novo em 2026-09-03 e o baralho dela é **clássico**. A âncora manda.
 - **Pedra de quartzo transparente bruta** sobre a mesa, no canto direito da frente.
 - Parede off-white e **teto inclinado**.
 - **Janela na borda esquerda**, moldura branca, com um aparelho de ar-condicionado de janela no alto.
@@ -234,6 +245,11 @@ Enquadramento sentada à mesa com as mãos sobre as cartas, plano médio, cara d
 | Comum às três | **prata no pescoço**, cruz na parede, bandeira US sutil, mesa de madeira clara | | |
 
 ## Holistic Trevor (ÂNGULO 3), FICHA CANÔNICA
+
+> 🔴 **APOSENTADA EM 2026-09-03.** Fora do roster do Ângulo 3 por decisão explícita do Luigi.
+> Ficha mantida só como referência histórica. **Não usar em produção nova.** A âncora dela foi
+> apagada de `producao/_ancoras/`, então retomar exigiria regerar do zero. Ver o roster no fim.
+
 Fixada em 2026-08-29. **A fonte de verdade é a IMAGEM-ÂNCORA aprovada pelo Luigi nessa data.**
 Modelada a partir de 5 vídeos de uma conta do nicho, com traços deslocados de propósito.
 
@@ -310,6 +326,11 @@ palco. Autoridade por vivência e por leitura, nunca por credencial.
 Enquadramento sentada à mesa com o leque na mão, plano médio, cara de UGC de celular.
 
 ## Karen Thompson (ÂNGULO 3), FICHA CANÔNICA
+
+> 🔴 **APOSENTADA EM 2026-09-03.** Fora do roster do Ângulo 3 por decisão explícita do Luigi.
+> Ficha mantida só como referência histórica. **Não usar em produção nova.** A âncora dela foi
+> apagada de `producao/_ancoras/`, então retomar exigiria regerar do zero. Ver o roster no fim.
+
 Fixada em 2026-08-29. **A fonte de verdade é a IMAGEM-ÂNCORA aprovada pelo Luigi nessa data.**
 
 ### 🔴 DUAS ARMADILHAS, LER ANTES DE ESCREVER PROMPT
@@ -353,6 +374,184 @@ Feminina, quarenta e poucos, calma, contida e direta. **Cartomante que lê em ca
 Autoridade por leitura, nunca por credencial. Enquadramento sentada à mesa com o leque na mesa,
 mãos entrelaçadas, plano médio, cara de UGC de celular.
 
+## Shelby Turner — FICHA CANÔNICA (ÂNGULO 3)
+Fixada em 2026-09-03. **Conferida contra a imagem-âncora aprovada pelo Luigi nessa data**, não contra o
+prompt que a gerou. Modelada de um print de conta do nicho, com traços deslocados de propósito.
+
+### 📎 CAMINHO DA ÂNCORA
+`producao/_ancoras/ShelbyTurner.us .jpeg` (salva pelo Luigi em 2026-09-03).
+**Atenção ao espaço antes da extensão**, o nome do arquivo é esse mesmo.
+**Handle da conta: `ShelbyTurner.us`.** Ver a nota de nomes no fim do roster.
+
+### Traços físicos
+- Mulher branca americana, **meados dos vinte**, magra.
+- **Cabelo loiro-mel ondulado na altura do ombro, risca ao meio, SEM franja**, textura natural de praia.
+- Pele clara levemente bronzeada com **sardas no nariz e MARCAS REAIS DE ACNE nas bochechas e no queixo**,
+  poros visíveis. **ZERO maquiagem.**
+- Olhos verde-avelã, sobrancelhas mais escuras que o cabelo, olhar direto e calmo.
+- **TATUAGEM FINA DE LUA CRESCENTE no lado interno do pulso esquerdo.** É o marcador exclusivo dela,
+  ninguém mais no roster tem tatuagem. Escrever em todo keyframe que mostre os braços.
+
+### Roupa e acessórios
+- **Blusa canelada creme de manga longa**, calça preta.
+- **Corrente fina de PRATA com pingente pequeno de cruz de prata.**
+- Sem anéis, sem brincos grandes. A sobriedade de acessório é o que a separa da Mark Collins.
+
+### Cenário canônico (canto de leitura, sentada no CHÃO)
+- **Sentada no chão sobre tapete persa de tons vermelhos**, com um **caixote de madeira ripado** na
+  frente fazendo as vezes de mesa, ocupando o terço inferior do quadro.
+- No caixote: **duas pontas de quartzo transparente**, **baralho HOLOGRÁFICO empilhado com a carta
+  THE LOVERS virada para cima**, **quartzo rosa bruto**, **incensário de madeira tipo barquinha com
+  vareta**, **vela pilar branca**, **pote de vidro com sal rosa e folhas de louro**, e **bandeira dos EUA
+  pequena em suporte preto**.
+- Parede: **quadro emoldurado da roda zodiacal, azul-noite com traço branco** à esquerda,
+  **crucifixo de madeira** à direita.
+- **Prateleiras flutuantes de madeira com livros e uma estante alta de livros à direita.**
+- Janela à esquerda, luz natural neutra e difusa.
+
+### O que a âncora mudou em relação ao prompt
+- Entraram **prateleiras e estante com livros**, que o prompt não pediu. Ficam, porque dão o ar de casa
+  de verdade, mas viram traço dela e **não podem ser repetidos em outra avatar**.
+- Há **cartas soltas no chão sob o caixote**. Fica.
+- O banheiro com o pote de sal **não é o cenário canônico**, é setup de gancho, gerado por `EDITAR do K__`.
+
+### Registro
+Feminina, meados dos vinte, íntima, fala baixo como quem conta um segredo. **Cartomante de apartamento**,
+a única do roster que lê sentada no chão. Autoridade por leitura, nunca por credencial.
+
+## Casey Harrisson — FICHA CANÔNICA (ÂNGULO 3)
+Fixada em 2026-09-03. **Conferida contra a imagem-âncora aprovada pelo Luigi nessa data.**
+Entrou para tapar a lacuna de **geração Z abaixo de 22**, que nenhuma outra cobria.
+
+### 📎 CAMINHO DA ÂNCORA
+`producao/_ancoras/casey.harrisson_us .jpeg` (salva pelo Luigi em 2026-09-03).
+**Atenção ao espaço antes da extensão**, o nome do arquivo é esse mesmo.
+**Handle da conta: `casey.harrisson_us`.** Ver a nota de nomes no fim do roster.
+
+### Traços físicos
+- Mulher americana de traços latinos, **21 anos**, magra. É a mais nova do roster.
+- Pele **oliva clara** com **acne ativa nas bochechas e no queixo mais marcas reais de acne**, poros
+  visíveis. **ZERO maquiagem.** A pele com acne é ativo, não defeito: é o que faz ela ler como a garota
+  de verdade e não como criadora. `no de-aging`, `no skin smoothing`, `no makeup` obrigatórios no negative.
+- **Cabelo liso castanho escuro, longo, risca ao meio, com DUAS MECHAS LOIRAS DESCOLORIDAS enquadrando
+  o rosto** (money piece). É o marcador dela.
+- Rosto de coração, queixo estreito, lábios cheios, sobrancelhas grossas escuras, olhos castanho escuros.
+
+### Roupa e acessórios
+- **Moletom CROPPED cinza mescla** de gola careca, calça preta.
+- **Argolas pequenas de prata** e **corrente fina de PRATA com pingente pequeno de cruz de prata**.
+
+### Cenário canônico (quarto de quem mora com a família)
+- **Sentada no chão aos pés da cama**, com um **baú de madeira escura** na frente fazendo as vezes de
+  mesa, no terço inferior do quadro.
+- No baú: **leque de cartas HOLOGRÁFICAS com THE LOVERS virada para cima**, **quartzo rosa bruto**,
+  **geodo de celestita azul**, **prato de terracota com vareta de incenso e fumaça visível**,
+  **vela branca acesa em pote de vidro**.
+- Parede: **bandeira dos EUA esticada** à esquerda, **mapa de constelação emoldurado, disco de estrelas
+  branco sobre preto** no centro, **crucifixo de madeira** à direita.
+- **Pisca-pisca de luz BRANCA FRIA pendurado em festão** acompanhando o topo da parede. É dela sozinha.
+- **Cama desarrumada atrás**, interruptor de luz na parede.
+
+### ✅ A cama desarrumada e o pisca-pisca ficam
+Mesma lógica já aprovada na Holistic Trevor A3: lê como *"abriu a câmera e começou a gravar"*, que é o
+padrão de UGC real. **Nunca listar a bagunça item a item no prompt**, escrever *"the same lived-in
+bedroom as the reference image, unchanged"* mais as três âncoras que importam: bandeira, mapa e crucifixo.
+⚠️ O pisca-pisca é **branco frio** e ilumina **só a parede**. O rosto é lavado por luz branca neutra.
+Pisca-pisca quente joga cast amarelo na pele e denuncia IA na hora.
+
+### Registro
+Feminina, 21, rápida, urgente, sem cerimônia, como quem fala antes de perder a coragem.
+Nunca autoridade por décadas, essa é da Robin. A dela é **autoridade por intensidade**.
+
+## Kris Walker — FICHA CANÔNICA (ÂNGULO 3)
+Fixada em 2026-09-03. **Conferida contra a imagem-âncora aprovada pelo Luigi nessa data.**
+Modelada de um print de conta do nicho, com traços deslocados de propósito.
+
+### 📎 CAMINHO DA ÂNCORA
+`producao/_ancoras/Kris.Walker_us .jpeg` (salva pelo Luigi em 2026-09-03).
+**Atenção ao espaço antes da extensão**, o nome do arquivo é esse mesmo.
+**Handle da conta: `Kris.Walker_us`.** Ver a nota de nomes no fim do roster.
+
+### ☀️ KRIS É DE DIA (decisão fechada do Luigi, 2026-09-03)
+O Luigi tinha pedido, mais cedo no mesmo dia, que ela mantivesse o **LED magenta** do print de
+referência. A âncora saiu **de dia**, com luz de janela e sem LED, e ele confirmou: **fica de dia.**
+Não é acidente de geração, é decisão. **Kris é de DIA, e ponto.**
+Se um dia voltar atrás, o caminho é **regenerar a âncora**, nunca acrescentar o LED só no keyframe,
+senão a identidade deriva entre takes.
+
+### Traços físicos
+- Mulher negra americana, **24 anos**.
+- Pele **marrom profunda** com poros visíveis, brilho natural na testa e nas maçãs, e **sinais escuros
+  pequenos na testa, na bochecha e acima do lábio**. **ZERO maquiagem.**
+- **Box braids na altura do peito, castanho escuro com mechas MEL**, risca ao meio, presas para trás.
+- Olhos castanho escuros, lábios cheios, sobrancelhas naturais.
+- **Unhas curtas e naturais, sem esmalte e sem alongamento.**
+
+### Roupa e acessórios
+- **Camiseta canelada MARROM de manga curta**, calça preta.
+- **Argolas pequenas de prata** e **corrente fina de PRATA com pingente de cruz de prata**.
+
+### Cenário canônico (quarto de dia)
+- **Mesa de madeira clara** ocupando o terço inferior.
+- Na mesa: **TRÊS cartas viradas para cima em fila** (um casal, o sol, uma rosa), **chunk de fluorita
+  verde**, **torre de selenita branca**, **prato de cerâmica com vareta de incenso alta e fumaça
+  visível**, **três velas rechaud** à direita.
+- Parede: **bandeira dos EUA GRANDE esticada** à esquerda, **crucifixo de madeira** ao centro,
+  **quadro do sol e da lua** e **quadro da roda de carta natal** à direita.
+- **Janela à esquerda** com luz natural neutra, **cama de colcha floral** atrás, **cômoda de madeira à
+  direita com jiboia em vaso de terracota** caindo.
+
+### 🃏 O baralho dela é CLÁSSICO de borda branca
+Decidido em 2026-09-03: o baralho da mesa é **traço de avatar**, e o dela é clássico. A **REF-CARTA que
+ela segura continua holográfica**. Ver a nota de baralho no fim do roster.
+
+### Registro
+Feminina, 24, calma e direta, tom de quem repete algo que já sabe ser verdade.
+
+## Robin Matthews — FICHA CANÔNICA (ÂNGULO 3)
+Fixada em 2026-09-03. **Conferida contra a imagem-âncora aprovada pelo Luigi nessa data.**
+Entrou para tapar a lacuna de **idade vivida acima de 65**, que só a Cody chegava perto de cobrir.
+
+### 📎 CAMINHO DA ÂNCORA
+`producao/_ancoras/Robin.Matthewsus .jpeg` (salva pelo Luigi em 2026-09-03).
+**Atenção ao espaço antes da extensão**, o nome do arquivo é esse mesmo, e **o `Matthewsus` não tem
+ponto nem underline antes do `us`**, diferente das outras três. Copiar exatamente assim.
+**Handle da conta: `Robin.Matthewsus`.** Ver a nota de nomes no fim do roster.
+
+### Traços físicos
+- Mulher branca americana, **por volta dos setenta e dois**, porte pequeno. É a mais velha do roster.
+- **Bob branco-prateado logo abaixo da orelha, risca de lado**, liso.
+- Pele clara e castigada com **muitas manchas de idade na testa, nas maçãs e nas costas das mãos**,
+  linhas profundas na testa e ao redor da boca, pés de galinha, papada suave. **ZERO maquiagem.**
+- **Óculos de leitura de aro dourado fino, apoiados baixos no nariz.** Olhos claros.
+- **A idade é o ativo dela, é a razão de ela existir no roster.** `no de-aging`, `no skin smoothing`,
+  `no makeup` obrigatórios no negative. Nunca rejuvenescer, nunca alisar, nunca tirar as manchas.
+
+### Roupa e acessórios
+- **Cardigã cinza mescla** sobre **blusa branca de gola aberta**.
+- **Corrente fina de PRATA com pingente pequeno de cruz de prata.**
+- **Aliança de ouro lisa** na mão esquerda. É a única do roster com aliança de ouro.
+
+### Cenário canônico (cozinha de casa)
+- **Cozinha americana de armários de CARVALHO**, duas janelas, pia à direita. A cozinha é dela sozinha
+  neste ângulo.
+- **Mesa de madeira** ocupando o terço inferior, ela sentada com os antebraços apoiados.
+- Na mesa: **baralho em CAVALETE DE MADEIRA com a carta de cima virada para cima**, **esfera de quartzo
+  rosa em suporte**, **drusa de citrino**, **queimador de latão com tampa vazada e fumaça saindo**,
+  **duas velas finas brancas em castiçais de latão** à direita.
+- Parede: **quadro emoldurado LUNAR CALENDAR** à esquerda, **crucifixo de madeira**, **bandeira dos EUA
+  pequena em suporte preto no peitoril da janela esquerda**, relógio de parede no alto à direita.
+- Luz natural neutra das duas janelas.
+
+### 🃏 O baralho dela é CLÁSSICO de borda branca
+Igual à Kris e à Mark. A **REF-CARTA que ela segura continua holográfica**.
+Ver a nota de baralho no fim do roster.
+
+### Registro
+Feminina, setenta e dois, calorosa e sem rodeio, tom de quem já disse isso cem vezes e ainda acredita.
+**Autoridade por décadas de leitura**, que é exatamente o que a [[congruencia-matriz]] exige quando o
+claim precisa de idade vivida. É a única do roster que pode dizer "faz quarenta anos que eu leio carta".
+
 ## ⚠ TREVOR A3 x KAREN A3: as duas quase colidem, e o que separa
 As duas âncoras saíram com **blusa boho creme de barra laranja e azul quase idêntica** e com a **mesma
 gramática de parede** (tapeçaria, crucifixo, bandeira). Se rodarem em paralelo, parecem a mesma conta.
@@ -387,15 +586,101 @@ suficiente para a lei do registro.
 acrescentar a cruz só no keyframe, senão a identidade deriva entre takes.
 A regra do pingente segue valendo integralmente para Kendra, Cody e Mark.
 
-## Roster do ÂNGULO 3 (regras que valem pras duas)
-**Kendra Collins, Cody Miller, Mark Collins, Holistic Trevor (A3) e Karen Thompson (A3).**
-> Decisão do Luigi em 2026-08-29: **Mark, Trevor A3 e Karen A3 rodam SÓ no Ângulo 3 (Auraly)**, em nenhum outro produto. Sidney Carl, Parker Mitchell, Rowan Davis e Justin Harper seguem **descartados**.
+## Roster do ÂNGULO 3
+
+### ✅ CINCO CONFIRMADAS POR IMAGEM EM 2026-09-03
+O Luigi mandou as cinco âncoras e disse: **"essas são as minhas atuais avatares para esse ângulo."**
+**Shelby Turner · Casey Harrisson · Kris Walker · Robin Matthews · Mark Collins.**
+Fichas conferidas contra a imagem, uma a uma, acima.
+
+### 🔴 QUATRO APOSENTADAS EM 2026-09-03 (decisão explícita do Luigi)
+**Kendra Collins, Cody Miller, Holistic Trevor (A3) e Karen Thompson (A3) saíram de circulação.**
+Perguntei se tinham sido aposentadas ou se só não estavam nas fotos, e ele respondeu **"aposentadas,
+roster é só as cinco"**. As fichas delas seguem abaixo como **referência histórica**, nunca como roster.
+
+**Não usar nenhuma das quatro em produção nova.** Se um roteiro pedir uma delas, parar e perguntar.
+
+⚠️ **Pacotes órfãos em disco, decisão pendente igual à do Blake:**
+`producao/cody_1111/` (só GANCHOS e ROTEIRO, sem prompts), `kendra_selos/`, `kendra_33min/`,
+`kendra_inicial/`, `kendra_veu/`, `trevor_a3_confissao/`, `karen_a3_confissao/`.
+As saídas são as mesmas de sempre: **migrar a copy para uma das cinco ativas** (passando pelo ajuste de
+congruência, que idade e registro mudam o que soa crível), ou **arquivar**. Nunca deixar rodar como está.
+
+> Lição que fica: o Blake ficou meses em limbo porque a aposentadoria dele não veio com decisão sobre os
+> pacotes. Aposentar avatar sem decidir o destino dos pacotes é só adiar o trabalho.
+
+### 📛 O NOME CANÔNICO É O HANDLE DA CONTA (decisão do Luigi, 2026-09-03)
+As âncoras foram salvas com nome de handle, e o Luigi decidiu que **o handle manda**. As fichas foram
+renomeadas. Isso vale fora do disco: o nome aparece na **DM** e o handle aparece no **CTA de Stories**
+("tap my profile picture"), então ficha e conta divergindo seria confusão garantida.
+
+| Nome canônico | Arquivo da âncora, e handle | Nome que eu tinha proposto, hoje só apelido |
+|---|---|---|
+| **Shelby Turner** | `ShelbyTurner.us .jpeg` | Brooke Callahan |
+| **Casey Harrisson** | `casey.harrisson_us .jpeg` | Camila Ortiz |
+| **Kris Walker** | `Kris.Walker_us .jpeg` | Nia Bassett |
+| **Robin Matthews** | `Robin.Matthewsus .jpeg` | Loretta Hale |
+| **Mark Collins** | `MARK COLLINS .jpeg` | inalterada desde 2026-08-29 |
+
+**Os cinco arquivos têm ESPAÇO antes da extensão.** Copiar o caminho, nunca digitar de memória.
+E o `Robin.Matthewsus` **não tem ponto nem underline antes do `us`**, diferente dos outros três.
+
+### 🔴 AS CINCO SÃO MULHERES, E QUATRO DOS NOMES SÃO AMBÍGUOS
+**Shelby, Casey, Kris, Robin e Mark são todos nomes que podem ser de homem em inglês.** Com a renomeação
+por handle, **o roster inteiro do Ângulo 3 virou nome ambíguo**, e a armadilha que existia só na Mark
+Collins passou a valer para as cinco.
+
+**Obrigatório em toda geração:**
+- `identity_main` sempre começa com **`The EXACT woman / female...`**, nunca só o nome.
+- Roteiro só-fala sempre marca **"VOZ FEMININA, <nome>, mulher"**.
+- Quando houver **2ª pessoa em cena**, escrever o gênero das duas pessoas explicitamente. É aí que a IA
+  troca, e foi assim que o problema apareceu na Melody Carter (homem de nome feminino) e na Mark.
+
+Isso não é preciosismo: já aconteceu neste projeto, e o custo aparece depois da imagem gerada.
+
+### Tabela de separação das cinco confirmadas
+Vira **obrigação de prompt**: em todo keyframe, escrever o traço diferenciador da avatar.
+
+| | Idade | Marca do rosto | Cabelo | Onde senta | Cartas |
+|---|---|---|---|---|---|
+| **Casey Harrisson** | 21 | acne ativa | liso escuro, **money piece loiro** | **chão, baú** | leque, **holográfico** |
+| **Kris Walker** | 24 | sinais escuros no rosto | **box braids com mechas mel** | mesa de quarto | **três em fila**, clássico |
+| **Shelby Turner** | meados dos 20 | **tatuagem de lua no pulso** | loiro-mel ondulado, sem franja | **chão, caixote** | empilhado, **holográfico** |
+| **Mark Collins** | fim dos 30 | **sardas, pele de sol** | loiro ondulado, franja cortina | mesa de leitura | leque sob as mãos, clássico |
+| **Robin Matthews** | 72 | **manchas de idade, óculos** | **bob branco-prateado** | mesa de **cozinha** | **cavalete**, clássico |
+
+Cozinha: só a Robin. Sentar no chão: só a Casey e a Shelby, e elas separam por baú contra caixote,
+por idade e por cabelo. Tatuagem: só a Shelby. Óculos e aliança de ouro: só a Robin.
+
+### 🃏 O BARALHO DA MESA É TRAÇO DE AVATAR (decisão do Luigi, 2026-09-03)
+Das cinco âncoras, duas saíram com baralho **HOLOGRÁFICO** e três com **CLÁSSICO de borda branca**.
+O Luigi decidiu **manter cada uma com o seu**, em vez de regenerar as três.
+
+| Avatar | Baralho da MESA |
+|---|---|
+| Casey Harrisson | **holográfico**, borda metálica com reflexo de arco-íris |
+| Shelby Turner | **holográfico**, borda metálica com reflexo de arco-íris |
+| Kris Walker | **clássico**, borda branca e arte de céu azul |
+| Robin Matthews | **clássico**, borda branca e arte de céu azul |
+| Mark Collins | **clássico**, borda branca e arte de céu azul |
+
+**Ganho:** vira mais um eixo de separação entre as contas, e não custa regeneração nenhuma.
+
+**⚠️ A REF-CARTA SEGUE HOLOGRÁFICA EM TODAS.** A espec de 2026-08-29 em [[angulo3-copy-auraly]] não
+mudou: a carta SOULMATE do herói é holográfica sempre, em todo avatar.
+
+**A consequência que isso cria, e é visível em quadro:** na Kris, na Robin e na Mark, a **carta que ela
+segura tem arte diferente do baralho que está na mesa dela**. Isso é aceito de propósito, e a leitura é
+que ela puxou uma carta especial, não uma do maço de todo dia. **Nunca escrever no prompt que a carta
+saiu daquele baralho**, e nunca mostrar a carta herói sendo tirada do maço da mesa, senão a diferença de
+arte vira erro de continuidade em vez de detalhe.
 
 **Histórico das edições, na ordem:**
 - **2026-08-24:** o Luigi reduziu o roster a **Blake Epeterson, e mais ninguem**.
 - **2026-08-25:** a **Kendra Collins voltou** com ancora propria. Passou a rodar com dois.
 - **2026-08-25, mesma data, regra EDITADA de novo:** a **Cody Miller entrou NO LUGAR do Blake Epeterson**.
-- **2026-08-29, regra EDITADA de novo:** entraram **Mark Collins, Holistic Trevor (A3) e Karen Thompson (A3)**, sem substituir ninguém. O roster atual é **Kendra + Cody + Mark + Trevor A3 + Karen A3**, cinco avatares.
+- **2026-08-29, regra EDITADA de novo:** entraram **Mark Collins, Holistic Trevor (A3) e Karen Thompson (A3)**, sem substituir ninguém. O roster passou a **Kendra + Cody + Mark + Trevor A3 + Karen A3**, cinco avatares.
+- **2026-09-03, regra EDITADA de novo:** entraram **Shelby Turner, Casey Harrisson, Kris Walker e Robin Matthews**, com âncora aprovada, e o Luigi chamou essas quatro mais a **Mark Collins** de "minhas atuais avatares". As outras quatro ficaram **sem menção**, e por isso seguem como **status pendente** na seção do roster acima, nunca como aposentadas.
 
 > ⚠️ **BLAKE EPETERSON ESTÁ APOSENTADO.** A ficha dele segue abaixo como referência histórica, porque `producao/blake_veu/` e `producao/blake_inicial/` existem com pacote completo e nenhuma imagem gerada. **Decisão pendente do Luigi:** migrar os dois pra Cody, aposentar, ou manter a conta dele rodando em paralelo.
 

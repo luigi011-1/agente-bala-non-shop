@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 246ef273-2f24-4b5d-8e5e-51929be93030
-  modified: 2026-08-21T03:39:54.977Z
+  modified: 2026-09-04T00:44:17.143Z
 ---
 
 # Prompts de Imagem (Frame Inicial) — JSON
@@ -31,6 +31,45 @@ E quando for só o avatar:
 ```
 
 **Why:** antes eu punha "Anexar: âncora Melody + product.png" em itálico pequeno embaixo do título. Ele produz take a take e arrisca anexar referência errada no prompt certo, que é justamente o erro que [[feedback-prompts-na-conversa]] existe pra evitar. Referência escondida em legenda não cumpre essa função.
+
+### 📎 O TÍTULO NÃO BASTA: BLOCO VISUAL DE ANEXO ACIMA DE CADA PROMPT (Luigi, 2026-09-03)
+**Esta regra ESTENDE a de 2026-08-21, não a substitui.** O título em caixa alta continua obrigatório.
+
+O Luigi: *"estou começando a me perder se quando vou usar o seu prompt na IA anexo alguma imagem ou não,
+deixe isso mais visual."* **Ele está certo e o erro é meu:** eu vinha escrevendo uma linha descritiva de
+cena acima de cada prompt ("K02, o prato sobe e domina o primeiro plano"), que descreve a IMAGEM e não a
+AÇÃO DE PRODUÇÃO. Quem está gerando take a take não precisa que eu descreva a cena, ela está no JSON
+logo abaixo. Precisa saber **o que arrastar para o campo de anexo**.
+
+**Formato obrigatório, em citação, logo abaixo do título e acima do bloco de código:**
+```
+> ### 📎 ANEXAR: **2 IMAGENS**
+> **1️⃣ ÂNCORA <AVATAR>** `caminho/da/ancora.jpeg`
+> **2️⃣ REF-CARTA** já aprovada
+>
+> ### 🆕 GERAR DO ZERO
+```
+```
+> ### 📎 ANEXAR: **1 IMAGEM**
+> **1️⃣ O K01 já aprovado**
+>
+> ### ✏️ EDITAR, muda só <o que muda>
+```
+```
+> ### 📎 ANEXAR: **NADA**
+>
+> ### 🆕 GERAR DO ZERO
+```
+
+**As três regras do bloco:**
+1. **Sempre diz o NÚMERO de imagens**, em negrito. É o que ele confere de relance.
+2. **Cada imagem numerada com o caminho ou o nome do keyframe de origem.** Nunca "a âncora" solta.
+3. **Onde houver risco de cascata, o bloco carrega o aviso:** `🚫 NUNCA anexar o K07 aqui`.
+
+**E o índice de geração passa a ter coluna própria de anexo**, com a regra de bolso escrita embaixo:
+GERAR DO ZERO anexa âncora mais REF, EDITAR anexa uma imagem só, o keyframe de origem.
+
+A linha descritiva de cena, se existir, vem **depois** do bloco de anexo, nunca no lugar dele.
 
 ## Campos do JSON e função de cada um
 

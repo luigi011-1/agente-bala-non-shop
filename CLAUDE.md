@@ -97,7 +97,10 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
   que mudou. Regra nova no meio da produção obriga **reescrever por inteiro todos os prompts afetados**,
   no arquivo e no chat. Alternativa se entrega como dois prompts completos lado a lado, nunca como
   um prompt mais a instrução de como virar o outro.
-- **Referências no título do prompt, em CAIXA ALTA.**
+- **Referências no título do prompt, em CAIXA ALTA, MAIS o bloco visual de anexo** logo abaixo do
+  título e acima do código: número de imagens em negrito, cada uma numerada com o caminho, e a ação
+  (`🆕 GERAR DO ZERO` ou `✏️ EDITAR`). O título sozinho não resolve para quem gera take a take.
+  Formato exato em `prompts-imagem-json`. **A linha que descreve a cena nunca ocupa o lugar dessa.**
 - **Ângulo 3, lei do registro: divino, nunca oculto.** O teste é a LEITURA, não o objeto: prop que lê como
   manifestação entra (cartas, cristais, vela, defumador, tigela com pétalas), prop ou fala que lê como pacto não.
   Sem bruxa, feitiço, spell, shield, círculo de proteção. **Cartas HOLOGRÁFICAS / FOIL, arte saturada e chamativa** (2026-08-29, revoga a paleta pálida): borda metálica espelhada com reflexo de arco-íris ou foil dourado, faixa de título na base. **A trava é a LEITURA, não a cor:** casal, coração, rosas, luz. Azul-noite com estrelas entra; caveira, corvo, serpente, espada e símbolo invertido não.
@@ -105,8 +108,9 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
 - **[ÂNGULO 4] LIMITE HONESTO É PROIBIDO.** Nenhuma ressalva, nenhum "isso não faz X". A dor prometida
   e o mecanismo do produto são a mesma linha, então toda ressalva encosta na promessa. O take vai pra
   autoridade, prova social, urgência ou escassez. No Ângulo 3 o objeto de desejo do CTA é
-  **o rosto da alma gêmea**, nunca o app: ela mandou uma mensagem ao universo, o universo respondeu, e o
-  rosto só é revelado se ela clicar no link. Ângulo de entrada é livre, a **ponte pro rosto é obrigatória**.
+  **o rosto da alma gêmea**, nunca o app: ela mandou uma mensagem ao universo, o universo respondeu, ela
+  **sela o acordo** (`222` + follow + save), e o **rosto está esperando no STORIES**, revelado pelo botão
+  do link. Ângulo de entrada é livre, a **ponte pro rosto é obrigatória**.
 - **Roteiro final completo é a ÚLTIMA coisa da entrega**, depois de todos os prompts. E o último bloco de todos é sempre o **roteiro final em INGLÊS**, numerado por take mais a versão corrida só-fala. A tabela bilíngue vem antes dele, não no lugar dele.
 - **Os gates de maquina rodam sozinhos no `pre-commit`** (`git config core.hooksPath .githooks`,
 uma vez por clone). Ele bloqueia commit com drift de memoria ou FALHA de entrega.
@@ -235,31 +239,42 @@ modelo tem split screen, o clone tem. Fidelidade de estrutura é a regra de semp
 **Keyword `222`** no lugar de `yes`.
 
 **Não mostra produto.** O objeto de desejo do CTA é **o rosto da alma gêmea**, nunca o app: ela mandou
-uma mensagem ao universo, o universo respondeu, e o rosto chega **na mensagem que o Luigi manda na DM**.
+uma mensagem ao universo, o universo respondeu, e **o rosto está esperando no STORIES**.
 O vídeo nunca diz quiz, teste, app, plano nem preço.
 
-**📲 DOIS CANAIS NO MESMO VÍDEO: comentar `222` E mandar pro STORIES** (Luigi, 2026-09-01).
-Revoga a regra de traduzir story para DM. **15 das 19 copies validadas fecham em stories via foto de
-perfil**, e nós éramos o único outlier do nicho. Agora rodam os dois, porque falham por motivos
-diferentes: o Stories é imediato e efêmero, a DM chega como notificação e **fica esperando na caixa**.
-- **O Stories é DEGRAU, nunca canal paralelo.** Vídeo entrega que existe um rosto, **Stories entrega a
-  prova e lacra a IMAGEM do rosto** (dá inicial, traço, timing), DM entrega o rosto.
-- **NOMEAR o rosto ≠ ENTREGAR o rosto.** O Stories **pode dizer** que o rosto está ali; o que nunca
-  entra é **imagem de rosto**, nem obscurecida. O Stories é a porta, o botão do link é quem entrega.
-- **🎚️ O CTA tem DOIS MODOS e se adapta à copy.** **DECLARADO** (*"his face is revealed in there"*)
-  quando a copy **já entregou prova concreta de identidade**: a inicial, o traço, o timing, o truque do
-  WhatsApp. Aí nomear FECHA um loop aberto e pré-vende o clique no botão. **CURIOSIDADE**
-  (*"the second part of this sign"*) quando a promessa foi atmosférica (bênção, sinal, boa notícia),
-  porque nomear no último segundo introduz objeto que o vídeo nunca apresentou e lê como isca trocada.
-  No swipe, os 3 que declaram tinham identidade antes e nenhum dos de bênção vaga declarou.
-  **Declarado obriga o Story a ser sobre o rosto**, senão ela sai na primeira tela.
-- ⚠️ **O comentário vem PRIMEIRO, o Stories depois. O CTA de Stories é ADITIVO e nunca substitui o
-  `222`**, senão a automação de DM apaga. Se o roteiro estiver longo, fundir no formato do IG14:
-  *"Comment 222, and tap my profile picture to watch my stories now."*
+**🔄 A INVERSÃO DO FUNIL: o destino é o STORIES, e as três ações viraram o SELO** (Luigi, 2026-09-04).
+Palavras dele: *"quase 100% de foco em fazer a pessoa clicar na minha foto de perfil e checar meus
+stories, pois a revelação vai estar lá e não na DM."*
+- ♻️ **Revoga três regras de 2026-09-01:** ~~o Stories é degrau 2 e lacra a imagem do rosto~~,
+  ~~o CTA de Stories é ADITIVO~~ e ~~a DM entrega o rosto~~. **O Stories é a SALA**, a DM virou
+  **canal de recuperação** de quem selou e não deu o tap.
+- **🔒 A LEI DO SELO (Luigi, 2026-09-04): toda ação pedida carrega a CONSEQUÊNCIA dela, nunca um
+  rótulo.** `222` = *"that's how this gets tied to your name"* · like e save = *"and the blessing
+  coming to you gets stronger"* · follow = *"so this stays open"*. Três travas:
+  **(a)** a frase diz o que a ação provoca **no que já está vindo pra ela**, pra ela querer fazer
+  sozinha; **(b)** ⚠️ a consequência tem que ser **congruente com o GESTO REAL**, e comentar é
+  **escrever**, então amarra ao nome e **nunca** "fala em voz alta" (erro cortado pelo Luigi);
+  **(c)** poucos pedidos, uma linha cada, agrupando quando couber. Lista longa lê como pedido de
+  engajamento e mata o efeito. Detalhe em `angulo3-swipe-padroes`.
+- ⚠️ **O follow gate perdeu o motivo TÉCNICO e ganhou o motivo do CAMINHO.** *"or it will not let me
+  reach you"* era condição de entrega da DM. **Follow sem motivo nenhum continua proibido.**
+- ⚠️ **O comentário vem PRIMEIRO, o Stories depois. A razão mudou, o gate não:** o SELO vem antes do
+  DESTINO, porque o tap tira ela do vídeo e porque **a DM de recuperação só existe se ela comentar**.
+  Se o roteiro estiver curto, fundir no formato do IG14: *"Comment 222, and tap my profile picture to
+  watch my stories now."*
+- **NOMEAR o rosto ≠ ENTREGAR o rosto.** Esta trava não mudou e é a que sobrou inteira da trava dura:
+  o Stories **nomeia** a revelação e **nunca sobe imagem de rosto**, nem obscurecida. O botão entrega.
+- **🎚️ Os DOIS MODOS continuam, mas a balança pendeu pro DECLARADO.** **DECLARADO** (*"their face is
+  already sitting in there"*) quando a copy **já entregou prova concreta de identidade**: a inicial, o
+  traço, o timing, o truque do WhatsApp, ou o instante do pensamento (*"the person who came into your
+  head the second I said that"*). **CURIOSIDADE** virou exceção, e só cabe quando a promessa foi
+  atmosférica do começo ao fim. **Declarado obriga o Story a ser sobre o rosto**, senão ela sai na
+  primeira tela, e o claim vira cobrável.
 - **Custa zero keyframe e zero clipe:** fala mais legenda mais seta de edição no CapCut. Cabe até em
   pacote já fechado.
 - Nove fechamentos validados, as 3 telas do Stories e o `rt_ad` por canal em
   `producao/_stories_auraly/STORIES_PADRAO.md`. **É o P7 agora, junto com o `DM_PADRAO.md`.**
+- Primeiro pacote sob esta regra: `producao/kris_confissao/`.
 
 **Ângulo de entrada é livre, a ponte pro rosto é obrigatória.** Com **dois avatares** (Kendra Collins
 e Cody Miller), o eixo de variação é **1 esqueleto × N ângulos de entrada × 2 avatares**.
@@ -271,7 +286,8 @@ O **Blake Epeterson foi aposentado em 2026-08-25** e substituído pela Cody.
 faixa da base, borda metálica holográfica, arte saturada) e a mantém na mão até o fim. Gerar uma vez como `REF-CARTA` e anexar sempre, igual
 o Ângulo 1 faz com o `product.png`.
 
-**🚫 O ROSTO NUNCA É REVELADO NO VÍDEO.** Só na DM, e só depois do `222`. Qualquer gancho que envolva
+**🚫 O ROSTO NUNCA É REVELADO NO VÍDEO.** A revelação vive no **Stories**, e quem entrega é o botão do
+link (~~"só na DM, e só depois do `222`"~~, revogado em 2026-09-04). Qualquer gancho que envolva
 retrato, foto, polaroid ou desenho tem o rosto **obscurecido**: impressão fora de foco, vidro fosco,
 revelação parcial, silhueta, gelo ou névoa. **Descrever sempre como propriedade física do objeto**,
 nunca como blur de câmera, senão colide com o `no blur` do negative.
@@ -311,8 +327,10 @@ a ação do gancho com as próprias mãos enquanto fala**. Sem close isolado na 
 O gancho vive no **T1**. Do T2 em diante ela segura a carta e os takes **se reaproveitam** entre
 variações, então cada gancho novo custa **só 1 keyframe + 1 clipe**.
 
-**Terceiro arquivo, `DM.md`:** a mensagem que promete o rosto, a ponte pro link sem citar quiz/app,
-os obstáculos antecipados e o follow-up. Mestre em `producao/_dm_auraly/DM_PADRAO.md`.
+**Terceiro arquivo, `DM.md`:** desde 2026-09-04 é a **mensagem de RECUPERAÇÃO**, não a promessa. Ela
+confirma o **selo**, recolhe pro Stories (que é onde o vídeo disse que a revelação estava) e só então
+oferece o link, sem citar quiz/app. Mais os obstáculos antecipados e o follow-up.
+Mestre em `producao/_dm_auraly/DM_PADRAO.md`.
 O `banco-rotas-argumentativas` e o `banco-obstaculos` continuam sendo consultados normalmente, e
 atendem o beat de fechamento onde ele existir, no vídeo ou no `DM.md`.
 

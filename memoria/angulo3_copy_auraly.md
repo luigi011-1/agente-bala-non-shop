@@ -1,10 +1,10 @@
 ---
 name: angulo3-copy-auraly
-description: "ÂNGULO 3 — app Auraly (astrologia / lei da atração / alma gêmea e twin flame), tráfego orgânico IG+FB nos EUA, avatares Kendra Collins e Cody Miller, **keyword `222`** (não `yes`), **nunca mostra o produto**, **DOIS canais de CTA desde 2026-09-01** (comentar `222` E mandar pro Stories, aditivo e nesta ordem, com o Stories como degrau 2 da escada de reveal), e a LEI DO REGISTRO: divino/manifestação sempre, oculto/bruxaria nunca (cartas holograficas/foil e saturadas desde 2026-08-29, pedra/cristal jamais). Banco de insights extraído dos 3 funis do quiz (sm-v16-8, sm-v16-14, lr-love-reading-2) em 2026-08-24: mecanismo do mapa astral, dores, frases emocionais, escada de reveal com lacre, pitch de $9, e a CONTRADIÇÃO de assinatura no checkout que limita o que pode ser dito na copy."
+description: "ÂNGULO 3 — app Auraly (astrologia / lei da atração / alma gêmea e twin flame), tráfego orgânico IG+FB nos EUA, roster refeito em 2026-09-03 com CINCO avatares nomeadas pelo handle da conta (Shelby Turner, Casey Harrisson, Kris Walker, Robin Matthews e Mark Collins, TODAS MULHERES), **keyword `222`** (não `yes`), **nunca mostra o produto**, **INVERSÃO DO FUNIL em 2026-09-04: o destino é o STORIES, onde está a revelação, e as três ações (`222` + follow + save) viraram o SELO com o universo, com a DM rebaixada a canal de recuperação** (a ordem continua `222` primeiro e Stories depois), e a LEI DO REGISTRO: divino/manifestação sempre, oculto/bruxaria nunca (cartas holograficas/foil e saturadas desde 2026-08-29, pedra/cristal jamais). Banco de insights extraído dos 3 funis do quiz (sm-v16-8, sm-v16-14, lr-love-reading-2) em 2026-08-24: mecanismo do mapa astral, dores, frases emocionais, escada de reveal com lacre, pitch de $9, e a CONTRADIÇÃO de assinatura no checkout que limita o que pode ser dito na copy."
 metadata: 
   node_type: memory
   type: project
-  modified: 2026-08-24T17:51:19.672Z
+  modified: 2026-09-05T02:39:26.352Z
   originSessionId: 35741d33-8b83-4947-a661-f71261849cf0
 ---
 
@@ -14,11 +14,72 @@ metadata:
 
 Extraído em 2026-08-24 caminhando os três funis com navegador headless. Copy literal, não parafraseada.
 
+---
+
+## 🔄 A INVERSÃO DO FUNIL (Luigi, 2026-09-04). LER ANTES DE ESCREVER QUALQUER CTA.
+
+**O destino do vídeo passa a ser o STORIES, não a DM. A revelação está no Stories.**
+
+Palavras do Luigi: *"vamos dar menos foco a mensagem que a pessoa vai receber na DM, vamos dar quase
+100% de foco em fazer a pessoa clicar na minha foto de perfil e checar meus stories, pois a revelação
+vai estar lá e não na DM."*
+
+**As três ações de engajamento continuam, e continuam obrigatórias, mas o trabalho delas muda.** Elas
+deixam de ser o mecanismo que faz a DM chegar e viram **o selo que ela fecha com o universo**:
+
+| Ação | Antes | **Agora, como selo** |
+|---|---|---|
+| `222` | dispara a automação que entrega o rosto | **amarra o sinal ao nome dela.** *"comment two two two, that's how this gets tied to your name"* |
+| Like e save | quase nunca pedidos | **fortalecem a bênção que já está a caminho.** *"like it and save it, and the blessing coming to you gets stronger"* |
+| Follow | condição técnica pra DM chegar | **mantém aberto o que ela acabou de amarrar**, e é o mesmo gesto que leva ao Stories. *"follow me so this stays open"* |
+
+> 🔒 **Como escrever cada uma delas: a LEI DO SELO, em [[angulo3-swipe-padroes]].** Em resumo:
+> **a consequência, não o rótulo** (o que a ação provoca no que está vindo pra ela);
+> **congruência com o gesto real** (comentar é escrever, então amarra ao nome, **nunca** "fala em voz
+> alta", que foi o erro cortado pelo Luigi em 2026-09-04); e **poucos pedidos, sem enrolação**.
+
+### O que isso revoga, ponto a ponto
+
+| Regra revogada | O que vale agora |
+|---|---|
+| ~~"o rosto só é revelado na DM, e só depois do `222`"~~ | **a revelação está no Stories.** A trava do rosto vira: o rosto nunca é revelado NO VÍDEO |
+| ~~"o Stories é degrau 2, entrega a prova e lacra a imagem do rosto"~~ | **o Stories é a sala.** Ele nomeia a revelação e o **botão do link** entrega |
+| ~~"o CTA de Stories é ADITIVO"~~ | **o CTA de Stories é o DESTINO.** O que é aditivo agora é a DM |
+| ~~"a DM entrega o rosto"~~ | a DM vira **canal de recuperação** de quem selou e não abriu o Stories |
+
+### O que NÃO muda, e não pode mudar
+
+1. **A ordem continua sendo `222` primeiro, Stories depois.** A razão mudou, o gate não: antes o
+   comentário vinha antes porque alimentava a DM, agora vem antes porque é o **primeiro selo** e porque
+   **quem sai pro perfil pode nunca voltar pra comentar**.
+2. **Nenhuma imagem de rosto entra no Stories**, nem obscurecida. **NOMEAR não é ENTREGAR**, e o botão
+   do link é quem entrega. Esta trava é a que sobra da trava dura antiga, e ela continua inteira.
+3. **Nunca dizer quiz, teste, app, plano, preço, `one-time` nem pagamento único**, no vídeo e no Stories.
+4. **Registro divino, nunca oculto.** `claim`, `way open`, `good energy`. Zero `shield`, `spell`, `witch`.
+5. **Rastreio por canal**, agora com o `_story` como linha principal e o `_dm` como recuperação.
+
+### Por que é coerente, e por que não é perda
+
+O [[angulo3-swipe-padroes]] já registrava as duas metades disso desde 2026-08-24 e a gente estava
+usando só uma: **15 das 19 copies validadas fecham em stories via foto de perfil**, e o **beat 6 do
+esqueleto universal do nicho é literalmente "as 3 ações com significado"**. A gente era o outlier
+mandando pra DM, e pedia engajamento com significado só pela metade. Esta decisão alinha o vídeo com
+o que o nicho inteiro já provou, **e mantém o `222`**, que é métrica premiada pelo algoritmo e o
+gatilho que ainda alimenta a DM de recuperação.
+
+**O custo, registrado:** o claim do Stories vira **cobrável**. Se o CTA promete o rosto ali e a tela 2
+fala de outra coisa, ela sai na primeira tela e leva a credibilidade junto. **Declarar obriga o Stories
+a cumprir na hora.**
+
+Primeiro pacote sob esta regra: `producao/kris_confissao/`.
+
+---
+
 ## Produto e funil
 - **Produto:** app **Auraly** (iOS e Android). Entrega = "Soulmate Birth Chart Reading".
 - **Público:** mulheres, EUA. O quiz pergunta gênero, mas toda a copy de prova social fala "women" e os depoimentos são femininos.
 - **Plataformas:** Instagram e Facebook orgânico. Contas já crescidas.
-- **Funil:** vídeo → comment **`222`** → DM → link do quiz → **quiz → email gate → VSL com gate de tempo → página de pitch → checkout**.
+- **Funil (revisto em 2026-09-04):** vídeo → **selo (`222` + follow + save)** → **STORIES, onde está a revelação** → link do quiz → **quiz → email gate → VSL com gate de tempo → página de pitch → checkout**. A DM continua disparando pelo `222`, mas virou **canal de recuperação**. Ver a INVERSÃO DO FUNIL logo abaixo.
 - **Stack:** SPA React, backend Supabase, tracking RedTrack, checkout próprio + Hotmart. Afiliado `aff=u5bnoukb`.
 - **O link do app.auralyapp.com é um ROTATOR.** O mesmo link cai em três funis diferentes. Ver abaixo.
 
@@ -141,6 +202,47 @@ Segue valendo o roster do [[avatares-fichas]]: cruz cristã na parede, pingente 
 
 Aplicação nas 3 ações do CTA em [[angulo3-swipe-padroes]], que traz a tabela de tradução frase a frase.
 
+## 🔮 KIT DE TARÓLOGO EM QUADRO, OBRIGATÓRIO (Luigi, 2026-09-03)
+**Ordem direta, vale para TODOS os avatares do ângulo, em TODA âncora e em TODO keyframe.**
+
+> O cenário tem que fazer a pessoa **bater o olho e já saber que o avatar é um tarólogo**,
+> antes de ouvir uma palavra.
+
+O cenário deixou de ser fundo e virou **credencial**. É o que substitui o diploma que este ângulo não
+pode mostrar: a autoridade aqui é por leitura, nunca por credencial, então quem entrega a autoridade
+no primeiro frame é a estante.
+
+**As 7 categorias, presentes SEMPRE:**
+| # | Categoria | Observação |
+|---|---|---|
+| 1 | **Cristais** | ponta de quartzo, drusa de ametista, selenita, fluorita |
+| 2 | **Incenso aceso** com fio fino de fumaça | o movimento vende o "ela estava lendo antes de gravar" |
+| 3 | **Bandeira dos EUA ao fundo**, visível e em foco | já era regra universal, aqui vira também sinal de conta |
+| 4 | **Cartas de tarô** em quadro | baralho **holográfico** da espec de 2026-08-29, ver a trava da carta abaixo |
+| 5 | **Quadro astrológico** na parede | roda zodiacal, fases da lua, mapa de constelação, carta natal |
+| 6 | **Cruz ou crucifixo de madeira** | a lei do registro acima, divino nunca oculto |
+| 7 | **Vela branca** | acesa ou não, conforme a cena |
+
+**A separação entre as contas passa a ser o ARRANJO, não a presença.** Como as 7 categorias agora se
+repetem em todo avatar, o kit sozinho não separa mais ninguém. Cada avatar precisa de um **arranjo
+próprio e fixo**: qual cristal, onde fica a bandeira (suporte de mesa, pendurada na parede, em mastro,
+em caixa triangular), quantos quadros e de que assunto, e como as cartas aparecem (empilhadas, leque na
+mesa, leque na mão, três em fila). Ver a tabela de arranjo em [[avatares-fichas]].
+
+### ⚠️ Como cumprir isso sem estourar o gate de realismo
+Isto **edita** o item 1 do [[realismo-anti-cara-de-ia]], que manda descrever no máximo duas ou três
+âncoras de fundo. A regra continua valendo em espírito, e o alvo dela sempre foi o **inventário escrito
+no prompt**, não a riqueza da cena. É a mesma nuance já aceita em 2026-08-29 na Holistic Trevor A3.
+
+1. **Agrupar, nunca listar solto.** O kit entra como **dois grupos** dentro do prompt: "a prateleira ao
+   lado dela com [cristal, incenso, vela, bandeira, cartas]" e "na parede atrás dela [quadro astrológico
+   e cruz]". Dois grupos contam como duas âncoras, não como sete objetos.
+2. **`GERAR DO ZERO` só no primeiro keyframe do setup**, com a âncora anexada. Todo o resto é
+   **`EDITAR do K__`**, então o kit nunca é reinventado e nunca deriva entre takes.
+3. **Nunca reduzir o fundo com blur.** Não mudou nada aqui.
+4. **No hook e nos takes de reveal o herói continua dominando o quadro.** O kit fica em quadro, atrás,
+   sem disputar com o prop herói.
+
 ## 🃏 TRAVA: A CARTA SOULMATE NA MÃO DEPOIS DO GANCHO (Luigi, 2026-08-24)
 **Regra fixa de todo vídeo do Ângulo 3.** Terminado o take do gancho, a avatar aparece **segurando a carta de tarô SOULMATE** e a mantém na mão até o fim do vídeo.
 
@@ -172,6 +274,16 @@ Aplicação nas 3 ações do CTA em [[angulo3-swipe-padroes]], que traz a tabela
 
 **Arquitetura:** gerar a carta **uma vez** como `REF-CARTA`, aprovar, e anexar como referência de objeto em todo keyframe que a mostre. Mesma lógica do `product.png` do Ângulo 1. Sem isso a arte muda de take pra take.
 
+### 🃏 O BARALHO DA MESA NÃO É O MESMO DA REF-CARTA (Luigi, 2026-09-03)
+**Esta espec holográfica vale para a REF-CARTA, e só para ela.** O baralho que aparece **na mesa** de
+cada avatar virou **traço de avatar**, fixado pela âncora dela: Casey e Shelby têm baralho holográfico,
+Kris, Robin e Mark têm baralho clássico de borda branca. Ver [[avatares-fichas]].
+
+**A consequência é visível em quadro** e foi aceita de propósito: em três das cinco, a carta que ela
+segura tem arte diferente do maço que está na mesa. A leitura é que ela puxou **uma carta especial**.
+Para isso não virar erro de continuidade: **nunca escrever no prompt que a carta saiu daquele baralho**,
+e **nunca mostrar a carta herói sendo tirada do maço da mesa**.
+
 ### A CARTA TAMBÉM ENTRA NOS GANCHOS (Luigi, 2026-08-24)
 **A maioria dos ganchos visuais sugeridos tem que ter a carta em quadro**, e de preferência como **alvo da ação**: o que é cercado, puxado, revelado, apontado ou libertado.
 
@@ -182,8 +294,13 @@ Aplicação nas 3 ações do CTA em [[angulo3-swipe-padroes]], que traz a tabela
 ## 🚫 TRAVA DURA: O ROSTO NUNCA É REVELADO NO VÍDEO (Luigi, 2026-08-24)
 **A regra mais importante do ângulo depois da keyword.**
 
-> O rosto da alma gêmea / twin flame **só é revelado na DM**, e só depois de ela comentar `222`.
+> ♻️ **Editada em 2026-09-04 pela INVERSÃO DO FUNIL.** A parte que dizia ONDE o rosto é revelado
+> mudou de lugar; a parte que diz que ele **nunca aparece no vídeo** não mudou nada e é a que importa
+> aqui. Redação antiga: ~~"o rosto só é revelado na DM, e só depois de ela comentar `222`"~~.
+
+> A revelação vive **no Stories**, e quem entrega é o **botão do link**.
 > O vídeo **nunca** pode mostrar um rosto de alma gêmea legível. Nem no gancho, nem em B-roll, nem em prop.
+> E o Stories **nunca sobe imagem de rosto**, nem obscurecida: ele **nomeia**, o botão entrega.
 
 **Isso vale pra qualquer gancho visual que envolva rosto.** Se o gancho mostra retrato, foto, polaroid, desenho ou reflexo, o rosto tem que estar **obscurecido**. Sempre.
 
@@ -200,28 +317,49 @@ Aplicação nas 3 ações do CTA em [[angulo3-swipe-padroes]], que traz a tabela
 ### ⚠️ Conflito técnico a resolver em todo prompt
 Os prompts do projeto carregam `no blur` no negative pra forçar nitidez. **Nunca descrever o rosto velado como blur de câmera**, senão os dois se anulam. Descrever sempre como **propriedade física do objeto**: a impressão é que está fora de foco, o vidro é que é fosco, o gelo é que é opaco. Assim `no blur` continua valendo pra cena inteira.
 
-## CTA CANÔNICO DO ÂNGULO 3 (aprovado pelo Luigi em 2026-08-24)
-Três takes, seguindo o esqueleto validado dos Ângulos 1 e 2 e casando com a DM palavra por palavra.
+## CTA CANÔNICO DO ÂNGULO 3 (reescrito em 2026-09-04 pela INVERSÃO DO FUNIL)
 
-> **T6 · O TRATO:** "Comment 222 below so the universe knows you are claiming it. Then send this video to yourself and save it."
-> **T7 · CTA:** "The second you comment 222, I send their face straight to your messages. That is where the reveal happens."
-> **T8 · FOLLOW GATE + ESCASSEZ:** "But follow me first, or it will not let me reach you. And I only have three readings left today."
-> **T9 · STORIES (novo em 2026-09-01):** "One last thing. Click on my profile picture and check my stories before they disappear, because the second part of this sign is waiting for you there."
+**Dois takes, não quatro.** O selo e o destino. É mais curto que o CTA antigo porque o take do rosto
+na DM e o take de Stories viraram um só.
+
+> **O SELO, cada ação com a consequência dela:** "Comment two two two. That's how this gets tied to
+> your name. Then like it and save it, and the blessing coming to you gets stronger."
+> **O DESTINO, o Stories:** "Follow me so this stays open, then tap my picture and watch my stories.
+> Their face is already sitting in there, and it goes away tonight."
 
 **Por que funciona, e o que não pode ser perdido ao variar:**
-- **Primeira pessoa no envio.** "I send their face" e nunca "their face comes". Passivo mata a promessa.
-- **Follow gate no FIM, com o motivo**, nunca solto no meio da lista de ações. Foi o erro que eu cometi na primeira versão.
+- **Nenhuma ação é pedida sem CONSEQUÊNCIA.** É o motor nº1 do [[angulo3-swipe-padroes]] endurecido
+  pela LEI DO SELO: não é rótulo ("to claim it"), é o que a ação **provoca no que já está vindo**.
+  E a consequência tem que ser **congruente com o gesto real**: comentar amarra ao nome, nunca
+  "fala em voz alta". Significado sempre de **declaração, acordo e recebimento**, nunca de proteção.
+- **O follow perdeu o motivo TÉCNICO e ganhou o motivo do CAMINHO.** "or it will not let me reach you"
+  era condição de entrega da DM, e a DM deixou de ser a promessa. O motivo continua obrigatório, só
+  mudou de natureza. **Follow sem motivo nenhum continua proibido.**
 - **O objeto entregue é o ROSTO**, dito com essa palavra. Nunca leitura, nunca resultado, nunca app.
-- **Casamento take a take com a DM:** a janela do T5 é a janela que a DM abre, o rosto do T7 é o que a DM entrega, as três leituras do T8 são as da DM. Ver [[feedback-cta-produto]].
-- A escassez do T8 é **opcional no vídeo**: sai limpo se o Luigi quiser esse gatilho só na DM.
-- **O T9 é o segundo canal, e ele é ADITIVO.** Vem depois do follow gate, nunca antes do `222`.
-  Custa **zero keyframe e zero clipe**: fala mais legenda mais seta de edição no CapCut, tudo em cima
-  de take já produzido. **Cabe até em pacote fechado**, o que faz dele a mudança mais barata do ângulo.
-  Nove fechamentos validados e o que vai dentro do Stories em `producao/_stories_auraly/STORIES_PADRAO.md`.
-- **Se o roteiro estiver longo, o T9 funde no T8** usando a forma do IG14: "Comment 222, and tap my
-  profile picture to watch my stories now." Os dois canais sem gastar um take.
+- **A urgência é a do Stories, e é a única honesta da operação inteira:** *"it goes away tonight"* é
+  verdade por regra da plataforma. Prefira ela a qualquer escassez fabricada.
+- **A ordem é inegociável:** `222` primeiro, Stories depois.
+- **Se o roteiro estiver curto demais pra dois takes**, funde na forma do IG14: "Comment two two two,
+  and tap my picture to watch my stories now." Os dois numa frase.
 
-## A DM padrão (validada, 2026-08-24)
+> 🗄️ **Redação antiga, de 2026-08-24, revogada em 2026-09-04.** Guardada só porque os pacotes
+> `trevor_a3_confissao`, `karen_a3_confissao`, `mark_a3_confissao`, `casey_1111`, `robin_1111`,
+> `kendra_*` e `blake_*` foram escritos sob ela e **roteiro publicado não se reescreve**:
+> ~~T6 "Comment 222 below so the universe knows you are claiming it. Then send this video to yourself
+> and save it." · T7 "The second you comment 222, I send their face straight to your messages. That is
+> where the reveal happens." · T8 "But follow me first, or it will not let me reach you." · T9
+> "One last thing. Click on my profile picture and check my stories before they disappear, because the
+> second part of this sign is waiting for you there."~~
+
+## A DM padrão (validada, 2026-08-24 · **rebaixada a canal de recuperação em 2026-09-04**)
+
+> ♻️ **A DM continua existindo e continua disparando pelo `222`. O que mudou é o papel dela.**
+> O vídeo **não promete mais a DM**, então ela deixou de ser a entrega prometida e virou **o resgate
+> de quem selou e não abriu o Stories**. A estrutura de 4 beats abaixo continua válida, com dois
+> ajustes: o beat 1 confirma **o selo** (não a janela da DM), e o beat 4 **recolhe pro Stories antes
+> de oferecer o link**, porque é lá que a copy do vídeo disse que a revelação estava. DM que promete
+> uma coisa e vídeo que prometeu outra quebra o casamento take a take do [[feedback-cta-produto]].
+
 Mensagem que o Luigi já dispara quando a pessoa comenta `222`. **Mestre em `producao/_dm_auraly/DM_PADRAO.md`**, com 10 variações anti-spam e rotação de URL. O `DM.md` de cada produção deriva dali.
 
 **Estrutura de 4 beats, não mudar:**
@@ -244,6 +382,20 @@ Confirma a doutrina: a DM **não cita quiz, teste, app, plano nem preço**. O ob
 - Vale a mesma regra do Ângulo 2: **nunca culpar ela**. As frases de padrão ("I attract the same kind of person") descrevem o padrão, não a culpa dela.
 
 ## Avatares
+**CINCO confirmadas por imagem em 2026-09-03, palavras do Luigi: "essas são as minhas atuais avatares":
+Shelby Turner, Casey Harrisson, Kris Walker, Robin Matthews e Mark Collins.**
+A ficha canônica das cinco está em [[avatares-fichas]], que é a fonte de verdade do roster.
+
+🔴 **Kendra Collins, Cody Miller, Holistic Trevor (A3) e Karen Thompson (A3) foram APOSENTADAS em
+2026-09-03**, por decisão explícita do Luigi. Não usar em produção nova. Os pacotes delas que já existem
+em disco (`cody_1111`, `kendra_*`, `trevor_a3_confissao`, `karen_a3_confissao`) ficam com destino
+pendente: migrar a copy para uma das cinco ativas, com ajuste de congruência, ou arquivar.
+
+Propostas que não viraram âncora: Otis Freeman e Tessa Doyle em
+`producao/_ancoras/NOVOS_AVATARES_2026-09-03.md`, e Mina Choi, Deja Whitfield, Priya Raman e
+Wesley Barnes em `producao/_ancoras/SUGESTOES_AVATARES_LACUNAS_2026-09-03.md`.
+
+> Histórico, mantido porque a regra foi editada três vezes:
 **DOIS: Kendra Collins e Cody Miller.**
 - ~~"Blake Epeterson, único"~~ (2026-08-24) e ~~"Blake + Kendra"~~ (2026-08-25) foram **as duas regras anteriores, ambas substituídas**.
 - **2026-08-25, regra vigente:** a **Cody Miller entrou no lugar do Blake**. Roster = **Kendra + Cody**.
@@ -261,11 +413,13 @@ Depois, o mesmo modelo roda no próximo avatar **com AJUSTES DE COPY para congru
 ## PRODUTO: NUNCA MOSTRAR (decisão do Luigi, 2026-08-24)
 Sem print do app, sem celular em quadro, sem mockup, sem nome de plano, sem preço. Mesma trava do Ângulo 2, por motivo diferente: aqui **não há produto na promessa**. A promessa é a transformação da vida dela.
 
-### A promessa canônica do ângulo
+### A promessa canônica do ângulo (cadeia atualizada em 2026-09-04)
 A cadeia, nesta ordem, é a espinha de todo vídeo:
-> ela **mandou uma mensagem ao universo** → o **universo respondeu** → a resposta é que ele quer **revelar o rosto da alma gêmea / twin flame dela** → **o rosto está na mensagem que eu vou mandar na DM dela** → ela comenta `222` pra receber
+> ela **mandou uma mensagem ao universo** → o **universo respondeu** → a resposta é que ele quer **revelar o rosto da alma gêmea / twin flame dela** → ela **sela o acordo** (`222`, follow, save) → **o rosto está esperando no Stories** → o botão do link revela
 
-**O reveal é prometido na DM, não no quiz** (precisado pelo Luigi em 2026-08-24). O vídeo nunca diz "faça um quiz", nunca diz "responda perguntas", nunca menciona teste, leitura paga ou app. Ele diz que **a mensagem com o rosto vai chegar na DM dela**. O quiz existe atrás do link, mas é invisível na promessa.
+**O reveal é prometido no STORIES, não no quiz.** O vídeo nunca diz "faça um quiz", nunca diz "responda perguntas", nunca menciona teste, leitura paga ou app. Ele diz que **o rosto está no Stories dela**. O quiz existe atrás do botão, mas é invisível na promessa.
+
+> ♻️ Redação anterior, de 2026-08-24: ~~"o rosto está na mensagem que eu vou mandar na DM dela → ela comenta `222` pra receber. O reveal é prometido na DM."~~ Revogada pela INVERSÃO DO FUNIL.
 
 O objeto de desejo do CTA é **o rosto**, nunca o app e nunca o quiz. O que ela ganha ao comentar não é acesso a um produto, é a revelação de uma pessoa.
 
@@ -279,34 +433,39 @@ O objeto de desejo do CTA é **o rosto**, nunca o app e nunca o quiz. O que ela 
 "nenhuma manda pra DM". Nós éramos o único outlier do nicho, e estávamos jogando fora o canal que
 o nicho inteiro usa pra ganhar dinheiro.
 
-**REGRA VIGENTE: os dois canais, sempre, no mesmo vídeo.** Comentar `222` **e** mandar pro Stories.
-Não é escolha entre um e outro, é soma. Mestre em `producao/_stories_auraly/STORIES_PADRAO.md`.
+**REGRA DE 2026-09-01, e o que sobrou dela depois de 2026-09-04:** os dois canais continuam no mesmo
+vídeo, mas **deixaram de ter o mesmo peso**. Comentar `222` **e** mandar pro Stories, com o Stories
+como **destino** e a DM como **recuperação**. Mestre em `producao/_stories_auraly/STORIES_PADRAO.md`.
 
-**Por que a soma paga mais que qualquer um sozinho:** as duas superfícies falham por motivos
-diferentes, então uma cobre o buraco da outra. O **Stories é imediato e efêmero** e pega quem está
-com vontade agora; a **DM é lenta e persistente**, chega como notificação e **fica na caixa esperando**,
-então pega quem só volta duas horas depois. Quem não clicar no Stories clica na notificação, e
-vice-versa (raciocínio do Luigi, 2026-09-01).
+**Por que os dois continuam existindo:** as duas superfícies falham por motivos diferentes, então uma
+cobre o buraco da outra. O **Stories é imediato e efêmero** e pega quem está com vontade agora; a
+**DM é lenta e persistente**, chega como notificação e **fica na caixa esperando**, então pega quem
+só volta duas horas depois. Quem não abriu o Stories ainda tem a notificação (raciocínio do Luigi,
+2026-09-01, que continua valendo inteiro).
 
-🔑 **O STORIES É UM DEGRAU, NUNCA UM CANAL PARALELO.** Foi assim que o conflito com a trava do
-rosto se resolveu: se o Stories entrega o rosto, a trava cai e o `222` perde a razão de existir; se
-não entrega nada, ninguém abre. Então ele entra como **degrau 2 da escada de reveal** que o próprio
-funil da Auraly já roda:
+🔑 **O STORIES DEIXOU DE SER DEGRAU E VIROU A SALA (2026-09-04).**
+
+> ♻️ Arquitetura anterior, de 2026-09-01, **revogada**: ~~"o Stories é degrau 2, entrega a prova
+> (inicial, traço, timing) e lacra o rosto; a DM + link entrega o rosto".~~
+> O conflito que ela resolvia (se o Stories entrega o rosto, o `222` perde a razão de existir) foi
+> resolvido de outro jeito: **o `222` não existe mais pra alimentar a DM, ele existe como SELO.**
 
 | Degrau | Onde | Entrega | Lacra |
 |---|---|---|---|
-| 1 | Vídeo | existe um rosto, e ele já foi escolhido | todo o resto |
-| 2 | **Stories** | a prova: inicial, traço físico, timing | **o rosto** |
-| 3 | DM + link | o rosto | o pagamento |
+| 1 | Vídeo | existe um rosto, ele já foi escolhido, e as três ações que selam o acordo | **onde ele está** |
+| 2 | **Stories** | **a revelação**, nomeada, mais o botão do link | o pagamento |
+| 3 | DM | recuperação de quem selou e não abriu o Stories | idem |
 
-🚫 **O rosto NUNCA aparece no Stories**, nem obscurecido. No vídeo o rosto velado é ganho porque é
-prop em cena; no Stories vira promessa entregue pela metade, e ela fecha achando que já viu.
+🚫 **Nenhuma IMAGEM de rosto entra no Stories**, nem obscurecida. **Esta trava não mudou e é a que
+sobrou inteira da trava dura antiga.** O Stories **nomeia**, o botão **entrega**. No vídeo o rosto
+velado é ganho porque é prop em cena; no Stories vira promessa entregue pela metade, e ela fecha
+achando que já viu.
 
-⚠️ **TRAVA: o comentário vem PRIMEIRO, o Stories depois.** O CTA de Stories é **aditivo e nunca
-substitui o `222`**, senão a automação de DM apaga e a operação perde o único canal com entrega
-garantida. Três motivos: comentar custa 2 segundos e **não tira ela do vídeo** (o tap tira), a DM
-persiste e o Stories evapora, e **é a ordem que as 15 copies validadas usam** (o beat 8 é sempre
-*"one last thing"*, depois das ações).
+⚠️ **TRAVA: o comentário vem PRIMEIRO, o Stories depois.** A razão mudou em 2026-09-04, o gate não.
+~~"O CTA de Stories é aditivo e nunca substitui o `222`"~~ virou: **o selo vem antes do destino.**
+Três motivos, e os três continuam de pé: comentar custa 2 segundos e **não tira ela do vídeo** (o tap
+tira, e quem sai pode não voltar), a DM de recuperação **só existe se ela comentar**, e **é a ordem que
+as 15 copies validadas usam** (o beat 8 é sempre *"one last thing"*, depois das ações).
 
 ✅ **O formato duplo já existe validado:** o **IG14** fecha em *"Comment, 222, and tap my profile
 picture to watch my stories now."* Os dois canais numa frase só, zero take a mais.
@@ -316,6 +475,12 @@ operação inteira.** O Stories expira em 24h de verdade, por regra da plataform
 inventado nem escassez que o checkout desmente, então não custa credibilidade nenhuma.
 
 🎚️ **O CTA DE STORIES TEM DOIS MODOS, e ele se adapta à copy** (Luigi, 2026-09-01).
+
+> ⚖️ **A balança pendeu pro DECLARADO em 2026-09-04.** Os dois modos continuam existindo e o critério
+> continua sendo o mesmo, mas **agora o Stories é a sala e não a porta**. Se ela precisa pagar o custo
+> do tap pra chegar no destino do vídeo inteiro, o CTA quase sempre tem que dizer o que tem lá dentro.
+> **Curiosidade vira exceção**, e só cabe quando a copy foi genuinamente atmosférica do começo ao fim.
+> E quando declara, **a copy tem que ter comprado o direito antes**, com prova parcial de identidade.
 
 | | **DECLARADO** | **CURIOSIDADE** |
 |---|---|---|

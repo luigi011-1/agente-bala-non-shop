@@ -4,7 +4,7 @@ description: "GATE DE REALISMO obrigatório antes de fechar qualquer prompt de i
 metadata: 
   node_type: memory
   type: feedback
-  modified: 2026-08-25T01:51:38.510Z
+  modified: 2026-09-03T18:53:19.423Z
   originSessionId: 35741d33-8b83-4947-a661-f71261849cf0
 ---
 
@@ -42,6 +42,17 @@ compra credibilidade de UGC, que é a regra-mãe do item 4 deste mesmo gate.
 - No **hook e nos takes de reveal**, o herói continua dominando o quadro. Isso não mudou.
 
 Ver [[avatares-fichas]], seção da Holistic Trevor (A3).
+
+### ⚠ SEGUNDA EDIÇÃO, 2026-09-03: o Ângulo 3 tem kit de cenário OBRIGATÓRIO
+O Luigi mandou que **todo avatar do Ângulo 3 carregue as 7 categorias do kit de tarólogo** em toda
+âncora e todo keyframe: cristais, incenso aceso, bandeira dos EUA, cartas, quadro astrológico, cruz e
+vela. **Isso ganha do teto de duas ou três âncoras neste ângulo**, porque ali o cenário é a credencial
+do avatar e não decoração: é ele que faz a pessoa bater o olho e saber que é um tarólogo.
+
+**O teto não morreu, mudou de unidade.** Continua valendo como teto do que se **descreve solto**, e o
+kit entra **agrupado em dois blocos** ("a prateleira ao lado dela com X, Y e Z" mais "na parede atrás
+dela o quadro e a cruz"), que é o que mantém a contagem de substantivos administrável. Fora do Ângulo 3
+nada mudou. Regra completa em [[angulo3-copy-auraly]], seção do kit de tarólogo.
 
 ## 2. COR E LUZ QUE DENUNCIAM
 - **Cores quentes (amarelo, laranja, marrom) deixam com cara de IA.** Evitar "warm and even" como padrão.

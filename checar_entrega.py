@@ -135,8 +135,12 @@ def fala_do_bloco(bloco):
     return (norm_fala(m.group(1)) if m else None), False
 
 
+# 2026-09-05: entrou "zero X", que e como as notas de compliance dos pacotes de
+# Angulo 3 escrevem a proibicao ("Registro conferido: zero spell, witch, shield").
+# Sem ele o linter acusava de registro OCULTO justamente a linha que prova que a
+# lei foi obedecida, que e o falso positivo que este helper existe pra evitar.
 NEGADORES = (r"nunca|nenhum\w*|jamais|sem\s|n[aã]o\s|nada de|proibid\w+|evitar|"
-             r"\bno\b|do not|don't|avoid|never")
+             r"zero\s|\bno\b|do not|don't|avoid|never")
 
 
 def em_negacao(texto, idx, janela=110):
@@ -544,6 +548,7 @@ def c_angulo3(angulo, arquivos, kfs, takes):
                       "%s mostra retrato/rosto sem obscurecimento. O rosto NUNCA e revelado no video."
                       % k["id"], "PROMPTS_PRODUCAO.md:%d" % k["linha"])
     c_angulo3_stories(takes)
+    c_angulo3_selo(takes)
     if len([f for f in FALHAS if f[0] == "angulo3"]) == antes:
         ok("angulo3", "travas do angulo 3 respeitadas")
 
@@ -563,9 +568,19 @@ STORY_PAT = r"my stories|my profile picture|check my stor|watch my stor|access(i
 DECLARADO_PAT = r"\bface\b|who (it|he|she) is|(his|her|their) name|the initial"
 # A copy entregou um pedaco da identidade antes do CTA, o que autoriza declarar.
 # Inclui o truque do WhatsApp, que e como IG02 e IG14 ganham o direito de declarar.
+#
+# 2026-09-04: entrou a familia "PROVA POR PARTICIPACAO SEM LISTA", que estava
+# faltando. O truque do WhatsApp e so UMA das formas de fazer a espectadora
+# fornecer a identificacao; a outra, igualmente validada no swipe, e mandar ela
+# pensar numa pessoa ("think of one person", IG07 e IG15) ou nomear o instante do
+# pensamento ("the person who came into your head the second I said that"). Nos
+# dois casos quem identifica e ELA, que e o que caracteriza prova parcial de
+# identidade e autoriza o modo DECLARADO. Sem isto o gate reprovava copy correta.
 IDENTIDADE_PAT = (r"\bface\b|who (it|he|she) is|(his|her|their) name|the initial"
                   r"|first letter|goes by|contact|whatsapp|\binitials?\b"
-                  r"|dark features|tall\b|he is coming|his eyes")
+                  r"|dark features|tall\b|he is coming|his eyes"
+                  r"|in(to)? your head|came to mind|appeared in your mind|think of (one|a|that) person"
+                  r"|already know who")
 
 
 def c_angulo3_stories(takes):
@@ -579,12 +594,15 @@ def c_angulo3_stories(takes):
                          "(comentar 222 E mandar pro Stories). Ver _stories_auraly/STORIES_PADRAO.md")
         return
     t_story = falas[i_story]
-    # 1. o comentario vem primeiro. Se o Stories aparece antes do 222, a automacao
-    #    de DM fica sem gatilho e o canal com entrega garantida apaga.
+    # 1. o comentario vem primeiro. A razao mudou em 2026-09-04, o gate nao:
+    #    antes o 222 vinha antes porque o Stories era ADITIVO e a DM era a promessa.
+    #    Agora o Stories e o DESTINO, e o 222 vem antes porque e o SELO, e porque
+    #    quem sai pro perfil pode nunca voltar pra comentar. Nos dois regimes a
+    #    ordem e a mesma, e inverter ela custa o comentario e a DM de recuperacao.
     i_kw = next((i for i, t in enumerate(falas) if "222" in t["fala"]), None)
     if i_kw is not None and i_story < i_kw:
-        falha("angulo3", "%s manda pro Stories ANTES de pedir o 222. O Stories e aditivo e vem "
-                         "depois: quem sai pro perfil pode nunca voltar pra comentar" % t_story["id"],
+        falha("angulo3", "%s manda pro Stories ANTES de pedir o 222. O selo vem primeiro: "
+                         "quem sai pro perfil pode nunca voltar pra comentar" % t_story["id"],
               "ROTEIRO.md:%d" % t_story["linha"])
     # 2. congruencia de MODO (Luigi, 2026-09-01). O CTA de Stories tem dois modos:
     #    DECLARADO (diz o que tem la dentro) e CURIOSIDADE (diz que tem algo).
@@ -606,6 +624,35 @@ def c_angulo3_stories(takes):
                   "nunca entregou identidade antes. Ou a copy ganha a prova parcial (inicial, traco, "
                   "timing), ou o CTA cai pro modo CURIOSIDADE" % t_story["id"],
                   "ROTEIRO.md:%d" % t_story["linha"])
+
+
+# LEI DO SELO (Luigi, 2026-09-04). O pedido de engajamento do Angulo 3 nunca e
+# um pedido seco: cada acao carrega a CONSEQUENCIA dela sobre o que ja esta vindo
+# pra prospect. E a consequencia tem que bater com o GESTO REAL.
+#
+# O erro que gerou este gate: eu escrevi "comment 222, that's you claiming it OUT
+# LOUD" e comentar e ESCREVER, nao falar. Verbo espiritual que contradiz o gesto
+# fisico quebra a suspensao de descrenca na frase mais cara do roteiro.
+#
+# So checa o que da pra checar por maquina: a incongruencia de gesto, que e
+# literal. Se ha consequencia ou so rotulo e leitura, e fica com o humano.
+GESTO_FALADO_PAT = (r"out loud|say (it|this|that) (out loud|to the universe)|speak (it|this|that)"
+                    r"|with your voice|said out loud|saying it out loud")
+
+
+def c_angulo3_selo(takes):
+    """O take que pede o 222 nao pode descrever o comentario como fala."""
+    for t in takes:
+        if not t["fala"] or "222" not in t["fala"]:
+            continue
+        m = re.search(GESTO_FALADO_PAT, t["fala"], re.I)
+        if m:
+            falha("angulo3",
+                  "%s pede o 222 e descreve a acao como FALA ('%s'). Comentar e ESCREVER: a "
+                  "consequencia tem que ser de quem digita (amarra ao nome, deixa registrado, "
+                  "assina), nunca de quem fala. LEI DO SELO, angulo3-swipe-padroes"
+                  % (t["id"], m.group(0)),
+                  "ROTEIRO.md:%d" % t["linha"])
 
 
 # Frases que fazem o produto parecer insuficiente sozinho. Banidas no Angulo 4:
