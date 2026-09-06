@@ -32,9 +32,11 @@ apagados.
 10. Revisar a imagem em tamanho completo: identidade, mãos, carta, cenário, continuidade,
     estado inicial. **Aprovar imagem** ou **Gerar nova tentativa** (preserva o arquivo
     anterior, refaz só aquele avatar+cena).
-11. Gerar o restante de um avatar, **Baixar pacote**. Conferir `imagens/*`, `ancora/`,
-    `ROTEIRO.md` bilíngue, `PROMPTS_PRODUCAO.md`, `FLOW_PROMPTS.txt` com a fala exata por
-    take e `manifest.json` com `source: chatgpt-chrome` e o nome do avatar.
+11. Conferir a pasta em Downloads: `Auraly Studio/<data>_<produção>_<id>/<avatar>/` com
+    as imagens e um `PROMPTS_VIDEO_VEO.txt` (um prompt por take, cinco blocos, Veo 3.1).
+    Gerar o restante de um avatar, **Baixar pacote** e conferir `imagens/*`, `ancora/`,
+    `ROTEIRO.md` bilíngue, `PROMPTS_PRODUCAO.md`, `PROMPTS_VIDEO_VEO.txt` e `manifest.json`
+    com `source: chatgpt-chrome` e o nome do avatar.
 12. Testar um clipe manualmente no Flow; registrar qualidade, duração e correções.
 
 Critério de aceitação: nenhum defeito bloqueador de identidade, anatomia, carta, copy ou

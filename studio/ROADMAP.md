@@ -15,6 +15,9 @@
 - `browser_queue` agora fan-out por `(projeto, avatar, frame)`; âncora por avatar,
   `avatar_key` = produção+avatar, ZIP por avatar. `standalone_prompt` simplificado:
   único anexo é a âncora, e a carta da mesa entra na mão dela.
+- Downloads: uma pasta por produção (`<data>_<título>_<id>`), com uma subpasta por
+  avatar contendo as imagens e um `PROMPTS_VIDEO_VEO.txt` (um prompt por take, cinco
+  blocos, Veo 3.1, do roteiro final). O ZIP por avatar carrega os mesmos arquivos.
 - Só texto: OpenAI Astra com fallback Gemini em 429 tipado. Limite por projeto vira só
   chamadas de texto (padrão 200).
 - 37 testes Python + 11 da extensão aprovados. Sem chamada paga nesta atualização.

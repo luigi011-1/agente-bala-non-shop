@@ -73,6 +73,25 @@ class BrowserQueueTests(unittest.TestCase):
         robin = next(j for j in s['jobs'] if j['avatar'] == 'Robin')
         self.assertEqual(q.anchor(robin['id']), store.folder(pid) / 'avatars/av01.png')
 
+    def test_downloads_layout_one_run_folder_with_avatar_subfolders(self):
+        pid = self.project()
+        s = q.enqueue([pid])
+        dirs = {Path(j['destination_dir']) for j in s['jobs']}
+        # every avatar folder shares one dated run folder, itself under "Auraly Studio"
+        self.assertEqual({d.parent for d in dirs}, {self.root / 'Downloads' / 'Auraly Studio' /
+                                                    f'{__import__("datetime").date.today():%Y-%m-%d}_Pilot_{pid[:8]}'})
+        self.assertEqual({d.name for d in dirs}, {'Robin', 'Casey'})
+
+    def test_receive_writes_veo_video_prompts_beside_the_images(self):
+        pid = self.project()
+        jobs = self.drive_all(pid)
+        dest = Path(next(j for j in jobs if j['avatar_id'] == 'av01')['destination_dir'])
+        text = (dest / 'PROMPTS_VIDEO_VEO.txt').read_text(encoding='utf-8')
+        self.assertIn('Veo 3.1', text)
+        self.assertIn('Robin', text)
+        for take in store.get(pid)['script']['takes']:
+            self.assertIn(take['speech'], text)
+
     def test_claim_never_duplicates_or_mixes_avatar(self):
         pid = self.project()
         q.enqueue([pid])
@@ -190,7 +209,8 @@ class BrowserQueueTests(unittest.TestCase):
             self.assertIsNone(manifest['model'])
             self.assertEqual(manifest['avatar'], 'Robin')
             self.assertEqual(len(manifest['clips']), 3)
-            flow = z.read('FLOW_PROMPTS.txt').decode()
+            flow = z.read('PROMPTS_VIDEO_VEO.txt').decode()
+            self.assertIn('Veo 3.1', flow)
             for take in store.get(pid)['script']['takes']:
                 self.assertIn(take['speech'], flow)
             self.assertIn('She opens the envelope.', flow)

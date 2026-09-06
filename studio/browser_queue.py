@@ -72,7 +72,30 @@ def clear(pid):
         if any(j['project'] == pid and j['status'] in ACTIVE for j in state['jobs']):
             raise ValueError('Há envios em andamento. Pause e aguarde antes de limpar a fila.')
         state['jobs'] = [j for j in state['jobs'] if j['project'] != pid]
-        return save(state)
+        state = save(state)
+    # A fresh prepare after this starts a new dated run folder.
+    store.change(pid, browser_run_name=None)
+    return state
+
+
+def _video_prompts_text(project, avatar_name):
+    """One Veo 3.1 video prompt per take, in the five-block structure, per avatar."""
+    from .rules import video_prompt
+    takes = {t['id']: t for t in project['script']['takes']}
+    lines = [f'# Prompts de vídeo · Veo 3.1 · {avatar_name}', f'# {project["title"]}', '',
+             'Gere um clipe por bloco, com a imagem indicada da mesma pasta. A fala é a do',
+             'roteiro final aprovado; não altere nem reordene.', '']
+    n = 0
+    for frame in _frames(project):
+        hook = next((h for h in project.get('hooks', []) if h['id'] == frame.get('hook_id')), None)
+        for tid in frame.get('takes', []):
+            take = takes.get(tid)
+            if not take:
+                continue
+            n += 1
+            action = hook['action'] if hook else take['action']
+            lines += [f'## V{n:02} · {tid} · imagem {frame["id"]}', '', video_prompt(take, action), '', '---', '']
+    return '\n'.join(lines)
 
 
 def standalone_prompt(frame, avatar_name):
@@ -122,12 +145,17 @@ def enqueue(ids, limit=None, only_avatar=None, only_frame=None):
             scenes = frames[:limit] if limit else frames
             if only_frame and not any(f['id'] == only_frame for f in frames):
                 raise ValueError('Esta cena não existe mais no conjunto atual.')
+            # One dated folder per production run; one sub-folder per avatar inside it.
+            run_name = p.get('browser_run_name')
+            if not run_name:
+                run_name = f"{datetime.now().strftime('%Y-%m-%d')}_{slug(p['title'])}_{pid[:8]}"
+                store.change(pid, browser_run_name=run_name)
             for avatar in avatars:
                 if only_avatar and avatar['id'] != only_avatar:
                     continue
                 anchor_path = store.artifact(pid, avatar['file'])
                 anchor_hash = digest(anchor_path.read_bytes())
-                folder = DOWNLOADS / 'Auraly Studio' / (slug(avatar['name']) + '_' + datetime.now().strftime('%Y-%m-%d')) / pid[:8]
+                folder = DOWNLOADS / 'Auraly Studio' / run_name / slug(avatar['name'])
                 for index, frame in enumerate(scenes, 1):
                     fid = frame['id']
                     if only_frame and fid != only_frame:
@@ -290,6 +318,10 @@ def receive(jid, raw):
                    dimensions=list(dimensions), finished=store.now(), error=None)
         save(state)
         store.write_json(dest / 'manifest.json', [j for j in state['jobs'] if j['destination_dir'] == str(dest)])
+        project = store.get(job['project'])
+        if project.get('script') and project.get('imageset'):
+            (dest / 'PROMPTS_VIDEO_VEO.txt').write_text(
+                _video_prompts_text(project, job['avatar']), encoding='utf-8')
         store.event(job['project'], f"ChatGPT Chrome: {job['avatar']} · {job['frame']} salvo em Downloads. Revisão visual pendente.")
         return job
 
@@ -410,8 +442,7 @@ def export_package(pid, aid):
             archive.write(store.artifact(pid, avatar['file']), 'ancora/anchor.png')
             archive.writestr('ROTEIRO.md', '\n'.join(script_lines))
             archive.writestr('PROMPTS_PRODUCAO.md', '\n'.join(prompts))
-            archive.writestr('FLOW_PROMPTS.txt', '\n\n'.join(
-                f"{c['id']} | {c['take']} | imagem {c['image']}\n{c['prompt']}" for c in clips))
+            archive.writestr('PROMPTS_VIDEO_VEO.txt', _video_prompts_text(project, avatar['name']))
             archive.writestr('manifest.json', json.dumps(manifest, ensure_ascii=False, indent=2))
             analysis = store.folder(pid) / 'ANALISE.json'
             if analysis.is_file():

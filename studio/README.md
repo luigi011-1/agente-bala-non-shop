@@ -23,10 +23,13 @@ modo de lote e o console manual foram removidos nesta versão.
 7. **Avatares**: suba N arquivos `.jpeg` na própria tela. Cada arquivo é um avatar. Sem
    pré-cadastro. Ex.: 4 avatares × 3 ganchos = 12 imagens de gancho + 4 BODY + 4 CTA.
 8. **Produção no Chrome**: a fila roda no seu ChatGPT, **uma aba por avatar**, só a
-   âncora daquele avatar anexada. As imagens são salvas em
-   `Downloads/Auraly Studio/<avatar>_<data>/<produção>/`, revisadas imagem por imagem, e
-   **Baixar pacote** entrega um ZIP por avatar (imagens no formato real, âncora,
-   `ROTEIRO.md` bilíngue, `PROMPTS_PRODUCAO.md`, `FLOW_PROMPTS.txt`, `manifest.json` com
+   âncora daquele avatar anexada. Uma pasta por produção em
+   `Downloads/Auraly Studio/<data>_<produção>_<id>/`, e dentro dela **uma subpasta por
+   avatar** com as imagens, o `manifest.json` e um `PROMPTS_VIDEO_VEO.txt` (prompts de
+   vídeo para o Veo 3.1, um por take, na estrutura de cinco blocos, a partir do roteiro
+   final). As imagens são revisadas imagem por imagem, e **Baixar pacote** entrega um ZIP
+   por avatar (imagens no formato real, âncora, `ROTEIRO.md` bilíngue,
+   `PROMPTS_PRODUCAO.md`, `PROMPTS_VIDEO_VEO.txt`, `manifest.json` com
    `source: chatgpt-chrome`).
 
 Pausar impede novos envios; imagens já enviadas podem terminar e ser recebidas.

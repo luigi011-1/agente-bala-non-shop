@@ -89,7 +89,7 @@ function avatarsView(p){
     <button class="primary" data-action="queue-run" ${!connected||!hasJobs?'disabled':''}>Iniciar / retomar</button>
     <button data-action="queue-pause" ${!hasJobs?'disabled':''}>Pausar novos envios</button>
   </div>
-  <p class="small muted">Pausar preserva as gerações já enviadas. Se uma aba fechar ou um envio ficar incerto, a fila daquele avatar pausa para recuperação; não reenvia sozinha.</p></div>`;
+  <p class="small muted">Cada produção vira uma pasta em Downloads / Auraly Studio, com uma subpasta por avatar: imagens + <code>PROMPTS_VIDEO_VEO.txt</code> (prompts de vídeo Veo 3.1 do roteiro final). Pausar preserva as gerações já enviadas. Se uma aba fechar ou um envio ficar incerto, a fila daquele avatar pausa para recuperação; não reenvia sozinha.</p></div>`;
 
   if(hasJobs){
     html+=`<div class="panel"><div class="panel-top"><h3>Pacotes para o Flow</h3></div>${avatars.map(a=>{
