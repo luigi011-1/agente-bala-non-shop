@@ -1,4 +1,6 @@
 .venv/
+studio/data/
+studio/.venv/
 __pycache__/
 *.pyc
 entradas/

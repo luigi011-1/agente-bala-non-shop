@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="studio-token" content="__TOKEN__"><title>Auraly Studio · Meu Chrome</title>
+<link rel="stylesheet" href="/static/style.css"><link rel="stylesheet" href="/static/console.css">
+<script defer src="/static/browser.js"></script></head>
+<body class="console-body"><header class="console-top"><a class="brand" href="/">✳ Auraly Studio</a><span>CHATGPT NO MEU CHROME</span></header>
+<section class="console-panel"><div class="eyebrow">GERAÇÃO AUTOMÁTICA</div><h2>Uma aba por avatar. Uma conversa por cena.</h2>
+<p class="muted">Somente a âncora original em cada envio. As imagens são salvas em Downloads / Auraly Studio, por avatar, data e produção. A fila usa seu ChatGPT no Chrome, sem chamadas de API de imagem.</p>
+<p id="connection-status" role="status">Verificando extensão…</p>
+<details><summary>Conectar o Chrome pela primeira vez</summary>
+<p>Em chrome://extensions, ative o modo do desenvolvedor e escolha “Carregar sem compactação”. Selecione a pasta abaixo. Abra a extensão Auraly Studio, cole o código de conexão e clique em Conectar. Permissão restrita ao ChatGPT e ao Studio local.</p>
+<button id="show-connection">Mostrar pasta e código</button><pre id="connection"></pre></details>
+<div id="project-list" class="project-list"></div>
+<div class="runner-actions"><label>Cenas por avatar<select id="limit"><option value="2">Piloto: primeiras 2</option><option value="">Todas as cenas</option></select></label>
+<label>Avatares simultâneos<select id="concurrency"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></label>
+<button id="enqueue" class="secondary">Preparar fila</button><button id="start" class="primary">Iniciar / retomar</button><button id="pause" class="secondary">Pausar novos envios</button></div>
+<p id="notice" role="status"></p><p class="small muted">Pausar preserva as gerações já enviadas e permite receber seus resultados. Se uma aba for fechada ou um envio ficar incerto, a fila daquele avatar pausa para recuperação; não reenvia automaticamente.</p></section>
+<section class="console-panel"><h2>Pacotes para o Flow</h2><p class="muted">Revise identidade, mãos, carta, continuidade e estado inicial da ação. Depois de aprovar todas as cenas de uma produção, baixe as imagens e os prompts de vídeo juntos.</p><div id="exports"></div></section>
+<section class="console-panel"><h2>Fila e revisão de imagens</h2><div id="jobs"></div></section></body></html>

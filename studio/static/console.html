@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="studio-token" content="__TOKEN__">
+  <title>Auraly Studio · Console de geração</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/console.css">
+  <script defer src="/static/console.js"></script>
+</head>
+<body class="console-body">
+  <header class="console-top">
+    <a href="/" class="brand"><span class="brand-mark">✳</span><span>Auraly<span class="brand-sub">CONSOLE DE GERAÇÃO</span></span></a>
+    <div class="console-progress"><progress id="queue-progress" max="1" value="0"></progress><span id="queue-count" class="small muted">Nenhuma fila</span></div>
+  </header>
+
+  <section id="picker" class="console-panel">
+    <div class="eyebrow">MONTE A FILA</div>
+    <h2>Quais produções entram agora?</h2>
+    <p class="muted small">Escolha poucas por vez, duas avatares costuma ser o ritmo certo. A fila segue a ordem do plano: referência primeiro, depois ganchos, depois corpo e CTA.</p>
+    <div id="project-list" class="project-list"></div>
+    <button id="build-queue" class="primary" disabled>Montar fila ↗</button>
+  </section>
+
+  <section id="runner" class="console-panel" hidden>
+    <div class="step-head">
+      <div>
+        <div class="eyebrow"><span id="step-avatar">—</span> · <span id="step-role">—</span></div>
+        <h2><span id="step-id">K00</span> <span id="step-title" class="muted"></span></h2>
+      </div>
+      <div class="step-position"><span id="step-index">1</span><span class="muted">/<span id="step-total">1</span></span></div>
+    </div>
+
+    <div class="step-action" id="step-action">GERAR DO ZERO</div>
+    <p class="muted small" id="step-hint"></p>
+
+    <div class="attach-block" id="attach-block"></div>
+
+    <label class="prompt-label">Prompt <span class="optional">já copiado ao abrir o passo</span></label>
+    <pre id="step-prompt" class="prompt-box"></pre>
+
+    <div class="runner-actions">
+      <button id="copy-prompt" class="primary">⧉ Copiar prompt</button>
+      <button id="watch-toggle" class="secondary">◎ Aguardar download</button>
+      <button id="prev-step" class="text-button">← Anterior</button>
+      <button id="next-step" class="text-button">Próximo →</button>
+    </div>
+
+    <div id="watch-status" class="watch-status small muted">Arquivamento em espera.</div>
+    <ul id="filed-list" class="filed-list"></ul>
+  </section>
+</body>
+</html>
