@@ -7,16 +7,52 @@ Copy, ângulos, obstáculos e rotas argumentativas ficam na memória. Aqui fica 
 
 ## Antes de começar QUALQUER produção
 
+### Atalho operacional: `/watch`
+
+Quando Luigi mandar uma mensagem com `/watch` e caminhos locais do vídeo e das imagens de avatar,
+isso já significa: iniciar a produção completa dentro do chat e dos arquivos, sem pedir a frase
+longa de briefing. **O ângulo decide o fluxo:** Ângulo 3 (Auraly) segue o
+**`PLAYBOOK_MESTRE_AURALY.md`** (ÂNGULO 3 SOMENTE, documento operacional desde 2026-09-07, absorveu o
+`AURALY_AGENT.md` que virou histórico); Ângulos 1, 2 e 4 seguem o fluxo clássico abaixo.
+
+Formato esperado da mensagem:
+```
+/watch
+video: caminho/do/video.mp4
+avatares:
+- caminho/do/avatar_1.jpeg
+- caminho/do/avatar_2.jpeg
+```
+
+Se a mensagem trouxer só os caminhos, inferir o vídeo pelo `.mp4` e os avatares pelos arquivos de
+imagem. Criar a produção em `producao/<slug_da_producao>/`, usando o nome do vídeo como base quando
+Luigi não der um nome.
+
+Autorização implícita deste atalho:
+- rodar a análise do vídeo modelo;
+- modelar a copy para a operação atual;
+- gerar roteiro, ganchos, prompts de imagem, imagens necessárias quando o chat/ferramenta permitir,
+  prompts de vídeo para Flow / Veo 3.1 / Omni Flash e manifest;
+- salvar tudo em pastas locais organizadas por produção e por avatar;
+- entregar também no chat o que Luigi precisa revisar, colar ou usar.
+
+Avatares podem mudar a qualquer momento. Se Luigi mandar novos caminhos de avatar no meio da produção,
+continuar o mesmo processo com os novos avatares, preservando roteiro/copy/hook quando ainda fizerem
+sentido e ajustando só identidade, voz, prompts e pastas do avatar. Não estranhar troca de avatar e
+não reiniciar o processo do zero sem necessidade.
+
 1. Rodar `/watch` no `.mp4`.
 2. **Ler `producao/brandon_angle2/ROTEIRO.md` e `PROMPTS_PRODUCAO.md`.** São o gabarito vivo. Nunca reinventar o formato de memória.
 3. Perguntar o ângulo (1 Korella / 2 FityWell / 3 Auraly / 4 Body Hacks For Men) e confirmar o avatar.
    **Exceção do avatar:** `.mp4` + imagem de avatar na mesma mensagem já decide para quem é,
    ver a seção do Ângulo 3. Nesse caso só resta perguntar o ângulo.
    **Ângulo 3 tem fluxo próprio**, ver a seção no fim deste arquivo. O passo 1 vira opcional lá.
-4. Criar a pasta `producao/<avatar>_<slug>/` e escrever os DOIS arquivos.
+4. **Ângulos 1, 2 e 4:** criar `producao/<avatar>_<slug>/` e escrever os DOIS arquivos.
+   **Ângulo 3:** ver `PLAYBOOK_MESTRE_AURALY.md` — pasta `producao/<slug>/`, sem prefixo de avatar,
+   marcador `pipeline: auraly` no `ROTEIRO.md`.
 
 ## A entrega tem SEMPRE dois arquivos + tudo colado na conversa
-(**três no Ângulo 3**, com o `DM.md`)
+(**Ângulo 3 usa o pipeline Auraly — ver `PLAYBOOK_MESTRE_AURALY.md`**)
 
 Arquivo não substitui o chat, e chat não substitui o arquivo. **Os dois, sempre.**
 
@@ -170,12 +206,12 @@ Só depois disso a copy pode ser modificada e mandada pro Luigi aprovar ou ajust
 - `PLAYBOOK_COMPLETO/11_insights_otimizacao.md` seção 3 → **menos é mais na descrição da ação**, combinação de elementos é o gatilho invisível de moderação, o prop fiel é o ambíguo
 - `restricoes-protocolo` → escrever já evitando o que costuma travar
 
-### P7 · [ÂNGULO 3] ANTES de escrever o `DM.md` e o CTA de STORIES
-- `producao/_dm_auraly/DM_PADRAO.md` → estrutura de 4 beats e rotação
+### P7 · [ÂNGULO 3] ANTES do CTA de STORIES
+- `PLAYBOOK_MESTRE_AURALY.md` §18 → ordem `222 → save → follow → Stories`, os dois modos declarado/curiosidade, as 3 telas
 - `producao/_stories_auraly/STORIES_PADRAO.md` → **os 9 fechamentos validados, as 3 telas do Stories
-  e o `rt_ad` por canal.** O CTA de Stories é aditivo e entra DEPOIS do `222`, nunca no lugar dele
+  e o `rt_ad` por canal.** O CTA de Stories entra DEPOIS do `222` (o SELO vem antes do destino)
 - `banco-obstaculos` → objeções antecipadas
-- Travas de preço: nunca "one-time", nunca "pagamento único"
+- **Preço: NUNCA dito no Ângulo 3**, nem "one-time", nem "pagamento único", nem valor. Mesmo que o vídeo modelo cite preço, ao clonar o beat de preço é cortado (Luigi, 2026-09-07)
 
 ### P8 · Se travar restrição de geração
 - `restricoes-protocolo` → **Regra #0: o Luigi já tentou, nunca sugerir retry**
@@ -273,7 +309,7 @@ stories, pois a revelação vai estar lá e não na DM."*
 - **Custa zero keyframe e zero clipe:** fala mais legenda mais seta de edição no CapCut. Cabe até em
   pacote já fechado.
 - Nove fechamentos validados, as 3 telas do Stories e o `rt_ad` por canal em
-  `producao/_stories_auraly/STORIES_PADRAO.md`. **É o P7 agora, junto com o `DM_PADRAO.md`.**
+  `producao/_stories_auraly/STORIES_PADRAO.md`. **É o P7 agora.**
 - Primeiro pacote sob esta regra: `producao/kris_confissao/`.
 
 **Ângulo de entrada é livre, a ponte pro rosto é obrigatória.** Com **dois avatares** (Kendra Collins
@@ -327,20 +363,16 @@ a ação do gancho com as próprias mãos enquanto fala**. Sem close isolado na 
 O gancho vive no **T1**. Do T2 em diante ela segura a carta e os takes **se reaproveitam** entre
 variações, então cada gancho novo custa **só 1 keyframe + 1 clipe**.
 
-**Terceiro arquivo, `DM.md`:** desde 2026-09-04 é a **mensagem de RECUPERAÇÃO**, não a promessa. Ela
-confirma o **selo**, recolhe pro Stories (que é onde o vídeo disse que a revelação estava) e só então
-oferece o link, sem citar quiz/app. Mais os obstáculos antecipados e o follow-up.
-Mestre em `producao/_dm_auraly/DM_PADRAO.md`.
-O `banco-rotas-argumentativas` e o `banco-obstaculos` continuam sendo consultados normalmente, e
-atendem o beat de fechamento onde ele existir, no vídeo ou no `DM.md`.
+**DM:** canal de recuperação enviado pela plataforma. Sem arquivo `DM.md` na entrega Auraly.
+O `banco-rotas-argumentativas` e o `banco-obstaculos` continuam disponíveis para os beats de fechamento.
 
 ---
 
 ## ÂNGULO 4 (Body Hacks For Men), o que muda em relação aos outros
 
 **O PROCESSO É O MESMO.** `/watch` no modelo, método puzzle, mesma ordem de entrega, mesma estrutura
-de prompts, mesmas travas de realismo, mesmos 5 blocos no prompt de vídeo, **DOIS arquivos** (não tem
-`DM.md` obrigatório como o Ângulo 3). Duração, número de takes e gramática visual saem do vídeo modelo.
+de prompts, mesmas travas de realismo, mesmos 5 blocos no prompt de vídeo, **DOIS arquivos** (o
+Ângulo 3 também não tem `DM.md`, desde 2026-09-04). Duração, número de takes e gramática visual saem do vídeo modelo.
 Só troca o que é **do produto**. Doutrina completa em `angulo4-copy-bodyhacks`.
 
 **Produto:** `Body Hacks for Men 40+`, marca **FITYWELL** (mesma casa do Ângulo 2), um **PLAYBOOK

@@ -89,6 +89,10 @@ RE_H_KEY = re.compile(r"^##\s+(REF-[A-Z0-9\-]+|K\d+[A-Z]?)\s*(?:[·|].*)?$", re.
 RE_H_VID = re.compile(
     r"^###\s+(V\d+[A-Z]?)\s*[·|]\s*(T\d+)\s*[·|]\s*usa\s+(K\d+[A-Z]?)", re.M | re.I)
 
+# Nome do arquivo de prompts de imagem, para os locs das falhas.
+# Classico: PROMPTS_PRODUCAO.md. Auraly: PROMPTS_IMAGEM.md. checar_auraly() troca.
+PROMPTS_FILE = "PROMPTS_PRODUCAO.md"
+
 
 def parse_keyframes(prompts):
     """Casa cada heading K__/REF-__ com o proximo bloco json."""
@@ -157,6 +161,15 @@ def em_negacao(texto, idx, janela=110):
         if pos > ini_frase:
             ini_frase = max(ini_frase, pos + len(sep))
     return bool(re.search(NEGADORES, texto[ini_frase:idx], re.I))
+
+
+# ---------------------------------------------------------------- deteccao de pipeline
+def detectar_pipeline(roteiro):
+    """Retorna 'auraly', 'classico', ou None se nao declarado."""
+    if roteiro is None:
+        return None
+    m = re.search(r"^pipeline:\s*(auraly|classico)\s*$", roteiro[:600], re.M | re.I)
+    return m.group(1).lower() if m else None
 
 
 # ---------------------------------------------------------------- checagens
@@ -248,7 +261,7 @@ def c_fala_literal(takes, videos):
         t = mapa.get(v["take"])
         if t is None:
             falha("fala-literal", "%s aponta pro take %s, que nao existe no ROTEIRO.md"
-                  % (v["id"], v["take"]), "PROMPTS_PRODUCAO.md:%d" % v["linha"])
+                  % (v["id"], v["take"]), (PROMPTS_FILE + ":%d") % v["linha"])
             ruim = True
             continue
         fala_v, mudo_v = fala_do_bloco(v["bloco"])
@@ -256,13 +269,13 @@ def c_fala_literal(takes, videos):
             continue
         if fala_v is None:
             falha("fala-literal", "%s nao tem fala entre aspas no bloco" % v["id"],
-                  "PROMPTS_PRODUCAO.md:%d" % v["linha"])
+                  (PROMPTS_FILE + ":%d") % v["linha"])
             ruim = True
             continue
         if fala_v != t["fala"]:
             falha("fala-literal",
                   "%s NAO e copia literal de %s.\n           roteiro: %s\n           prompt : %s"
-                  % (v["id"], t["id"], t["fala"], fala_v), "PROMPTS_PRODUCAO.md:%d" % v["linha"])
+                  % (v["id"], t["id"], t["fala"], fala_v), (PROMPTS_FILE + ":%d") % v["linha"])
             ruim = True
     if not ruim and videos:
         ok("fala-literal", "%d prompts de video batem palavra por palavra com o roteiro" % len(videos))
@@ -272,14 +285,14 @@ def c_json_valido(kfs):
     ruim = False
     for k in kfs:
         if k["json_raw"] is None:
-            falha("json", "%s nao tem bloco json" % k["id"], "PROMPTS_PRODUCAO.md:%d" % k["linha"])
+            falha("json", "%s nao tem bloco json" % k["id"], (PROMPTS_FILE + ":%d") % k["linha"])
             ruim = True
             continue
         try:
             json.loads(k["json_raw"])
         except Exception as e:
             falha("json", "%s tem JSON invalido: %s" % (k["id"], e),
-                  "PROMPTS_PRODUCAO.md:%d" % k["linha"])
+                  (PROMPTS_FILE + ":%d") % k["linha"])
             ruim = True
     if not ruim and kfs:
         ok("json", "%d prompts de imagem com JSON valido" % len(kfs))
@@ -300,13 +313,13 @@ def c_bandeira(kfs):
         if not re.search(r"\bflag\b|american flag|stars and stripes", blob, re.I):
             falha("bandeira",
                   "%s nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)"
-                  % k["id"], "PROMPTS_PRODUCAO.md:%d" % k["linha"])
+                  % k["id"], (PROMPTS_FILE + ":%d") % k["linha"])
             ruim = True
         elif not re.search(r"\bflag\b|american flag", str(d.get("scene", "")), re.I):
             # em prompt EDITAR a bandeira vive em keep_identical, e isso e o correto
             if not re.search(r"EDITAR do", k["head"], re.I):
                 aviso("bandeira", "%s cita bandeira fora do campo 'scene'" % k["id"],
-                      "PROMPTS_PRODUCAO.md:%d" % k["linha"])
+                      (PROMPTS_FILE + ":%d") % k["linha"])
     if not ruim and kfs:
         ok("bandeira", "bandeira dos EUA presente em todos os keyframes com cenario")
 
@@ -327,7 +340,7 @@ def c_negative(kfs):
         except Exception:
             continue
         neg = str(d.get("negative", ""))
-        loc = "PROMPTS_PRODUCAO.md:%d" % k["linha"]
+        loc = (PROMPTS_FILE + ":%d") % k["linha"]
         if not neg:
             falha("negative", "%s nao tem campo 'negative'" % k["id"], loc)
             ruim = True
@@ -424,7 +437,7 @@ def c_ref_maiuscula(prompts):
             achado = (ref.group(1) or ref.group(2))
             if achado and achado != achado.upper():
                 falha("ref-caixa-alta", "referencia '%s' no titulo de %s nao esta em CAIXA ALTA"
-                      % (achado, m.group(1)), "PROMPTS_PRODUCAO.md:%d" % linha_de(prompts, m.start()))
+                      % (achado, m.group(1)), (PROMPTS_FILE + ":%d") % linha_de(prompts, m.start()))
                 ruim = True
     if not ruim:
         ok("ref-caixa-alta", "referencias nos titulos em caixa alta")
@@ -453,7 +466,7 @@ def c_sem_produto(angulo, kfs):
             if em_negacao(corpo, m.start(), janela=60):
                 continue
             falha("sem-produto", "angulo %d nao mostra produto, mas %s cita '%s': ...%s..."
-                  % (angulo, k["id"], m.group(0), ctx), "PROMPTS_PRODUCAO.md:%d" % k["linha"])
+                  % (angulo, k["id"], m.group(0), ctx), (PROMPTS_FILE + ":%d") % k["linha"])
             ruim = True
     if not ruim and kfs:
         ok("sem-produto", "angulo %d sem produto em quadro" % angulo)
@@ -464,11 +477,11 @@ def c_blocos_video(videos):
     for v in videos:
         if v["bloco"] is None:
             falha("blocos-video", "%s nao tem bloco de prompt" % v["id"],
-                  "PROMPTS_PRODUCAO.md:%d" % v["linha"])
+                  (PROMPTS_FILE + ":%d") % v["linha"])
             ruim = True
             continue
         b = v["bloco"]
-        loc = "PROMPTS_PRODUCAO.md:%d" % v["linha"]
+        loc = (PROMPTS_FILE + ":%d") % v["linha"]
         if not re.search(r"^c[âa]mera:", b, re.M | re.I):
             falha("blocos-video", "%s sem o bloco 'camera:'" % v["id"], loc)
             ruim = True
@@ -546,7 +559,7 @@ def c_angulo3(angulo, arquivos, kfs, takes):
                              r"|unreadable|not visible|hidden", j, re.I):
                 falha("angulo3",
                       "%s mostra retrato/rosto sem obscurecimento. O rosto NUNCA e revelado no video."
-                      % k["id"], "PROMPTS_PRODUCAO.md:%d" % k["linha"])
+                      % k["id"], (PROMPTS_FILE + ":%d") % k["linha"])
     c_angulo3_stories(takes)
     c_angulo3_selo(takes)
     if len([f for f in FALHAS if f[0] == "angulo3"]) == antes:
@@ -751,10 +764,259 @@ def c_angulo4(angulo, arquivos, takes, kfs):
         if m and not em_negacao(corpo, m.start(), janela=60):
             falha("angulo4", "%s cita '%s'. O produto em quadro e um LIVRO FISICO, "
                              "nunca mockup de ebook nem tela." % (k["id"], m.group(0)),
-                  "PROMPTS_PRODUCAO.md:%d" % k["linha"])
+                  (PROMPTS_FILE + ":%d") % k["linha"])
 
     if len([f for f in FALHAS if f[0] == "angulo4"]) == antes:
         ok("angulo4", "travas do angulo 4 respeitadas")
+
+
+# ---------------------------------------------------------------- pipeline Auraly (angulo 3)
+
+# Secoes obrigatorias do ROTEIRO.md hibrido do pipeline Auraly.
+# Ordem nao e checada aqui: a estrutura e mais flexivel que o classico.
+SECOES_ROTEIRO_AURALY = [
+    (r"pipeline:\s*auraly", "marcador pipeline: auraly"),
+    (r"puzzle|Esqueleto preservado", "tabela puzzle / esqueleto preservado"),
+    (r"Roteiro cena a cena", "roteiro cena a cena (com ### T1)"),
+    (r"s[oó]-?fala", "roteiro so-fala"),
+    (r"Notas de produ|compliance", "notas de producao com compliance"),
+]
+
+# Motivo tecnico do follow gate, revogado em 2026-09-04.
+# O motivo correto e de CAMINHO: "so this stays open", nao condicao de entrega da DM.
+FOLLOW_GATE_REVOGADO_PAT = (
+    r"(it may|may not)\s+(let me|be able to)\s+reach you"
+    r"|not let me reach you after"
+    r"|can.?t reach you after you comment"
+)
+
+# Linguagem do funil pre-inversao: DM como destino principal.
+# Desde 2026-09-04 o destino e o Stories, DM e recuperacao.
+FUNIL_PRE_INVERSAO_PAT = (
+    r"send (it|the face|their face) (to your|in a) (DM|message|inbox)"
+    r"|face (will|is going to) (arrive|come|land) in your (DM|messages)"
+    r"|I (will|am going to) send (you|it) (to )?your (DM|messages)"
+    r"|straight into your (DM|messages)"
+)
+
+# Parser de PROMPTS_VIDEO_FLOW.md — formato ## V01A · T1 · K01 descricao
+RE_H_VID_FLOW = re.compile(
+    r"^##\s+(V\d+[A-E]?)\s*[·|]\s*(T\d+)", re.M | re.I)
+
+
+def parse_videos_flow(flow_txt):
+    """Parse PROMPTS_VIDEO_FLOW.md do pipeline Auraly."""
+    out = []
+    hs = list(RE_H_VID_FLOW.finditer(flow_txt))
+    for i, m in enumerate(hs):
+        fim = hs[i + 1].start() if i + 1 < len(hs) else len(flow_txt)
+        corpo = flow_txt[m.start():fim]
+        bm = RE_BLOCO_TXT.search(corpo)
+        out.append({
+            "id": m.group(1), "take": m.group(2),
+            "bloco": bm.group(1) if bm else None,
+            "linha": linha_de(flow_txt, m.start()),
+        })
+    return out
+
+
+def c_secoes_auraly(roteiro):
+    if roteiro is None:
+        return
+    faltando = []
+    for pat, label in SECOES_ROTEIRO_AURALY:
+        if not re.search(r"^#{0,4}.*%s" % pat, roteiro, re.M | re.I):
+            faltando.append(label)
+    if faltando:
+        falha("secoes", "ROTEIRO.md (auraly) sem as secoes: %s" % ", ".join(faltando))
+    else:
+        ok("secoes", "ROTEIRO.md (auraly) com todas as secoes obrigatorias")
+
+
+def c_follow_gate_auraly(takes):
+    """O motivo tecnico do follow gate foi revogado em 2026-09-04."""
+    for t in takes:
+        if not t["fala"]:
+            continue
+        m = re.search(FOLLOW_GATE_REVOGADO_PAT, t["fala"], re.I)
+        if m:
+            falha("angulo3",
+                  "%s usa o motivo TECNICO do follow gate ('%s'), revogado em 2026-09-04. "
+                  "O motivo agora e o CAMINHO: 'so this stays open', nunca a condicao de entrega da DM."
+                  % (t["id"], m.group(0)),
+                  "ROTEIRO.md:%d" % t["linha"])
+
+
+def c_funil_invertido_auraly(roteiro):
+    """Detecta linguagem do funil pre-inversao (DM como destino principal)."""
+    for m in re.finditer(FUNIL_PRE_INVERSAO_PAT, roteiro, re.I):
+        if em_negacao(roteiro, m.start()):
+            continue
+        falha("angulo3",
+              "funil pre-inversao: '%s'. Desde 2026-09-04 o destino e o Stories, DM e recuperacao."
+              % m.group(0),
+              "ROTEIRO.md:%d" % linha_de(roteiro, m.start()))
+
+
+def c_blocos_video_flow(videos, sub_nome):
+    """Verifica os 5 blocos do PROMPTS_VIDEO_FLOW.md (pipeline Auraly)."""
+    ruim = False
+    for v in videos:
+        if v["bloco"] is None:
+            falha("blocos-video", "%s/%s nao tem bloco de prompt" % (sub_nome, v["id"]))
+            ruim = True
+            continue
+        b = v["bloco"]
+        loc = "%s/PROMPTS_VIDEO_FLOW.md:%d" % (sub_nome, v["linha"])
+        if not re.search(r"^c[âa]mera:", b, re.M | re.I):
+            falha("blocos-video", "%s/%s sem o bloco 'camera:'" % (sub_nome, v["id"]), loc)
+            ruim = True
+        if not re.search(r"^som ambiente:", b, re.M | re.I):
+            falha("blocos-video", "%s/%s sem o bloco 'som ambiente:'" % (sub_nome, v["id"]), loc)
+            ruim = True
+        elif not re.search(r"sem m[uú]sica", b, re.I):
+            falha("blocos-video", "%s/%s: som ambiente sem 'sem musica'" % (sub_nome, v["id"]), loc)
+            ruim = True
+        if not re.search(r"o que acontece no v[ií]deo:", b, re.I):
+            falha("blocos-video", "%s/%s sem 'o que acontece no video:'" % (sub_nome, v["id"]), loc)
+            ruim = True
+        _, mudo = fala_do_bloco(b)
+        if not mudo and not re.search(r"lip sync", b, re.I):
+            falha("blocos-video", "%s/%s sem a trava de lip sync" % (sub_nome, v["id"]), loc)
+            ruim = True
+    if not ruim and videos:
+        ok("blocos-video", "%s: %d prompts de video com os 5 blocos corretos"
+           % (sub_nome, len(videos)))
+
+
+def c_fala_literal_flow(takes, videos, sub_nome):
+    """Verifica fala literal nos prompts de video do pipeline Auraly."""
+    mapa = {t["id"]: t for t in takes}
+    ruim = False
+    for v in videos:
+        t = mapa.get(v["take"])
+        if t is None:
+            aviso("fala-literal", "%s/%s aponta pro take %s, nao encontrado no ROTEIRO.md"
+                  % (sub_nome, v["id"], v["take"]))
+            continue
+        fala_v, mudo_v = fala_do_bloco(v["bloco"])
+        if mudo_v or t["mudo"]:
+            continue
+        if fala_v is None:
+            falha("fala-literal", "%s/%s nao tem fala entre aspas no bloco" % (sub_nome, v["id"]),
+                  "%s/PROMPTS_VIDEO_FLOW.md:%d" % (sub_nome, v["linha"]))
+            ruim = True
+            continue
+        if fala_v != t["fala"]:
+            falha("fala-literal",
+                  "%s/%s NAO e copia literal de %s.\n           roteiro: %s\n           prompt : %s"
+                  % (sub_nome, v["id"], t["id"], t["fala"], fala_v),
+                  "%s/PROMPTS_VIDEO_FLOW.md:%d" % (sub_nome, v["linha"]))
+            ruim = True
+    if not ruim and videos:
+        ok("fala-literal", "%s: %d prompts batem com o roteiro" % (sub_nome, len(videos)))
+
+
+def c_preco_auraly(arquivos):
+    """Auraly nunca fala de preco (Luigi, 2026-09-07), nem 'one-time' nem valor."""
+    pats = (r"\bone[- ]time\b", r"pagamento [uú]nico", r"\$\s?\d", r"\bUSD\b",
+            r"\b\d+\s?dollars?\b", r"per month", r"por m[eê]s")
+    ruim = False
+    for nome, txt in arquivos.items():
+        if nome not in ("ROTEIRO.md",):
+            continue
+        for t in parse_takes(txt):
+            if not t["fala"]:
+                continue
+            for pat in pats:
+                m = re.search(pat, t["fala"], re.I)
+                if m:
+                    falha("preco", "%s cita preco/pagamento na fala ('%s'). Auraly nunca fala de preco."
+                          % (t["id"], m.group(0)), "ROTEIRO.md:%d" % t["linha"])
+                    ruim = True
+    if not ruim:
+        ok("preco", "nenhuma fala cita preco")
+
+
+def checar_auraly(pasta, roteiro):
+    """Valida o pipeline Auraly (marcador pipeline: auraly, angulo 3).
+
+    Nao exige PROMPTS_PRODUCAO.md nem DM.md.
+    Aceita nomes descritivos de imagem e video.
+    Prompts de video ficam em subpastas de avatar/data.
+    Se houver PROMPTS_IMAGEM.md, valida os JSON de imagem.
+    """
+    global PROMPTS_FILE
+    ganchos = ler(os.path.join(pasta, "GANCHOS_VISUAIS.md"))
+    prompts_img = ler(os.path.join(pasta, "PROMPTS_IMAGEM.md"))
+    if roteiro is None:
+        falha("arquivos", "ROTEIRO.md nao existe")
+    if ganchos is None:
+        aviso("arquivos", "GANCHOS_VISUAIS.md nao encontrado (esperado no pipeline Auraly)")
+    if prompts_img is None:
+        aviso("arquivos", "PROMPTS_IMAGEM.md nao encontrado (esperado antes da geracao de imagem)")
+
+    arquivos = {}
+    for nome in ("ROTEIRO.md", "GANCHOS_VISUAIS.md", "PROMPTS_IMAGEM.md"):
+        t = ler(os.path.join(pasta, nome))
+        if t is not None:
+            arquivos[nome] = t
+
+    takes = parse_takes(roteiro) if roteiro else []
+
+    c_travessao(arquivos, takes)
+    c_keyword(3, arquivos, takes)
+    c_palavras_por_take(takes)
+    c_secoes_auraly(roteiro)
+    c_angulo3_stories(takes)
+    c_angulo3_selo(takes)
+    c_follow_gate_auraly(takes)
+    c_preco_auraly(arquivos)
+    c_patch(arquivos)
+    if roteiro:
+        c_funil_invertido_auraly(roteiro)
+
+    # PROMPTS_IMAGEM.md: valida os JSON de imagem com os mesmos checks do classico
+    if prompts_img:
+        PROMPTS_FILE = "PROMPTS_IMAGEM.md"
+        kfs = parse_keyframes(prompts_img)
+        if kfs:
+            c_json_valido(kfs)
+            c_bandeira(kfs)
+            c_negative(kfs)
+            c_sem_produto(3, kfs)
+            c_gerar_do_zero(kfs)
+            c_ref_maiuscula(prompts_img)
+        else:
+            aviso("arquivos", "PROMPTS_IMAGEM.md sem headings K__/REF-__ reconheciveis")
+        PROMPTS_FILE = "PROMPTS_PRODUCAO.md"
+
+    # Registro divino (mesmo check do classico)
+    antes = len([f for f in FALHAS if f[0] == "angulo3"])
+    for nome, txt in arquivos.items():
+        for m in re.finditer(r"\bwitch\w*|\bspell\b|circle of protection|feiti[cç]o|bruxa", txt, re.I):
+            if em_negacao(txt, m.start()):
+                continue
+            falha("angulo3", "registro OCULTO detectado ('%s'). A lei e: divino, nunca oculto."
+                  % m.group(0), "%s:%d" % (nome, linha_de(txt, m.start())))
+    if len([f for f in FALHAS if f[0] == "angulo3"]) == antes and takes:
+        ok("angulo3", "travas do angulo 3 (auraly) respeitadas")
+
+    # Varrer subpastas de avatar para PROMPTS_VIDEO_FLOW.md
+    for sub in sorted(glob.glob(os.path.join(pasta, "*"))):
+        if not os.path.isdir(sub):
+            continue
+        flow = ler(os.path.join(sub, "PROMPTS_VIDEO_FLOW.md"))
+        if flow is None:
+            continue
+        sub_nome = os.path.basename(sub)
+        videos_flow = parse_videos_flow(flow)
+        if videos_flow:
+            c_blocos_video_flow(videos_flow, sub_nome)
+            if takes:
+                c_fala_literal_flow(takes, videos_flow, sub_nome)
+
+    return takes
 
 
 # ---------------------------------------------------------------- runner
@@ -762,6 +1024,25 @@ def checar(pasta):
     global FALHAS, AVISOS, OKS
     FALHAS, AVISOS, OKS = [], [], []
     roteiro = ler(os.path.join(pasta, "ROTEIRO.md"))
+
+    # Roteamento por marcador de pipeline
+    if detectar_pipeline(roteiro) == "auraly":
+        takes = checar_auraly(pasta, roteiro)
+        print("=" * 82)
+        print("  %s   (pipeline: auraly | angulo 3 | %d takes)" % (pasta, len(takes)))
+        print("=" * 82)
+        for c, m in OKS:
+            print("  [OK]     %-16s %s" % (c, m))
+        for c, m, loc in AVISOS:
+            print("  [AVISO]  %-16s %s%s" % (c, m, ("  (%s)" % loc) if loc else ""))
+        for c, m, loc in FALHAS:
+            print("  [FALHA]  %-16s %s%s" % (c, m, ("\n           -> %s" % loc) if loc else ""))
+        print("-" * 82)
+        print("  %d ok, %d avisos, %d FALHAS" % (len(OKS), len(AVISOS), len(FALHAS)))
+        print()
+        return len(FALHAS)
+
+    # Pipeline classico (angulos 1, 2, 4 — e angulo 3 sem marcador, que reprova por arquivos)
     prompts = ler(os.path.join(pasta, "PROMPTS_PRODUCAO.md"))
     if roteiro is None:
         falha("arquivos", "ROTEIRO.md nao existe")

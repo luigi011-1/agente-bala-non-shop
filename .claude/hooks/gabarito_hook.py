@@ -23,18 +23,22 @@ GABARITO = """[LEMBRETE AUTOMATICO DE PROCESSO - operacao de videos]
 PORTOES DE CONSULTA (secao propria no CLAUDE.md). Ler ANTES de agir, nunca depois:
 P1 antes do /watch  ·  P2 antes de tocar na copy  ·  P3 antes de entregar o roteiro
 P4 antes dos ganchos (angulo 3)  ·  P5 antes do primeiro JSON  ·  P6 antes dos prompts de video
-P7 antes do DM.md  ·  P8 se travar restricao  ·  P9 ao fechar  ·  P10 depois do video no ar
+P7 antes do CTA de STORIES  ·  P8 se travar restricao  ·  P9 ao fechar  ·  P10 depois do video no ar
 
 Antes de entregar qualquer coisa de producao, conferir o gabarito, nao a lembranca dele.
 
 1. LER `producao/brandon_angle2/ROTEIRO.md` e `PROMPTS_PRODUCAO.md`. E o gabarito vivo.
    (Copiar dali o FORMATO, nunca o conteudo. Duas praticas de la foram revogadas:
     frase filler e um keyframe por take.)
-2. ESCREVER OS DOIS ARQUIVOS em `producao/<avatar>_<slug>/` E colar tudo na conversa.
-   ANGULO 3: ANTES dos prompts, mandar SUGESTOES DE GANCHO VISUAL do mesmo modelo (copy identica,
-   so o hook muda) e esperar o Luigi escolher.
-   ANGULO 3 (Auraly) = TRES arquivos (mais DM.md). O PROCESSO E O MESMO dos angulos 1 e 2:
-   duracao, takes e gramatica visual saem do VIDEO MODELO. So troca o que e do produto.
+2. ESCREVER OS ARQUIVOS em `producao/<slug>/` E colar tudo na conversa.
+   ANGULO 3 (Auraly): segue o `PLAYBOOK_MESTRE_AURALY.md`, documento operacional. Pasta
+   `producao/<slug>/` sem prefixo de avatar, `ROTEIRO.md` comeca com `pipeline: auraly`,
+   arquivos ROTEIRO.md + GANCHOS_VISUAIS.md + PROMPTS_IMAGEM.md. SEM DM.md.
+   ANTES dos prompts, mandar SUGESTOES DE GANCHO VISUAL (copy identica, so o hook muda) e esperar
+   a escolha. Geracao de imagem: identificar o Modo (A automacao total / B abre Chrome mas nao
+   interage / C sem navegador). No Modo B ou C, entregar o `pacote_browser/<avatar>/` do playbook
+   secao 13.0, nunca alegar que anexou/gerou/baixou algo sem observar.
+   Duracao, takes e gramatica visual saem do VIDEO MODELO. So troca o que e do produto.
    Arquivo nao substitui chat, chat nao substitui arquivo.
 
 ROTEIRO.md, nesta ordem: cabecalho / tabela de esqueleto preservado (Original x Adaptado) /
