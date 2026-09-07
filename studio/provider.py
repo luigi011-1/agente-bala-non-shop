@@ -1,4 +1,6 @@
-"""Text-only provider: OpenAI Responses with a Google Gemini fallback on typed 429.
+"""Text-only provider chain. Tries each configured backend in order and falls through
+on any transient/quota failure, so one provider being down or out of quota never blocks
+a step. Backends: OpenAI Responses, Groq (OpenAI-compatible, free tier), Google Gemini.
 
 Image generation was removed: every image is now made by the operator in their own
 ChatGPT browser session (see browser_queue.py and the chrome-extension).
@@ -22,21 +24,27 @@ from .rules import POLICY
 
 _key = os.environ.get('OPENAI_API_KEY', '')
 _gemini_key = os.environ.get('GEMINI_API_KEY', '')
+_groq_key = os.environ.get('GROQ_API_KEY', '')
 DEFAULT_MODEL = 'gpt-6-astra'
 DEFAULT_GEMINI_MODEL = 'gemini-3.5-flash'
+# Groq free tier. Confirm current ids at console.groq.com/docs/models.
+GROQ_TEXT_MODEL = 'llama-3.3-70b-versatile'
+GROQ_VISION_MODEL = 'meta-llama/llama-4-scout-17b-16e-instruct'
 DEFAULT_EFFORT = 'medium'
 _model = os.environ.get('AURALY_TEXT_MODEL', DEFAULT_MODEL)
 _effort = DEFAULT_EFFORT
 _verification = None
 _text_provider = 'auto'
+# Order tried in 'auto' mode; only providers with a key are used.
+AUTO_ORDER = ('openai', 'groq', 'gemini')
 _lock = threading.Lock()
 
 # 429 may be a billing wall: switch provider once, never blindly retry it.
 TRANSIENT_STATUS = (408, 429, 500, 502, 503, 504, 520, 522, 524)
 
 
-def configure(key=None, model=None, effort=None, gemini_key=None, text_provider=None):
-    global _key, _model, _effort, _verification, _gemini_key, _text_provider
+def configure(key=None, model=None, effort=None, gemini_key=None, groq_key=None, text_provider=None):
+    global _key, _model, _effort, _verification, _gemini_key, _groq_key, _text_provider
     with _lock:
         if effort and effort not in ['low', 'medium', 'high', 'xhigh', 'max']:
             raise ValueError('Nível de raciocínio inválido.')
@@ -44,12 +52,14 @@ def configure(key=None, model=None, effort=None, gemini_key=None, text_provider=
             _key = key.strip()
         if gemini_key is not None:
             _gemini_key = gemini_key.strip()
+        if groq_key is not None:
+            _groq_key = groq_key.strip()
         if model:
             _model = model.strip()
         if effort:
             _effort = effort
         if text_provider is not None:
-            if text_provider not in ('auto', 'openai', 'gemini'):
+            if text_provider not in ('auto', 'openai', 'gemini', 'groq'):
                 raise ValueError('Provedor de texto inválido.')
             _text_provider = text_provider
         _verification = None
@@ -62,10 +72,11 @@ def load_preferences():
         secrets = json.loads(credentials.unprotect(value['protected_credentials'])) if value.get('protected_credentials') else value
         configure(key=secrets.get('openai_key'),
                   gemini_key=secrets.get('gemini_key'),
+                  groq_key=secrets.get('groq_key'),
                   text_provider=value.get('text_provider', 'auto'),
                   model=value.get('text_model', DEFAULT_MODEL),
                   effort=value.get('reasoning_effort', DEFAULT_EFFORT))
-        if any(k in value for k in ('openai_key', 'gemini_key')):
+        if any(k in value for k in ('openai_key', 'gemini_key', 'groq_key')):
             save_preferences()
 
 
@@ -74,23 +85,24 @@ def save_preferences():
                      {'text_model': _model, 'reasoning_effort': _effort,
                       'text_provider': _text_provider,
                       'protected_credentials': credentials.protect(json.dumps({
-                          'openai_key': _key, 'gemini_key': _gemini_key}))})
+                          'openai_key': _key, 'gemini_key': _gemini_key, 'groq_key': _groq_key}))})
 
 
 def settings():
     return {'configured': bool(_key), 'gemini_configured': bool(_gemini_key),
+            'groq_configured': bool(_groq_key),
             'text_model': _model, 'reasoning_effort': _effort, 'verification': _verification,
-            'gemini_model': DEFAULT_GEMINI_MODEL, 'text_provider': _text_provider,
+            'gemini_model': DEFAULT_GEMINI_MODEL, 'groq_model': GROQ_TEXT_MODEL,
+            'text_provider': _text_provider,
             'key_storage': 'Protegidas por Windows DPAPI, vinculadas ao usuário atual.'}
 
 
 def safe_error(value):
     text = str(value)
-    if _key:
-        text = text.replace(_key, '[CHAVE OCULTA]')
-    if _gemini_key:
-        text = text.replace(_gemini_key, '[CHAVE OCULTA]')
-    return re.sub(r'(sk-|AIza)[A-Za-z0-9_\-]+', '[CHAVE OCULTA]', text)[:1200]
+    for secret in (_key, _gemini_key, _groq_key):
+        if secret:
+            text = text.replace(secret, '[CHAVE OCULTA]')
+    return re.sub(r'(sk-|AIza|gsk_)[A-Za-z0-9_\-]+', '[CHAVE OCULTA]', text)[:1200]
 
 
 def verify_access():
@@ -133,7 +145,7 @@ def require_key():
 
 
 def require_think_key():
-    available = {'openai': _key, 'gemini': _gemini_key}
+    available = {'openai': _key, 'gemini': _gemini_key, 'groq': _groq_key}
     if not (any(available.values()) if _text_provider == 'auto' else available[_text_provider]):
         raise ValueError('Configure a chave do provedor de texto selecionado em Conexão.')
 
@@ -194,13 +206,14 @@ def data_url(path):
     return f'data:{mime};base64,' + base64.b64encode(Path(path).read_bytes()).decode()
 
 
-def _openai_think(pid, instruction, data, images=(), context=False):
+def _openai_think(pid, instruction, data, images=(), context=False, creative=False):
     inputs = [{'type': 'input_text', 'text': 'Analyze the following input data and return the result as a valid JSON object.\n' +
                json.dumps(data, ensure_ascii=False)}]
     for path in images:
         inputs += [{'type': 'input_text', 'text': f'FRAME/REFERENCE: {Path(path).name}'},
                    {'type': 'input_image', 'image_url': data_url(path), 'detail': 'high'}]
     docs = (store.folder(pid) / 'sources.md').read_text(encoding='utf-8') if context else ''
+    # Astra is a reasoning model and ignores temperature; the creative brief is carried in the prompt.
     body = request(pid, 'responses', json={
         'model': _model, 'store': False, 'reasoning': {'effort': _effort},
         'instructions': POLICY + '\n' + instruction + '\nREFERENCE DOCUMENTS:\n' + docs,
@@ -216,7 +229,7 @@ def _openai_think(pid, instruction, data, images=(), context=False):
         raise ValueError('O modelo não retornou JSON válido; etapa preservada para revisão.') from None
 
 
-def _gemini_think(pid, instruction, data, images=(), context=False):
+def _gemini_think(pid, instruction, data, images=(), context=False, creative=False):
     with _lock:
         key = _gemini_key
     if not key:
@@ -252,7 +265,7 @@ def _gemini_think(pid, instruction, data, images=(), context=False):
             'generationConfig': {
                 'responseMimeType': 'application/json',
                 'maxOutputTokens': 14000,
-                'temperature': 0.7,
+                'temperature': 1.0 if creative else 0.7,
             },
         }
         with httpx.Client(timeout=httpx.Timeout(600, connect=20)) as client:
@@ -301,12 +314,80 @@ def _gemini_think(pid, instruction, data, images=(), context=False):
             store.save(p)
 
 
+def _groq_think(pid, instruction, data, images=(), context=False, creative=False):
+    """Groq (OpenAI-compatible). Free tier; vision model when images are attached."""
+    with _lock:
+        key = _groq_key
+    if not key:
+        raise ValueError('Configure sua chave Groq em Conexão.')
+    docs = (store.folder(pid) / 'sources.md').read_text(encoding='utf-8') if context else ''
+    system_text = POLICY + '\n' + instruction + '\nREFERENCE DOCUMENTS:\n' + docs
+    lead = 'Analyze the following input data and return the result as a valid JSON object.\n' + json.dumps(data, ensure_ascii=False)
+    if images:
+        user_content = [{'type': 'text', 'text': lead}]
+        for path in images:
+            user_content += [{'type': 'text', 'text': f'FRAME/REFERENCE: {Path(path).name}'},
+                             {'type': 'image_url', 'image_url': {'url': data_url(path)}}]
+    else:
+        user_content = lead
+    model = GROQ_VISION_MODEL if images else GROQ_TEXT_MODEL
+    payload = {'model': model, 'max_tokens': 14000, 'temperature': 1.0 if creative else 0.4,
+               'messages': [{'role': 'system', 'content': system_text +
+                             '\n\nReturn ONLY a valid JSON object. No markdown fences, no prose.'},
+                            {'role': 'user', 'content': user_content}]}
+    if not images:
+        payload['response_format'] = {'type': 'json_object'}
+
+    call = {'route': 'groq/chat', 'started': store.now(), 'status': 'sent', 'model': model}
+    with store.LOCK:
+        p = store.get(pid)
+        check_call_allowed(p, 'groq/chat')
+        p['calls'].append(call)
+        index = len(p['calls']) - 1
+        store.save(p)
+    try:
+        with httpx.Client(timeout=httpx.Timeout(600, connect=20)) as client:
+            r = client.post('https://api.groq.com/openai/v1/chat/completions',
+                            headers={'Authorization': f'Bearer {key}'}, json=payload)
+        if r.is_error:
+            try:
+                detail = str(r.json().get('error', {}).get('message', 'Falha no provedor.'))
+            except ValueError:
+                detail = 'Falha no provedor.'
+            call.update(http_status=r.status_code, error_detail=safe_error(detail))
+            raise ProviderError(safe_error(f'Groq HTTP {r.status_code}: {detail[:800]}'),
+                                r.status_code, retry_after=r.headers.get('retry-after'))
+        body = r.json()
+        call.update(status='completed', finished=store.now(), usage=body.get('usage'))
+        choices = body.get('choices', [])
+        if not choices:
+            raise ValueError('Groq não retornou resposta; etapa preservada para revisão.')
+        text = (choices[0].get('message', {}).get('content') or '').strip()
+        if text.startswith('```'):
+            text = re.sub(r'^```(?:json)?\s*', '', text)
+            text = re.sub(r'\s*```\s*$', '', text)
+        try:
+            return json.loads(text)
+        except ValueError:
+            raise ValueError('Groq não retornou JSON válido; etapa preservada para revisão.') from None
+    except Exception as exc:
+        call['status'] = 'uncertain' if isinstance(exc, httpx.TransportError) else 'failed'
+        if isinstance(exc, ProviderError):
+            raise
+        raise ValueError(safe_error(exc)) from None
+    finally:
+        with store.LOCK:
+            p = store.get(pid)
+            p['calls'][index] = call
+            store.save(p)
+
+
 def retry_wait(pid, seconds, provider_name, attempt):
     """Visible, interruptible backoff. Does not count as an API request."""
     if seconds > 120:
         raise ValueError('Provedor pediu espera superior a 120s. Checkpoints salvos; retome mais tarde.')
     store.change(pid, waiting_provider=provider_name, retry_attempt=attempt, retry_wait_seconds=seconds)
-    store.event(pid, f'{provider_name} temporariamente indisponível. Nova tentativa {attempt}/3 em {seconds:.0f}s; resultados salvos.')
+    store.event(pid, f'{provider_name} temporariamente indisponível. Nova tentativa em {seconds:.0f}s; resultados salvos.')
     try:
         for _ in range(max(1, math.ceil(seconds))):
             if store.get(pid).get('pause_requested'):
@@ -316,29 +397,30 @@ def retry_wait(pid, seconds, provider_name, attempt):
         store.change(pid, waiting_provider=None)
 
 
-def think(pid, instruction, data, images=(), context=False):
+def think(pid, instruction, data, images=(), context=False, creative=False):
     require_think_key()
-    available = {'openai': _key, 'gemini': _gemini_key}
-    order = [k for k, key in available.items() if key] if _text_provider == 'auto' else [_text_provider]
+    available = {'openai': _key, 'gemini': _gemini_key, 'groq': _groq_key}
+    order = [k for k in AUTO_ORDER if available[k]] if _text_provider == 'auto' else [_text_provider]
     # Persist the successful fallback for this project; explicit selection overrides it.
     sticky = store.get(pid).get('active_text_provider')
     if _text_provider == 'auto' and sticky in order:
         order = order[order.index(sticky):]
-    functions = {'openai': _openai_think, 'gemini': _gemini_think}
+    functions = {'openai': _openai_think, 'gemini': _gemini_think, 'groq': _groq_think}
     last = None
     for position, name in enumerate(order):
         store.change(pid, active_text_provider=name)
-        for attempt in range(3):
+        # Patient on demand spikes (503 etc.); 429 is a quota/billing wall, move on at once.
+        for attempt in range(5):
             check_call_allowed(store.get(pid), 'responses')
             try:
-                return functions[name](pid, instruction, data, images, context)
+                return functions[name](pid, instruction, data, images, context, creative)
             except ProviderError as exc:
                 last = exc
                 if exc.status not in TRANSIENT_STATUS:
                     raise
-                if exc.status == 429 or attempt == 2:
+                if exc.status == 429 or attempt == 4:
                     break
-                retry_wait(pid, max(exc.retry_after, 10 * 2 ** attempt + random.uniform(0, 3)), name, attempt + 2)
+                retry_wait(pid, max(exc.retry_after, min(60, 8 * 2 ** attempt + random.uniform(0, 3))), name, attempt + 2)
         if position + 1 < len(order):
             store.event(pid, f'{name} indisponível (HTTP {last.status}). Continuando com {order[position + 1]}; cobrança conforme provedor.')
     raise last

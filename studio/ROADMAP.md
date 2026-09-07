@@ -2,6 +2,20 @@
 
 ## Atualização 0.7.0 — 2026-09-06
 
+### Fila de provedores + ganchos criativos
+
+- **Fila de provedores de texto** no `provider.py`: `openai → groq → gemini` (só os com
+  chave), cai pro próximo em qualquer falha/cota. Adaptador Groq novo (OpenAI-compatível,
+  tier grátis: `llama-3.3-70b-versatile` texto, `llama-4-scout` visão). Retry de 503 mais
+  paciente: 5 tentativas com backoff travado em 60s.
+- **Botão "＋ Gerar mais ideias"** nos ganchos (`engine.more_hooks`, `POST
+  /projects/{id}/hooks/more`): mantém os marcados, gera mecanismos novos, acumula
+  `hooks_history` como lista "não repita". IDs estáveis via `hooks_seq`.
+- Roteiro e ganchos rodam com `creative=True` (temperatura alta em Gemini/Groq; no Astra
+  a variação vem do prompt).
+
+### Pipeline único (base 0.7.0)
+
 - Pedido do Luigi: um pipeline único, linear, com a geração feita por ele no ChatGPT do
   Chrome. Fim do caminho de API de imagem.
 - **Removidos**: geração/edição de imagem OpenAI, todo o adaptador Kie.ai (imagem e

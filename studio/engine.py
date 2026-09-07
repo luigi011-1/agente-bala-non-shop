@@ -170,50 +170,90 @@ def script(pid):
         {'analysis': p['analysis'], 'clarification': p.get('clarification', ''),
          'transcript': p['transcript'], 'direction': p['direction'],
          'previous_script': p.get('script') if p.get('copy_note') else None},
-        context=True)
+        context=True, creative=True)
     validate_script(result)
     store.change(pid, script=result, status='script_ready')
     store.write_json(store.folder(pid) / 'ROTEIRO.json', result)
     store.event(pid, 'Roteiro pronto para edição e aprovação. As falas só serão fixadas ao aprovar.')
 
 
-def hooks(pid):
-    p = store.get(pid)
-    result = ai.think(pid,
-        'Return JSON {hooks:[{id:"H1",title:string,mechanism:string,action:string,prop:string,'
-        'congruence:string,screen_text:string,risk:string,validated:boolean,reference:string}]}. '
-        'Exactly 8-10 varied visual hook options H1,H2,... in Portuguese except screen_text. '
-        'All keep exact approved T1 speech. The hooks are AVATAR-AGNOSTIC: the chosen hooks are '
-        'produced for every avatar, so describe them without naming any avatar. Each avatar anchor '
-        'photo already shows the scene kit and a holographic SOULMATE card on the table; design '
-        'every hook from that baseline. Majority use the SOULMATE card as the TARGET of the action. '
-        'Mix sourced and novel mechanisms, label actual evidence and avoid claiming an invented '
-        'hook is validated. One shot, the avatar performs the action, fits T1, initial state can be '
-        'generated.\n'
-        'FORMAT: single flat shot, camera at chest height across the table. The avatar chest-up in '
-        'the top half, table in the lower third of the SAME frame. She performs the hook action '
-        'with her own hands while speaking. No isolated close-up on the table, no separate B-roll. '
-        'The hook lives in T1; from T2 onward she holds the SOULMATE card and those takes are '
-        'SHARED (body and CTA), so each new hook costs only one image.\n'
-        'REGISTER: divine, manifestation, faith. Props that read as manifestation enter (cards, '
-        'crystals, candle, incense, bowl with petals). Props or actions that read as pact do not '
-        '(no witch, no spell circle, no dark ritual, no inverted symbols). The test is the '
-        'READING, not the object.\n'
-        'FACE NEVER REVEALED: any hook involving portrait, photo, polaroid must have the face '
-        'obscured as a physical property of the object (out-of-focus print, frosted glass, '
-        'partial reveal, silhouette), never as camera blur.\n'
-        'Order by congruence with the approved copy. Pure clickbait hooks last, marked as such.',
-        {'script': p['script'], 'analysis': p['analysis'], 'direction': p['direction']},
-        context=True)
-    hs = result.get('hooks', [])
-    if not 8 <= len(hs) <= 10 or any(h.get('id') != f'H{i}' for i, h in enumerate(hs, 1)):
-        raise ValueError('O modelo não entregou 8–10 ganchos com identificadores válidos.')
+HOOKS_INSTRUCTION = (
+    'Return JSON {hooks:[{title:string,mechanism:string,action:string,prop:string,'
+    'congruence:string,screen_text:string,risk:string,validated:boolean,reference:string}]}. '
+    'Portuguese except screen_text. Do NOT number the hooks; the system assigns ids. '
+    'All keep the exact approved T1 speech. The hooks are AVATAR-AGNOSTIC: the chosen hooks are '
+    'produced for every avatar, so describe them without naming any avatar. Each avatar anchor '
+    'photo already shows the scene kit and a holographic SOULMATE card on the table; design '
+    'every hook from that baseline. Majority use the SOULMATE card as the TARGET of the action. '
+    'Mix sourced and novel mechanisms, label actual evidence and avoid claiming an invented '
+    'hook is validated. One shot, the avatar performs the action, fits T1, initial state can be '
+    'generated.\n'
+    'FORMAT: single flat shot, camera at chest height across the table. The avatar chest-up in '
+    'the top half, table in the lower third of the SAME frame. She performs the hook action '
+    'with her own hands while speaking. No isolated close-up on the table, no separate B-roll. '
+    'The hook lives in T1; from T2 onward she holds the SOULMATE card and those takes are '
+    'SHARED (body and CTA), so each new hook costs only one image.\n'
+    'REGISTER: divine, manifestation, faith. Props that read as manifestation enter (cards, '
+    'crystals, candle, incense, bowl with petals). Props or actions that read as pact do not '
+    '(no witch, no spell circle, no dark ritual, no inverted symbols). The test is the '
+    'READING, not the object.\n'
+    'FACE NEVER REVEALED: any hook involving portrait, photo, polaroid must have the face '
+    'obscured as a physical property of the object (out-of-focus print, frosted glass, '
+    'partial reveal, silhouette), never as camera blur.\n'
+    'CREATIVITY: each hook is a genuinely different visual MECHANISM, not a rewording of another. '
+    'Anchor every hook to a specific beat/prop/moment of THIS video, not to a generic template. '
+    'Order by congruence with the approved copy. Pure clickbait hooks last, marked as such.')
+
+
+def _validate_hooks(hs):
+    if not isinstance(hs, list) or not hs:
+        raise ValueError('O modelo não entregou ganchos.')
     for h in hs:
         if any(not isinstance(h.get(k), str) or not h[k] for k in
                ['title', 'mechanism', 'action', 'prop', 'congruence', 'screen_text', 'risk', 'reference']):
             raise ValueError('Gancho com campos obrigatórios ausentes.')
-    store.change(pid, hooks=hs, status='hooks_ready')
-    store.event(pid, 'Selecione até 5 ganchos visuais. Eles valem para todos os avatares.')
+    return hs
+
+
+def _hook_brief(h):
+    return {k: h.get(k, '') for k in ('title', 'mechanism', 'action', 'prop')}
+
+
+def hooks(pid):
+    p = store.get(pid)
+    result = ai.think(pid, HOOKS_INSTRUCTION + '\nProduce 8 to 10 varied options now.',
+        {'script': p['script'], 'analysis': p['analysis'], 'direction': p['direction']},
+        context=True, creative=True)
+    hs = _validate_hooks(result.get('hooks', []))[:10]
+    if len(hs) < 8:
+        raise ValueError('O modelo não entregou 8–10 ganchos.')
+    hs = [{**h, 'id': f'H{i}'} for i, h in enumerate(hs, 1)]
+    store.change(pid, hooks=hs, hooks_seq=len(hs), hooks_history=[], hooks_keep=[],
+                 selected=[], status='hooks_ready')
+    store.event(pid, 'Selecione até 5 ganchos visuais. "Gerar mais ideias" mantém os marcados e traz novos.')
+
+
+def more_hooks(pid):
+    """Keep the operator's picks, swap the rest for fresh mechanisms that avoid everything shown."""
+    p = store.get(pid)
+    kept_ids = set(p.get('hooks_keep', []))
+    kept = [h for h in p.get('hooks', []) if h['id'] in kept_ids]
+    dropped = [h for h in p.get('hooks', []) if h['id'] not in kept_ids]
+    avoid = p.get('hooks_history', []) + [_hook_brief(h) for h in dropped]
+    result = ai.think(pid, HOOKS_INSTRUCTION +
+        '\nProduce 8 NEW options. LOCKED IN (do not restate; make the new ones complement these '
+        'without clashing): ' + json.dumps([_hook_brief(h) for h in kept], ensure_ascii=False) +
+        '\nUSED UP — every mechanism, prop and action below is spent, invent genuinely different '
+        'ones: ' + json.dumps(avoid, ensure_ascii=False),
+        {'script': p['script'], 'analysis': p['analysis'], 'direction': p['direction']},
+        context=True, creative=True)
+    new = _validate_hooks(result.get('hooks', []))[:10]
+    seq = p.get('hooks_seq', len(p.get('hooks', [])))
+    new = [{**h, 'id': f'H{seq + i}'} for i, h in enumerate(new, 1)]
+    store.change(pid, hooks=kept + new, hooks_seq=seq + len(new), hooks_history=avoid,
+                 status='hooks_ready',
+                 selected=[s for s in p.get('selected', []) if s in kept_ids])
+    store.event(pid, f'{len(new)} ganchos novos. {len(kept)} marcados mantidos; ideias anteriores evitadas.')
 
 
 def imageset(pid):
@@ -247,4 +287,4 @@ def imageset(pid):
 
 
 ACTIONS = {'extract': extract, 'analyze': analyze, 'script': script, 'hooks': hooks,
-           'imageset': imageset}
+           'more_hooks': more_hooks, 'imageset': imageset}

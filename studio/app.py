@@ -217,9 +217,10 @@ def config():
 
 
 class Settings(BaseModel):
-    text_provider: str | None = Field(default=None, pattern='^(auto|openai|gemini)$')
+    text_provider: str | None = Field(default=None, pattern='^(auto|openai|gemini|groq)$')
     api_key: str | None = Field(default=None, max_length=500)
     gemini_key: str | None = Field(default=None, max_length=500)
+    groq_key: str | None = Field(default=None, max_length=500)
     text_model: str = Field(default=provider.DEFAULT_MODEL, pattern=r'^[a-zA-Z0-9._-]+$', max_length=80)
     reasoning_effort: str = Field(default='medium', pattern=r'^(low|medium|high|xhigh|max)$')
 
@@ -229,7 +230,8 @@ def set_config(data: Settings):
     if any(p.get('busy') for p in store.all_projects()):
         raise ValueError('Aguarde as etapas em andamento antes de trocar a conexão.')
     provider.configure(data.api_key, data.text_model, data.reasoning_effort,
-                       gemini_key=data.gemini_key, text_provider=data.text_provider)
+                       gemini_key=data.gemini_key, groq_key=data.groq_key,
+                       text_provider=data.text_provider)
     provider.save_preferences()
     return provider.settings()
 
@@ -444,6 +446,26 @@ def adjust_copy(pid: str, data: Approval):
                      last_action='script', pause_requested=False)
         POOL.submit(worker, pid, 'script')
     return {'started': 'script'}
+
+
+class MoreHooks(BaseModel):
+    keep: list[str] = Field(default_factory=list, max_length=5)
+
+
+@app.post('/api/projects/{pid}/hooks/more')
+def more_hooks(pid: str, data: MoreHooks):
+    with store.LOCK:
+        p = store.get(pid)
+        if p['busy'] or p['status'] not in ('hooks_ready', 'hooks_selected'):
+            raise ValueError('Os ganchos precisam estar na tela de escolha.')
+        ids = {h['id'] for h in p.get('hooks', [])}
+        if any(k not in ids for k in data.keep):
+            raise ValueError('Gancho a manter não existe mais na lista.')
+        provider.require_think_key()
+        store.change(pid, hooks_keep=list(dict.fromkeys(data.keep)), busy=True, error=None,
+                     last_action='more_hooks', pause_requested=False)
+        POOL.submit(worker, pid, 'more_hooks')
+    return {'started': 'more_hooks'}
 
 
 class CallLimits(BaseModel):

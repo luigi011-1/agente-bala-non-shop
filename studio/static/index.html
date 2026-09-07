@@ -33,11 +33,14 @@
   </dialog>
   <dialog id="settings-dialog"><form id="settings-form">
     <div class="dialog-heading"><div><div class="eyebrow">CONEXÃO</div><h2>Seu estúdio, conectado.</h2></div><button type="button" class="icon-button" data-action="close-settings" aria-label="Fechar">×</button></div>
-    <p class="muted">A extração /watch roda no computador. Análise, roteiro, ganchos e conjunto de imagens usam OpenAI ou Google Gemini (fallback). Cobrança nas suas contas de API. A geração de imagem é feita por você, no ChatGPT do Chrome.</p>
-    <label>Provedor de análise, roteiro e ganchos<select id="text-provider"><option value="auto">Automático: OpenAI → Google Gemini</option><option value="openai">Somente OpenAI · Astra</option><option value="gemini">Somente Google · Gemini 3.5 Flash</option></select></label>
-    <p class="small muted">Até 3 tentativas para HTTP 502/503/504, com espera visível e pausa; 429 troca de fornecedor no modo automático. Transporte incerto não é reenviado automaticamente.</p>
-    <label>Chave OpenAI<input type="password" id="api-key" name="api_key" autocomplete="off" placeholder="sk-…" maxlength="500"></label>
+    <p class="muted">A extração /watch roda no computador. Análise, roteiro, ganchos e conjunto de imagens usam uma fila de provedores: tenta o primeiro configurado e cai pro próximo em qualquer falha ou cota. A geração de imagem é feita por você, no ChatGPT do Chrome.</p>
+    <label>Provedor de análise, roteiro e ganchos<select id="text-provider"><option value="auto">Automático: OpenAI → Groq → Gemini</option><option value="openai">Somente OpenAI · Astra</option><option value="groq">Somente Groq · Llama (grátis)</option><option value="gemini">Somente Google · Gemini 3.5 Flash</option></select></label>
+    <p class="small muted">Até 5 tentativas para HTTP 502/503/504, com espera visível e pausa; 429 troca de fornecedor. Transporte incerto não é reenviado automaticamente.</p>
+    <label>Chave OpenAI <span class="optional">opcional</span><input type="password" id="api-key" name="api_key" autocomplete="off" placeholder="sk-…" maxlength="500"></label>
     <p class="small muted">As chaves salvas são protegidas pelo Windows DPAPI para seu usuário. Campo vazio mantém a conexão existente. Também é possível usar OPENAI_API_KEY no ambiente.</p>
+    <div class="divider-label">GROQ · LLAMA (TIER GRATUITO)</div>
+    <label>Chave Groq <span class="optional">grátis, sem cartão</span><input type="password" id="groq-key" name="groq_key" autocomplete="off" placeholder="gsk_…" maxlength="500"></label>
+    <p class="small muted">Pegue em console.groq.com. Texto: llama-3.3-70b-versatile. Visão: llama-4-scout. Limite por minuto no tier grátis; o retry absorve as esperas curtas. Também aceita GROQ_API_KEY no ambiente.</p>
     <div class="divider-label">INTELIGÊNCIA GEMINI (FALLBACK DE TEXTO)</div>
     <label>Chave Google Gemini <span class="optional">alternativa de texto</span><input type="password" id="gemini-key" name="gemini_key" autocomplete="off" placeholder="AIza…" maxlength="500"></label>
     <p class="small muted">Quando a OpenAI retornar erro 429, as etapas de texto usam gemini-3.5-flash automaticamente, com custos e limites da conta Google. Pega sua chave em aistudio.google.com/apikey. Também aceita GEMINI_API_KEY no ambiente.</p>

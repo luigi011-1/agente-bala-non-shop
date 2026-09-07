@@ -15,7 +15,10 @@ modo de lote e o console manual foram removidos nesta versão.
    para vender o app Auraly. **Sem avatar nesta etapa.** Botões: **Aprovar roteiro** e
    **Ajustar a copy** (reescreve com a sua instrução, mantendo toda a doutrina).
 5. **Ganchos visuais**: o Studio sugere 8–10, você escolhe até 5. Os ganchos escolhidos
-   valem para **todos** os avatares.
+   valem para **todos** os avatares. **"＋ Gerar mais ideias"** mantém os que você marcou,
+   troca o resto por mecanismos novos e passa ao modelo tudo que já apareceu como "não
+   repita" — pode clicar várias vezes e ir juntando os melhores. Roda com temperatura
+   alta, ancorado nos beats deste vídeo.
 6. **Conjunto de imagens**: uma chamada de IA monta, por avatar, uma imagem por gancho
    escolhido (take T1) + uma imagem de BODY + uma de CTA. **Sem REF-CARTA isolada** — a
    carta SOULMATE já está na mesa em toda foto-âncora; o prompt põe o mesmo modelo na
@@ -50,9 +53,12 @@ aba.
 
 ## Conexão, privacidade e cobrança
 
-- Análise, roteiro, ganchos e conjunto de imagens usam **texto**: OpenAI (`gpt-6-astra`,
-  raciocínio configurável) com fallback para Google Gemini (`gemini-3.5-flash`) apenas
-  em HTTP 429 tipado. 401/404 e erros de transporte não ativam fallback.
+- Análise, roteiro, ganchos e conjunto de imagens usam uma **fila de provedores de
+  texto**: no modo Automático tenta `OpenAI (gpt-6-astra) → Groq (Llama, grátis) →
+  Google Gemini`, usando só os que têm chave, e cai pro próximo em qualquer falha ou
+  cota. 502/503/504 têm até 5 tentativas com espera visível e interrompível; 429 troca
+  de provedor na hora. Erros de transporte não são reenviados automaticamente. Roteiro e
+  ganchos rodam com temperatura alta para variar a cada rodada.
 - **Não há geração de imagem por API.** As imagens são geradas por você no ChatGPT.
 - As chaves são salvas protegidas por Windows DPAPI, vinculadas ao usuário atual. O
   arquivo não é portável entre usuários/máquinas. Desconectar limpa as duas conexões e

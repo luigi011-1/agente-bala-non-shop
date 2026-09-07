@@ -135,6 +135,32 @@ class StudioTests(unittest.TestCase):
         self.assertNotIn('avatar', thinker.call_args.args[2])
         self.assertEqual(storage.get(self.pid)['status'], 'script_ready')
 
+    def test_more_hooks_keeps_marked_ids_and_avoids_repeats(self):
+        provider.configure('test')
+        script, _ = fixture()
+        hs = [{'id': f'H{i}', 'title': f't{i}', 'mechanism': f'm{i}', 'action': f'a{i}', 'prop': f'p{i}',
+               'congruence': 'c', 'screen_text': 's', 'risk': 'r', 'reference': 'ref', 'validated': False}
+              for i in range(1, 6)]
+        storage.change(self.pid, status='hooks_ready', script=script, hooks=hs, hooks_seq=5,
+                       hooks_keep=['H2'], analysis={'hero': 'x'}, direction='')
+        fresh = [{k: v for k, v in h.items() if k != 'id'} for h in hs[:4]]
+        with patch.object(provider, 'think', return_value={'hooks': fresh}) as thinker:
+            engine.more_hooks(self.pid)
+        instruction = thinker.call_args.args[1]
+        locked, used_up = instruction.split('USED UP')
+        self.assertIn('"m2"', locked)         # the kept hook is shown as locked-in
+        self.assertNotIn('"m2"', used_up)     # and is NOT in the avoid list
+        self.assertIn('"m1"', used_up)        # a dropped hook IS in the avoid list
+        p = storage.get(self.pid)
+        self.assertEqual([h['id'] for h in p['hooks']], ['H2', 'H6', 'H7', 'H8', 'H9'])
+        self.assertEqual(p['status'], 'hooks_ready')
+        self.assertEqual(p['hooks_seq'], 9)
+
+    def test_more_hooks_endpoint_rejects_unknown_keep_id(self):
+        storage.change(self.pid, status='hooks_ready', hooks=[{'id': 'H1'}])
+        r = self.client.post(f'/api/projects/{self.pid}/hooks/more', json={'keep': ['H9']}, headers=self.headers)
+        self.assertEqual(r.status_code, 400)
+
     def test_imageset_stage_builds_frames_from_selected_hooks(self):
         provider.configure('test')
         script, imageset = fixture()

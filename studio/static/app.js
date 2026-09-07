@@ -16,7 +16,7 @@ async function api(path,body,method){
 }
 async function config(){
   state.config=await api('/config');
-  const parts=[];if(state.config.configured)parts.push('OpenAI');if(state.config.gemini_configured)parts.push('Gemini');
+  const parts=[];if(state.config.configured)parts.push('OpenAI');if(state.config.groq_configured)parts.push('Groq');if(state.config.gemini_configured)parts.push('Gemini');
   $('#connection-label').textContent=parts.length?parts.join(' + '):'Conectar API';
   $('#connection-dot').classList.toggle('warning',!parts.length);
   $('#text-model').value=state.config.text_model;
@@ -66,7 +66,7 @@ function scriptView(p){
   <details ${p.busy?'open':''}><summary>Ajustar a copy</summary><label>O que mudar (mantém toda a doutrina)<textarea id="copy-note" rows="3" placeholder="Ex.: hook mais direto sobre o instante do pensamento; CTA menos pedidos."></textarea></label><button data-action="adjust-copy" ${p.busy?'disabled':''}>Reescrever roteiro com o ajuste</button></details></div>`;
 }
 function hooksView(p){
-  return `<div class="panel"><div class="panel-top"><h3>Uma copy. Novas aberturas.</h3><span class="pill" id="selected-count">${state.selected.length} / 5 selecionados</span></div><p class="small muted">Escolha até 5 ganchos visuais. Os escolhidos serão gerados para cada avatar; corpo e CTA são compartilhados.</p><div class="hooks">${p.hooks.map(h=>`<label class="hook-card ${state.selected.includes(h.id)?'selected':''}"><input type="checkbox" data-hook="${h.id}" ${state.selected.includes(h.id)?'checked':''} ${p.status!=='hooks_ready'?'disabled':''}><div class="hook-id">${h.id}</div><h3>${escape(h.title)}</h3><p>${escape(h.action)}</p><div class="hook-meta">${escape(h.mechanism)} · ${h.validated?'Referência de banco':'Variação nova'}<br>Prop: ${escape(h.prop)}<br>Congruência: ${escape(h.congruence)}<br>Risco: ${escape(h.risk)}</div></label>`).join('')}</div><div class="task-actions">${p.status==='hooks_ready'?`<button class="primary" data-action="approve-hooks" ${p.busy?'disabled':''}>Montar conjunto de imagens ↗</button>`:p.status==='hooks_selected'?btn('imageset','Montar conjunto de imagens',p.busy):''}</div></div>`;
+  return `<div class="panel"><div class="panel-top"><h3>Uma copy. Novas aberturas.</h3><span class="pill" id="selected-count">${state.selected.length} / 5 selecionados</span></div><p class="small muted">Escolha até 5 ganchos visuais. Os escolhidos serão gerados para cada avatar; corpo e CTA são compartilhados. <b>Gerar mais ideias</b> mantém os que você marcou e traz novos mecanismos, evitando repetir os já mostrados.</p><div class="hooks">${p.hooks.map(h=>`<label class="hook-card ${state.selected.includes(h.id)?'selected':''}"><input type="checkbox" data-hook="${h.id}" ${state.selected.includes(h.id)?'checked':''} ${p.status!=='hooks_ready'||p.busy?'disabled':''}><div class="hook-id">${h.id}</div><h3>${escape(h.title)}</h3><p>${escape(h.action)}</p><div class="hook-meta">${escape(h.mechanism)} · ${h.validated?'Referência de banco':'Variação nova'}<br>Prop: ${escape(h.prop)}<br>Congruência: ${escape(h.congruence)}<br>Risco: ${escape(h.risk)}</div></label>`).join('')}</div><div class="task-actions">${p.status==='hooks_ready'?`<button data-action="more-hooks" ${p.busy?'disabled':''}>＋ Gerar mais ideias</button><button class="primary" data-action="approve-hooks" ${p.busy?'disabled':''}>Montar conjunto de imagens ↗</button>`:p.status==='hooks_selected'?btn('imageset','Montar conjunto de imagens',p.busy):''}</div></div>`;
 }
 function avatarsView(p){
   const frames=(p.imageset||{}).frames||[];
@@ -142,6 +142,7 @@ document.addEventListener('click',async event=>{
     if(button.dataset.action==='pause-production'){await api(`/projects/${state.id}/pause`,{});await refresh();return;}
     if(button.dataset.action==='save-limits'){await api(`/projects/${state.id}/limits`,{text:Number($('#limit-text').value)});await refresh();toast('Limite atualizado.');return;}
     if(button.dataset.action==='adjust-copy'){button.disabled=true;await api(`/projects/${state.id}/adjust-copy`,{copy_note:$('#copy-note')?.value||''});await refresh();return;}
+    if(button.dataset.action==='more-hooks'){button.disabled=true;await api(`/projects/${state.id}/hooks/more`,{keep:state.selected});await refresh();return;}
     if(button.dataset.action==='prepare-queue'){button.disabled=true;const v=$('#q-limit').value;await api(`/projects/${state.id}/queue`,{ids:[state.id],limit:v?Number(v):null});state.rendered=null;await refresh();toast('Fila preparada.');return;}
     if(button.dataset.action==='clear-queue'){if(!confirm('Limpar a fila desta produção? As imagens já salvas em Downloads permanecem.'))return;button.disabled=true;await api(`/projects/${state.id}/queue/clear`,{});state.rendered=null;await refresh();toast('Fila limpa.');return;}
     if(button.dataset.action==='queue-run'){button.disabled=true;await api('/browser/control',{running:true,concurrency:Number($('#q-conc').value)});state.rendered=null;await refresh();return;}
@@ -152,7 +153,7 @@ document.addEventListener('click',async event=>{
       case'settings':$('#settings-dialog').showModal();break;
       case'close-settings':$('#settings-dialog').close();break;
       case'close-lightbox':$('#lightbox').close();break;
-      case'disconnect':await api('/config',{api_key:'',gemini_key:'',text_model:$('#text-model').value,reasoning_effort:$('#reasoning-effort').value});await config();toast('Conexões removidas e credenciais salvas esvaziadas.');break;
+      case'disconnect':await api('/config',{api_key:'',gemini_key:'',groq_key:'',text_model:$('#text-model').value,reasoning_effort:$('#reasoning-effort').value});await config();toast('Conexões removidas e credenciais salvas esvaziadas.');break;
       case'approve-analysis':button.disabled=true;await api(`/projects/${state.id}/approve/analysis`,{clarification:$('#clarification')?.value||''});await refresh();await run('script');break;
       case'approve-script':{const script=structuredClone(state.current.script);document.querySelectorAll('textarea[data-take]').forEach(el=>{script.takes.find(t=>t.id===el.dataset.take).speech=el.value.trim();});button.disabled=true;await api(`/projects/${state.id}/approve/script`,{script});await refresh();await run('hooks');break;}
       case'approve-hooks':button.disabled=true;await api(`/projects/${state.id}/approve/hooks`,{selected:state.selected});await refresh();await run('imageset');break;
@@ -189,8 +190,9 @@ $('#settings-form').addEventListener('submit',async e=>{
     const body={text_provider:$('#text-provider').value,text_model:$('#text-model').value,reasoning_effort:$('#reasoning-effort').value};
     if($('#api-key').value.trim())body.api_key=$('#api-key').value.trim();
     if($('#gemini-key').value.trim())body.gemini_key=$('#gemini-key').value.trim();
+    if($('#groq-key').value.trim())body.groq_key=$('#groq-key').value.trim();
     await api('/config',body);
-    $('#api-key').value='';$('#gemini-key').value='';
+    $('#api-key').value='';$('#gemini-key').value='';$('#groq-key').value='';
     await config();
     $('#verification-result').textContent='Configuração salva.';
   }catch(error){$('#verification-result').textContent=error.message;}
