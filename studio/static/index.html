@@ -40,7 +40,7 @@
     <p class="small muted">As chaves salvas são protegidas pelo Windows DPAPI para seu usuário. Campo vazio mantém a conexão existente. Também é possível usar OPENAI_API_KEY no ambiente.</p>
     <div class="divider-label">GROQ · LLAMA (TIER GRATUITO)</div>
     <label>Chave Groq <span class="optional">grátis, sem cartão</span><input type="password" id="groq-key" name="groq_key" autocomplete="off" placeholder="gsk_…" maxlength="500"></label>
-    <p class="small muted">Pegue em console.groq.com. Texto: llama-3.3-70b-versatile. Visão: llama-4-scout. Limite por minuto no tier grátis; o retry absorve as esperas curtas. Também aceita GROQ_API_KEY no ambiente.</p>
+    <p class="small muted">Pegue em console.groq.com. Modelo: qwen/qwen3.8-27b (texto e visão). Se der 404, o Groq trocou o modelo — ajuste GROQ_TEXT_MODEL / GROQ_VISION_MODEL em provider.py. Limite por minuto no tier grátis; o retry absorve as esperas curtas. Também aceita GROQ_API_KEY no ambiente.</p>
     <div class="divider-label">INTELIGÊNCIA GEMINI (FALLBACK DE TEXTO)</div>
     <label>Chave Google Gemini <span class="optional">alternativa de texto</span><input type="password" id="gemini-key" name="gemini_key" autocomplete="off" placeholder="AIza…" maxlength="500"></label>
     <p class="small muted">Quando a OpenAI retornar erro 429, as etapas de texto usam gemini-3.5-flash automaticamente, com custos e limites da conta Google. Pega sua chave em aistudio.google.com/apikey. Também aceita GEMINI_API_KEY no ambiente.</p>

@@ -6,8 +6,8 @@
 
 - **Fila de provedores de texto** no `provider.py`: `openai → groq → gemini` (só os com
   chave), cai pro próximo em qualquer falha/cota. Adaptador Groq novo (OpenAI-compatível,
-  tier grátis: `llama-3.3-70b-versatile` texto, `llama-4-scout` visão). Retry de 503 mais
-  paciente: 5 tentativas com backoff travado em 60s.
+  tier grátis: `qwen/qwen3.8-27b`, multimodal — texto e visão, testado ao vivo). Retry
+  de 503 mais paciente: 5 tentativas com backoff travado em 60s.
 - **Botão "＋ Gerar mais ideias"** nos ganchos (`engine.more_hooks`, `POST
   /projects/{id}/hooks/more`): mantém os marcados, gera mecanismos novos, acumula
   `hooks_history` como lista "não repita". IDs estáveis via `hooks_seq`.

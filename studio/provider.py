@@ -27,9 +27,10 @@ _gemini_key = os.environ.get('GEMINI_API_KEY', '')
 _groq_key = os.environ.get('GROQ_API_KEY', '')
 DEFAULT_MODEL = 'gpt-6-astra'
 DEFAULT_GEMINI_MODEL = 'gemini-3.5-flash'
-# Groq free tier. Confirm current ids at console.groq.com/docs/models.
-GROQ_TEXT_MODEL = 'llama-3.3-70b-versatile'
-GROQ_VISION_MODEL = 'meta-llama/llama-4-scout-17b-16e-instruct'
+# Groq free tier. Qwen3 27B is multimodal (text + vision) and honours JSON mode.
+# Confirm current ids at console.groq.com/docs/models; GET /openai/v1/models lists your account's.
+GROQ_TEXT_MODEL = 'qwen/qwen3.8-27b'
+GROQ_VISION_MODEL = 'qwen/qwen3.8-27b'
 DEFAULT_EFFORT = 'medium'
 _model = os.environ.get('AURALY_TEXT_MODEL', DEFAULT_MODEL)
 _effort = DEFAULT_EFFORT
@@ -332,11 +333,10 @@ def _groq_think(pid, instruction, data, images=(), context=False, creative=False
         user_content = lead
     model = GROQ_VISION_MODEL if images else GROQ_TEXT_MODEL
     payload = {'model': model, 'max_tokens': 14000, 'temperature': 1.0 if creative else 0.4,
+               'response_format': {'type': 'json_object'},
                'messages': [{'role': 'system', 'content': system_text +
                              '\n\nReturn ONLY a valid JSON object. No markdown fences, no prose.'},
                             {'role': 'user', 'content': user_content}]}
-    if not images:
-        payload['response_format'] = {'type': 'json_object'}
 
     call = {'route': 'groq/chat', 'started': store.now(), 'status': 'sent', 'model': model}
     with store.LOCK:
