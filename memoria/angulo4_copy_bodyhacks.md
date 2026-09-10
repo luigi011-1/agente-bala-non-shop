@@ -1,6 +1,6 @@
 ---
 name: angulo4-copy-bodyhacks
-description: "Doutrina de copy do ANGULO 4 (ebook Body Hacks for Men 40+, marca FITYWELL, homens 40+ EUA, avatar holistic.brandon como coach). CONFERIDA CONTRA A LANDING OFICIAL em 2026-08-27. O produto e um PLAYBOOK DIGITAL de 42 hacks de HABITO em 7 areas, NAO receitas ancestrais e NAO testosterona. A ponte oficial e a frase do proprio produto: 'drive is a readout, not the problem'. Contem o LIMITE HONESTO BANIDO, a regra de nunca culpar a masculinidade dele, o alibi 'it is not your age, it is your playbook', as rotas de fuga, a moldura hibrida da Brandon (coach na base, testemunha em UM beat), o vocabulario champion/johnson, os assets prontos da landing (8 sintomas, 6 objecoes, ancoragem de preco) e a tensao do livro fisico contra um produto digital."
+description: "ATUALIZADO 2026-09-10: a Brandon saiu e o angulo roda com Dana Morrison, Jamie Anderson e Lynn Parker, tres homens 50+, que sao PAR e nao coach (secao 7 reescrita, o beat de testemunha feminina morreu). Doutrina de copy do ANGULO 4 (ebook Body Hacks for Men 40+, marca FITYWELL, homens 40+ EUA, avatar holistic.brandon como coach). CONFERIDA CONTRA A LANDING OFICIAL em 2026-08-27. O produto e um PLAYBOOK DIGITAL de 42 hacks de HABITO em 7 areas, NAO receitas ancestrais e NAO testosterona. A ponte oficial e a frase do proprio produto: 'drive is a readout, not the problem'. Contem o LIMITE HONESTO BANIDO, a regra de nunca culpar a masculinidade dele, o alibi 'it is not your age, it is your playbook', as rotas de fuga, a moldura hibrida da Brandon (coach na base, testemunha em UM beat), o vocabulario champion/johnson, os assets prontos da landing (8 sintomas, 6 objecoes, ancoragem de preco) e a tensao do livro fisico contra um produto digital."
 metadata: 
   node_type: memory
   type: reference
@@ -10,10 +10,17 @@ metadata:
 
 # Angulo 4 (Body Hacks for Men 40+), doutrina de copy
 
-Aberto em 2026-08-27, decisao do Luigi. **A Brandon MIGROU DE VEZ do Angulo 2 pra ca.**
-Motivo: a audiencia da pagina dela e **97% homens dos EUA**, e o FityWell (mulheres 40+) estava
-queimando alcance. Os quatro pacotes antigos dela (`brandon_angle2`, `brandon_mercado`,
-`brandon_pulmao`, `brandon_5potes`) ficam como historico, apontam pro publico errado.
+Aberto em 2026-08-27, decisao do Luigi.
+
+> 🔴 **TROCA DE AVATAR EM 2026-09-10.** A Brandon **saiu da marca FityWell inteira**. O Angulo 4 roda
+> com **Dana Morrison (52), Jamie Anderson (55) e Lynn Parker (70)**, tres homens negros americanos.
+> **A secao 7 inteira foi reescrita por causa disso**, e ela e a unica que muda de fundo: com avatar
+> masculino de 50+, o avatar deixa de ser COACH e vira **PAR**. Fichas em [[avatares-fichas]].
+> Os quatro pacotes da Brandon (`brandon_angle2`, `brandon_mercado`, `brandon_pulmao`,
+> `brandon_5potes`) ficam como historico de FORMATO.
+
+Historico da decisao anterior: a Brandon migrou do Angulo 2 pra ca em 2026-08-27, porque a audiencia
+da pagina dela e **97% homens dos EUA**, e o FityWell (mulheres 40+) estava queimando alcance.
 
 **E os 97% de homens existem POR CAUSA do que ela e** (mulher atletica, regata branca, box de
 treino). Isso nao e ruido a corrigir, e o ativo a monetizar.
@@ -222,13 +229,36 @@ Rota por **resignacao**, a mais comum acima dos 45. A pagina tambem ja responde:
 "I don't have time" · "I've tried diets before" · "I don't want another complicated program" ·
 "I already work out" · "I'm too busy" · "I'm not trying to become a bodybuilder"
 
-## 7. A MOLDURA DA BRANDON: coach na base, testemunha no golpe
+## 7. A MOLDURA DO AVATAR: PAR, nao coach (REESCRITA EM 2026-09-10)
 
-Decisao do Luigi em 2026-08-27. A [[congruencia-matriz]] ja obrigava coach (produto masculino com
-avatar feminina). Isto refina.
+**A moldura mudou de fundo com a troca de avatar.** Dana (52), Jamie (55) e Lynn (70) sao homens da
+idade do publico, entao a [[congruencia-matriz]] nao pede mais coach: **eles sao o cara com quem o
+espectador se compara.** Isso e mais forte do que a moldura antiga, e mais barato de escrever.
 
-**Base, o video inteiro:** `"the men I train"`. Ela treina homens no box dela, e o cenario literal
-e preserva a cruz de OURO e o registro de disciplina mais fe.
+**Base, o video inteiro: 1a pessoa liberada.** `"when I hit fifty"`, `"what changed for me at
+fifty five"`, `"in forty years of this"` (esse ultimo so o Lynn). O alibi da secao 4 fica mais facil
+de sustentar, porque quem diz "nao e a sua idade, e o seu playbook" tambem passou dos 40.
+
+**A prova social agregada continua valendo por cima**, e agora empilha: vivencia propria mais o que
+ele viu nos outros. `"every man I know past forty says the same thing"`.
+
+### ⚠️ O QUE MORREU JUNTO COM A BRANDON
+
+**O golpe de testemunha feminina** (*"here is the part no woman is going to say to your face"*)
+**nao existe na boca de um homem** e nao tem traducao direta. **Cortar, nao adaptar.**
+
+A substituicao mais segura e **relato de casal em 1a pessoa**, e ela **ainda nao foi validada em
+video**:
+
+> "My wife took two years to say it out loud. She was not being cruel. She was being kind, and that is worse."
+
+**Travas se usar:** um por roteiro, na escalada e nunca no hook, ele relata a propria casa e **nunca
+julga o espectador** (isso quebraria a secao 4). Marcar como teste no P10 quando rodar.
+
+### Historico, a moldura anterior (Brandon, 2026-08-27 a 2026-09-10)
+Base coach `"the men I train"`, autoridade por volume observado e nunca por idade vivida, mais um
+beat de testemunha feminina por roteiro. **Nao usar.** Fica registrado porque explica os pacotes
+antigos dela.
 
 **O golpe de testemunha: UM beat so, e na ESCALADA, nunca no hook.**
 
@@ -255,13 +285,17 @@ neste produto do que teria num livro de receitas.
 |---|---|---|
 | `champion` | liberado | sim |
 | `your soldier` | liberado (ja esta na regua germanica) | sim |
-| `johnson` | **nunca** | sim |
+| `johnson` | **nunca, ate o Luigi decidir** | sim |
 | "the part of you that stopped answering" | preferido | sim |
 | `drive and confidence` | **obrigatorio no CTA**, ver abaixo | sim |
 | nome clinico de orgao | **nunca** | **nunca** |
 
-**Por que `johnson` nao sai da boca dela:** de mulher le como vulgar, colide com o registro de fe da
+**Por que `johnson` nao saia da boca dela:** de mulher le como vulgar, colide com o registro de fe da
 conta e sobe o risco de classificador de conteudo sexual, que ja pega mais pesado com mulher em quadro.
+
+> ⚠️ **2026-09-10: o motivo de REGISTRO caiu com o avatar masculino, o de PLATAFORMA nao.** Homem 50+
+> falando `johnson` com outro homem nao soa vulgar do mesmo jeito, mas o classificador le o token
+> igual. **Segue proibida na fala ate o Luigi decidir.** Em legenda continua liberada.
 
 ### 🔴 A PONTE VERBAL COM A PAGINA (regra que nasceu da leitura da landing)
 **A pagina e contida.** Ela nunca diz ED, nunca usa champion nem johnson. O termo dela e
@@ -374,6 +408,9 @@ mais caro do video.
 - Segue valendo tudo: bandeira dos EUA discreta e visivel em todo prompt de imagem, gate de realismo,
   gate de composicao, heroi no lower foreground.
 - 2a pessoa em cena e **homem 45+**, nunca mulher ([[congruencia-matriz]], congruencia de publico).
+- **Avatares e ancoras:** Dana Morrison (garagem), Jamie Anderson (SUV parado) e Lynn Parker
+  (apotecario). Caminhos e travas visuais em [[avatares-fichas]]. **A cruz de OURO da Brandon morreu
+  com ela: nenhum dos tres usa cruz**, e o Jamie e o Lynn nao usam joia nenhuma.
 - Palavra de tratamento no hook: `brother`, `man`, `my guy`. **Nunca** `ma'am`, `girl`, `honey`.
 
 ## 14. Compliance
@@ -386,9 +423,13 @@ habito e estilo de vida, exatamente o que a pagina se compromete a ser. **Isso e
 defensavel que a operacao ja teve num angulo de ED**, e desce o risco em relacao a qualquer roteiro
 que nomeasse a disfuncao ou prometesse efeito hormonal.
 
-O que continua alto: mulher em quadro falando de desempenho masculino pega mais no classificador de
-conteudo sexual do que homem. **Mitigacao: a copy nao desce um degrau, o visual sobe um.**
-Prop ambiguo, frame isolado limpo, associacao feita por fala e legenda.
+> ✅ **2026-09-10: o maior risco desta secao CAIU com a troca de avatar.** Era mulher em quadro
+> falando de desempenho masculino, que pega mais no classificador de conteudo sexual do que homem.
+> Com Dana, Jamie ou Lynn em quadro esse agravante nao existe mais.
+
+**A mitigacao visual continua, por outro motivo:** prop ambiguo, frame isolado limpo e associacao
+feita por fala e legenda seguem sendo o padrao, porque o tema em si continua sensivel.
+**A copy nao desce um degrau, o visual sobe um.**
 
 Relacionado: [[produtos-angulos]], [[congruencia-matriz]], [[feedback-cta-produto]],
 [[referencia-frameworks-copy]], [[banco-obstaculos]], [[compliance-riscos]], [[avatares-fichas]]

@@ -16,9 +16,21 @@ metadata:
 
 Imagens-âncora confirmadas em 2026-08-12 (batem 100% com [[avatares-fichas]]).
 
+## 🔴 ROSTER FITYWELL, ENTRADA DE 2026-09-10
+
+Os tres avatares novos da FityWell (Angulos 2 e 4) nao estao na matriz abaixo, que e de 2026-08.
+Eles resolvem sozinhos a lacuna de idade vivida, e a regra deles cabe em duas linhas:
+
+- **Angulo 2 (produto feminino, mulheres 40+):** COACH sempre. Atalho #2 desta lista, com o genero
+  invertido. Nunca 1a pessoa sobre corpo feminino, por mais velho que ele seja.
+- **Angulo 4 (produto masculino, homens 40+):** **USUARIO / PAR.** Dana tem 52, Jamie 55 e Lynn 70,
+  entao o claim de idade vivida que a secao "idade" mais abaixo exige esta coberto pela primeira vez.
+
+Fichas em [[avatares-fichas]]. A holistic.brandon saiu da FityWell inteira nesta data.
+
 ## Perfil rápido
 - **Melody Carter** — homem negro, musculoso, ~30s-40s, garagem, cruz de PRATA, registro disciplina+fé. Foto-âncora SENTADO (corrigir p/ em pé nos prompts).
-- **holistic.brandon** — MULHER atlética, ~30s, box de treino, cruz de OURO, registro feminino/atlético disciplina+fé.
+- **holistic.brandon** (fora da FityWell desde 2026-09-10) — MULHER atlética, ~30s, box de treino, cruz de OURO, registro feminino/atlético disciplina+fé.
 - **holistic.trevor** — homem branco ~50s, ruivo, cozinha moderna, SEM cruz, registro caloroso "vizinho saudável".
 
 ## Matriz (Usuário ✅ / Coach 🔄 / Melhor pick ✅✅)

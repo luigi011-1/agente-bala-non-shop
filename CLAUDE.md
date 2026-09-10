@@ -51,6 +51,92 @@ não reiniciar o processo do zero sem necessidade.
    **Ângulo 3:** ver `PLAYBOOK_MESTRE_AURALY.md` — pasta `producao/<slug>/`, sem prefixo de avatar,
    marcador `pipeline: auraly` no `ROTEIRO.md`.
 
+## 🔴 LIMITE DA MINHA FUNÇÃO E ORDEM DA ENTREGA (Luigi, 2026-09-08)
+
+**Eu NÃO gero imagem, NÃO abro navegador, NÃO executo Flow e NÃO automatizo browser.**
+Minha função termina na entrega do pacote de produção. O Luigi usa o pacote depois, no agente
+do Google Flow.
+
+♻️ **DESCONTINUADO nesta operação:** Auraly Studio, bridge local, extensão Chrome, execução
+automática no ChatGPT, preflight, browser queue, batch execution, abrir abas, `pacote_browser`
+e a identificação de Modo A / B / C. Documentação antiga sobre isso é **HISTÓRICA** e não define
+o workflow atual. O que sobrevive do Ângulo 3 é só o **contexto criativo**: público, oferta,
+linguagem, copy, avatares, regras visuais, estrutura de roteiro e aprendizados.
+
+**Workflow oficial, igual ao dos Ângulos 1 e 2:**
+`.mp4` + âncoras → análise do vídeo → transcrição → análise da estrutura da copy → roteiro
+modelado → **aprovação do Luigi** → **10 ganchos visuais** (dez, não cinco) → **escolha dele**
+(quantidade livre) → pacote final.
+
+**O pacote final sai NESTA ordem, sem pular item:**
+
+1. **`INSTRUÇÕES PARA A MEMÓRIA DO AGENTE — GOOGLE FLOW AI`**, colado INTEIRO no chat, pronto pra
+   copiar. Fonte canônica: `producao/_flow/INSTRUCOES_AGENTE_FLOW.md`.
+   Configuração vigente: **Nano Banana 2 em 9:16, uma imagem final por K__ sem etapa de seleção;
+   Veo 3.1 Lite em Lower Priority, 8 segundos e uma variação por V__.**
+   ⚠️ **No Ângulo 3 (Auraly) vai TODA VEZ, sem exceção** (Luigi, 2026-09-08). O momento é fixo:
+   **logo depois de o Luigi escolher os ganchos visuais e ANTES do primeiro prompt de imagem.**
+   ♻️ Isto **revoga** a permissão de "se nada mudou, basta dizer que a memória do agente Flow
+   permanece a mesma". Não existe atalho: o bloco é colado por inteiro em cada produção, porque
+   ele é colado numa memória de agente nova a cada rodada. Se a configuração mudar, subir a versão
+   na tabela do arquivo antes de colar.
+2. **[ÂNGULO 3] BLOCO ÚNICO DE IMAGEM, LIMPO PARA MÁQUINA** (Luigi, 2026-09-09)
+3. **[ÂNGULO 3] BLOCO ÚNICO DE VÍDEO, LIMPO PARA MÁQUINA** (Luigi, 2026-09-09)
+4. Body e CTA entram DENTRO dos dois blocos acima, na ordem do vídeo, nunca como seção solta
+
+### 🔴 GOOGLE FLOW DELIVERY FORMAT (Luigi, 2026-09-09)
+
+♻️ **Revoga o formato de 2026-09-08**, que levava descrição, anexo e ação dentro do bloco copiável.
+O agente do Flow é executor e estava **lendo texto auxiliar como se fosse prompt**.
+
+```
+IMAGE BLOCK:  UM K__ = UM PROMPT DE IMAGEM · K__ SÓ COMO RÓTULO · TODO PROMPT AUTOSSUFICIENTE
+VIDEO BLOCK:  UM V__ = UM PROMPT DE VÍDEO  · V__ SÓ COMO RÓTULO · TODO PROMPT AUTOSSUFICIENTE
+              K01 casa com V01 PELO NÚMERO
+
+SEM descrição · SEM título · SEM rótulo T__ · SEM metadata · SEM "Prompt:" · SEM "usa K__"
+SEM instrução de INITIAL FRAME dentro do bloco · SEM configuração de modelo dentro do bloco
+```
+
+- **O rótulo é só o código sozinho numa linha**: `K01`, nunca `K01 · T1 · GANCHO...`.
+- **UMA IMAGEM = UM VÍDEO.** Se cinco ganchos dividem a mesma fala, **duplicar o prompt de vídeo**,
+  um por keyframe. ♻️ Acaba o `V01 usa K01, K02, K03`. E **um keyframe nunca serve dois takes**:
+  se dois takes usam o mesmo setup, saem dois `K__` com prompts próprios.
+- **Autossuficiência mata o `EDITAR do K__` no bloco do Flow.** Cada prompt de imagem descreve
+  sozinho identidade, roupa, ambiente, luz, enquadramento, props, ação e expressão, porque o Flow
+  recebe só a âncora mais aquele prompt. Repetir condição importante dentro de cada prompt é certo,
+  não redundante. O mesmo vale no vídeo: nada de `same as previous`.
+- **`REF-CARTA` e `REF-A` não entram no bloco do Flow.** O prop e a segunda pessoa passam a ser
+  **descritos por escrito dentro de cada prompt** que os mostra. O anexo é só a âncora.
+- **Tabela humana de leitura** (`K01 = coração quebrando`, `K06 = body`) pode existir, mas **sempre
+  fora** dos blocos copiáveis. Dentro deles, zero texto auxiliar.
+- **O JSON continua sendo a fonte de verdade INTERNA** em `PROMPTS_IMAGEM.md`, que é o que o linter
+  lê. O bloco do Flow é a versão de execução, em texto corrido e autossuficiente.
+5. (nos Ângulos 1, 2 e 4 segue valendo um prompt por bloco, com linha curta antes de cada um)
+6. Transcrição final completa em **INGLÊS**
+7. Transcrição final completa em **PORTUGUÊS**
+
+⚠️ **A transcrição SEMPRE fecha a produção** (Luigi, 2026-09-08). Não é opcional e não é sob pedido:
+todo processo de produção termina com as duas transcrições coladas no chat, take a take mais a versão
+corrida. Nunca dizer "está no ROTEIRO.md" no lugar de colar.
+
+**Workflow e formato podem espelhar os Ângulos 1 e 2. Copy, produto, nicho e linguagem NÃO se
+misturam entre ângulos.**
+
+### GOOGLE FLOW DELIVERY FORMAT (Luigi, 2026-09-09)
+
+Os blocos de execução devem ser estritamente machine-readable: `K__` sozinho, seguido somente de um
+prompt de imagem completo e autossuficiente; `V__` sozinho, seguido somente de um prompt de vídeo
+completo e autossuficiente. Um K = um V pelo mesmo número. Nunca incluir nos blocos títulos,
+descrições, T__, metadata, settings, INITIAL FRAME, `uses K__`, caminhos ou notas. Nunca depender de
+"edit K__", "same as previous" ou contexto de outro prompt.
+
+### Transcrição por avatar (Luigi, 2026-09-09)
+
+Depois do bloco limpo de imagens e do bloco limpo de vídeos de **cada avatar**, entregar sempre uma
+tabela de transcrição final por take, com as colunas `Take`, `English` e `Português`. A tabela vem
+fora dos blocos machine-readable e reproduz exatamente as falas aprovadas, sem paráfrase.
+
 ## A entrega tem SEMPRE dois arquivos + tudo colado na conversa
 (**Ângulo 3 usa o pipeline Auraly — ver `PLAYBOOK_MESTRE_AURALY.md`**)
 
@@ -87,6 +173,20 @@ Nesta ordem, sem pular seção:
 | `K__` | Keyframe, a imagem |
 | `V__` | Clipe de vídeo |
 | `REF-__` | Referência auxiliar (2ª pessoa, prop) |
+
+## MULTI-AVATAR PRODUCTION RULE (Luigi, 2026-09-09)
+
+Quando uma produção começa com um MP4 e N anchors, registrar imediatamente todos os avatares em uma
+fila persistente dentro da pasta da produção, com nome, caminho exato da anchor e estado `PENDING`,
+`ACTIVE` ou `DONE`. Essa fila é estado obrigatório e não pode depender do histórico da conversa.
+
+Roteiro, takes, falas, análise, hooks selecionados, ordem de K/V e lógica de movimento são aprovados
+uma única vez por produção. Cada avatar recebe os mesmos elementos, com adaptação apenas de
+identidade, idade, cabelo, roupa, ambiente, iluminação e detalhes da própria anchor.
+
+Concluir um avatar nunca encerra a produção. Depois de cada pacote, consultar a fila, marcar o avatar
+atual como `DONE`, avançar automaticamente o próximo `PENDING` para `ACTIVE` e entregar seu pacote.
+Somente declarar `PRODUCTION COMPLETE` se não houver `PENDING` nem `ACTIVE`.
 
 Vários `T` podem usar o mesmo `K`. Cada `T` tem seu `V`.
 
@@ -141,6 +241,10 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
   manifestação entra (cartas, cristais, vela, defumador, tigela com pétalas), prop ou fala que lê como pacto não.
   Sem bruxa, feitiço, spell, shield, círculo de proteção. **Cartas HOLOGRÁFICAS / FOIL, arte saturada e chamativa** (2026-08-29, revoga a paleta pálida): borda metálica espelhada com reflexo de arco-íris ou foil dourado, faixa de título na base. **A trava é a LEITURA, não a cor:** casal, coração, rosas, luz. Azul-noite com estrelas entra; caveira, corvo, serpente, espada e símbolo invertido não.
 - **Ângulos 2 e 3 não mostram produto.** Ângulos 1 e 4 mostram sempre (no 4 é um **livro FÍSICO**, nunca mockup de ebook nem tela de celular).
+- **[FITYWELL] Ângulos 2 e 4 rodam com os MESMOS três avatares desde 2026-09-10:** Dana Morrison,
+  Jamie Anderson e Lynn Parker. **No Ângulo 2 eles são COACH** (produto feminino, e o crivo de nunca
+  culpar ela roda DUAS vezes, porque quem fala é homem). **No Ângulo 4 eles são PAR**, com 1ª pessoa
+  liberada. A holistic.brandon saiu dos dois. Âncoras em `producao/_ancoras/`.
 - **[ÂNGULO 4] LIMITE HONESTO É PROIBIDO.** Nenhuma ressalva, nenhum "isso não faz X". A dor prometida
   e o mecanismo do produto são a mesma linha, então toda ressalva encosta na promessa. O take vai pra
   autoridade, prova social, urgência ou escassez. No Ângulo 3 o objeto de desejo do CTA é
@@ -186,8 +290,28 @@ Só depois disso a copy pode ser modificada e mandada pro Luigi aprovar ou ajust
 - `compliance-riscos` → qual é o claim mais arriscado deste roteiro
 
 ### P4 · [ÂNGULO 3] ANTES de sugerir os ganchos visuais
-- `producao/_swipe_auraly/BANCO_GANCHOS_VISUAIS.md` → os mecanismos e o formato de plano único
+- `producao/_swipe_auraly/BANCO_GANCHOS_VISUAIS.md` → **ler o bloco do topo, o MÉTODO DE INVENÇÃO.**
+  ⚠️ Desde 2026-09-08 o banco histórico **não é fonte de ideia**, é só padrão de qualidade, universo
+  visual e registro do que já foi usado. A pergunta é *"qual mecanismo de atenção funciona aqui e qual
+  é a execução visual mais nova que consigo criar?"*, nunca *"qual gancho antigo dá pra reaproveitar?"*.
+  Gancho antigo com objeto trocado é entrega reprovada
+- **IMPACT FIRST · CURIOSITY SECOND · CONGRUENCE ALWAYS.** Antes de pensar em símbolo de nicho,
+  responder: “o que acontece fisicamente no primeiro segundo que faz a pessoa parar?”. Priorizar
+  um **kinetic pattern interrupt**: ação física simples e legível, com movimento, transformação ou
+  surpresa. Gancho em que a avatar apenas mostra, segura ou aponta para um objeto reprova, salvo
+  força excepcional. Niche entra dentro de uma ação que já para o scroll.
+- **10 sugestões**, combinando de 2 a 4 mecanismos de atenção por gancho, com distribuição-alvo:
+  4 de impacto físico forte, 2 bizarras/provocativas, 2 de reveal/transformação e 2 de
+  coincidência/curiosidade com ação clara.
+- **Nota silenciosa de 0 a 10** em impacto visual, scroll-stop, movimento/transformação,
+  curiosidade, originalidade, clareza visual, aderência ao nicho e viabilidade. Impacto visual e
+  scroll-stop são decisivos. Ideia fraca é substituída ANTES de entregar, nunca entregue com ressalva
+- Formato: nome curto, `Cena` em 1 ou 2 frases, `Por que para o scroll` em 1 frase. **Zero prompt aqui**
 - As três travas do ângulo: **rosto nunca revelado**, **carta na mão depois do gancho**, **registro divino**
+
+### P4.1 · [ÂNGULO 3] Assim que o Luigi ESCOLHER os ganchos, ANTES de qualquer prompt
+- `producao/_flow/INSTRUCOES_AGENTE_FLOW.md` → **colar o bloco INTEIRO no chat, toda vez.**
+  É o item 1 do pacote e vem antes do primeiro prompt de imagem. Sem atalho, sem "permanece a mesma"
 
 ### P5 · Ao receber "roteiro aprovado" e `/produzir`, ANTES do primeiro JSON
 **Executar a skill não substitui ler.** A skill é a ordem, isto aqui é o conteúdo:
@@ -353,8 +477,10 @@ não precisa segmentar público, gancho de clickbait puro converte, então isso 
 
 Não vale nos Ângulos 1 e 2, onde o herói do hook carrega argumento e não pode ser trocado à toa.
 
-**Entregar de 8 a 10 variações**, ordenadas por congruência, clickbait puro no fim e marcado como tal.
-Banco dos 13 mecanismos em `producao/_swipe_auraly/BANCO_GANCHOS_VISUAIS.md`.
+**Entregar 10 variações** (dez, fixo desde 2026-09-08), ordenadas por congruência, clickbait puro no
+fim e marcado como tal. **Doutrina de invenção no topo de
+`producao/_swipe_auraly/BANCO_GANCHOS_VISUAIS.md`**, que é o P4. Os 13 mecanismos antigos viraram
+seção HISTÓRICA no mesmo arquivo: servem para eu checar repetição, não para gerar ideia.
 
 **O formato das contas do Ângulo 3 é PLANO ÚNICO, nunca split screen.** Câmera na altura do peito do outro
 lado da mesa: a avatar do peito pra cima em cima, a mesa no terço inferior do MESMO quadro, e **ela executa
@@ -384,9 +510,13 @@ Landing: `https://bodyhacksformen.netlify.app/` · checkout **Hotmart embutido n
 desmentiu no mesmo dia. Os hacks são hábito e estratégia. Ler a seção 0 da doutrina antes de escrever
 qualquer copy, porque prometer receita e entregar hábito **quebra no clique**, que é o pior lugar.
 
-**Avatar: holistic.brandon, sempre COACH.** Ela **migrou de vez do Ângulo 2 em 2026-08-27**, porque a
-audiência da página dela é **97% homens dos EUA**. Nunca usuária, nunca "at our age". A autoridade dela
-é **volume observado**: "every man past forty who walks into my gym".
+**Avatares: Dana Morrison (52), Jamie Anderson (55) e Lynn Parker (70), e eles são PAR, não coach**
+(Luigi, 2026-09-10). Homens negros americanos, os três acima dos 50, falando com homens 40+.
+**1ª pessoa liberada:** "when I hit fifty", e no Lynn "in forty years of this". A prova social
+agregada empilha por cima. ♻️ **Revoga a moldura da holistic.brandon**, que era coach com autoridade
+por volume observado e um beat de testemunha feminina por roteiro. **Ela saiu da marca FityWell
+inteira**, e o beat de testemunha feminina **morreu, não se adapta**. Fichas, âncoras e a substituição
+em teste (relato de casal em 1ª pessoa) em `avatares-fichas` e na seção 7 de `angulo4-copy-bodyhacks`.
 
 **Keyword `yes`**, decidida pelo Luigi em 2026-08-27.
 
@@ -434,9 +564,10 @@ certa isolada **é o playbook dos 25**, que é justamente o erro que o produto n
 senão ele cai numa página que não parece falar do que ele acabou de ouvir.
 
 **Vocabulário, quem pode dizer o quê:** `champion`, `your soldier` e "the part of you that stopped
-answering" são liberados na boca dela. **`johnson` NUNCA sai da boca dela**, só em legenda. Nome
-clínico de órgão nunca, em lugar nenhum. Um beat de testemunha feminina por roteiro, **na escalada,
-nunca no hook**, e ela relata o que as esposas dos clientes dizem, nunca julga o espectador.
+answering" são liberados na boca dele. **`johnson` NUNCA sai na fala**, só em legenda: o motivo de
+registro caiu com o avatar masculino, mas o classificador lê o token igual, então segue proibida até
+o Luigi decidir. Nome clínico de órgão nunca, em lugar nenhum. ♻️ **O beat de testemunha feminina foi
+CORTADO em 2026-09-10**, junto com a Brandon.
 
 **2ª pessoa em cena é homem 45+.** Tratamento no hook: `brother`, `man`, `my guy`.
 Nunca `ma'am`, `girl`, `honey`.

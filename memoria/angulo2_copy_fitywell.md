@@ -1,6 +1,6 @@
 ---
 name: angulo2-copy-fitywell
-description: "Doutrina de copy do ÂNGULO 2 (app FityWell, mulheres 40+, funil de quiz). Como cada aprendizado do Ângulo 1 se traduz: limite honesto, a ponte das 3 causas ('qual das três é a sua'), as DUAS rotas de fuga desse público (fazer sozinha / app grátis) com banco de obstáculos EN+PT, a regra inviolável de NUNCA culpar ela, urgência por custo de demora (sem risco de FTC), a inversão da regra do reveal, e os 2 gaps abertos (congruência de idade do avatar e ausência de asset do produto)."
+description: "ATUALIZADO 2026-09-10: o angulo roda com TRES avatares MASCULINOS (Dana Morrison, Jamie Anderson, Lynn Parker), sempre COACH, e a Brandon saiu. Doutrina de copy do ÂNGULO 2 (app FityWell, mulheres 40+, funil de quiz). Como cada aprendizado do Ângulo 1 se traduz: limite honesto, a ponte das 3 causas ('qual das três é a sua'), as DUAS rotas de fuga desse público (fazer sozinha / app grátis) com banco de obstáculos EN+PT, a regra inviolável de NUNCA culpar ela, urgência por custo de demora (sem risco de FTC), a inversão da regra do reveal, e os 2 gaps abertos (congruência de idade do avatar e ausência de asset do produto)."
 metadata:
   node_type: memory
   type: reference
@@ -158,12 +158,28 @@ Keyword continua sendo **`yes`**. Destino da DM: link do quiz.
 ## 8. DUAS DECISÕES FECHADAS pelo Luigi em 2026-08-21
 
 ### Decisão 1: o avatar do Ângulo 2 é a BRANDON, sempre como COACH
-Eu havia recomendado criar um avatar feminino de 45 a 55 anos pra ter depoimento em 1ª pessoa. **Decisão do Luigi: manter só a Brandon por enquanto**, ele avisa quando tiver mais avatares.
+
+> 🔴 **REVOGADA EM 2026-09-10. O Ângulo 2 roda com TRÊS avatares MASCULINOS:**
+> **Dana Morrison (52), Jamie Anderson (55) e Lynn Parker (70)**, os três homens negros americanos.
+> A Brandon saiu da marca FityWell inteira. Fichas e caminhos das âncoras em [[avatares-fichas]].
+>
+> **O que MUDA:** quem fala. **O que NÃO muda:** o frame de COACH, que continua obrigatório, e todo
+> o resto desta seção, que vale igual com o pronome trocado.
+>
+> **O que fica MAIS duro:** a regra inviolável da seção 4. Homem falando com mulher 40+ sobre o corpo
+> dela não tem margem nenhuma de cobrança. A mesma frase que soava dura na boca da Brandon soa como
+> julgamento masculino na boca deles, e aí já não é só ineficaz, é hostil. **Rodar o crivo duas vezes.**
+>
+> **O que GANHA:** os três têm 50, 55 e 70 anos, então o beat de "eu vi isso acontecer por décadas"
+> ficou legítimo pela primeira vez neste ângulo. O que continua proibido é 1ª pessoa sobre corpo
+> feminino, e isso não tem conserto de idade.
+
+Histórico: eu havia recomendado criar um avatar feminino de 45 a 55 anos pra ter depoimento em 1ª pessoa. **Decisão do Luigi em 2026-08-21: manter só a Brandon por enquanto**, ele avisa quando tiver mais avatares. Ele avisou em 2026-09-10, e a resposta foram os três homens acima.
 
 **O que isso obriga na copy (aplicar automático):**
-- Brandon nunca fala como quem passou pelos 40. **Zero** "quando eu fiz 40", "meu corpo mudou", "não me reconhecia no espelho".
+- O avatar nunca fala como quem passou pelos 40 **no corpo de uma mulher**. **Zero** "quando eu fiz 40", "meu corpo mudou", "não me reconhecia no espelho".
 - O enquadramento é sempre de quem **acompanha**: "as mulheres que eu treino", "toda cliente minha depois dos 40 chega dizendo a mesma coisa", "eu vejo isso todo mês".
-- **As frases emocionais do quiz continuam sendo ouro, mas mudam de boca.** Em vez de Brandon dizendo, ela **cita** a cliente: *"Every single one of them says the same sentence to me: I don't recognize myself in the mirror anymore."* Isso preserva a frase inteira e ainda ganha prova social, porque vira padrão observado em muitas mulheres, não desabafo de uma.
+- **As frases emocionais do quiz continuam sendo ouro, mas mudam de boca.** Em vez de o avatar dizer, ele **cita** a cliente: *"Every single one of them says the same sentence to me: I don't recognize myself in the mirror anymore."* Isso preserva a frase inteira e ainda ganha prova social, porque vira padrão observado em muitas mulheres, não desabafo de uma.
 - Ganho colateral: coach que viu o padrão em dezenas de mulheres tem **mais** autoridade pra explicar as 3 causas do que uma usuária. O frame de diagnóstico casa melhor com coach do que com testemunho.
 - Esqueleto da copy não muda em nada além da frase de enquadramento ([[congruencia-matriz]] atalho #6).
 
@@ -173,9 +189,9 @@ Eu havia recomendado criar um avatar feminino de 45 a 55 anos pra ter depoimento
 **Por que a exceção se sustenta:** a regra existe porque, vendendo nutra, o prospect precisa VER e OUVIR o frasco pra saber o que procurar, senão a mensagem fica genérica. No Ângulo 2 não há nada pra procurar: o CTA não é compra, é **diagnóstico grátis**, e o link chega pronto na DM. Print de tela de celular não é prova de nada e ainda entrega cara de anúncio no beat mais sensível do vídeo.
 
 **O que carrega o take de CTA no lugar do produto:**
-- Brandon em **close, falando direto na câmera**, mais perto que qualquer outro take do vídeo. Sem prop na mão.
+- O avatar em **close, falando direto na câmera**, mais perto que qualquer outro take do vídeo. Sem prop na mão.
 - O "produto" verbalizado é o **resultado do quiz**, não o app: "which of the three is yours".
 - Continua obrigatório **falar o nome em voz alta** ("FityWell"), mesmo sem mostrar nada. O que se perde em imagem se compensa em nome dito com clareza.
 - Nada de celular em quadro, nada de print, nada de mockup.
 
-**Consequência prática:** o Ângulo 2 nunca precisa de imagem-âncora com 2ª referência. Todo título de prompt fica `ÂNCORA BRANDON`, nunca `+ PRODUCT.PNG`.
+**Consequência prática:** o Ângulo 2 nunca precisa de imagem-âncora com 2ª referência. Todo título de prompt fica `ÂNCORA DANA MORRISON`, `ÂNCORA JAMIE ANDERSON` ou `ÂNCORA LYNN PARKER`, nunca `+ PRODUCT.PNG`.
