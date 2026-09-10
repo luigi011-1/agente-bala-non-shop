@@ -80,3 +80,12 @@ Fidelidade à ESTRUTURA continua (o esqueleto é sagrado). O que mudou é **o qu
 
 ## Princípio filosófico
 "Na dúvida, copie. Fidelidade é o método." Trabalho não é criatividade do zero — é replicação disciplinada de vencedores comprovados. **Nuance atual:** fidelidade é da ESTRUTURA; a FONTE deve ser um vencedor novo ou cross-niche, não o vídeo saturado do próprio nicho (ver refinamento acima).
+
+---
+
+## O Puzzle também gera as VARIAÇÕES DE GANCHO na FityWell (2026-09-10)
+
+Regra nova do Luigi: nos ângulos 2 e 4 as variações de gancho visual não são inventadas, são
+**Puzzle aplicado ao próprio herói do hook**. Preserva-se a ação estrutural do hook original e troca-se
+**uma variável por vez**, o ingrediente ou o alvo. Detalhe e exemplo canônico em
+[[ganchos-variacao-puzzle]].

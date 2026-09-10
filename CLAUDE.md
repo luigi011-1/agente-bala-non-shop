@@ -467,7 +467,7 @@ produzir para ela. O ciclo completo (roteiro, ganchos, prompts, DM) sai para ess
   Idade, gênero e registro mudam o que soa crível na boca de cada uma. Ver `congruencia-matriz`.
 - **Ajustes nos prompts de imagem e de vídeo** (identidade, cenário, registro de voz, rastreio).
 
-**PASSO EXTRA, SÓ NO ÂNGULO 3: sugestões de GANCHO VISUAL antes dos prompts.**
+**PASSO EXTRA (Ângulo 3 e, desde 2026-09-10, também FityWell): sugestões de GANCHO VISUAL antes dos prompts.**
 Depois do roteiro aprovado e **antes de entregar qualquer prompt**, mandar sugestões de variações de
 gancho visual derivadas do mesmo vídeo modelo. **A copy fica idêntica, só os primeiros segundos mudam.**
 
@@ -475,7 +475,38 @@ gancho visual derivadas do mesmo vídeo modelo. **A copy fica idêntica, só os 
 scroll e fazer ela ouvir. Um roteiro validado vira N vídeos trocando só o hook. E como o Ângulo 3
 não precisa segmentar público, gancho de clickbait puro converte, então isso é vantagem e não risco.
 
-Não vale nos Ângulos 1 e 2, onde o herói do hook carrega argumento e não pode ser trocado à toa.
+♻️ **EDITADO EM 2026-09-10 (Luigi). A etapa de variações VALE TAMBÉM NA FITYWELL**, ângulos 2 e 4.
+A versão antiga dizia que não valia nos Ângulos 1 e 2 porque o herói do hook carrega argumento. O que
+está errado ali é a conclusão, não a premissa: **o herói realmente carrega argumento, e é por isso
+que a variação é feita pelo MÉTODO PUZZLE em vez de ser inventada do zero.**
+
+**A DIFERENÇA ENTRE OS DOIS MODOS DE VARIAR O GANCHO:**
+
+| | Ângulo 3 (Auraly) | **FityWell (Ângulos 2 e 4)** |
+|---|---|---|
+| Origem da ideia | invenção, impact first, kinetic pattern interrupt | **Puzzle aplicado ao herói do hook** |
+| O que se preserva | nada, o gancho é descartável | **a AÇÃO ESTRUTURAL do hook original** |
+| O que muda | tudo, o gancho inteiro | **UMA variável por vez** |
+| Clickbait puro | liberado e marcado | **proibido, quebra o argumento** |
+| Congruência | terceira na fila | **gate, entra antes de mostrar** |
+
+**Como pensar na prática**, exemplo dado pelo Luigi em 2026-09-10. Herói do hook original: um homem
+velho joga bicarbonato em cima de um modelo anatômico de intestino. A ação estrutural é
+`avatar joga UM PÓ em cima de UM MODELO ANATÔMICO`, e ela não se toca. As variações trocam uma
+variável de cada vez:
+
+1. o avatar joga canela em cima da **própria barriga** (troca o alvo)
+2. o avatar joga bicarbonato em cima de um modelo anatômico de **outro órgão**, se houver congruência
+3. o avatar joga **canela** em cima do modelo de intestino (troca o ingrediente)
+4. o avatar joga **coca-cola** em cima do modelo de intestino (troca o ingrediente e o estado, de pó
+   para líquido)
+
+**Os dois eixos de troca são o INGREDIENTE e o ALVO.** Trocar os dois ao mesmo tempo já é gancho
+novo, não variação, e sai da etapa.
+
+**A trava que continua valendo:** cada variação precisa continuar congruente com a fala do T1, porque
+o herói carrega argumento. Variação que obriga a reescrever a copy foi longe demais e é reprovada
+antes de aparecer. Marcar sempre **qual variável foi trocada** em cada sugestão.
 
 **Entregar 10 variações** (dez, fixo desde 2026-09-08), ordenadas por congruência, clickbait puro no
 fim e marcado como tal. **Doutrina de invenção no topo de

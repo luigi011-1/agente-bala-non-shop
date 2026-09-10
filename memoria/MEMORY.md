@@ -49,6 +49,9 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 - [CTA: 5 passos + produto](feedback_cta_produto.md) — **o produto NUNCA aparece insuficiente sozinho.** Limite honesto limita um claim nos Ângulos 1 e 2, e é **PROIBIDO no Ângulo 4**
 - [Ângulo 2, doutrina FityWell](angulo2_copy_fitywell.md) — só se for Ângulo 2. Ponte das 3 causas, nunca culpar ela, não mostra produto. ✅ **Voltou a ter avatar em 2026-09-10:** Dana Morrison, Jamie Anderson e Lynn Parker, os três como COACH, e o crivo de nunca culpar ela roda DUAS vezes porque agora quem fala é homem
 
+## 🎣 AO SUGERIR VARIAÇÕES DE GANCHO VISUAL
+- [Variação de gancho: dois modos](ganchos_variacao_puzzle.md) — **abrir ANTES de listar qualquer variação.** No Ângulo 3 a ideia nasce de invenção, impact first. **Na FityWell, desde 2026-09-10, a etapa também existe, mas a ideia nasce do MÉTODO PUZZLE aplicado ao herói do hook:** preservar a ação estrutural e trocar UMA variável por vez, o ingrediente ou o alvo. Clickbait puro é proibido lá e congruência com a fala do T1 é gate
+
 ## 🖼️ AO ESCREVER OS PROMPTS
 - [Prompts de imagem (JSON)](prompts_imagem_json.md) — campos, blocos padrão, referências no título em caixa alta
 - [Prompts de vídeo Fase 7](prompts_video_fase7.md) — os 5 blocos, 13 a 29 palavras por take, fala é cópia literal
