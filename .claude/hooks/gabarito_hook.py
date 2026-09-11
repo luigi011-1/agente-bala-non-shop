@@ -27,17 +27,46 @@ P7 antes do CTA de STORIES  ·  P8 se travar restricao  ·  P9 ao fechar  ·  P1
 
 Antes de entregar qualquer coisa de producao, conferir o gabarito, nao a lembranca dele.
 
-1. LER `producao/brandon_angle2/ROTEIRO.md` e `PROMPTS_PRODUCAO.md`. E o gabarito vivo.
-   (Copiar dali o FORMATO, nunca o conteudo. Duas praticas de la foram revogadas:
-    frase filler e um keyframe por take.)
+1. LER `producao/fitywell_pernas/ROTEIRO.md` e `PROMPTS_PRODUCAO.md`. E o gabarito vivo
+   dos angulos 1, 2 e 4 desde 2026-09-10. Copiar dali o FORMATO, nunca o conteudo.
+   O `producao/brandon_angle2/` virou HISTORICO: a Brandon saiu da FityWell, e duas praticas
+   de la estao revogadas (frase filler e um keyframe por take).
+   [FITYWELL] Processo completo em `PLAYBOOK_FITYWELL.md`: fila de avatares, um pacote por
+   ACTIVE com os anteriores arquivados pelo nome, blocos limpos do Flow e variacao de gancho
+   pelo Puzzle.
 2. ESCREVER OS ARQUIVOS em `producao/<slug>/` E colar tudo na conversa.
    ANGULO 3 (Auraly): segue o `PLAYBOOK_MESTRE_AURALY.md`, documento operacional. Pasta
    `producao/<slug>/` sem prefixo de avatar, `ROTEIRO.md` comeca com `pipeline: auraly`,
    arquivos ROTEIRO.md + GANCHOS_VISUAIS.md + PROMPTS_IMAGEM.md. SEM DM.md.
-   ANTES dos prompts, mandar SUGESTOES DE GANCHO VISUAL (copy identica, so o hook muda) e esperar
-   a escolha. Geracao de imagem: identificar o Modo (A automacao total / B abre Chrome mas nao
-   interage / C sem navegador). No Modo B ou C, entregar o `pacote_browser/<avatar>/` do playbook
-   secao 13.0, nunca alegar que anexou/gerou/baixou algo sem observar.
+   ANTES dos prompts, mandar 10 SUGESTOES DE GANCHO VISUAL (copy identica, so o hook muda) e esperar
+   a escolha. PORTAO P4: a fonte da ideia e o METODO DE INVENCAO no topo de
+   `producao/_swipe_auraly/BANCO_GANCHOS_VISUAIS.md`, NUNCA o banco historico. Desde 2026-09-08
+   gancho antigo com objeto trocado e entrega reprovada. Combinar 2 a 4 mecanismos de atencao por
+   gancho, notar de 0 a 10 em silencio e substituir a ideia fraca antes de mostrar.
+   IMPACT FIRST (Luigi, 2026-09-09): a ordem e impacto visual > curiosidade > congruencia.
+   Dominar com KINETIC PATTERN INTERRUPT (algo rasga, quebra, queima, estoura, abre, cai de
+   dentro, liquido ou po reage, algo colado na lente). Reprovar sozinho o gancho em que nada
+   se move: 'ela segura/mostra/aponta pra X' e fraco. Distribuicao: 4 impacto fisico,
+   2 bizarros, 2 reveal, 2 coincidencia. Impacto visual e scroll-stop mandam na nota. EU NAO GERO IMAGEM E NAO ABRO NAVEGADOR (Luigi, 2026-09-08): Auraly Studio,
+   bridge, extensao Chrome, browser queue, preflight, batch e Modo A/B/C estao DESCONTINUADOS,
+   doc antiga sobre isso e HISTORICA. Minha funcao termina no pacote de prompts.
+   PORTAO P4.1 [ANGULO 3]: assim que o Luigi ESCOLHER os ganchos e ANTES do primeiro prompt,
+   colar INTEIRO no chat o bloco `INSTRUCOES PARA A MEMORIA DO AGENTE - GOOGLE FLOW AI`
+   (fonte: `producao/_flow/INSTRUCOES_AGENTE_FLOW.md`). TODA VEZ, sem excecao e sem atalho.
+   A permissao de dizer "a memoria do agente Flow permanece a mesma" foi REVOGADA em 2026-09-08.
+   Ordem da entrega: 1 instrucoes Flow / 2 BLOCO UNICO com TODOS os prompts de imagem /
+   3 BLOCO UNICO com TODOS os prompts de video / 4 transcricao final EN / 5 transcricao final PT.
+   A TRANSCRICAO SEMPRE FECHA A PRODUCAO (Luigi, 2026-09-08): colar as duas no chat, take a take
+   mais a versao corrida. Nunca dizer "esta no ROTEIRO.md" no lugar de colar.
+   [ANGULO 3] GOOGLE FLOW DELIVERY FORMAT (Luigi, 2026-09-09, revoga o formato de 08/09):
+   imagem e video vao cada um em UM bloco de codigo LIMPO PARA MAQUINA. Dentro do bloco existe
+   SO o codigo sozinho numa linha (K01, V01) seguido do prompt. ZERO descricao, titulo, rotulo T__,
+   metadata, "usa K__", INITIAL FRAME ou config de modelo. UMA IMAGEM = UM VIDEO: se varios ganchos
+   dividem a fala, DUPLICAR o prompt de video, um por keyframe; e dois takes no mesmo setup viram
+   dois K__. Todo prompt e AUTOSSUFICIENTE, entao nao existe "EDITAR do K__" nem "same as previous"
+   no bloco do Flow, e REF-CARTA/REF-A viram descricao por escrito dentro de cada prompt.
+   Tabela humana de leitura so FORA dos blocos. O JSON segue sendo a fonte interna do
+   PROMPTS_IMAGEM.md, que e o que o linter le. Angulos 1, 2 e 4 seguem um prompt por bloco.
    Duracao, takes e gramatica visual saem do VIDEO MODELO. So troca o que e do produto.
    Arquivo nao substitui chat, chat nao substitui arquivo.
 

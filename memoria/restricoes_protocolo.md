@@ -51,6 +51,12 @@ Mesma mecânica dos nomes de órgão: "logo" e "brand name" caem em lista de pro
 
 **A forma certa de evitar marca numa cena é não descrever marca nenhuma no texto positivo.** Nunca negar.
 
+> ✅ **DESDE 2026-09-10 O LINTER COBRA ISSO SOZINHO.** `checar_entrega.py` tem a lista
+> `NEGATIVE_PROIBIDO` e reprova órgão, gore e marca dentro do campo `negative`. A checagem nasceu
+> porque eu mesmo escrevi `no heart model, no skull model, no brain model` nos cinco keyframes de
+> gancho da `producao/fitywell_pernas` e o K02 travou no Flow. A regra existia aqui e não era
+> cobrada por máquina nenhuma, então dependia de eu lembrar, e eu não lembrei.
+
 **Lista atualizada do que NUNCA pode ir no negative:**
 - Nomes de órgão (`no heart model`, `no lung model`, `no kidney model`...)
 - Termos de gore (`no gore`, `no blood`, `no worms`, `no insects`)

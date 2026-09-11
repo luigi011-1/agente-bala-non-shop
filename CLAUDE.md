@@ -42,7 +42,7 @@ sentido e ajustando só identidade, voz, prompts e pastas do avatar. Não estran
 não reiniciar o processo do zero sem necessidade.
 
 1. Rodar `/watch` no `.mp4`.
-2. **Ler `producao/brandon_angle2/ROTEIRO.md` e `PROMPTS_PRODUCAO.md`.** São o gabarito vivo. Nunca reinventar o formato de memória.
+2. **Ler `producao/fitywell_pernas/ROTEIRO.md` e `PROMPTS_PRODUCAO.md`.** São o gabarito vivo dos Ângulos 1, 2 e 4 desde 2026-09-10. Nunca reinventar o formato de memória. O `producao/brandon_angle2/` virou histórico junto com a Brandon.
 3. Perguntar o ângulo (1 Korella / 2 FityWell / 3 Auraly / 4 Body Hacks For Men) e confirmar o avatar.
    **Exceção do avatar:** `.mp4` + imagem de avatar na mesma mensagem já decide para quem é,
    ver a seção do Ângulo 3. Nesse caso só resta perguntar o ângulo.
@@ -241,6 +241,8 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
   manifestação entra (cartas, cristais, vela, defumador, tigela com pétalas), prop ou fala que lê como pacto não.
   Sem bruxa, feitiço, spell, shield, círculo de proteção. **Cartas HOLOGRÁFICAS / FOIL, arte saturada e chamativa** (2026-08-29, revoga a paleta pálida): borda metálica espelhada com reflexo de arco-íris ou foil dourado, faixa de título na base. **A trava é a LEITURA, não a cor:** casal, coração, rosas, luz. Azul-noite com estrelas entra; caveira, corvo, serpente, espada e símbolo invertido não.
 - **Ângulos 2 e 3 não mostram produto.** Ângulos 1 e 4 mostram sempre (no 4 é um **livro FÍSICO**, nunca mockup de ebook nem tela de celular).
+- **[FITYWELL] O processo dos Ângulos 2 e 4 vive em `PLAYBOOK_FITYWELL.md`**, que é o equivalente
+  do `PLAYBOOK_MESTRE_AURALY.md` para esta marca. Ler antes de produzir.
 - **[FITYWELL] Ângulos 2 e 4 rodam com os MESMOS três avatares desde 2026-09-10:** Dana Morrison,
   Jamie Anderson e Lynn Parker. **No Ângulo 2 eles são COACH** (produto feminino, e o crivo de nunca
   culpar ela roda DUAS vezes, porque quem fala é homem). **No Ângulo 4 eles são PAR**, com 1ª pessoa
@@ -315,7 +317,8 @@ Só depois disso a copy pode ser modificada e mandada pro Luigi aprovar ou ajust
 
 ### P5 · Ao receber "roteiro aprovado" e `/produzir`, ANTES do primeiro JSON
 **Executar a skill não substitui ler.** A skill é a ordem, isto aqui é o conteúdo:
-- **O gabarito vivo:** `producao/brandon_angle2/ROTEIRO.md` e `PROMPTS_PRODUCAO.md`
+- **O gabarito vivo:** `producao/fitywell_pernas/ROTEIRO.md` e `PROMPTS_PRODUCAO.md`
+- **[FITYWELL] `PLAYBOOK_FITYWELL.md`** → fila de avatares, pacote por ACTIVE, blocos do Flow, gancho pelo Puzzle
 - `workflow-entrega-gabarito` → as 8 coisas que eu perdi ao parar de conferir
 - `checklist-composicao-visual` → os 10 itens
 - `realismo-anti-cara-de-ia` → os 7 itens do gate de realismo
@@ -626,7 +629,7 @@ foi usada em qual video, onde uma regra foi aplicada, se um esqueleto ja rodou.
 - `graphify-out/GRAPH_REPORT.md` so para visao geral, nunca como primeira parada.
 
 **O grafo NAO substitui os PORTOES DE CONSULTA.** Ele orienta e cruza; os portoes mandam ler o
-arquivo inteiro. Quando o portao diz "ler `producao/brandon_angle2/ROTEIRO.md`", e ler o arquivo,
+arquivo inteiro. Quando o portao diz "ler `producao/fitywell_pernas/ROTEIRO.md`", e ler o arquivo,
 nao perguntar ao grafo sobre ele. Precedencia: **PORTAO > grafo > lembranca**.
 
 **Nos com nome de caminho** (`memoria/banco_obstaculos.md`, `memoria/`) sao o esqueleto documental,

@@ -329,6 +329,16 @@ TERMOS_SENSIVEIS = [
     "wound", "naked", "nude", "sexual", "witch", "spell", "occult", "demon", "satan",
 ]
 
+# So valem dentro do campo negative. A regra e de restricoes-protocolo: o classificador
+# le o token e nao a negacao, entao nomear orgao, gore ou marca no negative INJETA o
+# conceito. Ja derrubou 8 de 8 prompts de um pacote em 2026-08-21, e derrubou o K02 do
+# fitywell_pernas em 2026-09-10, que foi o que fez esta checagem existir.
+NEGATIVE_PROIBIDO = [
+    "heart model", "skull", "brain model", "lung", "kidney", "liver model", "stomach model",
+    "blood", "worms", "insects", "corpse", "cadaver",
+    "logo", "logos", "brand name", "brand names", "signage", "trademark",
+]
+
 
 def c_negative(kfs):
     ruim = False
@@ -357,6 +367,14 @@ def c_negative(kfs):
             if re.search(r"\b%s\b" % termo, neg, re.I):
                 falha("negative",
                       "%s lista termo sensivel '%s' no negative. O classificador le o token, nao a negacao."
+                      % (k["id"], termo), loc)
+                ruim = True
+        for termo in NEGATIVE_PROIBIDO:
+            if re.search(r"\b%s\b" % re.escape(termo), neg, re.I):
+                falha("negative",
+                      "%s lista '%s' no negative. Orgao, gore e marca NUNCA entram la "
+                      "(restricoes-protocolo): o token injeta o conceito. "
+                      "Descrever a forma certa no positivo."
                       % (k["id"], termo), loc)
                 ruim = True
     if not ruim and kfs:
