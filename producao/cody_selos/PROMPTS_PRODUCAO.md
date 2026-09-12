@@ -655,6 +655,6 @@ FUNIL
 
 Achei rodando o P5 contra o gabarito. Registrados pra não voltarem.
 
-1. **A trava de identidade do `kendra_selos` descreve a CODY, não a Kendra.** Está escrito "mulher negra americana, uns sessenta anos, sardas, cabelo grisalho raspado, vestido de linho terracota". A Kendra é branca, fim dos vinte, buzzcut platinado e óculos pretos. **Aquele pacote gera a avatar errada** e precisa ser corrigido antes de rodar.
-2. **A REF-CARTA de lá é a versão antiga**, "clean warm line art", que é exatamente o que você reprovou por parecer livro infantil. Aqui está a especificação Rider-Waite.
-3. **O negative da REF-CARTA de lá tem `no words overlaid on the image`**, que mata a palavra `SOULMATE` da própria carta. Aqui essa linha foi removida só desse prompt e do K01E, e continua em todos os outros.
+1. ✅ **CORRIGIDO EM 2026-08-26.** A trava de identidade do `kendra_selos` descrevia a CODY, não a Kendra: "mulher negra americana, uns sessenta anos, sardas, cabelo grisalho raspado, vestido de linho terracota". Os seis prompts de imagem, o K03 e o bloco global de vídeo de lá foram **reescritos por inteiro** com os traços canônicos da Kendra (branca, fim dos vinte, buzzcut platinado, óculos pretos grossos, argola na narina, regata branca com camisa de linho aveia) e com o cenário dela (três quadros de astrologia em fileira, cruz de madeira, bandeira dos EUA no suporte). `checar_entrega.py producao/kendra_selos` fecha com zero falhas.
+2. ⏳ **AINDA ABERTO no `kendra_selos`.** A REF-CARTA de lá é a versão antiga, "clean warm line art", que é exatamente o que você reprovou por parecer livro infantil. Aqui está a especificação Rider-Waite.
+3. ⏳ **AINDA ABERTO no `kendra_selos`.** O negative da REF-CARTA de lá tem `no words overlaid on the image`, que mata a palavra `SOULMATE` da própria carta. Aqui essa linha foi removida só desse prompt e do K01E, e continua em todos os outros.

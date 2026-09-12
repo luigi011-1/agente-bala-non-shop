@@ -35,17 +35,21 @@ Funil: comentar `222` -> DM -> mensagem com o rosto -> link do quiz
 
 **Escrita aqui uma vez, não repetir inteira dentro de cada JSON.**
 
-- **KENDRA COLLINS É MULHER.** Mulher negra americana, uns sessenta anos, pele marrom média com sardas visíveis nas maçãs do rosto e no nariz, linhas de expressão reais.
-- **Cabelo grisalho raspado bem curto**, quase colado à cabeça.
-- **Brincos ovais grandes, brancos foscos**, um em cada orelha.
-- **Vestido de linho terracota** de alças largas e decote quadrado.
-- **Corrente fina de PRATA com pingente pequeno de cruz de PRATA.** Nunca ouro.
-- **Pulseiras de miçangas coloridas no punho esquerdo** e **aliança de prata lisa** no anelar direito.
-- **Cenário: a sala dela, com DUAS âncoras visuais apenas: a cruz de madeira escura na parede bege atrás dela e a prateleira de livros de lombada ROXA.** Os potes de ervas, os cristais, a bandeira de mesa, as velas e o sofá ficam **fora de quadro**. Nunca inventariar a sala.
+- **KENDRA COLLINS É MULHER.** Mulher **branca** americana, **fim dos vinte**, compleição atlética com ombros definidos, pele clara com **poros visíveis, sardas no nariz e nas maçãs do rosto** e pequenas imperfeições reais, **sobrancelhas claras**, lábios cheios.
+- **Cabelo raspado platinado**, buzzcut bem curto, mais curto nas laterais.
+- **Óculos pretos grossos**, armação retangular de cantos levemente arredondados. **É a marca do rosto dela e nunca sai.**
+- **Piercing pequeno de argola numa narina.**
+- **Regata branca canelada com camisa de linho cor aveia aberta por cima**, mangas dobradas até o cotovelo.
+- **Corrente fina de PRATA com pingente de cruz de PRATA trabalhada.** Nunca ouro.
+- **Anéis finos de prata** em dedos das duas mãos.
+- **Cenário: o quarto de leitura dela, com TRÊS âncoras visuais apenas: os três quadros emoldurados em fileira na parede branca atrás dela (fases da lua, roda zodiacal, mapa de constelação, todos em traço branco sobre fundo azul-escuro), a cruz de madeira na parede à esquerda, e a BANDEIRA DOS EUA PEQUENA no suporte preto de mesa na prateleira de madeira da direita.** Os cristais, a ametista, a selenita, o incenso, os livros e a janela ficam **fora de quadro**. Nunca inventariar o quarto.
+- 🇺🇸 **A BANDEIRA DOS EUA ENTRA EM TODO PROMPT DE IMAGEM. Discreta, porém visível e em foco.** Regra fixa do Luigi (2026-08-26), vale pra todo prompt de imagem de toda produção. Discreta significa pequena e periférica, nunca desfocada e nunca cortada pela borda.
 - **Mesa de madeira clara** ocupando o terço inferior do quadro.
 - **Luz natural difusa de dia nublado** vindo da janela lateral fora de quadro. **Sem luz sobrenatural, sem brilho dourado, sem partícula flutuando.**
 - Zero blur, tudo em foco nítido. Cara de vídeo de celular, nunca polimento de IA.
 - **Sempre sentada à mesa, ereta**, ombros abertos, olhando na lente.
+
+> 🔒 **ELA É JOVEM E LÊ, NÃO VIVEU.** Nada de linha de expressão marcada nem de grisalho: o registro dela é **cartomante moderna**, autoridade por **leitura**, nunca por idade vivida. Se vier envelhecida, o enquadramento do roteiro cai. **Óculos pretos grossos, buzzcut platinado e argola na narina são os três traços que a IA mais derruba**, e são exatamente os que separam ela da Cody. Conferir os três em todo keyframe.
 
 ## Trava do prop herói (REF-CARTA)
 
@@ -82,7 +86,8 @@ DISTANCIA
 [x] 6. Take mais fechado e o do CTA -> K03
 
 FUNDO
-[x] 7. Cenario reconhecivel         -> 2 ancoras: a cruz de madeira e os livros de lombada roxa
+[x] 7. Cenario reconhecivel         -> 3 ancoras: os tres quadros de astrologia em fileira,
+                                      a cruz de madeira e a bandeira dos EUA no suporte
 [x] 8. Fundo por enquadramento, nunca blur
 [x] 9. Menos elementos
 
@@ -93,7 +98,7 @@ FUNDO
 ## GATE DE REALISMO (rodado junto)
 
 ```
-[x] 1. Heroi isolado, 2 ancoras de fundo
+[x] 1. Heroi isolado, 3 ancoras de fundo
 [x] 2. Camera puxada perto, o prop enche o terco inferior
 [x] 3. Luz NEUTRA de dia nublado pela janela. Sem luz sobrenatural
 [x] 4. Negative carrega no warm orange color cast, no yellow tint, no golden glow
@@ -106,7 +111,7 @@ FUNDO
 
 **A carta virou REF-PROP.** É o objeto mais teimoso do ângulo: a IA tende a inventar arte de tarô escura, com luas, olhos e simbologia pesada, que é exatamente o que a lei do registro proíbe. Gerar isolada, aprovar, e anexar sempre resolve de vez, e é o item 6 do gate de realismo.
 
-**A sala dela convida inventário.** Potes de ervas, cristais, geodos, velas, bandeira, sofá, janela, livros. Ficaram **duas âncoras**: a cruz na parede e os livros de lombada roxa. Já lê como o cenário dela e nada mais compete.
+**O quarto dela convida inventário.** Ametista, quartzo, selenita, incenso, livros, janela, sofá. Ficaram **três âncoras**: os três quadros de astrologia em fileira, a cruz de madeira e a bandeira dos EUA no suporte. Os quadros já leem como o cenário dela e são o que a diferencia da Cody, a bandeira é regra fixa, e nada mais compete com o prop.
 
 ## ⚠️ NOTA DE RESTRIÇÃO E DE REGISTRO
 
@@ -149,17 +154,17 @@ Risco de geração **baixo**. Sem anatomia, sem região sensível, sem 2ª pesso
 ```json
 {
   "shot_id": "K01A_hook_vela",
-  "reference_use": "TWO references attached. Use the FIRST image ONLY for Kendra's face, identity, hair, earrings, clothing and the living room scene. Use the SECOND image for the EXACT card on the table, matching its illustration, its pale palette and its proportions. Do NOT copy the framing of either reference. Frame her much closer than the reference.",
-  "identity_main": "The EXACT WOMAN from the first reference image (Kendra Collins), a Black American woman of about sixty, medium brown skin with visible freckles across her cheeks and nose, real expression lines, very short cropped grey hair, large oval matte white earrings.",
-  "wardrobe": "Terracotta linen dress with wide straps and a square neckline, thin SILVER chain with a small SILVER cross pendant, colourful beaded bracelets on her left wrist, plain silver band on her right ring finger.",
+  "reference_use": "TWO references attached. Use the FIRST image ONLY for Kendra's face, identity, glasses, buzzcut, clothing and the reading room scene. Use the SECOND image for the EXACT card on the table, matching its illustration, its pale palette and its proportions. Do NOT copy the framing of either reference. Frame her much closer than the reference.",
+  "identity_main": "The EXACT WOMAN from the first reference image (Kendra Collins), a white American woman in her late twenties, athletic build with defined shoulders, fair skin with visible pores, freckles across her nose and cheeks and small real imperfections, pale eyebrows, full lips, a small hoop piercing in one nostril, very short platinum blonde buzzcut cropped shorter at the sides, thick black rectangular glasses with slightly rounded corners, light eyes, calm direct expression.",
+  "wardrobe": "White ribbed tank top under an oatmeal linen shirt worn open over it with the sleeves rolled to the elbow, thin SILVER chain with an ornate SILVER cross pendant, thin plain silver rings on fingers of both hands.",
   "prop": "On the light wooden table in front of her: a CLOSED, CONTINUOUS ring of coarse white salt, about 40 cm across, with the SOULMATE card from the second reference lying flat at its centre, and a short white pillar candle standing just beside the card. Her right hand holds a lit wooden match, lowered toward the wick, the flame still small on the match. The candle wick is NOT lit yet.",
-  "scene": "SAME living room as the first reference image, with only two visible anchors: a dark wooden cross on the beige wall behind her and a shelf of books with PURPLE spines. Everything else out of frame.",
+  "scene": "SAME reading room as the first reference image, with only THREE visible anchors: three framed prints in a row on the white wall behind her (moon phases, a zodiac wheel and a constellation map, all white line work on dark blue), a plain wooden cross on the wall at the left, and a SMALL United States flag on a little black desk stand on the wooden shelf at the right edge of frame, discreet but clearly visible and fully in focus. Everything else out of frame.",
   "posture": "Seated upright at the table, shoulders squared, leaning slightly forward over the ring, looking down at the candle.",
   "composition": "TIGHT. The salt ring and the card fill the lower third of the frame and sit much closer to the lens than her face. Her face is smaller in the upper third.",
   "camera": "chest level from the other side of the table, close, angled slightly down toward the ring",
   "state": "Start frame: the candle is UNLIT, the match flame is still on the match and has not touched the wick.",
   "lighting": "Flat neutral diffuse daylight from a side window out of frame, like an overcast day. No supernatural light.",
-  "realism": "UGC realism, real skin texture with visible pores and freckles, individual hair strands, real expression lines, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls and details.",
+  "realism": "UGC realism, real skin texture with visible pores and freckles, individual hair strands, small real skin imperfections, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls and details.",
   "aspect_ratio": "9:16 vertical",
   "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no blur, no gold jewelry, no second person, no lit candle yet, no broken ring, no glowing light, no sparkles, no floating particles, no smoke yet, no dark card, no warm orange color cast, no yellow tint, no golden glow"
 }
@@ -170,17 +175,17 @@ Risco de geração **baixo**. Sem anatomia, sem região sensível, sem 2ª pesso
 ```json
 {
   "shot_id": "K01B_hook_gelo",
-  "reference_use": "Use the attached image ONLY for Kendra's face, identity, hair, earrings, clothing and the living room scene. Do NOT copy its framing. Frame her much closer than the reference.",
-  "identity_main": "The EXACT WOMAN from the attached reference image (Kendra Collins), a Black American woman of about sixty, medium brown skin with visible freckles across her cheeks and nose, real expression lines, very short cropped grey hair, large oval matte white earrings.",
-  "wardrobe": "Terracotta linen dress with wide straps and a square neckline, thin SILVER chain with a small SILVER cross pendant, colourful beaded bracelets on her left wrist, plain silver band on her right ring finger.",
+  "reference_use": "Use the attached image ONLY for Kendra's face, identity, glasses, buzzcut, clothing and the reading room scene. Do NOT copy its framing. Frame her much closer than the reference.",
+  "identity_main": "The EXACT WOMAN from the attached reference image (Kendra Collins), a white American woman in her late twenties, athletic build with defined shoulders, fair skin with visible pores, freckles across her nose and cheeks and small real imperfections, pale eyebrows, full lips, a small hoop piercing in one nostril, very short platinum blonde buzzcut cropped shorter at the sides, thick black rectangular glasses with slightly rounded corners, light eyes, calm direct expression.",
+  "wardrobe": "White ribbed tank top under an oatmeal linen shirt worn open over it with the sleeves rolled to the elbow, thin SILVER chain with an ornate SILVER cross pendant, thin plain silver rings on fingers of both hands.",
   "prop": "On the light wooden table in front of her: a THICK solid block of clear ice, about 15 cm tall, standing on a shallow metal tray. Frozen deep inside the ice there is a small framed portrait photograph, turned toward the camera. THE ICE IS CLOUDY AND THICK, and the photograph is completely unreadable through it: only a vague dark shape is visible where the figure would be. Both her hands rest flat on the table on either side of the tray. The block is dry and has not started melting.",
-  "scene": "SAME living room as the attached reference image, with only two visible anchors: a dark wooden cross on the beige wall behind her and a shelf of books with PURPLE spines. Everything else out of frame.",
+  "scene": "SAME reading room as the attached reference image, with only THREE visible anchors: three framed prints in a row on the white wall behind her (moon phases, a zodiac wheel and a constellation map, all white line work on dark blue), a plain wooden cross on the wall at the left, and a SMALL United States flag on a little black desk stand on the wooden shelf at the right edge of frame, discreet but clearly visible and fully in focus. Everything else out of frame.",
   "posture": "Seated upright at the table, shoulders squared, looking straight into the lens over the top of the ice block.",
   "composition": "TIGHT. The block of ice fills the lower third of the frame and sits much closer to the lens than her face. Her face is smaller in the upper third.",
   "camera": "chest level from the other side of the table, close, angled slightly down toward the ice",
   "state": "Start frame: the ice is still dry and solid, no water on the tray yet.",
   "lighting": "Flat neutral diffuse daylight from a side window out of frame, like an overcast day. No supernatural light.",
-  "realism": "UGC realism, real skin texture with visible pores and freckles, individual hair strands, real expression lines, real cloudy ice texture with internal fractures, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls and details.",
+  "realism": "UGC realism, real skin texture with visible pores and freckles, individual hair strands, small real skin imperfections, real cloudy ice texture with internal fractures, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls and details.",
   "aspect_ratio": "9:16 vertical",
   "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no blur, no gold jewelry, no second person, no clear transparent ice, no readable photograph, no water pooled yet, no glowing light, no sparkles, no floating particles, no warm orange color cast, no yellow tint, no golden glow"
 }
@@ -193,17 +198,17 @@ Risco de geração **baixo**. Sem anatomia, sem região sensível, sem 2ª pesso
 ```json
 {
   "shot_id": "K01C_hook_mel",
-  "reference_use": "TWO references attached. Use the FIRST image ONLY for Kendra's face, identity, hair, earrings, clothing and the living room scene. Use the SECOND image for the EXACT card in the dish, matching its illustration, its pale palette and its proportions. Do NOT copy the framing of either reference. Frame her much closer than the reference.",
-  "identity_main": "The EXACT WOMAN from the first reference image (Kendra Collins), a Black American woman of about sixty, medium brown skin with visible freckles across her cheeks and nose, real expression lines, very short cropped grey hair, large oval matte white earrings.",
-  "wardrobe": "Terracotta linen dress with wide straps and a square neckline, thin SILVER chain with a small SILVER cross pendant, colourful beaded bracelets on her left wrist, plain silver band on her right ring finger.",
+  "reference_use": "TWO references attached. Use the FIRST image ONLY for Kendra's face, identity, glasses, buzzcut, clothing and the reading room scene. Use the SECOND image for the EXACT card in the dish, matching its illustration, its pale palette and its proportions. Do NOT copy the framing of either reference. Frame her much closer than the reference.",
+  "identity_main": "The EXACT WOMAN from the first reference image (Kendra Collins), a white American woman in her late twenties, athletic build with defined shoulders, fair skin with visible pores, freckles across her nose and cheeks and small real imperfections, pale eyebrows, full lips, a small hoop piercing in one nostril, very short platinum blonde buzzcut cropped shorter at the sides, thick black rectangular glasses with slightly rounded corners, light eyes, calm direct expression.",
+  "wardrobe": "White ribbed tank top under an oatmeal linen shirt worn open over it with the sleeves rolled to the elbow, thin SILVER chain with an ornate SILVER cross pendant, thin plain silver rings on fingers of both hands.",
   "prop": "On the light wooden table in front of her: a wide shallow clear glass dish with the SOULMATE card from the second reference lying flat inside it, fully visible and dry. Her right hand holds a wooden honey dipper raised above the dish, with a single thick thread of amber honey just starting to fall from it. The card is still completely uncovered.",
-  "scene": "SAME living room as the attached reference image, with only two visible anchors: a dark wooden cross on the beige wall behind her and a shelf of books with PURPLE spines. Everything else out of frame.",
+  "scene": "SAME reading room as the first reference image, with only THREE visible anchors: three framed prints in a row on the white wall behind her (moon phases, a zodiac wheel and a constellation map, all white line work on dark blue), a plain wooden cross on the wall at the left, and a SMALL United States flag on a little black desk stand on the wooden shelf at the right edge of frame, discreet but clearly visible and fully in focus. Everything else out of frame.",
   "posture": "Seated upright at the table, shoulders squared, leaning slightly forward over the dish, looking down at it.",
   "composition": "TIGHT. The glass dish and the card fill the lower third of the frame and sit much closer to the lens than her face. Her face is smaller in the upper third.",
   "camera": "chest level from the other side of the table, close, angled slightly down toward the dish",
   "state": "Start frame: the card is dry and fully visible, the honey thread has not reached it yet.",
   "lighting": "Flat neutral diffuse daylight from a side window out of frame, like an overcast day. No supernatural light.",
-  "realism": "UGC realism, real skin texture with visible pores and freckles, individual hair strands, real expression lines, real viscous honey with realistic refraction, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls and details.",
+  "realism": "UGC realism, real skin texture with visible pores and freckles, individual hair strands, small real skin imperfections, real viscous honey with realistic refraction, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls and details.",
   "aspect_ratio": "9:16 vertical",
   "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no blur, no gold jewelry, no second person, no drinking glass, no card already covered, no glowing light, no sparkles, no floating particles, no dark card, no warm orange color cast, no yellow tint, no golden glow"
 }
@@ -214,17 +219,17 @@ Risco de geração **baixo**. Sem anatomia, sem região sensível, sem 2ª pesso
 ```json
 {
   "shot_id": "K01D_hook_terra",
-  "reference_use": "TWO references attached. Use the FIRST image ONLY for Kendra's face, identity, hair, earrings, clothing and the living room scene. Use the SECOND image for the EXACT card that is buried under the soil, so that the small uncovered corner matches its palette and cardstock. Do NOT copy the framing of either reference. Frame her much closer than the reference.",
-  "identity_main": "The EXACT WOMAN from the first reference image (Kendra Collins), a Black American woman of about sixty, medium brown skin with visible freckles across her cheeks and nose, real expression lines, very short cropped grey hair, large oval matte white earrings.",
-  "wardrobe": "Terracotta linen dress with wide straps and a square neckline, thin SILVER chain with a small SILVER cross pendant, colourful beaded bracelets on her left wrist, plain silver band on her right ring finger.",
+  "reference_use": "TWO references attached. Use the FIRST image ONLY for Kendra's face, identity, glasses, buzzcut, clothing and the reading room scene. Use the SECOND image for the EXACT card that is buried under the soil, so that the small uncovered corner matches its palette and cardstock. Do NOT copy the framing of either reference. Frame her much closer than the reference.",
+  "identity_main": "The EXACT WOMAN from the first reference image (Kendra Collins), a white American woman in her late twenties, athletic build with defined shoulders, fair skin with visible pores, freckles across her nose and cheeks and small real imperfections, pale eyebrows, full lips, a small hoop piercing in one nostril, very short platinum blonde buzzcut cropped shorter at the sides, thick black rectangular glasses with slightly rounded corners, light eyes, calm direct expression.",
+  "wardrobe": "White ribbed tank top under an oatmeal linen shirt worn open over it with the sleeves rolled to the elbow, thin SILVER chain with an ornate SILVER cross pendant, thin plain silver rings on fingers of both hands.",
   "prop": "On the light wooden table in front of her: a shallow wooden tray holding a TALL, HEAPED MOUND of loose dark brown soil, piled high with real 3D volume. The SOULMATE card from the second reference is buried under it, with only ONE SMALL PALE CORNER of the card showing at the edge of the mound. Both her hands rest flat on the table on either side of the tray.",
-  "scene": "SAME living room as the attached reference image, with only two visible anchors: a dark wooden cross on the beige wall behind her and a shelf of books with PURPLE spines. Everything else out of frame.",
+  "scene": "SAME reading room as the first reference image, with only THREE visible anchors: three framed prints in a row on the white wall behind her (moon phases, a zodiac wheel and a constellation map, all white line work on dark blue), a plain wooden cross on the wall at the left, and a SMALL United States flag on a little black desk stand on the wooden shelf at the right edge of frame, discreet but clearly visible and fully in focus. Everything else out of frame.",
   "posture": "Seated upright at the table, shoulders squared, leaning forward toward the mound, lips slightly parted as if about to blow.",
   "composition": "TIGHT. The mound of soil fills the lower third of the frame and sits much closer to the lens than her face. Her face is smaller in the upper third.",
   "camera": "chest level from the other side of the table, close, angled slightly down toward the tray",
   "state": "Start frame: the mound is intact and undisturbed, only one small pale corner of the card showing.",
   "lighting": "Flat neutral diffuse daylight from a side window out of frame, like an overcast day. No supernatural light.",
-  "realism": "UGC realism, real skin texture with visible pores and freckles, individual hair strands, real expression lines, real loose soil texture with individual crumbs, realistic shadows, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls and details.",
+  "realism": "UGC realism, real skin texture with visible pores and freckles, individual hair strands, small real skin imperfections, real loose soil texture with individual crumbs, realistic shadows, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls and details.",
   "aspect_ratio": "9:16 vertical",
   "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no blur, no gold jewelry, no second person, no thin scattered layer of soil, no card fully visible, no glowing light, no sparkles, no floating particles, no dark card, no warm orange color cast, no yellow tint, no golden glow"
 }
@@ -235,17 +240,17 @@ Risco de geração **baixo**. Sem anatomia, sem região sensível, sem 2ª pesso
 ```json
 {
   "shot_id": "K01E_hook_espelho",
-  "reference_use": "Use the attached image ONLY for Kendra's face, identity, hair, earrings, clothing and the living room scene. Do NOT copy its framing. Frame her much closer than the reference.",
-  "identity_main": "The EXACT WOMAN from the attached reference image (Kendra Collins), a Black American woman of about sixty, medium brown skin with visible freckles across her cheeks and nose, real expression lines, very short cropped grey hair, large oval matte white earrings.",
-  "wardrobe": "Terracotta linen dress with wide straps and a square neckline, thin SILVER chain with a small SILVER cross pendant, colourful beaded bracelets on her left wrist, plain silver band on her right ring finger.",
+  "reference_use": "Use the attached image ONLY for Kendra's face, identity, glasses, buzzcut, clothing and the reading room scene. Do NOT copy its framing. Frame her much closer than the reference.",
+  "identity_main": "The EXACT WOMAN from the attached reference image (Kendra Collins), a white American woman in her late twenties, athletic build with defined shoulders, fair skin with visible pores, freckles across her nose and cheeks and small real imperfections, pale eyebrows, full lips, a small hoop piercing in one nostril, very short platinum blonde buzzcut cropped shorter at the sides, thick black rectangular glasses with slightly rounded corners, light eyes, calm direct expression.",
+  "wardrobe": "White ribbed tank top under an oatmeal linen shirt worn open over it with the sleeves rolled to the elbow, thin SILVER chain with an ornate SILVER cross pendant, thin plain silver rings on fingers of both hands.",
   "prop": "On the light wooden table in front of her: an oval hand mirror with a plain wooden handle, lying face up and tilted toward the lens. Its glass is COMPLETELY FOGGED OVER with even white condensation, edge to edge, showing no reflection at all and no writing on it yet. Her right index finger is raised just above the glass, about to touch it.",
-  "scene": "SAME living room as the attached reference image, with only two visible anchors: a dark wooden cross on the beige wall behind her and a shelf of books with PURPLE spines. Everything else out of frame.",
+  "scene": "SAME reading room as the attached reference image, with only THREE visible anchors: three framed prints in a row on the white wall behind her (moon phases, a zodiac wheel and a constellation map, all white line work on dark blue), a plain wooden cross on the wall at the left, and a SMALL United States flag on a little black desk stand on the wooden shelf at the right edge of frame, discreet but clearly visible and fully in focus. Everything else out of frame.",
   "posture": "Seated upright at the table, shoulders squared, leaning slightly forward over the mirror, looking down at it.",
   "composition": "TIGHT. The hand mirror fills the lower third of the frame and sits much closer to the lens than her face. Her face is smaller in the upper third.",
   "camera": "chest level from the other side of the table, close, angled slightly down toward the mirror",
   "state": "Start frame: the glass is fully fogged and blank, her finger has not touched it yet.",
   "lighting": "Flat neutral diffuse daylight from a side window out of frame, like an overcast day. No supernatural light.",
-  "realism": "UGC realism, real skin texture with visible pores and freckles, individual hair strands, real expression lines, real condensation with fine water droplets on the glass, realistic shadows, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls and details.",
+  "realism": "UGC realism, real skin texture with visible pores and freckles, individual hair strands, small real skin imperfections, real condensation with fine water droplets on the glass, realistic shadows, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls and details.",
   "aspect_ratio": "9:16 vertical",
   "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no blur, no gold jewelry, no second person, no reflection in the mirror, no clear glass, no writing on the glass yet, no glowing light, no sparkles, no floating particles, no warm orange color cast, no yellow tint, no golden glow"
 }
@@ -262,17 +267,17 @@ Risco de geração **baixo**. Sem anatomia, sem região sensível, sem 2ª pesso
 ```json
 {
   "shot_id": "K02_corpo_carta",
-  "reference_use": "TWO references attached. Use the FIRST image ONLY for Kendra's face, identity, hair, earrings, clothing and the living room scene. Use the SECOND image for the EXACT card she is holding, matching its illustration, its pale palette and its proportions. Do NOT copy the framing of either reference. Frame her closer than the reference.",
-  "identity_main": "The EXACT WOMAN from the first reference image (Kendra Collins), a Black American woman of about sixty, medium brown skin with visible freckles across her cheeks and nose, real expression lines, very short cropped grey hair, large oval matte white earrings.",
-  "wardrobe": "Terracotta linen dress with wide straps and a square neckline, thin SILVER chain with a small SILVER cross pendant, colourful beaded bracelets on her left wrist, plain silver band on her right ring finger.",
+  "reference_use": "TWO references attached. Use the FIRST image ONLY for Kendra's face, identity, glasses, buzzcut, clothing and the reading room scene. Use the SECOND image for the EXACT card she is holding, matching its illustration, its pale palette and its proportions. Do NOT copy the framing of either reference. Frame her closer than the reference.",
+  "identity_main": "The EXACT WOMAN from the first reference image (Kendra Collins), a white American woman in her late twenties, athletic build with defined shoulders, fair skin with visible pores, freckles across her nose and cheeks and small real imperfections, pale eyebrows, full lips, a small hoop piercing in one nostril, very short platinum blonde buzzcut cropped shorter at the sides, thick black rectangular glasses with slightly rounded corners, light eyes, calm direct expression.",
+  "wardrobe": "White ribbed tank top under an oatmeal linen shirt worn open over it with the sleeves rolled to the elbow, thin SILVER chain with an ornate SILVER cross pendant, thin plain silver rings on fingers of both hands.",
   "prop": "The EXACT SOULMATE card from the second reference, held upright in her right hand, resting on the light wooden table, face turned toward the camera and fully readable. The table is otherwise completely empty.",
-  "scene": "SAME living room as the first reference image, with only two visible anchors: a dark wooden cross on the beige wall behind her and a shelf of books with PURPLE spines. Everything else out of frame.",
+  "scene": "SAME reading room as the first reference image, with only THREE visible anchors: three framed prints in a row on the white wall behind her (moon phases, a zodiac wheel and a constellation map, all white line work on dark blue), a plain wooden cross on the wall at the left, and a SMALL United States flag on a little black desk stand on the wooden shelf at the right edge of frame, discreet but clearly visible and fully in focus. Everything else out of frame.",
   "posture": "Seated upright at the table, back straight, shoulders squared, chin level, looking straight into the lens with calm direct eye contact.",
   "composition": "TIGHT chest-up. Her head and shoulders fill the upper two thirds. The card sits in the lower third of the SAME frame, closer to the lens than her face. Her left hand rests open on the table beside it.",
   "camera": "chest level from the other side of the table, straight-on, close",
   "state": "Start frame: card held steady, speaking directly to camera.",
   "lighting": "Flat neutral diffuse daylight from a side window out of frame, like an overcast day. No supernatural light.",
-  "realism": "UGC realism, real skin texture with visible pores and freckles, individual hair strands, real expression lines, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls and details.",
+  "realism": "UGC realism, real skin texture with visible pores and freckles, individual hair strands, small real skin imperfections, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls and details.",
   "aspect_ratio": "9:16 vertical",
   "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no blur, no gold jewelry, no second person, no salt, no candle, no ice, no honey, no soil, no mirror, no clutter on the table, no glowing light, no sparkles, no floating particles, no dark card, no warm orange color cast, no yellow tint, no golden glow"
 }
@@ -285,11 +290,11 @@ Risco de geração **baixo**. Sem anatomia, sem região sensível, sem 2ª pesso
 ```json
 {
   "task": "edit the attached image, keep everything identical except the changes listed",
-  "keep_identical": "Keep the woman exactly the same: same face, same freckles, same short grey hair, same white oval earrings, same terracotta linen dress, same SILVER cross, same beaded bracelets, same seated posture. Keep the SAME background exactly: dark wooden cross on the beige wall, shelf of purple-spined books, same neutral daylight, same camera angle. Keep the card EXACTLY the same illustration and palette.",
-  "change_1": "Crop in much tighter. This must be the CLOSEST framing of the entire video: her head and shoulders now fill the frame.",
+  "keep_identical": "Keep the woman exactly the same: same face, same freckles, same thick black rectangular glasses, same platinum blonde buzzcut, same hoop piercing in her nostril, same white ribbed tank top under the open oatmeal linen shirt, same SILVER cross, same thin silver rings, same seated posture. Keep the SAME background exactly: the three framed astrology prints in a row on the white wall, the plain wooden cross on the wall at the left, and the SMALL United States flag on its little black desk stand on the wooden shelf at the right edge of frame, still discreet but clearly visible and fully in focus, same neutral daylight, same camera angle. Keep the card EXACTLY the same illustration and palette.",
+  "change_1": "Crop in much tighter. This must be the CLOSEST framing of the entire video: her head and shoulders now fill the frame. The United States flag on the shelf stays inside the frame, discreet but clearly visible and fully in focus.",
   "change_2": "She now holds the card raised up against her chest with both hands, face of the card turned toward the camera and fully readable.",
   "change_3": "She looks straight into the lens with direct personal eye contact.",
-  "realism": "UGC realism, real skin texture with visible pores and freckles, iPhone-footage look, no AI polish, no beauty smoothing, no blur anywhere. Do not make her skin darker, yellowish or orangish. Do not make the colors more saturated.",
+  "realism": "UGC realism, real skin texture with visible pores and freckles, iPhone-footage look, no AI polish, no beauty smoothing, no blur anywhere. Do not age her, do not add expression lines, do not change her hair colour. Do not make her skin darker, yellowish or orangish. Do not make the colors more saturated.",
   "negative": "do not change the face, do not change identity, do not change the background, do not change the card illustration, no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no gold jewelry, no blur, no glowing light, no sparkles, no warm orange color cast, no yellow tint"
 }
 ```
@@ -303,11 +308,11 @@ Risco de geração **baixo**. Sem anatomia, sem região sensível, sem 2ª pesso
 Colar em todo prompt:
 
 ```text
-a avatar (MULHER) fala em inglês com sotaque americano, voz calma, grave e de autoridade por vivência, sem pressa e sem tom de novela.
+a avatar (MULHER) fala em inglês com sotaque americano, voz jovem, calma e de certeza tranquila, sem pressa e sem tom de novela.
 
 a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
 
-Estilo TikTok nativo, UGC. Preservar exatamente a identidade da Kendra, rosto, sardas, cabelo grisalho curto, brincos brancos ovais, vestido de linho terracota, cruz de PRATA, a sala, a luz neutra e o enquadramento do frame inicial. Sem legenda, sem texto gerado, sem música, sem pessoas extras, sem luz sobrenatural.
+Estilo TikTok nativo, UGC. Preservar exatamente a identidade da Kendra, rosto jovem, sardas no nariz e nas maçãs, buzzcut platinado, óculos pretos grossos de armação retangular, argola na narina, regata branca canelada com camisa de linho aveia aberta por cima, cruz de PRATA, o quarto de leitura, a luz neutra e o enquadramento do frame inicial. Sem legenda, sem texto gerado, sem música, sem pessoas extras, sem luz sobrenatural.
 ```
 
 **A câmera é FIXA do outro lado da mesa em todo o vídeo.** Não é handheld de selfie, então não incluir a instrução de braço parado.
@@ -571,7 +576,8 @@ som ambiente: sala silenciosa, sem música, sem ruído de fundo
 ## Gates de qualidade
 
 1. Kendra é **MULHER**, a mesma em todos os clipes, com a cruz de **PRATA** sempre, nunca ouro.
-2. As sardas, o cabelo grisalho raspado e os brincos brancos ovais estão iguais em todos os planos.
+2. Os **óculos pretos grossos**, o **buzzcut platinado**, a **argola na narina** e as **sardas** estão iguais em todos os planos. São os traços que a IA mais derruba.
+2b. Ela é **jovem, fim dos vinte**. Se vier com cabelo grisalho, linhas marcadas ou blusa terracota, é a **Cody** e o take inteiro se refaz.
 3. **A REF-CARTA foi gerada e aprovada ANTES de tudo**, e é a mesma carta em todos os keyframes.
 4. **A carta é CLARA**: creme, dourado suave, rosa claro ou azul claro. Carta escura ou de arte sombria, regenerar. É lei do ângulo.
 5. **A única palavra na carta é SOULMATE.** Qualquer outra, regenerar.
@@ -583,7 +589,8 @@ som ambiente: sala silenciosa, sem música, sem ruído de fundo
 11. **K01E:** o espelho está **totalmente embaçado e sem o número**. O `222` é escrito dentro do clipe.
 12. **A mesa do K02 está VAZIA**, sem sal, vela, gelo, mel, terra nem espelho. Senão ele deixa de servir as cinco variações.
 13. **O K03 é o plano mais fechado do vídeo inteiro.**
-14. Fundo não inventariado: **duas âncoras apenas**, a cruz de madeira e os livros de lombada roxa.
+14. Fundo não inventariado: **três âncoras apenas**, os três quadros de astrologia em fileira, a cruz de madeira e a bandeira dos EUA no suporte.
+14b. 🇺🇸 **A bandeira dos EUA aparece em TODO keyframe**, pequena e periférica, nunca desfocada e nunca cortada pela borda.
 15. **Nenhuma luz sobrenatural, nenhuma partícula flutuando, nenhum brilho mágico** em nenhum frame.
 16. **A cena não está banhada de laranja nem de dourado.** Luz neutra de dia nublado.
 17. Nenhuma imagem com fundo desfocado.
