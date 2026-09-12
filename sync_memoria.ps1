@@ -17,6 +17,11 @@ $ErrorActionPreference = 'Stop'
 $repoRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $destino  = Join-Path $repoRoot 'memoria'
 
+# Arquivos que vivem SO no espelho e nao tem contraparte na origem.
+# Sao documentacao escrita a mao sobre a propria pasta memoria/, entao a varredura
+# de remocao tem que ignora-los, senao todo sync apaga o arquivo e ele volta no git.
+$naoEspelhados = @('README.md')
+
 # O Claude Code deriva o nome da pasta do projeto do caminho: ':' e '\' e ' ' viram '-'
 $slug   = $repoRoot -replace ':', '-' -replace '\\', '-' -replace ' ', '-'
 $origem = Join-Path $env:USERPROFILE ".claude\projects\$slug\memory"
@@ -62,6 +67,7 @@ foreach ($f in $fonte) {
 # espelho de verdade: apaga o que nao existe mais na origem
 $nomesFonte = $fonte | ForEach-Object { $_.Name }
 foreach ($e in $espelho) {
+    if ($naoEspelhados -contains $e.Name) { continue }
     if ($nomesFonte -notcontains $e.Name) {
         Remove-Item $e.FullName -Confirm:$false
         $removidos += $e.Name
