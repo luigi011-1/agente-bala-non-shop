@@ -372,6 +372,12 @@ Só depois disso a copy pode ser modificada e mandada pro Luigi aprovar ou ajust
 Copy e estratégia estão na memória em `~/.claude/projects/.../memory/`:
 `banco-rotas-argumentativas` (fechamento) · `banco-obstaculos` · `angulo2-copy-fitywell` · `feedback-ponte-argumentada` · `metodo-puzzle` · `restricoes-protocolo` · `erros-recorrentes` · `avatares-fichas`
 
+### Montar tudo num PC novo
+
+`SETUP_NOVO_PC.md` tem o caminho inteiro, do clone ate o grafo. O passo que ninguem adivinha e o
+`restaurar_memoria.ps1`, porque o clone traz o espelho `memoria/` e **nao** traz a memoria viva,
+que mora fora do repo. Sem ele o agente nasce com o processo inteiro e zero copy.
+
 ### Espelho da memória no repo, e a regra que vem junto
 
 A pasta `memoria/` deste repositório é um **espelho versionado** da memória viva, para backup e
