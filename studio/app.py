@@ -133,6 +133,53 @@ class BrowserReview(BaseModel):
     comment: str = Field(default='', max_length=2000)
 
 
+class BrowserPreflight(BaseModel):
+    job_id: str = Field(min_length=1, max_length=100)
+    canonical_asset_fingerprint: str = Field(pattern='^[a-f0-9]{64}$')
+    tab_id: int
+    window_id: int
+    url: str = Field(max_length=500)
+    extension_session_id: str = Field(min_length=16, max_length=200)
+    nonce: str = Field(min_length=16, max_length=200)
+    content_script_ready: bool
+    composer_ready: bool
+    upload_ready: bool
+    draft_empty: bool
+    generation_idle: bool
+    modal_clear: bool
+    conversation_clean: bool
+
+
+class BrowserActivation(BaseModel):
+    canonical_asset_fingerprint: str = Field(pattern='^[a-f0-9]{64}$')
+    preflight_id: str = Field(pattern='^[a-f0-9]{32}$')
+    revalidation: BrowserPreflight
+
+
+class BrowserSession(BaseModel):
+    extension_session_id: str = Field(min_length=16, max_length=200)
+    agent_protocol_version: str | None = Field(default=None, max_length=50)
+    agent_capabilities: list[str] | None = Field(default=None, max_length=32)
+
+
+class BrowserPreflightRequest(BaseModel):
+    canonical_asset_fingerprint: str = Field(pattern='^[a-f0-9]{64}$')
+    requested_tab_id: int | None = None
+
+
+class BrowserPreflightChecking(BaseModel):
+    request_id: str = Field(pattern='^[a-f0-9]{32}$')
+    job_id: str = Field(min_length=1, max_length=100)
+    canonical_asset_fingerprint: str = Field(pattern='^[a-f0-9]{64}$')
+    extension_session_id: str = Field(min_length=16, max_length=200)
+
+
+class BrowserPreflightFailure(BaseModel):
+    request_id: str = Field(pattern='^[a-f0-9]{32}$')
+    extension_session_id: str = Field(min_length=16, max_length=200)
+    error: str = Field(min_length=1, max_length=1000)
+
+
 @app.post('/api/browser/jobs/{jid}/review')
 def browser_review(jid: str, data: BrowserReview):
     return browser_queue.review(jid, data.decision, data.comment)
@@ -174,9 +221,83 @@ def browser_control(data: BrowserControl):
     return browser_queue.control(data.running, data.concurrency)
 
 
-@app.get('/api/browser/agent/state')
-def browser_agent_state():
-    return browser_queue.heartbeat()
+REQUIRED_CAPABILITIES = {
+    'canonical_materialized_jobs', 'multiple_references', 'preflight_handshake',
+    'preflight_polling', 'batch_preflight', 'dedicated_tab_creation',
+}
+
+
+@app.post('/api/browser/agent/state')
+def browser_agent_state(data: BrowserSession):
+    reported = set(data.agent_capabilities or [])
+    missing = REQUIRED_CAPABILITIES - reported
+    state = browser_queue.heartbeat(
+        data.extension_session_id,
+        agent_protocol_version=data.agent_protocol_version,
+        agent_capabilities=list(reported),
+    )
+    if missing:
+        state['extension_reload_required'] = True
+        state['missing_capabilities'] = sorted(missing)
+    else:
+        state['extension_reload_required'] = False
+        state['missing_capabilities'] = []
+    return state
+
+
+@app.post('/api/browser/agent/preflight')
+def browser_preflight(data: BrowserPreflight):
+    return browser_queue.register_preflight(data.model_dump())
+
+
+@app.post('/api/browser/jobs/{jid}/preflight-request')
+def browser_preflight_request(jid: str, data: BrowserPreflightRequest):
+    return browser_queue.request_preflight(jid, data.canonical_asset_fingerprint, data.requested_tab_id)
+
+
+@app.post('/api/browser/agent/preflight-requests/checking')
+def browser_preflight_checking(data: BrowserPreflightChecking):
+    return browser_queue.mark_preflight_checking(data.request_id, data.job_id,
+                                                  data.canonical_asset_fingerprint, data.extension_session_id)
+
+
+@app.post('/api/browser/agent/preflight-requests/failed')
+def browser_preflight_failed(data: BrowserPreflightFailure):
+    return browser_queue.fail_preflight_request(data.request_id, data.extension_session_id, data.error)
+
+
+@app.post('/api/browser/agent/jobs/{jid}/activate')
+def browser_activate(jid: str, data: BrowserActivation):
+    if data.revalidation.job_id != jid or data.revalidation.canonical_asset_fingerprint != data.canonical_asset_fingerprint:
+        raise ValueError('A revalidação não corresponde ao job solicitado.')
+    return browser_queue.activate_materialized(jid, data.canonical_asset_fingerprint,
+                                               data.preflight_id, data.revalidation.model_dump())
+
+
+class BatchAuthorization(BaseModel):
+    production_id: str = Field(min_length=1, max_length=200)
+    pipeline: str = Field(pattern='^auraly_soulmate$')
+    avatar_id: str = Field(min_length=1, max_length=200)
+    asset_fingerprints: dict[str, str]  # asset_id -> canonical_asset_fingerprint
+
+
+@app.post('/api/browser/batches')
+def create_batch(data: BatchAuthorization):
+    for fp in data.asset_fingerprints.values():
+        if not re.fullmatch(r'[a-f0-9]{64}', fp):
+            raise ValueError('Fingerprint inválido; esperado sha256 hex de 64 caracteres.')
+    return browser_queue.authorize_batch(
+        data.production_id, data.pipeline, data.avatar_id, data.asset_fingerprints)
+
+
+@app.post('/api/browser/batches/{batch_id}/dispatch')
+def dispatch_batch(batch_id: str):
+    return browser_queue.dispatch_batch(batch_id)
+
+
+@app.get('/api/browser/batches/{batch_id}')
+def get_batch(batch_id: str):
+    return browser_queue.get_batch(batch_id)
 
 
 @app.post('/api/browser/agent/claim')
@@ -192,6 +313,13 @@ def browser_update(jid: str, data: BrowserUpdate):
 @app.get('/api/browser/agent/jobs/{jid}/anchor')
 def browser_anchor(jid: str):
     return FileResponse(browser_queue.anchor(jid), media_type='image/png')
+
+
+@app.get('/api/browser/agent/jobs/{jid}/references/{role}')
+def browser_reference(jid: str, role: str):
+    if role not in {'avatar_anchor', 'shared_card_reference', 'parent_approved_result'}:
+        raise ValueError('Papel de referência inválido.')
+    return FileResponse(browser_queue.reference(jid, role), media_type='application/octet-stream')
 
 
 @app.post('/api/browser/agent/jobs/{jid}/image')

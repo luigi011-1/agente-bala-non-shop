@@ -1,5 +1,25 @@
 # PLAYBOOK MESTRE DE PRODUÇÃO AURALY
 
+> ## ♻️ SOBRESCRITA DE 2026-09-08 (Luigi), lê antes de qualquer seção deste arquivo
+>
+> **Auraly Studio, bridge local, extensão Chrome, execução automática no ChatGPT, preflight,
+> browser queue, batch, `pacote_browser` e os Modos A / B / C estão DESCONTINUADOS.**
+> A **seção 13** deste playbook é **HISTÓRICA** e não define mais nada. Eu não gero imagem, não abro
+> navegador e não executo Flow. Minha função termina no pacote de prompts.
+>
+> **O workflow voltou ao padrão dos Ângulos 1 e 2** (formato, não conteúdo): `.mp4` + âncoras →
+> análise → transcrição → estrutura da copy → roteiro → aprovação → **10 ganchos** → escolha →
+> pacote final.
+>
+> **O pacote final começa pelo bloco `INSTRUÇÕES PARA A MEMÓRIA DO AGENTE — GOOGLE FLOW AI`**
+> (`producao/_flow/INSTRUCOES_AGENTE_FLOW.md`), obrigatório antes de qualquer prompt, e segue com
+> prompts de imagem, prompts de vídeo, body, CTA, transcrição final EN e transcrição final PT.
+>
+> Do resto deste playbook continua valendo tudo que é **criativo e visual** do Ângulo 3: público,
+> oferta, linguagem, copy, avatares, kit do tarólogo, REF-CARTA, travas de reveal, estrutura de
+> roteiro e Stories. Regra em `CLAUDE.md`, seção "LIMITE DA MINHA FUNÇÃO E ORDEM DA ENTREGA".
+
+
 > **Origem:** escrito pelo Codex e entregue pelo Luigi em 2026-09-07. Esta é a cópia versionada no
 > repo, com quatro correções aplicadas na mesma data, todas marcadas no texto: preço nunca é dito
 > (§4.3), o `negative` da REF-CARTA sem as linhas anti-glow e com a lista de símbolos góticos (§10),
@@ -720,7 +740,9 @@ Edições de estágios partem sempre do K inicial aprovado. Se K07 e K08 são va
 
 ---
 
-## 13. Execução das imagens no Chrome
+## 13. [HISTÓRICO, NÃO USAR] Execução das imagens no Chrome
+
+> ♻️ **Descontinuado em 2026-09-08.** Seção mantida só como registro. Nada aqui entra no workflow atual.
 
 ### 13.0. Matriz de capacidade e regra de handoff
 

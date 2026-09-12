@@ -20,7 +20,7 @@ Pegue o caminho do vídeo que o usuário enviou/apontou. Se não estiver claro, 
 
 ### 2. Rodar o pipeline
 ```
-powershell -File ".Codex/skills/watch/scripts/run_watch.ps1" -Video "CAMINHO_DO_VIDEO.mp4"
+powershell -File ".agents/skills/watch/scripts/run_watch.ps1" -Video "CAMINHO_DO_VIDEO.mp4"
 ```
 Opcional: `-Extra "--model medium.en"` para transcrição mais precisa (mais lenta); `-Extra "--timeline-fps 10"` para densidade ainda maior; `-Extra "--scene-threshold 0.15"` para pegar cortes mais sutis.
 

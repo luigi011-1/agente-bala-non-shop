@@ -37,7 +37,8 @@ os outros 4 seguem a mesma estrutura, mudando só identidade, cenário e caminho
 | T1 (gancho 4) | K04 · a segunda mão | GERAR DO ZERO | âncora Casey + REF-CARTA + REF-A |
 | T1 (gancho 5) | K05 · o mel sobre a carta | GERAR DO ZERO | âncora Casey + REF-CARTA |
 | T2, T3 | K06 · body / leitura | GERAR DO ZERO | âncora Casey + REF-CARTA |
-| T4 | K07 · CTA Stories | EDITAR do K06 | K06 aprovado |
+| T4 | K07 · share + prova | EDITAR do K06 | K06 aprovado |
+| T5 | K08 · CTA Stories | EDITAR do K06 | K06 aprovado |
 
 Regra de bolso do anexo: GERAR DO ZERO anexa âncora mais REF, EDITAR anexa só o keyframe de origem.
 **🚫 Nunca anexar o K07 no prompt do K07. Nunca gerar K02 a K05 a partir do K01.**
@@ -290,7 +291,7 @@ Gerar **uma vez** para a produção, aprovar, anexar no K04 de cada avatar. É u
 }
 ```
 
-## K07 · T4 · CTA STORIES · EDITAR do K06
+## K07 · T4 · SHARE + PROVA POR PARTICIPAÇÃO · EDITAR do K06
 
 > ### 📎 ANEXAR: **1 IMAGEM**
 > **1️⃣ O K06 já aprovado**
@@ -310,6 +311,28 @@ Gerar **uma vez** para a produção, aprovar, anexar no K04 de cada avatar. É u
 }
 ```
 
+
+## K08 · T5 · CTA STORIES DECLARADO · EDITAR do K06
+
+> ### 📎 ANEXAR: **1 IMAGEM**
+> **1️⃣ O K06 já aprovado**
+>
+> ### ✏️ EDITAR, muda o enquadramento, a mão esquerda, a posição da carta e a expressão
+> 🚫 NUNCA anexar o K07 nem o K08 aqui. Este keyframe sai do K06, igual o K07, e nunca de outro estágio.
+
+```json
+{
+  "task": "edit the attached image, keep everything identical except the changes listed",
+  "keep_identical": "Keep Casey exactly the same: same face, same active acne and acne scars, same long dark brown hair with the two bleached blonde money-piece strands, same small silver hoops and thin silver chain with the small silver cross, same cropped heather-gray crew-neck sweatshirt, same seated body position, same holographic SOULMATE card in her right hand with the same art. Keep the SAME background exactly: the wall with the stretched US flag visible and in focus, the framed constellation star-map, the wooden crucifix, the cool white string lights, the unmade bed, the wooden chest with the holographic tarot fan, rose quartz, celestite geode, incense dish with thin smoke and the lit candle. Same neutral overcast daylight, same camera height and angle.",
+  "change_1": "Push the framing in by about eight percent, chest-up and slightly tighter than the attached image, but still a little wider than the tightest shot of the video. Do not change the camera height or angle.",
+  "change_2": "Raise her LEFT hand and point the index finger straight up past the top edge of the frame, forearm vertical, the gesture clearly aimed above the frame. The hand must not cover her face.",
+  "change_3": "Lower the SOULMATE card in her right hand and move it toward the lower right of the frame, still in the lower foreground and closer to the lens than her face, art still readable, so the UPPER LEFT area of the frame is clear and open for an edit arrow to be added later.",
+  "change_4": "Her expression is the most urgent of the whole video, direct strong eye contact into the lens, mouth open mid-speech.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, active acne and acne scars kept exactly as in the reference, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including the background wall and details. Do not make her skin darker, yellowish or orangish. Do not make the colors more saturated.",
+  "negative": "do not change the face, do not change identity, do not change the acne, do not change the background, do not change the US flag, do not change the card art, do not change the camera angle, no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no de-aging, no skin smoothing, no makeup, no second person, no phone in frame, no arrow drawn in the image, no hand covering her face"
+}
+```
+
 ---
 
 ## Mapa de âncoras (lote Casey)
@@ -325,8 +348,10 @@ Gerar **uma vez** para a produção, aprovar, anexar no K04 de cada avatar. É u
 | K05 | âncora Casey + REF-CARTA | GERAR DO ZERO |
 | K06 | âncora Casey + REF-CARTA | GERAR DO ZERO |
 | K07 | K06 aprovado | EDITAR |
+| K08 | K06 aprovado | EDITAR |
 
-Ordem de geração no Chrome: REF-CARTA e REF-A primeiro, aprovar. Depois K01 a K06 em abas separadas em paralelo. K07 só depois do K06 aprovado.
+Ordem de geração: REF-CARTA e REF-A primeiro, aprovar. Depois K01 a K06. K07 e K08 só depois do
+K06 aprovado, e **os dois saem do K06**, nunca um do outro. Estágio em cascata faz a identidade derivar.
 
 ## Gates de qualidade (rodar antes de aprovar cada imagem)
 
@@ -339,6 +364,9 @@ Ordem de geração no Chrome: REF-CARTA e REF-A primeiro, aprovar. Depois K01 a 
 7. K03: as folhas de louro estão arrumadas, nunca queimando, sem fumaça saindo delas.
 8. K04: a segunda mão entra só parcialmente, cortada pelo quadro à direita. Zero rosto, zero ombro, zero braço inteiro da 2ª pessoa.
 9. K05: tigela de CERÂMICA, nunca vidro. A cor âmbar é do mel, não da luz.
-10. K06 e K07: a carta na mão está no lower foreground, sem cobrir o rosto. K07 é o take mais fechado do vídeo e tem o canto inferior esquerdo livre pra seta.
+10. K06, K07 e K08: a carta na mão está no lower foreground, sem cobrir o rosto. K07 é o take mais
+    fechado do vídeo e tem o canto inferior esquerdo livre pra seta de compartilhar. K08 tem o dedo
+    apontando pra cima e o canto superior esquerdo livre pra seta que aponta pra foto de perfil.
+13. K08 saiu do K06, nunca do K07. Conferir que a acne, o money piece e a cruz de prata seguem iguais.
 11. Mãos com cinco dedos, sem fusão com a carta nem com os props.
 12. `no blur` respeitado, fundo em foco nítido.
