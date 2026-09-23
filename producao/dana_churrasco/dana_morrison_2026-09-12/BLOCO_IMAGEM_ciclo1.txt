@@ -1,0 +1,18 @@
+K01
+{
+  "shot_id": "K01_hook_arrival_initial",
+  "reference_use": "Use the attached image ONLY for this woman's exact face, identity, skin texture, hair and wardrobe. Do NOT copy pose, action, framing or background from the reference.",
+  "identity_main": "The EXACT woman from the attached reference image: a Black American woman of forty four with warm brown skin, visible pores, minimal makeup, shoulder length pressed hair and natural eyebrows. She is the main subject, chest-up, her face lit up in delighted surprise, looking past the lens.",
+  "second_person": "A fit Black American man of about forty seven fills the lower foreground seen from BEHIND, only the back of his shoulder and the back of his head in frame, so his face is never visible. On the far left edge, cut by the frame, only the shoulder and forearm of a second man holding a pair of barbecue tongs.",
+  "prop": "A pair of stainless barbecue tongs held in the cut man's hand at the lower left of the frame, closed and still, clearly readable.",
+  "wardrobe": "The same sleeveless olive summer dress and small gold hoop earrings from the reference image.",
+  "scene": "A real American backyard on an overcast afternoon. Only three visual anchors: a black kettle barbecue with thin smoke, a wooden picnic table with red plastic cups, and a small United States flag on the porch post, discreet but clearly visible and in sharp focus.",
+  "posture": "Nia has just turned toward the arriving man, shoulders open, both hands coming up in greeting, mouth open in a wide delighted smile.",
+  "composition": "The arriving man's back and shoulder fill the lower foreground and are much closer to the lens than Nia's face. Nia is chest-up in the upper portion of the frame. Nothing competes with the arrival.",
+  "camera": "chest height, from behind the arriving man's shoulder, pushed in close",
+  "state": "Start frame: the arriving man has just stopped walking and Nia has just turned to face him, before anyone speaks.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day, flat and even, no warm cast and no direct sun.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}

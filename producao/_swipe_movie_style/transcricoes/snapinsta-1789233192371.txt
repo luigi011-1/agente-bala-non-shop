@@ -1,0 +1,42 @@
+[  0.00 ->   1.20] Excuse me, let me help.
+[  1.20 ->   4.42] Okay, go ahead.
+[  4.42 ->   5.30] Could I get your number?
+[  5.30 ->   6.54] You are so beautiful.
+[  6.54 ->   7.94] I'm sorry, I'm too old for you.
+[  7.94 ->   8.78] That's not possible.
+[  8.78 ->   9.60] How old are you?
+[  9.60 ->  10.44] I'm 61.
+[ 10.44 ->  11.26] What?
+[ 11.26 ->  12.10] No way, what's your secret?
+[ 12.10 ->  14.06] No secret, I just listened to this woman online
+[ 14.06 ->  15.38] and she changed my life forever.
+[ 15.38 ->  16.22] Ladies, listen up.
+[ 16.22 ->  19.70] I'm 64 years old, and no, this isn't a beauty filter.
+[ 19.70 ->  21.98] These are the products I use every day
+[ 21.98 ->  24.10] that keep my skin looking this clear,
+[ 24.10 ->  25.62] smooth, and hydrated.
+[ 25.62 ->  28.18] First is the COSRX 6 Peptide Serum.
+[ 28.18 ->  30.42] I love this for keeping my skin looking smooth,
+[ 30.42 ->  31.54] firm, and bouncy.
+[ 31.54 ->  33.10] I give this a 14 out of 10.
+[ 33.10 ->  35.18] Then, Tear Tear Milk Skin Toner.
+[ 35.18 ->  37.78] This gives my skin that soft, juicy hydration
+[ 37.78 ->  39.54] that makes it look so plump and glassy.
+[ 39.54 ->  40.90] I give this a 12 out of 10.
+[ 40.90 ->  42.26] And this is my holy grail,
+[ 42.26 ->  43.94] Lurevia Azelaic Acid.
+[ 43.94 ->  45.86] It has retinol plus niacinamide.
+[ 45.86 ->  47.94] That smooth texture, more even skin.
+[ 47.94 ->  49.14] It helps with aging.
+[ 49.14 ->  50.54] A 16 out of 10.
+[ 50.54 ->  54.10] Search Lurevia 14% Azelaic Acid on Amazon
+[ 54.10 ->  55.42] or click the button below
+[ 55.42 ->  57.22] or go through the link on my profile.
+[ 57.22 ->  58.62] You can get yours by searching
+[ 58.62 ->  62.74] Lurevia 14% Azelaic Acid on Amazon.
+[ 62.74 ->  64.42] The pinned comment on this video.
+[ 64.42 ->  65.66] So that's the routine I use
+[ 65.66 ->  67.58] to keep my skin looking this clear.
+[ 67.58 ->  69.66] Hydrated and glowing at 64.
+[ 69.66 ->  71.94] Comment glow if you want my step routine.
+[ 71.94 ->  74.22] And follow me for more beauty advice.

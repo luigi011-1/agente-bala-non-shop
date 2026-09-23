@@ -1,0 +1,21 @@
+.venv/
+studio/data/
+studio/.venv/
+__pycache__/
+*.pyc
+entradas/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.wav
+
+# saida do graphify (regeravel, nao e fonte de verdade)
+graphify-out/
+
+# vault do Obsidian, scratch pessoal e nao parte da operacao
+Rei/
+
+# backups que o graphify deixa ao mexer em settings
+*.graphify-bak

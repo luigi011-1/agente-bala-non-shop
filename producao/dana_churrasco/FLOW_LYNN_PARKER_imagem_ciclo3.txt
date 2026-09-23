@@ -1,0 +1,18 @@
+K11
+{
+  "shot_id": "K11_reverse_terrell_apothecary_initial",
+  "reference_use": "Use the attached image ONLY for this man's exact face, identity, skin texture, hair, beard and wardrobe. Do NOT copy pose, action, framing or background from the reference.",
+  "identity_main": "The EXACT man from the attached reference image: a Black American man of forty seven with medium brown skin, visible pores, a close cropped fade going grey at the temples, a short trimmed beard, natural eyebrows and tired eyes, unretouched. His eyebrows are raised and his mouth is open in disbelief.",
+  "second_person": "On the far right edge, cut by the frame, only the shoulder and a few long white locs of a seated older man in a white tunic. His face is not in frame.",
+  "prop": "A grey stone mortar and pestle and two labelled glass herb jars on the shelf in the lower foreground, closer to the lens than Terrell's face. The labels read as printed labels and no specific wording is required.",
+  "wardrobe": "The same charcoal short sleeve polo shirt and dark jeans from the reference image, a plain steel watch and no other jewelry.",
+  "scene": "The same real home apothecary seen from the opposite side, facing Terrell. Only three visual anchors: the light wood shelving unit packed with labelled glass herb jars behind him, the grey stone mortar and pestle on the shelf in front of him, and a SMALL UNITED STATES FLAG on a desk stand on that shelf, discreet but clearly visible and in sharp focus.",
+  "posture": "Terrell stands in front of the seated man, one hand resting on the shelf edge, leaning in, looking down at him and then toward the lens.",
+  "composition": "The mortar and the herb jars fill the lower foreground and are closer to the lens than Terrell's face. Terrell is chest-up in the upper portion of the frame. The seated man stays cut by the right edge.",
+  "camera": "chest height, straight-on toward Terrell, close",
+  "state": "Start frame: he is already leaning on the shelf, before he speaks.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day coming from the blinded window on the right, flat and even, no warm cast and no practical lamp lighting the room.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe, no de-aging, no skin smoothing"
+}

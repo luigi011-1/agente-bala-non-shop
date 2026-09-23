@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Auraly Studio · Meu Chrome",
+  "version": "0.7.0",
+  "description": "Executa a fila local de imagens do Auraly Studio no seu ChatGPT. Uma aba por avatar, somente a âncora original.",
+  "permissions": ["storage", "alarms"],
+  "host_permissions": ["https://chatgpt.com/*", "https://*.oaiusercontent.com/*", "http://127.0.0.1:8765/*"],
+  "background": {"service_worker": "background.js"},
+  "action": {"default_popup": "popup.html"},
+  "content_scripts": [{"matches": ["https://chatgpt.com/*"], "js": ["content.js"], "run_at": "document_idle"}]
+}

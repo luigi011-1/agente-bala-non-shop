@@ -1,0 +1,651 @@
+{
+  "schema_version": 1,
+  "pipeline": "auraly_soulmate",
+  "angle": 3,
+  "production": {
+    "id": "sexta_pessoa",
+    "title": "A sexta pessoa",
+    "root": "C:\\Users\\luigi\\Desktop\\AGENTE NON-SHOP\\producao\\sexta_pessoa",
+    "created_at": null,
+    "migrated_at": "2026-09-08T13:59:18.618095+00:00",
+    "updated_at": "2026-09-08T21:06:21.493402+00:00"
+  },
+  "workflow": {
+    "stage": "processing_avatar_queue",
+    "next_action": "execute_eligible_current_avatar_assets",
+    "current_avatar_id": "casey_harrisson",
+    "current_avatar_evidence": "explicit_user_confirmation",
+    "blocked_by": null
+  },
+  "inputs": {
+    "video": {
+      "path": null,
+      "sha256": null,
+      "evidence": "watch_manifest_references_external_video"
+    },
+    "avatars": [
+      {
+        "id": "casey_harrisson",
+        "name": "Casey Harrisson",
+        "position": 1,
+        "anchor_path": "C:\\Users\\luigi\\Desktop\\AGENTE NON-SHOP\\producao\\_ancoras\\casey.harrisson_us .jpeg",
+        "anchor_sha256": "1c9e230e0683ccb5f46afb45491e4b82aebdac9897bbd46b5377cc2557aa4839",
+        "evidence": "canonical_avatar_record_and_verified_local_file"
+      },
+      {
+        "id": "kris_walker",
+        "name": "Kris Walker",
+        "position": 2,
+        "anchor_path": null,
+        "anchor_sha256": null,
+        "evidence": "prompt_package_only"
+      },
+      {
+        "id": "shelby_turner",
+        "name": "Shelby Turner",
+        "position": 3,
+        "anchor_path": null,
+        "anchor_sha256": null,
+        "evidence": "prompt_package_only"
+      },
+      {
+        "id": "kelly_bennett",
+        "name": "Kelly Bennett",
+        "position": 4,
+        "anchor_path": null,
+        "anchor_sha256": null,
+        "evidence": "prompt_package_only"
+      },
+      {
+        "id": "robin_matthews",
+        "name": "Robin Matthews",
+        "position": 5,
+        "anchor_path": null,
+        "anchor_sha256": null,
+        "evidence": "prompt_package_only"
+      }
+    ]
+  },
+  "artifacts": {
+    "watch_manifest": {
+      "path": "watch/manifest.json",
+      "exists": true,
+      "sha256": "e8f49d1bc833def6cb65a3d093c49f868fd80d727f830bf82b2c3f925d590c08",
+      "kind": "watch_manifest",
+      "observed_at": "2026-09-08T13:59:18.578549+00:00"
+    },
+    "transcript": {
+      "path": "watch/transcript.txt",
+      "exists": true,
+      "sha256": "d79b8ae9408fb376cce51f542c884247eed36d954fa481fd11f88327425148cd",
+      "kind": "transcript",
+      "observed_at": "2026-09-08T13:59:18.590030+00:00"
+    },
+    "script": {
+      "path": "ROTEIRO.md",
+      "exists": true,
+      "sha256": "39eef5572a74789da9cd063021bc1ca8bac26326ad5ad8e36e815737b2cb107c",
+      "kind": "script",
+      "observed_at": "2026-09-08T13:59:18.590030+00:00"
+    },
+    "hook_options": {
+      "path": "GANCHOS_VISUAIS.md",
+      "exists": true,
+      "sha256": "02f9c6f7927deafadd98c51bb69d4949000db08cee12beb1b98f15f6b347a9ea",
+      "kind": "hook_options",
+      "observed_at": "2026-09-08T13:59:18.593388+00:00"
+    },
+    "image_prompts": {
+      "path": "PROMPTS_IMAGEM.md",
+      "exists": true,
+      "sha256": "699cb00b45d0de2352bfc8dbeb9a9448f9c44b7f6dddc8a18014b033dfef9bb6",
+      "kind": "image_prompts",
+      "observed_at": "2026-09-08T13:59:18.611409+00:00",
+      "reconciliation": {
+        "status": "mismatch",
+        "checked_at": "2026-09-08T14:28:02.703689+00:00",
+        "prompt_artifact_sha256": "699cb00b45d0de2352bfc8dbeb9a9448f9c44b7f6dddc8a18014b033dfef9bb6",
+        "source_script_sha256_checked": "39eef5572a74789da9cd063021bc1ca8bac26326ad5ad8e36e815737b2cb107c",
+        "hook_options_sha256_checked": "02f9c6f7927deafadd98c51bb69d4949000db08cee12beb1b98f15f6b347a9ea",
+        "associations": {
+          "artifact_option_8": {
+            "status": "associated",
+            "prompt": "K05_hook_honey",
+            "evidence": "PROMPTS_IMAGEM.md index and K05 heading explicitly say 'o mel sobre a carta'."
+          },
+          "user_explicit_card_pull_camera": {
+            "status": "not_found",
+            "evidence": "No prompt describes the avatar pulling a card rapidly toward the camera. K04 is a second hand pushing the card toward Casey."
+          },
+          "user_explicit_salt_circle_closing": {
+            "status": "not_found",
+            "evidence": "No prompt or index entry mentions salt or a closing circle around the card."
+          },
+          "body": {
+            "status": "present_but_not_version_proven",
+            "prompt": "K06_body_reading",
+            "evidence": "K06 is explicitly BODY / LEITURA for T2,T3, but PROMPTS_IMAGEM.md contains no stored hash or explicit provenance binding it to the current ROTEIRO.md version."
+          },
+          "cta": {
+            "status": "present_but_divergent_and_not_version_proven",
+            "prompt": "K07 CTA STORIES",
+            "evidence": "K07 exists, but is labeled T4 while the current ROTEIRO.md places the Stories CTA in T5; no stored hash binds it to the current script version."
+          }
+        },
+        "divergence": "The prompt package header and index explicitly declare five prior hooks: sand letter, wax seal, bay leaf letter, second hand, and honey. This differs from the three currently approved hooks."
+      },
+      "lifecycle": "superseded",
+      "superseded_by": "PROMPTS_IMAGEM.v2_auraly_soulmate_current_hooks.md",
+      "superseded_reason": "Different historical hook selection; preserved without modification."
+    },
+    "shared_card_reference": {
+      "path": "pacote_browser/_compartilhado/REF-CARTA.png",
+      "exists": true,
+      "sha256": "4914f193a262e6b2d982ac8565d9e1c125af50924fe25f4ccf6750d32ff213a9",
+      "kind": "reference",
+      "observed_at": "2026-09-08T13:59:18.618095+00:00",
+      "approval_status": "approved",
+      "approval_evidence": "explicit_user_confirmation",
+      "approved_at": "2026-09-08T14:45:10.3588885Z",
+      "approved_sha256": "4914f193a262e6b2d982ac8565d9e1c125af50924fe25f4ccf6750d32ff213a9"
+    },
+    "image_prompts_current": {
+      "path": "PROMPTS_IMAGEM.v2_auraly_soulmate_current_hooks.md",
+      "exists": true,
+      "sha256": "e09d3891cca8d4fc0b77367bdf62e8a73b5d3344fc4fcf72b0ca3c0a9b35fb77",
+      "kind": "image_prompt_package",
+      "version": 2,
+      "created_at": "2026-09-08T14:32:39.373902+00:00",
+      "source_script_sha256": "39eef5572a74789da9cd063021bc1ca8bac26326ad5ad8e36e815737b2cb107c",
+      "hook_selection_sha256": "a78277972ad1b4aba7140ca9633789b51a9eb06858ec0129c45de304336d1045",
+      "hook_ids": [
+        "user_explicit_card_pull_camera",
+        "user_explicit_salt_circle_closing",
+        "artifact_option_8"
+      ],
+      "assets": [
+        {
+          "asset_id": "K01_hook_card_pull_camera",
+          "role": "hook",
+          "hook_id": "user_explicit_card_pull_camera",
+          "takes": [
+            "T1"
+          ],
+          "action": "GERAR DO ZERO"
+        },
+        {
+          "asset_id": "K02_hook_salt_circle_closing",
+          "role": "hook",
+          "hook_id": "user_explicit_salt_circle_closing",
+          "takes": [
+            "T1"
+          ],
+          "action": "GERAR DO ZERO"
+        },
+        {
+          "asset_id": "K03_hook_honey_over_card",
+          "role": "hook",
+          "hook_id": "artifact_option_8",
+          "takes": [
+            "T1"
+          ],
+          "action": "GERAR DO ZERO"
+        },
+        {
+          "asset_id": "K04_body_reading_t2_t4",
+          "role": "body",
+          "hook_id": null,
+          "takes": [
+            "T2",
+            "T3",
+            "T4"
+          ],
+          "action": "GERAR DO ZERO"
+        },
+        {
+          "asset_id": "K05_cta_stories_t5",
+          "role": "cta",
+          "hook_id": null,
+          "takes": [
+            "T5"
+          ],
+          "action": "EDITAR do K04_body_reading_t2_t4"
+        }
+      ],
+      "lifecycle": "current"
+    }
+  },
+  "approvals": {
+    "script": {
+      "status": "confirmed_by_artifact",
+      "approved_at": null,
+      "evidence_path": "GANCHOS_VISUAIS.md",
+      "artifact_sha256": "39eef5572a74789da9cd063021bc1ca8bac26326ad5ad8e36e815737b2cb107c"
+    },
+    "hooks": {
+      "status": "approved",
+      "selected_ids": [
+        "user_explicit_card_pull_camera",
+        "user_explicit_salt_circle_closing",
+        "artifact_option_8"
+      ],
+      "selected_titles": [
+        "Carta puxada rapidamente para a câmera.",
+        "Círculo de sal se fechando ao redor da carta.",
+        "Mel sendo derramado sobre a carta."
+      ],
+      "source_script_sha256": "39eef5572a74789da9cd063021bc1ca8bac26326ad5ad8e36e815737b2cb107c",
+      "approved_at": "2026-09-08T14:25:03.481733+00:00",
+      "no_hooks_explicitly_authorized": false,
+      "evidence": "Explicit user confirmation; two selections have no historical option ID and are recorded as user_explicit."
+    },
+    "shared_card_reference": {
+      "status": "approved",
+      "approved_at": "2026-09-08T14:45:10.3588885Z",
+      "approved_sha256": "4914f193a262e6b2d982ac8565d9e1c125af50924fe25f4ccf6750d32ff213a9",
+      "evidence": "explicit_user_confirmation",
+      "valid_only_if_artifact_sha256_matches": true
+    }
+  },
+  "hooks": {
+    "status": "approved",
+    "options_path": "GANCHOS_VISUAIS.md",
+    "options_sha256": "02f9c6f7927deafadd98c51bb69d4949000db08cee12beb1b98f15f6b347a9ea",
+    "selected_ids": [
+      "user_explicit_card_pull_camera",
+      "user_explicit_salt_circle_closing",
+      "artifact_option_8"
+    ],
+    "selected_titles": [
+      "Carta puxada rapidamente para a câmera.",
+      "Círculo de sal se fechando ao redor da carta.",
+      "Mel sendo derramado sobre a carta."
+    ],
+    "source_script_sha256": "39eef5572a74789da9cd063021bc1ca8bac26326ad5ad8e36e815737b2cb107c",
+    "no_hooks_explicitly_authorized": false,
+    "selected_hooks": [
+      {
+        "selection_id": "user_explicit_card_pull_camera",
+        "title": "Carta puxada rapidamente para a câmera.",
+        "origin": "user_explicit",
+        "original_option_id": null,
+        "original_option_title": null,
+        "confirmation_evidence": "explicit_user_confirmation",
+        "confirmed_at": "2026-09-08T14:25:03.481733+00:00"
+      },
+      {
+        "selection_id": "user_explicit_salt_circle_closing",
+        "title": "Círculo de sal se fechando ao redor da carta.",
+        "origin": "user_explicit",
+        "original_option_id": null,
+        "original_option_title": null,
+        "confirmation_evidence": "explicit_user_confirmation",
+        "confirmed_at": "2026-09-08T14:25:03.481733+00:00"
+      },
+      {
+        "selection_id": "artifact_option_8",
+        "title": "Mel sendo derramado sobre a carta.",
+        "origin": "artifact_option",
+        "original_option_id": "8",
+        "original_option_title": "O mel sobre a carta",
+        "confirmation_evidence": "explicit_user_confirmation",
+        "confirmed_at": "2026-09-08T14:25:03.481733+00:00"
+      }
+    ]
+  },
+  "avatar_queue": {
+    "order": [
+      "casey_harrisson",
+      "kris_walker",
+      "shelby_turner",
+      "kelly_bennett",
+      "robin_matthews"
+    ],
+    "current_index": 0,
+    "evidence_path": "pacote_browser/_LEIA_PRIMEIRO.md"
+  },
+  "avatars": {
+    "casey_harrisson": {
+      "name": "Casey Harrisson",
+      "position": 1,
+      "stage": "preparing_images",
+      "anchor_path": "C:\\Users\\luigi\\Desktop\\AGENTE NON-SHOP\\producao\\_ancoras\\casey.harrisson_us .jpeg",
+      "anchor_sha256": "1c9e230e0683ccb5f46afb45491e4b82aebdac9897bbd46b5377cc2557aa4839",
+      "anchor_evidence": "canonical_avatar_record_and_verified_local_file",
+      "prompt_files": [
+        "01_hook_areia.md",
+        "02_hook_cera.md",
+        "03_hook_louro.md",
+        "04_hook_mao.md",
+        "05_hook_mel.md",
+        "06_body.md",
+        "07_cta.md"
+      ],
+      "assets": {
+        "K01_hook_card_pull_camera": {
+          "asset_id": "K01_hook_card_pull_camera",
+          "role": "hook",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v2_auraly_soulmate_current_hooks.md",
+            "section": "K01_hook_card_pull_camera"
+          },
+          "prompt_sha256": "f32542f5de8b29e4073606b7f075136e23d77cfe5635024a57e95930e5fce1f0",
+          "anchor_sha256": "1c9e230e0683ccb5f46afb45491e4b82aebdac9897bbd46b5377cc2557aa4839",
+          "shared_card_reference_sha256": "4914f193a262e6b2d982ac8565d9e1c125af50924fe25f4ccf6750d32ff213a9",
+          "source_prompt_package_sha256": "e09d3891cca8d4fc0b77367bdf62e8a73b5d3344fc4fcf72b0ca3c0a9b35fb77",
+          "source_prompt_package_version": 2,
+          "source_script_sha256": "39eef5572a74789da9cd063021bc1ca8bac26326ad5ad8e36e815737b2cb107c",
+          "hook_selection_sha256": "a78277972ad1b4aba7140ca9633789b51a9eb06858ec0129c45de304336d1045",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "status": "queued",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": null,
+          "review": {
+            "status": "pending",
+            "reviewed_at": null
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "7885e3080a98c61b993868231efba5f7cc61e580df20ba23cae38bd21ffd7480",
+          "queue_job_id": "a4536d3f98fb463480bd603d5916fc8f",
+          "queue_status": "queued"
+        },
+        "K02_hook_salt_circle_closing": {
+          "asset_id": "K02_hook_salt_circle_closing",
+          "role": "hook",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v2_auraly_soulmate_current_hooks.md",
+            "section": "K02_hook_salt_circle_closing"
+          },
+          "prompt_sha256": "a1562d65ddc4365676a22173fff465ff6a3f67bd6f80ddd86f87ef1711cdf55d",
+          "anchor_sha256": "1c9e230e0683ccb5f46afb45491e4b82aebdac9897bbd46b5377cc2557aa4839",
+          "shared_card_reference_sha256": "4914f193a262e6b2d982ac8565d9e1c125af50924fe25f4ccf6750d32ff213a9",
+          "source_prompt_package_sha256": "e09d3891cca8d4fc0b77367bdf62e8a73b5d3344fc4fcf72b0ca3c0a9b35fb77",
+          "source_prompt_package_version": 2,
+          "source_script_sha256": "39eef5572a74789da9cd063021bc1ca8bac26326ad5ad8e36e815737b2cb107c",
+          "hook_selection_sha256": "a78277972ad1b4aba7140ca9633789b51a9eb06858ec0129c45de304336d1045",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "status": "queued",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": null,
+          "review": {
+            "status": "pending",
+            "reviewed_at": null
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "f389b0db80a30598b89c84f2a87890016b092211b76acca2a7194aaa598eb0ef",
+          "queue_job_id": "a5ffb5dbde38455fb335d278121c6eae",
+          "queue_status": "queued"
+        },
+        "K03_hook_honey_over_card": {
+          "asset_id": "K03_hook_honey_over_card",
+          "role": "hook",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v2_auraly_soulmate_current_hooks.md",
+            "section": "K03_hook_honey_over_card"
+          },
+          "prompt_sha256": "9b026c9dda739e3e4df1073bacd71e8cd763ed615b93a9c515a0d03da346e648",
+          "anchor_sha256": "1c9e230e0683ccb5f46afb45491e4b82aebdac9897bbd46b5377cc2557aa4839",
+          "shared_card_reference_sha256": "4914f193a262e6b2d982ac8565d9e1c125af50924fe25f4ccf6750d32ff213a9",
+          "source_prompt_package_sha256": "e09d3891cca8d4fc0b77367bdf62e8a73b5d3344fc4fcf72b0ca3c0a9b35fb77",
+          "source_prompt_package_version": 2,
+          "source_script_sha256": "39eef5572a74789da9cd063021bc1ca8bac26326ad5ad8e36e815737b2cb107c",
+          "hook_selection_sha256": "a78277972ad1b4aba7140ca9633789b51a9eb06858ec0129c45de304336d1045",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "status": "queued",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": null,
+          "review": {
+            "status": "pending",
+            "reviewed_at": null
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "d622e2e3ad6cd1ba01b65ca7aabdc1fd702e3178958fa824baa54d481e9e7adb",
+          "queue_job_id": "b32f42b761ef4ecba93cd7e13fa19e72",
+          "queue_status": "queued"
+        },
+        "K04_body_reading_t2_t4": {
+          "asset_id": "K04_body_reading_t2_t4",
+          "role": "body",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v2_auraly_soulmate_current_hooks.md",
+            "section": "K04_body_reading_t2_t4"
+          },
+          "prompt_sha256": "f908327f6bbe50a7182360ed4a56fdd605e11978ee36f482e2d29746924fd0cb",
+          "anchor_sha256": "1c9e230e0683ccb5f46afb45491e4b82aebdac9897bbd46b5377cc2557aa4839",
+          "shared_card_reference_sha256": "4914f193a262e6b2d982ac8565d9e1c125af50924fe25f4ccf6750d32ff213a9",
+          "source_prompt_package_sha256": "e09d3891cca8d4fc0b77367bdf62e8a73b5d3344fc4fcf72b0ca3c0a9b35fb77",
+          "source_prompt_package_version": 2,
+          "source_script_sha256": "39eef5572a74789da9cd063021bc1ca8bac26326ad5ad8e36e815737b2cb107c",
+          "hook_selection_sha256": "a78277972ad1b4aba7140ca9633789b51a9eb06858ec0129c45de304336d1045",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "status": "queued",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": null,
+          "review": {
+            "status": "pending",
+            "reviewed_at": null
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "c03098c57a9a2b3af4fdec35150a9b2b8bd7d5b28ad615e3f88ec8e7c9f89040",
+          "queue_job_id": "68efdc78d87d4549adbbf0d24e07fbe8",
+          "queue_status": "queued"
+        },
+        "K05_cta_stories_t5": {
+          "asset_id": "K05_cta_stories_t5",
+          "role": "cta",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v2_auraly_soulmate_current_hooks.md",
+            "section": "K05_cta_stories_t5"
+          },
+          "prompt_sha256": "9bdc50fc4a5a663c131e09c873f4e8d5e4f2674ccb9b83c27636f6781dca7fb2",
+          "anchor_sha256": "1c9e230e0683ccb5f46afb45491e4b82aebdac9897bbd46b5377cc2557aa4839",
+          "shared_card_reference_sha256": "4914f193a262e6b2d982ac8565d9e1c125af50924fe25f4ccf6750d32ff213a9",
+          "source_prompt_package_sha256": "e09d3891cca8d4fc0b77367bdf62e8a73b5d3344fc4fcf72b0ca3c0a9b35fb77",
+          "source_prompt_package_version": 2,
+          "source_script_sha256": "39eef5572a74789da9cd063021bc1ca8bac26326ad5ad8e36e815737b2cb107c",
+          "hook_selection_sha256": "a78277972ad1b4aba7140ca9633789b51a9eb06858ec0129c45de304336d1045",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "status": "queued",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": null,
+          "review": {
+            "status": "pending",
+            "reviewed_at": null
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "244ec1d46d6a331473ec3aa3f16510356000ebe640f92a4907f52adc246516db",
+          "queue_job_id": "42f45d3e834f4ae790e6462ffe12d3ac",
+          "queue_status": "queued"
+        }
+      },
+      "assets_evidence": "prepared_from_current_prompt_package",
+      "video_prompts": {
+        "status": "unknown",
+        "path": null
+      },
+      "completed_at": null
+    },
+    "kris_walker": {
+      "name": "Kris Walker",
+      "position": 2,
+      "stage": "queued",
+      "anchor_path": null,
+      "anchor_sha256": null,
+      "anchor_evidence": "unknown",
+      "prompt_files": [
+        "01_hook_areia.md",
+        "02_hook_cera.md",
+        "03_hook_louro.md",
+        "04_hook_mao.md",
+        "05_hook_mel.md",
+        "06_body.md",
+        "07_cta.md"
+      ],
+      "assets": {},
+      "assets_evidence": "unknown",
+      "video_prompts": {
+        "status": "unknown",
+        "path": null
+      },
+      "completed_at": null
+    },
+    "shelby_turner": {
+      "name": "Shelby Turner",
+      "position": 3,
+      "stage": "queued",
+      "anchor_path": null,
+      "anchor_sha256": null,
+      "anchor_evidence": "unknown",
+      "prompt_files": [
+        "01_hook_areia.md",
+        "02_hook_cera.md",
+        "03_hook_louro.md",
+        "04_hook_mao.md",
+        "05_hook_mel.md",
+        "06_body.md",
+        "07_cta.md"
+      ],
+      "assets": {},
+      "assets_evidence": "unknown",
+      "video_prompts": {
+        "status": "unknown",
+        "path": null
+      },
+      "completed_at": null
+    },
+    "kelly_bennett": {
+      "name": "Kelly Bennett",
+      "position": 4,
+      "stage": "queued",
+      "anchor_path": null,
+      "anchor_sha256": null,
+      "anchor_evidence": "unknown",
+      "prompt_files": [
+        "01_hook_areia.md",
+        "02_hook_cera.md",
+        "03_hook_louro.md",
+        "04_hook_mao.md",
+        "05_hook_mel.md",
+        "06_body.md",
+        "07_cta.md"
+      ],
+      "assets": {},
+      "assets_evidence": "unknown",
+      "video_prompts": {
+        "status": "unknown",
+        "path": null
+      },
+      "completed_at": null
+    },
+    "robin_matthews": {
+      "name": "Robin Matthews",
+      "position": 5,
+      "stage": "queued",
+      "anchor_path": null,
+      "anchor_sha256": null,
+      "anchor_evidence": "unknown",
+      "prompt_files": [
+        "01_hook_areia.md",
+        "02_hook_cera.md",
+        "03_hook_louro.md",
+        "04_hook_mao.md",
+        "05_hook_mel.md",
+        "06_body.md",
+        "07_cta.md"
+      ],
+      "assets": {},
+      "assets_evidence": "unknown",
+      "video_prompts": {
+        "status": "unknown",
+        "path": null
+      },
+      "completed_at": null
+    }
+  },
+  "unknowns": [
+    {
+      "code": "browser_asset_provenance_unknown",
+      "message": "Não há imagens nomeadas e vinculadas por artefato aos assets da Casey; nenhum asset foi marcado como concluído."
+    },
+    {
+      "code": "avatar_anchor_provenance_unknown",
+      "message": "A âncora da Casey foi comprovada e registrada; para Kris, Shelby, Kelly e Robin, os pacotes ainda citam âncoras sem registro canônico com caminho e hash."
+    }
+  ],
+  "inconsistencies": [],
+  "operator_confirmations": [
+    {
+      "at": "2026-09-08T14:03:10.7862798Z",
+      "scope": "mvp_operational_state",
+      "decision": "approved_provisionally",
+      "evidence": "explicit_user_confirmation",
+      "artifact": {
+        "path": "C:\\Users\\luigi\\Desktop\\AGENTE NON-SHOP\\studio\\pipeline_state.py",
+        "sha256": "f220bb573fbce9dccdbd8ab803ea0e5231cadef6048e92fbe436831c3e67d03e"
+      },
+      "constraint": "Do not integrate engine.py, browser_queue.py, SQLite, or the interface before further user approval."
+    }
+  ],
+  "history": [
+    {
+      "at": "2026-09-08T13:59:18.618095+00:00",
+      "type": "migration",
+      "message": "Estado MVP migrado somente a partir de artefatos locais e confirmação explícita do avatar atual."
+    },
+    {
+      "at": "2026-09-08T14:03:10.7862798Z",
+      "type": "operator_confirmation",
+      "message": "MVP aprovado provisoriamente; integração com engine, fila, SQLite e interface permanece bloqueada."
+    },
+    {
+      "at": "2026-09-08T14:25:03.481733+00:00",
+      "type": "hook_selection",
+      "message": "Três hooks confirmados explicitamente pelo usuário; somente o mel corresponde à opção 8 do artefato histórico."
+    },
+    {
+      "at": "2026-09-08T14:28:02.703689+00:00",
+      "type": "image_prompt_reconciliation",
+      "message": "Reconciliação somente leitura encontrou divergência entre PROMPTS_IMAGEM.md e a seleção atual de hooks; nenhum prompt foi alterado ou validado como lote atual."
+    },
+    {
+      "at": "2026-09-08T14:32:39.373902+00:00",
+      "type": "image_prompt_package_created",
+      "message": "Pacote v2 criado para os três hooks atuais, body T2-T4 e CTA T5; PROMPTS_IMAGEM.md preservado como histórico."
+    },
+    {
+      "at": "2026-09-08T14:42:23.3486785Z",
+      "type": "state_semantic_reconciliation",
+      "message": "Âncora da Casey registrada por caminho e SHA-256 a partir da ficha canônica e do arquivo local; REF-CARTA reclassificada como existente/verificada, porém não aprovada, e passa a bloquear o início do lote."
+    },
+    {
+      "at": "2026-09-08T14:45:10.3588885Z",
+      "type": "shared_card_reference_approval",
+      "message": "REF-CARTA.png aprovada explicitamente pelo usuário como referência compartilhada final, vinculada ao SHA-256 registrado; divergência futura de hash invalida a aprovação."
+    },
+    {
+      "at": "2026-09-08T15:04:12.548412+00:00",
+      "type": "avatar_prepared",
+      "message": "casey_harrisson preparado com cinco assets do pacote atual; nenhuma mídia foi gerada."
+    },
+    {
+      "at": "2026-09-08T21:04:43.850081+00:00",
+      "type": "avatar_prepared",
+      "message": "casey_harrisson preparado com cinco assets do pacote atual; nenhuma mídia foi gerada."
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+testes_operacao.txt
+test_checkpoint_obrigatorio_estrito (test_operacao.Pacotes) ... ok
+test_codigo_duplicado (test_operacao.Pacotes) ... ok
+test_complete_com_pendente (test_operacao.Pacotes) ... ok
+test_fala_alterada (test_operacao.Pacotes) ... ok
+test_growth_nao_vem_da_transcricao (test_operacao.Pacotes) ... ok
+test_imagem_ausente (test_operacao.Pacotes) ... ok
+test_limpo_raiz_e_subpasta (test_operacao.Pacotes) ... ok
+test_mudo_aprovado (test_operacao.Pacotes) ... ok
+test_mudo_sem_take_mudo (test_operacao.Pacotes) ... ok
+test_sincroniza_por_nome (test_operacao.Pacotes) ... ok
+test_sincronizacao_recusa_duplicata (test_operacao.Pacotes) ... ok
+test_dados_invalidos (test_operacao.Resultados) ... ok
+test_denominadores_corretos (test_operacao.Resultados) ... ok
+test_desconhecido_nao_e_zero (test_operacao.Resultados) ... ok
+test_duplicatas (test_operacao.Resultados) ... ok
+test_registro_valido_sem_metricas (test_operacao.Resultados) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.009s
+
+OK
+
+
+validacao_barbie.txt
+==================================================================================
+  producao/barbie_the_aries_1_kris_robin_shelby_casey   (pipeline: auraly | angulo 3 | 8 takes)
+==================================================================================
+  [OK]     travessao        nenhum em dash nos arquivos
+  [OK]     keyword          keyword '222' presente (angulo 3)
+  [OK]     palavras         8 takes falados, todos dentro de 13 a 29 palavras
+  [OK]     secoes           ROTEIRO.md (auraly) com todas as secoes obrigatorias
+  [OK]     preco            nenhuma fala cita preco
+  [OK]     prompt-completo  nenhuma instrucao de patch, prompts entregues inteiros
+  [OK]     angulo3          travas do angulo 3 (auraly) respeitadas
+  [OK]     cobertura        48 prompts V examinados em 7 arquivos de pacote; nao comprova geracao/publicacao.
+----------------------------------------------------------------------------------
+  8 ok, 0 avisos, 0 FALHAS
+
+TOTAL: 0 falhas em 1 pasta(s)
+
+
+validacao_olivia.txt
+==================================================================================
+  producao/oliviamadison671   (pipeline: auraly | angulo 3 | 6 takes)
+==================================================================================
+  [OK]     travessao        nenhum em dash nos arquivos
+  [OK]     keyword          keyword '222' presente (angulo 3)
+  [OK]     palavras         5 takes falados, todos dentro de 13 a 29 palavras
+  [OK]     secoes           ROTEIRO.md (auraly) com todas as secoes obrigatorias
+  [OK]     objetivo         GROWTH explicitamente documentado: Stories nao exigido
+  [OK]     preco            nenhuma fala cita preco
+  [OK]     prompt-completo  nenhuma instrucao de patch, prompts entregues inteiros
+  [OK]     json             7 prompts de imagem com JSON valido
+  [OK]     bandeira         bandeira dos EUA presente em todos os keyframes com cenario
+  [OK]     negative         negatives corretos, sem 'no text' seco e sem termo sensivel
+  [OK]     sem-produto      angulo 3 sem produto em quadro
+  [OK]     ref-caixa-alta   referencias nos titulos em caixa alta
+  [OK]     angulo3          travas do angulo 3 (auraly) respeitadas
+  [OK]     cobertura        120 prompts V examinados em 24 arquivos de pacote; nao comprova geracao/publicacao.
+  [AVISO]  gerar-do-zero    GERAR DO ZERO: K01, K02, K03, K04, K05, K06, K10  |  EDITAR: -  (conferir a olho: um zero por SETUP, nunca por take)
+  [AVISO]  estado           Sem checkpoint: estado e aprovacoes nao verificados (pasta historica).  (CHECKPOINT.md)
+----------------------------------------------------------------------------------
+  14 ok, 2 avisos, 0 FALHAS
+
+TOTAL: 0 falhas em 1 pasta(s)
+
+
+validacao_fitwell.txt
+==================================================================================
+  producao/fitywell_pernas   (angulo 2 | 12 takes | 12 keyframes | 12 clipes)
+==================================================================================
+  [OK]     travessao        nenhum em dash nos arquivos
+  [OK]     keyword          keyword 'yes' presente (angulo 2)
+  [OK]     palavras         12 takes falados, todos dentro de 13 a 29 palavras
+  [OK]     fala-literal     12 prompts de video batem palavra por palavra com o roteiro
+  [OK]     json             12 prompts de imagem com JSON valido
+  [OK]     bandeira         bandeira dos EUA presente em todos os keyframes com cenario
+  [OK]     negative         negatives corretos, sem 'no text' seco e sem termo sensivel
+  [OK]     nomenclatura     prefixos T/K/V/REF consistentes
+  [OK]     secoes           ROTEIRO.md com todas as secoes, na ordem
+  [OK]     secoes           PROMPTS_PRODUCAO.md com todas as secoes, na ordem
+  [OK]     ref-caixa-alta   referencias nos titulos em caixa alta
+  [OK]     sem-produto      angulo 2 sem produto em quadro
+  [OK]     blocos-video     12 prompts de video com os 5 blocos corretos
+  [OK]     prompt-completo  nenhuma instrucao de patch, prompts entregues inteiros
+  [AVISO]  gerar-do-zero    GERAR DO ZERO: K01, K02, K03, K04, K05, K06, K09  |  EDITAR: K07, K08, K10, K11, K12  (conferir a olho: um zero por SETUP, nunca por take)
+----------------------------------------------------------------------------------
+  14 ok, 1 avisos, 0 FALHAS
+
+TOTAL: 0 falhas em 1 pasta(s)
+
+
+validacao_korella.txt
+==================================================================================
+  producao/melody_acucar   (angulo 1 | 29 takes | 7 keyframes | 29 clipes)
+==================================================================================
+  [OK]     travessao        nenhum em dash nos arquivos
+  [OK]     keyword          keyword 'yes' presente (angulo 1)
+  [OK]     fala-literal     29 prompts de video batem palavra por palavra com o roteiro
+  [OK]     json             7 prompts de imagem com JSON valido
+  [OK]     bandeira         bandeira dos EUA presente em todos os keyframes com cenario
+  [OK]     negative         negatives corretos, sem 'no text' seco e sem termo sensivel
+  [OK]     nomenclatura     prefixos T/K/V/REF consistentes
+  [OK]     secoes           ROTEIRO.md com todas as secoes, na ordem
+  [OK]     secoes           PROMPTS_PRODUCAO.md com todas as secoes, na ordem
+  [OK]     ref-caixa-alta   referencias nos titulos em caixa alta
+  [OK]     blocos-video     29 prompts de video com os 5 blocos corretos
+  [OK]     prompt-completo  nenhuma instrucao de patch, prompts entregues inteiros
+  [AVISO]  gerar-do-zero    GERAR DO ZERO: K01, K02, K03, K04, K05, K07  |  EDITAR: K06  (conferir a olho: um zero por SETUP, nunca por take)
+  [FALHA]  palavras         T1 tem 4 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.
+           -> ROTEIRO.md:57
+  [FALHA]  palavras         T2 tem 4 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.
+           -> ROTEIRO.md:62
+  [FALHA]  palavras         T3 tem 4 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.
+           -> ROTEIRO.md:67
+  [FALHA]  palavras         T5 tem 7 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.
+           -> ROTEIRO.md:77
+  [FALHA]  palavras         T7 tem 12 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.
+           -> ROTEIRO.md:87
+  [FALHA]  palavras         T8 tem 9 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.
+           -> ROTEIRO.md:92
+  [FALHA]  palavras         T18 tem 10 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.
+           -> ROTEIRO.md:142
+  [FALHA]  palavras         T19 tem 11 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.
+           -> ROTEIRO.md:147
+  [FALHA]  palavras         T21 tem 7 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.
+           -> ROTEIRO.md:157
+  [FALHA]  palavras         T22 tem 10 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.
+           -> ROTEIRO.md:162
+  [FALHA]  palavras         T24 tem 11 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.
+           -> ROTEIRO.md:172
+  [FALHA]  palavras         T26 tem 8 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.
+           -> ROTEIRO.md:182
+  [FALHA]  palavras         T28 tem 10 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.
+           -> ROTEIRO.md:192
+----------------------------------------------------------------------------------
+  12 ok, 1 avisos, 13 FALHAS
+
+TOTAL: 13 falhas em 1 pasta(s)

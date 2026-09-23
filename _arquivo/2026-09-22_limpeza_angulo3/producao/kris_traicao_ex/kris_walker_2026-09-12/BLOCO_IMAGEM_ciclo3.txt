@@ -1,0 +1,71 @@
+K10
+{
+  "shot_id": "K10_T10_kris_initial",
+  "reference_use": "Use the first attached image ONLY for Kris's exact face, identity, hair, skin texture, wardrobe and the identity of her real room. Preserve that same real environment and its established objects. Use the second attached image ONLY as the exact physical SOULMATE tarot card prop. Do NOT copy pose, action or framing from either reference.",
+  "identity_main": "The EXACT woman from the first attached reference image: a Black American woman of twenty four with deep brown skin, visible pores, natural shine on the forehead and cheeks, small dark marks on the forehead, the cheek and above the lip, zero makeup, chest length box braids in dark brown with honey highlights parted in the middle and pulled back, dark brown eyes, full lips, natural eyebrows and short natural nails with no polish.",
+  "prop": "The exact physical SOULMATE tarot card from the second reference, held upright in one hand in the lower foreground, closer to the lens than her face, fully visible. Its wide mirrored metallic holographic border and the printed SOULMATE title band stay identical to the reference.",
+  "wardrobe": "The same brown ribbed short sleeve t-shirt and black trousers from the anchor image, small silver hoop earrings and a thin silver chain with a small silver cross pendant.",
+  "scene": "The SAME real daylight bedroom identity as Kris's anchor image. Table group on the light wooden table in the lower third: three classic white bordered tarot cards face up in a row, a green fluorite chunk, a white selenite tower, a ceramic dish with a tall incense stick and visible smoke, and three tealight candles on the right. Wall group: a LARGE United States flag pinned flat on the left, clearly visible and in sharp focus, a wooden crucifix at the centre, and the sun and moon print and the natal chart wheel print on the right. Window on the left, floral bedspread bed behind her and a wooden dresser with a pothos in a terracotta pot on the right. Preserve the established room and do not invent a different location.",
+  "posture": "Kris sits upright behind the table, shoulders relaxed, holding the SOULMATE card upright in her right hand in the lower foreground, looking straight into the lens, calm and direct.",
+  "composition": "Tight chest-up talking frame. The SOULMATE card occupies the lower foreground and is closer to the lens than her face. Kris's face fills the upper third. The room stays recognizable without competing with the card.",
+  "camera": "eye level, straight-on, close phone-camera distance",
+  "state": "Start frame: Kris already holds the card in position and looks into the lens, before speaking or gesturing.",
+  "lighting": "Soft neutral diffuse daylight from the window on the left, matching Kris's real room, no warm cast. The tealight candles and the incense do not light the room.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}
+
+K11
+{
+  "shot_id": "K11_T11_kris_initial",
+  "reference_use": "Use the first attached image ONLY for Kris's exact face, identity, hair, skin texture, wardrobe and the identity of her real room. Preserve that same real environment and its established objects. Use the second attached image ONLY as the exact physical SOULMATE tarot card prop. Do NOT copy pose, action or framing from either reference.",
+  "identity_main": "The EXACT woman from the first attached reference image: a Black American woman of twenty four with deep brown skin, visible pores, natural shine on the forehead and cheeks, small dark marks on the forehead, the cheek and above the lip, zero makeup, chest length box braids in dark brown with honey highlights parted in the middle and pulled back, dark brown eyes, full lips, natural eyebrows and short natural nails with no polish.",
+  "prop": "The exact physical SOULMATE tarot card from the second reference, held upright in one hand in the lower foreground, closer to the lens than her face, fully visible. Its wide mirrored metallic holographic border and the printed SOULMATE title band stay identical to the reference.",
+  "wardrobe": "The same brown ribbed short sleeve t-shirt and black trousers from the anchor image, small silver hoop earrings and a thin silver chain with a small silver cross pendant.",
+  "scene": "The SAME real daylight bedroom identity as Kris's anchor image. Table group on the light wooden table in the lower third: three classic white bordered tarot cards face up in a row, a green fluorite chunk, a white selenite tower, a ceramic dish with a tall incense stick and visible smoke, and three tealight candles on the right. Wall group: a LARGE United States flag pinned flat on the left, clearly visible and in sharp focus, a wooden crucifix at the centre, and the sun and moon print and the natal chart wheel print on the right. Window on the left, floral bedspread bed behind her and a wooden dresser with a pothos in a terracotta pot on the right. Preserve the established room and do not invent a different location.",
+  "posture": "Kris sits upright and raises the SOULMATE card to chest height beside her jaw, never covering her face, her free hand open on the table, looking straight into the lens.",
+  "composition": "Chest-up talking frame, slightly closer than the previous setup. The raised SOULMATE card is in the lower foreground beside her jaw and stays closer to the lens than her face. Nothing else competes.",
+  "camera": "eye level, straight-on, close phone-camera distance",
+  "state": "Start frame: Kris already holds the card in position and looks into the lens, before speaking or gesturing.",
+  "lighting": "Soft neutral diffuse daylight from the window on the left, matching Kris's real room, no warm cast. The tealight candles and the incense do not light the room.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}
+
+K12
+{
+  "shot_id": "K12_T12_kris_initial",
+  "reference_use": "Use the first attached image ONLY for Kris's exact face, identity, hair, skin texture, wardrobe and the identity of her real room. Preserve that same real environment and its established objects. Use the second attached image ONLY as the exact physical SOULMATE tarot card prop. Do NOT copy pose, action or framing from either reference.",
+  "identity_main": "The EXACT woman from the first attached reference image: a Black American woman of twenty four with deep brown skin, visible pores, natural shine on the forehead and cheeks, small dark marks on the forehead, the cheek and above the lip, zero makeup, chest length box braids in dark brown with honey highlights parted in the middle and pulled back, dark brown eyes, full lips, natural eyebrows and short natural nails with no polish.",
+  "prop": "The exact physical SOULMATE tarot card from the second reference, held upright in one hand in the lower foreground, closer to the lens than her face, fully visible. Its wide mirrored metallic holographic border and the printed SOULMATE title band stay identical to the reference.",
+  "wardrobe": "The same brown ribbed short sleeve t-shirt and black trousers from the anchor image, small silver hoop earrings and a thin silver chain with a small silver cross pendant.",
+  "scene": "The SAME real daylight bedroom identity as Kris's anchor image. Table group on the light wooden table in the lower third: three classic white bordered tarot cards face up in a row, a green fluorite chunk, a white selenite tower, a ceramic dish with a tall incense stick and visible smoke, and three tealight candles on the right. Wall group: a LARGE United States flag pinned flat on the left, clearly visible and in sharp focus, a wooden crucifix at the centre, and the sun and moon print and the natal chart wheel print on the right. Window on the left, floral bedspread bed behind her and a wooden dresser with a pothos in a terracotta pot on the right. Preserve the established room and do not invent a different location.",
+  "posture": "Kris holds the SOULMATE card upright with both hands just below her collarbone, elbows resting on the table, leaning slightly toward the lens, looking straight into it.",
+  "composition": "Tighter chest-up frame. The SOULMATE card held in both hands fills the lower foreground, closer to the lens than her face. The table group is only partly in frame because the shot is closer.",
+  "camera": "eye level, straight-on, close phone-camera distance",
+  "state": "Start frame: Kris already holds the card in position and looks into the lens, before speaking or gesturing.",
+  "lighting": "Soft neutral diffuse daylight from the window on the left, matching Kris's real room, no warm cast. The tealight candles and the incense do not light the room.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}
+
+K13
+{
+  "shot_id": "K13_T13_kris_initial",
+  "reference_use": "Use the first attached image ONLY for Kris's exact face, identity, hair, skin texture, wardrobe and the identity of her real room. Preserve that same real environment and its established objects. Use the second attached image ONLY as the exact physical SOULMATE tarot card prop. Do NOT copy pose, action or framing from either reference.",
+  "identity_main": "The EXACT woman from the first attached reference image: a Black American woman of twenty four with deep brown skin, visible pores, natural shine on the forehead and cheeks, small dark marks on the forehead, the cheek and above the lip, zero makeup, chest length box braids in dark brown with honey highlights parted in the middle and pulled back, dark brown eyes, full lips, natural eyebrows and short natural nails with no polish.",
+  "prop": "The exact physical SOULMATE tarot card from the second reference, held upright in one hand in the lower foreground, closer to the lens than her face, fully visible. Its wide mirrored metallic holographic border and the printed SOULMATE title band stay identical to the reference.",
+  "wardrobe": "The same brown ribbed short sleeve t-shirt and black trousers from the anchor image, small silver hoop earrings and a thin silver chain with a small silver cross pendant.",
+  "scene": "The SAME real daylight bedroom identity as Kris's anchor image. Table group on the light wooden table in the lower third: three classic white bordered tarot cards face up in a row, a green fluorite chunk, a white selenite tower, a ceramic dish with a tall incense stick and visible smoke, and three tealight candles on the right. Wall group: a LARGE United States flag pinned flat on the left, clearly visible and in sharp focus, a wooden crucifix at the centre, and the sun and moon print and the natal chart wheel print on the right. Window on the left, floral bedspread bed behind her and a wooden dresser with a pothos in a terracotta pot on the right. Preserve the established room and do not invent a different location.",
+  "posture": "Kris leans in, holding the SOULMATE card upright in one hand at the very bottom of the frame, her free index finger entering from the lower edge and pointing toward the lens, expression urgent and certain.",
+  "composition": "THE TIGHTEST FRAME OF THE WHOLE VIDEO. Only Kris's face and the SOULMATE card are dominant. The card is at the very bottom of the frame and closest to the lens. The room is barely in frame.",
+  "camera": "eye level, straight-on, pushed in about twenty percent closer than the other Kris setups",
+  "state": "Start frame: Kris already holds the card in position and looks into the lens, before speaking or gesturing.",
+  "lighting": "Soft neutral diffuse daylight from the window on the left, matching Kris's real room, no warm cast. The tealight candles and the incense do not light the room.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}

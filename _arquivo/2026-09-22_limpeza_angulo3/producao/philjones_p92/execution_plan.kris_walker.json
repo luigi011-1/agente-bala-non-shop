@@ -1,0 +1,252 @@
+{
+  "plan_version": 1,
+  "created_at": 1788905972,
+  "production_id": "philjones_p92",
+  "pipeline": "auraly_soulmate",
+  "avatar_id": "kris_walker",
+  "desired_concurrency": 7,
+  "effective_concurrency": 7,
+  "max_browser_concurrency": 8,
+  "n_waves": 1,
+  "assets": [
+    {
+      "production_id": "philjones_p92",
+      "pipeline": "auraly_soulmate",
+      "avatar_id": "kris_walker",
+      "asset_id": "K01_hook_card_pull_camera",
+      "asset_type": "hook",
+      "prompt": "{\n  \"shot_id\": \"K01_hook_card_pull_camera\",\n  \"reference_use\": \"Use the attached image only for the exact identity, wardrobe and real room of the avatar. Do not copy its pose.\",\n  \"scene\": \"The exact avatar sits at her own tarot-reading table in the same real room from the anchor. She holds one ordinary tarot card between thumb and index finger, pulling it toward the lens. The card is close to camera but does not cover her face.\",\n  \"composition\": \"tight chest-up vertical phone framing; card is the isolated lower-foreground hero; direct eye contact above it; background remains recognizably the same but secondary.\",\n  \"state\": \"first frame of the pull, with the card fully visible and sharply framed, no motion blur.\",\n  \"realism\": \"unpolished iPhone UGC realism, neutral daylight matching the anchor, no text inside image\",\n  \"aspect_ratio\": \"9:16\"\n}",
+      "prompt_sha256": "3e9ca5ef27f6557f3cda627c385926cad01e336b36ae0625d316be3486aaedef",
+      "references": [
+        {
+          "role": "avatar_anchor",
+          "canonical_path": "C:\\Users\\luigi\\Desktop\\APPYON\\Kris.Walker_us .jpeg",
+          "sha256": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c",
+          "size": 9107368,
+          "mtime_ns": 1788464661075665400
+        }
+      ],
+      "output_path": "producao\\philjones_p92\\pacote_browser\\kris_walker\\K01_hook_card_pull_camera.png",
+      "eligible": true,
+      "wave": 0,
+      "canonical_asset_fingerprint": "020465e081f80b0a3ff207b2662a6a16450a44be1be4e7d2cabcef52e6a66fc9",
+      "execution_spec": {
+        "version": 1,
+        "target_generation_provider": "chatgpt_ui",
+        "retry_policy": {
+          "automatic_retry": false,
+          "requires_explicit_recovery": true
+        },
+        "dependencies": [],
+        "expected_reference_sha256": {
+          "avatar_anchor": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c"
+        }
+      }
+    },
+    {
+      "production_id": "philjones_p92",
+      "pipeline": "auraly_soulmate",
+      "avatar_id": "kris_walker",
+      "asset_id": "K02_hook_candle_intention",
+      "asset_type": "hook",
+      "prompt": "{\n  \"shot_id\": \"K02_hook_candle_intention\",\n  \"reference_use\": \"Use the attached image only for the exact identity, wardrobe and real room of the avatar. Do not copy its pose.\",\n  \"scene\": \"At the same table and in the same room, one small white candle is in the lower foreground. The avatar gently cups one hand around the flame as if protecting it, while looking directly at the lens.\",\n  \"composition\": \"close chest-up phone-camera frame; hand and small candle isolated in foreground; face clear and dominant above; keep the real room recognizable.\",\n  \"state\": \"flame steady, no smoke, no supernatural effect, no dramatic darkness.\",\n  \"realism\": \"real iPhone UGC image with neutral ambient daylight; candle adds only a tiny natural practical glow; no rendered text\",\n  \"aspect_ratio\": \"9:16\"\n}",
+      "prompt_sha256": "974288e57022a7cb7628584152938de11d5be29b6845f14c326e5ab0e025a7f7",
+      "references": [
+        {
+          "role": "avatar_anchor",
+          "canonical_path": "C:\\Users\\luigi\\Desktop\\APPYON\\Kris.Walker_us .jpeg",
+          "sha256": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c",
+          "size": 9107368,
+          "mtime_ns": 1788464661075665400
+        }
+      ],
+      "output_path": "producao\\philjones_p92\\pacote_browser\\kris_walker\\K02_hook_candle_intention.png",
+      "eligible": true,
+      "wave": 0,
+      "canonical_asset_fingerprint": "f3655fbc14d6975cd60e5486a8b57b02732075e7dea8b42c7d7f1bac3a46162e",
+      "execution_spec": {
+        "version": 1,
+        "target_generation_provider": "chatgpt_ui",
+        "retry_policy": {
+          "automatic_retry": false,
+          "requires_explicit_recovery": true
+        },
+        "dependencies": [],
+        "expected_reference_sha256": {
+          "avatar_anchor": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c"
+        }
+      }
+    },
+    {
+      "production_id": "philjones_p92",
+      "pipeline": "auraly_soulmate",
+      "avatar_id": "kris_walker",
+      "asset_id": "K03_hook_222_envelope",
+      "asset_type": "hook",
+      "prompt": "{\n  \"shot_id\": \"K03_hook_222_envelope\",\n  \"reference_use\": \"Use the attached image only for the exact identity, wardrobe and real room of the avatar. Do not copy its pose.\",\n  \"scene\": \"At the same table, the avatar opens a small cream envelope toward the camera. A small handwritten 222 is visible on the envelope flap, and a folded blank cream note is just emerging. No other writing is visible.\",\n  \"composition\": \"close chest-up vertical phone frame; envelope and fingers are the lower-foreground hero without hiding her face; direct eye contact.\",\n  \"state\": \"first moment the envelope opens; five natural fingers on each visible hand; all props physically plausible.\",\n  \"realism\": \"natural unretouched smartphone UGC photo, neutral daylight, no overlay text or subtitles\",\n  \"aspect_ratio\": \"9:16\"\n}",
+      "prompt_sha256": "1728901bd6070247d2b8bf1104ac76666b7af13b1dedd2cebfb44981539b5793",
+      "references": [
+        {
+          "role": "avatar_anchor",
+          "canonical_path": "C:\\Users\\luigi\\Desktop\\APPYON\\Kris.Walker_us .jpeg",
+          "sha256": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c",
+          "size": 9107368,
+          "mtime_ns": 1788464661075665400
+        }
+      ],
+      "output_path": "producao\\philjones_p92\\pacote_browser\\kris_walker\\K03_hook_222_envelope.png",
+      "eligible": true,
+      "wave": 0,
+      "canonical_asset_fingerprint": "9326ef4038ebdac00c53e4271f06e35268eeeb2a29c00fa98271367f80bbfc73",
+      "execution_spec": {
+        "version": 1,
+        "target_generation_provider": "chatgpt_ui",
+        "retry_policy": {
+          "automatic_retry": false,
+          "requires_explicit_recovery": true
+        },
+        "dependencies": [],
+        "expected_reference_sha256": {
+          "avatar_anchor": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c"
+        }
+      }
+    },
+    {
+      "production_id": "philjones_p92",
+      "pipeline": "auraly_soulmate",
+      "avatar_id": "kris_walker",
+      "asset_id": "K04_hook_pendulum_choice",
+      "asset_type": "hook",
+      "prompt": "{\n  \"shot_id\": \"K04_hook_pendulum_choice\",\n  \"reference_use\": \"Use the attached image only for the exact identity, wardrobe and real room of the avatar. Do not copy its pose.\",\n  \"scene\": \"At the avatar's same real table, two ordinary tarot cards lie side by side. Her hand holds a small pendulum suspended precisely between them while she looks directly into the camera.\",\n  \"composition\": \"close chest-up phone framing, pendulum and two cards isolated in the lower foreground, face fully visible above them, no visual clutter.\",\n  \"state\": \"pendulum is perfectly still at the moment before its choice; no levitation or mystical light.\",\n  \"realism\": \"ordinary real-room iPhone UGC with neutral daylight and exact identity continuity; no text inside image\",\n  \"aspect_ratio\": \"9:16\"\n}",
+      "prompt_sha256": "4bf19c3230dfe8f4a259a91f6eee4bbd634334a068b2c020f79a0bc961319243",
+      "references": [
+        {
+          "role": "avatar_anchor",
+          "canonical_path": "C:\\Users\\luigi\\Desktop\\APPYON\\Kris.Walker_us .jpeg",
+          "sha256": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c",
+          "size": 9107368,
+          "mtime_ns": 1788464661075665400
+        }
+      ],
+      "output_path": "producao\\philjones_p92\\pacote_browser\\kris_walker\\K04_hook_pendulum_choice.png",
+      "eligible": true,
+      "wave": 0,
+      "canonical_asset_fingerprint": "fd7bdb0b651b129f589341ed89005a69bb886308e19db80d7f85170b2332d5dc",
+      "execution_spec": {
+        "version": 1,
+        "target_generation_provider": "chatgpt_ui",
+        "retry_policy": {
+          "automatic_retry": false,
+          "requires_explicit_recovery": true
+        },
+        "dependencies": [],
+        "expected_reference_sha256": {
+          "avatar_anchor": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c"
+        }
+      }
+    },
+    {
+      "production_id": "philjones_p92",
+      "pipeline": "auraly_soulmate",
+      "avatar_id": "kris_walker",
+      "asset_id": "K05_hook_red_thread_release",
+      "asset_type": "hook",
+      "prompt": "{\n  \"shot_id\": \"K05_hook_red_thread_release\",\n  \"reference_use\": \"Use the attached image only for the exact identity, wardrobe and real room of the avatar. Do not copy its pose.\",\n  \"scene\": \"The avatar's hands are close to the lower foreground, gently loosening a small knot in a single red thread. Her face is visible above the hands, making direct eye contact with a calm, knowing expression.\",\n  \"composition\": \"tight chest-up vertical phone-camera view; fingers and red thread are the single visual hero; face stays unobstructed; room stays recognizable.\",\n  \"state\": \"the knot has just begun to release, no floating thread, no motion blur, anatomically correct hands.\",\n  \"realism\": \"real unfiltered UGC smartphone image in neutral daylight; no words, captions or magical effects\",\n  \"aspect_ratio\": \"9:16\"\n}",
+      "prompt_sha256": "bc77e9c5503f83c521b2cd21e1ca32691cafdb90c6e5a53c3d623605806ef0b4",
+      "references": [
+        {
+          "role": "avatar_anchor",
+          "canonical_path": "C:\\Users\\luigi\\Desktop\\APPYON\\Kris.Walker_us .jpeg",
+          "sha256": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c",
+          "size": 9107368,
+          "mtime_ns": 1788464661075665400
+        }
+      ],
+      "output_path": "producao\\philjones_p92\\pacote_browser\\kris_walker\\K05_hook_red_thread_release.png",
+      "eligible": true,
+      "wave": 0,
+      "canonical_asset_fingerprint": "ee12077a9b44496c9ebc83a9f9435aa0d089f95e009ae3094fa5dd33ce77ce11",
+      "execution_spec": {
+        "version": 1,
+        "target_generation_provider": "chatgpt_ui",
+        "retry_policy": {
+          "automatic_retry": false,
+          "requires_explicit_recovery": true
+        },
+        "dependencies": [],
+        "expected_reference_sha256": {
+          "avatar_anchor": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c"
+        }
+      }
+    },
+    {
+      "production_id": "philjones_p92",
+      "pipeline": "auraly_soulmate",
+      "avatar_id": "kris_walker",
+      "asset_id": "K06_body_reading",
+      "asset_type": "body",
+      "prompt": "{\n  \"shot_id\": \"K06_body_reading\",\n  \"reference_use\": \"Use the attached image only for the exact identity, wardrobe and real room of the avatar. Do not copy its pose.\",\n  \"scene\": \"The avatar is seated naturally at her own tarot-reading table in the unchanged real room. Three ordinary tarot cards are spread neatly at the bottom edge of frame; her hands rest naturally beside them, leaving room for speaking gestures.\",\n  \"composition\": \"intimate chest-up, straight-on phone-camera framing. The avatar's face carries the frame and remains sharply visible. The three cards are secondary lower foreground props.\",\n  \"state\": \"clean stable speaking setup for the main relationship reading; direct eye contact; calm, warm but grounded expression.\",\n  \"realism\": \"same true skin texture, hair, clothes, lighting and room from the anchor; iPhone UGC realism; no captions or text\",\n  \"aspect_ratio\": \"9:16\"\n}",
+      "prompt_sha256": "a2273936f8b4d36259102d5e7bd2396076131db1410be3be8ed5721ee41c42aa",
+      "references": [
+        {
+          "role": "avatar_anchor",
+          "canonical_path": "C:\\Users\\luigi\\Desktop\\APPYON\\Kris.Walker_us .jpeg",
+          "sha256": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c",
+          "size": 9107368,
+          "mtime_ns": 1788464661075665400
+        }
+      ],
+      "output_path": "producao\\philjones_p92\\pacote_browser\\kris_walker\\K06_body_reading.png",
+      "eligible": true,
+      "wave": 0,
+      "canonical_asset_fingerprint": "e7eecddeab8b627fca54147cec5b9971cce2f1bb1b2e629c236fee2e221d6444",
+      "execution_spec": {
+        "version": 1,
+        "target_generation_provider": "chatgpt_ui",
+        "retry_policy": {
+          "automatic_retry": false,
+          "requires_explicit_recovery": true
+        },
+        "dependencies": [],
+        "expected_reference_sha256": {
+          "avatar_anchor": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c"
+        }
+      }
+    },
+    {
+      "production_id": "philjones_p92",
+      "pipeline": "auraly_soulmate",
+      "avatar_id": "kris_walker",
+      "asset_id": "K07_cta_stories",
+      "asset_type": "cta",
+      "prompt": "{\n  \"shot_id\": \"K07_cta_stories\",\n  \"reference_use\": \"Use the attached image only for the exact identity, wardrobe and real room of the avatar. Do not copy its pose.\",\n  \"scene\": \"Same real room and tarot table. The avatar leans slightly closer toward the lens and points naturally upward toward the upper edge of frame, leaving the upper corner clean for a later editorial profile-picture cue.\",\n  \"composition\": \"the tightest shoulders-up phone-camera frame of the package; direct eye contact; hand gesture stays clear without covering the face; no arrow or graphic inside the generated image.\",\n  \"state\": \"intimate final call-to-action expression, steady and believable, with an empty upper corner.\",\n  \"realism\": \"unretouched iPhone UGC look; neutral daylight matching the anchor; no text, captions, logos or interface elements\",\n  \"aspect_ratio\": \"9:16\"\n}",
+      "prompt_sha256": "70ef10a9a24ca53f5b48da28eb5dc73330e6f8ec02695939a26f92113644aa7c",
+      "references": [
+        {
+          "role": "avatar_anchor",
+          "canonical_path": "C:\\Users\\luigi\\Desktop\\APPYON\\Kris.Walker_us .jpeg",
+          "sha256": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c",
+          "size": 9107368,
+          "mtime_ns": 1788464661075665400
+        }
+      ],
+      "output_path": "producao\\philjones_p92\\pacote_browser\\kris_walker\\K07_cta_stories.png",
+      "eligible": true,
+      "wave": 0,
+      "canonical_asset_fingerprint": "d89007eac8c3bb67aa6ca87f4b0f317d48dff08e0e8c5571fd930135b043a7f0",
+      "execution_spec": {
+        "version": 1,
+        "target_generation_provider": "chatgpt_ui",
+        "retry_policy": {
+          "automatic_retry": false,
+          "requires_explicit_recovery": true
+        },
+        "dependencies": [],
+        "expected_reference_sha256": {
+          "avatar_anchor": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c"
+        }
+      }
+    }
+  ],
+  "plan_sha256": "0102863117f51bf97e9e833970858813f49c42c90d163038f74a52738400a6e1"
+}

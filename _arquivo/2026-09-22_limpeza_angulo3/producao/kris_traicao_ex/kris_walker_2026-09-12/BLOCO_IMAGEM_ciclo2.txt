@@ -1,0 +1,18 @@
+K02
+{
+  "shot_id": "K02_derek_keys_initial",
+  "reference_use": "Use the attached image ONLY for this man's exact face, identity, skin texture, hair, beard and wardrobe. Do NOT copy pose, action, framing or background from the reference.",
+  "identity_main": "The EXACT man from the attached reference image, a Black American man in his mid thirties with deep brown skin, visible pores, a short fade and a trimmed beard. He is the main subject of this frame, chest-up, facing the lens.",
+  "second_person": "A Black American woman stands on the left, cut by the left edge of the frame, only her shoulder and upper arm inside the frame. Her face is not in frame.",
+  "prop": "A small ring of car keys held loosely in his right hand in the lower foreground, the metal catching the flat daylight.",
+  "wardrobe": "The same plain black crewneck and dark jeans from the reference image, no jewelry.",
+  "scene": "A small real American apartment living room during the day. Only three visual anchors: a beige couch with a woven throw on the left, a white plastic laundry basket on the floor, and a small framed United States flag print on the wall, discreet but clearly visible and in sharp focus. He stands in the open doorway of the room.",
+  "posture": "He stands in the doorway, shoulders squared, one hand on the doorframe, looking at her and then toward the lens, calm and unapologetic.",
+  "composition": "The car keys fill the lower foreground and are closer to the lens than his face. He is chest-up in the upper portion of the frame. The woman's cut shoulder frames the left edge.",
+  "camera": "chest height, straight-on, close phone-camera distance",
+  "state": "Start frame: he is already holding the keys and looking at her, before he speaks or turns to leave.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day coming from a window outside the frame, no warm cast and no practical lamp lighting the room.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}

@@ -1,0 +1,49 @@
+REF-MAYA
+{
+  "shot_id": "REF_maya_identity_anchor",
+  "reference_use": "Generate one isolated identity reference portrait. No other person in frame and no attached reference.",
+  "identity_main": "A Black American woman of thirty one with deep brown skin, visible pores, a natural shine on the forehead, zero makeup, natural tightly coiled hair pulled into a low bun with loose coils at the hairline, full lips, natural eyebrows, tired but composed eyes and short natural nails with no polish.",
+  "wardrobe": "A heather grey ribbed tank top, dark straight jeans and thin gold stud earrings, no other jewelry.",
+  "scene": "A plain real American room during the day with a neutral off white wall and a small framed United States flag print on the wall behind the shoulder, discreet but clearly visible and in sharp focus. No other objects.",
+  "posture": "Standing relaxed, square to the lens, arms down and out of frame, neutral calm expression, eyes on the lens.",
+  "composition": "Chest-up identity portrait, the face filling the upper half of the frame, nothing competing.",
+  "camera": "eye level, straight-on, close phone-camera distance",
+  "state": "Start frame: standing still, before any movement.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day from the side, flat and even, no warm cast.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no second person, no beauty retouching"
+}
+
+REF-DEREK
+{
+  "shot_id": "REF_derek_identity_anchor",
+  "reference_use": "Generate one isolated identity reference portrait. No other person in frame and no attached reference.",
+  "identity_main": "A Black American man in his mid thirties with deep brown skin, visible pores, a short fade, a trimmed beard with a few grey hairs, natural eyebrows and an unretouched face.",
+  "wardrobe": "A plain black crewneck sweatshirt and dark jeans, no jewelry.",
+  "scene": "A plain real American room during the day with a neutral off white wall and a small framed United States flag print on the wall behind the shoulder, discreet but clearly visible and in sharp focus. No other objects.",
+  "posture": "Standing relaxed, square to the lens, arms down and out of frame, neutral calm expression, eyes on the lens.",
+  "composition": "Chest-up identity portrait, the face filling the upper half of the frame, nothing competing.",
+  "camera": "eye level, straight-on, close phone-camera distance",
+  "state": "Start frame: standing still, before any movement.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day from the side, flat and even, no warm cast.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no second person, no beauty retouching"
+}
+
+REF-CARTA
+{
+  "shot_id": "REF_CARTA_soulmate_holographic",
+  "reference_use": "Generate one isolated physical tarot card reference. No person, no hands and no avatar reference.",
+  "identity_main": "No person. One premium physical soulmate tarot card only.",
+  "prop": "A single vertical tarot card about 10 cm tall, printed on real thick card stock. The illustration shows an elegant adult couple connected by a soft celestial ribbon of light, surrounded by roses, tiny stars and a crescent moon. The artwork is saturated in deep sapphire, magenta, ruby and luminous teal. A wide mirrored silver metallic border produces subtle holographic rainbow reflections, with engraved arabesque flourishes in all four corners. A clean metallic title band at the bottom reads SOULMATE in large legible serif letters. The visual language is sophisticated spiritual tarot art for adults, never childish and never gothic.",
+  "scene": "Plain neutral matte tabletop only, no room and no background objects.",
+  "composition": "Extreme close-up of the single card lying flat, filling most of the vertical frame, with all four edges visible.",
+  "camera": "macro close-up, slightly high toward the card",
+  "state": "Start frame: the card lies still on the surface, ready to be reused as a fixed prop reference.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day, with realistic reflections on the metallic border.",
+  "realism": "UGC realism, real paper texture, tiny edge wear, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no blur anywhere, everything in sharp focus.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no person, no hands, no studio, no plastic texture, no childish illustration, no cartoon look, no blur, no artificial lighting, no gothic art, no skulls, no ravens, no snakes, no swords, no inverted symbols, no sigils"
+}

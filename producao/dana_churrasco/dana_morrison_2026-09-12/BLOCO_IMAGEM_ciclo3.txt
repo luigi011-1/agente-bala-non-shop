@@ -1,0 +1,55 @@
+K03
+{
+  "shot_id": "K03_real_ask_initial",
+  "reference_use": "Use the attached image ONLY for this man's exact face, identity, skin texture, hair, beard and wardrobe. Do NOT copy pose, action, framing or background from the reference.",
+  "identity_main": "The EXACT man from the attached reference image: a Black American man of forty seven with medium brown skin, visible pores, a close cropped fade going grey at the temples, a short trimmed beard, natural eyebrows and tired eyes, unretouched. His jaw is set and he is holding eye contact with effort.",
+  "second_person": "On the right edge, cut by the frame, only the white coated shoulder and forearm of a doctor seated behind a desk. No face and no head of the doctor is in frame.",
+  "prop": "Both of his own hands closed into loose fists on his knees in the lower foreground, the knuckles and tendons anatomically clear and much closer to the lens than his face.",
+  "wardrobe": "The same charcoal short sleeve polo shirt and dark jeans from the reference image, a plain steel watch and no other jewelry.",
+  "scene": "A small real American doctor's consulting room during the day. Only three visual anchors: a laminate desk with a closed paper folder, a framed certificate on the wall, and a small United States flag on a short pole on the desk, discreet but clearly visible and in sharp focus.",
+  "posture": "Terrell sits forward on the patient chair, elbows on his thighs, fists on his knees, looking straight at the doctor and then toward the lens.",
+  "composition": "His two closed fists fill the lower foreground and are much closer to the lens than his face. Terrell is chest-up in the upper portion of the frame. The doctor stays cut by the right edge.",
+  "camera": "chest height, straight-on toward Terrell, pushed in close",
+  "state": "Start frame: he is already leaning forward with his fists on his knees, before he speaks.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day coming from a window outside the frame, no warm cast and no practical lamp lighting the room.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}
+
+K04
+{
+  "shot_id": "K04_truck_block_initial",
+  "reference_use": "Use the attached image ONLY for this man's exact face, identity, skin texture, hair, beard and wardrobe. Do NOT copy pose, action, framing or background from the reference.",
+  "identity_main": "The EXACT man from the attached reference image: a Black American man of forty seven with medium brown skin, visible pores, a close cropped fade going grey at the temples, a short trimmed beard, natural eyebrows and tired eyes, unretouched. His eyes are fixed on nothing and his face is exhausted, with no tears.",
+  "prop": "Both of his hands gripping the worn steering wheel in the lower foreground, the knuckles and the veins on the backs of the hands anatomically clear and much closer to the lens than his face.",
+  "wardrobe": "The same charcoal short sleeve polo shirt and dark jeans from the reference image, a plain steel watch and no other jewelry.",
+  "scene": "Inside a real older American pickup truck parked during the day. Only three visual anchors: the worn steering wheel, the cracked dashboard with a paper parking stub on it, and a small United States flag decal on the inside corner of the windshield, discreet but clearly visible and in sharp focus. The parking lot beyond the glass stays small in frame and in sharp focus.",
+  "posture": "Terrell sits in the driver seat, both hands on the wheel, not moving, staring through the windshield and then toward the lens.",
+  "composition": "His two hands on the wheel fill the lower foreground and are much closer to the lens than his face. Terrell is chest-up in the upper portion of the frame, alone. Nothing competes with the hands.",
+  "camera": "chest height from the passenger side, angled toward Terrell, close",
+  "state": "Start frame: the engine is off, his hands are already on the wheel and he is already still.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day, flat and even, no warm cast and no direct sun.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}
+
+K11
+{
+  "shot_id": "K11_reverse_terrell_initial",
+  "reference_use": "Use the attached image ONLY for this man's exact face, identity, skin texture, hair, beard and wardrobe. Do NOT copy pose, action, framing or background from the reference.",
+  "identity_main": "The EXACT man from the attached reference image: a Black American man of forty seven with medium brown skin, visible pores, a close cropped fade going grey at the temples, a short trimmed beard, natural eyebrows and tired eyes, unretouched. His eyebrows are raised and his mouth is open in disbelief.",
+  "second_person": "On the far right edge, cut by the frame, only the shoulder and the do-rag flap of a seated older man behind the bench. His face is not in frame.",
+  "prop": "An empty glass Ball jar and two loose screwdrivers on the worn wooden workbench in the lower foreground, closer to the lens than Terrell's face.",
+  "wardrobe": "The same charcoal short sleeve polo shirt and dark jeans from the reference image, a plain steel watch and no other jewelry.",
+  "scene": "The same real garage apothecary seen from the opposite side of the workbench. Only three visual anchors: the worn wooden bench with the glass Ball jar and loose screwdrivers, the open white roll up garage door behind Terrell letting in flat daylight, and a small United States flag standing on the wooden shelf, discreet but clearly visible and in sharp focus.",
+  "posture": "Terrell stands on the other side of the bench, one hand flat on the wood, leaning in, looking down at the seated man and then toward the lens.",
+  "composition": "The Ball jar and the screwdrivers fill the lower foreground and are closer to the lens than Terrell's face. Terrell is chest-up in the upper portion of the frame. The seated man stays cut by the right edge.",
+  "camera": "chest height, straight-on toward Terrell, close",
+  "state": "Start frame: he is already leaning on the bench, before he speaks.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day coming in through the open garage door behind him, flat and even, no warm cast and no practical lamp lighting the garage.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}

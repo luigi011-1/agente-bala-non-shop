@@ -1,0 +1,96 @@
+{
+  "gerado_em": "2026-09-22",
+  "motivo": "falhas de pacotes publicados antes das regras que as acusam; roteiro publicado nao se reescreve",
+  "pacotes": {
+    "brandon_angle2": [
+      "palavras|T4 tem 30 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "fala-literal|V02 NAO e copia literal de T2.\n           roteiro: if you feel puffy no matter what you eat, you need to hear this right now.\n           prompt : if you feel puffy no matter what you eat, you need to hear this right now. Because nobody ever explained this to you properly.",
+      "negative|K06 lista 'logo' no negative. Orgao, gore e marca NUNCA entram la (restricoes-protocolo): o token injeta o conceito. Descrever a forma certa no positivo.",
+      "sem-produto|angulo 2 nao mostra produto, mas K06 cita 'smartphone': ...ht hand she holds up a second ordinary black smartphone right beside her face, pushed well..."
+    ],
+    "brandon_mercado": [
+      "palavras|T1 tem 12 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T10 tem 10 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T13 tem 10 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T16 tem 11 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "fala-literal|V19 NAO e copia literal de T19.\n           roteiro: Two minutes and you will know which one it is. Comment yes and I will send it straight to you.\n           prompt : It is free, it takes two minutes, and if you comment yes I will send it straight to you.",
+      "bandeira|K01 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K02 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K03 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K04 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K05 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K06 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K07 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K08 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "sem-produto|angulo 2 nao mostra produto, mas K05 cita 'bottle': ...n it. Her right hand now holds a clear glass bottle of pale vinegar, tilted just above the...",
+      "sem-produto|angulo 2 nao mostra produto, mas K07 cita 'bottle': ...n water in the lower foreground. The vinegar bottle is gone from her hand and from the tab..."
+    ],
+    "brandon_pulmao": [
+      "palavras|T3 tem 9 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T7 tem 12 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T24 tem 12 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "bandeira|K01 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K02 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K03 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K04 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K05 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)"
+    ],
+    "melody_acucar": [
+      "palavras|T1 tem 4 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T2 tem 4 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T3 tem 4 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T5 tem 7 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T7 tem 12 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T8 tem 9 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T18 tem 10 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T19 tem 11 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T21 tem 7 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T22 tem 10 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T24 tem 11 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T26 tem 8 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T28 tem 10 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler."
+    ],
+    "melody_mercado": [
+      "palavras|T1 tem 12 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "bandeira|K01 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K02 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K03 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K04 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K05 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K06 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K07 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K08 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)"
+    ],
+    "melody_pes": [
+      "palavras|T3 tem 7 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "bandeira|K01 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K02 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K03 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K04 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K05 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K06 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)"
+    ],
+    "melody_rosto": [
+      "bandeira|K01 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K02 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K03 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K04 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K05 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K06 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)"
+    ],
+    "melody_sal": [
+      "palavras|T3 tem 11 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "bandeira|K01 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K02 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K03 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K04 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K05 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)"
+    ],
+    "melody_varanda": [
+      "palavras|T10 tem 10 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "palavras|T19 tem 12 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
+      "bandeira|K01 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
+      "bandeira|K02 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)"
+    ]
+  }
+}

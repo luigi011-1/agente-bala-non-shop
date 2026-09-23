@@ -1,0 +1,133 @@
+# PROMPTS_VIDEO_FLOW · oliviamadison671 · SHELBY YORK
+
+Espelho do VIDEO_BLOCK.md com rótulo T/K para o linter. O bloco de execução no Flow é o VIDEO_BLOCK.md.
+
+## V01 · T1 · K01
+
+```text
+(sem fala no take: o clipe inteiro é mudo, nenhuma palavra é dita)
+
+o que acontece no vídeo: o homem negro de 38 anos, de locs platinadas meio presas, cavanhaque preto e camisa de linho preta de manga curta, encara a lente com a boca fechada e desce a palma aberta com força sobre a bandeja de farinha. Uma nuvem branca sobe e assenta em cerca de três segundos, revelando embaixo da mão uma carta de tarô com borda prateada holográfica e a palavra SOULMATE na faixa da base. Ele mantém o olhar na lente até o fim.
+
+câmera: fixa
+
+som ambiente: tapa seco na madeira e sopro da farinha, sala de leitura silenciosa durante o dia, sem música
+```
+
+## V02 · T1 · K02
+
+```text
+(sem fala no take: o clipe inteiro é mudo, nenhuma palavra é dita)
+
+o que acontece no vídeo: o homem negro de 38 anos, de locs platinadas meio presas, cavanhaque preto e camisa de linho preta de manga curta, desce uma vez o martelinho de madeira sobre o bloco de gelo. O gelo racha em pedaços grandes sobre a toalha branca, ele puxa de dentro dos pedaços a carta de tarô de borda prateada holográfica com a palavra SOULMATE e a ergue em direção à lente, com gotas escorrendo.
+
+câmera: fixa
+
+som ambiente: estalo do gelo rachando, sala de leitura silenciosa durante o dia, sem música
+```
+
+## V03 · T1 · K03
+
+```text
+(sem fala no take: o clipe inteiro é mudo, nenhuma palavra é dita)
+
+o que acontece no vídeo: o homem negro de 38 anos, de locs platinadas meio presas, cavanhaque preto e camisa de linho preta de manga curta, desce o punho fechado sobre o biscoito da sorte grande. O biscoito se parte em cacos sobre a carta de tarô de borda prateada holográfica com a palavra SOULMATE, e uma tira fina de papel branco com o número 222 impresso fica por cima da carta. Ele pega a tira com dois dedos e mostra para a lente.
+
+câmera: fixa
+
+som ambiente: estalo crocante do biscoito quebrando, sala de leitura silenciosa durante o dia, sem música
+```
+
+## V04 · T1 · K04
+
+```text
+(sem fala no take: o clipe inteiro é mudo, nenhuma palavra é dita)
+
+o que acontece no vídeo: o homem negro de 38 anos, de locs platinadas meio presas, cavanhaque preto e camisa de linho preta de manga curta, cola com calma a tira de fita prateada sobre os próprios lábios fechados e alisa com o polegar. Em seguida pega da mesa a carta de tarô de borda prateada holográfica com a palavra SOULMATE e a bate de pé contra a mesa, virada para a lente, encarando a câmera sem piscar.
+
+câmera: fixa
+
+som ambiente: fita adesiva sendo esticada e batida seca da carta na madeira, sala de leitura silenciosa durante o dia, sem música
+```
+
+## V05 · T1 · K05
+
+```text
+(sem fala no take: o clipe inteiro é mudo, nenhuma palavra é dita)
+
+o que acontece no vídeo: o homem negro de 38 anos, de locs platinadas meio presas, cavanhaque preto e camisa de linho preta de manga curta, passa o rodo de borracha de cima para baixo numa só passada pela placa de vidro embaçada. Abre uma faixa limpa no meio do vidro e ele aparece atrás, segurando junto ao peito a carta de tarô de borda prateada holográfica com a palavra SOULMATE, olhando fixo para a lente.
+
+câmera: fixa
+
+som ambiente: rangido da borracha do rodo no vidro, sala de leitura silenciosa durante o dia, sem música
+```
+
+## V06 · T2 · K06
+
+```text
+o avatar (homem) fala em inglês com sotaque americano de homem negro de 38 anos, voz grave, autêntica, intensa e emocional, como quem conta um segredo e exige ser ouvido, a seguinte frase: "Shut your mouth. Do not tell anyone what is about to happen to you, because someone is already on their way to you."
+
+o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
+
+o que acontece no vídeo: o homem de locs platinadas meio presas, cavanhaque e camisa de linho preta segura a carta de tarô SOULMATE de borda prateada holográfica em pé na mão direita. No começo da frase ele leva o indicador esquerdo aos lábios e depois abaixa a mão.
+
+câmera: fixa
+
+som ambiente: sala de leitura silenciosa durante o dia, sem música
+```
+
+## V07 · T3 · K06
+
+```text
+o avatar (homem) fala em inglês com sotaque americano de homem negro de 38 anos, voz grave, autêntica, intensa e emocional, como quem conta um segredo e exige ser ouvido, a seguinte frase: "Do not scroll if this found you today. Consider it your sign, because the universe already chose the face that is meant for you."
+
+o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
+
+o que acontece no vídeo: o homem de locs platinadas meio presas, cavanhaque e camisa de linho preta mantém a carta de tarô SOULMATE de borda prateada holográfica erguida na mão direita, olha fixo para a lente e faz um leve aceno de cabeça no fim.
+
+câmera: fixa
+
+som ambiente: sala de leitura silenciosa durante o dia, sem música
+```
+
+## V08 · T4 · K06
+
+```text
+o avatar (homem) fala em inglês com sotaque americano de homem negro de 38 anos, voz grave, autêntica, intensa e emocional, como quem conta um segredo e exige ser ouvido, a seguinte frase: "Save this video, and the sign stays with you. Stay open, because the love coming your way will not arrive the way you expect."
+
+o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
+
+o que acontece no vídeo: o homem de locs platinadas meio presas, cavanhaque e camisa de linho preta segura a carta de tarô SOULMATE de borda prateada holográfica na mão direita e toca de leve a borda dela com o indicador esquerdo, sem tirar os olhos da lente.
+
+câmera: fixa
+
+som ambiente: sala de leitura silenciosa durante o dia, sem música
+```
+
+## V09 · T5 · K06
+
+```text
+o avatar (homem) fala em inglês com sotaque americano de homem negro de 38 anos, voz grave, autêntica, intensa e emocional, como quem conta um segredo e exige ser ouvido, a seguinte frase: "Type two two two, that is how this gets tied to your name."
+
+o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
+
+o que acontece no vídeo: o homem de locs platinadas meio presas, cavanhaque e camisa de linho preta segura a carta de tarô SOULMATE de borda prateada holográfica na mão direita e aponta o indicador esquerdo para baixo, em direção à parte de baixo do quadro.
+
+câmera: fixa
+
+som ambiente: sala de leitura silenciosa durante o dia, sem música
+```
+
+## V10 · T6 · K10
+
+```text
+o avatar (homem) fala em inglês com sotaque americano de homem negro de 38 anos, voz grave, autêntica, intensa e emocional, como quem conta um segredo e exige ser ouvido, a seguinte frase: "Now pay attention. Follow me, so what you just sealed stays open, and the next sign finds you first."
+
+o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
+
+o que acontece no vídeo: o homem de locs platinadas meio presas, cavanhaque e camisa de linho preta segura a carta de tarô SOULMATE de borda prateada holográfica ao lado do rosto e abre a palma esquerda para a lente, num convite, inclinando o corpo levemente para a frente.
+
+câmera: fixa, leve push-in
+
+som ambiente: sala de leitura silenciosa durante o dia, sem música
+```

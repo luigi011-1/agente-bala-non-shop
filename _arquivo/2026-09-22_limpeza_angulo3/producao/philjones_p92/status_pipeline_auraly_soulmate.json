@@ -1,0 +1,725 @@
+{
+  "schema_version": 1,
+  "pipeline": "auraly_soulmate",
+  "angle": 3,
+  "production": {
+    "id": "philjones_p92",
+    "title": "Phil Jones P92 · soulmate reading",
+    "root": "C:\\Users\\luigi\\Desktop\\AGENTE NON-SHOP\\producao\\philjones_p92",
+    "created_at": "2026-09-08T00:00:00+00:00",
+    "updated_at": "2026-09-09T01:26:28.250003+00:00"
+  },
+  "workflow": {
+    "stage": "processing_avatar_queue",
+    "next_action": "execute_eligible_current_avatar_assets",
+    "current_avatar_id": "casey_harrisson",
+    "current_avatar_evidence": "anchor_supplied_by_user",
+    "blocked_by": null
+  },
+  "inputs": {
+    "video": {
+      "path": "C:\\Users\\luigi\\Downloads\\philjones.p92.mp4",
+      "sha256": "c11f82fdfb76cf898ecf4577f1042d34c5c6d0bfb63fc6c616d877a1d5c3657e",
+      "duration_seconds": 68.49746,
+      "evidence": "user_supplied_and_locally_verified"
+    },
+    "avatars": [
+      {
+        "id": "kris_walker",
+        "name": "Kris Walker",
+        "position": 1,
+        "anchor_path": "C:\\Users\\luigi\\Desktop\\APPYON\\Kris.Walker_us .jpeg",
+        "anchor_sha256": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c",
+        "evidence": "user_supplied_and_locally_verified"
+      },
+      {
+        "id": "casey_harrisson",
+        "name": "Casey Harrisson",
+        "position": 2,
+        "anchor_path": "C:\\Users\\luigi\\Desktop\\APPYON\\casey.harrisson_us .jpeg",
+        "anchor_sha256": "1c9e230e0683ccb5f46afb45491e4b82aebdac9897bbd46b5377cc2557aa4839",
+        "evidence": "user_supplied_and_locally_verified"
+      },
+      {
+        "id": "robin_matthews",
+        "name": "Robin Matthews",
+        "position": 3,
+        "anchor_path": "C:\\Users\\luigi\\Desktop\\APPYON\\Robin Matthews .jpeg",
+        "anchor_sha256": "a6e8bbfad07833c18b59fdeb9c3c25b51fe00e2087f6dc5bc86aaafcaa607284",
+        "evidence": "user_supplied_and_locally_verified"
+      },
+      {
+        "id": "kelly_bennett",
+        "name": "Kelly Bennett",
+        "position": 4,
+        "anchor_path": "C:\\Users\\luigi\\Desktop\\APPYON\\Kelly Bennett.jpeg",
+        "anchor_sha256": "71d5aaa05f537c8f61fdab7f393ac3b6df1d1195d50a34ce8d9b39b160c96bb0",
+        "evidence": "user_supplied_and_locally_verified"
+      },
+      {
+        "id": "shelby_turner",
+        "name": "Shelby Turner",
+        "position": 5,
+        "anchor_path": "C:\\Users\\luigi\\Desktop\\APPYON\\ShelbyTurner.us .jpeg",
+        "anchor_sha256": "ca32ec695fa4f4212f44b5f302935060a63d137fdb241473409f9e35798d96d7",
+        "evidence": "user_supplied_and_locally_verified"
+      }
+    ]
+  },
+  "artifacts": {
+    "script": {
+      "path": "ROTEIRO.md",
+      "exists": true,
+      "sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+      "kind": "script"
+    },
+    "hook_options": {
+      "path": "GANCHOS_VISUAIS.md",
+      "exists": true,
+      "sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e",
+      "kind": "hook_options"
+    },
+    "image_prompts_current": {
+      "path": "PROMPTS_IMAGEM.v1_auraly_soulmate.md",
+      "exists": true,
+      "sha256": "deebc90c1ba6bad2bd009e50a8d080a91e975fc9ec7214689f6f93f971f83e55",
+      "kind": "image_prompt_package",
+      "version": 1,
+      "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+      "hook_selection_sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e"
+    }
+  },
+  "approvals": {
+    "script": {
+      "status": "approved",
+      "evidence": "explicit_user_confirmation",
+      "artifact_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25"
+    },
+    "hooks": {
+      "status": "approved",
+      "evidence": "explicit_user_selection",
+      "selected_ids": [
+        "K01_hook_card_pull_camera",
+        "K02_hook_candle_intention",
+        "K03_hook_222_envelope",
+        "K04_hook_pendulum_choice",
+        "K05_hook_red_thread_release"
+      ],
+      "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25"
+    }
+  },
+  "hooks": {
+    "status": "approved",
+    "options_path": "GANCHOS_VISUAIS.md",
+    "options_sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e",
+    "selected_ids": [
+      "K01_hook_card_pull_camera",
+      "K02_hook_candle_intention",
+      "K03_hook_222_envelope",
+      "K04_hook_pendulum_choice",
+      "K05_hook_red_thread_release"
+    ],
+    "selected_titles": [
+      "Carta puxada para a câmera",
+      "Vela apagando / intenção protegida",
+      "Envelope com 222",
+      "Pêndulo sobre duas cartas",
+      "Fio vermelho desatado"
+    ],
+    "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+    "no_hooks_explicitly_authorized": false,
+    "selected_hooks": [
+      {
+        "selection_id": "K01_hook_card_pull_camera",
+        "title": "Carta puxada para a câmera",
+        "origin": "user_explicit"
+      },
+      {
+        "selection_id": "K02_hook_candle_intention",
+        "title": "Vela apagando / intenção protegida",
+        "origin": "user_explicit"
+      },
+      {
+        "selection_id": "K03_hook_222_envelope",
+        "title": "Envelope com 222",
+        "origin": "user_explicit"
+      },
+      {
+        "selection_id": "K04_hook_pendulum_choice",
+        "title": "Pêndulo sobre duas cartas",
+        "origin": "user_explicit"
+      },
+      {
+        "selection_id": "K05_hook_red_thread_release",
+        "title": "Fio vermelho desatado",
+        "origin": "user_explicit"
+      }
+    ]
+  },
+  "avatar_queue": {
+    "order": [
+      "casey_harrisson",
+      "kelly_bennett",
+      "robin_matthews",
+      "shelby_turner"
+    ],
+    "current_index": 0,
+    "completed": [
+      "kris_walker"
+    ]
+  },
+  "avatars": {
+    "kris_walker": {
+      "name": "Kris Walker",
+      "position": 1,
+      "stage": "completed",
+      "anchor_path": "C:\\Users\\luigi\\Desktop\\APPYON\\Kris.Walker_us .jpeg",
+      "anchor_sha256": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c",
+      "anchor_evidence": "user_supplied_and_locally_verified",
+      "assets": {
+        "K01_hook_card_pull_camera": {
+          "asset_id": "K01_hook_card_pull_camera",
+          "role": "hook",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v1_auraly_soulmate.md",
+            "section": "K01_hook_card_pull_camera"
+          },
+          "prompt_sha256": "3e9ca5ef27f6557f3cda627c385926cad01e336b36ae0625d316be3486aaedef",
+          "anchor_sha256": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c",
+          "shared_card_reference_sha256": null,
+          "source_prompt_package_sha256": "deebc90c1ba6bad2bd009e50a8d080a91e975fc9ec7214689f6f93f971f83e55",
+          "source_prompt_package_version": 1,
+          "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+          "hook_selection_sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "reference_roles": [
+            "avatar_anchor"
+          ],
+          "status": "approved",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": "C:\\Users\\luigi\\Downloads\\kris_walker\\K01_hook_card_pull_camera.png",
+          "review": {
+            "status": "approved",
+            "reviewed_at": "2026-09-08T00:00:00+00:00"
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "020465e081f80b0a3ff207b2662a6a16450a44be1be4e7d2cabcef52e6a66fc9",
+          "queue_job_id": "a9ce9ab982bd4f4eb0d203a30a555deb",
+          "queue_status": "done"
+        },
+        "K02_hook_candle_intention": {
+          "asset_id": "K02_hook_candle_intention",
+          "role": "hook",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v1_auraly_soulmate.md",
+            "section": "K02_hook_candle_intention"
+          },
+          "prompt_sha256": "974288e57022a7cb7628584152938de11d5be29b6845f14c326e5ab0e025a7f7",
+          "anchor_sha256": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c",
+          "shared_card_reference_sha256": null,
+          "source_prompt_package_sha256": "deebc90c1ba6bad2bd009e50a8d080a91e975fc9ec7214689f6f93f971f83e55",
+          "source_prompt_package_version": 1,
+          "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+          "hook_selection_sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "reference_roles": [
+            "avatar_anchor"
+          ],
+          "status": "approved",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": "C:\\Users\\luigi\\Downloads\\kris_walker\\K02_hook_candle_intention.png",
+          "review": {
+            "status": "approved",
+            "reviewed_at": "2026-09-08T00:00:00+00:00"
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "f3655fbc14d6975cd60e5486a8b57b02732075e7dea8b42c7d7f1bac3a46162e",
+          "queue_job_id": "5b59a17472b24bb09891a0b8f945a1ef",
+          "queue_status": "done"
+        },
+        "K03_hook_222_envelope": {
+          "asset_id": "K03_hook_222_envelope",
+          "role": "hook",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v1_auraly_soulmate.md",
+            "section": "K03_hook_222_envelope"
+          },
+          "prompt_sha256": "1728901bd6070247d2b8bf1104ac76666b7af13b1dedd2cebfb44981539b5793",
+          "anchor_sha256": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c",
+          "shared_card_reference_sha256": null,
+          "source_prompt_package_sha256": "deebc90c1ba6bad2bd009e50a8d080a91e975fc9ec7214689f6f93f971f83e55",
+          "source_prompt_package_version": 1,
+          "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+          "hook_selection_sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "reference_roles": [
+            "avatar_anchor"
+          ],
+          "status": "approved",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": "C:\\Users\\luigi\\Downloads\\kris_walker\\K03_hook_222_envelope.png",
+          "review": {
+            "status": "approved",
+            "reviewed_at": "2026-09-08T00:00:00+00:00"
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "9326ef4038ebdac00c53e4271f06e35268eeeb2a29c00fa98271367f80bbfc73",
+          "queue_job_id": "89fc0f12a01f43a1b98602b709c95aa5",
+          "queue_status": "done"
+        },
+        "K04_hook_pendulum_choice": {
+          "asset_id": "K04_hook_pendulum_choice",
+          "role": "hook",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v1_auraly_soulmate.md",
+            "section": "K04_hook_pendulum_choice"
+          },
+          "prompt_sha256": "4bf19c3230dfe8f4a259a91f6eee4bbd634334a068b2c020f79a0bc961319243",
+          "anchor_sha256": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c",
+          "shared_card_reference_sha256": null,
+          "source_prompt_package_sha256": "deebc90c1ba6bad2bd009e50a8d080a91e975fc9ec7214689f6f93f971f83e55",
+          "source_prompt_package_version": 1,
+          "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+          "hook_selection_sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "reference_roles": [
+            "avatar_anchor"
+          ],
+          "status": "approved",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": "C:\\Users\\luigi\\Downloads\\kris_walker\\K04_hook_pendulum_choice.png",
+          "review": {
+            "status": "approved",
+            "reviewed_at": "2026-09-08T00:00:00+00:00"
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "fd7bdb0b651b129f589341ed89005a69bb886308e19db80d7f85170b2332d5dc",
+          "queue_job_id": "73efe3f566ce4351a08b7a4bdddcd1a1",
+          "queue_status": "done"
+        },
+        "K05_hook_red_thread_release": {
+          "asset_id": "K05_hook_red_thread_release",
+          "role": "hook",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v1_auraly_soulmate.md",
+            "section": "K05_hook_red_thread_release"
+          },
+          "prompt_sha256": "bc77e9c5503f83c521b2cd21e1ca32691cafdb90c6e5a53c3d623605806ef0b4",
+          "anchor_sha256": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c",
+          "shared_card_reference_sha256": null,
+          "source_prompt_package_sha256": "deebc90c1ba6bad2bd009e50a8d080a91e975fc9ec7214689f6f93f971f83e55",
+          "source_prompt_package_version": 1,
+          "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+          "hook_selection_sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "reference_roles": [
+            "avatar_anchor"
+          ],
+          "status": "approved",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": "C:\\Users\\luigi\\Downloads\\kris_walker\\K05_hook_red_thread_release.png",
+          "review": {
+            "status": "approved",
+            "reviewed_at": "2026-09-08T00:00:00+00:00"
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "ee12077a9b44496c9ebc83a9f9435aa0d089f95e009ae3094fa5dd33ce77ce11",
+          "queue_job_id": "40e37af101224c54a323e9dc668ae92e",
+          "queue_status": "done"
+        },
+        "K06_body_reading": {
+          "asset_id": "K06_body_reading",
+          "role": "body",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v1_auraly_soulmate.md",
+            "section": "K06_body_reading"
+          },
+          "prompt_sha256": "a2273936f8b4d36259102d5e7bd2396076131db1410be3be8ed5721ee41c42aa",
+          "anchor_sha256": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c",
+          "shared_card_reference_sha256": null,
+          "source_prompt_package_sha256": "deebc90c1ba6bad2bd009e50a8d080a91e975fc9ec7214689f6f93f971f83e55",
+          "source_prompt_package_version": 1,
+          "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+          "hook_selection_sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "reference_roles": [
+            "avatar_anchor"
+          ],
+          "status": "approved",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": "C:\\Users\\luigi\\Downloads\\kris_walker\\K06_body_reading.png",
+          "review": {
+            "status": "approved",
+            "reviewed_at": "2026-09-08T00:00:00+00:00"
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "e7eecddeab8b627fca54147cec5b9971cce2f1bb1b2e629c236fee2e221d6444",
+          "queue_job_id": "388bb89d2bf84d239e3ad69c0914752c",
+          "queue_status": "done"
+        },
+        "K07_cta_stories": {
+          "asset_id": "K07_cta_stories",
+          "role": "cta",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v1_auraly_soulmate.md",
+            "section": "K07_cta_stories"
+          },
+          "prompt_sha256": "70ef10a9a24ca53f5b48da28eb5dc73330e6f8ec02695939a26f92113644aa7c",
+          "anchor_sha256": "330d4104d8056fa06f80203bd03d4c8c7a9b98b18e08e9743d37381e8284c37c",
+          "shared_card_reference_sha256": null,
+          "source_prompt_package_sha256": "deebc90c1ba6bad2bd009e50a8d080a91e975fc9ec7214689f6f93f971f83e55",
+          "source_prompt_package_version": 1,
+          "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+          "hook_selection_sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "reference_roles": [
+            "avatar_anchor"
+          ],
+          "status": "approved",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": "C:\\Users\\luigi\\Downloads\\kris_walker\\K07_cta_stories.png",
+          "review": {
+            "status": "approved",
+            "reviewed_at": "2026-09-08T00:00:00+00:00"
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "d89007eac8c3bb67aa6ca87f4b0f317d48dff08e0e8c5571fd930135b043a7f0",
+          "queue_job_id": "bb83b26befa647d9a2f6e693425be495",
+          "queue_status": "done"
+        }
+      },
+      "assets_evidence": "prepared_from_current_prompt_package",
+      "delivery_folder": "C:\\Users\\luigi\\Downloads\\kris_walker",
+      "video_prompts_artifact": "C:\\Users\\luigi\\Downloads\\kris_walker\\PROMPTS_VIDEO_FLOW.md"
+    },
+    "casey_harrisson": {
+      "name": "Casey Harrisson",
+      "position": 2,
+      "stage": "preparing_images",
+      "anchor_path": "C:\\Users\\luigi\\Desktop\\APPYON\\casey.harrisson_us .jpeg",
+      "anchor_sha256": "1c9e230e0683ccb5f46afb45491e4b82aebdac9897bbd46b5377cc2557aa4839",
+      "anchor_evidence": "user_supplied_and_locally_verified",
+      "assets": {
+        "K01_hook_card_pull_camera": {
+          "asset_id": "K01_hook_card_pull_camera",
+          "role": "hook",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v1_auraly_soulmate.md",
+            "section": "K01_hook_card_pull_camera"
+          },
+          "prompt_sha256": "3e9ca5ef27f6557f3cda627c385926cad01e336b36ae0625d316be3486aaedef",
+          "anchor_sha256": "1c9e230e0683ccb5f46afb45491e4b82aebdac9897bbd46b5377cc2557aa4839",
+          "shared_card_reference_sha256": null,
+          "source_prompt_package_sha256": "deebc90c1ba6bad2bd009e50a8d080a91e975fc9ec7214689f6f93f971f83e55",
+          "source_prompt_package_version": 1,
+          "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+          "hook_selection_sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "reference_roles": [
+            "avatar_anchor"
+          ],
+          "status": "queued",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": null,
+          "review": {
+            "status": "pending",
+            "reviewed_at": null
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "89f521da82866ab2d09ec09480f4f6fc0214f24fb26e553fc3c3f3dd7d363014",
+          "queue_job_id": "f1d7c52779c74bf683cd8c3dfd275ffa",
+          "queue_status": "queued"
+        },
+        "K02_hook_candle_intention": {
+          "asset_id": "K02_hook_candle_intention",
+          "role": "hook",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v1_auraly_soulmate.md",
+            "section": "K02_hook_candle_intention"
+          },
+          "prompt_sha256": "974288e57022a7cb7628584152938de11d5be29b6845f14c326e5ab0e025a7f7",
+          "anchor_sha256": "1c9e230e0683ccb5f46afb45491e4b82aebdac9897bbd46b5377cc2557aa4839",
+          "shared_card_reference_sha256": null,
+          "source_prompt_package_sha256": "deebc90c1ba6bad2bd009e50a8d080a91e975fc9ec7214689f6f93f971f83e55",
+          "source_prompt_package_version": 1,
+          "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+          "hook_selection_sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "reference_roles": [
+            "avatar_anchor"
+          ],
+          "status": "queued",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": null,
+          "review": {
+            "status": "pending",
+            "reviewed_at": null
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "0ec1cd2f4ae6f766dc473caa8edb739bd6cea31f0e9888ebc3c0f402af6181b1",
+          "queue_job_id": "2742a69a0c174b97ab7be854b7583155",
+          "queue_status": "queued"
+        },
+        "K03_hook_222_envelope": {
+          "asset_id": "K03_hook_222_envelope",
+          "role": "hook",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v1_auraly_soulmate.md",
+            "section": "K03_hook_222_envelope"
+          },
+          "prompt_sha256": "1728901bd6070247d2b8bf1104ac76666b7af13b1dedd2cebfb44981539b5793",
+          "anchor_sha256": "1c9e230e0683ccb5f46afb45491e4b82aebdac9897bbd46b5377cc2557aa4839",
+          "shared_card_reference_sha256": null,
+          "source_prompt_package_sha256": "deebc90c1ba6bad2bd009e50a8d080a91e975fc9ec7214689f6f93f971f83e55",
+          "source_prompt_package_version": 1,
+          "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+          "hook_selection_sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "reference_roles": [
+            "avatar_anchor"
+          ],
+          "status": "queued",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": null,
+          "review": {
+            "status": "pending",
+            "reviewed_at": null
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "1b59cae2996cd3b1d3fbe7ad92e8a1250dda7d09607979792f2ca1614ef7c924",
+          "queue_job_id": "328f7179fb6847909b4acc10b6a4a645",
+          "queue_status": "queued"
+        },
+        "K04_hook_pendulum_choice": {
+          "asset_id": "K04_hook_pendulum_choice",
+          "role": "hook",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v1_auraly_soulmate.md",
+            "section": "K04_hook_pendulum_choice"
+          },
+          "prompt_sha256": "4bf19c3230dfe8f4a259a91f6eee4bbd634334a068b2c020f79a0bc961319243",
+          "anchor_sha256": "1c9e230e0683ccb5f46afb45491e4b82aebdac9897bbd46b5377cc2557aa4839",
+          "shared_card_reference_sha256": null,
+          "source_prompt_package_sha256": "deebc90c1ba6bad2bd009e50a8d080a91e975fc9ec7214689f6f93f971f83e55",
+          "source_prompt_package_version": 1,
+          "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+          "hook_selection_sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "reference_roles": [
+            "avatar_anchor"
+          ],
+          "status": "queued",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": null,
+          "review": {
+            "status": "pending",
+            "reviewed_at": null
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "4e449b38109b6dca12c0919ce781e8d176635740512b5c34256a644c858b2399",
+          "queue_job_id": "a5b91a60c6c24efa9565690b684e72ef",
+          "queue_status": "queued"
+        },
+        "K05_hook_red_thread_release": {
+          "asset_id": "K05_hook_red_thread_release",
+          "role": "hook",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v1_auraly_soulmate.md",
+            "section": "K05_hook_red_thread_release"
+          },
+          "prompt_sha256": "bc77e9c5503f83c521b2cd21e1ca32691cafdb90c6e5a53c3d623605806ef0b4",
+          "anchor_sha256": "1c9e230e0683ccb5f46afb45491e4b82aebdac9897bbd46b5377cc2557aa4839",
+          "shared_card_reference_sha256": null,
+          "source_prompt_package_sha256": "deebc90c1ba6bad2bd009e50a8d080a91e975fc9ec7214689f6f93f971f83e55",
+          "source_prompt_package_version": 1,
+          "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+          "hook_selection_sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "reference_roles": [
+            "avatar_anchor"
+          ],
+          "status": "queued",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": null,
+          "review": {
+            "status": "pending",
+            "reviewed_at": null
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "f9ad51db4b199aa01ee0f433d9549c7791fb4129caaec58b02b89bf328745e2e",
+          "queue_job_id": "a129e2334fea4e139f1807d246caba31",
+          "queue_status": "queued"
+        },
+        "K06_body_reading": {
+          "asset_id": "K06_body_reading",
+          "role": "body",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v1_auraly_soulmate.md",
+            "section": "K06_body_reading"
+          },
+          "prompt_sha256": "a2273936f8b4d36259102d5e7bd2396076131db1410be3be8ed5721ee41c42aa",
+          "anchor_sha256": "1c9e230e0683ccb5f46afb45491e4b82aebdac9897bbd46b5377cc2557aa4839",
+          "shared_card_reference_sha256": null,
+          "source_prompt_package_sha256": "deebc90c1ba6bad2bd009e50a8d080a91e975fc9ec7214689f6f93f971f83e55",
+          "source_prompt_package_version": 1,
+          "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+          "hook_selection_sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "reference_roles": [
+            "avatar_anchor"
+          ],
+          "status": "queued",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": null,
+          "review": {
+            "status": "pending",
+            "reviewed_at": null
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "69a707478baab204cfab2c5a1b9a2ae34628008601e766a5354914cf6278fd5b",
+          "queue_job_id": "6774ebbbf7234790a4dda78cf4e105fa",
+          "queue_status": "queued"
+        },
+        "K07_cta_stories": {
+          "asset_id": "K07_cta_stories",
+          "role": "cta",
+          "prompt_reference": {
+            "path": "PROMPTS_IMAGEM.v1_auraly_soulmate.md",
+            "section": "K07_cta_stories"
+          },
+          "prompt_sha256": "70ef10a9a24ca53f5b48da28eb5dc73330e6f8ec02695939a26f92113644aa7c",
+          "anchor_sha256": "1c9e230e0683ccb5f46afb45491e4b82aebdac9897bbd46b5377cc2557aa4839",
+          "shared_card_reference_sha256": null,
+          "source_prompt_package_sha256": "deebc90c1ba6bad2bd009e50a8d080a91e975fc9ec7214689f6f93f971f83e55",
+          "source_prompt_package_version": 1,
+          "source_script_sha256": "e6688b0b5e64fb3392dd469bc31fe9c500e5f343ce8a91f2bdc6e89e2efdcb25",
+          "hook_selection_sha256": "455f6a259da3452ad01f3d735d13e41730423a332f1bcda5a7e2cbe915429f4e",
+          "parent_asset": null,
+          "parent_required_status": null,
+          "reference_roles": [
+            "avatar_anchor"
+          ],
+          "status": "queued",
+          "attempt_count": 0,
+          "current_error": null,
+          "result": null,
+          "local_file": null,
+          "review": {
+            "status": "pending",
+            "reviewed_at": null
+          },
+          "eligible_for_execution": true,
+          "canonical_asset_fingerprint": "474d1d41339af1d8a9a5df65d8fb82501c8b4368f3a4f8b1f0d559b54522b262",
+          "queue_job_id": "81fa390afd9746d0ba4aa3d40a5cbdbc",
+          "queue_status": "queued"
+        }
+      },
+      "assets_evidence": "prepared_from_current_prompt_package"
+    },
+    "robin_matthews": {
+      "name": "Robin Matthews",
+      "position": 3,
+      "stage": "queued",
+      "anchor_path": "C:\\Users\\luigi\\Desktop\\APPYON\\Robin Matthews .jpeg",
+      "anchor_sha256": "a6e8bbfad07833c18b59fdeb9c3c25b51fe00e2087f6dc5bc86aaafcaa607284",
+      "anchor_evidence": "user_supplied_and_locally_verified",
+      "assets": {}
+    },
+    "kelly_bennett": {
+      "name": "Kelly Bennett",
+      "position": 4,
+      "stage": "queued",
+      "anchor_path": "C:\\Users\\luigi\\Desktop\\APPYON\\Kelly Bennett.jpeg",
+      "anchor_sha256": "71d5aaa05f537c8f61fdab7f393ac3b6df1d1195d50a34ce8d9b39b160c96bb0",
+      "anchor_evidence": "user_supplied_and_locally_verified",
+      "assets": {}
+    },
+    "shelby_turner": {
+      "name": "Shelby Turner",
+      "position": 5,
+      "stage": "queued",
+      "anchor_path": "C:\\Users\\luigi\\Desktop\\APPYON\\ShelbyTurner.us .jpeg",
+      "anchor_sha256": "ca32ec695fa4f4212f44b5f302935060a63d137fdb241473409f9e35798d96d7",
+      "anchor_evidence": "user_supplied_and_locally_verified",
+      "assets": {}
+    }
+  },
+  "unknowns": [],
+  "inconsistencies": [],
+  "history": [
+    {
+      "at": "2026-09-08T00:00:00+00:00",
+      "type": "production_created",
+      "message": "New production created from user-supplied Phil Jones P92 video and three avatar anchors; no browser actions."
+    },
+    {
+      "at": "2026-09-08T00:00:00+00:00",
+      "type": "script_approved",
+      "message": "Script approved explicitly by user."
+    },
+    {
+      "at": "2026-09-08T00:00:00+00:00",
+      "type": "hooks_approved",
+      "message": "Five visual hooks selected explicitly by user."
+    },
+    {
+      "at": "2026-09-08T22:19:14.944529+00:00",
+      "type": "avatar_prepared",
+      "message": "kris_walker preparado com cinco assets do pacote atual; nenhuma mídia foi gerada."
+    },
+    {
+      "at": "2026-09-09T00:40:32.064131+00:00",
+      "type": "avatar_batch_closed",
+      "message": "kris_walker fechado: 7 imagens aprovadas em Downloads/kris_walker + PROMPTS_VIDEO_FLOW.md entregue (correcao da Falha #8)."
+    },
+    {
+      "at": "2026-09-09T00:40:32.064131+00:00",
+      "type": "avatars_added",
+      "message": "kelly_bennett e shelby_turner adicionados pelo usuario; roteiro e 5 hooks aprovados reaproveitados sem alteracao."
+    },
+    {
+      "at": "2026-09-09T00:41:39.281277+00:00",
+      "type": "avatar_prepared",
+      "message": "casey_harrisson preparado com cinco assets do pacote atual; nenhuma mídia foi gerada."
+    }
+  ]
+}

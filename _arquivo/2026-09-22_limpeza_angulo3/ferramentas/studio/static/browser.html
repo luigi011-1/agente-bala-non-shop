@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="studio-token" content="__TOKEN__"><title>Auraly Studio · Conectar o Chrome</title>
+<link rel="stylesheet" href="/static/style.css"><link rel="stylesheet" href="/static/console.css">
+<script defer src="/static/browser.js"></script></head>
+<body class="console-body"><header class="console-top"><a class="brand" href="/">✳ Auraly Studio</a><span>CONECTAR O CHROME</span></header>
+<section class="console-panel"><div class="eyebrow">EXTENSÃO</div><h2>Uma aba por avatar, no seu ChatGPT.</h2>
+<p class="muted">A extensão atua só na interface do ChatGPT — sem endpoints privados, sem chave de API, sem cookies. As imagens são salvas em Downloads / Auraly Studio, numa pasta por produção com uma subpasta por avatar (imagens + prompts de vídeo Veo 3.1). A fila em si você prepara e acompanha dentro de cada produção.</p>
+<p id="connection-status" role="status">Verificando extensão…</p>
+<ol class="small">
+<li>Em <b>chrome://extensions</b>, ative o modo do desenvolvedor.</li>
+<li>Clique em <b>Carregar sem compactação</b> e escolha a pasta mostrada abaixo.</li>
+<li>Abra a extensão <b>Auraly Studio</b>, cole o código local e clique em Conectar.</li>
+</ol>
+<button id="show-connection">Mostrar pasta e código</button><pre id="connection"></pre>
+<div class="runner-actions"><button id="pause" class="secondary">Pausar novos envios</button><button id="resume" class="primary">Retomar envios</button></div>
+<p id="notice" role="status"></p>
+<p class="small muted">Pausar preserva as gerações já enviadas e permite receber seus resultados. A revisão imagem por imagem e o pacote por avatar ficam na tela da produção.</p></section>
+<section class="console-panel"><h2>Fila global</h2><p class="muted">Todas as imagens em andamento entre as produções. Abra a produção para revisar e exportar.</p><div id="jobs"></div></section></body></html>

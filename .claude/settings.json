@@ -1,0 +1,36 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "H=\"$CLAUDE_PROJECT_DIR/.claude/hooks/gabarito_hook.py\"; python3 \"$H\" 2>/dev/null || python \"$H\" 2>/dev/null || true",
+            "timeout": 10,
+            "statusMessage": "Carregando gabarito de entrega..."
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Grep",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "G=$(command -v graphify 2>/dev/null || echo \"C:/Users/luigi/.local/bin/graphify.EXE\"); if [ -e \"$G\" ]; then \"$G\" hook-guard search; fi"
+          }
+        ]
+      },
+      {
+        "matcher": "Read|Glob",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "G=$(command -v graphify 2>/dev/null || echo \"C:/Users/luigi/.local/bin/graphify.EXE\"); if [ -e \"$G\" ]; then \"$G\" hook-guard read; fi"
+          }
+        ]
+      }
+    ]
+  }
+}

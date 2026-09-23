@@ -1,0 +1,8 @@
+# Studio engine + headless bridge dependencies
+# Install into the project venv: .venv/Scripts/pip install -r requirements.txt
+# Or system Python:             pip install -r requirements.txt
+
+fastapi>=0.100.0
+uvicorn>=0.23.0
+httpx>=0.24.0
+Pillow>=10.0.0

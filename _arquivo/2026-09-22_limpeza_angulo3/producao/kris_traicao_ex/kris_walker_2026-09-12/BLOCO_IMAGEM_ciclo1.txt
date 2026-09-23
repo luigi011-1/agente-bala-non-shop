@@ -1,0 +1,147 @@
+K01
+{
+  "shot_id": "K01_hook_shirt_thrown_initial",
+  "reference_use": "Use the attached image ONLY for Maya's exact face, identity, skin texture, hair and wardrobe. Do NOT copy pose, action, framing or background from the reference.",
+  "identity_main": "The EXACT woman from the attached reference image: a Black American woman of thirty one with deep brown skin, visible pores, a natural shine on the forehead, zero makeup, natural tightly coiled hair pulled into a low bun with loose coils at the hairline, full lips, natural eyebrows and short natural nails with no polish.",
+  "second_person": "A Black American man in his mid thirties with a short fade and a trimmed beard, in a black crewneck and dark jeans. He stands on the right, cut by the right edge of the frame, only his chest and arm inside the frame.",
+  "prop": "A crumpled white cotton men's dress shirt with a smear of dark red lipstick on the inside of the collar. The shirt is bunched in flight, the lipstick mark turned toward the lens and clearly readable.",
+  "wardrobe": "The same heather grey ribbed tank top and dark straight jeans from the reference image, thin gold stud earrings and no other jewelry.",
+  "scene": "A small real American apartment living room during the day. Only three visual anchors: a beige couch with a woven throw on the left, a white plastic laundry basket on the floor, and a small framed United States flag print on the wall, discreet but clearly visible and in sharp focus.",
+  "posture": "Maya stands facing him, weight on the front foot, right arm fully extended forward having just released the shirt, jaw tight and eyes locked on him. Both hands anatomically clear.",
+  "composition": "EXTREME CLOSE foreground emphasis. The thrown shirt fills the lower foreground and is much closer to the lens than Maya's face. Maya is chest-up in the upper portion of the frame. Nothing competes with the shirt.",
+  "camera": "chest height, straight-on, pushed in very close",
+  "state": "Start frame: the shirt has just left her hand and is in the air between them, not yet touching him.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day coming from a window outside the frame, no warm cast and no practical lamp lighting the room.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}
+
+K03
+{
+  "shot_id": "K03_rock_bottom_couch_initial",
+  "reference_use": "Use the attached image ONLY for Maya's exact face, identity, skin texture, hair and wardrobe. Do NOT copy pose, action, framing or background from the reference.",
+  "identity_main": "The EXACT woman from the attached reference image: a Black American woman of thirty one with deep brown skin, visible pores, a natural shine on the forehead, zero makeup, natural tightly coiled hair pulled into a low bun with loose coils at the hairline, full lips, natural eyebrows and short natural nails with no polish. Her eyes are glassy and her face is exhausted, with no tears running.",
+  "prop": "Two zipped and overfilled soft dark duffel bags standing on the floor in the lower foreground, the worn handles and a loose strap clearly visible, much closer to the lens than her face.",
+  "wardrobe": "The same heather grey ribbed tank top and dark straight jeans from the reference image, thin gold stud earrings and no other jewelry.",
+  "scene": "The same real apartment living room during the day, seen from in front of the couch. Only three visual anchors: the beige couch with the woven throw, two zipped duffel bags on the floor by the front door behind her, and the small framed United States flag print on the wall behind her, clearly visible and in sharp focus.",
+  "posture": "Maya sits sunk back into the couch behind the bags, arms slack at her sides, head tipped back, looking off lens and then down at the bags.",
+  "composition": "The two duffel bags fill the lower foreground and are much closer to the lens than her face. Maya is chest-up behind them, alone. Nothing competes with the bags.",
+  "camera": "floor height, slightly low toward the bags, pushed in close",
+  "state": "Start frame: Maya is already sunk into the couch and still, before she speaks.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day coming from a window outside the frame, no warm cast and no practical lamp lighting the room.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}
+
+K04
+{
+  "shot_id": "K04_skeptic_reads_aloud_initial",
+  "reference_use": "Use the attached image ONLY for Maya's exact face, identity, skin texture, hair and wardrobe. Do NOT copy pose, action, framing or background from the reference.",
+  "identity_main": "The EXACT woman from the attached reference image: a Black American woman of thirty one with deep brown skin, visible pores, a natural shine on the forehead, zero makeup, natural tightly coiled hair pulled into a low bun with loose coils at the hairline, full lips, natural eyebrows and short natural nails with no polish. One eyebrow is raised and the corner of her mouth is pulled into a tired sarcastic smile.",
+  "prop": "Her own plain dark phone held upright in both hands, its back turned fully to the lens so the camera never sees what she is looking at. The display faces only her. The phone body itself is what hides it.",
+  "wardrobe": "The same heather grey ribbed tank top and dark straight jeans from the reference image, thin gold stud earrings and no other jewelry.",
+  "scene": "The same real apartment living room during the day, seen from in front of the couch. Only three visual anchors: the beige couch with the woven throw, two zipped duffel bags on the floor by the front door behind her, and the small framed United States flag print on the wall behind her, clearly visible and in sharp focus.",
+  "posture": "Maya sits forward on the couch with her elbows on her knees, both hands holding the phone low in front of her, reading off it with a scornful half smile. Both hands anatomically clear.",
+  "composition": "EXTREME CLOSE foreground emphasis. The back of the phone fills the lower foreground and is much closer to the lens than her face. Maya's face fills the upper third. Nothing competes with the phone.",
+  "camera": "chest height, straight-on, pushed in very close",
+  "state": "Start frame: she is already holding the phone low and reading, before she speaks or taps.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day coming from a window outside the frame, no warm cast and no practical lamp lighting the room.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}
+
+K05
+{
+  "shot_id": "K05_reveal_recognition_initial",
+  "reference_use": "Use the attached image ONLY for Maya's exact face, identity, skin texture, hair and wardrobe. Do NOT copy pose, action, framing or background from the reference.",
+  "identity_main": "The EXACT woman from the attached reference image: a Black American woman of thirty one with deep brown skin, visible pores, a natural shine on the forehead, zero makeup, natural tightly coiled hair pulled into a low bun with loose coils at the hairline, full lips, natural eyebrows and short natural nails with no polish. Her eyes are wide and fixed, her eyebrows high, her mouth beginning to open.",
+  "prop": "Her own plain dark phone held upright in her right hand, its back turned fully to the lens so the camera never sees what she is looking at, the display facing only her. Her free left hand rises open into the lower foreground toward her mouth, palm and every finger anatomically clear and much closer to the lens than her face.",
+  "wardrobe": "The same heather grey ribbed tank top and dark straight jeans from the reference image, thin gold stud earrings and no other jewelry.",
+  "scene": "The same real apartment living room during the day, seen from in front of the couch. Only three visual anchors: the beige couch with the woven throw, two zipped duffel bags on the floor by the front door behind her, and the small framed United States flag print on the wall behind her, clearly visible and in sharp focus.",
+  "posture": "Maya has just snapped upright on the couch, spine straight, right hand holding the phone, left hand rising toward her open mouth, shoulders locked.",
+  "composition": "EXTREME CLOSE foreground emphasis. Her rising open left hand fills the lower foreground and is much closer to the lens than her face. Maya's face fills the upper third. Nothing competes with the hand.",
+  "camera": "chest height, straight-on, pushed in very close",
+  "state": "Start frame: she has just seen it and her hand has only begun to rise.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day coming from a window outside the frame, no warm cast and no practical lamp lighting the room.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}
+
+K06
+{
+  "shot_id": "K06_realisation_initial",
+  "reference_use": "Use the attached image ONLY for Maya's exact face, identity, skin texture, hair and wardrobe. Do NOT copy pose, action, framing or background from the reference.",
+  "identity_main": "The EXACT woman from the attached reference image: a Black American woman of thirty one with deep brown skin, visible pores, a natural shine on the forehead, zero makeup, natural tightly coiled hair pulled into a low bun with loose coils at the hairline, full lips, natural eyebrows and short natural nails with no polish. Her face is slack and thoughtful, eyes unfocused, lips slightly parted.",
+  "prop": "Her plain dark phone lying abandoned face down on her lap in the lower foreground, the blank back of it turned to the lens, closer to the lens than her face.",
+  "wardrobe": "The same heather grey ribbed tank top and dark straight jeans from the reference image, thin gold stud earrings and no other jewelry.",
+  "scene": "The same real apartment living room during the day, seen from in front of the couch. Only three visual anchors: the beige couch with the woven throw, two zipped duffel bags on the floor by the front door behind her, and the small framed United States flag print on the wall behind her, clearly visible and in sharp focus.",
+  "posture": "Maya sits back on the couch with both hands loose on either side of the phone in her lap, head turned slowly toward the wall on her right, then back toward the lens.",
+  "composition": "The phone lying on her lap occupies the lower foreground, closer to the lens than her face. Maya is chest-up and her face fills the upper third. The room stays recognizable without competing.",
+  "camera": "chest height, straight-on, close phone-camera distance",
+  "state": "Start frame: the phone is already face down on her lap and she is already still, before she speaks.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day coming from a window outside the frame, no warm cast and no practical lamp lighting the room.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}
+
+K07
+{
+  "shot_id": "K07_cafe_table_initial",
+  "reference_use": "Use the attached image ONLY for Maya's exact face, identity, skin texture, hair and wardrobe. Do NOT copy pose, action, framing or background from the reference. The man's arm is NOT from the attached reference.",
+  "identity_main": "The EXACT woman from the attached reference image: a Black American woman of thirty one with deep brown skin, visible pores, a natural shine on the forehead, zero makeup, natural tightly coiled hair pulled into a low bun with loose coils at the hairline, full lips, natural eyebrows and short natural nails with no polish. Her face is relaxed and lit up, a real unforced smile with the eyes involved.",
+  "second_person": "Only a man's right forearm and hand enter from the right edge of the frame, medium brown skin, a plain steel watch on the wrist. No face, no head and no shoulders of this man are in frame.",
+  "prop": "Two white ceramic coffee cups on the round metal table in the lower foreground, one close to the man's hand, steam visible from the nearer cup.",
+  "wardrobe": "The same heather grey ribbed tank top and dark straight jeans from the reference image, thin gold stud earrings and no other jewelry.",
+  "scene": "The sidewalk terrace of a small American coffee shop on an overcast day. Only three visual anchors: a round metal table with two white ceramic cups, a green awning post with a small United States flag clipped to it, clearly visible and in sharp focus, and the quiet street kept small in frame by real distance. Everything in frame stays in sharp focus.",
+  "posture": "Maya sits at the table leaning slightly forward toward the man, both hands around her cup, talking and smiling.",
+  "composition": "The two cups and the man's forearm fill the lower foreground and are closer to the lens than Maya's face. Maya is chest-up in the upper portion of the frame. The man stays cut by the right edge.",
+  "camera": "table height, straight-on toward Maya, close",
+  "state": "Start frame: both are already seated and still, cups on the table, before she speaks.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day, flat and even, no warm cast and no direct sun.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}
+
+K08
+{
+  "shot_id": "K08_proof_hand_initial",
+  "reference_use": "Use the attached image ONLY for Maya's exact face, identity, skin texture, hair and wardrobe. Do NOT copy pose, action, framing or background from the reference. The man's hand is NOT from the attached reference.",
+  "identity_main": "The EXACT woman from the attached reference image: a Black American woman of thirty one with deep brown skin, visible pores, a natural shine on the forehead, zero makeup, natural tightly coiled hair pulled into a low bun with loose coils at the hairline, full lips, natural eyebrows and short natural nails with no polish. Her expression is warm and steady, a small closed smile.",
+  "second_person": "Only a man's right forearm and hand enter from the right edge of the frame, medium brown skin, a plain steel watch on the wrist. No face, no head and no shoulders of this man are in frame.",
+  "prop": "Maya's right hand closed gently over the man's hand on the metal table in the lower foreground, both hands anatomically clear and much closer to the lens than her face.",
+  "wardrobe": "The same heather grey ribbed tank top and dark straight jeans from the reference image, thin gold stud earrings and no other jewelry.",
+  "scene": "The sidewalk terrace of a small American coffee shop on an overcast day. Only three visual anchors: a round metal table with two white ceramic cups, a green awning post with a small United States flag clipped to it, clearly visible and in sharp focus, and the quiet street kept small in frame by real distance. Everything in frame stays in sharp focus.",
+  "posture": "Maya leans in over the table, her right hand on his, looking at him and then toward the lens as she speaks.",
+  "composition": "The two joined hands fill the lower foreground and are much closer to the lens than her face. Maya is chest-up. Nothing competes with the hands.",
+  "camera": "table height, straight-on toward Maya, pushed in close",
+  "state": "Start frame: her hand is already resting on his and both are still, before she speaks.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day, flat and even, no warm cast and no direct sun.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}
+
+K09
+{
+  "shot_id": "K09_handover_initial",
+  "reference_use": "Use the attached image ONLY for Maya's exact face, identity, skin texture, hair and wardrobe. Do NOT copy pose, action, framing or background from the reference. The man in the far background is NOT from the attached reference.",
+  "identity_main": "The EXACT woman from the attached reference image: a Black American woman of thirty one with deep brown skin, visible pores, a natural shine on the forehead, zero makeup, natural tightly coiled hair pulled into a low bun with loose coils at the hairline, full lips, natural eyebrows and short natural nails with no polish. Her expression is calm and certain, no longer smiling wide.",
+  "second_person": "Far behind her on the sidewalk, small in frame because of real distance and still in sharp focus, a Black American man in his mid thirties in a black crewneck walks past and turns his head to look toward the table. He is small, clearly identifiable and does not speak.",
+  "prop": "A single white ceramic coffee cup on the metal table in the lower foreground with her own hand resting flat beside it, the hand and the cup closer to the lens than her face.",
+  "wardrobe": "The same heather grey ribbed tank top and dark straight jeans from the reference image, thin gold stud earrings and no other jewelry.",
+  "scene": "The sidewalk terrace of a small American coffee shop on an overcast day. Only three visual anchors: a round metal table with two white ceramic cups, a green awning post with a small United States flag clipped to it, clearly visible and in sharp focus, and the quiet street kept small in frame by real distance. Everything in frame stays in sharp focus.",
+  "posture": "Maya sits upright at the table, one hand resting flat beside the cup, looking just off lens and then into the lens as she speaks.",
+  "composition": "The cup and her resting hand fill the lower foreground and are closer to the lens than her face. Maya is chest-up. The passing man is small in the far background and never competes.",
+  "camera": "table height, straight-on toward Maya, close",
+  "state": "Start frame: Maya is already seated and still, the man already mid stride behind her.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day, flat and even, no warm cast and no direct sun.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}

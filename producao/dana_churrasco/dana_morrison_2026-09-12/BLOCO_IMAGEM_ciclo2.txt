@@ -1,0 +1,18 @@
+K02
+{
+  "shot_id": "K02_jab_initial",
+  "reference_use": "Use the attached image ONLY for this man's exact face, identity, skin texture, hair, beard and wardrobe. Do NOT copy pose, action, framing or background from the reference.",
+  "identity_main": "The EXACT man from the attached reference image: a fit Black American man of about forty seven with medium brown skin, visible pores, a clean shaved head, a neat short beard and an easy confident face. He is the main subject, chest-up, half turned toward the lens.",
+  "second_person": "On the right edge, cut by the frame, only the shoulder and upper arm of another man in a charcoal polo shirt. His face is not in frame.",
+  "prop": "Keith's open right hand resting on the cut man's shoulder in the lower foreground, the hand anatomically clear and closer to the lens than Keith's face.",
+  "wardrobe": "The same fitted grey athletic t-shirt and dark shorts from the reference image, no jewelry.",
+  "scene": "A real American backyard on an overcast afternoon, the concrete driveway visible behind him with an older dark pickup truck parked on it. Only three visual anchors: the parked pickup truck, the wooden picnic table with red plastic cups, and a small United States flag on the porch post, discreet but clearly visible and in sharp focus.",
+  "posture": "Keith stands relaxed with his weight on one hip, right hand on the other man's shoulder, head turned to glance toward the parked truck and then back toward the lens.",
+  "composition": "Keith's hand on the shoulder fills the lower foreground and is closer to the lens than his face. Keith is chest-up in the upper portion of the frame. The parked truck stays small in the background.",
+  "camera": "chest height, straight-on, close phone-camera distance",
+  "state": "Start frame: his hand has just landed on the other man's shoulder, before he speaks.",
+  "lighting": "Soft neutral diffuse daylight of an overcast day, flat and even, no warm cast and no direct sun.",
+  "realism": "UGC realism, real skin texture with visible pores, individual hair strands, subtle wrinkles, realistic shadows and reflections, iPhone-footage look, phone camera look not professional photography, no AI polish, no beauty smoothing, no blur anywhere, everything in sharp focus including background walls furniture and details.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no studio, no plastic skin, no extra fingers, no supernatural lighting, no blur, no artificial lighting, no warm orange color cast, no yellow tint, no golden glow, no change of identity, no change of wardrobe"
+}
