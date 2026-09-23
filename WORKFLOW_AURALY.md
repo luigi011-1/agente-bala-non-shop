@@ -24,10 +24,10 @@ INPUT
 -> confirmar Angle 3 / Auraly
 -> ANALYSIS
 -> METHOD_PUZZLE
--> SCRIPT_MODELLING
--> WAITING_SCRIPT_APPROVAL
--> HOOK_IDEATION, exatamente 10 hooks
--> WAITING_HOOK_SELECTION
+-> SCRIPT_MODELLING, com o HOOK FIEL do modelo descrito junto
+-> WAITING_SCRIPT_APPROVAL (aprova roteiro + hook fiel de uma vez)
+-> [so na RODADA DE VARIACAO] HOOK_IDEATION, exatamente 10 hooks
+-> [so na RODADA DE VARIACAO] WAITING_HOOK_SELECTION
 -> bloquear hooks para toda a fila
 -> IMAGE_PROMPTS + VIDEO_PROMPTS do avatar ativo, na mesma resposta em blocos separados
 -> avatar DONE
@@ -37,6 +37,23 @@ INPUT
 -> PRODUCTION_COMPLETE
 -> quando o Luigi confirmar a postagem: `python3 gerenciar_operacao.py registrar` (controle/README.md)
 ```
+
+### Validar antes de variar (Luigi, 2026-09-23)
+
+Toda producao nova a partir de video modelo e `Round: VALIDATION`: **um gancho so, o do video
+modelo, clonado com o maximo de fidelidade**, igual para toda a fila. Sem 10 hooks, sem degrau, sem
+`HOOK_IDEATION` e sem `WAITING_HOOK_SELECTION`: depois de `WAITING_SCRIPT_APPROVAL` o proximo estado
+e `IMAGE_PROMPTS`. So muda o obrigatorio (identidade, travas do angulo, moderacao, realismo), e cada
+desvio forcado vai declarado no hook fiel.
+
+`Round: VARIATION` so existe quando o Luigi disser que um video postado performou. E uma producao
+nova, com `Validated from:` apontando producao, avatar e resultado informado; a base e o video
+validado como foi postado, o roteiro nao se reescreve, e ai roda `HOOK_IDEATION` com as 10 do Puzzle
+com degrau. Metodo completo em `GATE_VISUAL.md` Parte 4, Passo 0. Nunca abrir rodada de variacao
+por iniciativa propria.
+
+Nesta rodada o T1 segue a gramatica do **modelo**: se o modelo abre mudo com cortes, clonar mudo com
+os cortes dentro do `V__` (secao abaixo, item 7); se o modelo abre falando, o T1 fala.
 
 ## Regra de estado
 
@@ -116,9 +133,17 @@ Abrir a analise/transcricao e somente `PLAYBOOK_MESTRE_AURALY.md` nas secoes cri
 `memoria/angulo3_copy_auraly.md`, `memoria/angulo3_swipe_padroes.md` e
 `memoria/feedback_copy_lapida_estrutura.md`. Regra: `COPY THE ENGINEERING, NOT THE WORDS`.
 
-### HOOK_IDEATION
+### HOOK FIEL (rodada de validacao, dentro de SCRIPT_MODELLING)
 
-Abrir o **hook do VIDEO MODELO**, o roteiro aprovado, `producao/_swipe_auraly/BANCO_GANCHOS_VISUAIS.md`,
+Abrir o hook do video modelo, `GATE_VISUAL.md` Parte 4 Passo 0, a skill **`gancho-verbal`** (so o
+topo e os testes, sobre o unico hook) e o banco `producao/_swipe_auraly/BANCO_GANCHOS_VISUAIS.md`
+apenas para saber se aquele hook ja foi publicado por nos. Escrever `GANCHOS_VISUAIS.md` no formato
+`HOOK FIEL` do OUTPUT CONTRACT e entregar junto com o roteiro.
+
+### HOOK_IDEATION (so na rodada de variacao)
+
+Abrir o **hook do VIDEO VALIDADO** (na rodada de variacao ele ocupa o lugar do hook do video
+modelo em tudo o que segue), o roteiro aprovado, `producao/_swipe_auraly/BANCO_GANCHOS_VISUAIS.md`,
 as secoes de hook de `memoria/angulo3_swipe_padroes.md` e a **Parte 4 de `GATE_VISUAL.md`**
 (**Puzzle com degrau**, o metodo de variacao desde 2026-09-22, com o checklist de gancho visual)
 e a skill **`gancho-verbal`** no modo PRODUCAO (2026-09-22), que cuida do texto de tela: aqui o T1
@@ -205,15 +230,66 @@ roupa, ambiente e caracteristicas visuais. Manter copy, hooks, falas, ordem, tak
 03 - PORTUGUES
 [traducao integral]
 
-04 - WAITING FOR APPROVAL
+04 - HOOK FIEL DO MODELO
+[o bloco HOOK FIEL abaixo; so na rodada de validacao]
+
+05 - WAITING FOR APPROVAL
 ```
 
-Definir `Current stage: WAITING_SCRIPT_APPROVAL` e parar.
+Definir `Current stage: WAITING_SCRIPT_APPROVAL` e parar. Aprovado o roteiro na rodada de
+validacao, o hook fiel esta aprovado junto e o proximo estado e `IMAGE_PROMPTS`.
 
-### Hooks
+### Hook fiel (rodada de validacao)
 
 ```text
-PUZZLE AURALY - 10 VARIACOES DO HOOK DO MODELO
+HOOK FIEL - RODADA DE VALIDACAO
+
+Rodada: VALIDACAO
+
+Tese:
+[primeira frase do roteiro aprovado lida como tese]
+
+Sintoma-alvo:
+[a situacao concreta que o roteiro resolve]
+
+Direcao:
+[quem vence / quem fica para tras]
+
+Padrao do modelo:
+[A · PROVA | B · DOR DIRETA]
+
+Banco verbal:
+- "[frase literal do roteiro 1]"
+- "[... ate no minimo 5]"
+
+Acao estrutural:
+[a acao do hook do video modelo, como ele e]
+
+Peca viral:
+[o que fez o modelo viralizar]
+
+HOOK 1 - FIEL - nome
+Cena:
+[o hook do modelo, plano a plano: acao, heroi, objeto, local, enquadramento, cortes, timing,
+ abertura muda ou falada]
+Screen text:
+[o texto de tela do modelo, traduzido e adaptado]
+Desvios obrigatorios:
+[cada mudanca em relacao ao modelo + o motivo (identidade, trava do angulo, moderacao,
+ realismo). "nenhum" quando nao houver]
+Delayed meaning:
+[o que fica em aberto, como no modelo]
+```
+
+### Hooks (rodada de variacao)
+
+```text
+PUZZLE AURALY - 10 VARIACOES DO HOOK VALIDADO
+
+Rodada: VARIACAO
+
+Base validada:
+[producao, avatar e resultado informado pelo Luigi]
 
 Tese:
 [a primeira frase do roteiro aprovado lida como tese, em uma linha]
@@ -363,6 +439,8 @@ executar exatamente `Next action`. Nao refazer decisoes.
 Production:
 Angle:
 Objective: SALE ou GROWTH
+Round: VALIDATION ou VARIATION
+Validated from: (so em VARIATION: producao, avatar, resultado)
 Reference video:
 
 Current stage:
@@ -381,7 +459,7 @@ file:
 ## Selected hooks
 status:
 hooks:
-formato: puzzle-10
+formato: fiel-validacao | puzzle-10
 acao estrutural:
 eixos de troca:
 
@@ -484,8 +562,11 @@ identidade/corpo/pele, roupa e cenário vêm do texto de cada `K`".
 
 - Roteiro aprovado uma vez para toda a fila.
 - Hooks selecionados uma vez para toda a fila.
-- Gerar exatamente 10 hooks antes da selecao, **todos do mesmo esqueleto**, que e o hook do video
-  modelo. ♻️ Revoga o portfolio `4 + 3 + 3` em tres familias, de 2026-09-20.
+- **Validar antes de variar (2026-09-23):** producao nova e `Round: VALIDATION`, com UM hook fiel ao
+  modelo e sem selecao de hook. As 10 so existem em `Round: VARIATION`, aberta pelo Luigi depois de
+  um video postado performar.
+- Na rodada de variacao, gerar exatamente 10 hooks antes da selecao, **todos do mesmo esqueleto**,
+  que e o hook do video validado. ♻️ Revoga o portfolio `4 + 3 + 3` em tres familias, de 2026-09-20.
 - **Nenhum hook, K ou V e enviado sem o checklist de envio 100% aprovado** (`GATE_VISUAL.md` Parte 5).
 - Preservar a acao estrutural do modelo e mudar **uma unica variavel central** por hook.
 - **Puzzle com degrau (2026-09-22):** peca viral intocavel, UM degrau no esqueleto, HOOK 1 como

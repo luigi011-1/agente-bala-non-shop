@@ -12,7 +12,8 @@ pacote Auraly sem o negative de tom quente, 5 K de outro sem luz definida; ambos
 Regra que depende de lembrança se perde. Por isso ela agora é etapa do workflow e aviso do linter.
 
 **Quando rodar:** as Partes 1 a 3, antes do primeiro `K__` de qualquer pacote. A Parte 4 é o método
-de variação de gancho dos três ângulos, antes de entregar as 10. O gate não muda o formato do Flow:
+de variação de gancho dos três ângulos, e **desde 2026-09-23 só roda na RODADA DE VARIAÇÃO**, depois
+que o Luigi validar o vídeo no perfil dele (Parte 4, Passo 0). O gate não muda o formato do Flow:
 ele define **o que vai dentro** de cada prompt.
 
 Cada regra nova que mudar algo aqui se escreve **aqui**, e as memórias apontam para cá.
@@ -126,6 +127,46 @@ Funde os dois métodos e fica com o mais forte de cada um:
 **Por que os dois não brigam:** o degrau entra **uma vez, no esqueleto, antes das variações**. Ele
 muda a base, não a variação. Cada uma das 10 continua trocando uma única variável, então a leitura
 de qual gancho venceu continua limpa. Trocar duas variáveis numa mesma variação segue reprovado.
+
+### Passo 0 · VALIDAR ANTES DE VARIAR (Luigi, 2026-09-23, vale nos três ângulos)
+
+**Toda produção nova a partir de um vídeo modelo começa na RODADA DE VALIDAÇÃO.** As 10 variações
+(Passos 1 a 5) só existem na **RODADA DE VARIAÇÃO**, que só abre quando o Luigi disser que um vídeo
+já postado performou no perfil dele.
+
+**Why:** o vídeo modelo provou que funciona no perfil de outra pessoa, não no nosso. Variar o gancho
+de um vídeo que ainda não foi validado multiplica o custo e mata o teste: se a base não pega com o
+nosso público, as cinco versões flopam juntas e não se sabe se o problema foi gancho, roteiro, avatar
+ou assunto; se uma vai bem, não existe base validada para comparar. Otimização só faz sentido em cima
+de algo que já funcionou aqui.
+
+**Rodada de VALIDAÇÃO (o padrão):**
+- **UM gancho por avatar, o do vídeo modelo, com o máximo de fidelidade possível:** mesma ação, mesmo
+  herói, mesmo objeto e substância, mesmo tipo de local, mesmo enquadramento, mesmos cortes, mesmo
+  timing e mesma abertura (falada ou muda). O texto de tela é o do modelo, traduzido e adaptado.
+- **Só muda o obrigatório:** identidade do avatar, travas do ângulo (keyword, produto em quadro ou
+  não, registro divino e rosto nunca revelado no Auraly, congruência na Korella e FitWell), moderação
+  e compliance, e as Partes 1 a 3 deste gate (realismo e composição). **Cada desvio forçado é
+  declarado com o motivo**, nunca feito em silêncio.
+- **Sem 10 variações, sem degrau, sem controle e sem espera de seleção de gancho.** O gancho fiel vai
+  descrito no T1 do roteiro e é aprovado **junto com o roteiro**. Depois da aprovação, direto para os
+  prompts.
+- ♻️ **Revoga, só nesta rodada, o princípio do step up** *"nunca refazer o viral igual"*: aqui o que
+  se testa é se o conteúdo pega no nosso perfil, e para isso o clone tem que ser o mais fiel possível.
+- **O resto do workflow não muda:** fila de avatares, aprovação única do roteiro, pacote por avatar,
+  bloco do Flow, blocos K/V, transcrições, checklist de envio e linter.
+- Arquivo de gancho da rodada: `GANCHOS_VISUAIS.md` com `Rodada: VALIDACAO` no topo e um único
+  `HOOK 1 - FIEL` (formato no `OUTPUT CONTRACT` de `WORKFLOW_AURALY.md`, igual nos três ângulos).
+
+**Rodada de VARIAÇÃO (só por ordem do Luigi):**
+- Abre quando o Luigi disser que um vídeo postado performou. **Nunca por iniciativa minha**, nunca
+  por analogia com outra produção, e o critério de "performou" é dele.
+- **A base é o vídeo VALIDADO, como foi postado** (roteiro, gancho e corpo), não mais o vídeo modelo
+  de fora. Registrar de onde veio: produção, avatar e o resultado que ele informou
+  (`python3 gerenciar_operacao.py registrar`, PORTÃO P10).
+- Aí sim roda o Puzzle com degrau dos Passos 1 a 5, com o gancho validado no lugar do hook do modelo.
+  O roteiro já está aprovado e validado, então não se reescreve.
+- `GANCHOS_VISUAIS.md` com `Rodada: VARIACAO`, `Base validada:` e as 10 de sempre.
 
 ### Passo 1 · Ação estrutural e peça viral
 Escrever a **ação estrutural** do hook do modelo (Puzzle) e a **peça viral**: o que fez aquele vídeo

@@ -39,3 +39,9 @@ Aplicado em: `CLAUDE.md`, skill `/produzir`, `checar_entrega.py`, `.claude/hooks
 em `controle/linter_baseline.json` e aparecem como `[HIST]`, sem contar no `--todos`. Falha nova, até
 num pacote antigo, continua reprovando. Regenerar a baseline (`--todos --gerar-baseline`) é decisão do
 Luigi, nunca atalho para esconder falha nova.
+
+**2026-09-23, exceção do Luigi (primeira produção de short form, `sf_madrasta_frango`):** no
+`formato: short-form`, take de DIÁLOGO com ação **não tem piso**; o teto de 29 continua. Motivo: o
+modelo tem 54 palavras em 25s, o tempo é ação e reação, e completar o take obrigaria a inventar fala
+ou pôr três pessoas falando no mesmo clipe. O `checar_entrega.py` já aplica (`c_palavras_por_take`
+lê o marcador `formato: short-form` e o `DIÁLOGO` no título do take). Ver [[short-form-growth]].

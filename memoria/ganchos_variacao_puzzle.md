@@ -20,6 +20,13 @@ o Puzzle ao proprio hook. Boas ideias saem dai, e a etapa e barata porque a copy
 
 **How to apply:**
 
+## ♻️ 2026-09-23: tudo daqui SÓ na RODADA DE VARIAÇÃO
+
+Produção nova é rodada de validação: UM gancho, fiel ao modelo, sem as 10 ([[validar-antes-de-variar]]).
+Este método só roda quando o Luigi disser que um vídeo postado performou, e a base passa a ser o
+**vídeo validado**, não o vídeo modelo de fora. Onde abaixo estiver "hook do vídeo modelo", ler
+"hook do vídeo validado".
+
 ## 2026-09-22: a CAMADA VERBAL tem skill própria
 
 O Puzzle decide o que se VÊ. O que se LÊ e OUVE (fala do T1, texto de tela) segue a skill de projeto

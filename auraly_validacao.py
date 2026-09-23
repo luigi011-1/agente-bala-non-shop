@@ -62,6 +62,56 @@ def _valor_rotulo(bloco, nomes):
     return ''
 
 
+RE_RODADA = re.compile(
+    r'^\s*(?:[-*]\s*)?(?:\*\*)?(?:Rodada|Round)(?:\*\*)?\s*:\s*(?:\*\*)?\s*([A-Za-zÇçÃã]+)', re.M | re.I)
+
+
+def rodada_ganchos(texto):
+    """VALIDACAO ou VARIACAO pelo rotulo do topo; sem rotulo = contrato das 10 (historico)."""
+    m = RE_RODADA.search(texto or '')
+    if not m:
+        return ''
+    v = normalizar(m[1])
+    if v.startswith('valida'):
+        return 'VALIDACAO'
+    if v.startswith('varia'):
+        return 'VARIACAO'
+    return 'INVALIDA'
+
+
+def validar_hook_fiel(texto):
+    """Rodada de validacao (Luigi, 2026-09-23): UM hook, o do video modelo, clonado fiel.
+
+    Sem degrau, sem controle e sem as 10. Cada desvio do modelo vem declarado.
+    """
+    issues = []
+    add = lambda nivel, msg, loc='GANCHOS_VISUAIS.md': issues.append(
+        (nivel, 'hook-fiel', msg, loc))
+    hooks = list(RE_HOOK_PORTFOLIO.finditer(texto))
+    topo = texto[:hooks[0].start()] if hooks else texto
+    if not RE_ACAO_ESTRUTURAL.search(texto):
+        add('FALHA', 'Falta "Acao estrutural:" do hook do video modelo.')
+    if not _valor_rotulo(topo, [r'Pe[cç]a viral', r'Viral piece']):
+        add('FALHA', 'Falta "Peca viral:" no topo (o que fez o modelo viralizar).')
+    if _valor_rotulo(topo, [r'Degrau', r'Step up']):
+        add('FALHA', 'Rodada de validacao nao leva degrau: o hook e o do modelo, fiel.')
+    if len(hooks) != 1 or hooks[0][1] != '1':
+        add('FALHA', 'Rodada de validacao exige um unico HOOK 1 (o fiel); as 10 variacoes '
+                     'so existem na rodada de variacao.')
+        return issues
+    if not re.search(r'\bFIEL\b|\bFAITHFUL\b', hooks[0][0], re.I):
+        add('FALHA', 'O HOOK 1 da rodada de validacao deve vir marcado como FIEL.')
+    secao = texto[hooks[0].end():]
+    for nomes, nome in (([r'Cena', r'Scene'], 'Cena'),
+                        ([r'Screen text', r'Texto de tela'], 'Screen text'),
+                        ([r'Desvios obrigat[oó]rios', r'Forced deviations'], 'Desvios obrigatorios')):
+        if not _valor_rotulo(secao, nomes):
+            add('FALHA', 'HOOK 1 sem %s.' % nome)
+    if not any(i[0] == 'FALHA' for i in issues):
+        add('OK', 'Rodada de validacao: um hook fiel ao modelo, desvios declarados.')
+    return issues
+
+
 def validar_portfolio_ganchos(texto, estrito=False):
     """Valida o contrato Auraly de 10 variacoes por PUZZLE, sem tocar outros angulos.
 
@@ -74,8 +124,23 @@ def validar_portfolio_ganchos(texto, estrito=False):
         (nivel, 'portfolio-hooks', msg, loc))
     if not texto:
         add('FALHA' if estrito else 'AVISO',
-            'GANCHOS_VISUAIS.md ausente; as 10 variacoes por Puzzle nao foram verificadas.')
+            'GANCHOS_VISUAIS.md ausente; o gancho da producao nao foi verificado.')
         return issues
+
+    rodada = rodada_ganchos(texto)
+    if rodada == 'INVALIDA':
+        add('FALHA', 'Rodada deve ser VALIDACAO ou VARIACAO.')
+        return issues
+    if rodada == 'VALIDACAO':
+        return validar_hook_fiel(texto)
+    topo_rodada = texto[:RE_HOOK_PORTFOLIO.search(texto).start()] \
+        if RE_HOOK_PORTFOLIO.search(texto) else texto
+    if rodada == 'VARIACAO' and not _valor_rotulo(topo_rodada, [r'Base validada', r'Validated from']):
+        add('FALHA', 'Rodada de variacao sem "Base validada:" (so abre depois de um video '
+                     'postado performar, por ordem do Luigi).')
+    elif not rodada:
+        add('FALHA' if estrito else 'AVISO',
+            'Falta "Rodada:" no topo (VALIDACAO ou VARIACAO, GATE_VISUAL.md Parte 4 Passo 0).')
 
     acao = RE_ACAO_ESTRUTURAL.search(texto)
     hooks = list(RE_HOOK_PORTFOLIO.finditer(texto))
@@ -184,6 +249,18 @@ def verificar_estado(checkpoint, queue='', estrito=False):
         add('FALHA' if estrito else 'AVISO', 'Objective ausente: explicitar SALE ou GROWTH ao retomar.')
     elif objetivo('', checkpoint) == 'INVALID':
         add('FALHA', 'Objective deve ser SALE ou GROWTH.')
+    # 2026-09-23 (Luigi): validar antes de variar. VALIDATION nao passa por selecao de hook;
+    # VARIATION so existe apontando o video validado.
+    rodada = campo(checkpoint, 'Round').upper()
+    if not rodada:
+        add('FALHA' if estrito else 'AVISO',
+            'Round ausente: explicitar VALIDATION ou VARIATION (GATE_VISUAL.md Parte 4 Passo 0).')
+    elif rodada not in ('VALIDATION', 'VARIATION'):
+        add('FALHA', 'Round deve ser VALIDATION ou VARIATION.')
+    elif rodada == 'VALIDATION' and stage in ('HOOK_IDEATION', 'WAITING_HOOK_SELECTION'):
+        add('FALHA', 'Round VALIDATION nao tem etapa de hooks: aprovado o roteiro, vai para IMAGE_PROMPTS.')
+    elif rodada == 'VARIATION' and not campo(checkpoint, 'Validated from'):
+        add('FALHA', 'Round VARIATION sem "Validated from:" (producao, avatar e resultado do video validado).')
     actions = set(re.findall(r'^Next action:\s*(.+)$', checkpoint, re.M))
     if len(actions) > 1:
         add('FALHA', 'Next action divergente dentro do checkpoint.')

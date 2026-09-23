@@ -19,6 +19,14 @@ IA, composicao do heroi e checklist de gancho visual nos tres angulos. Os gates 
 composicao citados abaixo apontam para ele.
 O grafo e opcional: se `graphify-out/` nao existir, consultar as fontes locais diretamente.
 
+**🔴 VALIDAR ANTES DE VARIAR (Luigi, 2026-09-23), nos tres angulos:** toda producao nova a partir de
+video modelo e **RODADA DE VALIDACAO**: um gancho so, o do video modelo, clonado com o maximo de
+fidelidade, igual para toda a fila, aprovado junto com o roteiro. **Sem 10 ganchos, sem degrau e sem
+escolha de gancho.** As 10 variacoes (Puzzle com degrau) so existem na **RODADA DE VARIACAO**, que
+so abre quando o Luigi disser que um video postado performou, e partem do video validado. O resto
+do workflow (fila, pacote por avatar, Flow, K/V, transcricoes, checklist, linter) nao muda. Fonte:
+`GATE_VISUAL.md` Parte 4, Passo 0. Onde este arquivo fala em "10 ganchos", ler "so na rodada de variacao".
+
 ---
 
 # Operação Vídeos Avatares IA — regras de trabalho
@@ -88,8 +96,9 @@ linguagem, copy, avatares, regras visuais, estrutura de roteiro e aprendizados.
 
 **Workflow oficial, igual ao dos Ângulos 1 e 2:**
 `.mp4` + âncoras → análise do vídeo → transcrição → análise da estrutura da copy → roteiro
-modelado → **aprovação do Luigi** → **10 ganchos visuais** (dez, não cinco) → **escolha dele**
-(quantidade livre) → pacote final.
+modelado **com o gancho fiel do modelo** → **aprovação do Luigi** → pacote final.
+**Só na rodada de variação** (vídeo já validado no perfil, 2026-09-23): roteiro validado →
+**10 ganchos visuais** → **escolha dele** (quantidade livre) → pacote final.
 
 **O pacote final sai NESTA ordem, sem pular item:**
 
@@ -99,7 +108,8 @@ modelado → **aprovação do Luigi** → **10 ganchos visuais** (dez, não cinc
    (Ângulos 1 e 2): Nano Banana 2 em 9:16, uma imagem final por K__; Veo 3.1 Lite em Lower Priority,
    8 segundos, uma variação por V__. Auraly: 4 imagens por K__ com seleção manual e 3 variações por V__.
    ⚠️ **No Ângulo 3 (Auraly) vai TODA VEZ, sem exceção** (Luigi, 2026-09-08). O momento é fixo:
-   **logo depois de o Luigi escolher os ganchos visuais e ANTES do primeiro prompt de imagem.**
+   **logo depois de o Luigi aprovar o roteiro com o gancho fiel (rodada de validação) ou escolher
+   os ganchos (rodada de variação), e ANTES do primeiro prompt de imagem.**
    ♻️ Isto **revoga** a permissão de "se nada mudou, basta dizer que a memória do agente Flow
    permanece a mesma". Não existe atalho: o bloco é colado por inteiro em cada produção, porque
    ele é colado numa memória de agente nova a cada rodada. Se a configuração mudar, subir a versão
@@ -324,6 +334,11 @@ Só depois disso a copy pode ser modificada e mandada pro Luigi aprovar ou ajust
 - `compliance-riscos` → qual é o claim mais arriscado deste roteiro
 
 ### P3.5 · [TODOS OS ÂNGULOS] ANTES de sugerir os ganchos visuais
+- **Primeiro: qual é a rodada?** (`GATE_VISUAL.md` Parte 4, Passo 0, Luigi 2026-09-23). Produção
+  nova = **VALIDAÇÃO**: um gancho só, fiel ao modelo, com os desvios obrigatórios declarados, entregue
+  junto com o roteiro, e o resto deste portão e do P4 **não roda**. Só a **VARIAÇÃO**, aberta pelo
+  Luigi depois de um vídeo postado performar, segue para os itens abaixo, com o vídeo validado no
+  lugar do vídeo modelo.
 - **`GATE_VISUAL.md` Parte 4, PUZZLE COM DEGRAU**, em Korella, FitWell e Auraly (Luigi, 2026-09-22):
   ação estrutural + peça viral intocáveis, UM degrau no esqueleto, HOOK 1 controle, HOOK 2 a 10 com
   o degrau e uma variável cada, checklist de cada variação, vencedor vira a base da próxima rodada.
@@ -335,6 +350,10 @@ Só depois disso a copy pode ser modificada e mandada pro Luigi aprovar ou ajust
   troca, leitura errada, sincronia, print e direção; `Recomendacao: HOOK X` no fim.
 
 ### P4 · [ÂNGULO 3] ANTES de sugerir os ganchos visuais
+
+> **2026-09-23:** as 10 desta seção são só da **rodada de variação**. Na rodada de validação o
+> gancho é o do modelo, fiel, e o T1 segue a gramática do modelo (mudo com cortes internos ao `V__`
+> se o modelo abre assim; falado se o modelo abre falando). As travas do ângulo continuam valendo nas duas.
 
 ♻️ **REESCRITO EM 2026-09-20** depois da análise medida de 54 virais do nicho
 (`producao/analise_ganchos_maya_claude_2026_09_20/ANALISE_MEDIDA_GANCHOS.md`). Tudo nesta seção vale
@@ -434,7 +453,7 @@ pedido continua vindo na fala, na ordem do P7.
   trocada e o invariante da família. **Zero prompt aqui**
 - As três travas do ângulo: **rosto nunca revelado**, **carta na mão depois do gancho**, **registro divino**
 
-### P4.1 · [ÂNGULO 3] Assim que o Luigi ESCOLHER os ganchos, ANTES de qualquer prompt
+### P4.1 · [ÂNGULO 3] Assim que o Luigi APROVAR o roteiro com o gancho fiel (validação) ou ESCOLHER os ganchos (variação), ANTES de qualquer prompt
 - `producao/_flow/INSTRUCOES_AGENTE_FLOW.md` → **colar o bloco INTEIRO no chat, toda vez.**
   É o item 1 do pacote e vem antes do primeiro prompt de imagem. Sem atalho, sem "permanece a mesma"
 
@@ -616,6 +635,11 @@ produzir para ela. O ciclo completo (roteiro, ganchos, prompts) sai para esse av
 - **Ajustes nos prompts de imagem e de vídeo** (identidade, cenário, registro de voz, rastreio).
 
 **PASSO EXTRA (TODOS OS ÂNGULOS desde 2026-09-22: Korella, FityWell e Auraly): sugestões de GANCHO VISUAL antes dos prompts.**
+
+> ♻️ **2026-09-23 (Luigi): este passo só roda na RODADA DE VARIAÇÃO**, sobre um vídeo que já
+> performou no perfil dele. Produção nova é rodada de validação: gancho fiel ao modelo, sem as 10.
+> O "por que" abaixo continua certo, mas o "roteiro validado" dele é validado **no nosso perfil**,
+> não no perfil de quem viralizou. `GATE_VISUAL.md` Parte 4, Passo 0.
 
 ♻️ **2026-09-22 (Luigi): a etapa vale também no Ângulo 1 (Korella)**, pelo mesmo `GATE_VISUAL.md` Parte 4.
 Travas iguais às da FityWell, porque o herói do hook também carrega argumento: congruência com a fala

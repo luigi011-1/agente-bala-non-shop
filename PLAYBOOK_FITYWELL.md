@@ -31,13 +31,19 @@ adicionados em 2026-09-19 pertencem ao Ângulo 2; não estender ao Ângulo 4 sem
 
 ## 2. Ordem do workflow
 
-`.mp4` + âncoras → P1 → análise → transcrição → método Puzzle → P2 → roteiro → **aprovação do
-Luigi** → **10 variações de gancho** → **escolha dele** → pacote por avatar → P9 → P10.
+`.mp4` + âncoras → P1 → análise → transcrição → método Puzzle → P2 → roteiro **com o gancho fiel
+do modelo** → **aprovação do Luigi** → pacote por avatar → P9 → P10.
+
+**Validar antes de variar (Luigi, 2026-09-23):** produção nova é **rodada de validação**, com um
+gancho só, clonado do vídeo modelo com o máximo de fidelidade e os desvios obrigatórios declarados.
+As **10 variações de gancho** e a **escolha dele** só entram na **rodada de variação**, que o Luigi
+abre quando um vídeo postado performa, e partem do vídeo validado. Método em `GATE_VISUAL.md`
+Parte 4, Passo 0.
 
 Nenhuma etapa pula. O roteiro não vira prompt sem aprovação explícita.
 
 **`GATE_VISUAL.md` roda em dois momentos** (desde 2026-09-22, vale para todos os ângulos): a Parte 4
-antes de entregar as 10 variações de gancho, e as Partes 1 a 3 antes do primeiro `K__`. Todo prompt
+antes do gancho (Passo 0 na validação, as 10 variações só na rodada de variação), e as Partes 1 a 3 antes do primeiro `K__`. Todo prompt
 de imagem carrega luz neutra ou céu com cor, herói colado na lente e o trecho de realismo.
 
 **Bloqueante (2026-09-22):** nenhum gancho, `K__`, `V__` ou pacote é enviado sem o **checklist de
@@ -48,6 +54,9 @@ envio** 100% aprovado (`GATE_VISUAL.md` Parte 5, memória `checklist-envio-promp
 ## 3. Variação de gancho: aqui é Puzzle, não invenção
 
 Regra fixada em 2026-09-10, detalhe em `ganchos-variacao-puzzle`.
+
+> **2026-09-23:** tudo desta seção vale só na **rodada de variação**, sobre um vídeo já validado no
+> perfil. Na rodada de validação o gancho é o do modelo, fiel (`GATE_VISUAL.md` Parte 4, Passo 0).
 
 ♻️ **2026-09-22: PUZZLE COM DEGRAU** (método completo em `GATE_VISUAL.md` Parte 4). Antes das 10,
 declarar a **peça viral** e subir **UM degrau** no esqueleto (`DIFICULDADE`, `CONTRADICAO`, `REACAO`,

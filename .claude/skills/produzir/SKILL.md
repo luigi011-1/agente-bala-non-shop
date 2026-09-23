@@ -148,13 +148,26 @@ Antes de escrever o bloco de venda, abrir:
 > skill `gancho-verbal`, modo PRODUCAO. Este passo so espelha as regras; em conflito, `CLAUDE.md`
 > P3.5 e P4 e a secao "PASSO EXTRA (TODOS OS ANGULOS desde 2026-09-22)" vencem.
 
-**Ordem travada: roteiro aprovado -> sugestoes de gancho visual -> escolha do Luigi -> so entao prompts.**
+### Primeiro: qual e a rodada? (Luigi, 2026-09-23, `GATE_VISUAL.md` Parte 4 Passo 0)
+
+- **RODADA DE VALIDACAO (padrao de toda producao nova):** UM gancho so, o do video modelo, clonado
+  com o maximo de fidelidade (acao, heroi, objeto, local, enquadramento, cortes, timing, abertura
+  muda ou falada, texto de tela traduzido). So muda o obrigatorio (identidade, travas do angulo,
+  moderacao, realismo) e cada desvio vai declarado. Vai descrito no T1 e no `GANCHOS_VISUAIS.md`
+  (`Rodada: VALIDACAO`, `HOOK 1 - FIEL`), entregue **junto com o roteiro** e aprovado com ele.
+  **Sem 10 variacoes, sem degrau, sem escolha.** Aprovado o roteiro, direto para os prompts. O resto
+  deste passo NAO roda.
+- **RODADA DE VARIACAO:** so quando o Luigi disser que um video postado performou. Nunca por
+  iniciativa propria. A base e o video validado como foi postado (`Rodada: VARIACAO`,
+  `Base validada:`), e ai sim roda tudo abaixo.
+
+**Ordem travada na variacao: roteiro validado -> sugestoes de gancho visual -> escolha do Luigi -> so entao prompts.**
 Nao entregar prompt nenhum antes de mandar as 10 variacoes e o Luigi escolher (quantidade livre).
 
 A **copy fica identica em todas**, palavra por palavra. So mudam os primeiros segundos: o heroi e a
 acao do hook. Cada variacao custa **1 keyframe + 1 clipe, so o T1**.
 
-*Por que existe:* um roteiro validado vira N videos trocando so o hook, e variar UMA coisa por vez e
+*Por que existe:* um roteiro validado **no nosso perfil** vira N videos trocando so o hook, e variar UMA coisa por vez e
 o que deixa ler qual gancho venceu.
 
 ### Metodo: Puzzle com degrau (`GATE_VISUAL.md` Parte 4, ler o arquivo, nao este resumo)
@@ -404,7 +417,8 @@ morre em uma semana.
     rodado em TODO gancho, K e V deste pacote, 100% aprovado, linha "Checklist de envio: X/X"
     na entrega. Item reprovado = o pacote NAO e enviado
 [ ] PORTAO P5 completo: gabarito fitywell_pernas + memoria carregada + GATE_VISUAL.md, lidos NESTA sessao
-[ ] 10 ganchos do PASSO 3-B entregues e escolhidos pelo Luigi ANTES dos prompts
+[ ] Rodada declarada. VALIDACAO: um gancho fiel ao modelo, desvios declarados, aprovado com o
+    roteiro, sem 10. VARIACAO: base validada registrada, 10 ganchos entregues e escolhidos ANTES dos prompts
 [ ] PORTAO P6 lido antes dos prompts de video
 [ ] PORTAO P10 executado ou agendado (log de rotacao + biblioteca)
 [ ] Os DOIS arquivos escritos em producao/<avatar>_<slug>/

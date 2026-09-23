@@ -14,6 +14,7 @@ from gancho_verbal import validar_camada_verbal
 CP = '''Production: exemplo
 Angle: ANGLE 3 / Auraly
 Objective: SALE
+Round: VALIDATION
 Reference video: original.mp4
 Current stage: PRODUCTION_COMPLETE
 Current avatar: NONE
@@ -89,7 +90,10 @@ class PortfolioAuraly(unittest.TestCase):
         # 2026-09-20: contrato Puzzle. Uma acao estrutural preservada do hook do
         # video modelo e 10 variacoes trocando UMA variavel cada. Sem familias.
         # 2026-09-22: Puzzle com degrau. Topo declara peca viral e degrau; HOOK 1 e o controle.
-        partes = ['Acao estrutural: ela despeja algo sobre um objeto afetivo e a camada reage',
+        # 2026-09-23: as 10 so existem na rodada de variacao, sobre um video ja validado.
+        partes = ['Rodada: VARIACAO',
+                  'Base validada: producao exemplo, avatar Ana, performou no perfil',
+                  'Acao estrutural: ela despeja algo sobre um objeto afetivo e a camada reage',
                   'Peca viral: o primeiro clipe da camada reagindo em macro',
                   'Degrau: DIFICULDADE - ela faz isso escondida no banheiro do trabalho']
         for numero in range(1, 11):
@@ -148,6 +152,63 @@ class PortfolioAuraly(unittest.TestCase):
         antigo = '## HOOK 1 - formato antigo\nCena: teste'
         self.assertEqual(validar_portfolio_ganchos(antigo, False)[0][0], 'AVISO')
         self.assertEqual(validar_portfolio_ganchos(antigo, True)[0][0], 'FALHA')
+
+    def test_variacao_sem_base_validada_reprova(self):
+        ruim = self.portfolio().replace('Base validada: producao exemplo, avatar Ana, performou no perfil', '')
+        self.assertTrue(self.falhas(ruim, estrito=False))
+
+    def test_sem_rodada_reprova_no_estrito(self):
+        ruim = self.portfolio().replace('Rodada: VARIACAO', '')
+        self.assertTrue(self.falhas(ruim))
+        self.assertFalse(self.falhas(ruim, estrito=False))
+
+
+class HookFielValidacao(unittest.TestCase):
+    # 2026-09-23 (Luigi): validar antes de variar. Producao nova leva UM hook, fiel ao modelo.
+    FIEL = '\n'.join([
+        'Rodada: VALIDACAO',
+        'Acao estrutural: ela despeja algo sobre um objeto afetivo e a camada reage',
+        'Peca viral: o primeiro clipe da camada reagindo em macro',
+        'HOOK 1 - FIEL - copia do modelo',
+        'Cena: o hook do modelo plano a plano.',
+        'Screen text: this sign found you',
+        'Desvios obrigatorios: nenhum',
+        'Delayed meaning: o resultado so aparece no proximo beat',
+    ])
+
+    def falhas(self, texto):
+        return [x for x in validar_portfolio_ganchos(texto, True) if x[0] == 'FALHA']
+
+    def test_hook_fiel_passa(self):
+        self.assertFalse(self.falhas(self.FIEL))
+
+    def test_validacao_com_dez_reprova(self):
+        ruim = self.FIEL + '\nHOOK 2 - teste\nCena: outra.'
+        self.assertTrue(self.falhas(ruim))
+
+    def test_validacao_com_degrau_reprova(self):
+        ruim = self.FIEL.replace('Rodada: VALIDACAO', 'Rodada: VALIDACAO\nDegrau: ESCALA - montanha')
+        self.assertTrue(self.falhas(ruim))
+
+    def test_desvios_nao_declarados_reprova(self):
+        self.assertTrue(self.falhas(self.FIEL.replace('Desvios obrigatorios: nenhum', '')))
+
+    def test_hook_sem_marca_fiel_reprova(self):
+        self.assertTrue(self.falhas(self.FIEL.replace('HOOK 1 - FIEL - copia', 'HOOK 1 - copia')))
+
+    def test_checkpoint_validacao_nao_espera_hook(self):
+        cp = CP.replace('Current stage: PRODUCTION_COMPLETE', 'Current stage: WAITING_HOOK_SELECTION')
+        self.assertTrue(any(x[0] == 'FALHA' and 'VALIDATION' in x[2] for x in verificar_estado(cp)))
+
+    def test_checkpoint_variacao_exige_origem(self):
+        cp = CP.replace('Round: VALIDATION', 'Round: VARIATION')
+        self.assertTrue(any(x[0] == 'FALHA' and 'Validated from' in x[2] for x in verificar_estado(cp)))
+        ok = cp.replace('Round: VARIATION', 'Round: VARIATION\nValidated from: exemplo, Ana, 120k views')
+        self.assertFalse(any('Validated from' in x[2] for x in verificar_estado(ok)))
+
+    def test_checkpoint_sem_round_reprova_no_estrito(self):
+        cp = CP.replace('Round: VALIDATION\n', '')
+        self.assertTrue(any(x[0] == 'FALHA' and 'Round' in x[2] for x in verificar_estado(cp, estrito=True)))
 
 class CamadaVerbal(unittest.TestCase):
     # 2026-09-22: skill gancho-verbal. Topo com tese, sintoma-alvo e banco verbal;

@@ -111,7 +111,15 @@ mesma: punchy por padrao, marcar o mais agressivo com um aviso curto, nunca bloq
 
 ---
 
-## MODO PRODUCAO (dentro das 10 variacoes do Puzzle, todos os angulos)
+## MODO VALIDACAO (gancho fiel ao modelo, producao nova, desde 2026-09-23)
+
+Na rodada de validacao (`GATE_VISUAL.md` Parte 4, Passo 0) existe UM gancho, o do video modelo.
+Aqui a skill **nao escreve frase nova**: o texto de tela e a fala do T1 sao os do modelo, traduzidos
+e adaptados. Ela so faz o PASSO 0 no topo e roda os testes sobre esse gancho. Se um teste reprovar,
+a correcao minima entra como **desvio obrigatorio declarado**, nunca como reescrita livre. Sem
+paleta, sem `Recomendacao: HOOK X`, porque nao ha escolha.
+
+## MODO PRODUCAO (dentro das 10 variacoes do Puzzle, so na rodada de variacao, todos os angulos)
 
 Usado na etapa de ganchos de toda producao (`WORKFLOW_AURALY.md` HOOK_IDEATION,
 `PLAYBOOK_FITYWELL.md` §3, P3.5 do `CLAUDE.md` na Korella).
