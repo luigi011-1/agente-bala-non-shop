@@ -82,8 +82,11 @@ rodado antes de todo envio segura.
 - [ ] **B7 Sinal de EUA:** bandeira discreta e visível sempre; cenário americano icônico quando couber.
 - [ ] **B8 Avatar varia por vídeo, nunca por conta:** muda roupa, fundo ou detalhe entre vídeos da
   mesma conta; **o mesmo rosto nunca roda em duas contas** (violação de conteúdo original).
-- [ ] **B9 Sem figura médica explícita:** nada de jaleco, estetoscópio, crachá ou "Dr." no avatar.
-  Médico como avatar dá banimento no link-in-bio (curso, jul/2026).
+- [ ] **B9 Sem figura médica explícita no AVATAR que vende:** nada de jaleco, estetoscópio, crachá
+  ou "Dr." no avatar ou na autoridade que recomenda o nosso produto. Médico como avatar dá banimento
+  no link-in-bio (curso, jul/2026). ✅ **Médico como personagem de cena é liberado** (Luigi,
+  2026-09-23), desde que não seja quem vende ou recomenda o produto: ex. o médico que falha no
+  movie style de venda (*"your labs look fine"*).
 - [ ] **B10 Autossuficiente e no formato do Flow:** `K__` sozinho na linha, prompt completo, sem
   texto auxiliar, sem depender de outro prompt.
 
@@ -91,7 +94,10 @@ rodado antes de todo envio segura.
 
 - [ ] **C1 A fala cabe em 8 s sem acelerar:** 13 a 29 palavras, de preferência 1 ou 2 frases
   inteiras, cópia literal do roteiro.
-- [ ] **C2 Emoção da voz declarada** (enthusiasm, anger, urgency). Voz neutra sai robótica.
+- [ ] **C2 Voz descrita no prompt, para CADA personagem que fala** (Luigi, 2026-09-23): timbre,
+  idade aparente, sotaque e a entonação/emoção daquela fala (enthusiasm, anger, urgency). Voz neutra
+  sai robótica. Personagem que fala em mais de um clipe usa a MESMA descrição de timbre em todos os
+  V (a emoção muda por fala, o timbre não), porque é o prompt que segura a voz, não a edição.
 - [ ] **C3 Quem fala está escrito** quando há mais de uma pessoa em quadro, e quem cala também
   (`the man behind stays silent`). Pessoa errada falando é o bug nº 1 do Veo.
 - [ ] **C4 Selfie:** `the hand holding the phone never moves; only the other hand gestures`.
@@ -105,9 +111,10 @@ rodado antes de todo envio segura.
 
 ## D · MONTAGEM (seção de CapCut da entrega, fora dos blocos)
 
-- [ ] **D1 Voz única no vídeo inteiro:** cortar e montar primeiro, depois extrair o áudio e passar no
-  ElevenLabs Voice Changer com a voz fixa do avatar (clonada uma vez, com 3 min ou mais de áudio).
-  Cortar depois quebra o lip sync.
+- [ ] **D1 Sem Voice Changer na montagem.** ♻️ A regra antiga (passar o vídeo inteiro no
+  ElevenLabs com a voz fixa do avatar) foi **retirada pelo Luigi em 2026-09-23**. A consistência de
+  voz agora vem do prompt de vídeo (item C2). D1 confere só que a seção de CapCut não manda usar
+  Voice Changer.
 - [ ] **D2 Zero tempo morto:** todo clipe começa já falando; `Isolate Voice / Keep Vocal` no áudio.
 - [ ] **D3 Música só no corpo,** nunca no pré-gancho, entre -19 e -20 dB, fora da biblioteca do
   TikTok (risco de vídeo mutado).

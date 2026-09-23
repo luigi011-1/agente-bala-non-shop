@@ -1,10 +1,11 @@
 ---
 name: movie-style-integral
-description: "O movie style INTEGRAL, em que a cena atuada cobre o video inteiro e a venda nunca sai da ficcao. Duas familias validadas em 14 videos reais: FAMILIA A (mentora dentro da cena, 15 beats, a venda e PUXADA por uma pergunta da protagonista) e FAMILIA B (corte por indicacao, a personagem cita a vendedora e passa o microfone). Atribuicao fechada pelo Luigi em 2026-09-12: Familia A na FityWell, Familia B na Auraly. Revoga o movie style como device de hook de 5 beats."
+description: "O movie style de VENDA (INTEGRAL), em que a cena atuada cobre o video inteiro e a venda nunca sai da ficcao. Duas familias validadas em 14 videos reais: FAMILIA A (mentora dentro da cena, 15 beats, a venda e PUXADA por uma pergunta da protagonista) e FAMILIA B (corte por indicacao, a personagem cita a vendedora e passa o microfone). Atribuicao fechada pelo Luigi em 2026-09-12: Familia A na FityWell, Familia B na Auraly. Revoga o movie style como device de hook de 5 beats."
 metadata:
   node_type: memory
   type: reference
-  modified: 2026-09-12T00:00:00.000Z
+  modified: 2026-09-23T02:42:48.794Z
+  originSessionId: 3ef47d4f-e874-40f2-9c55-d4917537f493
 ---
 
 # Movie Style INTEGRAL — a cena atuada como vídeo inteiro
@@ -16,11 +17,40 @@ perfis aplicando o movie style no vídeo como um todo, do início ao fim."*
 5 beats terminando no corte pro script de saúde. Isso é um subconjunto. No formato integral
 **a venda nunca sai da ficção**, e é justamente isso que o faz converter.
 
-## A LEI DO FORMATO: a venda é PUXADA, nunca empurrada
+## A LEI DO FORMATO: a SOLUÇÃO é PUXADA, nunca empurrada
 
-Em 14 de 14 vídeos, **ninguém nunca se dirige ao espectador.** Ele espia uma conversa.
-Enquanto ninguém pergunta, o vídeo é ficção e a guarda não sobe. Depois da pergunta, o
-pitch é **resposta a um pedido**, e resposta a pedido não parece anúncio.
+Em 2026-09-12, 14 de 14 vídeos não se dirigiam ao espectador. ♻️ **Corrigido em 2026-09-22**
+(12 vídeos de venda da rodada): a mentora já faz o pitch olhando para a lente (DJ4), e a protagonista
+transformada fecha falando para a câmera (RT5). **O que continua valendo em 12 de 12:** a
+**solução** só entra depois que a protagonista pergunta (*"Cortisol? But how can I fix that?"*).
+Mecanismo e CTA podem ir para a lente depois que a pergunta existe. Saída elegante do RT3: a
+mentora aparece num **vídeo dentro do vídeo**, e aí olhar para a lente é diegético.
+
+## 🔑 NOVO BEAT FINAL: VINGANÇA (2026-09-22)
+Em 9 de 12 vídeos de venda, alguém do ato 1, quase sempre o próprio humilhador, volta e reconhece a
+transformação: *"No way, that is Diane"*, *"Please forgive me, you look amazing"*. O loop de
+injustiça aberto no segundo 1 fecha no último. Substitui o *"I should have listened sooner"*.
+
+## 🔴 SÓ VENDA. O short form de growth é OUTRO formato
+Este arquivo cobre **apenas o movie style de VENDA** (produto, pitch, CTA, 89 a 120s). O short form
+de growth (13 a 30s, sem produto, sem personagem fixo) tem memória própria: [[short-form-growth]].
+Classificar antes de tudo: tem produto, marca, link ou keyword = venda; não tem = growth.
+
+**Movie style de venda, rodada 2026-09-22 (12 virais):** a mentora é o personagem fixo da conta
+(mesma atriz, mesmo escritório com bandeira dos EUA, "American holistic healer"); o bloco de pitch
+é fixo palavra por palavra em duas versões ("28 dias" e "diagnóstico no corpo"); a ponte do
+produto preserva o álibi (*"It works on the stress side, so what you're doing finally gets
+through"*); a fala entra nos 2 primeiros segundos. Análise em
+`producao/_swipe_movie_style/rodada_2026_09_22/MOVIE_STYLE_VENDA.md`.
+
+## Produção (Luigi, 2026-09-23)
+- **Só FityWell e Auraly** por agora. Korella fora.
+- **Character sheet (`REF-P`) de cada personagem principal**; a protagonista ganha dois, um por
+  estado de corpo. Figurante e personagem de uma aparição não ganham.
+- **Médico em cena liberado**, desde que não seja a autoridade que vende ou recomenda o produto
+  (o médico que falha pode entrar).
+- **Voz descrita no prompt de cada fala**, sem Voice Changer ([[checklist-envio-prompt]]).
+- **Workflow APROVADO (2026-09-23)** em `producao/_swipe_movie_style/PROPOSTA_WORKFLOW_MOVIE_STYLE.md`.
 
 ## FAMÍLIA A — a mentora é personagem da cena
 
