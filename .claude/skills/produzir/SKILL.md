@@ -151,9 +151,11 @@ Antes de escrever o bloco de venda, abrir:
 ### Primeiro: qual e a rodada? (Luigi, 2026-09-23, `GATE_VISUAL.md` Parte 4 Passo 0)
 
 - **RODADA DE VALIDACAO (padrao de toda producao nova):** UM gancho so, o do video modelo, clonado
-  com o maximo de fidelidade (acao, heroi, objeto, local, enquadramento, cortes, timing, abertura
+  com o maximo de fidelidade de CONTEUDO (acao, heroi, objeto, local, ordem de planos, cortes, timing, abertura
   muda ou falada, texto de tela traduzido). So muda o obrigatorio (identidade, travas do angulo,
-  moderacao, realismo) e cada desvio vai declarado. Vai descrito no T1 e no `GANCHOS_VISUAIS.md`
+  moderacao) e cada desvio vai declarado. **O acabamento nao e fiel ao modelo, e do nosso gate:**
+  `GATE_VISUAL.md` Partes 1 a 3 rodam inteiras (heroi colado na lente, zero tom amarelado, luz
+  neutra ou ceu nublado, 2 a 3 ancoras de fundo, sem blur, trecho de realismo). Vai descrito no T1 e no `GANCHOS_VISUAIS.md`
   (`Rodada: VALIDACAO`, `HOOK 1 - FIEL`), entregue **junto com o roteiro** e aprovado com ele.
   **Sem 10 variacoes, sem degrau, sem escolha.** Aprovado o roteiro, direto para os prompts. O resto
   deste passo NAO roda.

@@ -142,12 +142,18 @@ de algo que já funcionou aqui.
 
 **Rodada de VALIDAÇÃO (o padrão):**
 - **UM gancho por avatar, o do vídeo modelo, com o máximo de fidelidade possível:** mesma ação, mesmo
-  herói, mesmo objeto e substância, mesmo tipo de local, mesmo enquadramento, mesmos cortes, mesmo
+  herói, mesmo objeto e substância, mesmo tipo de local, mesma ordem de planos, mesmos cortes, mesmo
   timing e mesma abertura (falada ou muda). O texto de tela é o do modelo, traduzido e adaptado.
+- 🔴 **Fidelidade é de CONTEÚDO, nunca de acabamento (Luigi, 2026-09-23).** As Partes 1 a 3 deste
+  gate rodam INTEIRAS no gancho fiel, igual em qualquer outro `K__`: **herói colado na lente**, mais
+  perto do que no modelo quando o modelo estiver aberto; **zero tom amarelado ou quente**, luz neutra
+  de dia nublado ou céu com cor, mesmo que o modelo tenha golden hour; duas ou três âncoras de fundo;
+  sem blur; trecho de realismo. Fidelidade ao modelo nunca justifica piorar o realismo ou afastar o
+  herói (memória `feedback-enquadramento-mais-proximo`: fidelidade é de estrutura, não de câmera).
+  Aplicar o gate não conta como desvio a declarar: é o padrão.
 - **Só muda o obrigatório:** identidade do avatar, travas do ângulo (keyword, produto em quadro ou
   não, registro divino e rosto nunca revelado no Auraly, congruência na Korella e FitWell), moderação
-  e compliance, e as Partes 1 a 3 deste gate (realismo e composição). **Cada desvio forçado é
-  declarado com o motivo**, nunca feito em silêncio.
+  e compliance. **Cada desvio forçado é declarado com o motivo**, nunca feito em silêncio.
 - **Sem 10 variações, sem degrau, sem controle e sem espera de seleção de gancho.** O gancho fiel vai
   descrito no T1 do roteiro e é aprovado **junto com o roteiro**. Depois da aprovação, direto para os
   prompts.

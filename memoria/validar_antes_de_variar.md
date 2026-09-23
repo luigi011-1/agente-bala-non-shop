@@ -16,9 +16,15 @@ dele, as 5 flopam juntas e nao se aprende nada; se uma vai bem, nao ha base vali
 
 **How to apply:**
 - Producao nova = `Round: VALIDATION` / `Rodada: VALIDACAO`. UM gancho, o do video modelo, com o
-  maximo de fidelidade (acao, heroi, objeto, local, enquadramento, cortes, timing, abertura muda ou
-  falada, texto de tela traduzido). So muda o obrigatorio (identidade, travas do angulo, moderacao,
-  realismo), e cada desvio vai declarado com o motivo.
+  maximo de fidelidade de CONTEUDO (acao, heroi, objeto, local, ordem de planos, cortes, timing,
+  abertura muda ou falada, texto de tela traduzido). So muda o obrigatorio (identidade, travas do
+  angulo, moderacao), e cada desvio vai declarado com o motivo.
+- 🔴 **Fiel no conteudo, NUNCA no acabamento** (Luigi, 2026-09-23, logo depois da regra): o
+  `GATE_VISUAL.md` Partes 1 a 3 roda inteiro no gancho fiel. Heroi colado na lente (mais perto que
+  no modelo se o modelo for aberto), zero tom amarelado de IA, luz neutra ou ceu nublado mesmo se o
+  modelo tiver golden hour, 2 a 3 ancoras de fundo, sem blur. Eu tinha escrito "mesmo
+  enquadramento" na lista de fidelidade e isso brigava com o heroi na lente; corrigido. Ver
+  [[feedback-enquadramento-mais-proximo]] e [[realismo-anti-cara-de-ia]].
 - O gancho fiel e aprovado **junto com o roteiro**. Sem 10, sem degrau, sem controle, sem espera de
   selecao de gancho. Aprovado o roteiro, direto para os prompts.
 - **O resto do workflow nao muda** (fila de avatares, pacote por avatar, bloco do Flow, K/V,

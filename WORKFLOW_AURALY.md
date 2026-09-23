@@ -43,8 +43,10 @@ INPUT
 Toda producao nova a partir de video modelo e `Round: VALIDATION`: **um gancho so, o do video
 modelo, clonado com o maximo de fidelidade**, igual para toda a fila. Sem 10 hooks, sem degrau, sem
 `HOOK_IDEATION` e sem `WAITING_HOOK_SELECTION`: depois de `WAITING_SCRIPT_APPROVAL` o proximo estado
-e `IMAGE_PROMPTS`. So muda o obrigatorio (identidade, travas do angulo, moderacao, realismo), e cada
-desvio forcado vai declarado no hook fiel.
+e `IMAGE_PROMPTS`. So muda o obrigatorio (identidade, travas do angulo, moderacao), e cada
+desvio forcado vai declarado no hook fiel. **Fiel no conteudo, nunca no acabamento:** o
+`GATE_VISUAL.md` Partes 1 a 3 roda inteiro no gancho fiel (heroi colado na lente, zero tom quente,
+luz neutra ou ceu nublado, 2 a 3 ancoras, sem blur), mesmo que o modelo seja aberto ou amarelado.
 
 `Round: VARIATION` so existe quando o Luigi disser que um video postado performou. E uma producao
 nova, com `Validated from:` apontando producao, avatar e resultado informado; a base e o video
@@ -270,8 +272,9 @@ Peca viral:
 
 HOOK 1 - FIEL - nome
 Cena:
-[o hook do modelo, plano a plano: acao, heroi, objeto, local, enquadramento, cortes, timing,
- abertura muda ou falada]
+[o hook do modelo, plano a plano: acao, heroi, objeto, local, ordem de planos, cortes, timing,
+ abertura muda ou falada. O acabamento segue GATE_VISUAL.md Partes 1 a 3: heroi colado na
+ lente, luz neutra sem tom quente, 2 a 3 ancoras de fundo, sem blur]
 Screen text:
 [o texto de tela do modelo, traduzido e adaptado]
 Desvios obrigatorios:
