@@ -10,9 +10,9 @@ modelo dental lavado pela água no gancho)
 Ordem preservada dos 9 anexos recebidos em 2026-09-24. Identidade conferida abrindo uma âncora
 canônica por vez contra cada anexo. Lia Carlla não veio e não entra. Fila é estado em disco.
 
-⚠️ As âncoras canônicas de Dana Morrison, Jamie Anderson e Lynn Parker em `producao/_ancoras/`
-ainda são as antigas (garagem com painel, SUV, apotecário). As imagens anexadas nesta produção são
-as novas de 2026-09-23 (memória `avatares-fichas`), e são elas que valem aqui.
+As âncoras de Dana Morrison, Jamie Anderson e Lynn Parker anexadas nesta produção são as novas de
+2026-09-23. Em 2026-09-24 elas também passaram a ser as canônicas em `producao/_ancoras/`, em 4K; as
+antigas estão em `producao/_ancoras/historico/`.
 
 | Ordem | Estado | Avatar | Âncora anexada | Cenário (texto dos K) |
 |---:|---|---|---|---|

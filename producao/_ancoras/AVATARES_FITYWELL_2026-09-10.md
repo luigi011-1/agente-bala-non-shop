@@ -8,6 +8,14 @@ Ferramenta: **Higgsfield Soul 2.0**, framework de 3 blocos em prosa (skill `avat
 > a IMAGEM aprovada, nunca o prompt abaixo. Onde a imagem divergiu do prompt, vale a imagem, e a
 > divergência está registrada na ficha.
 
+> ♻️ **ÂNCORAS TROCADAS EM 2026-09-23 (Luigi).** Os três caminhos da tabela abaixo agora guardam as
+> âncoras novas: Dana na garagem de OG com o lowrider (`ANCORA_DANA_OG_2026-09-23.md`), Jamie Anderson
+> como apicultor na fazenda (`ANCORA_JAMIE_ANDERSON_2026-09-23.md`) e Lynn Parker como monge zen no
+> jardim de chá (`ANCORA_LYNN_PARKER_2026-09-23.md`), salvas em 4K. As imagens de 2026-09-10 descritas
+> neste arquivo estão em `historico/` (`dana_morrison_ancora_garagem_2026-09-10.jpeg`,
+> `jamie_anderson_ancora_suv_2026-09-10.jpeg`, `lynn_parker_ancora_apotecario_2026-09-10.jpeg`) e não
+> são mais fonte.
+
 ## ✅ O QUE FICOU DECIDIDO
 
 | Avatar | Nome final (Luigi) | Âncora aprovada | Caminho |
