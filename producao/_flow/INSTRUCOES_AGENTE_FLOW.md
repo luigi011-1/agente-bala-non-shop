@@ -1,6 +1,6 @@
 # Instrucoes do agente executor do Google Flow AI
 
-Versao 12, 2026-09-22. Contrato de execucao, subordinado ao roteador de cada oferta.
+Versao 14, 2026-09-24. Contrato de execucao, subordinado ao roteador de cada oferta.
 Auraly segue exclusivamente WORKFLOW_AURALY.md. Angle 1/2 seguem CLAUDE.md e, no FitWell,
 PLAYBOOK_FITYWELL.md. Os pacotes existentes permanecem como foram aprovados.
 
@@ -22,18 +22,44 @@ incompativel com os codigos recebidos exige esclarecimento, nunca escolha silenc
 | Imagem | Nano Banana 2 | Nano Banana 2 |
 | Formato | 9:16 | 9:16 |
 | Referencia de imagem | Anchor em cena real do avatar ativo (ver secao abaixo) | Anchor do avatar ativo |
-| Imagens por K | 4, com selecao manual | 1 imagem final |
+| Imagens por K | 4, com selecao manual | 4, com selecao manual (o operador apaga 3 e deixa 1) |
 | Relacao K/V | Mapa explicito recebido com o pacote; um K pode alimentar varios V | Maior K menor ou igual ao numero de V |
-| Video | Veo 3.1 Lite | Veo 3.1 Lite |
-| Prioridade | Lower Priority | Lower Priority |
+| Video | Veo 3.1 Lite | Omni Flash, e somente ele |
+| Prioridade | Lower Priority | Padrao do Omni Flash |
 | Duracao por clipe | 8 segundos | 8 segundos |
-| Variacoes por V | 3 | 1 |
+| Variacoes por V | 3 | 1, um unico resultado por prompt |
 | Anexo do video | INITIAL FRAME | INITIAL FRAME |
 | Lote de video | Fechado, no maximo 7 codigos V | Fechado, no maximo 7 codigos V |
 
 Os valores Auraly reproduzem as travas de WORKFLOW_AURALY.md. Nunca transportar as configuracoes
 classicas para Auraly. Um pacote historico com outro contrato nao autoriza alterar uma producao
 nova; preservar seu contrato aprovado quando o usuario solicitar especificamente sua retomada.
+
+### 🔴 CLASSICO: 4 imagens por K, selecao do operador, video so no Omni Flash (v14, 2026-09-24)
+
+Falha real registrada: o operador pedia quatro variacoes por K e o executor continuava gerando uma
+so. Isto e obrigatorio em todo K do perfil CLASSICO:
+
+1. **Quatro imagens por K, sempre.** Antes de gerar cada K, abrir o seletor de quantidade de saida
+   do Nano Banana 2 e colocar em 4 (x4). Conferir o seletor em TODO K, porque ele pode voltar para 1
+   sozinho. Um K com menos de quatro imagens esta INCOMPLETO. Se a interface entregar menos de
+   quatro, gerar o MESMO prompt, com a MESMA anchor, de novo ate existirem quatro candidatas daquele
+   K. Nunca editar o prompt para isso.
+2. **Rotular as quatro** com avatar, codigo e numero: `K01-1`, `K01-2`, `K01-3`, `K01-4`.
+3. **Depois de gerar TODOS os K, PARAR.** Nao escolher imagem, nao apagar imagem, nao gerar video.
+   Avisar o operador que as quatro candidatas de cada K estao prontas e esperar.
+4. **A selecao e so do operador.** Ele escolhe a dedo UMA imagem por K e apaga as outras tres. Nunca
+   selecionar por conta propria, nunca recriar nem regenerar imagem apagada, nunca questionar a
+   escolha.
+5. **O video comeca so quando o operador mandar.** A imagem que SOBROU em cada K e a unica fonte do
+   video: ela entra como INITIAL FRAME do V de mesmo numero (K01 alimenta V01, K02 alimenta V02...).
+   Se um K ainda tiver mais de uma imagem, ou nenhuma, PARAR e perguntar qual usar; nunca adivinhar.
+6. **Video somente no Omni Flash.** Nunca usar Veo 3.1, Veo 3.1 Lite nem outro modelo, mesmo que seja
+   o padrao da tela ou esteja mais rapido. Conferir o modelo selecionado antes de CADA V.
+7. **Um unico resultado por V.** Colocar a quantidade de saida do video em 1. Nunca gerar duas ou
+   mais versoes do mesmo V.
+8. Se o Omni Flash nao estiver disponivel, ou nao permitir a duracao, o INITIAL FRAME ou a
+   quantidade 1, PARAR e avisar o operador antes de trocar qualquer coisa.
 
 ### AURALY, anchor e cenario por gancho (Luigi, 2026-09-14; anchor revista em 2026-09-22)
 
@@ -89,8 +115,8 @@ quantidade do perfil. Rotular os resultados com avatar, codigo e numero da varia
 
 No Auraly, apresentar quatro candidatas por K e esperar o operador escolher uma por codigo.
 Mesmo que os V ja tenham chegado no mesmo pacote textual, nao selecionar automaticamente nem
-avancar para video sem selecao. No classico, uma imagem
-final por K; ainda assim esperar o pacote de video antes de executar essa fase.
+avancar para video sem selecao. No classico, tambem quatro candidatas por K: o operador escolhe
+uma e apaga as outras tres, e o video so comeca depois dessa selecao (secao CLASSICO acima).
 
 ### 🔴 Reconhecer prompt de IMAGEM (K) contra prompt de VIDEO (V), sem ambiguidade (v8)
 
@@ -135,14 +161,16 @@ Cada codigo V tem tres variacoes do mesmo prompt e frame selecionado.
 
 CLASSICO: V usa o maior K disponivel cujo numero nao exceda o de V. Por exemplo, com K01, K03 e
 K06: V01/V02 usam K01; V03/V04/V05 usam K03; V06 usa K06. Se nao houver K anterior ou igual,
-parar. Nao adivinhar pela aparencia ou ordem da galeria. Cada V tem uma variacao.
+parar. Nao adivinhar pela aparencia ou ordem da galeria. Cada V tem uma variacao, gerada no Omni
+Flash a partir da UNICA imagem que o operador deixou naquele K.
 
 ### Videos em lotes fechados
 
 1. Receber e registrar toda a fila V, sem executar tudo automaticamente.
 2. Antes de cada V, conferir avatar, perfil e K indicado no MAPA K/V.
 3. Usar a imagem exclusivamente como INITIAL FRAME, nunca Element, ingredient ou referencia de objeto.
-4. Configurar Veo 3.1 Lite, Lower Priority, oito segundos e a quantidade de variacoes do perfil.
+4. Configurar o modelo do perfil: AURALY em Veo 3.1 Lite, Lower Priority, oito segundos, tres
+   variacoes; CLASSICO somente em Omni Flash, oito segundos, um unico resultado por V.
 5. Iniciar somente o primeiro lote de no maximo sete codigos V. Variacoes pertencem ao codigo;
    o teto e de codigos, nao uma autorizacao para iniciar codigos adicionais por vaga liberada.
 6. Esperar todos os codigos e variacoes desse lote. Nao preencher vagas com o lote seguinte.
@@ -183,6 +211,10 @@ cortes internos ao clipe, que nao pode fazer o executor parar na checagem das tr
 v12, 2026-09-22: roster Auraly reduzido a Walt, Darlene e Lorraine. A fingerprint sai: a referencia
 e a anchor em cena real, com instrucao de usar so a identidade quando o K pede cenario novo. A
 excecao dos avatares de luxo (v9) foi removida junto com eles.
+v14, 2026-09-24: perfil CLASSICO passa a gerar QUATRO imagens por K, com selecao manual do operador
+(ele apaga tres e deixa uma), e o video passa a ser SOMENTE no Omni Flash, um unico resultado por V.
+Motivo: o executor gerava uma imagem so mesmo quando o operador pedia quatro. O AURALY nao muda.
+(A v13, de movie style, existe em outros worktrees e ainda nao entrou neste; juntar as duas no merge.)
 v10, 2026-09-20: sincronizado com o portfolio Auraly 4/3/3, revogado poucas horas depois. K e V podem chegar na mesma entrega,
 mas a execucao continua em duas fases com selecao manual. T1 deixa de exigir kit completo, camera
 passa a servir o invariante da familia e um unico VFX funcional passa a ser permitido. A relacao

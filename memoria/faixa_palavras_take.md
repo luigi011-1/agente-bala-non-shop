@@ -10,6 +10,16 @@ metadata:
 
 # Faixa de palavras por take: 13 a 29, fechada
 
+## ♻️ 2026-09-23: o take segue a CENA do modelo (Luigi)
+Na produção `fitywell_growth_canela_acucar` eu juntei a cena do gancho com a da receita e cortei a
+frase da receita no meio só para cada take chegar a 13 palavras. O Luigi cortou: *"não quero que faça
+isso mais"*. Agora cada cena do modelo é o próprio take. **Nunca juntar cenas, nunca cortar frase para
+caber na faixa.** Cena curta do modelo vira take curto marcado `CENA CURTA` no cabeçalho do take, e o
+linter aceita abaixo de 13 só com essa marca. O teto de 29 continua valendo sempre, e plano longo do
+modelo se divide só em fim de frase. No `V__` de cena curta, a fala sai em ritmo natural no começo do
+clipe e o resto é a ação sem fala, cortada na edição no tempo da cena do modelo.
+Ver [[take-segue-cena-do-modelo]].
+
 **A fonte de verdade é o `checar_entrega.py`**, linha 230: `if n < 13 or n > 29`. Qualquer dúvida
 sobre a faixa se resolve lendo o linter, não a lembrança.
 

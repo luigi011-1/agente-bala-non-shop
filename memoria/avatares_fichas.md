@@ -1,6 +1,6 @@
 ---
 name: avatares-fichas
-description: "Fichas canonicas dos avatares de IA. ANGULO 3 (Auraly), roster UNICO desde 2026-09-22: Walt Hensley (homem 58, barba longa grisalha, antebracos tatuados, colete de couro, varanda com moto), Darlene Pruitt (56, cabelao platinado texano, turquesa e prata, cozinha rustica) e Lorraine Vance (52, cabeca raspada, argolas de prata, oculos de leitura, cozinha branca, selfie). Ancora oficial = imagem de teste em cena real, nunca fingerprint. Todos os outros avatares do Angulo 3 foram descartados em 2026-09-22 e so existem em _arquivo/. FITYWELL (Angulos 2 e 4): Dana Morrison (52, do-rag, garagem), Jamie Anderson (55, linho branco, SUV) e Lynn Parker (70, locs brancas, apotecario), HOMENS negros de nome unissex, COACH no A2 e PAR no A4. KORELLA (Angulo 1): Melody Carter (HOMEM, garagem, cruz de prata) e holistic.trevor (homem ruivo, cozinha, sem cruz). holistic.brandon aposentada da FityWell. Tracos exatos pros prompts."
+description: "Fichas canonicas dos avatares de IA. ANGULO 3 (Auraly), roster UNICO desde 2026-09-22: Walt Hensley (homem 58, barba longa grisalha, antebracos tatuados, colete de couro, varanda com moto), Darlene Pruitt (56, cabelao platinado texano, turquesa e prata, cozinha rustica) e Lorraine Vance (52, cabeca raspada, argolas de prata, oculos de leitura, cozinha branca, selfie). Ancora oficial = imagem de teste em cena real, nunca fingerprint. Todos os outros avatares do Angulo 3 foram descartados em 2026-09-22 e so existem em _arquivo/. FITYWELL (Angulos 2 e 4): Dana Morrison (52, OG de do-rag, correntes de ouro e tatuagens, garagem com lowrider, âncora nova de 2026-09-23), Jamie Anderson (55, apicultor, fazenda com colmeias, âncora nova de 2026-09-23) e Lynn Parker (70, locs brancas, monge zen no jardim de chá, âncora nova de 2026-09-23), HOMENS negros de nome unissex, COACH no A2 e PAR no A4. KORELLA (Angulo 1): Melody Carter (HOMEM, garagem, cruz de prata) e holistic.trevor (homem ruivo, cozinha, sem cruz). holistic.brandon aposentada da FityWell. Tracos exatos pros prompts."
 metadata: 
   node_type: memory
   type: reference
@@ -140,135 +140,139 @@ segue proibida na fala.**
 
 ## Dana Morrison (ÂNGULOS 2 e 4), FICHA CANÔNICA
 
-Fixada em 2026-09-10. **Âncora aprovada por imagem nesta data.**
+♻️ **Âncora trocada em 2026-09-23 pelo Luigi:** *"agora a imagem de base desse avatar sempre será
+essa"*. O Dana virou o **OG do bairro**: o coroa das antigas que viu de tudo e saiu do outro lado com
+saúde, com acessórios e garagem de lowrider. A âncora de 2026-09-10 (garagem com pegboard e placa
+SLEEP WATER WALK) foi para `producao/_ancoras/historico/dana_morrison_ancora_garagem_2026-09-10.jpeg`
+e **não é mais fonte**. Histórico dos prompts em `producao/_ancoras/ANCORA_DANA_OG_2026-09-23.md`.
 
 ### 📎 CAMINHO DA ÂNCORA
-`producao/_ancoras/dana_morrison_ancora.jpeg`
-Anexar em praticamente toda geração dele, como referência de identidade e cenário.
+`producao/_ancoras/dana_morrison_ancora.jpeg` (a imagem de 2026-09-23, em cena real, nunca o sheet)
+Anexar em toda geração dele, como referência de identidade, roupa e cenário.
 
-### Traços físicos
-- Homem negro americano, **início dos cinquenta**, pele marrom escura.
+### Traços físicos (da imagem aprovada)
+- Homem negro americano, **início dos cinquenta**, pele marrom escura, rosto magro e anguloso,
+  maçãs altas, olhos castanhos escuros, sobrancelhas grossas.
 - **Do-rag preto de cetim** amarrado na cabeça, com a aba caindo atrás do ombro esquerdo.
-- **Barba do queixo comprida e branca**, cheia, com bigode escuro salpicado de grisalho. Não é barba
-  curta aparada. **A barba é a marca do rosto dele**, nunca encurtar.
-- Rosto magro e anguloso, maçãs altas, olhos castanhos escuros, olhar direto e levemente urgente.
-- **Corpo seco e treinado**, não volumoso: ombros largos, braços definidos, **antebraços com veias
-  bem marcadas**, mãos grandes e calejadas.
-- Pele com textura real, poros visíveis, linhas fundas na testa, pés de galinha, sem maquiagem.
-- ⚠️ **Divergência do prompt:** o prompt pedia barba curta salt-and-pepper e mãos fora do quadro. A
-  imagem saiu com barba branca comprida e **mãos apoiadas na bancada, em primeiro plano**. Vale a
-  imagem, e as mãos na bancada são ativo, porque já cumprem a regra 1 do
-  [[checklist-composicao-visual]].
+- **Barba cheia grisalha (sal e pimenta) que fica branco-acinzentada no queixo**, bigode mais escuro
+  salpicado de grisalho. Não é mais a barba branca comprida da âncora antiga.
+- Ombros largos e treinados, **antebraços com veias e tatuagens old-school desbotadas em tinta cinza:
+  uma rosa e mãos em oração**, sem letras nem números.
+- Pele com textura real, poros, linhas na testa, pés de galinha, sem maquiagem.
 
 ### Roupa e acessórios
-- **Regata canelada PRETA.**
-- **Corrente fina de OURO** no pescoço, sem pingente visível.
-- Calça escura.
-- **Sem cruz.** Não forçar, a âncora não tem.
+- **Camisa de trabalho grafite de manga curta, aberta**, sobre **regata canelada preta**.
+- **Corrente de ouro trançada (rope) mais uma corrente fina de ouro**, sem pingente.
+- **Óculos escuros old-school pendurados na gola da regata.**
+- **Relógio dourado** no pulso esquerdo e **anel de ouro no dedinho**.
+- **Sem cruz.**
 
-### Cenário canônico (garagem virada apotecário)
-- **Bancada de madeira gasta e manchada** ocupando todo o primeiro plano, com chaves de fenda soltas,
-  um alicate, uma furadeira azul e um pote Ball de vidro vazio.
-- **Parede de pegboard marrom** com chaves de boca em fileira, martelo de cabo amarelo, chaves de
-  fenda de cabo colorido e alicates pendurados.
-- **Armário de madeira à direita** com potes de vidro de ervas rotulados VALERIAN ROOT, ECHINACEA e
-  MULLEIN, e uma **bandeirinha dos EUA em pé na prateleira**, discreta e em foco.
-- **Placa de papelão escrita à mão: SLEEP WATER WALK GREENS SUN.**
-- Porta de garagem branca de enrolar recolhida no alto do quadro.
-- Luz **neutra de dia**, entrando pela porta aberta da garagem. Sem cast quente.
+### Cenário canônico (garagem de OG)
+- **Bancada de madeira gasta e riscada** no primeiro plano, onde ele apoia os antebraços.
+- Atrás dele, **lowrider preto dos anos 60 com rodas cromadas de raio**, cortado pela borda.
+- Parede da esquerda: **prateleira de madeira com potes de vidro e a bandeirinha dos EUA** em pé,
+  e **luvas de boxe vermelhas velhas** penduradas num prego logo abaixo.
+- Canto esquerdo no chão: **halteres e anilhas de ferro**. À direita: **toca-discos numa bancada
+  lateral com um engradado de vinis**.
+- **Porta da garagem aberta** mostrando a entrada e uma rua residencial americana.
+- Luz **neutra de dia nublado** entrando pela porta. Sem cast quente.
+- ⚠️ Os potes da prateleira saíram com erva verde seca. Eu alertei que lê como maconha e ofereci a
+  troca (mel, canela, gengibre, limão); o Luigi aprovou a imagem assim. Nos prompts, **não descrever
+  o conteúdo dos potes**, só "a row of glass jars".
 
 ### Registro
-Masculino, blue-collar, direto e um pouco urgente, de quem aprendeu do jeito difícil.
-Autoridade por experiência de rua e por idade vivida, nunca por credencial.
-Sentado, inclinado sobre a bancada, plano médio, cara de UGC de celular.
+Masculino, calmo, pesado e seguro, de quem aprendeu do jeito difícil: **a voz da experiência**.
+Autoridade por vivência, nunca por credencial. Em pé atrás da bancada, inclinado para o celular.
 
 ---
 
 ## Jamie Anderson (ÂNGULOS 2 e 4), FICHA CANÔNICA
 
-Fixada em 2026-09-10. **Âncora aprovada por imagem nesta data.**
+♻️ **Âncora trocada em 2026-09-23 pelo Luigi:** *"agora essa é a imagem base do jamie"*. O Jamie
+virou o **APICULTOR que planta a própria comida**: o condado inteiro compra o mel e os remédios
+antigos dele. A regra que gerou a escolha: **a profissão do estereótipo tem que ser o próprio
+assunto do conteúdo** (o barbeiro, o diácono e o veterano foram reprovados por não passar
+autoridade de saúde). A âncora de 2026-09-10 (dentro do SUV, camisa de linho) foi para
+`producao/_ancoras/historico/jamie_anderson_ancora_suv_2026-09-10.jpeg` e **não é mais fonte**.
+Histórico dos prompts em `producao/_ancoras/ANCORA_JAMIE_ANDERSON_2026-09-23.md`.
 
 ### 📎 CAMINHO DA ÂNCORA
-`producao/_ancoras/jamie_anderson_ancora.jpeg`
-Anexar em praticamente toda geração dele.
+`producao/_ancoras/jamie_anderson_ancora.jpeg` (a imagem de 2026-09-23, em cena real, nunca o sheet)
+Anexar em toda geração dele, como referência de identidade, roupa e cenário.
 
-### Traços físicos
+### Traços físicos (da imagem aprovada)
 - Homem negro americano, **meados dos cinquenta**, pele marrom média.
 - **Cabelo curto, corte baixo, muito grisalho** nas têmporas e no topo, entradas naturais.
-- **Barba curta cheia, quase toda branca**, com bigode grisalho.
-- Rosto simétrico, testa alta, **pintas e sardas visíveis nas maçãs do rosto**, olhos castanhos
-  escuros, sobrancelhas grisalhas.
-- Porte atlético e enxuto, ombros largos, sem volume de academia.
+- **Barba curta cheia grisalha quase branca**, com bigode grisalho.
+- Testa alta, **pintas e sardas visíveis nas maçãs do rosto**, olhos castanhos escuros.
+- Porte enxuto de quem trabalha a terra, **antebraços com veias**.
 - Pele com textura real, linhas na testa, pés de galinha, sem maquiagem.
 
 ### Roupa e acessórios
-- **Camisa de linho BRANCA de botão**, colarinho aberto sem gravata, **mangas dobradas até o
-  antebraço**. Calça escura.
-- **Sem corrente, sem relógio, sem cruz.** A âncora não tem joia nenhuma, e isso é traço dele.
+- **Jaqueta branca de apicultor com zíper na frente**, gasta e com manchas leves de trabalho,
+  **mangas puxadas até o antebraço**.
+- **Véu de tela abaixado atrás da cabeça e dos ombros.** Na imagem aprovada o aro ainda aparece em
+  pé atrás da cabeça; o Luigi aprovou assim.
+- **Óculos de leitura pendurados no bolso do peito.**
+- **Sem corrente, sem relógio, sem cruz.**
 
-### Cenário canônico (SUV estacionado)
-- Sentado no **banco do motorista de um SUV parado**, filmado do lado do passageiro.
-- Forro do teto cinza claro, para-sol, alça de teto, **bancos de couro preto** e encosto de cabeça do
-  banco de trás visível.
-- Pela janela lateral: **estacionamento americano comum** com carros parados (um sedan azul, um SUV
-  cinza) e uma **fileira de lojas de tijolo** com toldos ao fundo.
-- **Adesivo da bandeira dos EUA no canto do vidro da janela lateral**, discreto e em foco.
-- Céu nublado claro. Luz **neutra de dia nublado** entrando pelo para-brisa e pela janela.
+### Cenário canônico (fazenda familiar)
+- **Mesa de piquenique de madeira cinza gasta** no primeiro plano, onde ele apoia os antebraços
+  cruzados. **Mesa sempre vazia**: o favo e o fumigador foram testados e o Luigi tirou por poluir.
+- Atrás, à esquerda: **celeiro vermelho desbotado com a bandeira dos EUA na parede**.
+- **Colmeias brancas de madeira na grama**, com pedras em cima das tampas.
+- À direita: **banca de beira de estrada com prateleiras de potes de mel**, cortada pela borda.
+- Campos verdes e céu **nublado com textura**. Luz neutra, sem cast quente.
 
 ### Registro
-Masculino, de alto padrão porém acessível, direto e animado, como quem encostou o carro no
-estacionamento porque precisava falar aquilo agora. **É o avatar de urgência e confidência** do
-roster, e o formato "gravado no carro" já lê como orgânico sozinho.
-
-### ⚠️ O cenário dele é fixo e é o carro
-A proposta original trazia uma cozinha à beira-mar como âncora e o carro como segundo setup.
-**O Luigi aprovou o CARRO como âncora.** A cozinha não existe até ser gerada e aprovada, então
-**não escrever prompt de cozinha para ele** sem gerar e aprovar essa âncora antes.
+Masculino, calmo, caloroso e seguro, de quem sabe porque faz com as próprias mãos. **Autoridade
+por ofício**: o mel e o remédio natural são o trabalho dele, nunca credencial médica.
 
 ---
 
 ## Lynn Parker (ÂNGULOS 2 e 4), FICHA CANÔNICA
 
-Fixada em 2026-09-10. **Âncora aprovada por imagem nesta data.**
+♻️ **Âncora trocada em 2026-09-23 pelo Luigi:** *"agora essa é a imagem do Lynn Parker"*. O Lynn
+virou o **MONGE ZEN negro americano**: foi para o Japão aos 30, viveu décadas num templo de
+montanha (comida simples, horta, monges que passam dos 90) e hoje cuida do próprio jardim de chá
+nos EUA. Mesma regra do Jamie: **a persona intensifica a autoridade de saúde**. A âncora de
+2026-09-10 (apotecário com túnica de linho) foi para
+`producao/_ancoras/historico/lynn_parker_ancora_apotecario_2026-09-10.jpeg` e **não é mais fonte**.
+Histórico dos prompts em `producao/_ancoras/ANCORA_LYNN_PARKER_2026-09-23.md`.
 
 ### 📎 CAMINHO DA ÂNCORA
-`producao/_ancoras/lynn_parker_ancora.jpeg`
-Anexar em praticamente toda geração dele.
+`producao/_ancoras/lynn_parker_ancora.jpeg` (a imagem de 2026-09-23, em cena real, nunca o sheet)
+Anexar em toda geração dele, como referência de identidade, roupa e cenário.
 
-### Traços físicos
+### Traços físicos (da imagem aprovada)
 - Homem negro americano, **por volta dos setenta**, pele marrom média.
-- **Locs brancas prateadas compridas**, presas atrás dos ombros, com duas ou três mechas caindo na
-  frente do ombro direito. Cabelo branco no topo, entradas altas.
+- **Locs brancas prateadas compridas, soltas caindo sobre o peito** (na âncora antiga eram presas
+  atrás). Cabelo branco no topo, entradas altas.
 - **Barba branca cheia e bigode branco**, aparados com capricho.
-- Rosto longo e digno, testa alta, maçãs definidas, **pintas visíveis**, sobrancelhas grisalhas,
-  olhos castanhos escuros, olhar calmo e certo.
-- Porte ereto e firme, ombros retos, o corpo de um velho que nunca parou de se mexer.
-- Pele com textura real, linhas fundas, pés de galinha pesados, pele solta no pescoço.
-- **A idade é o ativo dele.** `no de-aging` e `no skin smoothing` obrigatórios no negative.
+- Rosto longo e digno, **pintas visíveis**, sobrancelhas grisalhas, olhos castanhos escuros e calmos.
+- Porte ereto e enxuto. Pele com textura real, linhas fundas.
+- **A idade é o ativo dele.** `no de-aging` e `no beauty smoothing` obrigatórios no negative.
 
 ### Roupa e acessórios
-- **Túnica de linho BRANCA de gola mandarim**, fechamento assimétrico com botões brancos, comprida
-  até abaixo do quadril. Calça escura.
-- **Sem joia nenhuma, sem cruz.**
+- **Samue cinza-grafite** (roupa de trabalho do monge zen), frente transpassada amarrada do lado,
+  mangas puxadas até o antebraço.
+- **Rakusu marrom escuro** (o pano quadrado do monge ordenado) pendurado num cordão no centro do peito.
+- **Pulseira de contas de madeira escura** no pulso esquerdo.
+- **Sem cruz.**
 
-### Cenário canônico (apotecário dentro de casa)
-- Sentado num **banquinho redondo de madeira**.
-- **Estante de madeira clara do chão ao teto**, cheia de **potes de vidro rotulados** (Echinacea,
-  Valerian, Nettle, Lavender) e **frascos âmbar de vidro escuro** com etiqueta branca.
-- **Pilão e almofariz de pedra cinza** na prateleira à esquerda, com livros de lombada verde e marrom.
-- **Bandeirinha dos EUA em suporte de mesa** na prateleira à esquerda, discreta e em foco.
-- **Pôster anatômico de meridianos de acupuntura** na parede à esquerda.
-- **Janela à direita com persiana**, mostrando uma rua residencial americana comum: casas, gramado,
-  carro estacionado, árvores sem folhas.
-- Luz **neutra de dia nublado** vindo da janela.
-- ⚠️ **O texto do pôster sai errado na geração** (saiu "MERIDIANT"). Nos prompts, descrever como
-  `printed anatomical meridian chart` e **nunca exigir texto legível nele**. O mesmo cuidado vale
-  para os rótulos dos potes: pedir rótulo, não pedir palavra específica.
+### Cenário canônico (jardim de chá zen, ao ar livre)
+- **Mesa de madeira clara, sempre vazia**, no primeiro plano, com as mãos apoiadas na borda.
+- Atrás: **casa de chá de madeira com telhado de telhas escuras**, a **bandeira dos EUA junto à
+  porta** e **cordões de caqui secando (hoshigaki) pendurados no beiral**.
+- **Duas cerejeiras (sakura) em flor rosa** emoldurando a cena. Rosa só como cor das pétalas.
+- À esquerda: **fileira de potes grandes de cerâmica marrom para fermentação**, tampa de madeira e
+  pedra em cima. Caminho de pedras com musgo.
+- Céu **nublado com textura**, luz neutra, sem cast quente. Nada de caligrafia ou texto legível.
 
 ### Registro
-Masculino, ancião, calmo, paciente e quietamente certo, de quem repete o mesmo conselho há quarenta
-anos. **Autoridade por vivência pura**, que é exatamente o que a [[congruencia-matriz]] pede quando o
-claim depende de idade vivida. É o único do roster que pode dizer "em quarenta anos eu vi".
+Masculino, ancião, sereno, pausado e quietamente certo. **Autoridade por disciplina e vivência**:
+o monge que come simples e vive muito. É o único do roster que pode dizer "em quarenta anos eu vi".
+Nunca figura médica.
 
 ---
 
@@ -278,12 +282,12 @@ claim depende de idade vivida. É o único do roster que pode dizer "em quarenta
 |---|---|---|---|
 | Idade | início dos 50 | meados dos 50 | ~70 |
 | Cabelo | do-rag preto | corte baixo grisalho | locs brancas compridas |
-| Barba | comprida e branca no queixo | curta e branca | cheia e branca |
-| Roupa | regata preta | camisa de linho branca | túnica branca de gola mandarim |
-| Joia | corrente de ouro | nenhuma | nenhuma |
-| Cenário | garagem com pegboard | dentro do SUV | apotecário com estante |
-| Bandeira US | em pé na prateleira | adesivo no vidro | em suporte na prateleira |
-| Registro | blue-collar urgente | alto padrão, confidência | ancião, paciente |
+| Barba | cheia grisalha, branca no queixo | curta e branca | cheia e branca |
+| Roupa | camisa grafite aberta sobre regata preta | jaqueta branca de apicultor, óculos no bolso | samue cinza de monge zen com rakusu |
+| Joia | correntes de ouro, relógio, anel, óculos pendurado | nenhuma | pulseira de contas de madeira |
+| Cenário | garagem de OG com lowrider | fazenda com colmeias, celeiro e banca de mel | jardim de chá zen com sakuras |
+| Bandeira US | em pé na prateleira | na parede do celeiro | junto à porta da casa de chá |
+| Registro | blue-collar urgente | apicultor, autoridade por ofício | monge zen, ancião sereno |
 | Comum aos três | homem negro americano 50+, luz neutra de dia, bandeira US discreta e em foco, cara de UGC de celular | | |
 
 ## holistic.trevor (masculino)
@@ -301,9 +305,9 @@ claim depende de idade vivida. É o único do roster que pode dizer "em quarenta
 ## Regras específicas por avatar/prop (síntese)
 - **Melody:** cruz de PRATA. Corrigir pose sentada da foto-âncora.
 - **Brandon:** cruz de OURO (não forçar prata). **Aposentada da FityWell em 2026-09-10.**
-- **Dana Morrison:** do-rag preto, corrente de OURO, SEM cruz, barba branca comprida, garagem.
-- **Jamie Anderson:** camisa de linho branca, ZERO joia, SEM cruz, dentro do SUV parado.
-- **Lynn Parker:** túnica branca de gola mandarim, ZERO joia, SEM cruz, locs brancas, apotecário.
+- **Dana Morrison:** do-rag preto, correntes de OURO, relógio e anel dourados, tatuagens de rosa e mãos em oração, SEM cruz, garagem de OG com lowrider (âncora de 2026-09-23).
+- **Jamie Anderson:** jaqueta branca de apicultor, ZERO joia, SEM cruz, fazenda com colmeias (desde 2026-09-23).
+- **Lynn Parker:** samue cinza de monge zen com rakusu, pulseira de contas, SEM cruz, locs brancas soltas, jardim de chá zen (desde 2026-09-23).
 - **Trevor:** SEM cruz (a menos que peça). Melhor pra cozinha.
 - **Luvas azuis de nitrila:** manter nos vídeos de inspeção de comida (credibilidade de inspetor/lab).
 

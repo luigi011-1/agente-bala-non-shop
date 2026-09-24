@@ -21,13 +21,24 @@ set -euo pipefail
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 destino="$repo_root/memoria"
 
+# Numa worktree (.claude/worktrees/<nome>) a memoria continua registrada no caminho do repo
+# PRINCIPAL, entao o slug sai da raiz dele, achada pelo git-common-dir (2026-09-24).
+raiz_principal="$repo_root"
+if comum="$(git -C "$repo_root" rev-parse --path-format=absolute --git-common-dir 2>/dev/null)"; then
+    raiz_principal="$(dirname "$comum")"
+fi
+
 # O Claude Code deriva o nome da pasta do projeto do caminho: '/' e ' ' viram '-'
-slug="$(echo "$repo_root" | sed 's/[\/ ]/-/g')"
-origem="$HOME/.claude/projects/$slug/memory"
+slug="$(echo "$raiz_principal" | sed 's/[\/ ]/-/g')"
+origem="${MEMORIA_VIVA:-$HOME/.claude/projects/$slug/memory}"
 
 if [ ! -d "$origem" ]; then
-    # fallback: procura qualquer pasta de projeto que contenha um MEMORY.md
-    mapfile -t candidatos < <(find "$HOME/.claude/projects" -maxdepth 2 -name MEMORY.md -path '*/memory/*' 2>/dev/null)
+    # fallback: procura qualquer pasta de projeto que contenha um MEMORY.md.
+    # Sem mapfile: o bash do macOS e o 3.2, que nao tem esse comando.
+    candidatos=()
+    while IFS= read -r linha; do
+        candidatos+=("$linha")
+    done < <(find "$HOME/.claude/projects" -maxdepth 3 -name MEMORY.md -path '*/memory/*' 2>/dev/null)
     if [ "${#candidatos[@]}" -eq 1 ]; then
         origem="$(dirname "${candidatos[0]}")"
         echo "Aviso: caminho derivado nao existia, usando $origem"

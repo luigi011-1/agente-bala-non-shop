@@ -111,12 +111,16 @@ def parse_takes(roteiro):
         corpo = roteiro[m.start():fim]
         head = m.group(2)
         mudo = bool(re.search(r"B-ROLL|MUDO|SEM FALA", head, re.I))
+        # 2026-09-23 (Luigi): o take segue a cena do modelo. Cena curta no modelo = take curto,
+        # marcado no cabecalho; nunca juntar cenas nem cortar frase para chegar a 13 palavras.
+        curta = bool(re.search(r"CENA CURTA", head, re.I))
         fm = RE_FALA_ROT.search(corpo)
         out.append({
             "id": m.group(1),
             "head": head.strip(),
             "fala": norm_fala(fm.group(1)) if fm else None,
             "mudo": mudo,
+            "curta": curta,
             "linha": linha_de(roteiro, m.start()),
         })
     return out
@@ -291,14 +295,22 @@ def c_palavras_por_take(takes):
                 ruim = True
             continue
         n = len(palavras(t["fala"]))
-        if n < 13 or n > 29:
+        if n > 29 or (n < 13 and not t.get("curta")):
             falha("palavras",
                   "%s tem %d palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler."
                   % (t["id"], n), "ROTEIRO.md:%d" % t["linha"])
+            # A mensagem acima e chave da baseline historica; a orientacao nova vai em aviso a parte.
+            if n < 13:
+                aviso("palavras", "%s: se a cena do modelo e curta, marcar CENA CURTA no cabecalho; "
+                      "nunca juntar cenas nem cortar frase para caber" % t["id"],
+                      "ROTEIRO.md:%d" % t["linha"])
             ruim = True
     if not ruim and takes:
-        ok("palavras", "%d takes falados, todos dentro de 13 a 29 palavras"
-           % len([t for t in takes if t["fala"]]))
+        curtas = [t["id"] for t in takes if t["fala"] and t.get("curta")
+                  and len(palavras(t["fala"])) < 13]
+        ok("palavras", "%d takes falados, todos ate 29 palavras%s"
+           % (len([t for t in takes if t["fala"]]),
+              (", cena curta do modelo em " + ", ".join(curtas)) if curtas else ""))
 
 
 def c_fala_literal(takes, videos):
@@ -578,7 +590,8 @@ def c_ref_maiuscula(prompts):
 
 
 PRODUTO_PAT = (r"\bapp\b|\bquiz\b|smartphone|phone screen|app screenshot|mockup"
-               r"|\bbottle\b|supplement|frasco")
+               r"|(?<!water )\bbottle\b|supplement|frasco")
+# "water bottle" e prop de cena (agua da torneira), nunca produto: nao conta (2026-09-24).
 
 
 def c_sem_produto(angulo, kfs):

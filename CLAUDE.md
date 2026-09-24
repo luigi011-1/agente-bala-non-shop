@@ -104,9 +104,10 @@ modelado **com o gancho fiel do modelo** → **aprovação do Luigi** → pacote
 
 1. **`INSTRUÇÕES PARA A MEMÓRIA DO AGENTE — GOOGLE FLOW AI`**, colado INTEIRO no chat, pronto pra
    copiar. Fonte canônica: `producao/_flow/INSTRUCOES_AGENTE_FLOW.md`.
-   Configuração vigente: **a tabela de perfis do próprio arquivo (v12, 2026-09-22) manda.** Clássico
-   (Ângulos 1 e 2): Nano Banana 2 em 9:16, uma imagem final por K__; Veo 3.1 Lite em Lower Priority,
-   8 segundos, uma variação por V__. Auraly: 4 imagens por K__ com seleção manual e 3 variações por V__.
+   Configuração vigente: **a tabela de perfis do próprio arquivo (v14, 2026-09-24) manda.** Clássico
+   (Ângulos 1 e 2): Nano Banana 2 em 9:16, **4 imagens por K__ com seleção manual** (o Luigi apaga 3 e
+   deixa 1); vídeo **só no Omni Flash**, 8 segundos, um único resultado por V__, a partir da imagem que
+   sobrou. Auraly: 4 imagens por K__ com seleção manual e Veo 3.1 Lite com 3 variações por V__.
    ⚠️ **No Ângulo 3 (Auraly) vai TODA VEZ, sem exceção** (Luigi, 2026-09-08). O momento é fixo:
    **logo depois de o Luigi aprovar o roteiro com o gancho fiel (rodada de validação) ou escolher
    os ganchos (rodada de variação), e ANTES do primeiro prompt de imagem.**
