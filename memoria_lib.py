@@ -54,7 +54,24 @@ def localizar_memoria_viva(raiz="."):
             cand = os.path.join(d, "memory")
             if os.path.isdir(cand):
                 return cand
+
+    # Numa worktree (.claude/worktrees/<nome>) a memoria continua registrada no caminho do
+    # repo PRINCIPAL. A raiz dele e o pai do git-common-dir (2026-09-24).
+    principal = _raiz_repo_principal(raiz)
+    if principal and os.path.abspath(principal) != os.path.abspath(raiz):
+        return localizar_memoria_viva(principal)
     return None
+
+
+def _raiz_repo_principal(raiz):
+    import subprocess
+    try:
+        comum = subprocess.run(
+            ["git", "-C", raiz, "rev-parse", "--path-format=absolute", "--git-common-dir"],
+            capture_output=True, text=True, check=True).stdout.strip()
+    except Exception:
+        return None
+    return os.path.dirname(comum) if comum else None
 
 
 # ------------------------------------------------------------------ frontmatter
