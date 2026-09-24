@@ -104,7 +104,7 @@ modelado **com o gancho fiel do modelo** → **aprovação do Luigi** → pacote
 
 1. **`INSTRUÇÕES PARA A MEMÓRIA DO AGENTE — GOOGLE FLOW AI`**, colado INTEIRO no chat, pronto pra
    copiar. Fonte canônica: `producao/_flow/INSTRUCOES_AGENTE_FLOW.md`.
-   Configuração vigente: **a tabela de perfis do próprio arquivo (v14, 2026-09-24) manda.** Clássico
+   Configuração vigente: **a tabela de perfis do próprio arquivo (v15, 2026-09-24) manda.** Clássico
    (Ângulos 1 e 2): Nano Banana 2 em 9:16, **4 imagens por K__ com seleção manual** (o Luigi apaga 3 e
    deixa 1); vídeo **só no Omni Flash**, 8 segundos, um único resultado por V__, a partir da imagem que
    sobrou. Auraly: 4 imagens por K__ com seleção manual e Veo 3.1 Lite com 3 variações por V__.
@@ -145,6 +145,12 @@ SEM instrução de INITIAL FRAME dentro do bloco · SEM configuração de modelo
   não redundante. O mesmo vale no vídeo: nada de `same as previous`.
 - **`REF-CARTA` e `REF-A` não entram no bloco do Flow.** O prop e a segunda pessoa passam a ser
   **descritos por escrito dentro de cada prompt** que os mostra. O anexo é só a âncora.
+  ♻️ **Exceção do MOVIE STYLE (short form e venda, Luigi, 2026-09-23):** cada personagem principal
+  ganha um character sheet `REF-P1`, `REF-P2`..., que **entra** no bloco de imagem (gerado e
+  aprovado antes dos K) e é **anexado** nos K listados no MAPA DE ANEXOS, fora dos blocos. O K
+  continua autossuficiente: descreve cada personagem por escrito também. Workflow em
+  `producao/_swipe_movie_style/PROPOSTA_WORKFLOW_MOVIE_STYLE.md`; executor em
+  `INSTRUCOES_AGENTE_FLOW.md` (seção MOVIE STYLE, desde a v13).
 - **Tabela humana de leitura** (`K01 = coração quebrando`, `K06 = body`) pode existir, mas **sempre
   fora** dos blocos copiáveis. Dentro deles, zero texto auxiliar.
 - **O JSON continua sendo a fonte de verdade INTERNA** em `PROMPTS_IMAGEM.md`, que é o que o linter
@@ -253,7 +259,12 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
 
 ## Regras que quebram a entrega se forem ignoradas
 
-- **8 segundos por take = 13 a 29 palavras.** Contar ANTES de escrever os prompts. Take longo se quebra em fim de frase. **Nunca inventar filler, nunca parafrasear.**
+- **8 segundos por take = 13 a 29 palavras.** Contar ANTES de escrever os prompts. Take longo se quebra em fim de frase. **Nunca inventar filler, nunca parafrasear.** Exceção (Luigi, 2026-09-23): no `formato: short-form`, take de DIÁLOGO com ação não tem piso; o teto de 29 continua.
+- 🔴 **O take segue a CENA do modelo (Luigi, 2026-09-23).** Cada cena do modelo vira o próprio take:
+  **nunca juntar duas cenas num take e nunca cortar frase no meio para caber na faixa.** Cena curta
+  no modelo vira take curto, marcado `CENA CURTA` no cabeçalho do `ROTEIRO.md` (o piso de 13 não
+  vale para ele; o teto de 29 vale sempre). Plano do modelo com mais de 8s se divide só em fim de
+  frase. A frase só atravessa dois takes quando o próprio modelo corta a cena no meio dela.
 - **A fala no prompt é cópia literal do roteiro final.**
 - **Keyword por ângulo: `yes` nos Ângulos 1, 2 e 4, `222` no Ângulo 3 (Auraly).** Nunca a palavra do vídeo original. No Ângulo 4 a keyword é provisória, ver a seção dele.
 - **Zero travessão (`—`)** em copy, roteiro e resposta.

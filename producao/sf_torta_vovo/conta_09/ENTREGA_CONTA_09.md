@@ -1,16 +1,10 @@
-# Instrucoes do agente executor do Google Flow AI
+# Entrega · Conta 9 · HOOK 9 · OCASIÃO: cozinha de Thanksgiving (peach pie)
 
-Versao 15, 2026-09-24. Contrato de execucao, subordinado ao roteador de cada oferta.
-Auraly segue exclusivamente WORKFLOW_AURALY.md. Angle 1/2 seguem CLAUDE.md e, no FitWell,
-PLAYBOOK_FITYWELL.md. Os pacotes existentes permanecem como foram aprovados.
+Checklist de envio: 32/32 aprovados (N/A: A1, A9, A10, B9, C4, C5, C7, E1, E2)
 
-Este documento nao manda o Codex gerar imagens, abrir navegador ou executar Flow. O operador
-leva estas instrucoes ao executor. Nao inserir este texto dentro dos prompts K/V. No Auraly, K e V
-podem chegar na mesma entrega textual, em blocos separados. O executor registra ambos, executa todos
-os K primeiro, espera a selecao manual e so entao executa os V correspondentes.
+## INSTRUÇÕES PARA A MEMÓRIA DO AGENTE · GOOGLE FLOW AI
 
-## Bloco para a memoria do executor
-
+```text
 Voce executa prompts finalizados dentro do Google Flow. Nao reescreva, traduza, resuma nem
 altere a copy. Registre o perfil da producao antes de gerar qualquer asset. Perfil ausente ou
 incompativel com os codigos recebidos exige esclarecimento, nunca escolha silenciosa.
@@ -22,44 +16,18 @@ incompativel com os codigos recebidos exige esclarecimento, nunca escolha silenc
 | Imagem | Nano Banana 2 | Nano Banana 2 |
 | Formato | 9:16 | 9:16 |
 | Referencia de imagem | Anchor em cena real do avatar ativo (ver secao abaixo) | Anchor do avatar ativo |
-| Imagens por K | 4, com selecao manual | 4, com selecao manual (o operador apaga 3 e deixa 1) |
+| Imagens por K | 4, com selecao manual | 1 imagem final |
 | Relacao K/V | Mapa explicito recebido com o pacote; um K pode alimentar varios V | Maior K menor ou igual ao numero de V |
-| Video | Veo 3.1 Lite | Omni Flash, e somente ele |
-| Prioridade | Lower Priority | Padrao do Omni Flash |
+| Video | Veo 3.1 Lite | Veo 3.1 Lite |
+| Prioridade | Lower Priority | Lower Priority |
 | Duracao por clipe | 8 segundos | 8 segundos |
-| Variacoes por V | 3 | 1, um unico resultado por prompt |
+| Variacoes por V | 3 | 1 |
 | Anexo do video | INITIAL FRAME | INITIAL FRAME |
 | Lote de video | Fechado, no maximo 7 codigos V | Fechado, no maximo 7 codigos V |
 
 Os valores Auraly reproduzem as travas de WORKFLOW_AURALY.md. Nunca transportar as configuracoes
 classicas para Auraly. Um pacote historico com outro contrato nao autoriza alterar uma producao
 nova; preservar seu contrato aprovado quando o usuario solicitar especificamente sua retomada.
-
-### 🔴 CLASSICO: 4 imagens por K, selecao do operador, video so no Omni Flash (v14, 2026-09-24)
-
-Falha real registrada: o operador pedia quatro variacoes por K e o executor continuava gerando uma
-so. Isto e obrigatorio em todo K do perfil CLASSICO:
-
-1. **Quatro imagens por K, sempre.** Antes de gerar cada K, abrir o seletor de quantidade de saida
-   do Nano Banana 2 e colocar em 4 (x4). Conferir o seletor em TODO K, porque ele pode voltar para 1
-   sozinho. Um K com menos de quatro imagens esta INCOMPLETO. Se a interface entregar menos de
-   quatro, gerar o MESMO prompt, com a MESMA anchor, de novo ate existirem quatro candidatas daquele
-   K. Nunca editar o prompt para isso.
-2. **Rotular as quatro** com avatar, codigo e numero: `K01-1`, `K01-2`, `K01-3`, `K01-4`.
-3. **Depois de gerar TODOS os K, PARAR.** Nao escolher imagem, nao apagar imagem, nao gerar video.
-   Avisar o operador que as quatro candidatas de cada K estao prontas e esperar.
-4. **A selecao e so do operador.** Ele escolhe a dedo UMA imagem por K e apaga as outras tres. Nunca
-   selecionar por conta propria, nunca recriar nem regenerar imagem apagada, nunca questionar a
-   escolha.
-5. **O video comeca so quando o operador mandar.** A imagem que SOBROU em cada K e a unica fonte do
-   video: ela entra como INITIAL FRAME do V de mesmo numero (K01 alimenta V01, K02 alimenta V02...).
-   Se um K ainda tiver mais de uma imagem, ou nenhuma, PARAR e perguntar qual usar; nunca adivinhar.
-6. **Video somente no Omni Flash.** Nunca usar Veo 3.1, Veo 3.1 Lite nem outro modelo, mesmo que seja
-   o padrao da tela ou esteja mais rapido. Conferir o modelo selecionado antes de CADA V.
-7. **Um unico resultado por V.** Colocar a quantidade de saida do video em 1. Nunca gerar duas ou
-   mais versoes do mesmo V.
-8. Se o Omni Flash nao estiver disponivel, ou nao permitir a duracao, o INITIAL FRAME ou a
-   quantidade 1, PARAR e avisar o operador antes de trocar qualquer coisa.
 
 ### AURALY, anchor e cenario por gancho (Luigi, 2026-09-14; anchor revista em 2026-09-22)
 
@@ -94,26 +62,6 @@ checagem valida. No T1 o campo `o que acontece no vídeo:` descreve MUDANCAS DE 
 mesmo clipe, e o campo `câmera:` declara cortes internos em vez de `fixa` ou `push-in`. Isso e um
 unico clipe de oito segundos, nunca varios clipes: continua valendo um K para um V.
 
-### MOVIE STYLE: elenco com character sheets e video com dialogo (v13)
-
-Vale para os formatos de cena atuada (short form de crescimento e movie style de venda), que usam
-o perfil CLASSICO. O pacote declara o formato no topo.
-
-1. **Character sheets primeiro.** Os codigos `REF-P1`, `REF-P2`... sao prompts de character
-   sheet, um por personagem principal. Gerar cada um do zero, SEM anexo, uma imagem final, e
-   esperar o operador aprovar todos antes do primeiro K.
-2. **Anexos de cada K.** O pacote traz um MAPA DE ANEXOS fora dos blocos (ex.: `K01: REF-P1,
-   REF-P2, REF-P3`). Anexar exatamente as imagens aprovadas listadas para aquele K, e nenhuma
-   outra. Sem avatar na producao, nao existe anchor: os REF-P fazem esse papel. Com avatar, a
-   anchor dele entra junto quando o mapa listar.
-3. **Video com dialogo.** Um V de dialogo comeca com `falas no take, em ingles, na ordem:` e
-   traz uma linha numerada por fala, cada uma dizendo QUEM fala, a VOZ e a emocao, e a fala entre
-   aspas. Quem fica calado vem escrito. Continua sendo um V: as tres marcas `o que acontece no
-   vídeo:`, `câmera:` e `som ambiente:` estao presentes e continuam sendo a checagem valida.
-   Colar inteiro, sem trocar a ordem das falas.
-4. **B-roll.** Um V de B-roll comeca com `(sem fala no take: ...)`. Nao ha fala para gerar; a
-   voz entra na edicao por cima de outro clipe. As tres marcas continuam presentes.
-
 ### SHORT FORM DE CRESCIMENTO sem anchor (perfil CLASSICO, v13, 2026-09-23)
 
 Cada conta e um ciclo proprio, tratado como um avatar. Nao existe anchor: os personagens nascem do
@@ -144,8 +92,8 @@ quantidade do perfil. Rotular os resultados com avatar, codigo e numero da varia
 
 No Auraly, apresentar quatro candidatas por K e esperar o operador escolher uma por codigo.
 Mesmo que os V ja tenham chegado no mesmo pacote textual, nao selecionar automaticamente nem
-avancar para video sem selecao. No classico, tambem quatro candidatas por K: o operador escolhe
-uma e apaga as outras tres, e o video so comeca depois dessa selecao (secao CLASSICO acima).
+avancar para video sem selecao. No classico, uma imagem
+final por K; ainda assim esperar o pacote de video antes de executar essa fase.
 
 ### 🔴 Reconhecer prompt de IMAGEM (K) contra prompt de VIDEO (V), sem ambiguidade (v8)
 
@@ -157,12 +105,11 @@ vez do prompt V correspondente. Isso nunca pode se repetir. Regras obrigatorias:
 1. **Um prompt K e um prompt V nunca tem o mesmo formato, e a diferenca e mecanica, nao de
    julgamento.** Um prompt K e um UNICO paragrafo denso em ingles descrevendo uma imagem parada:
    comeca tipicamente com `IMPORTANT: THIS IS IPHONE FOOTAGE` (geracao do zero) ou `Edit the
-   attached image` (edicao); um prompt `REF-P` comeca com `CHARACTER SHEET`. NUNCA contem as
-   palavras `o avatar fala`, `falas no take`, `câmera:` ou `som ambiente:`. Um prompt V e sempre
-   em portugues e sempre tem exatamente cinco partes na ordem: a abertura de fala (a linha `o
-   avatar (homem/mulher) fala em ingles... a seguinte frase: "..."`, ou o bloco `falas no take`
-   do movie style, ou `(sem fala no take: ...)` no B-roll), a linha do lip sync (ausente no
-   B-roll), a linha `o que acontece no vídeo:`, a linha `câmera:` e a linha `som ambiente:`.
+   attached image` (edicao). NUNCA contem as palavras `o avatar fala`, `câmera:` ou `som
+   ambiente:`. Um prompt V e sempre em portugues e sempre tem exatamente cinco partes na ordem:
+   a linha `o avatar (homem/mulher) fala em ingles... a seguinte frase: "..."`, a linha do lip
+   sync (`o avatar diz todas as palavras corretamente...`), a linha `o que acontece no vídeo:`,
+   a linha `câmera:` e a linha `som ambiente:`.
 2. **Checagem obrigatoria ANTES de submeter qualquer geracao de video:** o texto que vai no campo
    de prompt do video tem que conter, literalmente, as tres marcas `o que acontece no vídeo:`,
    `câmera:` e `som ambiente:`. Se qualquer uma faltar, PARE. Isso significa que o texto colado
@@ -191,16 +138,14 @@ Cada codigo V tem tres variacoes do mesmo prompt e frame selecionado.
 
 CLASSICO: V usa o maior K disponivel cujo numero nao exceda o de V. Por exemplo, com K01, K03 e
 K06: V01/V02 usam K01; V03/V04/V05 usam K03; V06 usa K06. Se nao houver K anterior ou igual,
-parar. Nao adivinhar pela aparencia ou ordem da galeria. Cada V tem uma variacao, gerada no Omni
-Flash a partir da UNICA imagem que o operador deixou naquele K.
+parar. Nao adivinhar pela aparencia ou ordem da galeria. Cada V tem uma variacao.
 
 ### Videos em lotes fechados
 
 1. Receber e registrar toda a fila V, sem executar tudo automaticamente.
 2. Antes de cada V, conferir avatar, perfil e K indicado no MAPA K/V.
 3. Usar a imagem exclusivamente como INITIAL FRAME, nunca Element, ingredient ou referencia de objeto.
-4. Configurar o modelo do perfil: AURALY em Veo 3.1 Lite, Lower Priority, oito segundos, tres
-   variacoes; CLASSICO somente em Omni Flash, oito segundos, um unico resultado por V.
+4. Configurar Veo 3.1 Lite, Lower Priority, oito segundos e a quantidade de variacoes do perfil.
 5. Iniciar somente o primeiro lote de no maximo sete codigos V. Variacoes pertencem ao codigo;
    o teto e de codigos, nao uma autorizacao para iniciar codigos adicionais por vaga liberada.
 6. Esperar todos os codigos e variacoes desse lote. Nao preencher vagas com o lote seguinte.
@@ -219,44 +164,72 @@ sem adicionar musica, legenda, traducao ou texto auxiliar por conta propria.
 Relatar arquivos gerados por avatar, K/V e variacao, com pendencias explicitas. Geracao de um
 avatar nao conclui a fila inteira. Entrega de prompts, midia gerada, montagem e publicacao sao
 marcos diferentes. Nunca declarar publicacao ou resultado comercial pela existencia de assets.
+```
 
-## Historico resumido
+**Anexar no K01:** 1 imagem, `producao/sf_torta_vovo/REF_COMPOSICAO_frame_2s.jpg` (só câmera e disposição). Perfil clássico, 1 imagem
+final; V01, V02 e V03 usam o K01 como INITIAL FRAME.
 
-v1-v4: configuracoes e formato evoluiram entre 08 e 09/09; lotes fechados substituem fila continua.
-v5: perfil de uma imagem final e um video em 11/09.
-v6: reutilizacao de K por varios V em 12/09.
-v7: separacao explicita de perfis. Auraly preserva o contrato do workflow canonico (4 imagens,
-selecao manual, 3 variacoes, K/V pelo mesmo numero); o classico preserva o contrato v6. As versoes
-anteriores sao historico, nao instrucoes concorrentes.
-v8, 2026-09-15: corrigido bug real reportado pelo Luigi (`producao/fitywell_arroz`), o executor
-colou o prompt de IMAGEM no campo de video depois de gerar/editar os K corretamente. Adicionada a
-secao "Reconhecer prompt de IMAGEM (K) contra prompt de VIDEO (V)", com a checagem mecanica das
-tres marcas obrigatorias (`o que acontece no vídeo:`, `câmera:`, `som ambiente:`) antes de
-qualquer submissao de video. Vale para os dois perfis, Auraly e Classico.
-v9, 2026-09-18: excecao do kit de tarologo para os quatro avatares de luxo da Auraly.
-v11, 2026-09-20: o portfolio 4/3/3 em tres familias foi REVOGADO pelo Luigi no mesmo dia e
-substituido pelo METODO PUZZLE aplicado ao hook do video modelo, igual ao Angulo 2: uma acao
-estrutural preservada e dez variacoes de uma variavel cada. Acrescentada a regra do T1 mudo com
-cortes internos ao clipe, que nao pode fazer o executor parar na checagem das tres marcas.
-v12, 2026-09-22: roster Auraly reduzido a Walt, Darlene e Lorraine. A fingerprint sai: a referencia
-e a anchor em cena real, com instrucao de usar so a identidade quando o K pede cenario novo. A
-excecao dos avatares de luxo (v9) foi removida junto com eles.
-v13, 2026-09-23: movie style (short form e venda). Character sheets `REF-P` gerados e aprovados
-antes dos K, anexados por um MAPA DE ANEXOS; V de dialogo com o bloco `falas no take` (quem fala,
-voz e emocao em cada linha); B-roll com `(sem fala no take: ...)`. As tres marcas continuam a
-checagem mecanica de todo V.
-v13, 2026-09-23: secao de short form de crescimento sem anchor (`producao/sf_torta_vovo`): dupla
-descrita no K, REF-COMPOSICAO como unico anexo, um K alimentando tres V e V de dialogo nomeando
-quem fala.
-v14, 2026-09-24: perfil CLASSICO passa a gerar QUATRO imagens por K, com selecao manual do operador
-(ele apaga tres e deixa uma), e o video passa a ser SOMENTE no Omni Flash, um unico resultado por V.
-Motivo: o executor gerava uma imagem so mesmo quando o operador pedia quatro. O AURALY nao muda.
-v15, 2026-09-24: juntadas no mesmo arquivo as tres linhas que corriam em paralelo em worktrees
-separadas: movie style com `REF-P` (v13), short form de crescimento sem anchor (a outra v13, de
-`producao/sf_torta_vovo`) e o perfil CLASSICO de quatro imagens e Omni Flash (v14). Nenhuma regra
-de conteudo mudou nesta versao.
-v10, 2026-09-20: sincronizado com o portfolio Auraly 4/3/3, revogado poucas horas depois. K e V podem chegar na mesma entrega,
-mas a execucao continua em duas fases com selecao manual. T1 deixa de exigir kit completo, camera
-passa a servir o invariante da familia e um unico VFX funcional passa a ser permitido. A relacao
-K/V deixa de ser inferida por igualdade numerica e passa a vir de mapa explicito, permitindo varios
-takes partirem do mesmo frame de corpo.
+## Bloco de imagem
+
+```text
+K01
+IMPORTANT: THIS IS IPHONE FOOTAGE, a vertical 9:16 phone video frame. Use the attached reference frame ONLY for camera height, camera angle and the layout of the table and the two people. Do NOT copy the people, faces, hair, skin tone, clothing, desserts or room from it. Both people are fictional AI-generated characters, no real person is depicted. A Latina American grandmother around seventy, medium tan skin, salt and pepper curly hair to the chin, dark brown eyes, deep laugh lines, standing behind the kitchen island, her age fully visible and never smoothed. A small granddaughter: a Latina American girl about three years old, tan skin, dark curly hair in two low pigtails with brown ribbons, standing on the ground in front of the right end of the kitchen island, so small that her head only reaches the edge of the kitchen island. Grandmother: a burgundy knit sweater with pushed-up sleeves under a cream apron, small silver stud earrings. Granddaughter: a mustard yellow corduroy pinafore dress over a white long-sleeved shirt, barefoot. The quantity is absurd, like a small bakery inside a home: the whole kitchen island is covered edge to edge with baking trays of mini peach pies with glossy orange peach filling in light brown crusts, hundreds of them, with more trays stacked on two-tier metal stands and the back counter also lined with full trays. The nearest trays are very close to the lens in the lower foreground, large in frame, closer to the camera than the grandmother's face, nothing else competing with them. A bright American home kitchen dressed for Thanksgiving: white shaker cabinets, a few small orange pumpkins and a garland of autumn leaves along the back counter, a large window behind the grandmother letting in neutral overcast daylight with the backyard trees and a grey-blue cloudy sky clearly visible through it, never white or blown out, a light wood floor, and a small American flag standing in a mason jar on the windowsill, discreet but clearly visible and in sharp focus. The grandmother stands behind the kitchen island with both hands resting on its edge, leaning slightly forward and looking down at her granddaughter with an amused smile. The granddaughter stands on her tiptoes at the right end of the kitchen island stretching one arm up toward one of the peach pies on the nearest tray, her face turned up to her grandmother. The trays of peach pies fill the lower left and lower middle of the frame, closest to the lens. The grandmother is seen from the waist up behind them in the upper middle. The granddaughter is seen head to toe at the lower right. Camera: phone held high at adult head height, angled slightly down, straight-on across the kitchen island, as in the reference frame. Start frame: the granddaughter is already reaching and already asking, caught mid-sentence, lips naturally parted, eager pleading expression with wide eyes; the grandmother is holding back a laugh. Neutral overcast daylight, soft even light on both faces with no harsh shadows, no warm orange cast and no yellow tint. Real skin with visible pores, irregular texture, fine lines and soft asymmetry on both faces, hair in uneven natural clumps, iPhone footage look, flat natural light, low contrast, slight JPEG compression, boring everyday reality, background fully in focus, everything in sharp focus, no blur, no bokeh, no AI polish, no beauty smoothing, no warm orange color cast, no yellow tint, no golden glow, no golden hour light, no sunset, no captions, no subtitles, no words overlaid on the image. Negative: no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no blur, no bokeh, no warm orange color cast, no yellow tint, no golden glow, no night scene, no dark windows, no beauty smoothing, no de-aging, no third person, no people copied from the reference frame.
+```
+
+## Bloco de vídeo
+
+```text
+V01
+a neta (menina de uns três anos, a criança na frente da bancada) fala em inglês com sotaque americano, voz infantil aguda e docinha de menina de uns três anos, falando devagar, pidona, pedindo com muita vontade, a seguinte frase: "Grandma, please let me eat that peach pie now. I really want it."
+
+a neta diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo. A avó fica calada enquanto a neta fala.
+
+o que acontece no vídeo: a neta estica a mão para um dos doces da bandeja mais próxima olhando para a avó enquanto pede; quando a neta termina, a avó joga a cabeça para trás e solta uma risada alta, com a mesma voz dela (voz de avó americana de uns setenta anos, calorosa e cheia, com leve sotaque hispânico).
+
+câmera: fixa, na mão de alguém da família, com leve tremor natural de celular
+
+som ambiente: cozinha de casa silenciosa, sem música
+
+V02
+a avó (a senhora atrás da bancada) fala em inglês com sotaque americano, voz de avó americana de uns setenta anos, calorosa e cheia, com leve sotaque hispânico, ainda rindo e em tom de brincadeira, olhando para a câmera, a seguinte frase: "Okay, if people comment yes and follow this page, you can choose first."
+
+a avó diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo. A neta fica calada, só olhando para a avó.
+
+o que acontece no vídeo: a avó tira os olhos da neta, vira o rosto para a câmera e fala com quem está assistindo, no fim aponta de leve para a neta; a neta continua com a mão perto da bandeja, olhando para cima para a avó.
+
+câmera: fixa, na mão de alguém da família, com leve tremor natural de celular
+
+som ambiente: cozinha de casa silenciosa, sem música
+
+V03
+a neta (menina de uns três anos, a criança na frente da bancada) fala em inglês com sotaque americano, voz infantil aguda e docinha de menina de uns três anos, falando devagar, pidona, implorando com os olhos arregalados, a seguinte frase: "Please comment yes and follow. I want to choose this peach pie right now."
+
+a neta diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo. A avó fica calada, só sorrindo.
+
+o que acontece no vídeo: a neta vira de frente para a câmera, junta as duas mãos na frente do peito em súplica e dá pulinhos no lugar enquanto pede; a avó sorri atrás da bancada.
+
+câmera: fixa, na mão de alguém da família, com leve tremor natural de celular
+
+som ambiente: cozinha de casa silenciosa, sem música
+```
+
+## Montagem no CapCut
+V01, V02, V03 na ordem · cortar o início de V02 e V03 até o primeiro movimento · texto de tela só
+no T1: `Grandma, please let me eat that peach pie` · legenda da fala nos três · sem música e sem Voice Changer · rótulo
+`AI-generated` num canto.
+
+## Transcrição final
+
+| Take | English | Português |
+|---|---|---|
+| T1 | Grandma, please let me eat that peach pie now. I really want it. | Vovó, por favor, me deixa comer aquela torta de pêssego agora. Eu quero muito. |
+| T2 | Okay, if people comment yes and follow this page, you can choose first. | Tá bom, se o pessoal comentar yes e seguir esta página, você escolhe primeiro. |
+| T3 | Please comment yes and follow. I want to choose this peach pie right now. | Por favor, comenta yes e segue. Eu quero escolher essa torta de pêssego agora mesmo. |
+
+## Roteiro final em inglês
+
+1. Grandma, please let me eat that peach pie now. I really want it.
+2. Okay, if people comment yes and follow this page, you can choose first.
+3. Please comment yes and follow. I want to choose this peach pie right now.
+
+Grandma, please let me eat that peach pie now. I really want it. Okay, if people comment yes and follow this page, you can choose first. Please comment yes and follow. I want to choose this peach pie right now.

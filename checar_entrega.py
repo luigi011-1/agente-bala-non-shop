@@ -100,6 +100,10 @@ def palavras(s):
 RE_TAKE = re.compile(r"^###\s+(T\d+)\s*[·|\-]\s*(.*)$", re.M)
 # Aceita rotulo de locutor nos videos de dialogo: > MULHER: "..." / > HOMEM IDOSO: "..."
 RE_FALA_ROT = re.compile(r'^>\s*(?:[A-ZÀ-Ú][A-ZÀ-Ú0-9 ª\.]{1,24}:\s*)?"(.+?)"\s*$', re.M | re.S)
+# Movie style / short form (2026-09-23): take de DIALOGO tem varias linhas, todas com rotulo.
+# So junta quando TODAS as linhas do take tem rotulo, para nao mudar roteiro antigo.
+RE_FALA_DIALOGO = re.compile(r'^>\s*([A-ZÀ-Ú][A-ZÀ-Ú0-9 ª\.]{1,24}):\s*"(.+?)"\s*$', re.M)
+RE_FALA_QUALQUER = re.compile(r'^>\s*.*"', re.M)
 
 
 def parse_takes(roteiro):
@@ -115,10 +119,15 @@ def parse_takes(roteiro):
         # marcado no cabecalho; nunca juntar cenas nem cortar frase para chegar a 13 palavras.
         curta = bool(re.search(r"CENA CURTA", head, re.I))
         fm = RE_FALA_ROT.search(corpo)
+        fala = norm_fala(fm.group(1)) if fm else None
+        dial = RE_FALA_DIALOGO.findall(corpo)
+        if len(dial) >= 2 and len(dial) == len(RE_FALA_QUALQUER.findall(corpo)):
+            fala = norm_fala(" ".join(norm_fala(q) for _, q in dial))
         out.append({
             "id": m.group(1),
             "head": head.strip(),
-            "fala": norm_fala(fm.group(1)) if fm else None,
+            "fala": fala,
+            "falantes": [r.strip() for r, _ in dial],
             "mudo": mudo,
             "curta": curta,
             "linha": linha_de(roteiro, m.start()),
@@ -176,6 +185,10 @@ def fala_do_bloco(bloco):
         return None, False
     if re.search(r"sem fala no take|voz-?over|voz off", bloco, re.I):
         return None, True
+    if re.search(r"^falas no take", bloco, re.M | re.I):
+        # V de dialogo (2026-09-23): uma linha numerada por fala, na ordem do roteiro
+        qs = re.findall(r'^\s*\d+\.\s.*?"(.+?)"\s*$', bloco, re.M)
+        return (norm_fala(" ".join(norm_fala(q) for q in qs)) if qs else None), False
     m = re.search(r'a seguinte frase:\s*"(.+?)"', bloco, re.S)
     if not m:
         m = re.search(r'"(.{15,})"', bloco, re.S)
@@ -285,7 +298,10 @@ def c_keyword(angulo, arquivos, takes, roteiro_txt=""):
                   % (t["id"], proibida, angulo, esperada), "ROTEIRO.md:%d" % t["linha"])
 
 
-def c_palavras_por_take(takes):
+def c_palavras_por_take(takes, roteiro_txt=""):
+    """13 a 29 palavras por take. Excecao (Luigi, 2026-09-23): no 'formato: short-form', take de
+    DIALOGO com acao nao tem piso, porque o tempo e acao e reacao. O teto de 29 continua."""
+    short_form = bool(re.search(r"^formato:\s*short-form\s*$", (roteiro_txt or "")[:600], re.M | re.I))
     ruim = False
     for t in takes:
         if t["fala"] is None:
@@ -295,7 +311,8 @@ def c_palavras_por_take(takes):
                 ruim = True
             continue
         n = len(palavras(t["fala"]))
-        if n > 29 or (n < 13 and not t.get("curta")):
+        sem_piso = t.get("curta") or (short_form and re.search(r"DI[AÁ]LOGO", t["head"], re.I))
+        if n > 29 or (n < 13 and not sem_piso):
             falha("palavras",
                   "%s tem %d palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler."
                   % (t["id"], n), "ROTEIRO.md:%d" % t["linha"])
@@ -308,9 +325,10 @@ def c_palavras_por_take(takes):
     if not ruim and takes:
         curtas = [t["id"] for t in takes if t["fala"] and t.get("curta")
                   and len(palavras(t["fala"])) < 13]
-        ok("palavras", "%d takes falados, todos ate 29 palavras%s"
+        ok("palavras", "%d takes falados, todos ate 29 palavras%s%s"
            % (len([t for t in takes if t["fala"]]),
-              (", cena curta do modelo em " + ", ".join(curtas)) if curtas else ""))
+              (", cena curta do modelo em " + ", ".join(curtas)) if curtas else "",
+              " (short form: DIALOGO sem piso, teto 29)" if short_form else ""))
 
 
 def c_fala_literal(takes, videos):
@@ -645,6 +663,14 @@ def c_blocos_video(videos):
         if not mudo and not re.search(r"lip sync", b, re.I):
             falha("blocos-video", "%s sem a trava de lip sync" % v["id"], loc)
             ruim = True
+        # Checklist C2 (Luigi, 2026-09-23): no V de dialogo, toda linha de fala descreve a voz
+        # de quem fala. Sem Voice Changer, e o prompt que segura a voz de cada personagem.
+        if re.search(r"^falas no take", b, re.M | re.I):
+            for ln in re.findall(r'^\s*\d+\..*?"', b, re.M):
+                if not re.search(r"\bvoz\b", ln, re.I):
+                    falha("blocos-video", "%s tem fala sem descricao de voz: %s"
+                          % (v["id"], ln.strip()[:70]), loc)
+                    ruim = True
         # so vale dentro de "o que acontece no video". Na linha "camera:" falar de
         # enquadramento e legitimo ("fixa no enquadramento" = camera estavel), e o
         # proprio gabarito faz isso.
@@ -1151,7 +1177,7 @@ def checar_auraly(pasta, roteiro):
 
     c_travessao(arquivos, takes)
     c_keyword(3, arquivos, takes)
-    c_palavras_por_take(takes)
+    c_palavras_por_take(takes, roteiro or "")
     c_secoes_auraly(roteiro)
     checkpoint = ler(os.path.join(pasta, "CHECKPOINT.md")) or ""
     modo = objetivo(roteiro or "", checkpoint)
@@ -1254,7 +1280,7 @@ def checar(pasta):
 
     c_travessao(arquivos, takes)
     c_keyword(angulo, arquivos, takes, roteiro or "")
-    c_palavras_por_take(takes)
+    c_palavras_por_take(takes, roteiro or "")
     c_fala_literal(takes, videos)
     c_json_valido(kfs)
     c_bandeira(kfs)

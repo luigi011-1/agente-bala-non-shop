@@ -1,0 +1,549 @@
+# Short form · Madrasta e o frango | Ângulo 2 (FityWell) | Pacote de Prompts
+
+formato: short-form
+tipo: crescimento
+
+Vídeo modelo: `Muszynski Venetia_Cheguei em casa mais ced_2855227928192545_1080p_20260923.mp4` (25,15s)
+
+Âncora: **nenhuma** (short form sem avatar fixo). A identidade de cada personagem vem do seu
+character sheet `REF-P`, gerado e aprovado antes de qualquer K.
+
+Funil: nenhum. Card `follow to part 2` na edição.
+
+Gerado por `gerar_pacote.py` (fonte única dos prompts). Nunca editar este arquivo à mão: editar o
+gerador e rodar de novo.
+
+---
+
+## Índice de geração
+
+| Ordem | Código | Take | Anexar | Ação de geração |
+|---|---|---|---|---|
+| 1 | REF-P1 | | nada | GERAR DO ZERO. Character sheet da MADRASTA |
+| 2 | REF-P2 | | nada | GERAR DO ZERO. Character sheet do PAI |
+| 3 | REF-P3 | | nada | GERAR DO ZERO. Character sheet da EMILY |
+| 4 | REF-P4 | | nada | GERAR DO ZERO. Character sheet do FILHO |
+| 5 | K01 | T1 | REF-P3, REF-P1, REF-P2 + composição | GERAR DO ZERO. Emily estica a mão para o frango, o pai na porta |
+| 6 | K02 | T2 | REF-P2, REF-P3 + composição | GERAR DO ZERO. O pai segura Emily chorando, marcas na bochecha |
+| 7 | K03 | T3 | REF-P2, REF-P1 + composição | GERAR DO ZERO. Inserto: o prato de frango e a tigela de arroz |
+| 8 | K04 | T4 | REF-P1, REF-P2 + composição | GERAR DO ZERO. A madrasta de braços cruzados |
+| 9 | K05 | T5 | REF-P4, REF-P1, REF-P2 + composição | GERAR DO ZERO. O filho encara a mãe do outro lado da ilha |
+| 10 | K06 | T6 | REF-P4 + composição | GERAR DO ZERO. Inserto: a mão tira o iPhone do bolso |
+| 11 | K07 | T7 | REF-P1 + composição | GERAR DO ZERO. Close do rosto travado da madrasta |
+
+Regra de bolso: **os `REF-P` saem primeiro e sem anexo. Cada K anexa os `REF-P` aprovados, na
+ordem da tabela, e por último o frame de composição do modelo.** Todo K é GERAR DO ZERO a partir
+dos sheets; nenhum K é editado de outro K, então não existe cascata.
+
+---
+
+## Fichas do elenco e de voz
+
+| Código | Personagem | Aparência | Ficha de voz (igual em todo V) |
+|---|---|---|---|
+| REF-P1 | MADRASTA | branca, ~40, loira platinada de coque baixo, sardas leves, blusa de seda creme, calça preta, brincos de ouro pequenos | voz feminina de uns quarenta anos, média-aguda, fria e cortante, sotaque americano padrão |
+| REF-P2 | PAI | negro, ~42, barba curta, cabelo bem curto, camisa social azul-marinho, relógio prateado | voz masculina grave de barítono, uns quarenta anos, sotaque americano de homem negro |
+| REF-P3 | EMILY | negra, ~6, marias-chiquinhas com elásticos rosa, vestido rosa de babados | voz de menina de seis anos, fina e aguda, sotaque americano |
+| REF-P4 | FILHO | negro, ~8, cabelo raspado, camisa oxford azul-clara, calça cáqui, cinto marrom, iPhone azul no bolso | voz de menino de oito anos, clara e ainda infantil, sotaque americano |
+
+A emoção muda a cada fala; o timbre não muda nunca (checklist C2).
+
+---
+
+## Trava de identidade e continuidade
+
+- Os quatro personagens saem **sempre** dos seus `REF-P`, com a mesma roupa, o mesmo cabelo e os
+  mesmos acessórios em todos os K. Nada de troca de figurino.
+- A MADRASTA mantém o coque baixo e a blusa creme; o PAI, o relógio prateado no pulso esquerdo;
+  EMILY, os elásticos rosa; o FILHO, o iPhone azul no bolso direito.
+- **As marcas na bochecha de Emily só existem a partir do K02.** No `REF-P3` e no K01 o rosto dela
+  está limpo.
+- Cenário único, igual em todos os K: cozinha americana branca, ilha de bancada cinza, porta para o
+  corredor ao fundo, janela sobre a pia com céu nublado, **ímã de bandeira dos EUA na geladeira**.
+- Luz neutra de dia nublado, sem tom quente, tudo em foco.
+- Nenhum rosto pode repetir o do vídeo modelo nem o de outra conta (checklist B8). O frame de
+  composição serve só para posição de câmera e das pessoas.
+
+## Trava do prop herói
+
+```text
+A white plate piled high with golden fried chicken pieces and, right next to it, a small grey bowl of
+plain cold white rice, on the light grey quartz countertop of the kitchen island, very close to the
+lens in the lower foreground, large in frame, closer to the camera than any face.
+```
+
+É a prova do motivo banal (frango para o filho dela, arroz frio para a filha dele). Aparece em K01,
+K02, K03, K04 e K05.
+
+## Trava da 2ª pessoa (REF-P, character sheets)
+
+Os quatro personagens são principais, porque todos aparecem em mais de um clipe ou precisam ser
+reconhecidos entre cenas. Não há figurante nem personagem de uma aparição só. **Gerar os quatro
+`REF-P` e aprovar antes do primeiro K.**
+
+---
+
+# Prompts de imagem
+
+## REF-P1 · MADRASTA · CHARACTER SHEET · GERAR DO ZERO
+
+> ### 📎 ANEXAR: **NENHUMA IMAGEM**
+>
+> ### 🆕 GERAR DO ZERO, aprovar antes de qualquer K
+
+```json
+{
+  "shot_id": "REF-P1_character_sheet_madrasta",
+  "fiction_note": "This is a fictional AI-generated character, no real person is depicted.",
+  "sheet_layout": "CHARACTER SHEET of ONE person on a plain light grey wall background: three full-body views side by side (front, three-quarter and profile) in the lower two thirds, and a large front close-up of the face across the top third. The same person, the same clothes and the same hair in every view.",
+  "identity_main": "The stepmother: a white American woman around forty, slim, platinum blonde hair pulled back into a low neat bun, pale skin with light freckles, light blue eyes, a thin straight nose and thin lips, fine lines around the eyes, wearing a cream silk long-sleeve button-up blouse tucked into high-waisted black tailored trousers and small gold stud earrings.",
+  "expression": "Neutral relaxed expression, mouth closed, looking straight ahead.",
+  "lighting": "Flat neutral daylight, soft and even on the face and body, no harsh shadows, no warm orange cast and no yellow tint.",
+  "realism": "Real skin with visible pores, irregular texture, fine lines and soft asymmetry, hair in uneven natural clumps, iPhone footage look, flat natural light, low contrast, slight JPEG compression, boring everyday reality, background fully in focus, everything in sharp focus, no blur, no bokeh, no AI polish, no beauty smoothing, no warm orange color cast, no yellow tint, no golden glow, no golden hour light, no sunset.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no blur, no bokeh, no warm orange color cast, no yellow tint, no golden hour light, no AI polish, no beauty smoothing, no cinematic lighting, no labels, no numbers, no arrows, no second person"
+}
+```
+
+## REF-P2 · PAI · CHARACTER SHEET · GERAR DO ZERO
+
+> ### 📎 ANEXAR: **NENHUMA IMAGEM**
+>
+> ### 🆕 GERAR DO ZERO, aprovar antes de qualquer K
+
+```json
+{
+  "shot_id": "REF-P2_character_sheet_pai",
+  "fiction_note": "This is a fictional AI-generated character, no real person is depicted.",
+  "sheet_layout": "CHARACTER SHEET of ONE person on a plain light grey wall background: three full-body views side by side (front, three-quarter and profile) in the lower two thirds, and a large front close-up of the face across the top third. The same person, the same clothes and the same hair in every view.",
+  "identity_main": "The father: a Black American man around forty-two, medium-dark brown skin, athletic build, very short black hair with a sharp hairline, a short neat black beard and a strong jaw, wearing a navy blue long-sleeve button-up dress shirt with white buttons, dark navy trousers and a silver watch on his left wrist.",
+  "expression": "Neutral relaxed expression, mouth closed, looking straight ahead.",
+  "lighting": "Flat neutral daylight, soft and even on the face and body, no harsh shadows, no warm orange cast and no yellow tint.",
+  "realism": "Real skin with visible pores, irregular texture, fine lines and soft asymmetry, hair in uneven natural clumps, iPhone footage look, flat natural light, low contrast, slight JPEG compression, boring everyday reality, background fully in focus, everything in sharp focus, no blur, no bokeh, no AI polish, no beauty smoothing, no warm orange color cast, no yellow tint, no golden glow, no golden hour light, no sunset.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no blur, no bokeh, no warm orange color cast, no yellow tint, no golden hour light, no AI polish, no beauty smoothing, no cinematic lighting, no labels, no numbers, no arrows, no second person"
+}
+```
+
+## REF-P3 · EMILY · CHARACTER SHEET · GERAR DO ZERO
+
+> ### 📎 ANEXAR: **NENHUMA IMAGEM**
+>
+> ### 🆕 GERAR DO ZERO, aprovar antes de qualquer K
+
+```json
+{
+  "shot_id": "REF-P3_character_sheet_emily",
+  "fiction_note": "This is a fictional AI-generated character, no real person is depicted.",
+  "sheet_layout": "CHARACTER SHEET of ONE person on a plain light grey wall background: three full-body views side by side (front, three-quarter and profile) in the lower two thirds, and a large front close-up of the face across the top third. The same person, the same clothes and the same hair in every view.",
+  "identity_main": "Emily: a Black American girl around six, dark brown skin, a round face, big dark brown eyes, her hair in two puffy pigtails tied with pink hair ties, wearing a pink short-sleeve dress with ruffled cap sleeves. Her face is clean, with no marks.",
+  "expression": "Neutral relaxed expression, mouth closed, looking straight ahead.",
+  "lighting": "Flat neutral daylight, soft and even on the face and body, no harsh shadows, no warm orange cast and no yellow tint.",
+  "realism": "Real skin with visible pores, irregular texture, fine lines and soft asymmetry, hair in uneven natural clumps, iPhone footage look, flat natural light, low contrast, slight JPEG compression, boring everyday reality, background fully in focus, everything in sharp focus, no blur, no bokeh, no AI polish, no beauty smoothing, no warm orange color cast, no yellow tint, no golden glow, no golden hour light, no sunset.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no blur, no bokeh, no warm orange color cast, no yellow tint, no golden hour light, no AI polish, no beauty smoothing, no cinematic lighting, no labels, no numbers, no arrows, no second person"
+}
+```
+
+## REF-P4 · FILHO · CHARACTER SHEET · GERAR DO ZERO
+
+> ### 📎 ANEXAR: **NENHUMA IMAGEM**
+>
+> ### 🆕 GERAR DO ZERO, aprovar antes de qualquer K
+
+```json
+{
+  "shot_id": "REF-P4_character_sheet_filho",
+  "fiction_note": "This is a fictional AI-generated character, no real person is depicted.",
+  "sheet_layout": "CHARACTER SHEET of ONE person on a plain light grey wall background: three full-body views side by side (front, three-quarter and profile) in the lower two thirds, and a large front close-up of the face across the top third. The same person, the same clothes and the same hair in every view.",
+  "identity_main": "The son: a Black American boy around eight, medium brown skin, close-cropped hair, wearing a light blue long-sleeve oxford button-down shirt tucked into khaki chinos with a brown leather belt, the top edge of a blue iPhone showing from his right front pocket.",
+  "expression": "Neutral relaxed expression, mouth closed, looking straight ahead.",
+  "lighting": "Flat neutral daylight, soft and even on the face and body, no harsh shadows, no warm orange cast and no yellow tint.",
+  "realism": "Real skin with visible pores, irregular texture, fine lines and soft asymmetry, hair in uneven natural clumps, iPhone footage look, flat natural light, low contrast, slight JPEG compression, boring everyday reality, background fully in focus, everything in sharp focus, no blur, no bokeh, no AI polish, no beauty smoothing, no warm orange color cast, no yellow tint, no golden glow, no golden hour light, no sunset.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no blur, no bokeh, no warm orange color cast, no yellow tint, no golden hour light, no AI polish, no beauty smoothing, no cinematic lighting, no labels, no numbers, no arrows, no second person"
+}
+```
+
+## K01 · T1 · TRANSGRESSÃO + FLAGRANTE · GERAR DO ZERO · REF-P3 + REF-P1 + REF-P2
+
+> ### 📎 ANEXAR: **4 IMAGENS**
+> **1️⃣ REF-P3 (EMILY)** aprovado
+> **2️⃣ REF-P1 (MADRASTA)** aprovado
+> **3️⃣ REF-P2 (PAI)** aprovado
+> **4️⃣ COMPOSIÇÃO** `modelo/composicao_K01.jpg` (por último)
+>
+> ### 🆕 GERAR DO ZERO
+
+```json
+{
+  "shot_id": "K01_transgressao_flagrante",
+  "reference_use": "Use the attached character sheets ONLY for faces, hair, bodies and clothes: Emily is the person in the first character sheet; the stepmother is the person in the second character sheet; the father is the person in the third character sheet. The last attached image is a composition reference only: copy its camera position and where each person stands, never its faces, bodies, clothes or room.",
+  "fiction_note": "This is a fictional AI-generated scene with fictional characters, no real person is depicted.",
+  "cast": "Three people. Emily: a Black American girl around six, dark brown skin, a round face, big dark brown eyes, her hair in two puffy pigtails tied with pink hair ties, wearing a pink short-sleeve dress with ruffled cap sleeves, standing at the near side of the kitchen island. The stepmother: a white American woman around forty, slim, platinum blonde hair pulled back into a low neat bun, pale skin with light freckles, light blue eyes, a thin straight nose and thin lips, fine lines around the eyes, wearing a cream silk long-sleeve button-up blouse tucked into high-waisted black tailored trousers and small gold stud earrings, standing right beside her on the right. The father: a Black American man around forty-two, medium-dark brown skin, athletic build, very short black hair with a sharp hairline, a short neat black beard and a strong jaw, wearing a navy blue long-sleeve button-up dress shirt with white buttons, dark navy trousers and a silver watch on his left wrist, small but clearly recognizable, stepping through the open doorway in the background.",
+  "prop": "On the island, a white plate piled high with golden fried chicken pieces and, right next to it, a small grey bowl of plain cold white rice. The plate and the bowl are very close to the lens in the lower foreground, large in frame, closer to the camera than any face.",
+  "scene": "A bright modern American family kitchen in daytime: white shaker cabinets, a white marble backsplash, a large kitchen island with a light grey quartz countertop, an open doorway to a hallway in the background, a window over the sink showing a green backyard under an overcast sky with visible cloud texture, and a small American flag magnet on the stainless steel refrigerator, discreet but clearly visible and in sharp focus.",
+  "posture": "Emily stretches one small hand toward the fried chicken. The stepmother turns toward her with a furious face, leaning in, caught mid-sentence, lips naturally parted. The father has just stepped into the doorway behind them, mid-step, staring.",
+  "composition": "The plate and bowl fill the lower foreground. Emily's head, shoulders and reaching hand sit in the middle of the frame, the stepmother on the right from the waist up, the father small in the doorway in the background. Every face in sharp focus.",
+  "camera": "adult eye level from across the island, slightly high, like someone in the kitchen filming with a phone",
+  "state": "Start frame: the hand is reaching and nobody has been touched yet.",
+  "lighting": "Neutral overcast daylight from the window, the outside clearly visible through the window, soft even light on every face with no harsh shadows, no warm orange cast and no yellow tint.",
+  "realism": "Real skin with visible pores, irregular texture, fine lines and soft asymmetry, hair in uneven natural clumps, iPhone footage look, flat natural light, low contrast, slight JPEG compression, boring everyday reality, background fully in focus, everything in sharp focus, no blur, no bokeh, no AI polish, no beauty smoothing, no warm orange color cast, no yellow tint, no golden glow, no golden hour light, no sunset.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no blur, no bokeh, no warm orange color cast, no yellow tint, no golden hour light, no AI polish, no beauty smoothing, no cinematic lighting"
+}
+```
+
+## K02 · T2 · REVELAÇÃO · GERAR DO ZERO · REF-P2 + REF-P3
+
+> ### 📎 ANEXAR: **3 IMAGENS**
+> **1️⃣ REF-P2 (PAI)** aprovado
+> **2️⃣ REF-P3 (EMILY)** aprovado
+> **3️⃣ COMPOSIÇÃO** `modelo/composicao_K02.jpg` (por último)
+>
+> ### 🆕 GERAR DO ZERO
+
+```json
+{
+  "shot_id": "K02_revelacao",
+  "reference_use": "Use the attached character sheets ONLY for faces, hair, bodies and clothes: the father is the person in the first character sheet; Emily is the person in the second character sheet. The last attached image is a composition reference only: copy its camera position and where each person stands, never its faces, bodies, clothes or room.",
+  "fiction_note": "This is a fictional AI-generated scene with fictional characters, no real person is depicted.",
+  "cast": "Two people. The father: a Black American man around forty-two, medium-dark brown skin, athletic build, very short black hair with a sharp hairline, a short neat black beard and a strong jaw, wearing a navy blue long-sleeve button-up dress shirt with white buttons, dark navy trousers and a silver watch on his left wrist, crouching low at the corner of the kitchen island. Emily: a Black American girl around six, dark brown skin, a round face, big dark brown eyes, her hair in two puffy pigtails tied with pink hair ties, wearing a pink short-sleeve dress with ruffled cap sleeves, held tight against his chest in both of his arms.",
+  "prop": "The corner of the island countertop enters the lower left foreground with a white plate piled high with golden fried chicken pieces and, right next to it, a small grey bowl of plain cold white rice, very close to the lens, large in frame, closer to the camera than the faces.",
+  "scene": "A bright modern American family kitchen in daytime: white shaker cabinets, a white marble backsplash, a large kitchen island with a light grey quartz countertop, an open doorway to a hallway in the background, a window over the sink showing a green backyard under an overcast sky with visible cloud texture, and a small American flag magnet on the stainless steel refrigerator, discreet but clearly visible and in sharp focus.",
+  "posture": "Emily's face is turned toward the camera, tears on her cheeks, three thin red marks across her left cheek, her mouth open mid-sob. The father's face is right next to hers, turned toward the camera, jaw clenched, lips naturally parted as if about to speak.",
+  "composition": "A tight two-shot: both faces fill the upper half of the frame side by side, the plate and bowl in the lower left foreground. The top of the father's head is cropped by the top edge. No other person in frame.",
+  "camera": "adult chest level, close, straight-on, like someone in the kitchen filming with a phone",
+  "state": "Start frame: she is crying in his arms and he is about to speak.",
+  "lighting": "Neutral overcast daylight from the window, the outside clearly visible through the window, soft even light on every face with no harsh shadows, no warm orange cast and no yellow tint.",
+  "realism": "Real skin with visible pores, irregular texture, fine lines and soft asymmetry, hair in uneven natural clumps, iPhone footage look, flat natural light, low contrast, slight JPEG compression, boring everyday reality, background fully in focus, everything in sharp focus, no blur, no bokeh, no AI polish, no beauty smoothing, no warm orange color cast, no yellow tint, no golden glow, no golden hour light, no sunset.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no blur, no bokeh, no warm orange color cast, no yellow tint, no golden hour light, no AI polish, no beauty smoothing, no cinematic lighting"
+}
+```
+
+## K03 · T3 · INSERTO DO PRATO · GERAR DO ZERO · REF-P2 + REF-P1
+
+> ### 📎 ANEXAR: **3 IMAGENS**
+> **1️⃣ REF-P2 (PAI)** aprovado
+> **2️⃣ REF-P1 (MADRASTA)** aprovado
+> **3️⃣ COMPOSIÇÃO** `modelo/composicao_K03.jpg` (por último)
+>
+> ### 🆕 GERAR DO ZERO
+
+```json
+{
+  "shot_id": "K03_inserto_prato",
+  "reference_use": "Use the attached character sheets ONLY for faces, hair, bodies and clothes: the father is the person in the first character sheet; the stepmother is the person in the second character sheet. The last attached image is a composition reference only: copy its camera position and where each person stands, never its faces, bodies, clothes or room.",
+  "fiction_note": "This is a fictional AI-generated scene with fictional characters, no real person is depicted.",
+  "cast": "Only parts of two people: the father's hand entering the frame, with dark brown skin, the cuff of a navy blue dress shirt with white buttons and a silver watch on the left wrist; and behind the plate, the stepmother's crossed arms in a cream silk blouse, pale freckled skin, her face out of frame.",
+  "prop": "On the island, a white plate piled high with golden fried chicken pieces and, right next to it, a small grey bowl of plain cold white rice. The plate and the bowl fill the lower two thirds of the frame, very close to the lens, large in frame, the hero of the image.",
+  "scene": "In the background of this American family kitchen, the light grey quartz countertop of the island and the stainless steel refrigerator with a small American flag magnet, discreet but clearly visible and in sharp focus.",
+  "posture": "The father's hand enters from the left edge, index finger extended, about to point at the chicken.",
+  "composition": "The plate and the bowl dominate the lower two thirds. The pointing hand enters from the left. The stepmother's crossed arms and blouse sit at the upper right edge, cut by the frame. The refrigerator with the small flag magnet is visible behind, in sharp focus.",
+  "camera": "close, slightly high, looking down at the countertop",
+  "state": "Start frame: the finger is just above the plate and has not pointed yet.",
+  "lighting": "Neutral overcast daylight from the window, the outside clearly visible through the window, soft even light on every face with no harsh shadows, no warm orange cast and no yellow tint.",
+  "realism": "Real skin with visible pores, irregular texture, fine lines and soft asymmetry, hair in uneven natural clumps, iPhone footage look, flat natural light, low contrast, slight JPEG compression, boring everyday reality, background fully in focus, everything in sharp focus, no blur, no bokeh, no AI polish, no beauty smoothing, no warm orange color cast, no yellow tint, no golden glow, no golden hour light, no sunset.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no blur, no bokeh, no warm orange color cast, no yellow tint, no golden hour light, no AI polish, no beauty smoothing, no cinematic lighting"
+}
+```
+
+## K04 · T4 · EXPLOSÃO · GERAR DO ZERO · REF-P1 + REF-P2
+
+> ### 📎 ANEXAR: **3 IMAGENS**
+> **1️⃣ REF-P1 (MADRASTA)** aprovado
+> **2️⃣ REF-P2 (PAI)** aprovado
+> **3️⃣ COMPOSIÇÃO** `modelo/composicao_K04.jpg` (por último)
+>
+> ### 🆕 GERAR DO ZERO
+
+```json
+{
+  "shot_id": "K04_explosao",
+  "reference_use": "Use the attached character sheets ONLY for faces, hair, bodies and clothes: the stepmother is the person in the first character sheet; the father is the person in the second character sheet. The last attached image is a composition reference only: copy its camera position and where each person stands, never its faces, bodies, clothes or room.",
+  "fiction_note": "This is a fictional AI-generated scene with fictional characters, no real person is depicted.",
+  "cast": "Two people. The stepmother: a white American woman around forty, slim, platinum blonde hair pulled back into a low neat bun, pale skin with light freckles, light blue eyes, a thin straight nose and thin lips, fine lines around the eyes, wearing a cream silk long-sleeve button-up blouse tucked into high-waisted black tailored trousers and small gold stud earrings, standing on the far side of the kitchen island. In the foreground, the father's shoulder and back in a navy blue dress shirt, cut by the left edge of the frame.",
+  "prop": "On the island, a white plate piled high with golden fried chicken pieces and, right next to it, a small grey bowl of plain cold white rice, very close to the lens in the lower foreground, closer to the camera than her face.",
+  "scene": "A bright modern American family kitchen in daytime: white shaker cabinets, a white marble backsplash, a large kitchen island with a light grey quartz countertop, an open doorway to a hallway in the background, a window over the sink showing a green backyard under an overcast sky with visible cloud texture, and a small American flag magnet on the stainless steel refrigerator, discreet but clearly visible and in sharp focus.",
+  "posture": "The stepmother stands with her arms crossed tightly over her blouse, chin down, lips pressed together, glaring across the island, furious and about to explode.",
+  "composition": "The stepmother from the waist up in the center, the father's shoulder cut by the left edge, the plate and bowl in the lower foreground. Her face in sharp focus.",
+  "camera": "adult eye level from across the island, like someone in the kitchen filming with a phone",
+  "state": "Start frame: her arms are still crossed and she has not moved yet.",
+  "lighting": "Neutral overcast daylight from the window, the outside clearly visible through the window, soft even light on every face with no harsh shadows, no warm orange cast and no yellow tint.",
+  "realism": "Real skin with visible pores, irregular texture, fine lines and soft asymmetry, hair in uneven natural clumps, iPhone footage look, flat natural light, low contrast, slight JPEG compression, boring everyday reality, background fully in focus, everything in sharp focus, no blur, no bokeh, no AI polish, no beauty smoothing, no warm orange color cast, no yellow tint, no golden glow, no golden hour light, no sunset.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no blur, no bokeh, no warm orange color cast, no yellow tint, no golden hour light, no AI polish, no beauty smoothing, no cinematic lighting"
+}
+```
+
+## K05 · T5 · VIRADA + PROVA · GERAR DO ZERO · REF-P4 + REF-P1 + REF-P2
+
+> ### 📎 ANEXAR: **4 IMAGENS**
+> **1️⃣ REF-P4 (FILHO)** aprovado
+> **2️⃣ REF-P1 (MADRASTA)** aprovado
+> **3️⃣ REF-P2 (PAI)** aprovado
+> **4️⃣ COMPOSIÇÃO** `modelo/composicao_K05.jpg` (por último)
+>
+> ### 🆕 GERAR DO ZERO
+
+```json
+{
+  "shot_id": "K05_virada_prova",
+  "reference_use": "Use the attached character sheets ONLY for faces, hair, bodies and clothes: the son is the person in the first character sheet; the stepmother is the person in the second character sheet; the father is the person in the third character sheet. The last attached image is a composition reference only: copy its camera position and where each person stands, never its faces, bodies, clothes or room.",
+  "fiction_note": "This is a fictional AI-generated scene with fictional characters, no real person is depicted.",
+  "cast": "Three people. The son: a Black American boy around eight, medium brown skin, close-cropped hair, wearing a light blue long-sleeve oxford button-down shirt tucked into khaki chinos with a brown leather belt, the top edge of a blue iPhone showing from his right front pocket, standing at the near side of the kitchen island. Across the island, the stepmother: a white American woman around forty, slim, platinum blonde hair pulled back into a low neat bun, pale skin with light freckles, light blue eyes, a thin straight nose and thin lips, fine lines around the eyes, wearing a cream silk long-sleeve button-up blouse tucked into high-waisted black tailored trousers and small gold stud earrings, and beside her the father: a Black American man around forty-two, medium-dark brown skin, athletic build, very short black hair with a sharp hairline, a short neat black beard and a strong jaw, wearing a navy blue long-sleeve button-up dress shirt with white buttons, dark navy trousers and a silver watch on his left wrist.",
+  "prop": "On the island next to the boy, a white plate piled high with golden fried chicken pieces and, right next to it, a small grey bowl of plain cold white rice, in the lower foreground close to the lens.",
+  "scene": "A bright modern American family kitchen in daytime: white shaker cabinets, a white marble backsplash, a large kitchen island with a light grey quartz countertop, an open doorway to a hallway in the background, a window over the sink showing a green backyard under an overcast sky with visible cloud texture, and a small American flag magnet on the stainless steel refrigerator, discreet but clearly visible and in sharp focus.",
+  "posture": "The boy stands three-quarter to the camera, his face clearly visible, looking across the island at his mother, lips naturally parted, about to speak. The stepmother stares at him in shock. The father stands beside her, tense, his face clearly visible.",
+  "composition": "The boy from the waist up on the left side of the frame, closest to the camera. The stepmother and the father across the island on the right, both faces in sharp focus. The plate at the bottom of the frame.",
+  "camera": "adult chest level, slightly behind the boy's shoulder, like someone in the kitchen filming with a phone",
+  "state": "Start frame: nobody has moved yet and the iPhone is still in his pocket.",
+  "lighting": "Neutral overcast daylight from the window, the outside clearly visible through the window, soft even light on every face with no harsh shadows, no warm orange cast and no yellow tint.",
+  "realism": "Real skin with visible pores, irregular texture, fine lines and soft asymmetry, hair in uneven natural clumps, iPhone footage look, flat natural light, low contrast, slight JPEG compression, boring everyday reality, background fully in focus, everything in sharp focus, no blur, no bokeh, no AI polish, no beauty smoothing, no warm orange color cast, no yellow tint, no golden glow, no golden hour light, no sunset.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no blur, no bokeh, no warm orange color cast, no yellow tint, no golden hour light, no AI polish, no beauty smoothing, no cinematic lighting"
+}
+```
+
+## K06 · T6 · INSERTO DO CELULAR · GERAR DO ZERO · REF-P4
+
+> ### 📎 ANEXAR: **2 IMAGENS**
+> **1️⃣ REF-P4 (FILHO)** aprovado
+> **2️⃣ COMPOSIÇÃO** `modelo/composicao_K06.jpg` (por último)
+>
+> ### 🆕 GERAR DO ZERO
+
+```json
+{
+  "shot_id": "K06_inserto_celular",
+  "reference_use": "Use the attached character sheets ONLY for faces, hair, bodies and clothes: the son is the person in the first character sheet. The last attached image is a composition reference only: copy its camera position and where each person stands, never its faces, bodies, clothes or room.",
+  "fiction_note": "This is a fictional AI-generated scene with fictional characters, no real person is depicted.",
+  "cast": "Only one person, in part: the son's right hip and right hand, with medium brown skin, a light blue oxford shirt tucked into khaki chinos and a brown leather belt.",
+  "prop": "His right hand is halfway into the right front pocket of his khaki chinos, fingers closed on a blue iPhone whose top edge is already out. The hand and the iPhone are very close to the lens, large in frame, the hero of the image.",
+  "scene": "In the background of this American family kitchen, the light grey quartz countertop of the island and the stainless steel refrigerator with a small American flag magnet, discreet but clearly visible and in sharp focus.",
+  "posture": "The light blue shirt is tucked in above the brown leather belt. The hand is starting to pull.",
+  "composition": "A tight shot of the hip and hand filling the frame. Behind, in sharp focus, the island countertop and the stainless refrigerator with the small American flag magnet.",
+  "camera": "close, at hip height, straight-on",
+  "state": "Start frame: the iPhone is half out of the pocket.",
+  "lighting": "Neutral overcast daylight from the window, the outside clearly visible through the window, soft even light on every face with no harsh shadows, no warm orange cast and no yellow tint.",
+  "realism": "Real skin with visible pores, irregular texture, fine lines and soft asymmetry, hair in uneven natural clumps, iPhone footage look, flat natural light, low contrast, slight JPEG compression, boring everyday reality, background fully in focus, everything in sharp focus, no blur, no bokeh, no AI polish, no beauty smoothing, no warm orange color cast, no yellow tint, no golden glow, no golden hour light, no sunset.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no blur, no bokeh, no warm orange color cast, no yellow tint, no golden hour light, no AI polish, no beauty smoothing, no cinematic lighting"
+}
+```
+
+## K07 · T7 · CORTE · GERAR DO ZERO · REF-P1
+
+> ### 📎 ANEXAR: **2 IMAGENS**
+> **1️⃣ REF-P1 (MADRASTA)** aprovado
+> **2️⃣ COMPOSIÇÃO** `modelo/composicao_K07.jpg` (por último)
+>
+> ### 🆕 GERAR DO ZERO
+
+```json
+{
+  "shot_id": "K07_corte",
+  "reference_use": "Use the attached character sheet ONLY for her face, hair, body and clothes. The last attached image is a composition reference only, with the face covered by a grey box: copy its camera position and framing, never its body, clothes or room.",
+  "fiction_note": "This is a fictional AI-generated scene with fictional characters, no real person is depicted.",
+  "cast": "One person. The stepmother: a white American woman around forty, slim, platinum blonde hair pulled back into a low neat bun, pale skin with light freckles, light blue eyes, a thin straight nose and thin lips, fine lines around the eyes, wearing a cream silk long-sleeve button-up blouse tucked into high-waisted black tailored trousers and small gold stud earrings. Nobody else is in the frame.",
+  "prop": "No prop. Her frozen face is the hero of the image.",
+  "scene": "In the background of this American family kitchen, the light grey quartz countertop of the island and the stainless steel refrigerator with a small American flag magnet, discreet but clearly visible and in sharp focus.",
+  "posture": "She is caught completely off guard: eyes wide open, eyebrows raised, lips slightly parted, standing perfectly still.",
+  "composition": "Her face and shoulders fill the frame, the top of her head cropped by the top edge. Behind her, the white cabinets and the refrigerator with the small American flag magnet, in sharp focus.",
+  "camera": "eye level, close, straight-on",
+  "state": "Start frame: she has just frozen.",
+  "lighting": "Neutral overcast daylight from the window, the outside clearly visible through the window, soft even light on every face with no harsh shadows, no warm orange cast and no yellow tint.",
+  "realism": "Real skin with visible pores, irregular texture, fine lines and soft asymmetry, hair in uneven natural clumps, iPhone footage look, flat natural light, low contrast, slight JPEG compression, boring everyday reality, background fully in focus, everything in sharp focus, no blur, no bokeh, no AI polish, no beauty smoothing, no warm orange color cast, no yellow tint, no golden glow, no golden hour light, no sunset.",
+  "aspect_ratio": "9:16 vertical",
+  "negative": "no captions, no subtitles, no words overlaid on the image, no plastic skin, no extra fingers, no blur, no bokeh, no warm orange color cast, no yellow tint, no golden hour light, no AI polish, no beauty smoothing, no cinematic lighting"
+}
+```
+
+---
+
+## Bloco global de vídeo
+
+```text
+falas no take, em inglês, na ordem:
+1. [QUEM FALA, descrição visual curta], [FICHA DE VOZ], fala [EMOÇÃO DESTA FALA]: "[FALA EXATA DO ROTEIRO]"
+2. [QUEM RESPONDE, descrição visual curta], [FICHA DE VOZ], fala [EMOÇÃO]: "[FALA EXATA DO ROTEIRO]"
+[QUEM FICA CALADO] não diz nenhuma palavra.
+
+cada personagem diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo, só na boca de quem está falando.
+
+o que acontece no vídeo: [ação enxuta]
+
+câmera: leve handheld, como alguém na cozinha filmando com o celular, sem trocar de plano
+
+som ambiente: cozinha silenciosa de casa, [som da cena], sem música
+```
+
+No B-roll a primeira parte vira `(sem fala no take: ...)` e a linha do lip sync sai.
+
+---
+
+# Prompts de vídeo
+
+### V01 · T1 · usa K01
+
+```text
+falas no take, em inglês, na ordem:
+1. a MADRASTA (mulher branca loira de coque baixo e blusa creme), voz feminina de uns quarenta anos, média-aguda, fria e cortante, sotaque americano padrão, fala com raiva explosiva, gritando: "Don't touch my son's food!"
+2. o PAI (homem negro de barba curta e camisa azul-marinho), voz masculina grave de barítono, uns quarenta anos, sotaque americano de homem negro, fala em choque e com fúria, alto: "What did you do to my daughter?"
+EMILY não diz nenhuma palavra, só chora.
+
+cada personagem diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo, só na boca de quem está falando.
+
+o que acontece no vídeo: Emily estica a mão para o frango. A madrasta acerta o rosto dela com a mão aberta e grita a fala dela. Emily recua chorando, com a mão na bochecha. O pai, na porta ao fundo, vê tudo e avança rápido até a bancada enquanto fala.
+
+câmera: leve handheld, como alguém na cozinha filmando com o celular, sem trocar de plano
+
+som ambiente: cozinha silenciosa de casa, o choro da menina, passos rápidos, sem música
+```
+
+### V02 · T2 · usa K02
+
+```text
+falas no take, em inglês, na ordem:
+1. EMILY (menina de marias-chiquinhas e vestido rosa), voz de menina de seis anos, fina e aguda, sotaque americano, fala chorando, com a voz tremendo: "Daddy, I was just hungry."
+2. o PAI (homem negro de barba curta e camisa azul-marinho), voz masculina grave de barítono, uns quarenta anos, sotaque americano de homem negro, fala com indignação contida, firme: "Why does my daughter only get cold rice?"
+3. EMILY (menina de marias-chiquinhas e vestido rosa), voz de menina de seis anos, fina e aguda, sotaque americano, fala baixinho, entre soluços: "She won't let me eat when you're gone."
+Ninguém mais fala.
+
+cada personagem diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo, só na boca de quem está falando.
+
+o que acontece no vídeo: O pai abraça Emily com força. Ela fala com o rosto colado no peito dele, as lágrimas escorrendo. Ele olha para o lado com raiva enquanto fala e depois volta a olhar para ela.
+
+câmera: leve handheld, como alguém na cozinha filmando com o celular, sem trocar de plano
+
+som ambiente: cozinha silenciosa de casa, os soluços da menina, sem música
+```
+
+### V03 · T3 · usa K03
+
+```text
+(sem fala no take: a fala do PAI no V02, "Why does my daughter only get cold rice?", entra por cima na edição)
+
+o que acontece no vídeo: O dedo indicador do pai aponta para o frango frito e depois se move e aponta para a tigela de arroz frio. Os braços cruzados da madrasta continuam parados ao fundo.
+
+câmera: fixa
+
+som ambiente: cozinha silenciosa de casa, sem música
+```
+
+### V04 · T4 · usa K04
+
+```text
+(sem fala no take: a madrasta grita de raiva, sem dizer nenhuma palavra)
+
+o que acontece no vídeo: A madrasta encara, descruza os braços de repente, solta um grito de raiva e contorna a bancada partindo para cima do pai. O pai a segura pelos braços.
+
+câmera: leve handheld de quem está na cozinha assistindo, acompanha o movimento
+
+som ambiente: grito de raiva sem palavras, passos no piso, sem música
+```
+
+### V05 · T5 · usa K05
+
+```text
+falas no take, em inglês, na ordem:
+1. o FILHO (menino de camisa azul-clara e calça cáqui), voz de menino de oito anos, clara e ainda infantil, sotaque americano, fala firme, com a voz um pouco trêmula: "Mom locked Emily up without dinner yesterday."
+2. o PAI (homem negro de barba curta e camisa azul-marinho), voz masculina grave de barítono, uns quarenta anos, sotaque americano de homem negro, fala com autoridade, alto e duro: "Don't you dare touch them!"
+3. o FILHO (menino de camisa azul-clara e calça cáqui), voz de menino de oito anos, clara e ainda infantil, sotaque americano, fala firme e desafiador: "I recorded everything, Mom. Even what you did afterwards."
+A MADRASTA não diz nenhuma palavra.
+
+cada personagem diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo, só na boca de quem está falando.
+
+o que acontece no vídeo: O menino fala olhando para a mãe. A madrasta avança na direção dele com a mão levantada; o pai estica o braço na frente dela e a bloqueia enquanto fala. O menino tira o celular azul do bolso e o segura à frente do corpo na última fala. A madrasta congela.
+
+câmera: leve handheld, como alguém na cozinha filmando com o celular, sem trocar de plano
+
+som ambiente: cozinha silenciosa de casa, passos no piso, sem música
+```
+
+### V06 · T6 · usa K06
+
+```text
+(sem fala no take: "I recorded everything, Mom." do V05 entra por cima na edição)
+
+o que acontece no vídeo: A mão do menino puxa devagar o celular azul do bolso da calça cáqui e o levanta.
+
+câmera: fixa
+
+som ambiente: cozinha silenciosa de casa, o tecido da calça, sem música
+```
+
+### V07 · T7 · usa K07
+
+```text
+(sem fala no take: "Even what you did afterwards." do V05 entra por cima na edição)
+
+o que acontece no vídeo: A madrasta fica parada, olhos arregalados, boca entreaberta, sem piscar. Só a respiração dela se mexe.
+
+câmera: leve push-in lento no rosto dela
+
+som ambiente: cozinha em silêncio total, sem música
+```
+
+---
+
+## Mapa de âncoras
+
+| Código | Anexar, nesta ordem | Observação |
+|---|---|---|
+| REF-P1 | nenhuma | gerar do zero, aprovar |
+| REF-P2 | nenhuma | gerar do zero, aprovar |
+| REF-P3 | nenhuma | gerar do zero, aprovar |
+| REF-P4 | nenhuma | gerar do zero, aprovar |
+| K01 | REF-P3, REF-P1, REF-P2, depois `modelo/composicao_K01.jpg` |  |
+| K02 | REF-P2, REF-P3, depois `modelo/composicao_K02.jpg` |  |
+| K03 | REF-P2, REF-P1, depois `modelo/composicao_K03.jpg` |  |
+| K04 | REF-P1, REF-P2, depois `modelo/composicao_K04.jpg` |  |
+| K05 | REF-P4, REF-P1, REF-P2, depois `modelo/composicao_K05.jpg` |  |
+| K06 | REF-P4, depois `modelo/composicao_K06.jpg` |  |
+| K07 | REF-P1, depois `modelo/composicao_K07.jpg` |  |
+
+Imagem: Nano Banana 2, 9:16, 1 imagem final por código (perfil CLÁSSICO).
+Vídeo: Veo 3.1 Lite, Lower Priority, 8 segundos, 1 variação, imagem como INITIAL FRAME.
+`V01` usa `K01`, e assim por diante, pelo número.
+
+---
+
+## Montagem no CapCut
+
+1. **Ordem dos clipes, numerados:** V01, V02, V03, V04, V05, V06, V07.
+2. **V01 (~4,5s):** cortar logo depois de "What did you do to my daughter?".
+3. **V02 (~5s) + V03 (~2s):** quando o pai começa "Why does my daughter only get cold rice?", cortar
+   para o V03 (o dedo apontando o prato) com a voz dele continuando por cima, e voltar ao V02 para a
+   última fala de Emily.
+4. **V04 (~3,5s):** a explosão, do descruzar dos braços até ele segurá-la.
+5. **V05 (~6s) + V06 (~1,5s) + V07 (~2s):** no "I recorded everything, Mom.", cortar para o V06 (o
+   celular saindo do bolso) com a voz por cima; no "Even what you did afterwards.", cortar para o
+   V07 (o rosto travado) com a voz por cima.
+6. **Card final:** `follow to part 2`, texto grande e centralizado, sobre o último frame do V07,
+   por ~1,5s. Nada falado.
+7. Cortar todo silêncio antes da primeira fala de cada clipe (checklist D2).
+8. **Sem música** no vídeo inteiro; só o som da cena.
+9. **Sem Voice Changer** (checklist D1). A voz de cada personagem vem descrita no prompt.
+10. Rótulo pequeno `AI-generated` num canto (checklist D4).
+11. Exportar em 9:16, 1080 por 1920. Duração final alvo: ~25s.
+
+---
+
+## Gates de qualidade
+
+1. [ ] Os quatro `REF-P` foram aprovados antes do primeiro K.
+2. [ ] O mesmo rosto, cabelo e roupa de cada personagem em todos os K.
+3. [ ] Nenhum rosto parecido com o do vídeo modelo.
+4. [ ] As marcas na bochecha de Emily aparecem do K02 em diante, nunca antes.
+5. [ ] O prato de frango e a tigela de arroz estão no primeiro plano, perto da lente, onde pedidos.
+6. [ ] O ímã de bandeira dos EUA aparece e está em foco em todos os K.
+7. [ ] Luz neutra de dia nublado, céu com textura na janela, nenhuma imagem com tom quente.
+8. [ ] Zero blur em qualquer imagem.
+9. [ ] Em cada V de diálogo, a fala saiu na boca certa (checklist C3).
+10. [ ] A voz de cada personagem soa igual em todos os clipes em que ele fala.
+11. [ ] A fala de cada V bate palavra por palavra com o `ROTEIRO.md`.
+12. [ ] O card `follow to part 2` entra sobre o último frame, sem fala.
+13. [ ] `python3 checar_entrega.py producao/sf_madrasta_frango` fechou sem FALHA.
