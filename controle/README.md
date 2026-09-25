@@ -58,6 +58,7 @@ Campos opcionais, omitidos ou `null` quando desconhecidos:
 
 - Contagens inteiras: `impressoes`, `visualizacoes`, `reproducoes_3s`, `conclusoes`, `curtidas`, `comentarios`, `salvamentos`, `compartilhamentos`, `seguidores`, `cliques`, `visitas_destino`, `compras`.
 - Valores não negativos: `receita`, `custo`, `minutos_trabalho`. Receita/custo exigem `moeda`, como BRL ou USD. Use o mesmo escopo de custos entre comparações.
+- Origem do vídeo modelo: `origem` = `REAL` (pessoa real, `PERFIL_ORGANICO.md`) ou `IA` (avatar IA), via `--origem`. Compare os dois braços com a mesma oferta, objetivo, conta e janela.
 - Contexto: `url`, `observacoes`. Anote origem, janela de atribuição e definições de métricas. Seguidores significa novos seguidores atribuídos ao vídeo, não total da conta.
 
 Zero significa que o valor foi medido e é zero. `null` significa que não há dado. Não atribua vendas agregadas da conta a um vídeo sem rastreamento. Não some diferentes moedas ou publicações com períodos sobrepostos para inferir retorno.

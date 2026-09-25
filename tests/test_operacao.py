@@ -278,6 +278,36 @@ class Registrar(unittest.TestCase):
                 self.rodar(d, producao='nao_existe')
             self.assertEqual(json.loads((d / 'resultados.json').read_text())['publicacoes'], [])
 
+    # 2026-09-25: origem do video modelo (PERFIL_ORGANICO.md), REAL ou IA, opcional.
+    def test_origem_grava_e_valor_invalido_reprova(self):
+        with tempfile.TemporaryDirectory() as t:
+            d = Path(t); (d / 'resultados.json').write_text('{"versao": 1, "publicacoes": []}')
+            doc = self.rodar(d, origem='REAL')
+            self.assertEqual(doc['publicacoes'][0]['origem'], 'REAL')
+            with self.assertRaises(ValueError):
+                self.rodar(d, origem='ORGANICO', id='outro')
+
+class Organico(unittest.TestCase):
+    # 2026-09-25: origem organica exige 'CTA original:' e libera a bandeira obrigatoria.
+    def rodar(self, roteiro):
+        with mock.patch.object(ce, 'FALHAS', []), mock.patch.object(ce, 'OKS', []):
+            ce.ORGANICO = ce.detectar_organico(roteiro)
+            try:
+                ce.c_organico(roteiro)
+                ce.c_bandeira([{'id': 'K01', 'json_raw': '{"scene": "kitchen"}', 'linha': 1, 'head': ''}])
+                return [f[0] for f in ce.FALHAS]
+            finally:
+                ce.ORGANICO = False
+
+    def test_sem_cta_original_reprova(self):
+        self.assertEqual(self.rodar('origem: organico\n'), ['organico'])
+
+    def test_com_cta_original_passa_sem_bandeira(self):
+        self.assertEqual(self.rodar('origem: organico\nCTA original: like, save, follow\n'), [])
+
+    def test_formato_ia_continua_exigindo_bandeira(self):
+        self.assertEqual(self.rodar('pipeline: classico\n'), ['bandeira'])
+
 class BaselineLinter(unittest.TestCase):
     # 2026-09-22: falhas antigas aceitas por pacote; qualquer falha nova continua contando.
     def separar(self, falhas, base, sem=False):

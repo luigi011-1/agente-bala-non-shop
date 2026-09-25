@@ -27,6 +27,15 @@ so abre quando o Luigi disser que um video postado performou, e partem do video 
 do workflow (fila, pacote por avatar, Flow, K/V, transcricoes, checklist, linter) nao muda. Fonte:
 `GATE_VISUAL.md` Parte 4, Passo 0. Onde este arquivo fala em "10 ganchos", ler "so na rodada de variacao".
 
+**🔴 ORIGEM DO VIDEO MODELO (Luigi, 2026-09-25), FitWell e Auraly:** no P1, classificar se o video
+modelo e de **pessoa real (organico)** ou de avatar IA. Organico = **`PERFIL_ORGANICO.md`**, fonte
+unica: gancho visual, copy e estrutura copiados **literalmente**, e **so o CTA muda** conforme angulo e
+objetivo (Auraly venda: engajamento com `222` e depois foto de perfil / Stories). Marcador
+`origem: organico` no topo do `ROTEIRO.md` (e `Source: ORGANIC` no checkpoint Auraly), com a linha
+`CTA original:`. Na origem organica **nao se aplicam** bandeira em todo K, kit de tarologo, carta
+SOULMATE, T1 mudo, plano unico com mesa nem o crivo de copy de venda; o resto do workflow, o
+`GATE_VISUAL.md` Partes 1 a 3 e as travas de lei e marca continuam.
+
 ---
 
 # Operação Vídeos Avatares IA — regras de trabalho
@@ -267,7 +276,8 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
   duas ou três âncoras de fundo no máximo, luz **neutra de dia nublado** e nunca quente (**golden hour banida desde 2026-09-22**), negative carregando
   `no warm orange color cast, no yellow tint`, e partir sempre de algo real. Realismo é volume de regeneração.
 - **Rodar o gate de composição visual ANTES de escrever os prompts** (memória `checklist-composicao-visual`): herói no lower foreground mais perto que o rosto, sempre mais perto do que parece certo, 2ª pessoa cortada pelo quadro, cenário reconhecível e nunca inventariado. Reduzir fundo é com enquadramento, nunca com blur.
-- **Bandeira dos EUA em TODO prompt de imagem, discreta porém VISÍVEL e em foco.** Escrever no campo
+- **Bandeira dos EUA em TODO prompt de imagem, discreta porém VISÍVEL e em foco** (exceção: origem
+  orgânica, onde é opcional e só como detalhe natural, `PERFIL_ORGANICO.md`). Escrever no campo
   `scene`, contando como uma das três âncoras de fundo. Única exceção: prompt de REF de prop isolado
   (REF-CARTA, `product.png`), que não tem cenário e contaminaria todo keyframe que anexasse a REF.
 - **Prompt entregue é prompt COMPLETO.** Nunca "adicione X em todos os prompts", nunca colar só a linha

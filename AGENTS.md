@@ -75,5 +75,7 @@ browser automation sao historicos, salvo pedido explicito do usuario.
 - Nunca criar uma segunda versao conflitante do workflow.
 - Todo prompt de imagem e toda lista de ganchos, em qualquer angulo, passam por `GATE_VISUAL.md`
   (realismo anti cara de IA, heroi colado na lente, checklist de gancho visual).
+- Video modelo de pessoa real (organico), em FitWell ou Auraly: `PERFIL_ORGANICO.md`. Copia literal
+  de gancho visual, copy e estrutura; so o CTA muda conforme angulo e objetivo (Luigi, 2026-09-25).
 - Nenhum gancho, K, V, pacote ou prompt avulso e enviado sem o checklist de envio 100% aprovado
   (`GATE_VISUAL.md` Parte 5, memoria `checklist-envio-prompt`). Item reprovado impede o envio.

@@ -7,7 +7,7 @@ description: "Assiste" um video .mp4 de referencia de forma completa — extrai 
 
 Este é o passo aprimorado da **Fase 2 (Decomposição)** da operação. Objetivo: entender o vídeo-referência **sem deixar nada passar** — em especial o **herói do hook** e qualquer **reveal/transformação que acontece DENTRO de um take** (ex.: cristais derretendo e mostrando os gomos da barriga). O processo antigo (frames esparsos + miniaturas minúsculas) perdia esses momentos. Este não pode.
 
-> Todos os vídeos são de avatares de IA (pessoas que não existem). Ver as memórias `metodo-puzzle`, `processo-7-fases`, `erros-recorrentes`, `restricoes-protocolo`.
+> O vídeo pode ser de avatar IA ou de **pessoa real (orgânico)**. Classificar a ORIGEM antes da decomposição (desde 2026-09-25): orgânico segue `PERFIL_ORGANICO.md` e ganha a ficha orgânica do passo 6. Ver as memórias `metodo-puzzle`, `processo-7-fases`, `erros-recorrentes`, `restricoes-protocolo`, `formato-organico-real`.
 
 ## Dependências e preparação no Windows
 - `ffmpeg`/`ffprobe`, Python 3.12 e um ambiente virtual `.venv` na raiz do projeto.
@@ -81,6 +81,15 @@ E responda explicitamente:
 - **Há 2ª pessoa?** Qual o papel (cliente/herói)?
 - **O que muda entre takes** (cor de roupa fingindo dias, tamanho de algo, ângulo)?
 - **Props de credibilidade** (luvas, livro, modelo anatômico)?
+
+**Se a origem for orgânica (pessoa real), acrescentar a FICHA ORGÂNICA** (`PERFIL_ORGANICO.md`):
+- objeto na mão no primeiro segundo, e a que distância da lente (ou "selfie sem objeto, mãos perto da lente")
+- câmera: selfie na mão, celular apoiado, tripé, POV; número de cortes e o maior plano em segundos
+- a fala começa em que segundo; a primeira frase literal
+- molduras verbais: seleção ("meant for you"), prazo ("tomorrow at 11am"), engajamento como condição
+- texto de tela fixo (tarja) além da legenda, se houver
+- **CTA original literal** e o CTA que o substitui pelo ângulo e objetivo
+- palavras que precisam de troca de marca (`spell`, `enchanted`, nome ou @ do criador)
 
 ### 7. Confirmar antes de produzir
 Se houver **qualquer ambiguidade** sobre o herói do hook ou um reveal, **confirme com o usuário** antes de gerar prompts (regra da memória `erros-recorrentes`: os dois erros históricos foram de leitura de hook). Só depois siga para a definição da variável (Fase 3) e os prompts de imagem (Fase 5).

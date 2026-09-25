@@ -31,6 +31,7 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 - [Skill /watch](skill_watch.md) — como rodar o pipeline
 - [Erros recorrentes](erros_recorrentes.md) — **rodar o micro-protocolo de 5 perguntas ANTES de tocar no prompt do T1.** 3 erros históricos de leitura de hook
 - [Vídeo de crescimento não ganha bloco de venda](feedback_growth_video_sem_venda.md) — **classificar CRESCIMENTO x VENDA antes de montar o roteiro, em qualquer ângulo/nicho.** Crescimento clona quase palavra por palavra (só ajusta voz por avatar), venda roda o processo cheio (ponte, álibi, CTA, keyword)
+- [🔴 Organico de pessoa real: copia literal, troca SO o CTA](formato_organico_real.md) — **classificar a ORIGEM do video modelo (pessoa real x avatar IA) antes do roteiro (Luigi, 2026-09-25).** Origem real, qualquer nicho: gancho visual, copy e estrutura literais, so o CTA do angulo muda (Auraly venda = engajamento + foto de perfil). Regras em `PERFIL_ORGANICO.md`
 - [Virais validados sao a fonte](feedback_virais_validados_sao_a_fonte.md) — **ao analisar videos que o Luigi manda:** a analise dos virais e a base, a descricao dele e contexto e nunca apaga padrao provado. Lote com dois formatos = classificar cada video e separar analise e memoria por formato
 - [Método Puzzle](metodo_puzzle.md) — esqueleto/variável/herói, congruência, antes/depois disfarçado
 - [Processo em 7 fases](processo_7_fases.md) — o pipeline inteiro

@@ -215,6 +215,39 @@ def detectar_pipeline(roteiro):
     return m.group(1).lower() if m else None
 
 
+# 2026-09-25 (Luigi): video modelo de PESSOA REAL. Copia literal, troca so o CTA, e as travas de
+# formato do video de avatar IA (bandeira em todo K, kit, carta, T1 mudo) nao se aplicam.
+# Fonte: PERFIL_ORGANICO.md. Marcador 'origem: organico' no topo do ROTEIRO.md.
+ORGANICO = False
+
+
+def detectar_organico(roteiro):
+    return bool(roteiro and re.search(r"^origem:\s*org[aâ]nico\b", roteiro[:1500], re.M | re.I))
+
+
+def declara_original(texto, idx):
+    """Organico: a linha que declara o que o ORIGINAL dizia ('CTA original:', 'Troca de marca:')
+    cita a palavra proibida de proposito. Isso e rastreio da troca, nao copy."""
+    if not ORGANICO:
+        return False
+    ini = texto.rfind("\n", 0, idx) + 1
+    fim = texto.find("\n", idx)
+    linha = texto[ini:fim if fim >= 0 else len(texto)]
+    return bool(re.search(r"\boriginal\b|troca de marca", linha, re.I))
+
+
+def c_organico(roteiro):
+    """Origem organica exige o CTA original declarado, porque a troca do CTA e a unica
+    mudanca de copy permitida e precisa ficar rastreavel (PERFIL_ORGANICO.md secao 2)."""
+    if not ORGANICO:
+        return
+    if re.search(r"CTA original\s*:", roteiro or "", re.I):
+        ok("organico", "origem organica com o CTA original declarado (PERFIL_ORGANICO.md)")
+    else:
+        falha("organico", "origem: organico sem a linha 'CTA original:' no ROTEIRO.md. A troca de "
+                          "CTA e a unica mudanca de copy permitida e precisa ficar declarada")
+
+
 # ---------------------------------------------------------------- checagens
 def detectar_angulo(roteiro, prompts):
     txt = (roteiro or "") + (prompts or "")
@@ -273,7 +306,11 @@ def c_keyword(angulo, arquivos, takes, roteiro_txt=""):
     esperada = KEYWORD_POR_ANGULO.get(angulo, "yes")
     proibida = "yes" if esperada != "yes" else "222"
     txt = "\n".join(arquivos.values())
-    if re.search(r'["\'`]%s["\'`]|\b%s\b' % (esperada, esperada), txt, re.I):
+    if ORGANICO and angulo != 3:
+        # 2026-09-25: FitWell venda de origem organica manda para o link da bio / comentario
+        # fixado no Facebook (PERFIL_ORGANICO.md secao 3). A keyword so e cobrada se usada.
+        ok("keyword", "origem organica FitWell: CTA de link da bio, keyword 'yes' opcional")
+    elif re.search(r'["\'`]%s["\'`]|\b%s\b' % (esperada, esperada), txt, re.I):
         ok("keyword", "keyword '%s' presente (angulo %d)" % (esperada, angulo))
     else:
         falha("keyword", "keyword '%s' do angulo %d nao aparece em lugar nenhum" % (esperada, angulo))
@@ -358,6 +395,9 @@ def c_json_valido(kfs):
 
 
 def c_bandeira(kfs):
+    if ORGANICO:
+        ok("bandeira", "origem organica: bandeira opcional, so como detalhe natural (PERFIL_ORGANICO.md)")
+        return
     ruim = False
     for k in kfs:
         if k["id"].startswith("REF-"):
@@ -699,6 +739,8 @@ def c_angulo3(angulo, arquivos, kfs, takes, pasta, roteiro):
         for m in re.finditer(r"\bwitch\w*|\bspell\b|circle of protection|feiti[cç]o|bruxa", txt, re.I):
             if em_negacao(txt, m.start()):
                 continue  # nota de compliance listando o que NAO se diz
+            if declara_original(txt, m.start()):
+                continue  # organico: linha que declara a palavra do original e a troca feita
             falha("angulo3", "registro OCULTO detectado ('%s'). A lei e: divino, nunca oculto."
                   % m.group(0), "%s:%d" % (nome, linha_de(txt, m.start())))
     for k in kfs:
@@ -1204,6 +1246,8 @@ def checar_auraly(pasta, roteiro):
         for m in re.finditer(r"\bwitch\w*|\bspell\b|circle of protection|feiti[cç]o|bruxa", txt, re.I):
             if em_negacao(txt, m.start()):
                 continue
+            if declara_original(txt, m.start()):
+                continue
             falha("angulo3", "registro OCULTO detectado ('%s'). A lei e: divino, nunca oculto."
                   % m.group(0), "%s:%d" % (nome, linha_de(txt, m.start())))
     if len([f for f in FALHAS if f[0] == "angulo3"]) == antes and takes:
@@ -1225,9 +1269,11 @@ def checar_auraly(pasta, roteiro):
 
 # ---------------------------------------------------------------- runner
 def checar(pasta):
-    global FALHAS, AVISOS, OKS
+    global FALHAS, AVISOS, OKS, ORGANICO
     FALHAS, AVISOS, OKS = [], [], []
     roteiro = ler(os.path.join(pasta, "ROTEIRO.md"))
+    ORGANICO = detectar_organico(roteiro)
+    c_organico(roteiro)
 
     # Roteamento por marcador de pipeline
     if detectar_pipeline(roteiro) == "auraly":

@@ -40,7 +40,8 @@ precisamos vender nada nesse estilo de vídeo."*
    - follow gate com motivo ("ou não vou conseguir te alcançar")
    O CTA final é o mesmo do original (save/comment/follow), só traduzido e com o pronome/registro
    ajustado.
-3. **Se for VENDA:** aplicar o processo cheio de sempre (crivo de copy, ponte argumentada, álibi,
+3. **Se for VENDA** (e o modelo for de avatar IA; se for de pessoa real, ver [[formato-organico-real]]: copy literal e só o CTA muda):
+   aplicar o processo cheio de sempre (crivo de copy, ponte argumentada, álibi,
    CTA de produto, keyword, follow gate). Nada muda aqui.
 4. **O crivo de "alterar copy" (referencia-frameworks-copy, feedback-copy-lapida-estrutura) é pra
    vídeo de VENDA.** Em vídeo de crescimento, esse trabalho de lapidação de copy não se aplica,

@@ -75,7 +75,7 @@ def validar_resultados(doc, ids):
     if not isinstance(doc, dict) or set(doc) != {'versao', 'publicacoes'} or doc['versao'] != 1 or not isinstance(doc['publicacoes'], list):
         raise ValueError('Esperado objeto versao: 1 e publicacoes: lista.')
     vistos = set()
-    campos = {'id', 'producao_id', 'avatar_id', 'hook_id', 'objetivo', 'canal', 'url', 'publicado_em', 'coletado_em', 'moeda', 'observacoes', *CONTAGENS, *VALORES}
+    campos = {'id', 'producao_id', 'avatar_id', 'hook_id', 'objetivo', 'canal', 'url', 'publicado_em', 'coletado_em', 'moeda', 'observacoes', 'origem', *CONTAGENS, *VALORES}
     for r in doc['publicacoes']:
         if not isinstance(r, dict) or set(r) - campos:
             raise ValueError('Publicacao invalida ou campo desconhecido.')
@@ -104,6 +104,9 @@ def validar_resultados(doc, ids):
             v = r.get(k)
             if v is not None and (isinstance(v, bool) or not isinstance(v, (int, float)) or not math.isfinite(v) or v < 0 or (k in CONTAGENS and not isinstance(v, int))):
                 raise ValueError('Metrica invalida: ' + k)
+        # 2026-09-25: origem do video modelo (PERFIL_ORGANICO.md). REAL = pessoa real, IA = avatar IA.
+        if r.get('origem') is not None and r['origem'] not in ('REAL', 'IA'):
+            raise ValueError('Origem deve ser REAL ou IA: ' + r['id'])
         if any(r.get(k) is not None for k in ('receita', 'custo')) and not re.fullmatch(r'[A-Z]{3}', r.get('moeda') or ''):
             raise ValueError('Informe moeda com tres letras para receita/custo.')
     return doc
@@ -128,8 +131,8 @@ def registrar(args):
         if k not in CONTAGENS + VALORES:
             raise ValueError('Metrica desconhecida: ' + k)
         r[k] = int(v) if k in CONTAGENS else float(v)
-    for k in ('url', 'moeda', 'observacoes'):
-        if getattr(args, k):
+    for k in ('url', 'moeda', 'observacoes', 'origem'):
+        if getattr(args, k, None):
             r[k] = getattr(args, k)
     antigos = [x for x in doc['publicacoes'] if x.get('id') == r['id']]
     base = dict(antigos[0]) if antigos else {}
@@ -176,11 +179,11 @@ def atualizar():
     if not dados['publicacoes']:
         linhas.append('Nenhuma publicação com métricas registrada. Não há base para apontar um criativo vencedor.')
     else:
-        linhas += ['| ID | Produção | Objetivo | Canal | Coletado em | 3s/views | Conclusões/views | Cliques/impressões | Compras/visitas | Receita/custo |', '|---|---|---|---|---|---|---|---|---|---|']
+        linhas += ['| ID | Produção | Objetivo | Origem | Canal | Coletado em | 3s/views | Conclusões/views | Cliques/impressões | Compras/visitas | Receita/custo |', '|---|---|---|---|---|---|---|---|---|---|---|']
         for r in dados['publicacoes']:
             m = metricas(r)
             valores = [('%.2f%%' % (v * 100) if k != 'roas' else '%.2fx' % v) if v is not None else 'Sem base' for k, v in m.items()]
-            linhas.append('| ' + ' | '.join(celula(v) for v in [r['id'], r['producao_id'], r['objetivo'], r['canal'], r['coletado_em'], *valores]) + ' |')
+            linhas.append('| ' + ' | '.join(celula(v) for v in [r['id'], r['producao_id'], r['objetivo'], r.get('origem'), r['canal'], r['coletado_em'], *valores]) + ' |')
     linhas += ['', 'As taxas só são interpretáveis quando numerador e denominador vêm da mesma publicação, janela e definição da plataforma. Zero é resultado medido; null é desconhecido. Custo deve ter escopo consistente; receita/custo não representa lucro líquido.']
     (CONTROLE / 'RESULTADOS.md').write_text('\n'.join(linhas) + '\n', encoding='utf-8')
     print('%d roteiros indexados; %d publicacoes com dados.' % (len(registros), len(dados['publicacoes'])))
@@ -199,6 +202,7 @@ def main():
     reg.add_argument('--objetivo', required=True, choices=['SALE', 'GROWTH'])
     reg.add_argument('--coletado-em'); reg.add_argument('--id'); reg.add_argument('--url')
     reg.add_argument('--moeda'); reg.add_argument('--observacoes')
+    reg.add_argument('--origem', choices=['REAL', 'IA'], help='video modelo de pessoa real ou de avatar IA (PERFIL_ORGANICO.md)')
     reg.add_argument('--metrica', action='append', default=[], help='nome=valor, repetivel')
     args = parser.parse_args()
     try:
