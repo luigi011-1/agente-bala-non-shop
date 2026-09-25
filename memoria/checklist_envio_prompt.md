@@ -86,8 +86,8 @@ rodado antes de todo envio segura.
 - [ ] **B8 Avatar fixo por conta, nunca repetido entre contas:** ♻️ (Luigi, 2026-09-25) cada conta
   tem o mesmo avatar com a **roupa e o cenário-base da âncora em todo vídeo**; o que muda entre
   vídeos é o conteúdo. Revoga o antigo "muda roupa, fundo ou detalhe entre vídeos da mesma conta".
-  Exceções: movie style / short form (elenco próprio a cada vídeo) e o Auraly, que segue o próprio
-  contrato (`WORKFLOW_AURALY.md`, cenário por gancho) até decisão em contrário. **O mesmo rosto nunca
+  Vale nos três ângulos, Auraly incluído (Luigi, 2026-09-25: "vale para o Auraly também"). Única
+  exceção: movie style / short form (elenco próprio a cada vídeo). **O mesmo rosto nunca
   roda em duas contas** (violação de conteúdo original), isso não mudou.
 - [ ] **B9 Sem figura médica explícita no AVATAR que vende:** nada de jaleco, estetoscópio, crachá
   ou "Dr." no avatar ou na autoridade que recomenda o nosso produto. Médico como avatar dá banimento

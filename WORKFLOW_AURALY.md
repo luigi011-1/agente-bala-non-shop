@@ -499,6 +499,14 @@ analises longas.
 
 ## Âncora e cenário por gancho (Luigi, 2026-09-14; âncora revista em 2026-09-22)
 
+> ♻️ **2026-09-25: AVATAR FIXO POR CONTA (Luigi).** *"sim, vale para o Auraly também"*. Cada conta
+> usa **o mesmo avatar com a roupa e o cenário-base da âncora em todo vídeo e em todo gancho**; o que
+> varia entre vídeos é o conteúdo. **Revoga os itens 2 e 3 abaixo** (cenário próprio e roupa livre
+> por gancho). O ângulo de câmera continua podendo variar para servir à ação estrutural (item 4).
+> Se o vídeo modelo tem uma cena em outro lugar, ela acompanha o modelo com a mesma pessoa e a mesma
+> roupa. O único formato sem avatar fixo é o movie style / short form. Mesma regra da FitWell
+> (`PERFIL_ORGANICO.md` seção 4.1 e checklist B8).
+
 > ♻️ **2026-09-22: a FINGERPRINT caiu.** O Luigi reprovou o resultado e decidiu produzir com as
 > imagens de teste em cena real. **Roster único do Ângulo 3: Walt Hensley, Darlene Pruitt e Lorraine
 > Vance**, âncoras em `producao/_ancoras/walt_hensley_ancora.jpg`, `darlene_pruitt_ancora.jpg` e
@@ -517,11 +525,12 @@ Testado em 2026-09-14 com um avatar hoje descartado e aprovado. Revoga o modelo 
    grade de estúdio, fundo neutro, rosto em vários ângulos, corpo de frente/lado/costas, macro de
    pele. Ela trava **somente rosto, textura de pele, tipo físico e cabelo**. Nunca trava roupa,
    cenário, pose ou luz.
-2. **Cada gancho escolhido vira um vídeo com CENÁRIO PRÓPRIO, do T1 ao CTA**, não mais "5 hooks
+2. ~~**Cada gancho escolhido vira um vídeo com CENÁRIO PRÓPRIO, do T1 ao CTA**~~ (revogado em
+   2026-09-25: o cenário é o da âncora em todos os ganchos). Texto histórico: não mais "5 hooks
    compartilhando um corpo comum". Isso significa um `K` de hook + um `K` de corpo (serve T2 a T5)
    + um `K` de CTA (edição textual do corpo, mais fechado) **por cenário**, não um só conjunto
    compartilhado pela fila de ganchos.
-3. **Liberdade total de roupa por cenário.** A roupa da fingerprint não é obrigatória em nenhum
+3. ~~**Liberdade total de roupa por cenário.**~~ (revogado em 2026-09-25: a roupa é a da âncora). A roupa da fingerprint não é obrigatória em nenhum
    `K`; cada cenário ganha a roupa que fizer sentido com o ambiente e o físico.
 4. **O angulo de camera serve a acao estrutural.** Pode ser exótico quando aumenta a anomalia, mas
    nao e obrigatorio mudar o angulo em toda variacao. Preservar a acao estrutural e o timing pode

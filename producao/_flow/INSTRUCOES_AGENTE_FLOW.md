@@ -1,6 +1,6 @@
 # Instrucoes do agente executor do Google Flow AI
 
-Versao 15, 2026-09-24. Contrato de execucao, subordinado ao roteador de cada oferta.
+Versao 16, 2026-09-25. Contrato de execucao, subordinado ao roteador de cada oferta.
 Auraly segue exclusivamente WORKFLOW_AURALY.md. Angle 1/2 seguem CLAUDE.md e, no FitWell,
 PLAYBOOK_FITYWELL.md. Os pacotes existentes permanecem como foram aprovados.
 
@@ -61,19 +61,17 @@ so. Isto e obrigatorio em todo K do perfil CLASSICO:
 8. Se o Omni Flash nao estiver disponivel, ou nao permitir a duracao, o INITIAL FRAME ou a
    quantidade 1, PARAR e avisar o operador antes de trocar qualquer coisa.
 
-### AURALY, anchor e cenario por gancho (Luigi, 2026-09-14; anchor revista em 2026-09-22)
+### AURALY, anchor e avatar fixo por conta (Luigi, 2026-09-14; anchor revista em 2026-09-22; avatar fixo em 2026-09-25)
 
 Roster Auraly: Walt Hensley, Darlene Pruitt e Lorraine Vance. A referencia de cada um e a anchor
-em cena real (imagem de teste aprovada), anexada em todo K. Nao existe fingerprint. Quando o K
-mantem o cenario da anchor, o texto do K descreve esse cenario. Quando o K pede cenario ou roupa
-novos, o texto manda usar a anchor so para a identidade; siga o texto e ignore roupa, fundo e props
-da anchor.
+em cena real (imagem de teste aprovada), anexada em todo K. Nao existe fingerprint.
 
-Cada gancho escolhido passa a ter CENARIO PROPRIO do T1 ao CTA (K de hook + K de corpo + K de CTA
-por cenario), nunca mais um corpo compartilhado pela fila inteira. O angulo de camera serve a
-acao estrutural preservada: pode ser exotico quando aumenta a anomalia, mas pode se repetir entre
-variacoes para preservar composicao e timing. Mudar o angulo conta como a unica variavel dessa
-variacao. Roupa livre por cenario, sem obrigacao de repetir a roupa da anchor.
+AVATAR FIXO POR CONTA (v16, 2026-09-25): cada conta usa o mesmo avatar com a roupa e o cenario-base
+da anchor em todo video e em todo gancho. O texto do K descreve esse cenario e essa roupa. Quando o
+video modelo tem uma cena em outro lugar, o texto do K descreve o lugar novo e manda usar a anchor
+para identidade e roupa; a pessoa e a roupa nunca mudam. O angulo de camera serve a acao estrutural
+preservada: pode ser exotico quando aumenta a anomalia, mas pode se repetir entre variacoes para
+preservar composicao e timing. Mudar o angulo conta como a unica variavel dessa variacao.
 
 No T1, a anomalia visual domina. O kit completo de tarologo nao e obrigatorio: usar de zero a dois
 marcadores discretos de Auraly somente se nao competirem com o heroi. Um unico VFX simples e legivel
@@ -255,6 +253,8 @@ v15, 2026-09-24: juntadas no mesmo arquivo as tres linhas que corriam em paralel
 separadas: movie style com `REF-P` (v13), short form de crescimento sem anchor (a outra v13, de
 `producao/sf_torta_vovo`) e o perfil CLASSICO de quatro imagens e Omni Flash (v14). Nenhuma regra
 de conteudo mudou nesta versao.
+v16, 2026-09-25: AVATAR FIXO POR CONTA tambem no Auraly. Revoga o cenario proprio e a roupa livre por
+gancho da v7: roupa e cenario-base da anchor em todo video e gancho; so o angulo de camera varia.
 v10, 2026-09-20: sincronizado com o portfolio Auraly 4/3/3, revogado poucas horas depois. K e V podem chegar na mesma entrega,
 mas a execucao continua em duas fases com selecao manual. T1 deixa de exigir kit completo, camera
 passa a servir o invariante da familia e um unico VFX funcional passa a ser permitido. A relacao

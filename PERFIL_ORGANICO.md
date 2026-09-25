@@ -108,7 +108,8 @@ que se está copiando:
 - **Cada conta tem um avatar fixo, com a roupa e o cenário da âncora dele em todo vídeo.** Entre um
   vídeo e outro da mesma conta muda a receita, não a pessoa, a roupa nem a cozinha. Os concorrentes
   medidos fazem assim (v5 e v6 da rodada `fitywell_ia`: mesma loira, mesma camiseta, mesma cozinha).
-  **O único formato sem avatar fixo é o movie style / short form**, que tem elenco próprio a cada
+  **Vale para a FitWell e para a Auraly** (Luigi, 2026-09-25). **O único formato sem avatar fixo é o
+  movie style / short form**, que tem elenco próprio a cada
   vídeo. O cenário da âncora é a **base** da conta: a cozinha ou bancada onde a receita acontece. Se
   a receita pede equipamento que a âncora não mostra (fogão, forno), o K descreve esse equipamento
   dentro do mesmo cenário. Se o vídeo modelo tem uma cena em outro lugar (o v1 abre no Walmart), essa
