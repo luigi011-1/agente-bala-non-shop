@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: f4fd75e0-e338-4f80-a195-7c079e471917
-  modified: 2026-09-25T04:16:54.023Z
+  modified: 2026-09-25T20:00:00.000Z
 ---
 
 Em 2026-09-25 o Luigi abriu um segundo braco de producao: modelar videos **organicos de pessoas
@@ -39,6 +39,14 @@ de venda devolve o video para o formato saturado.
   no Facebook o comentário fixado do vídeo** (Luigi, 2026-09-25: "não é regra, mas a ideia será essa",
   então é direção e a frase se adapta ao original); keyword `yes` opcional; nunca "free" (o plano é
   pago) nem brinde que o funil não entrega.
+- **Decisões de 2026-09-25, depois do lote de 7 avatares IA** (`producao/_swipe_organico/rodada_2026_09_25_fitywell_ia/ANALISE.md`):
+  1. FitWell venda: **padrão é o link da bio**, mas ele some se a conta tomar restrição. Quando o
+     Luigi disser que o link saiu, o CTA vira a reserva do molde v4 (keyword `yes` + "the simple
+     routine I give to my clients" + follow "so I can send it to you"). Vale por conta.
+  2. **Avatar fixo por conta** (roupa e cenário-base da âncora em todo vídeo); só movie style /
+     short form não tem avatar fixo. Ver [[checklist-envio-prompt]] B8.
+  3. **Receita pode repetir entre contas diferentes.**
+  4. **Claim forte do original se copia literal**, sem suavizar; só fica anotado como o mais arriscado.
 - Marcador `origem: organico` + linha `CTA original:` no topo do `ROTEIRO.md` (o linter cobra e libera
   a bandeira); `Source: ORGANIC` no checkpoint Auraly; `--origem REAL|IA` no registro de resultados.
 - O `GATE_VISUAL.md` Partes 1 a 3 continua valendo (fiel no conteudo, nunca no acabamento): luz
