@@ -42,6 +42,12 @@ Parte 4, Passo 0.
 
 Nenhuma etapa pula. O roteiro não vira prompt sem aprovação explícita.
 
+**Vídeo modelo de pessoa real (Luigi, 2026-09-25):** `PERFIL_ORGANICO.md`. Copia literal de gancho
+visual, copy e estrutura, e só o CTA muda: growth mantém o CTA do original; venda usa a ponte de
+continuidade do próprio vídeo + link da bio, ou no Facebook o comentário fixado do vídeo (direção do
+Luigi, não frase fixa), nunca "free". Sem ponte das três
+causas, sem álibi, sem bandeira obrigatória. `origem: organico` e `CTA original:` no topo do `ROTEIRO.md`.
+
 **`GATE_VISUAL.md` roda em dois momentos** (desde 2026-09-22, vale para todos os ângulos): a Parte 4
 antes do gancho (Passo 0 na validação, as 10 variações só na rodada de variação), e as Partes 1 a 3 antes do primeiro `K__`. Todo prompt
 de imagem carrega luz neutra ou céu com cor, herói colado na lente e o trecho de realismo.

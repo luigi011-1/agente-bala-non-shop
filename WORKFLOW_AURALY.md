@@ -89,6 +89,14 @@ dois casos. SALE usa o destino Stories; GROWTH, quando explicitamente aprovado p
 usa save, 222 e follow, sem exigir Stories ou DM. Nao inferir GROWTH porque o video modelo era
 de crescimento. Uma decisao de GROWTH vale so para a producao cujo checkpoint a registra.
 
+Registrar tambem `Source: ORGANIC` quando o video modelo for de **pessoa real** (Luigi, 2026-09-25).
+Nesse caso `PERFIL_ORGANICO.md` governa a copy e o visual: copia literal do gancho visual, da copy e
+da estrutura, **so o CTA muda** (SALE: engajamento do original com `222` e a consequencia, depois
+`tap my profile picture`, a resposta esta no Stories). Kit de tarologo, carta SOULMATE, T1 mudo com
+cortes internos, plano unico com mesa e bandeira em todo K **nao se aplicam**; `spell` e afins viram
+`prayer`, `ritual` ou `blessing`. O `ROTEIRO.md` leva `origem: organico` e `CTA original:` no topo.
+Sem `Source:`, vale o formato de avatar IA.
+
 O CHECKPOINT e a fonte autoritativa de estado. `AVATAR_QUEUE.md`, quando existir, e uma vista
 derivada: preservar nomes e caminhos das anchors e atualizar os estados pelo checkpoint. Nao
 inferir aprovacao, geracao de midia ou publicacao pela existencia de um arquivo. Pastas historicas
@@ -442,6 +450,7 @@ executar exatamente `Next action`. Nao refazer decisoes.
 Production:
 Angle:
 Objective: SALE ou GROWTH
+Source: ORGANIC (so quando o video modelo e de pessoa real; PERFIL_ORGANICO.md)
 Round: VALIDATION ou VARIATION
 Validated from: (so em VARIATION: producao, avatar, resultado)
 Reference video:

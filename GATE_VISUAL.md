@@ -18,6 +18,11 @@ ele define **o que vai dentro** de cada prompt.
 
 Cada regra nova que mudar algo aqui se escreve **aqui**, e as memórias apontam para cá.
 
+**Origem orgânica (2026-09-25):** quando o vídeo modelo é de pessoa real, as Partes 1 a 3 continuam
+inteiras (fiel no conteúdo, nunca no acabamento), mas a bandeira dos EUA deixa de ser âncora
+obrigatória e o "herói" é o objeto que o original segura no primeiro segundo, ou as mãos perto da
+lente numa selfie sem objeto. Sinais de gente real em `PERFIL_ORGANICO.md` seção 6.
+
 ---
 
 ## PARTE 1 · REALISMO (anti cara de IA)

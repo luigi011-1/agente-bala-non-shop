@@ -217,6 +217,8 @@ ou revelação — quando ele for a própria anomalia do hook, nunca decoração
 Aplicação nas 3 ações do CTA em [[angulo3-swipe-padroes]], que traz a tabela de tradução frase a frase.
 
 ## 🔮 KIT DE TARÓLOGO EM QUADRO — CORPO T2 AO CTA (Luigi, 2026-09-03; T1 revisto 2026-09-20)
+
+♻️ **2026-09-25:** kit de tarólogo, carta SOULMATE, T1 mudo e plano único com mesa valem só no formato de avatar IA. Vídeo modelo de pessoa real segue o visual do próprio modelo, copy literal, só o CTA muda ([[formato-organico-real]], `PERFIL_ORGANICO.md`).
 **Vale para todos os avatares do ângulo do T2 ao CTA e nas âncoras de credencial.**
 
 ### Exceção exclusiva do T1/hook, aprovada em 2026-09-20

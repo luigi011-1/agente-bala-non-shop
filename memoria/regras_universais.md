@@ -83,6 +83,8 @@ Ver fichas completas em [[avatares-fichas]].
 
 **Todo prompt de imagem leva a bandeira dos EUA no cenário. Discreta, porém VISÍVEL e em foco.**
 
+♻️ **Exceção de 2026-09-25:** vídeo modelo de pessoa real ([[formato-organico-real]]). Ali a bandeira é opcional e só entra como detalhe natural do cômodo (ímã, pano de prato, caneca), porque nenhum orgânico real tem bandeira de cenário.
+
 Discreta = pequena e periférica (bandeirinha de mesa em suporte, patch na roupa, adesivo no canto
 de um espelho). **Nunca desfocada, nunca cortada pela borda, nunca só implícita.**
 

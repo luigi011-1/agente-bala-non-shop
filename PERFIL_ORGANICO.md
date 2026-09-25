@@ -1,0 +1,118 @@
+# PERFIL ORGÂNICO · vídeo modelo de pessoa real
+
+Aberto em 2026-09-25 a pedido do Luigi. **Fonte única** do que muda quando o vídeo modelo é de uma
+**pessoa real** (orgânico), em qualquer nicho, para FitWell (Ângulo 2) e Auraly (Ângulo 3). Não é
+workflow novo: o processo de cada ângulo continua o mesmo (`CLAUDE.md` + `PLAYBOOK_FITYWELL.md`, ou
+`AGENTS.md` → `WORKFLOW_AURALY.md` → `CHECKPOINT.md`). Este arquivo só lista as diferenças, e onde
+ele fala, ele vence as regras de formato do vídeo de avatar IA.
+
+**Por que existe:** o formato de gancho bizarro está saturado (todo mundo com o mesmo gancho medonho,
+a mesma copy e os mesmos ingredientes). O orgânico real performa por parecer orgânico, então
+reescrever a copy ou enxertar mecanismo de venda devolve o vídeo para o formato saturado.
+
+Lotes de referência: `producao/_swipe_organico/rodada_2026_09_25/ANALISE.md` (FitWell) e
+`producao/_swipe_organico/rodada_2026_09_25_auraly/ANALISE.md` (Auraly).
+
+---
+
+## 1. Classificar a origem, antes de tudo
+
+No P1 (ao receber o `.mp4`), além de ângulo e objetivo, responder: **o vídeo modelo é de pessoa real
+ou de avatar IA?** Na dúvida, perguntar ao Luigi. A resposta vai para o disco:
+
+- `ROTEIRO.md`, no topo (primeiras linhas, junto de `pipeline:` e `tipo:`): `origem: organico`
+- Auraly, também no `CHECKPOINT.md`: `Source: ORGANIC`
+
+O linter lê o marcador do `ROTEIRO.md` (ver seção 6). Sem marcador, vale o formato de avatar IA.
+
+## 2. A regra-mãe: copiar literal, trocar só o CTA
+
+**Copia-se literalmente:** o gancho visual (o que está na mão, onde, a que distância da lente, o
+que acontece no primeiro segundo), a copy inteira, a ordem das frases, a estrutura, os cortes, o
+tipo de câmera, o texto de tela e o sign-off.
+
+**Só muda, e cada mudança vai declarada no `ROTEIRO.md` com o motivo:**
+
+1. **O CTA**, conforme o ângulo e o objetivo (seção 3).
+2. **Palavra que quebra a marca**, trocada por uma equivalente e nada mais:
+   Auraly `spell` → `prayer`, `ritual` ou `blessing`; `enchanted` → `blessed`; `witch`, `hex` e
+   afins saem. Nome, @, marca ou bordão do criador original nunca entram.
+3. **Voz por avatar:** ajuste mínimo de idade e gênero para a frase soar crível na boca de quem
+   fala (a regra de growth que já existia). Ex.: `we` vira `I` quando o avatar está sozinho.
+4. **Keyword do ângulo:** `222` na Auraly no lugar do número ou palavra do original (`888`, `FUN`,
+   `REPLAY`). Na FitWell venda o CTA é link da bio / comentário fixado (seção 3); se o original pedir
+   comentário por palavra, a palavra é `yes`.
+5. **Acabamento visual** pelo `GATE_VISUAL.md` Partes 1 a 3 (fiel no conteúdo, nunca no
+   acabamento): luz neutra mesmo se o original tiver abajur laranja, realismo, objeto do gancho
+   colado na lente.
+6. **O que a lei ou a marca proíbe:** preço nunca dito na Auraly, produto fora de quadro nos
+   Ângulos 2 e 3, "free" nunca dito na FitWell (o plano é pago), rosto da alma gêmea nunca revelado.
+
+Nada de ponte das três causas, álibi, mecanismo, obstáculo ou crivo de copy, **nem em vídeo de
+venda**. O crivo de copy é do formato de avatar IA.
+
+## 3. O CTA por ângulo e objetivo
+
+O CTA novo **aproveita a mecânica de engajamento do próprio original** ("interact three times to
+lock it in", "comment X to activate it", "if you want more recipes like this") e troca só o que
+precisa. Ele substitui o CTA original no mesmo lugar do vídeo e com o mesmo tamanho aproximado.
+
+| | GROWTH | SALE |
+|---|---|---|
+| **FitWell (Ângulo 2)** | CTA do próprio original (save / comment / follow), como em `feedback-growth-video-sem-venda` | ponte de continuidade do próprio vídeo + **link da bio, ou no Facebook o comentário fixado** (direção, não frase fixa; ver abaixo). Sem "free", sem prometer brinde que o funil não entrega (livro, replay) |
+| **Auraly (Ângulo 3)** | CTA do original com a keyword trocada para `222`; Stories só com `growth-stories: aprovado` no checkpoint | engajamento do original com `222` e a consequência (LEI DO SELO), **depois** `tap my profile picture`, a resposta está no Stories. Ordem `222` → Stories inalterada (P7) |
+
+**FitWell SALE, a direção do CTA (Luigi, 2026-09-25, "não é regra, mas a ideia será essa"):** mandar
+para o link da bio e, para quem está no Facebook, para o comentário fixado do vídeo. A frase se adapta
+ao tom e ao tamanho do CTA original, e a keyword `yes` deixa de ser obrigatória nesse CTA. Exemplo:
+*"If you want more [recipes like this / o que o vídeo entregou], tap the link in my bio, or if you're
+on Facebook, just tap the pinned comment on this video."*
+
+Exemplo Auraly SALE, a partir do a5 do lote (*"All you have to do to claim it is interact with this
+video three times. Like it, save it, send it to yourself, and follow me."*):
+*"All you have to do to claim it is comment 222 so it gets tied to your name, save it, and follow
+me. Then tap my profile picture, the answer is already waiting in my stories."*
+
+## 4. Travas que NÃO se aplicam na origem orgânica
+
+Ficam só no formato de avatar IA, porque o orgânico real não tem nenhuma delas e colocá-las quebra o
+que se está copiando:
+
+- **Bandeira dos EUA em todo K.** Opcional. Se entrar, só como detalhe natural do cômodo (ímã,
+  pano de prato, caneca, bandeira na varanda), nunca como âncora de fundo obrigatória.
+- **Auraly:** kit de tarólogo em todo K, carta SOULMATE (`REF-CARTA`) na mão depois do gancho,
+  T1 mudo com cortes internos no `V__`, plano único com mesa no terço inferior, split vertical.
+  O visual segue o do modelo: se o original segura uma vela, o nosso segura uma vela; se é selfie
+  sem nada, é selfie sem nada.
+- **Crivo de copy, ponte, álibi e rotas argumentativas** (P2 da venda).
+- **As 10 variações de gancho** continuam só na rodada de variação, como sempre.
+
+## 5. O que continua valendo, igual
+
+Validar antes de variar (o gancho fiel é o do orgânico), fila de avatares e pacote por avatar,
+bloco do Flow, K/V autossuficientes, 13 a 29 palavras por take com `CENA CURTA` e `B-ROLL`
+quando o modelo pede, fala literal no prompt, zero travessão, keyword do ângulo, `GATE_VISUAL.md`
+Partes 1 a 3, `no captions` no negative, checklist de envio, linter, transcrições no fim, P10.
+
+## 6. Produção: como o orgânico vira K e V
+
+- **Take segue a cena do modelo.** Plano único longo (selfie de 15 a 50 s) se divide em fim de
+  frase; o corte vira jump cut, que é a gramática do próprio formato. Receita: um take por passo,
+  como os avatares IA do lote fazem.
+- **Imagem, sinais de gente real** (medidos no lote): selfie na distância do braço ou celular
+  apoiado na bancada; cômodo comum com algum ruído (ímã na geladeira, porta, janela com rua);
+  camiseta lisa; microfone de lapela preto na gola nos vídeos de receita; o objeto do primeiro
+  segundo colado na lente; mãos entrando no quadro perto da lente.
+- **Vídeo, primeira linha do prompt** (troca a linha "apaixonada" do formato IA):
+  `o avatar ([gênero]) fala em inglês com sotaque americano de [avatar], em tom de conversa de quem
+  grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do
+  vídeo modelo, a seguinte frase: "[FALA EXATA DO ROTEIRO]"`
+  Os outros quatro blocos não mudam. `câmera:` descreve a câmera do modelo (`selfie na mão com leve
+  tremor natural`, `celular apoiado, fixo`).
+- **Legenda queimada** no CapCut no estilo do original; tarja fixa (ex.: `DON'T SKIP 👁`) só se o
+  original tiver.
+
+## 7. Medição
+
+Registrar cada publicação com `--origem REAL` (vídeo modelo orgânico) ou `--origem IA` no
+`gerenciar_operacao.py registrar`. É o que responde se o braço orgânico dá mais views e venda.
