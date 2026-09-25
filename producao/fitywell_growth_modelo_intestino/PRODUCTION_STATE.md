@@ -2,9 +2,9 @@
 Production: `fitywell_growth_modelo_intestino`
 Angle: 2, FityWell · Objective: GROWTH · Origin: IA · Round: VALIDATION
 Reference video: `input/reference_video.mp4`
-Current stage: WAITING_LUIGI_REQUEST
-Next action: Luigi pede o pacote corrigido (ficha aplicada). Colar o avatar pedido; Eva Dall segue ACTIVE,
-avançar o próximo PENDING e entregar o `ENTREGA_<AVATAR>.md` dele.
+Current stage: PRODUCTION_COMPLETE
+Next action: Luigi gera a mídia no Flow; quando mandar o K01 gerado, pontuar F1 a F6 contra o frame. Depois da
+postagem, rodar o P10 (log de rotação, biblioteca, `gerenciar_operacao.py registrar --origem IA`).
 
 ## Decisões do Luigi (2026-09-25)
 - Ângulo 2, FityWell, objetivo GROWTH (declarados na mensagem de intake).
@@ -28,3 +28,5 @@ avançar o próximo PENDING e entregar o `ENTREGA_<AVATAR>.md` dele.
   frames do modelo; K das panelas com avatar agachado e câmera na altura da borda, copos com 1/3 do quadro,
   lista fechada em todo K. Linter com `ficha_frame.py`: 13 K, placar 14/14, evidência nos 6 arquivos, 0 FALHAS.
   Os pacotes corrigidos NÃO foram colados no chat (Luigi: só quando pedir).
+- 2026-09-25: Luigi pediu o restante. Ivy Carl, Lais Collins, Robert Alves e Roberta Carvalho enviados como
+  arquivo (ENTREGA_<AVATAR>.md, ficha 13/13, linter 0 FALHAS cada). Fila com 5 DONE: PRODUCTION COMPLETE.

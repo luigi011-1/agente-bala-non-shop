@@ -13,11 +13,11 @@ Dana Morrison, Jamie Anderson, Lynn Parker e Lia Carlla não vieram e não entra
 
 | Ordem | Estado | Avatar | Âncora anexada | Cenário-base (texto dos K) |
 |---:|---|---|---|---|
-| 1 | ACTIVE | Eva Dall | `input/ancoras/01_eva_dall.jpg` | cozinha branca com bancada de mármore verde, boné marrom virado, regata branca |
-| 2 | PENDING | Ivy Carl | `input/ancoras/02_ivy_carl.jpg` | varanda coberta com mesa de madeira junto à piscina, boné preto, manga longa preta |
-| 3 | PENDING | Lais Collins | `input/ancoras/03_lais_collins.jpg` | apartamento moderno com cozinha integrada, sem camisa, tatuagens, short preto |
-| 4 | PENDING | Robert Alves | `input/ancoras/04_robert_alves.jpg` | cozinha de cabana com bancada de madeira clara, óculos redondos, polo preta |
-| 5 | PENDING | Roberta Carvalho | `input/ancoras/05_roberta_carvalho.jpg` | cozinha residencial com bancada de pedra e jardim na janela, camiseta azul-marinho |
+| 1 | DONE | Eva Dall | `input/ancoras/01_eva_dall.jpg` | cozinha branca com bancada de mármore verde, boné marrom virado, regata branca |
+| 2 | DONE | Ivy Carl | `input/ancoras/02_ivy_carl.jpg` | varanda coberta com mesa de madeira junto à piscina, boné preto, manga longa preta |
+| 3 | DONE | Lais Collins | `input/ancoras/03_lais_collins.jpg` | apartamento moderno com cozinha integrada, sem camisa, tatuagens, short preto |
+| 4 | DONE | Robert Alves | `input/ancoras/04_robert_alves.jpg` | cozinha de cabana com bancada de madeira clara, óculos redondos, polo preta |
+| 5 | DONE | Roberta Carvalho | `input/ancoras/05_roberta_carvalho.jpg` | cozinha residencial com bancada de pedra e jardim na janela, camiseta azul-marinho |
 
 ## Travas da produção
 
@@ -30,3 +30,6 @@ Dana Morrison, Jamie Anderson, Lynn Parker e Lia Carlla não vieram e não entra
 
 - Roteiro aprovado em 2026-09-25. Os 5 pacotes gerados em disco (`ENTREGA_<AVATAR>.md`), linter 0 FALHAS.
   Eva Dall ACTIVE, colada no chat.
+
+- 2026-09-25: Luigi pediu todo o restante. Os 4 `ENTREGA_<AVATAR>.md` restantes (já com a ficha do frame)
+  enviados como arquivo. Fila com 5 DONE: PRODUCTION COMPLETE (entrega de prompts).
