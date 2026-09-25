@@ -77,5 +77,7 @@ browser automation sao historicos, salvo pedido explicito do usuario.
   (realismo anti cara de IA, heroi colado na lente, checklist de gancho visual).
 - Video modelo de pessoa real (organico), em FitWell ou Auraly: `PERFIL_ORGANICO.md`. Copia literal
   de gancho visual, copy e estrutura; so o CTA muda conforme angulo e objetivo (Luigi, 2026-09-25).
+- Nenhum K ou REF-P sem a ficha do frame e o placar com evidencia citada (`FICHA_FRAMES.md`,
+  `GATE_VISUAL.md` Parte 6, Luigi 2026-09-25), em FitWell e Auraly. O linter reprova sem ela.
 - Nenhum gancho, K, V, pacote ou prompt avulso e enviado sem o checklist de envio 100% aprovado
   (`GATE_VISUAL.md` Parte 5, memoria `checklist-envio-prompt`). Item reprovado impede o envio.

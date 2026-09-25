@@ -396,6 +396,10 @@ K02
 Desde 2026-09-25 (Luigi, contrato do Flow v17) cada K do bloco e UM objeto JSON em ingles, de `{` a
 `}`, com os mesmos campos do JSON interno menos `shot_id`. As regras de conteudo nao mudam.
 
+**Antes do primeiro K (Luigi, 2026-09-25): `FICHA_FRAMES.md` com a ficha do frame e o placar de cada K**
+(`GATE_VISUAL.md` Parte 6). O K se escreve a partir da ficha, e o `checar_entrega.py` reprova o pacote
+sem ela, com evidencia que nao esta no K, heroi sem medida ou camera sem lente e altura.
+
 Sem descricao, titulo, `T__`, metadata ou `Prompt:` dentro do bloco. Depois do bloco K, entregar o
 bloco V previsto abaixo na mesma resposta. A seleção manual continua sendo gate do executor Flow,
 mas não deixa o checkpoint do Codex parado: após os dois blocos, atualizar para `AVATAR_TRANSITION`

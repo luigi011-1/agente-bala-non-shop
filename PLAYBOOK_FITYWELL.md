@@ -151,6 +151,8 @@ Os blocos limpos valem aqui também, mesmo o formato tendo nascido no Ângulo 3.
 - **Um `K__` sozinho numa linha, seguido de um prompt autossuficiente.** Mesma coisa para `V__`.
   Desde 2026-09-25 (contrato do Flow v17) o prompt de imagem sai em **JSON**, um objeto de `{` a `}`
   com os campos do JSON interno menos `shot_id`; as regras de conteúdo não mudam.
+- **Antes do primeiro K: `FICHA_FRAMES.md`** com a ficha do frame e o placar de cada K (`GATE_VISUAL.md`
+  Parte 6, 2026-09-25). O linter reprova pacote sem ela.
   No perfil classico, cada `V__` usa o maior `K__` menor ou igual ao seu numero, conforme
   o contrato do executor. Um K pode sustentar varios V quando o setup e estado sao os mesmos.
 - O arranjo 1:1 da `fitywell_pernas` e um pacote historico preservado, nao uma exigencia de

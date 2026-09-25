@@ -96,6 +96,10 @@ rodado antes de todo envio segura.
   movie style de venda (*"your labs look fine"*).
 - [ ] **B10 Autossuficiente e no formato do Flow:** `K__` sozinho na linha, prompt completo, sem
   texto auxiliar, sem depender de outro prompt.
+- [ ] **B11 Ficha do frame e placar** (Luigi, 2026-09-25): o K saiu de `FICHA_FRAMES.md` escrita olhando
+  o frame do modelo, com placar F1-F6 + G1-G8 e evidência literal do K em cada OK (`GATE_VISUAL.md`
+  Parte 6, [[ficha-do-frame-placar]]). Forma do herói descrita como se vê, nunca genericizada; herói
+  com medida (% do quadro, distância da lente), câmera com lente e altura, nada fora da lista fechada.
 
 ## C · PROMPT DE VÍDEO (`V__`)
 

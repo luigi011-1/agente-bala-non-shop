@@ -288,6 +288,12 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
 - **Um prompt de imagem por SETUP**, não por take.
 - **[TODOS OS ÂNGULOS] Nenhum prompt sai sem o CHECKLIST DE ENVIO 100% aprovado** (memória
   `checklist-envio-prompt`, insights do curso Lib Korella, Luigi 2026-09-22). Ver P9.
+- 🔴 **[TODOS OS ÂNGULOS] Nenhum `K__` sem a FICHA DO FRAME e o PLACAR (Luigi, 2026-09-25).** Antes de
+  escrever qualquer prompt de imagem, preencher `FICHA_FRAMES.md` olhando o frame do modelo daquele take
+  (forma do herói, quanto do quadro, distância da lente, câmera, pose, lista fechada, frame 0) e o
+  placar F1 a F6 + G1 a G8 com o trecho LITERAL do K como evidência. O modelo manda no conteúdo, o gate
+  no acabamento e no piso de proximidade. `checar_entrega.py` reprova ficha ausente, evidência que não
+  está no K, herói sem medida e câmera sem lente e altura. Método em `GATE_VISUAL.md` Parte 6.
 - **[TODOS OS ÂNGULOS] `GATE_VISUAL.md` é a fonte única dos dois gates abaixo e do método de gancho**,
   em Korella, FitWell e Auraly, sem exceção de ângulo (Luigi, 2026-09-22). Os bullets abaixo são o resumo.
 - **Rodar o GATE DE REALISMO junto com o de composição** (memória `realismo-anti-cara-de-ia`): herói isolado com
@@ -492,6 +498,8 @@ pedido continua vindo na fala, na ordem do P7.
 - **[FITYWELL] `PLAYBOOK_FITYWELL.md`** → fila de avatares, pacote por ACTIVE, blocos do Flow, gancho pelo Puzzle
 - `workflow-entrega-gabarito` → as 8 coisas que eu perdi ao parar de conferir
 - **`GATE_VISUAL.md` Partes 1 a 3, em TODOS os ângulos** → realismo, herói colado na lente e trechos prontos
+- **`GATE_VISUAL.md` Parte 6 → escrever `FICHA_FRAMES.md` com o placar ANTES do primeiro JSON**, olhando
+  cada frame do modelo em `input/frames_modelo/`. O K se escreve a partir da ficha, nunca da memória
 - `checklist-composicao-visual` → os 10 itens (o porquê; a versão executável é o `GATE_VISUAL.md`)
 - `realismo-anti-cara-de-ia` → os 7 itens do gate de realismo
 - `prompts-imagem-json` → campos e blocos padrão
@@ -521,6 +529,8 @@ pedido continua vindo na fala, na ordem do P7.
   `GATE_VISUAL.md` Parte 5) antes de enviar qualquer gancho, `K__`, `V__`, pacote ou prompt avulso.
   Item reprovado = não envia, corrige e roda de novo. A entrega leva `Checklist de envio: X/X aprovados`
   fora dos blocos copiáveis (Luigi, 2026-09-22).
+- **Ficha do frame:** a entrega leva `Ficha: N/N K, placar 14/14 cada` ao lado do checklist. No K do
+  gancho, quando o Luigi mandar o resultado gerado, pontuar o resultado com F1 a F6 contra o frame.
 - **RODAR O LINTER, e só fechar com zero FALHAS:** `python checar_entrega.py producao/<avatar>_<slug>`
   Ele checa do DISCO o que dá pra checar por máquina, então **não depende de eu lembrar de nada**:
   travessão na copy, keyword do ângulo, 13 a 29 palavras por take, fala do prompt igual palavra por
