@@ -227,6 +227,8 @@ marcos diferentes. Nunca declarar publicacao ou resultado comercial pela existen
 
 Checklist de envio: 33/33 aprovados (N/A: A2, A7, A9 fiéis ao modelo; C3 a C7 sem segunda pessoa, selfie, frase repetida, cena atuada ou motion control)
 
+Ficha: 13/13 K conferidos contra o frame do modelo, placar 14/14 cada (`FICHA_FRAMES.md`, GATE_VISUAL Parte 6)
+
 ## Anexos
 
 - **Âncora Ivy Carl:** `input/ancoras/02_ivy_carl.jpg` em TODOS os K.

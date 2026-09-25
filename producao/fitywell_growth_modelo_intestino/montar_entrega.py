@@ -25,7 +25,7 @@ def entrega(a):
          "Produção `fitywell_growth_modelo_intestino` · Ângulo 2 · GROWTH · vídeo modelo de avatar IA · rodada de VALIDAÇÃO · perfil CLÁSSICO", "",
          f"## 1. INSTRUÇÕES PARA A MEMÓRIA DO AGENTE · GOOGLE FLOW AI (v{VERSAO})", "",
          "Colar inteiro na memória do agente antes do primeiro K.", "", "```text", BLOCO_FLOW, "```", "",
-         CHECKLIST, "",
+         CHECKLIST, "", "Ficha: 13/13 K conferidos contra o frame do modelo, placar 14/14 cada (`FICHA_FRAMES.md`, GATE_VISUAL Parte 6)", "",
          "## Anexos", "",
          f"- **Âncora {a['nome']}:** `{a['ancora']}` em TODOS os K.",
          "- **Em cada K**, anexar também o frame do modelo daquele passo (`input/frames_modelo/Kxx_modelo.png`), "
