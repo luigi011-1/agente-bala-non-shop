@@ -1,6 +1,6 @@
 # Instrucoes do agente executor do Google Flow AI
 
-Versao 14, 2026-09-24. Contrato de execucao, subordinado ao roteador de cada oferta.
+Versao 15, 2026-09-24. Contrato de execucao, subordinado ao roteador de cada oferta.
 Auraly segue exclusivamente WORKFLOW_AURALY.md. Angle 1/2 seguem CLAUDE.md e, no FitWell,
 PLAYBOOK_FITYWELL.md. Os pacotes existentes permanecem como foram aprovados.
 
@@ -94,6 +94,35 @@ checagem valida. No T1 o campo `o que acontece no vídeo:` descreve MUDANCAS DE 
 mesmo clipe, e o campo `câmera:` declara cortes internos em vez de `fixa` ou `push-in`. Isso e um
 unico clipe de oito segundos, nunca varios clipes: continua valendo um K para um V.
 
+### MOVIE STYLE: elenco com character sheets e video com dialogo (v13)
+
+Vale para os formatos de cena atuada (short form de crescimento e movie style de venda), que usam
+o perfil CLASSICO. O pacote declara o formato no topo.
+
+1. **Character sheets primeiro.** Os codigos `REF-P1`, `REF-P2`... sao prompts de character
+   sheet, um por personagem principal. Gerar cada um do zero, SEM anexo, uma imagem final, e
+   esperar o operador aprovar todos antes do primeiro K.
+2. **Anexos de cada K.** O pacote traz um MAPA DE ANEXOS fora dos blocos (ex.: `K01: REF-P1,
+   REF-P2, REF-P3`). Anexar exatamente as imagens aprovadas listadas para aquele K, e nenhuma
+   outra. Sem avatar na producao, nao existe anchor: os REF-P fazem esse papel. Com avatar, a
+   anchor dele entra junto quando o mapa listar.
+3. **Video com dialogo.** Um V de dialogo comeca com `falas no take, em ingles, na ordem:` e
+   traz uma linha numerada por fala, cada uma dizendo QUEM fala, a VOZ e a emocao, e a fala entre
+   aspas. Quem fica calado vem escrito. Continua sendo um V: as tres marcas `o que acontece no
+   vídeo:`, `câmera:` e `som ambiente:` estao presentes e continuam sendo a checagem valida.
+   Colar inteiro, sem trocar a ordem das falas.
+4. **B-roll.** Um V de B-roll comeca com `(sem fala no take: ...)`. Nao ha fala para gerar; a
+   voz entra na edicao por cima de outro clipe. As tres marcas continuam presentes.
+
+### SHORT FORM DE CRESCIMENTO sem anchor (perfil CLASSICO, v13, 2026-09-23)
+
+Cada conta e um ciclo proprio, tratado como um avatar. Nao existe anchor: os personagens nascem do
+texto do K, e cada conta tem uma dupla propria. O unico anexo do K e o frame de composicao
+REF-COMPOSICAO, que serve so para altura, angulo da camera e disposicao da cena; nunca copiar dele
+pessoas, rostos, roupas, doces ou cenario. Um K por conta alimenta os tres V (V01, V02 e V03 usam o
+K01 pela regra do classico). Em V de dialogo, a primeira linha nomeia quem fala (`a neta`, `a avo`)
+no lugar de `o avatar` e continua sendo a parte 1 das cinco; a checagem das tres marcas nao muda.
+
 ### Um avatar por vez
 
 Receber a anchor e registrar o identificador e nome do arquivo. Nao casar imagens por ordem de
@@ -128,11 +157,12 @@ vez do prompt V correspondente. Isso nunca pode se repetir. Regras obrigatorias:
 1. **Um prompt K e um prompt V nunca tem o mesmo formato, e a diferenca e mecanica, nao de
    julgamento.** Um prompt K e um UNICO paragrafo denso em ingles descrevendo uma imagem parada:
    comeca tipicamente com `IMPORTANT: THIS IS IPHONE FOOTAGE` (geracao do zero) ou `Edit the
-   attached image` (edicao). NUNCA contem as palavras `o avatar fala`, `câmera:` ou `som
-   ambiente:`. Um prompt V e sempre em portugues e sempre tem exatamente cinco partes na ordem:
-   a linha `o avatar (homem/mulher) fala em ingles... a seguinte frase: "..."`, a linha do lip
-   sync (`o avatar diz todas as palavras corretamente...`), a linha `o que acontece no vídeo:`,
-   a linha `câmera:` e a linha `som ambiente:`.
+   attached image` (edicao); um prompt `REF-P` comeca com `CHARACTER SHEET`. NUNCA contem as
+   palavras `o avatar fala`, `falas no take`, `câmera:` ou `som ambiente:`. Um prompt V e sempre
+   em portugues e sempre tem exatamente cinco partes na ordem: a abertura de fala (a linha `o
+   avatar (homem/mulher) fala em ingles... a seguinte frase: "..."`, ou o bloco `falas no take`
+   do movie style, ou `(sem fala no take: ...)` no B-roll), a linha do lip sync (ausente no
+   B-roll), a linha `o que acontece no vídeo:`, a linha `câmera:` e a linha `som ambiente:`.
 2. **Checagem obrigatoria ANTES de submeter qualquer geracao de video:** o texto que vai no campo
    de prompt do video tem que conter, literalmente, as tres marcas `o que acontece no vídeo:`,
    `câmera:` e `som ambiente:`. Se qualquer uma faltar, PARE. Isso significa que o texto colado
@@ -211,10 +241,20 @@ cortes internos ao clipe, que nao pode fazer o executor parar na checagem das tr
 v12, 2026-09-22: roster Auraly reduzido a Walt, Darlene e Lorraine. A fingerprint sai: a referencia
 e a anchor em cena real, com instrucao de usar so a identidade quando o K pede cenario novo. A
 excecao dos avatares de luxo (v9) foi removida junto com eles.
+v13, 2026-09-23: movie style (short form e venda). Character sheets `REF-P` gerados e aprovados
+antes dos K, anexados por um MAPA DE ANEXOS; V de dialogo com o bloco `falas no take` (quem fala,
+voz e emocao em cada linha); B-roll com `(sem fala no take: ...)`. As tres marcas continuam a
+checagem mecanica de todo V.
+v13, 2026-09-23: secao de short form de crescimento sem anchor (`producao/sf_torta_vovo`): dupla
+descrita no K, REF-COMPOSICAO como unico anexo, um K alimentando tres V e V de dialogo nomeando
+quem fala.
 v14, 2026-09-24: perfil CLASSICO passa a gerar QUATRO imagens por K, com selecao manual do operador
 (ele apaga tres e deixa uma), e o video passa a ser SOMENTE no Omni Flash, um unico resultado por V.
 Motivo: o executor gerava uma imagem so mesmo quando o operador pedia quatro. O AURALY nao muda.
-(A v13, de movie style, existe em outros worktrees e ainda nao entrou neste; juntar as duas no merge.)
+v15, 2026-09-24: juntadas no mesmo arquivo as tres linhas que corriam em paralelo em worktrees
+separadas: movie style com `REF-P` (v13), short form de crescimento sem anchor (a outra v13, de
+`producao/sf_torta_vovo`) e o perfil CLASSICO de quatro imagens e Omni Flash (v14). Nenhuma regra
+de conteudo mudou nesta versao.
 v10, 2026-09-20: sincronizado com o portfolio Auraly 4/3/3, revogado poucas horas depois. K e V podem chegar na mesma entrega,
 mas a execucao continua em duas fases com selecao manual. T1 deixa de exigir kit completo, camera
 passa a servir o invariante da familia e um unico VFX funcional passa a ser permitido. A relacao

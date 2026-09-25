@@ -140,6 +140,9 @@ Antes de escrever o bloco de venda, abrir:
 6. **Notas de producao**: duracao, heroi do hook, compliance, o que cortar se ficar longo
 
 **Contar as palavras de cada take AGORA, nao depois.** 8s = 13 a 29 palavras. Passou de 29, quebrar em fim de frase.
+**O take segue a CENA do modelo (Luigi, 2026-09-23):** nunca juntar duas cenas num take e nunca cortar
+frase no meio para caber na faixa. Cena curta do modelo = take curto marcado `CENA CURTA` no cabecalho
+(o piso de 13 nao vale; o teto de 29 vale sempre).
 
 ## PASSO 3-B — TODOS OS ANGULOS: sugestoes de GANCHO VISUAL antes dos prompts
 
@@ -429,7 +432,7 @@ morre em uma semana.
 [ ] Indice de geracao presente
 [ ] Travas globais escritas uma vez, nao repetidas em cada JSON
 [ ] Mapa de ancoras / Montagem / Gates de qualidade presentes
-[ ] Palavras contadas: todo take entre 13 e 29
+[ ] Palavras contadas: todo take entre 13 e 29, ou marcado CENA CURTA quando a cena do modelo e curta; nenhuma cena juntada, nenhuma frase cortada para caber
 [ ] Fala do prompt = copia literal do roteiro
 [ ] Rota de fechamento diferente da do video anterior (log conferido)
 [ ] Bloco do Flow colado inteiro no topo do pacote deste avatar

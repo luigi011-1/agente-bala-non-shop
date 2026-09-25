@@ -364,3 +364,25 @@ class Resultados(unittest.TestCase):
             validar_resultados({'versao':1,'publicacoes':[r,copy.deepcopy(r)]},{'exemplo':'SALE'})
 
 if __name__=='__main__': unittest.main()
+
+
+class TakeSegueCenaDoModelo(unittest.TestCase):
+    # 2026-09-23 (Luigi): take = cena do modelo. Cena curta vira take curto marcado, nunca juntada
+    # com outra cena nem completada com frase cortada ao meio.
+    def falhas(self, roteiro):
+        del ce.FALHAS[:]
+        ce.c_palavras_por_take(ce.parse_takes(roteiro))
+        return list(ce.FALHAS)
+
+    def test_cena_curta_marcada_passa(self):
+        r = '### T1 · GANCHO · TALKING · Setup A · CENA CURTA\n\n> "This is what cinnamon does to the sugar in your body."\n'
+        self.assertFalse(self.falhas(r))
+
+    def test_curto_sem_marca_reprova(self):
+        r = '### T1 · GANCHO · TALKING · Setup A\n\n> "This is what cinnamon does to the sugar in your body."\n'
+        self.assertTrue(self.falhas(r))
+
+    def test_teto_vale_mesmo_marcado(self):
+        fala = ' '.join(['word'] * 30)
+        r = '### T1 · X · TALKING · Setup A · CENA CURTA\n\n> "%s."\n' % fala
+        self.assertTrue(self.falhas(r))
