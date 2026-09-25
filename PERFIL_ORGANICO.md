@@ -48,6 +48,11 @@ tipo de câmera, o texto de tela e o sign-off.
 6. **O que a lei ou a marca proíbe:** preço nunca dito na Auraly, produto fora de quadro nos
    Ângulos 2 e 3, "free" nunca dito na FitWell (o plano é pago), rosto da alma gêmea nunca revelado.
 
+**Claim forte do original se copia literal** (Luigi, 2026-09-25): se o vídeo modelo diz *"burning
+off that stubborn belly fat"* ou algo do mesmo peso, a frase fica como está. Não se suaviza. O claim
+vai anotado nas notas de produção como o mais arriscado do roteiro (`compliance-riscos`), para
+constar, e só isso.
+
 Nada de ponte das três causas, álibi, mecanismo, obstáculo ou crivo de copy, **nem em vídeo de
 venda**. O crivo de copy é do formato de avatar IA.
 
@@ -59,7 +64,7 @@ precisa. Ele substitui o CTA original no mesmo lugar do vídeo e com o mesmo tam
 
 | | GROWTH | SALE |
 |---|---|---|
-| **FitWell (Ângulo 2)** | CTA do próprio original (save / comment / follow), como em `feedback-growth-video-sem-venda` | ponte de continuidade do próprio vídeo + **link da bio, ou no Facebook o comentário fixado** (direção, não frase fixa; ver abaixo). Sem "free", sem prometer brinde que o funil não entrega (livro, replay) |
+| **FitWell (Ângulo 2)** | CTA do próprio original (save / comment / follow), como em `feedback-growth-video-sem-venda` | **padrão: link da bio** (no Facebook, o comentário fixado), com ponte de continuidade do próprio vídeo. **Reserva, se o link sair:** keyword `yes` + "so I can send it to you" + follow (ver abaixo). Sem "free", sem prometer brinde que o funil não entrega (livro, replay) |
 | **Auraly (Ângulo 3)** | CTA do original com a keyword trocada para `222`; Stories só com `growth-stories: aprovado` no checkpoint | engajamento do original com `222` e a consequência (LEI DO SELO), **depois** `tap my profile picture`, a resposta está no Stories. Ordem `222` → Stories inalterada (P7) |
 
 **FitWell SALE, a direção do CTA (Luigi, 2026-09-25, "não é regra, mas a ideia será essa"):** mandar
@@ -67,6 +72,17 @@ para o link da bio e, para quem está no Facebook, para o comentário fixado do 
 ao tom e ao tamanho do CTA original, e a keyword `yes` deixa de ser obrigatória nesse CTA. Exemplo:
 *"If you want more [recipes like this / o que o vídeo entregou], tap the link in my bio, or if you're
 on Facebook, just tap the pinned comment on this video."*
+
+**O foco é o link da bio, mas ele pode sair a qualquer momento** (Luigi, 2026-09-25): se a conta
+tomar restrição, o link da bio é removido. Então:
+- **Padrão:** link da bio. Não perguntar a cada produção.
+- **Reserva, quando o Luigi disser que o link saiu daquela conta:** o CTA do molde medido em
+  `producao/_swipe_organico/rodada_2026_09_25_fitywell_ia/ANALISE.md` (v4), que não mostra produto e
+  não diz "free": *"I make [recipes] like this every day. If you wanna see the simple routine I give
+  to my clients to [dor do quiz: support their gut health and bloating], comment yes, and make sure
+  you follow me so I can send it to you."*
+- A escolha vale **por conta** (cada avatar é uma conta). Registrar no `ROTEIRO.md` qual das duas
+  saiu: `CTA de venda: link da bio` ou `CTA de venda: reserva (keyword)`.
 
 Exemplo Auraly SALE, a partir do a5 do lote (*"All you have to do to claim it is interact with this
 video three times. Like it, save it, send it to yourself, and follow me."*):
@@ -86,6 +102,22 @@ que se está copiando:
   sem nada, é selfie sem nada.
 - **Crivo de copy, ponte, álibi e rotas argumentativas** (P2 da venda).
 - **As 10 variações de gancho** continuam só na rodada de variação, como sempre.
+
+## 4.1 Avatar fixo por conta, e receita que pode repetir entre contas (Luigi, 2026-09-25)
+
+- **Cada conta tem um avatar fixo, com a roupa e o cenário da âncora dele em todo vídeo.** Entre um
+  vídeo e outro da mesma conta muda a receita, não a pessoa, a roupa nem a cozinha. Os concorrentes
+  medidos fazem assim (v5 e v6 da rodada `fitywell_ia`: mesma loira, mesma camiseta, mesma cozinha).
+  **O único formato sem avatar fixo é o movie style / short form**, que tem elenco próprio a cada
+  vídeo. O cenário da âncora é a **base** da conta: a cozinha ou bancada onde a receita acontece. Se
+  a receita pede equipamento que a âncora não mostra (fogão, forno), o K descreve esse equipamento
+  dentro do mesmo cenário. Se o vídeo modelo tem uma cena em outro lugar (o v1 abre no Walmart), essa
+  cena acompanha o modelo, com a mesma pessoa e a mesma roupa.
+- **A mesma receita pode rodar em contas diferentes.** Os concorrentes reciclam o mesmo roteiro entre
+  contas (o cookie de grão de bico apareceu em duas). O `checar_frases.py` já não compara contas
+  diferentes; atenção só para o fato de ele agrupar pelo prefixo da pasta, então todas as produções
+  `fitywell_*` contam como uma conta só. Repetição apontada ali entre avatares diferentes é
+  permitida; repetição no mesmo avatar continua merecendo olhar.
 
 ## 5. O que continua valendo, igual
 

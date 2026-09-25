@@ -83,8 +83,12 @@ rodado antes de todo envio segura.
 - [ ] **B6 K de fala com boca entreaberta:** `caught mid-sentence, lips naturally parted, animated
   expression`.
 - [ ] **B7 Sinal de EUA:** bandeira discreta e visível sempre; cenário americano icônico quando couber.
-- [ ] **B8 Avatar varia por vídeo, nunca por conta:** muda roupa, fundo ou detalhe entre vídeos da
-  mesma conta; **o mesmo rosto nunca roda em duas contas** (violação de conteúdo original).
+- [ ] **B8 Avatar fixo por conta, nunca repetido entre contas:** ♻️ (Luigi, 2026-09-25) cada conta
+  tem o mesmo avatar com a **roupa e o cenário-base da âncora em todo vídeo**; o que muda entre
+  vídeos é o conteúdo. Revoga o antigo "muda roupa, fundo ou detalhe entre vídeos da mesma conta".
+  Exceções: movie style / short form (elenco próprio a cada vídeo) e o Auraly, que segue o próprio
+  contrato (`WORKFLOW_AURALY.md`, cenário por gancho) até decisão em contrário. **O mesmo rosto nunca
+  roda em duas contas** (violação de conteúdo original), isso não mudou.
 - [ ] **B9 Sem figura médica explícita no AVATAR que vende:** nada de jaleco, estetoscópio, crachá
   ou "Dr." no avatar ou na autoridade que recomenda o nosso produto. Médico como avatar dá banimento
   no link-in-bio (curso, jul/2026). ✅ **Médico como personagem de cena é liberado** (Luigi,
