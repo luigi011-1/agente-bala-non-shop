@@ -1,6 +1,6 @@
 # Instrucoes do agente executor do Google Flow AI
 
-Versao 16, 2026-09-25. Contrato de execucao, subordinado ao roteador de cada oferta.
+Versao 17, 2026-09-25. Contrato de execucao, subordinado ao roteador de cada oferta.
 Auraly segue exclusivamente WORKFLOW_AURALY.md. Angle 1/2 seguem CLAUDE.md e, no FitWell,
 PLAYBOOK_FITYWELL.md. Os pacotes existentes permanecem como foram aprovados.
 
@@ -137,6 +137,15 @@ Receber todos os K, contar codigos e conferir duplicatas. Cada codigo aparece so
 linha, seguido de um prompt completo e autossuficiente. Nao copiar titulos, notas, caminhos,
 configuracoes ou metadata para o campo do prompt.
 
+**Prompt de imagem em JSON (v17, 2026-09-25).** Desde a v17 todo prompt K (e todo `REF-P`) chega
+como UM objeto JSON em ingles: comeca com `{` na linha logo abaixo do codigo e termina com o `}`
+que fecha o objeto. Colar o objeto INTEIRO, de `{` ate `}`, literalmente no campo de prompt do
+Nano Banana 2, sem o codigo, sem resumir, sem converter para texto corrido e sem apagar campo.
+Cada campo e parte do prompt (formato, referencia, identidade, roupa, cena, prop, postura,
+composicao, camera, luz, estado, realismo, proporcao e negative), nao metadata. Se o JSON chegar
+quebrado ou incompleto (sem o `}` final, aspas abertas), PARAR e avisar o operador. Pacotes
+anteriores a v17, com o K em paragrafo unico, continuam validos como foram entregues.
+
 Usar Nano Banana 2, formato 9:16 e a anchor ativa. Colar cada prompt literalmente e gerar a
 quantidade do perfil. Rotular os resultados com avatar, codigo e numero da variacao.
 
@@ -153,9 +162,10 @@ como INITIAL FRAME (certo) mas colou o PROPRIO PROMPT DE IMAGEM no campo de text
 vez do prompt V correspondente. Isso nunca pode se repetir. Regras obrigatorias:
 
 1. **Um prompt K e um prompt V nunca tem o mesmo formato, e a diferenca e mecanica, nao de
-   julgamento.** Um prompt K e um UNICO paragrafo denso em ingles descrevendo uma imagem parada:
-   comeca tipicamente com `IMPORTANT: THIS IS IPHONE FOOTAGE` (geracao do zero) ou `Edit the
-   attached image` (edicao); um prompt `REF-P` comeca com `CHARACTER SHEET`. NUNCA contem as
+   julgamento.** Um prompt K e um objeto JSON em ingles descrevendo uma imagem parada: comeca
+   com `{` e termina com `}` (desde a v17; pacotes antigos traziam um paragrafo unico comecando
+   com `IMPORTANT: THIS IS IPHONE FOOTAGE`, `Edit the attached image` ou, no `REF-P`, `CHARACTER
+   SHEET`). Um prompt V NUNCA comeca com `{`. Um prompt K NUNCA contem as
    palavras `o avatar fala`, `falas no take`, `câmera:` ou `som ambiente:`. Um prompt V e sempre
    em portugues e sempre tem exatamente cinco partes na ordem: a abertura de fala (a linha `o
    avatar (homem/mulher) fala em ingles... a seguinte frase: "..."`, ou o bloco `falas no take`
@@ -255,6 +265,9 @@ separadas: movie style com `REF-P` (v13), short form de crescimento sem anchor (
 de conteudo mudou nesta versao.
 v16, 2026-09-25: AVATAR FIXO POR CONTA tambem no Auraly. Revoga o cenario proprio e a roupa livre por
 gancho da v7: roupa e cenario-base da anchor em todo video e gancho; so o angulo de camera varia.
+v17, 2026-09-25: a pedido do Luigi, todo prompt de IMAGEM (K e REF-P) passa a ser entregue em JSON,
+para o modelo compreender melhor cada parte. As regras de conteudo nao mudam. O executor cola o
+objeto inteiro, de `{` a `}`; o reconhecimento K contra V ganha a marca mecanica do `{` inicial.
 v10, 2026-09-20: sincronizado com o portfolio Auraly 4/3/3, revogado poucas horas depois. K e V podem chegar na mesma entrega,
 mas a execucao continua em duas fases com selecao manual. T1 deixa de exigir kit completo, camera
 passa a servir o invariante da familia e um unico VFX funcional passa a ser permitido. A relacao

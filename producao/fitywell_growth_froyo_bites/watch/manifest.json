@@ -1,0 +1,461 @@
+{
+  "video": "/Users/macbookairm2/Downloads/snapinsta-1790352794223.mp4",
+  "outdir": "/private/tmp/claude-501/-Users-macbookairm2-Desktop-agente-bala-non-shop-main--claude-worktrees-ola-3cc808/ebafc125-f009-41e3-9357-ba093f125dc6/scratchpad/watch",
+  "environment": {
+    "os": "macOS-27.0-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.14",
+    "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+    "ffprobe": "/opt/homebrew/bin/ffprobe"
+  },
+  "info": {
+    "duration": 13.836,
+    "fps": 30.0,
+    "width": 720,
+    "height": 1280,
+    "has_audio": true
+  },
+  "params": {
+    "timeline_fps": 5.0,
+    "scene_threshold": 0.2,
+    "model": "small.en"
+  },
+  "scenes": [
+    {
+      "file": "scene_t0000.47.png",
+      "t": 0.47
+    },
+    {
+      "file": "scene_t0000.93.png",
+      "t": 0.93
+    },
+    {
+      "file": "scene_t0001.70.png",
+      "t": 1.7
+    },
+    {
+      "file": "scene_t0002.33.png",
+      "t": 2.33
+    },
+    {
+      "file": "scene_t0002.57.png",
+      "t": 2.57
+    },
+    {
+      "file": "scene_t0002.80.png",
+      "t": 2.8
+    },
+    {
+      "file": "scene_t0003.03.png",
+      "t": 3.03
+    },
+    {
+      "file": "scene_t0003.27.png",
+      "t": 3.27
+    },
+    {
+      "file": "scene_t0003.50.png",
+      "t": 3.5
+    },
+    {
+      "file": "scene_t0003.73.png",
+      "t": 3.73
+    },
+    {
+      "file": "scene_t0003.97.png",
+      "t": 3.97
+    },
+    {
+      "file": "scene_t0004.20.png",
+      "t": 4.2
+    },
+    {
+      "file": "scene_t0004.23.png",
+      "t": 4.23
+    },
+    {
+      "file": "scene_t0004.43.png",
+      "t": 4.43
+    },
+    {
+      "file": "scene_t0004.67.png",
+      "t": 4.67
+    },
+    {
+      "file": "scene_t0004.90.png",
+      "t": 4.9
+    },
+    {
+      "file": "scene_t0004.93.png",
+      "t": 4.93
+    },
+    {
+      "file": "scene_t0005.13.png",
+      "t": 5.13
+    },
+    {
+      "file": "scene_t0005.57.png",
+      "t": 5.57
+    },
+    {
+      "file": "scene_t0005.80.png",
+      "t": 5.8
+    },
+    {
+      "file": "scene_t0006.13.png",
+      "t": 6.13
+    },
+    {
+      "file": "scene_t0006.47.png",
+      "t": 6.47
+    },
+    {
+      "file": "scene_t0006.93.png",
+      "t": 6.93
+    },
+    {
+      "file": "scene_t0007.17.png",
+      "t": 7.17
+    },
+    {
+      "file": "scene_t0007.40.png",
+      "t": 7.4
+    },
+    {
+      "file": "scene_t0008.10.png",
+      "t": 8.1
+    },
+    {
+      "file": "scene_t0008.33.png",
+      "t": 8.33
+    },
+    {
+      "file": "scene_t0008.57.png",
+      "t": 8.57
+    },
+    {
+      "file": "scene_t0009.03.png",
+      "t": 9.03
+    },
+    {
+      "file": "scene_t0009.73.png",
+      "t": 9.73
+    },
+    {
+      "file": "scene_t0009.97.png",
+      "t": 9.97
+    },
+    {
+      "file": "scene_t0010.20.png",
+      "t": 10.2
+    },
+    {
+      "file": "scene_t0010.90.png",
+      "t": 10.9
+    },
+    {
+      "file": "scene_t0011.53.png",
+      "t": 11.53
+    },
+    {
+      "file": "scene_t0012.23.png",
+      "t": 12.23
+    },
+    {
+      "file": "scene_t0012.80.png",
+      "t": 12.8
+    }
+  ],
+  "timeline": [
+    {
+      "file": "tl_t0000.00.png",
+      "t": 0.0
+    },
+    {
+      "file": "tl_t0000.20.png",
+      "t": 0.2
+    },
+    {
+      "file": "tl_t0000.40.png",
+      "t": 0.4
+    },
+    {
+      "file": "tl_t0000.60.png",
+      "t": 0.6
+    },
+    {
+      "file": "tl_t0000.80.png",
+      "t": 0.8
+    },
+    {
+      "file": "tl_t0001.00.png",
+      "t": 1.0
+    },
+    {
+      "file": "tl_t0001.20.png",
+      "t": 1.2
+    },
+    {
+      "file": "tl_t0001.40.png",
+      "t": 1.4
+    },
+    {
+      "file": "tl_t0001.60.png",
+      "t": 1.6
+    },
+    {
+      "file": "tl_t0001.80.png",
+      "t": 1.8
+    },
+    {
+      "file": "tl_t0002.00.png",
+      "t": 2.0
+    },
+    {
+      "file": "tl_t0002.20.png",
+      "t": 2.2
+    },
+    {
+      "file": "tl_t0002.40.png",
+      "t": 2.4
+    },
+    {
+      "file": "tl_t0002.60.png",
+      "t": 2.6
+    },
+    {
+      "file": "tl_t0002.80.png",
+      "t": 2.8
+    },
+    {
+      "file": "tl_t0003.00.png",
+      "t": 3.0
+    },
+    {
+      "file": "tl_t0003.20.png",
+      "t": 3.2
+    },
+    {
+      "file": "tl_t0003.40.png",
+      "t": 3.4
+    },
+    {
+      "file": "tl_t0003.60.png",
+      "t": 3.6
+    },
+    {
+      "file": "tl_t0003.80.png",
+      "t": 3.8
+    },
+    {
+      "file": "tl_t0004.00.png",
+      "t": 4.0
+    },
+    {
+      "file": "tl_t0004.20.png",
+      "t": 4.2
+    },
+    {
+      "file": "tl_t0004.40.png",
+      "t": 4.4
+    },
+    {
+      "file": "tl_t0004.60.png",
+      "t": 4.6
+    },
+    {
+      "file": "tl_t0004.80.png",
+      "t": 4.8
+    },
+    {
+      "file": "tl_t0005.00.png",
+      "t": 5.0
+    },
+    {
+      "file": "tl_t0005.20.png",
+      "t": 5.2
+    },
+    {
+      "file": "tl_t0005.40.png",
+      "t": 5.4
+    },
+    {
+      "file": "tl_t0005.60.png",
+      "t": 5.6
+    },
+    {
+      "file": "tl_t0005.80.png",
+      "t": 5.8
+    },
+    {
+      "file": "tl_t0006.00.png",
+      "t": 6.0
+    },
+    {
+      "file": "tl_t0006.20.png",
+      "t": 6.2
+    },
+    {
+      "file": "tl_t0006.40.png",
+      "t": 6.4
+    },
+    {
+      "file": "tl_t0006.60.png",
+      "t": 6.6
+    },
+    {
+      "file": "tl_t0006.80.png",
+      "t": 6.8
+    },
+    {
+      "file": "tl_t0007.00.png",
+      "t": 7.0
+    },
+    {
+      "file": "tl_t0007.20.png",
+      "t": 7.2
+    },
+    {
+      "file": "tl_t0007.40.png",
+      "t": 7.4
+    },
+    {
+      "file": "tl_t0007.60.png",
+      "t": 7.6
+    },
+    {
+      "file": "tl_t0007.80.png",
+      "t": 7.8
+    },
+    {
+      "file": "tl_t0008.00.png",
+      "t": 8.0
+    },
+    {
+      "file": "tl_t0008.20.png",
+      "t": 8.2
+    },
+    {
+      "file": "tl_t0008.40.png",
+      "t": 8.4
+    },
+    {
+      "file": "tl_t0008.60.png",
+      "t": 8.6
+    },
+    {
+      "file": "tl_t0008.80.png",
+      "t": 8.8
+    },
+    {
+      "file": "tl_t0009.00.png",
+      "t": 9.0
+    },
+    {
+      "file": "tl_t0009.20.png",
+      "t": 9.2
+    },
+    {
+      "file": "tl_t0009.40.png",
+      "t": 9.4
+    },
+    {
+      "file": "tl_t0009.60.png",
+      "t": 9.6
+    },
+    {
+      "file": "tl_t0009.80.png",
+      "t": 9.8
+    },
+    {
+      "file": "tl_t0010.00.png",
+      "t": 10.0
+    },
+    {
+      "file": "tl_t0010.20.png",
+      "t": 10.2
+    },
+    {
+      "file": "tl_t0010.40.png",
+      "t": 10.4
+    },
+    {
+      "file": "tl_t0010.60.png",
+      "t": 10.6
+    },
+    {
+      "file": "tl_t0010.80.png",
+      "t": 10.8
+    },
+    {
+      "file": "tl_t0011.00.png",
+      "t": 11.0
+    },
+    {
+      "file": "tl_t0011.20.png",
+      "t": 11.2
+    },
+    {
+      "file": "tl_t0011.40.png",
+      "t": 11.4
+    },
+    {
+      "file": "tl_t0011.60.png",
+      "t": 11.6
+    },
+    {
+      "file": "tl_t0011.80.png",
+      "t": 11.8
+    },
+    {
+      "file": "tl_t0012.00.png",
+      "t": 12.0
+    },
+    {
+      "file": "tl_t0012.20.png",
+      "t": 12.2
+    },
+    {
+      "file": "tl_t0012.40.png",
+      "t": 12.4
+    },
+    {
+      "file": "tl_t0012.60.png",
+      "t": 12.6
+    },
+    {
+      "file": "tl_t0012.80.png",
+      "t": 12.8
+    },
+    {
+      "file": "tl_t0013.00.png",
+      "t": 13.0
+    },
+    {
+      "file": "tl_t0013.20.png",
+      "t": 13.2
+    },
+    {
+      "file": "tl_t0013.40.png",
+      "t": 13.4
+    },
+    {
+      "file": "tl_t0013.60.png",
+      "t": 13.6
+    }
+  ],
+  "overview": {
+    "scenes": [
+      "overview_scenes_01.png",
+      "overview_scenes_02.png",
+      "overview_scenes_03.png"
+    ],
+    "timeline": [
+      "overview_timeline_01.png",
+      "overview_timeline_02.png",
+      "overview_timeline_03.png",
+      "overview_timeline_04.png"
+    ]
+  },
+  "transcript": true
+}

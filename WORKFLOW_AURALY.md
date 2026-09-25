@@ -387,11 +387,14 @@ O mapa nao entra no campo de prompt do Flow. Dentro do bloco de imagem, somente 
 
 ```text
 K01
-[prompt completo e autossuficiente]
+{ ...objeto JSON completo e autossuficiente... }
 
 K02
-[prompt completo e autossuficiente]
+{ ...objeto JSON completo e autossuficiente... }
 ```
+
+Desde 2026-09-25 (Luigi, contrato do Flow v17) cada K do bloco e UM objeto JSON em ingles, de `{` a
+`}`, com os mesmos campos do JSON interno menos `shot_id`. As regras de conteudo nao mudam.
 
 Sem descricao, titulo, `T__`, metadata ou `Prompt:` dentro do bloco. Depois do bloco K, entregar o
 bloco V previsto abaixo na mesma resposta. A seleção manual continua sendo gate do executor Flow,

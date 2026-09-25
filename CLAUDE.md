@@ -113,7 +113,7 @@ modelado **com o gancho fiel do modelo** → **aprovação do Luigi** → pacote
 
 1. **`INSTRUÇÕES PARA A MEMÓRIA DO AGENTE — GOOGLE FLOW AI`**, colado INTEIRO no chat, pronto pra
    copiar. Fonte canônica: `producao/_flow/INSTRUCOES_AGENTE_FLOW.md`.
-   Configuração vigente: **a tabela de perfis do próprio arquivo (v16, 2026-09-25) manda.** Clássico
+   Configuração vigente: **a tabela de perfis do próprio arquivo (v17, 2026-09-25) manda.** Clássico
    (Ângulos 1 e 2): Nano Banana 2 em 9:16, **4 imagens por K__ com seleção manual** (o Luigi apaga 3 e
    deixa 1); vídeo **só no Omni Flash**, 8 segundos, um único resultado por V__, a partir da imagem que
    sobrou. Auraly: 4 imagens por K__ com seleção manual e Veo 3.1 Lite com 3 variações por V__.
@@ -134,7 +134,7 @@ modelado **com o gancho fiel do modelo** → **aprovação do Luigi** → pacote
 O agente do Flow é executor e estava **lendo texto auxiliar como se fosse prompt**.
 
 ```
-IMAGE BLOCK:  UM K__ = UM PROMPT DE IMAGEM · K__ SÓ COMO RÓTULO · TODO PROMPT AUTOSSUFICIENTE
+IMAGE BLOCK:  UM K__ = UM PROMPT DE IMAGEM EM JSON · K__ SÓ COMO RÓTULO · TODO PROMPT AUTOSSUFICIENTE
 VIDEO BLOCK:  UM V__ = UM PROMPT DE VÍDEO  · V__ SÓ COMO RÓTULO · TODO PROMPT AUTOSSUFICIENTE
               K01 casa com V01 PELO NÚMERO
 
@@ -163,7 +163,14 @@ SEM instrução de INITIAL FRAME dentro do bloco · SEM configuração de modelo
 - **Tabela humana de leitura** (`K01 = coração quebrando`, `K06 = body`) pode existir, mas **sempre
   fora** dos blocos copiáveis. Dentro deles, zero texto auxiliar.
 - **O JSON continua sendo a fonte de verdade INTERNA** em `PROMPTS_IMAGEM.md`, que é o que o linter
-  lê. O bloco do Flow é a versão de execução, em texto corrido e autossuficiente.
+  lê. O bloco do Flow é a versão de execução, autossuficiente.
+- 🔴 **O prompt de imagem entregue é JSON (Luigi, 2026-09-25, contrato do Flow v17).** ♻️ Revoga o
+  "texto corrido" do bloco de imagem. Todo `K__` (e `REF-P`) sai como UM objeto JSON em inglês,
+  logo abaixo do código, com os campos `format`, `fiction_note`, `reference_use`, `identity_main`,
+  `wardrobe`, `scene`, `prop`, `posture`, `composition`, `camera`, `lighting`, `state`, `realism`,
+  `aspect_ratio` e `negative`, sem `shot_id` (é metadata). **As regras de conteúdo não mudam**:
+  autossuficiência, GATE_VISUAL, trecho de realismo, negative, bandeira, herói colado na lente,
+  checklist de envio. Vale nos três ângulos. O vídeo continua texto simples nos 5 blocos.
 5. (nos Ângulos 1, 2 e 4 segue valendo um prompt por bloco, com linha curta antes de cada um)
 6. Transcrição final completa em **INGLÊS**
 7. Transcrição final completa em **PORTUGUÊS**
@@ -178,7 +185,7 @@ misturam entre ângulos.**
 ### GOOGLE FLOW DELIVERY FORMAT (Luigi, 2026-09-09)
 
 Os blocos de execução devem ser estritamente machine-readable: `K__` sozinho, seguido somente de um
-prompt de imagem completo e autossuficiente; `V__` sozinho, seguido somente de um prompt de vídeo
+prompt de imagem completo e autossuficiente em JSON (desde 2026-09-25); `V__` sozinho, seguido somente de um prompt de vídeo
 completo e autossuficiente. Um K = um V pelo mesmo número. Nunca incluir nos blocos títulos,
 descrições, T__, metadata, settings, INITIAL FRAME, `uses K__`, caminhos ou notas. Nunca depender de
 "edit K__", "same as previous" ou contexto de outro prompt.

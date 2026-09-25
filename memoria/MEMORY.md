@@ -76,6 +76,7 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 
 ## 🖼️ AO ESCREVER OS PROMPTS
 - [Prompts de imagem (JSON)](prompts_imagem_json.md) — campos, blocos padrão, referências no título em caixa alta
+- [🔴 Prompt de imagem ENTREGUE em JSON](feedback_prompt_imagem_json_no_flow.md) — **desde 2026-09-25 (Flow v17), todo K e REF-P no chat, no FLOW e na ENTREGA sai como objeto JSON, nunca texto corrido.** Sem `shot_id`, com `format` na frente; regras de conteúdo idênticas, vídeo segue texto simples
 - [Prompts de vídeo Fase 7](prompts_video_fase7.md) — os 5 blocos, 13 a 29 palavras por take, fala é cópia literal
 - [Um prompt de imagem por BLOCO](feedback_prompt_imagem_compartilhado.md) — não por take. Reveal contínuo = uma imagem só
 - [🔴 GATE_VISUAL.md, fonte única transversal](realismo_anti_cara_de_ia.md) — **desde 2026-09-22, realismo + composição + checklist de gancho visual vivem em `GATE_VISUAL.md` na raiz, para os 3 ângulos.** Abrir ANTES do primeiro K e ANTES das 10 variações de gancho. As duas memórias abaixo guardam o porquê

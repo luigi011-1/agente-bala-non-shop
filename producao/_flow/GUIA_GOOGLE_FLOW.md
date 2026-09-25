@@ -1,6 +1,6 @@
 # Guia completo: produção de vídeos com o agente do Google Flow
 
-Versão de 2026-09-25. Vale para as instruções do agente **v16**.
+Versão de 2026-09-25. Vale para as instruções do agente **v17**.
 
 Este documento explica, do zero, como a operação transforma um **pacote de prompts** em vídeos
 prontos usando o **agente do Google Flow**. Depois de ler, você consegue:
@@ -107,11 +107,15 @@ completo:
 
 ```
 K01
-[prompt completo da imagem 1]
+{ ...objeto JSON completo da imagem 1... }
 
 K02
-[prompt completo da imagem 2]
+{ ...objeto JSON completo da imagem 2... }
 ```
+
+Desde a v17 (2026-09-25) todo prompt de imagem vem em **JSON**: um objeto só, de `{` a `}`, com um
+campo para cada parte (formato, referência, identidade, roupa, cena, herói, postura, composição,
+câmera, luz, estado, realismo, proporção e negativo). O modelo entende melhor cada parte separada.
 
 ```
 V01
@@ -140,7 +144,7 @@ motivo: o Flow recebe só os anexos mais aquele prompt, e não lembra do prompt 
 2. Apague o que houver de uma produção anterior.
 3. Cole o bloco **"Instruções para a memória do agente"** do pacote, **inteiro**, sem editar.
    (O texto de referência está no Apêndice A.)
-4. Confirme que a versão é a mesma do pacote (hoje, **v16**).
+4. Confirme que a versão é a mesma do pacote (hoje, **v17**).
 
 **Por que toda vez:** a memória do agente é preenchida do zero a cada rodada, e a configuração
 muda entre produções (perfil, número de variações, regras de anexo). Um pacote nunca diz "a memória
@@ -220,14 +224,15 @@ por uma caixa cinza (isso evita bloqueio por semelhança com pessoa real).
    início de um prompt. Tudo até o próximo código é o prompt daquele código.
 3. **Conta os códigos e confere duplicatas** antes de gerar. Se o pacote diz 7 K e o agente achou
    6, algo foi colado errado: parar.
-4. Reconhece que é um prompt de **imagem** pelo formato (seção 10.1): um parágrafo único em inglês,
-   que começa com `IMPORTANT: THIS IS IPHONE FOOTAGE`, `Edit the attached image` ou
-   `CHARACTER SHEET`.
+4. Reconhece que é um prompt de **imagem** pelo formato (seção 10.1): um objeto JSON em inglês, que
+   começa com `{` e termina com `}` (pacotes anteriores à v17 traziam um parágrafo único começando
+   com `IMPORTANT: THIS IS IPHONE FOOTAGE`, `Edit the attached image` ou `CHARACTER SHEET`).
 
 ### 8.2 Como gerar
 Para cada código, na ordem:
 1. Anexar as referências do MAPA DE ANEXOS para aquele código, na ordem indicada.
-2. Colar **só o prompt** (sem a linha do código) no campo de prompt do Nano Banana 2.
+2. Colar **só o prompt** (sem a linha do código) no campo de prompt do Nano Banana 2: o objeto JSON
+   inteiro, de `{` a `}`, sem converter para texto nem apagar campo.
 3. Formato 9:16.
 4. Gerar **4 candidatas** (os dois perfis). Conferir o seletor de quantidade em 4 a cada K, porque
    ele pode voltar para 1 sozinho.
@@ -294,8 +299,8 @@ A diferença é mecânica, não de julgamento:
 | | Prompt de IMAGEM (K) | Prompt de VÍDEO (V) |
 |---|---|---|
 | Idioma | inglês | português (a fala entre aspas fica em inglês) |
-| Forma | um parágrafo único e denso | cinco partes em linhas separadas |
-| Começa com | `IMPORTANT: THIS IS IPHONE FOOTAGE`, `Edit the attached image` ou `CHARACTER SHEET` | `o avatar ... fala`, `falas no take` ou `(sem fala no take: ...)` |
+| Forma | um objeto JSON, de `{` a `}` (antes da v17, um parágrafo único) | cinco partes em linhas separadas |
+| Começa com | `{` (antes da v17: `IMPORTANT: THIS IS IPHONE FOOTAGE`, `Edit the attached image` ou `CHARACTER SHEET`) | `o avatar ... fala`, `falas no take` ou `(sem fala no take: ...)` |
 | Contém | nunca contém `câmera:` nem `som ambiente:` | **sempre** contém `o que acontece no vídeo:`, `câmera:` e `som ambiente:` |
 
 **Checagem obrigatória antes de cada vídeo:** o texto que vai no campo do vídeo tem que conter, ao
@@ -396,7 +401,10 @@ O pacote traz a montagem específica. As regras gerais são:
 
 ## 13. Anatomia de um prompt de IMAGEM (para escrever um novo)
 
-Todo K segue esta ordem. Cada parte existe por um motivo.
+Todo K segue esta ordem. Cada parte existe por um motivo. Desde a v17 cada parte é um **campo do
+JSON** (`format`, `fiction_note`, `reference_use`, `identity_main`, `wardrobe`, `scene`, `prop`,
+`posture`, `composition`, `camera`, `lighting`, `state`, `realism`, `aspect_ratio`, `negative`), com
+o mesmo conteúdo de antes; a tabela abaixo continua valendo campo a campo.
 
 | Parte | Exemplo | Por quê |
 |---|---|---|
@@ -516,7 +524,7 @@ expressão reescrita como "pega de surpresa". Nenhuma fala foi tocada.
 ```
 ANTES
 [ ] Colar as instruções do pacote, inteiras, na memória do agente
-[ ] Confirmar o perfil (CLÁSSICO ou AURALY) e a versão (v16)
+[ ] Confirmar o perfil (CLÁSSICO ou AURALY) e a versão (v17)
 [ ] Separar âncora / REF-P / frames de composição
 
 IMAGENS
@@ -541,7 +549,7 @@ MONTAGEM
 
 ---
 
-## Apêndice A · Instruções para a memória do agente (v16, texto integral)
+## Apêndice A · Instruções para a memória do agente (v17, texto integral)
 
 Este é o texto que vai no campo de instruções/memória do agente do Flow. Na prática, **use sempre o
 bloco que veio no pacote da produção**: ele pode ter uma versão mais nova que esta. Algumas partes
@@ -675,6 +683,15 @@ Receber todos os K, contar codigos e conferir duplicatas. Cada codigo aparece so
 linha, seguido de um prompt completo e autossuficiente. Nao copiar titulos, notas, caminhos,
 configuracoes ou metadata para o campo do prompt.
 
+**Prompt de imagem em JSON (v17, 2026-09-25).** Desde a v17 todo prompt K (e todo `REF-P`) chega
+como UM objeto JSON em ingles: comeca com `{` na linha logo abaixo do codigo e termina com o `}`
+que fecha o objeto. Colar o objeto INTEIRO, de `{` ate `}`, literalmente no campo de prompt do
+Nano Banana 2, sem o codigo, sem resumir, sem converter para texto corrido e sem apagar campo.
+Cada campo e parte do prompt (formato, referencia, identidade, roupa, cena, prop, postura,
+composicao, camera, luz, estado, realismo, proporcao e negative), nao metadata. Se o JSON chegar
+quebrado ou incompleto (sem o `}` final, aspas abertas), PARAR e avisar o operador. Pacotes
+anteriores a v17, com o K em paragrafo unico, continuam validos como foram entregues.
+
 Usar Nano Banana 2, formato 9:16 e a anchor ativa. Colar cada prompt literalmente e gerar a
 quantidade do perfil. Rotular os resultados com avatar, codigo e numero da variacao.
 
@@ -691,9 +708,10 @@ como INITIAL FRAME (certo) mas colou o PROPRIO PROMPT DE IMAGEM no campo de text
 vez do prompt V correspondente. Isso nunca pode se repetir. Regras obrigatorias:
 
 1. **Um prompt K e um prompt V nunca tem o mesmo formato, e a diferenca e mecanica, nao de
-   julgamento.** Um prompt K e um UNICO paragrafo denso em ingles descrevendo uma imagem parada:
-   comeca tipicamente com `IMPORTANT: THIS IS IPHONE FOOTAGE` (geracao do zero) ou `Edit the
-   attached image` (edicao); um prompt `REF-P` comeca com `CHARACTER SHEET`. NUNCA contem as
+   julgamento.** Um prompt K e um objeto JSON em ingles descrevendo uma imagem parada: comeca
+   com `{` e termina com `}` (desde a v17; pacotes antigos traziam um paragrafo unico comecando
+   com `IMPORTANT: THIS IS IPHONE FOOTAGE`, `Edit the attached image` ou, no `REF-P`, `CHARACTER
+   SHEET`). Um prompt V NUNCA comeca com `{`. Um prompt K NUNCA contem as
    palavras `o avatar fala`, `falas no take`, `câmera:` ou `som ambiente:`. Um prompt V e sempre
    em portugues e sempre tem exatamente cinco partes na ordem: a abertura de fala (a linha `o
    avatar (homem/mulher) fala em ingles... a seguinte frase: "..."`, ou o bloco `falas no take`
@@ -793,6 +811,8 @@ a mão que segura o celular nunca se mexe; só a outra mão gesticula.
 ## Apêndice C · Exemplo real: um par K + V de cena atuada
 
 Produção de short form "a madrasta e o frango" (perfil CLÁSSICO, sem avatar, 4 character sheets).
+Exemplo anterior à v17: o K ainda vinha em parágrafo único. Hoje o mesmo conteúdo vem num objeto
+JSON, um campo por parte (seção 13).
 
 **MAPA DE ANEXOS do K01:** REF-P3 (Emily), REF-P1 (madrasta), REF-P2 (pai), depois o frame de
 composição. **MAPA K/V:** `V01: K01`.
@@ -815,7 +835,7 @@ som ambiente: cozinha silenciosa de casa, o choro da menina, passos rápidos, se
 ```
 
 Repare:
-- o K01 começa com `IMPORTANT: THIS IS IPHONE FOOTAGE`, é um parágrafo único e descreve o **momento
+- o K01 (formato anterior à v17) começa com `IMPORTANT: THIS IS IPHONE FOOTAGE`, é um parágrafo único e descreve o **momento
   antes** do tapa (a mão da menina esticada), porque a imagem é o primeiro quadro do vídeo;
 - o V01 tem as três marcas, cada fala diz quem fala, a voz e a emoção, e a menina "não diz nenhuma
   palavra";

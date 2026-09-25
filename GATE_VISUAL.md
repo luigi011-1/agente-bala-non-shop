@@ -97,7 +97,10 @@ lente numa selfie sem objeto. Sinais de gente real em `PERFIL_ORGANICO.md` seç�
 
 ---
 
-## PARTE 3 · TRECHOS PRONTOS (texto corrido, para os blocos do Flow)
+## PARTE 3 · TRECHOS PRONTOS (para os campos do JSON de imagem do Flow)
+
+Desde 2026-09-25 (contrato do Flow v17) o K entregue é JSON: cada trecho abaixo vai no campo
+correspondente (`lighting`, `composition`, `realism`, `negative`), com o mesmo texto.
 
 Colar **dentro** de cada prompt, adaptando só o que está entre colchetes. Os blocos do Flow são
 autossuficientes, então isto se repete em todo `K__`, sem exceção.
