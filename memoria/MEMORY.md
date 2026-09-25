@@ -83,7 +83,7 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 - [GATE DE REALISMO, anti cara de IA](realismo_anti_cara_de_ia.md) — **rodar JUNTO com o gate de composição, antes do primeiro JSON.** Isolar o herói é a alavanca nº1, cores quentes e céu claro denunciam, partir sempre de algo real, realismo é volume de regeneração
 - [Prompt COMPLETO, nunca instrucao de patch](feedback_prompt_completo_sempre.md) — **nunca dizer "adicione X em todos os prompts".** Regra nova ja vem aplicada dentro de cada prompt, pronto pra copiar
 - [Variações de avatar: variar ângulo de câmera](feedback_angulos_camera_avatar.md) — baixo, três quartos, selfie, alto. Funcionou no avatar masculino (Luigi pediu mais, "exóticos"), nas mulheres mais velhas ele preferiu straight-on. Variação de avatar não ganha ficha
-- [Ângulo 3: cenário próprio por gancho](feedback_fingerprint_cenario_por_gancho_auraly.md) — cada gancho ganha cenário, roupa e ângulo de câmera PRÓPRIOS, nunca corpo compartilhado pela fila. ♻️ **A fingerprint caiu em 2026-09-22:** a âncora do roster ativo é a imagem em cena real, com instrução de usar só a identidade quando o cenário muda
+- [Ângulo 3: cenário próprio por gancho (REVOGADO)](feedback_fingerprint_cenario_por_gancho_auraly.md) — ♻️ **revogado em 2026-09-25: avatar fixo por conta nos três ângulos** (roupa e cenário-base da âncora em todo vídeo e gancho, só o ângulo de câmera varia; exceção só movie style / short form). Fica como histórico
 - [Regras universais](regras_universais.md) — as 10 fixas. Negative correto é `no captions`, nunca `no text` seco. **Bandeira dos EUA discreta e visivel em TODO prompt de imagem**
 
 ## 🚫 QUANDO TRAVAR RESTRIÇÃO

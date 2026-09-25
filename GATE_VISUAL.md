@@ -89,7 +89,8 @@ lente numa selfie sem objeto. Sinais de gente real em `PERFIL_ORGANICO.md` seç�
 ### 2.4 Exceções que já existem (não mudam aqui)
 - **Ângulo 3:** o kit de tarólogo é obrigatório e entra **agrupado em dois blocos** (prateleira +
   parede), que é como o teto de âncoras convive com ele. Âncora em cena real (Walt, Darlene,
-  Lorraine) + cenário próprio por gancho.
+  Lorraine), com a roupa e o cenário-base dela em todo vídeo e gancho (avatar fixo por conta,
+  Luigi 2026-09-25; revoga o cenário próprio por gancho).
 - **T1 do Ângulo 3:** cortes internos no `V__`, macro das mãos no payoff e split vertical liberado.
   Do T2 em diante, plano único.
 - **Corpo neutro ao gancho:** o prop que muda entre os ganchos fica FORA de quadro no corpo.

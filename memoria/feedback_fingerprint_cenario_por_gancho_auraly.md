@@ -1,14 +1,21 @@
 ---
 name: feedback-fingerprint-cenario-por-gancho-auraly
-description: "Ângulo 3 (Auraly): cenário/roupa/ângulo de câmera PRÓPRIO por gancho escolhido, nunca um corpo compartilhado pela fila (vigente desde 2026-09-14). A parte da FINGERPRINT foi revogada em 2026-09-22: o roster ativo (Walt, Darlene, Lorraine) usa a imagem em cena real como âncora, com a instrução de usar só a identidade quando o gancho pede cenário novo."
+description: "REVOGADO em 2026-09-25: o Auraly passou a ter AVATAR FIXO POR CONTA (roupa e cenário-base da âncora em todo vídeo e gancho; só o ângulo de câmera varia). Histórico: cenário/roupa/ângulo PRÓPRIO por gancho, de 2026-09-14 a 2026-09-25. A parte da FINGERPRINT foi revogada em 2026-09-22: o roster ativo (Walt, Darlene, Lorraine) usa a imagem em cena real como âncora, com a instrução de usar só a identidade quando o gancho pede cenário novo."
 metadata: 
   node_type: memory
   type: feedback
   originSessionId: 37f5dc01-94f1-4f0f-ac54-6fbe3c922eec
-  modified: 2026-09-15T02:20:26.124Z
+  modified: 2026-09-25T21:00:00.000Z
 ---
 
 # Cenário por gancho é o padrão do Ângulo 3 (a fingerprint caiu em 2026-09-22)
+
+> 🔴 **REVOGADO EM 2026-09-25 (Luigi): "sim, vale para o Auraly também".** O Auraly passou a ter
+> **avatar fixo por conta**, como a FitWell: a **roupa e o cenário-base da âncora** se repetem em todo
+> vídeo e em todo gancho; o que varia é o conteúdo e o **ângulo de câmera** (esse continua livre para
+> servir à ação estrutural). Revoga os itens 2 e 3 abaixo (cenário próprio e roupa livre por gancho).
+> Só o movie style / short form não tem avatar fixo. Regra viva em `WORKFLOW_AURALY.md` e no
+> [[checklist-envio-prompt]] B8. O resto desta memória é histórico.
 
 > ♻️ **2026-09-22 (Luigi):** *"não gostei do resultado dos fingerprints, pra produzir os vídeos eu irei
 > usar as imagens que te enviei anteriormente"*. Para o roster ativo (Walt, Darlene, Lorraine) a âncora

@@ -113,7 +113,7 @@ modelado **com o gancho fiel do modelo** → **aprovação do Luigi** → pacote
 
 1. **`INSTRUÇÕES PARA A MEMÓRIA DO AGENTE — GOOGLE FLOW AI`**, colado INTEIRO no chat, pronto pra
    copiar. Fonte canônica: `producao/_flow/INSTRUCOES_AGENTE_FLOW.md`.
-   Configuração vigente: **a tabela de perfis do próprio arquivo (v15, 2026-09-24) manda.** Clássico
+   Configuração vigente: **a tabela de perfis do próprio arquivo (v16, 2026-09-25) manda.** Clássico
    (Ângulos 1 e 2): Nano Banana 2 em 9:16, **4 imagens por K__ com seleção manual** (o Luigi apaga 3 e
    deixa 1); vídeo **só no Omni Flash**, 8 segundos, um único resultado por V__, a partir da imagem que
    sobrou. Auraly: 4 imagens por K__ com seleção manual e Veo 3.1 Lite com 3 variações por V__.
@@ -644,8 +644,10 @@ nunca como blur de câmera, senão colide com o `no blur` do negative.
 A âncora oficial é a **imagem de teste em cena real, não fingerprint** (Luigi, 2026-09-22): não gerar
 fingerprint para estes três. Anexar a do avatar escolhido como
 referência de identidade e cenário em **todo** `K__`. Como o bloco do Flow é autossuficiente (GOOGLE
-FLOW DELIVERY FORMAT), cada `K__` descreve o cenário inteiro por escrito; quando o gancho pede cenário
-novo, o prompt manda usar a âncora só para a identidade (ficha em `avatares-fichas`).
+FLOW DELIVERY FORMAT), cada `K__` descreve o cenário inteiro por escrito (ficha em `avatares-fichas`).
+♻️ **Avatar fixo por conta (Luigi, 2026-09-25), nos três ângulos:** a roupa e o cenário-base da âncora
+se repetem em todo vídeo e todo gancho da conta; o que varia é o conteúdo e o ângulo de câmera. Só o
+movie style / short form não tem avatar fixo. Revoga o cenário e a roupa próprios por gancho do Auraly.
 
 **📎 SINAL DE ENTRADA: `.mp4` + IMAGEM DE AVATAR na mesma mensagem = produzir PARA AQUELE AVATAR primeiro.**
 Quando o Luigi manda o vídeo modelo junto de uma âncora, a âncora **diz para quem é**. Não perguntar,

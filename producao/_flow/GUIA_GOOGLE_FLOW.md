@@ -1,6 +1,6 @@
 # Guia completo: produção de vídeos com o agente do Google Flow
 
-Versão de 2026-09-23. Vale para as instruções do agente **v13**.
+Versão de 2026-09-25. Vale para as instruções do agente **v16**.
 
 Este documento explica, do zero, como a operação transforma um **pacote de prompts** em vídeos
 prontos usando o **agente do Google Flow**. Depois de ler, você consegue:
@@ -24,11 +24,12 @@ PACOTE DE PRODUÇÃO (texto)
    │
    ├─ 1. Instruções do agente ──────────► colar na MEMÓRIA do agente do Flow (toda produção)
    ├─ 2. Referências (âncora / REF-P) ──► anexar nas imagens, conforme o mapa
-   ├─ 3. Bloco de IMAGEM (K01, K02...) ─► Nano Banana 2 gera 1 imagem por K
+   ├─ 3. Bloco de IMAGEM (K01, K02...) ─► Nano Banana 2 gera 4 candidatas por K
    │                                          │
-   │                                     você APROVA cada imagem
+   │                                     você ESCOLHE 1 por K e apaga as outras 3
    │                                          │
-   ├─ 4. Bloco de VÍDEO (V01, V02...) ──► Veo 3.1 Lite anima cada imagem aprovada
+   ├─ 4. Bloco de VÍDEO (V01, V02...) ──► Omni Flash (clássico) ou Veo 3.1 Lite (Auraly)
+   │                                      anima cada imagem escolhida
    │                                      (a imagem do K entra como INITIAL FRAME do V)
    │                                          │
    │                                     você APROVA cada clipe
@@ -63,8 +64,9 @@ galeria ou pela ordem de anexo. Ele lê o código.
 
 ## 3. O que você precisa antes de começar
 
-- **Conta no Google Flow** com acesso ao **Nano Banana 2** (imagem) e ao **Veo 3.1 Lite** (vídeo),
-  incluindo a opção **Lower Priority** (fila mais lenta, sem consumir créditos, em 720p).
+- **Conta no Google Flow** com acesso ao **Nano Banana 2** (imagem), ao **Omni Flash** (vídeo do
+  perfil clássico) e ao **Veo 3.1 Lite** com a opção **Lower Priority** (vídeo do Auraly; fila mais
+  lenta, sem consumir créditos, em 720p).
 - **O agente do Flow** (o assistente movido a Gemini dentro do Flow), com um campo de
   **instruções ou memória** onde você cola texto que ele segue durante toda a sessão. O nome exato
   do campo pode variar conforme a versão da interface; é o lugar das instruções permanentes do
@@ -138,7 +140,7 @@ motivo: o Flow recebe só os anexos mais aquele prompt, e não lembra do prompt 
 2. Apague o que houver de uma produção anterior.
 3. Cole o bloco **"Instruções para a memória do agente"** do pacote, **inteiro**, sem editar.
    (O texto de referência está no Apêndice A.)
-4. Confirme que a versão é a mesma do pacote (hoje, **v13**).
+4. Confirme que a versão é a mesma do pacote (hoje, **v16**).
 
 **Por que toda vez:** a memória do agente é preenchida do zero a cada rodada, e a configuração
 muda entre produções (perfil, número de variações, regras de anexo). Um pacote nunca diz "a memória
@@ -157,9 +159,9 @@ O agente precisa saber o perfil antes de gerar qualquer coisa. O pacote diz qual
 |---|---|---|
 | Modelo de imagem | Nano Banana 2 | Nano Banana 2 |
 | Formato | 9:16 vertical | 9:16 vertical |
-| Imagens por K | **1 imagem final** | **4 candidatas**, você escolhe 1 |
-| Modelo de vídeo | Veo 3.1 Lite | Veo 3.1 Lite |
-| Prioridade | Lower Priority | Lower Priority |
+| Imagens por K | **4 candidatas**, você escolhe 1 e apaga 3 | **4 candidatas**, você escolhe 1 |
+| Modelo de vídeo | **Omni Flash, e só ele** | Veo 3.1 Lite |
+| Prioridade | padrão do Omni Flash | Lower Priority |
 | Duração por clipe | 8 segundos | 8 segundos |
 | Variações por V | **1** | **3** |
 | Como a imagem vira vídeo | INITIAL FRAME | INITIAL FRAME |
@@ -183,8 +185,10 @@ aparece. Regras:
 - **Nunca casar nome com rosto pela ordem de anexo.** Abra a âncora e confira o rosto.
 - **Um avatar por vez.** Ao trocar de avatar (`finalizamos, vamos para o próximo avatar`), tire a
   âncora anterior da seleção e espere a nova. As identidades nunca se misturam.
-- Quando o K pede cenário ou roupa diferentes da âncora, o próprio texto do K diz "use a âncora só
-  para a identidade". Siga o texto e ignore roupa, fundo e objetos da âncora.
+- **Avatar fixo por conta (2026-09-25):** cada conta usa o mesmo avatar com a roupa e o
+  cenário-base da âncora em todo vídeo, nos dois perfis. Só o movie style / short form não tem
+  avatar fixo. Quando o vídeo modelo tem uma cena em outro lugar, o texto do K descreve o lugar
+  novo; a pessoa e a roupa continuam as da âncora.
 
 ### 7.2 Character sheets `REF-P` (cenas atuadas)
 Nas cenas com vários personagens (short form e movie style), cada **personagem principal** (quem
@@ -225,15 +229,16 @@ Para cada código, na ordem:
 1. Anexar as referências do MAPA DE ANEXOS para aquele código, na ordem indicada.
 2. Colar **só o prompt** (sem a linha do código) no campo de prompt do Nano Banana 2.
 3. Formato 9:16.
-4. Gerar a quantidade do perfil (1 no clássico, 4 no Auraly).
+4. Gerar **4 candidatas** (os dois perfis). Conferir o seletor de quantidade em 4 a cada K, porque
+   ele pode voltar para 1 sozinho.
 5. Salvar com o código no nome (seção 8.4).
 
 **Colar o prompt literalmente.** Não traduzir, não resumir, não "melhorar". Cada palavra está lá
 por um motivo de qualidade ou de censura.
 
 ### 8.3 Ordem de geração
-`REF-P` (se houver) → aprovação dos sheets → `K01`, `K02`... em ordem numérica. No perfil
-clássico, gere todos os K e **espere o pacote de vídeo** antes de passar para os vídeos.
+`REF-P` (se houver) → aprovação dos sheets → `K01`, `K02`... em ordem numérica. Gere todos os K,
+**pare**, escolha uma candidata por K e apague as outras três. Só então passe para os vídeos.
 
 ### 8.4 Nome dos arquivos
 Sempre `<produção>_<avatar ou elenco>_<código>_<variação>`. Exemplos:
@@ -249,7 +254,8 @@ de tentativas, não prompt mágico.
 
 **Identidade**
 - [ ] O rosto é o da âncora / do character sheet, sem derivar entre imagens.
-- [ ] Roupa, cabelo e acessórios iguais aos descritos (e iguais entre todos os K).
+- [ ] Roupa, cabelo e acessórios iguais aos descritos (e iguais entre todos os K e todos os vídeos
+      da conta: avatar fixo).
 - [ ] A idade não foi suavizada (rugas, linhas e pele real continuam lá).
 
 **Realismo (anti cara de IA)**
@@ -264,7 +270,8 @@ de tentativas, não prompt mágico.
 - [ ] O **objeto herói** (o que o prompt chama de hero) está no primeiro plano, perto da lente,
       maior que o rosto, quando o prompt pede.
 - [ ] No máximo duas ou três coisas chamando atenção no fundo.
-- [ ] **Bandeira dos EUA** visível, discreta e em foco (em todo K com cenário).
+- [ ] **Bandeira dos EUA** visível, discreta e em foco (em todo K com cenário, no formato de avatar
+      IA; no orgânico ela é opcional).
 - [ ] Nenhum texto, legenda ou marca escrita na imagem.
 
 **Fala**
@@ -324,7 +331,8 @@ correção.
 3. Anexar essa imagem **como INITIAL FRAME**. Nunca como "element", "ingredient" ou referência de
    objeto.
 4. Colar **só o texto do V** no campo de prompt (conferir as três marcas).
-5. Veo 3.1 Lite, Lower Priority, 8 segundos, variações do perfil (1 ou 3).
+5. Clássico: **Omni Flash**, 8 segundos, **1 resultado**. Auraly: Veo 3.1 Lite, Lower Priority,
+   8 segundos, 3 variações.
 6. Salvar com o código no nome.
 
 **A fala é literal.** Não mexa em nenhuma palavra entre aspas. **Não adicione** música, legenda,
@@ -508,20 +516,20 @@ expressão reescrita como "pega de surpresa". Nenhuma fala foi tocada.
 ```
 ANTES
 [ ] Colar as instruções do pacote, inteiras, na memória do agente
-[ ] Confirmar o perfil (CLÁSSICO ou AURALY) e a versão (v13)
+[ ] Confirmar o perfil (CLÁSSICO ou AURALY) e a versão (v16)
 [ ] Separar âncora / REF-P / frames de composição
 
 IMAGENS
 [ ] REF-P primeiro (sem anexo), aprovar todos
 [ ] K em ordem: anexos do MAPA DE ANEXOS, na ordem → colar SÓ o prompt → Nano Banana 2, 9:16
-[ ] 1 imagem (clássico) ou 4 candidatas (Auraly) por K
+[ ] 4 candidatas por K (os dois perfis); escolher 1 e apagar 3
 [ ] Salvar com o código no nome
 [ ] Aprovar cada imagem pelo checklist da seção 9
 
 VÍDEOS
 [ ] Para cada V: MAPA K/V → imagem APROVADA do K → anexar como INITIAL FRAME
 [ ] Colar SÓ o texto do V e conferir as 3 marcas (o que acontece / câmera / som ambiente)
-[ ] Veo 3.1 Lite, Lower Priority, 8s, 1 ou 3 variações
+[ ] Clássico: Omni Flash, 8s, 1 resultado · Auraly: Veo 3.1 Lite, Lower Priority, 8s, 3 variações
 [ ] Lotes de até 7 V, esperar "prossiga"
 [ ] Aprovar cada clipe pelo checklist da seção 11
 
@@ -533,7 +541,7 @@ MONTAGEM
 
 ---
 
-## Apêndice A · Instruções para a memória do agente (v13, texto integral)
+## Apêndice A · Instruções para a memória do agente (v16, texto integral)
 
 Este é o texto que vai no campo de instruções/memória do agente do Flow. Na prática, **use sempre o
 bloco que veio no pacote da produção**: ele pode ter uma versão mais nova que esta. Algumas partes
@@ -552,12 +560,12 @@ incompativel com os codigos recebidos exige esclarecimento, nunca escolha silenc
 | Imagem | Nano Banana 2 | Nano Banana 2 |
 | Formato | 9:16 | 9:16 |
 | Referencia de imagem | Anchor em cena real do avatar ativo (ver secao abaixo) | Anchor do avatar ativo |
-| Imagens por K | 4, com selecao manual | 1 imagem final |
+| Imagens por K | 4, com selecao manual | 4, com selecao manual (o operador apaga 3 e deixa 1) |
 | Relacao K/V | Mapa explicito recebido com o pacote; um K pode alimentar varios V | Maior K menor ou igual ao numero de V |
-| Video | Veo 3.1 Lite | Veo 3.1 Lite |
-| Prioridade | Lower Priority | Lower Priority |
+| Video | Veo 3.1 Lite | Omni Flash, e somente ele |
+| Prioridade | Lower Priority | Padrao do Omni Flash |
 | Duracao por clipe | 8 segundos | 8 segundos |
-| Variacoes por V | 3 | 1 |
+| Variacoes por V | 3 | 1, um unico resultado por prompt |
 | Anexo do video | INITIAL FRAME | INITIAL FRAME |
 | Lote de video | Fechado, no maximo 7 codigos V | Fechado, no maximo 7 codigos V |
 
@@ -565,19 +573,43 @@ Os valores Auraly reproduzem as travas de WORKFLOW_AURALY.md. Nunca transportar 
 classicas para Auraly. Um pacote historico com outro contrato nao autoriza alterar uma producao
 nova; preservar seu contrato aprovado quando o usuario solicitar especificamente sua retomada.
 
-### AURALY, anchor e cenario por gancho (Luigi, 2026-09-14; anchor revista em 2026-09-22)
+### 🔴 CLASSICO: 4 imagens por K, selecao do operador, video so no Omni Flash (v14, 2026-09-24)
+
+Falha real registrada: o operador pedia quatro variacoes por K e o executor continuava gerando uma
+so. Isto e obrigatorio em todo K do perfil CLASSICO:
+
+1. **Quatro imagens por K, sempre.** Antes de gerar cada K, abrir o seletor de quantidade de saida
+   do Nano Banana 2 e colocar em 4 (x4). Conferir o seletor em TODO K, porque ele pode voltar para 1
+   sozinho. Um K com menos de quatro imagens esta INCOMPLETO. Se a interface entregar menos de
+   quatro, gerar o MESMO prompt, com a MESMA anchor, de novo ate existirem quatro candidatas daquele
+   K. Nunca editar o prompt para isso.
+2. **Rotular as quatro** com avatar, codigo e numero: `K01-1`, `K01-2`, `K01-3`, `K01-4`.
+3. **Depois de gerar TODOS os K, PARAR.** Nao escolher imagem, nao apagar imagem, nao gerar video.
+   Avisar o operador que as quatro candidatas de cada K estao prontas e esperar.
+4. **A selecao e so do operador.** Ele escolhe a dedo UMA imagem por K e apaga as outras tres. Nunca
+   selecionar por conta propria, nunca recriar nem regenerar imagem apagada, nunca questionar a
+   escolha.
+5. **O video comeca so quando o operador mandar.** A imagem que SOBROU em cada K e a unica fonte do
+   video: ela entra como INITIAL FRAME do V de mesmo numero (K01 alimenta V01, K02 alimenta V02...).
+   Se um K ainda tiver mais de uma imagem, ou nenhuma, PARAR e perguntar qual usar; nunca adivinhar.
+6. **Video somente no Omni Flash.** Nunca usar Veo 3.1, Veo 3.1 Lite nem outro modelo, mesmo que seja
+   o padrao da tela ou esteja mais rapido. Conferir o modelo selecionado antes de CADA V.
+7. **Um unico resultado por V.** Colocar a quantidade de saida do video em 1. Nunca gerar duas ou
+   mais versoes do mesmo V.
+8. Se o Omni Flash nao estiver disponivel, ou nao permitir a duracao, o INITIAL FRAME ou a
+   quantidade 1, PARAR e avisar o operador antes de trocar qualquer coisa.
+
+### AURALY, anchor e avatar fixo por conta (Luigi, 2026-09-14; anchor revista em 2026-09-22; avatar fixo em 2026-09-25)
 
 Roster Auraly: Walt Hensley, Darlene Pruitt e Lorraine Vance. A referencia de cada um e a anchor
-em cena real (imagem de teste aprovada), anexada em todo K. Nao existe fingerprint. Quando o K
-mantem o cenario da anchor, o texto do K descreve esse cenario. Quando o K pede cenario ou roupa
-novos, o texto manda usar a anchor so para a identidade; siga o texto e ignore roupa, fundo e props
-da anchor.
+em cena real (imagem de teste aprovada), anexada em todo K. Nao existe fingerprint.
 
-Cada gancho escolhido passa a ter CENARIO PROPRIO do T1 ao CTA (K de hook + K de corpo + K de CTA
-por cenario), nunca mais um corpo compartilhado pela fila inteira. O angulo de camera serve a
-acao estrutural preservada: pode ser exotico quando aumenta a anomalia, mas pode se repetir entre
-variacoes para preservar composicao e timing. Mudar o angulo conta como a unica variavel dessa
-variacao. Roupa livre por cenario, sem obrigacao de repetir a roupa da anchor.
+AVATAR FIXO POR CONTA (v16, 2026-09-25): cada conta usa o mesmo avatar com a roupa e o cenario-base
+da anchor em todo video e em todo gancho. O texto do K descreve esse cenario e essa roupa. Quando o
+video modelo tem uma cena em outro lugar, o texto do K descreve o lugar novo e manda usar a anchor
+para identidade e roupa; a pessoa e a roupa nunca mudam. O angulo de camera serve a acao estrutural
+preservada: pode ser exotico quando aumenta a anomalia, mas pode se repetir entre variacoes para
+preservar composicao e timing. Mudar o angulo conta como a unica variavel dessa variacao.
 
 No T1, a anomalia visual domina. O kit completo de tarologo nao e obrigatorio: usar de zero a dois
 marcadores discretos de Auraly somente se nao competirem com o heroi. Um unico VFX simples e legivel
@@ -618,6 +650,15 @@ o perfil CLASSICO. O pacote declara o formato no topo.
 4. **B-roll.** Um V de B-roll comeca com `(sem fala no take: ...)`. Nao ha fala para gerar; a
    voz entra na edicao por cima de outro clipe. As tres marcas continuam presentes.
 
+### SHORT FORM DE CRESCIMENTO sem anchor (perfil CLASSICO, v13, 2026-09-23)
+
+Cada conta e um ciclo proprio, tratado como um avatar. Nao existe anchor: os personagens nascem do
+texto do K, e cada conta tem uma dupla propria. O unico anexo do K e o frame de composicao
+REF-COMPOSICAO, que serve so para altura, angulo da camera e disposicao da cena; nunca copiar dele
+pessoas, rostos, roupas, doces ou cenario. Um K por conta alimenta os tres V (V01, V02 e V03 usam o
+K01 pela regra do classico). Em V de dialogo, a primeira linha nomeia quem fala (`a neta`, `a avo`)
+no lugar de `o avatar` e continua sendo a parte 1 das cinco; a checagem das tres marcas nao muda.
+
 ### Um avatar por vez
 
 Receber a anchor e registrar o identificador e nome do arquivo. Nao casar imagens por ordem de
@@ -639,8 +680,8 @@ quantidade do perfil. Rotular os resultados com avatar, codigo e numero da varia
 
 No Auraly, apresentar quatro candidatas por K e esperar o operador escolher uma por codigo.
 Mesmo que os V ja tenham chegado no mesmo pacote textual, nao selecionar automaticamente nem
-avancar para video sem selecao. No classico, uma imagem
-final por K; ainda assim esperar o pacote de video antes de executar essa fase.
+avancar para video sem selecao. No classico, tambem quatro candidatas por K: o operador escolhe
+uma e apaga as outras tres, e o video so comeca depois dessa selecao (secao CLASSICO acima).
 
 ### 🔴 Reconhecer prompt de IMAGEM (K) contra prompt de VIDEO (V), sem ambiguidade (v8)
 
@@ -686,14 +727,16 @@ Cada codigo V tem tres variacoes do mesmo prompt e frame selecionado.
 
 CLASSICO: V usa o maior K disponivel cujo numero nao exceda o de V. Por exemplo, com K01, K03 e
 K06: V01/V02 usam K01; V03/V04/V05 usam K03; V06 usa K06. Se nao houver K anterior ou igual,
-parar. Nao adivinhar pela aparencia ou ordem da galeria. Cada V tem uma variacao.
+parar. Nao adivinhar pela aparencia ou ordem da galeria. Cada V tem uma variacao, gerada no Omni
+Flash a partir da UNICA imagem que o operador deixou naquele K.
 
 ### Videos em lotes fechados
 
 1. Receber e registrar toda a fila V, sem executar tudo automaticamente.
 2. Antes de cada V, conferir avatar, perfil e K indicado no MAPA K/V.
 3. Usar a imagem exclusivamente como INITIAL FRAME, nunca Element, ingredient ou referencia de objeto.
-4. Configurar Veo 3.1 Lite, Lower Priority, oito segundos e a quantidade de variacoes do perfil.
+4. Configurar o modelo do perfil: AURALY em Veo 3.1 Lite, Lower Priority, oito segundos, tres
+   variacoes; CLASSICO somente em Omni Flash, oito segundos, um unico resultado por V.
 5. Iniciar somente o primeiro lote de no maximo sete codigos V. Variacoes pertencem ao codigo;
    o teto e de codigos, nao uma autorizacao para iniciar codigos adicionais por vaga liberada.
 6. Esperar todos os codigos e variacoes desse lote. Nao preencher vagas com o lote seguinte.
