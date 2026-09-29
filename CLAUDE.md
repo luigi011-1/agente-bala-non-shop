@@ -310,7 +310,9 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
   Ivy Carl, Jamie Voss, Lais Collins, Lia Carlla, Robert Alves e Roberta Carvalho. Não estender os
   sete ao Ângulo 4 sem decisão explícita. **No Ângulo 2 todos são COACH**; quando quem fala é homem,
   o crivo de nunca culpar ela roda DUAS vezes. **No Ângulo 4 os três originais são PAR**, com 1ª
-  pessoa liberada. A holistic.brandon segue aposentada. Âncoras em `producao/_ancoras/`.
+  pessoa liberada. **A holistic.brandon VOLTOU ao Ângulo 2 em 2026-09-29** (Luigi), como COACH, âncora
+  `producao/_ancoras/holistic_brandon_ancora.jpg`; ela não volta ao Ângulo 4 sem decisão explícita.
+  Âncoras em `producao/_ancoras/`.
 - **[ÂNGULO 4] LIMITE HONESTO É PROIBIDO.** Nenhuma ressalva, nenhum "isso não faz X". A dor prometida
   e o mecanismo do produto são a mesma linha, então toda ressalva encosta na promessa. O take vai pra
   autoridade, prova social, urgência ou escassez. No Ângulo 3 o objeto de desejo do CTA é

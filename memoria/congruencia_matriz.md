@@ -26,11 +26,11 @@ Eles resolvem sozinhos a lacuna de idade vivida, e a regra deles cabe em duas li
 - **Angulo 4 (produto masculino, homens 40+):** **USUARIO / PAR.** Dana tem 52, Jamie 55 e Lynn 70,
   entao o claim de idade vivida que a secao "idade" mais abaixo exige esta coberto pela primeira vez.
 
-Fichas em [[avatares-fichas]]. A holistic.brandon saiu da FityWell inteira nesta data.
+Fichas em [[avatares-fichas]]. A holistic.brandon saiu da FityWell inteira nesta data e **voltou ao Ângulo 2 em 2026-09-29**, como COACH.
 
 ## Perfil rápido
 - **Melody Carter** — homem negro, musculoso, ~30s-40s, garagem, cruz de PRATA, registro disciplina+fé. Foto-âncora SENTADO (corrigir p/ em pé nos prompts).
-- **holistic.brandon** (fora da FityWell desde 2026-09-10) — MULHER atlética, ~30s, box de treino, cruz de OURO, registro feminino/atlético disciplina+fé.
+- **holistic.brandon** (de volta ao Ângulo 2 desde 2026-09-29, COACH) — MULHER atlética, ~30s, box de treino, cruz de OURO, registro feminino/atlético disciplina+fé.
 - **holistic.trevor** — homem branco ~50s, ruivo, cozinha moderna, SEM cruz, registro caloroso "vizinho saudável".
 
 ## Matriz (Usuário ✅ / Coach 🔄 / Melhor pick ✅✅)

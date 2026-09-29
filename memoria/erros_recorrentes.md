@@ -54,6 +54,30 @@ Pediu "cristais de açúcar na barriga" e saiu camada fininha tipo molho.
 - Negative: "no thin scattered sugar layer, no flat sauce-like coating"
 - Puxar câmera pra perto/de cima do herói.
 
+## Falha #8: K do gancho que não reproduz o frame do modelo (2026-09-25, `fitywell_growth_modelo_intestino`)
+O Luigi gerou o K01 e saiu outro gancho: *"não ficou nada fiel ao gancho do vídeo original ... herói do
+hook muito próximo da câmera ... NÃO cometa mais esses erros bobos"*. Três erros meus no texto:
+1. **Genericizei a forma do herói com medo de censura.** O modelo era o intestino inteiro reconhecível
+   (tubo grosso com gomos em U invertido, emaranhado de alças no meio, gargalo em cima, saída embaixo) e
+   eu escrevi "one long clear tube folded back and forth in tight loops": saiu um zigue-zague. É a
+   Falha #6 de novo. Vocabulário seguro vale para o NEGATIVE; no positivo a forma vai descrita inteira.
+2. **Câmera errada.** O modelo filma rente ao chão, 0,5x, lente a centímetros do herói (60% do quadro,
+   quase tocando as bordas). Eu escrevi câmera "low, at counter height" com o avatar "in the upper
+   third" e saiu tudo a meia distância. Proximidade tem que ser MEDIDA no texto: "lens only a few
+   inches from", "fills the lower sixty percent of the frame, almost touching the edges", "larger than
+   his head", e a altura/lente da câmera ("phone lying almost flat, ultra-wide 0.5x").
+3. **Inventei props** (frango, espinafre, iogurte na bancada) para o vídeo ter de onde pegar. Competiam
+   com o herói e não existem no frame. Item que entra depois vem "de fora do quadro" no V.
+
+**Como não repetir:** antes de fechar qualquer K de gancho, abrir o frame do modelo daquele take e
+conferir linha a linha: (a) a FORMA do herói descrita como se vê, (b) a porcentagem do quadro que ele
+ocupa e a distância da lente, (c) a altura e a lente da câmera, (d) a pose do avatar em relação ao
+herói, (e) tudo o que está no quadro, sem nada a mais. Anexar o frame como composição não compensa um
+texto que descreve outra coisa: o texto vence o anexo.
+
+**Virou processo bloqueante no mesmo dia:** [[ficha-do-frame-placar]] (`FICHA_FRAMES.md` + placar com
+evidência citada, cobrado pelo `checar_entrega.py`).
+
 ## Erro histórico #1: ler ERRADO o herói do hook
 Interpretei "braço com gordura encolhendo take a take" como "mulher bebendo líquido com continuidade" (roupa mudando de cor = pattern-matching preguiçoso). Usuário teve que corrigir. Ver [[metodo-puzzle]] caso do antes/depois disfarçado.
 
@@ -92,5 +116,6 @@ Mesma família dos erros #1 e #2: pattern-match do visual em vez de rastrear a a
 - [ ] "no text" no negative?
 - [ ] Só o estado inicial (não a transformação)?
 - [ ] Herói com volume/cobertura/forma bem descritos?
+- [ ] K do gancho conferido contra o frame do modelo: forma, % do quadro, distância da lente, altura e lente da câmera, nada a mais em quadro (Falha #8)?
 - [ ] Segunda pessoa travada (rosto) e estágios gerados a partir do original (não cascata)?
 - [ ] Frame-herói gerado no Pro com variações?

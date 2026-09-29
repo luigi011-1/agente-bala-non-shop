@@ -40,6 +40,12 @@ precisamos vender nada nesse estilo de vídeo."*
    - follow gate com motivo ("ou não vou conseguir te alcançar")
    O CTA final é o mesmo do original (save/comment/follow), só traduzido e com o pronome/registro
    ajustado.
+   🔴 **Growth SEMPRE fecha com FOLLOW depois do CTA de comentário/save** (Luigi, 2026-09-26, em
+   `fitywell_growth_cravo_limao`: *"faltou o CTA de follow depois do CTA de comentário, lembre-se que
+   é um video de growth"*). Se o original não pede follow, acrescentar uma frase curta logo depois do
+   comentário, no padrão aprovado no froyo: *"Follow me so you don't miss my next healthy recipes."*
+   É o motivo de CONTINUIDADE (próximas receitas), nunca o follow gate de entrega. Se estourar 29
+   palavras, o take se divide em fim de frase.
 3. **Se for VENDA** (e o modelo for de avatar IA; se for de pessoa real, ver [[formato-organico-real]]: copy literal e só o CTA muda):
    aplicar o processo cheio de sempre (crivo de copy, ponte argumentada, álibi,
    CTA de produto, keyword, follow gate). Nada muda aqui.

@@ -39,3 +39,7 @@ na mao.
 codigo sozinho na primeira linha e o prompt completo embaixo (mesmo formato de sempre). Titulo curto
 (take, cena, o que anexar) fica FORA do bloco, numa linha `###` acima dele. Todos os K primeiro,
 depois todos os V. Gabarito: `producao/fitywell_growth_dentes_agua/montar_entrega.py`.
+
+## Formato do K dentro do bloco (Luigi, 2026-09-25)
+O codigo continua sozinho na linha; o prompt embaixo agora e um objeto JSON, nao texto corrido.
+Ver [[feedback-prompt-imagem-json-no-flow]].

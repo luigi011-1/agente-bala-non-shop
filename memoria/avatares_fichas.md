@@ -1,6 +1,6 @@
 ---
 name: avatares-fichas
-description: "Fichas canonicas dos avatares de IA. ANGULO 3 (Auraly), roster UNICO desde 2026-09-22: Walt Hensley (homem 58, barba longa grisalha, antebracos tatuados, colete de couro, varanda com moto), Darlene Pruitt (56, cabelao platinado texano, turquesa e prata, cozinha rustica) e Lorraine Vance (52, cabeca raspada, argolas de prata, oculos de leitura, cozinha branca, selfie). Ancora oficial = imagem de teste em cena real, nunca fingerprint. Todos os outros avatares do Angulo 3 foram descartados em 2026-09-22 e so existem em _arquivo/. FITYWELL (Angulos 2 e 4): Dana Morrison (52, OG de do-rag, correntes de ouro e tatuagens, garagem com lowrider, âncora nova de 2026-09-23), Jamie Anderson (55, apicultor, fazenda com colmeias, âncora nova de 2026-09-23) e Lynn Parker (70, locs brancas, monge zen no jardim de chá, âncora nova de 2026-09-23), HOMENS negros de nome unissex, COACH no A2 e PAR no A4. KORELLA (Angulo 1): Melody Carter (HOMEM, garagem, cruz de prata) e holistic.trevor (homem ruivo, cozinha, sem cruz). holistic.brandon aposentada da FityWell. Tracos exatos pros prompts."
+description: "Fichas canonicas dos avatares de IA. ANGULO 3 (Auraly), roster UNICO desde 2026-09-22: Walt Hensley (homem 58, barba longa grisalha, antebracos tatuados, colete de couro, varanda com moto), Darlene Pruitt (56, cabelao platinado texano, turquesa e prata, cozinha rustica) e Lorraine Vance (52, cabeca raspada, argolas de prata, oculos de leitura, cozinha branca, selfie). Ancora oficial = imagem de teste em cena real, nunca fingerprint. Todos os outros avatares do Angulo 3 foram descartados em 2026-09-22 e so existem em _arquivo/. FITYWELL (Angulos 2 e 4): Dana Morrison (52, OG de do-rag, correntes de ouro e tatuagens, garagem com lowrider, âncora nova de 2026-09-23), Jamie Anderson (55, apicultor, fazenda com colmeias, âncora nova de 2026-09-23) e Lynn Parker (70, locs brancas, monge zen no jardim de chá, âncora nova de 2026-09-23), HOMENS negros de nome unissex, COACH no A2 e PAR no A4. KORELLA (Angulo 1): Melody Carter (HOMEM, garagem, cruz de prata) e holistic.trevor (homem ruivo, cozinha, sem cruz). holistic.brandon (mulher ~30, trancas com micangas, regata branca, cruz de OURO, box de treino com neon TRAIN PRAY REPEAT) REATIVADA no Angulo 2 em 2026-09-29, COACH, ancora em producao/_ancoras/holistic_brandon_ancora.jpg. Tracos exatos pros prompts."
 metadata: 
   node_type: memory
   type: reference
@@ -88,15 +88,24 @@ Cada avatar tem identidade visual FIXA — reproduzir igual em TODOS os takes e 
 - **É o avatar padrão até que se diga o contrário.**
 
 ## holistic.brandon (FEMININA, nome é "Brandon" mas é MULHER)
-> 🔴 **APOSENTADA DA MARCA FITYWELL INTEIRA EM 2026-09-10**, por decisão explícita do Luigi.
-> Os Ângulos 2 e 4 passaram a rodar com o roster masculino novo (Dana Morrison, Jamie Anderson e
-> Lynn Parker), fichas logo abaixo. Ela tinha migrado do Ângulo 2 para o Ângulo 4 em 2026-08-27, e
-> agora sai dos dois. **Ficha mantida como histórico e para eventual uso fora da FityWell.**
-> Os pacotes `brandon_angle2`, `brandon_mercado`, `brandon_pulmao` e `brandon_5potes` continuam
-> em disco como histórico de FORMATO, nunca de conteúdo.
-- **Aparência:** mulher negra/mestiça, atlética, longas tranças cornrow com pontas trançadas e **miçangas de madeira**, tatuagem floral blackwork braço esquerdo + pequenas tatuagens no peito.
+> 🟢 **REATIVADA NO ÂNGULO 2 (app FityWell, mulheres 40+) EM 2026-09-29**, por decisão do Luigi.
+> Entra no roster do Ângulo 2 ao lado dos dez atuais, **sempre COACH** (mulher de ~30 anos não fala
+> em 1ª pessoa sobre o corpo depois dos 40; cita as clientes, ver [[angulo2-copy-fitywell]] seção 8).
+> **Não volta ao Ângulo 4** (histórico) sem decisão explícita.
+> ♻️ Revoga a aposentadoria de 2026-09-10 ("saiu da marca FityWell inteira"). Histórico: migrou do
+> A2 para o A4 em 2026-08-27 porque a audiência da página dela era 97% homens dos EUA, e saiu dos
+> dois em 2026-09-10. Os pacotes `brandon_angle2`, `brandon_mercado`, `brandon_pulmao` e
+> `brandon_5potes` continuam histórico de FORMATO, nunca gabarito (o gabarito é `fitywell_pernas`).
+- **Âncora oficial:** `producao/_ancoras/holistic_brandon_ancora.jpg` (print de um Reel dela enviado
+  pelo Luigi em 2026-09-29, recortado para tirar o botão "Baixar" e a barra de usuário/hashtags; o
+  print inteiro está em `producao/_ancoras/historico/holistic_brandon_print_original_2026-09-29.webp`).
+  **A IMAGEM é a fonte de verdade.** Duas limitações: resolução baixa (465x690) e o texto de edição
+  **"No. 3" sobreposto na regata**, que é legenda do Reel e **nunca** entra no K (o `no captions`
+  do negative cobre; se o Flow copiar, pedir ao Luigi um frame limpo). **Luvas azuis, maçãs e a
+  tigela de inox são props do gancho daquele vídeo, não identidade:** não carregar para outros K.
+- **Aparência:** mulher negra/mestiça, ~30 anos, atlética, sardas leves, tranças cornrow nagô que viram tranças longas soltas até a cintura com **miçangas de madeira e douradas** nas pontas, brinco pequeno. **Na âncora de 2026-09-29 a manga floral blackwork está no braço DIREITO dela (lado esquerdo da imagem)**, tatuagem pequena no braço esquerdo e pequenas tatuagens no peito, perto da clavícula.
 - **Roupa/acessórios:** regata branca canelada + shorts de treino pretos, **corrente de ouro fina + pingente de cruz de OURO** (regra: mantenha ouro, NÃO force prata).
-- **Cenário:** box de treino / gym-garage — parede de bloco de concreto, neon vermelho "TRAIN PRAY REPEAT", bandeira vintage EUA, quadro branco "STAY READY. STAY DISCIPLINED — Gratitude & Prayer / Greens & Minerals / Clean Food & Water", prateleira com potes de ervas/sementes.
+- **Cenário (fixo da conta):** box de treino / gym-garage — parede de bloco de concreto pintada de branco, teto de ripas de madeira escura, neon vermelho "TRAIN PRAY REPEAT" à esquerda, bandeira dos EUA pequena no alto à direita, mesa preta em primeiro plano, quadro branco "STAY READY. STAY DISCIPLINED — Gratitude & Prayer / Greens & Minerals / Clean Food & Water", prateleira com potes de ervas/sementes.
 - **Registro:** feminino, atlético, autoridade calma, disciplina + fé.
 
 ---
@@ -105,7 +114,7 @@ Cada avatar tem identidade visual FIXA — reproduzir igual em TODOS os takes e 
 
 **Decisão do Luigi em 2026-09-10: estes três são as ÚNICAS âncoras atuais da marca FityWell, e valem
 para os DOIS ângulos**, o Ângulo 2 (app FityWell, quiz, mulheres 40+) e o Ângulo 4 (Body Hacks for
-Men 40+, homens 40+). A holistic.brandon está aposentada dos dois.
+Men 40+, homens 40+). A holistic.brandon foi aposentada dos dois nesta data e **voltou só ao Ângulo 2 em 2026-09-29** (ficha acima).
 
 **As três âncoras foram aprovadas por imagem nesta data. A fonte de verdade é a IMAGEM**, não o
 prompt que a gerou. Onde a imagem divergiu do prompt, vale a imagem, e a divergência está registrada
@@ -304,7 +313,7 @@ Nunca figura médica.
 
 ## Regras específicas por avatar/prop (síntese)
 - **Melody:** cruz de PRATA. Corrigir pose sentada da foto-âncora.
-- **Brandon:** cruz de OURO (não forçar prata). **Aposentada da FityWell em 2026-09-10.**
+- **Brandon:** cruz de OURO (não forçar prata). **Reativada no Ângulo 2 em 2026-09-29, COACH.**
 - **Dana Morrison:** do-rag preto, correntes de OURO, relógio e anel dourados, tatuagens de rosa e mãos em oração, SEM cruz, garagem de OG com lowrider (âncora de 2026-09-23).
 - **Jamie Anderson:** jaqueta branca de apicultor, ZERO joia, SEM cruz, fazenda com colmeias (desde 2026-09-23).
 - **Lynn Parker:** samue cinza de monge zen com rakusu, pulseira de contas, SEM cruz, locs brancas soltas, jardim de chá zen (desde 2026-09-23).

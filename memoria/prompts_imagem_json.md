@@ -10,6 +10,9 @@ metadata:
 
 # Prompts de Imagem (Frame Inicial) — JSON
 
+> ♻️ **2026-09-25 (Luigi): o JSON agora vai tambem para o Flow**, nao so para o arquivo interno. O bloco
+> de imagem entregue deixou de ser texto corrido. Ver [[feedback-prompt-imagem-json-no-flow]].
+
 Cada take começa com uma imagem estática (frame inicial). Nano Banana usa a **foto do avatar como âncora** + prompt em JSON.
 
 ## Regra de TÍTULO do prompt (pedido do Luigi, 2026-08-15)

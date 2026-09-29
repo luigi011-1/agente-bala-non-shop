@@ -71,6 +71,8 @@ Sem print de app, sem celular em quadro, sem mockup. Exceção explícita à reg
 
 ### Avatar do Ângulo 2: BRANDON, sempre como COACH (decisão do Luigi, 2026-08-21)
 
+> 🟢 **2026-09-29: a Brandon VOLTOU ao Ângulo 2, como COACH**, junto com o roster masculino ([[avatares-fichas]]). O bloco abaixo é histórico.
+>
 > 🔴 **REVOGADO EM 2026-08-27: a BRANDON MIGROU DE VEZ PRO ÂNGULO 4.** A audiência da página dela é
 > **97% homens dos EUA**, e o FityWell (mulheres 40+) estava queimando alcance. **O Ângulo 2 está sem
 > avatar.** Se voltar a rodar, precisa de decisão do Luigi sobre qual conta o recebe. A regra de
