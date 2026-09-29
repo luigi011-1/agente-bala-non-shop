@@ -4,7 +4,7 @@ description: "ÂNGULO 3 — app Auraly (astrologia / lei da atração / alma gê
 metadata: 
   node_type: memory
   type: project
-  modified: 2026-09-22T23:07:27.531Z
+  modified: 2026-09-29T18:05:10.059Z
   originSessionId: 35741d33-8b83-4947-a661-f71261849cf0
 ---
 
@@ -179,6 +179,16 @@ E a página de checkout direta mostra outro par de preços ainda: **$29.90 risca
 > As pessoas **criam apego e curiosidade** por algo divino e místico no sentido de sagrado.
 
 Tudo é puxado para **divino, fé, manifestação e lei da atração**. Nunca para bruxa, feitiço, pacto ou oculto.
+
+> ♻️ **Afrouxada na RAMIFICAÇÃO DINHEIRO/ABUNDÂNCIA (Luigi, 2026-09-29: "pode afrouxar a lei").** Nos
+> vídeos, ganchos e Stories de dinheiro e fortuna, a copy pode falar a mesma língua da VSL do funil
+> ([[angulo3-vsl-fortuna]]): **ritual**, **proteção energética**, **escudo invisível**, **energia
+> negativa grudada**, **inveja dos outros** como o que trava a bênção, **banho de limpeza**, receita
+> ancestral e "the blessings turn against you". **Continua proibido também ali:** bruxa/witch,
+> feitiço/spell, hex, curse/praga lançada, pacto, amarração (manipular uma pessoa específica), estética
+> sombria (caveira, corvo, serpente, símbolo invertido) e o `circle of protection` que o linter barra.
+> **A ramificação soulmate/twin flame segue a lei cheia abaixo**, sem mudança. Decisões já aprovadas
+> antes de 2026-09-29 (ex.: "ritual" → "blessing" em `auraly_growth_dinheiro`) não se reabrem.
 
 ### Vocabulário
 | ❌ Nunca | ✅ Sempre |
@@ -504,3 +514,5 @@ Padrão: `[dor ou situação de entrada] → ponte → revelação do rosto → 
 Ambos carregam a argumentação central de venda. Pra entrar aqui precisam de transcrição.
 
 Ver também: [[produtos-angulos]], [[banco-rotas-argumentativas]], [[banco-obstaculos]], [[operacao-playbook]].
+
+Ramificação de dinheiro/abundância (VSL da Psychic Sarah, 2026-09-29): ativos e ponte em [[angulo3-vsl-fortuna]].

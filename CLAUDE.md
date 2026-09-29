@@ -314,7 +314,10 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
   Formato exato em `prompts-imagem-json`. **A linha que descreve a cena nunca ocupa o lugar dessa.**
 - **Ângulo 3, lei do registro: divino, nunca oculto.** O teste é a LEITURA, não o objeto: prop que lê como
   manifestação entra (cartas, cristais, vela, defumador, tigela com pétalas), prop ou fala que lê como pacto não.
-  Sem bruxa, feitiço, spell, shield, círculo de proteção. **Cartas HOLOGRÁFICAS / FOIL, arte saturada e chamativa** (2026-08-29, revoga a paleta pálida): borda metálica espelhada com reflexo de arco-íris ou foil dourado, faixa de título na base. **A trava é a LEITURA, não a cor:** casal, coração, rosas, luz. Azul-noite com estrelas entra; caveira, corvo, serpente, espada e símbolo invertido não.
+  Sem bruxa, feitiço, spell, shield, círculo de proteção. ♻️ **Exceção da ramificação DINHEIRO/ABUNDÂNCIA
+  (Luigi, 2026-09-29):** ali a copy pode usar a língua da VSL do funil (ritual, proteção energética,
+  escudo invisível, energia negativa, inveja dos outros, banho de limpeza); bruxa, feitiço, spell, hex,
+  praga, pacto e amarração continuam proibidos. Detalhe em `angulo3-copy-auraly`. **Cartas HOLOGRÁFICAS / FOIL, arte saturada e chamativa** (2026-08-29, revoga a paleta pálida): borda metálica espelhada com reflexo de arco-íris ou foil dourado, faixa de título na base. **A trava é a LEITURA, não a cor:** casal, coração, rosas, luz. Azul-noite com estrelas entra; caveira, corvo, serpente, espada e símbolo invertido não.
 - **Ângulos 2 e 3 não mostram produto.** Ângulos 1 e 4 mostram sempre (no 4 é um **livro FÍSICO**, nunca mockup de ebook nem tela de celular).
 - **[FITYWELL] O processo dos Ângulos 2 e 4 vive em `PLAYBOOK_FITYWELL.md`**, que é o equivalente
   do `PLAYBOOK_MESTRE_AURALY.md` para esta marca. Ler antes de produzir.
