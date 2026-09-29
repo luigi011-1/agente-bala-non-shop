@@ -11,18 +11,10 @@ Escopo: somente Ângulo 2, app FityWell, mulheres 40+, posição COACH. Não vol
 
 ## Origem da âncora
 
-- Print de um Reel da conta dela, enviado pelo Luigi. Original inteiro em
-  `historico/holistic_brandon_print_original_2026-09-29.webp`.
-- A âncora é esse print recortado (465x690) para tirar o botão "Baixar" do topo e a barra de
-  usuário, áudio e hashtags da base.
-
-## Limitações conhecidas
-
-- **Texto de edição "No. 3" sobre a regata.** É legenda do Reel, não roupa. Nunca descrever nos K;
-  o `no captions` do negative cobre. Se o Flow reproduzir o texto, pedir ao Luigi um frame limpo.
-- **Resolução baixa.** Se a identidade derivar entre K, a primeira correção é uma âncora de maior
-  resolução, não mais texto no prompt.
-- **Luvas azuis, maçãs e tigela de inox** são props do gancho daquele vídeo, não identidade.
+- **Âncora oficial aprovada em 2026-09-29:** gerada pelo Luigi a partir do print de um Reel dela, com o
+  prompt de `ANCORA_BRANDON_LIMPA_2026-09-29.md`. 1116x2000, regata limpa, mãos livres na mesa preta.
+- Histórico em `historico/`: o print original (`holistic_brandon_print_original_2026-09-29.webp`) e o
+  recorte que serviu de âncora provisória (`holistic_brandon_recorte_print_2026-09-29.jpg`).
 
 ## Regras de uso
 

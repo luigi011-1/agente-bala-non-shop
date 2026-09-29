@@ -96,16 +96,14 @@ Cada avatar tem identidade visual FIXA — reproduzir igual em TODOS os takes e 
 > A2 para o A4 em 2026-08-27 porque a audiência da página dela era 97% homens dos EUA, e saiu dos
 > dois em 2026-09-10. Os pacotes `brandon_angle2`, `brandon_mercado`, `brandon_pulmao` e
 > `brandon_5potes` continuam histórico de FORMATO, nunca gabarito (o gabarito é `fitywell_pernas`).
-- **Âncora oficial:** `producao/_ancoras/holistic_brandon_ancora.jpg` (print de um Reel dela enviado
-  pelo Luigi em 2026-09-29, recortado para tirar o botão "Baixar" e a barra de usuário/hashtags; o
-  print inteiro está em `producao/_ancoras/historico/holistic_brandon_print_original_2026-09-29.webp`).
-  **A IMAGEM é a fonte de verdade.** Duas limitações: resolução baixa (465x690) e o texto de edição
-  **"No. 3" sobreposto na regata**, que é legenda do Reel e **nunca** entra no K (o `no captions`
-  do negative cobre; se o Flow copiar, pedir ao Luigi um frame limpo). **Luvas azuis, maçãs e a
-  tigela de inox são props do gancho daquele vídeo, não identidade:** não carregar para outros K.
-- **Aparência:** mulher negra/mestiça, ~30 anos, atlética, sardas leves, tranças cornrow nagô que viram tranças longas soltas até a cintura com **miçangas de madeira e douradas** nas pontas, brinco pequeno. **Na âncora de 2026-09-29 a manga floral blackwork está no braço DIREITO dela (lado esquerdo da imagem)**, tatuagem pequena no braço esquerdo e pequenas tatuagens no peito, perto da clavícula.
-- **Roupa/acessórios:** regata branca canelada + shorts de treino pretos, **corrente de ouro fina + pingente de cruz de OURO** (regra: mantenha ouro, NÃO force prata).
-- **Cenário (fixo da conta):** box de treino / gym-garage — parede de bloco de concreto pintada de branco, teto de ripas de madeira escura, neon vermelho "TRAIN PRAY REPEAT" à esquerda, bandeira dos EUA pequena no alto à direita, mesa preta em primeiro plano, quadro branco "STAY READY. STAY DISCIPLINED — Gratitude & Prayer / Greens & Minerals / Clean Food & Water", prateleira com potes de ervas/sementes.
+- **Âncora oficial (APROVADA em 2026-09-29):** `producao/_ancoras/holistic_brandon_ancora.jpg`,
+  1116x2000, gerada pelo Luigi a partir do print de um Reel dela com o prompt de
+  `producao/_ancoras/ANCORA_BRANDON_LIMPA_2026-09-29.md`. Regata limpa, sem luvas, frutas nem tigela,
+  mãos apoiadas na mesa preta, boca entreaberta. O print e o recorte dele ficaram em
+  `producao/_ancoras/historico/`. **A IMAGEM é a fonte de verdade.** Serve a todo o Ângulo 2 (FityWell).
+- **Aparência:** mulher negra/mestiça, ~30 anos, atlética, sardas leves, tranças cornrow nagô que viram tranças longas soltas até a cintura com **miçangas de madeira e douradas** nas pontas, brinco pequeno. **Na âncora de 2026-09-29 a manga floral blackwork está no braço DIREITO dela (lado esquerdo da imagem)**, tatuagem fina no lado interno do braço esquerdo e uma tatuagem floral fina no peito, abaixo da clavícula esquerda.
+- **Roupa/acessórios:** regata branca canelada lisa + shorts de treino pretos largos de tecido leve, brinquinhos pequenos, **corrente de ouro fina + pingente de cruz de OURO** (regra: mantenha ouro, NÃO force prata).
+- **Cenário (fixo da conta):** box de treino / gym-garage — parede de bloco de concreto pintada de branco, teto de ripas de madeira escura, neon vermelho "TRAIN PRAY REPEAT" à esquerda, bandeira dos EUA pequena no alto à direita, mesa preta em primeiro plano, quadro branco "STAY READY. STAY DISCIPLINED — Gratitude & Prayer / Greens & Minerals / Clean Food & Water", prateleira de metal e madeira com potes de vidro de sementes/grãos à direita. Enquadramento da âncora: straight-on da cintura pra cima, atrás da mesa preta.
 - **Registro:** feminino, atlético, autoridade calma, disciplina + fé.
 
 ---
