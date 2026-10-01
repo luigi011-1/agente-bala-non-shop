@@ -38,7 +38,8 @@ nao de leitura: eles dizem em que momento cada regra e aplicada, e o conteudo ja
 [ ] producao/fitywell_pernas/ROTEIRO.md        (o gabarito vivo desde 2026-09-10, esta no repo)
 [ ] producao/fitywell_pernas/PROMPTS_PRODUCAO.md
 [ ] PLAYBOOK_FITYWELL.md                         (se for FitWell)
-[ ] GATE_VISUAL.md                               (Partes 1 a 5, todos os angulos)
+[ ] GATE_VISUAL.md                               (Partes 1 a 6, todos os angulos)
+[ ] FICHA_FRAMES.md escrita ANTES do primeiro JSON (Parte 6: ficha do frame + placar com evidencia)
 [ ] producao/_flow/INSTRUCOES_AGENTE_FLOW.md    (perfil CLASSICO, colado no PASSO 5)
 [ ] PLAYBOOK_COMPLETO/11_insights_otimizacao.md secao 3   (antes dos prompts de VIDEO, P6)
 ```

@@ -1,6 +1,6 @@
 # Instrucoes do agente executor do Google Flow AI
 
-Versao 16, 2026-09-25. Contrato de execucao, subordinado ao roteador de cada oferta.
+Versao 17, 2026-09-25. Contrato de execucao, subordinado ao roteador de cada oferta.
 Auraly segue exclusivamente WORKFLOW_AURALY.md. Angle 1/2 seguem CLAUDE.md e, no FitWell,
 PLAYBOOK_FITYWELL.md. Os pacotes existentes permanecem como foram aprovados.
 
@@ -63,7 +63,7 @@ so. Isto e obrigatorio em todo K do perfil CLASSICO:
 
 ### AURALY, anchor e avatar fixo por conta (Luigi, 2026-09-14; anchor revista em 2026-09-22; avatar fixo em 2026-09-25)
 
-Roster Auraly: Walt Hensley, Darlene Pruitt e Lorraine Vance. A referencia de cada um e a anchor
+Roster Auraly: Walt Hensley, Darlene Pruitt, Lorraine Vance e Morgan Vance (desde 2026-09-30). A referencia de cada um e a anchor
 em cena real (imagem de teste aprovada), anexada em todo K. Nao existe fingerprint.
 
 AVATAR FIXO POR CONTA (v16, 2026-09-25): cada conta usa o mesmo avatar com a roupa e o cenario-base
@@ -137,6 +137,15 @@ Receber todos os K, contar codigos e conferir duplicatas. Cada codigo aparece so
 linha, seguido de um prompt completo e autossuficiente. Nao copiar titulos, notas, caminhos,
 configuracoes ou metadata para o campo do prompt.
 
+**Prompt de imagem em JSON (v17, 2026-09-25).** Desde a v17 todo prompt K (e todo `REF-P`) chega
+como UM objeto JSON em ingles: comeca com `{` na linha logo abaixo do codigo e termina com o `}`
+que fecha o objeto. Colar o objeto INTEIRO, de `{` ate `}`, literalmente no campo de prompt do
+Nano Banana 2, sem o codigo, sem resumir, sem converter para texto corrido e sem apagar campo.
+Cada campo e parte do prompt (formato, referencia, identidade, roupa, cena, prop, postura,
+composicao, camera, luz, estado, realismo, proporcao e negative), nao metadata. Se o JSON chegar
+quebrado ou incompleto (sem o `}` final, aspas abertas), PARAR e avisar o operador. Pacotes
+anteriores a v17, com o K em paragrafo unico, continuam validos como foram entregues.
+
 Usar Nano Banana 2, formato 9:16 e a anchor ativa. Colar cada prompt literalmente e gerar a
 quantidade do perfil. Rotular os resultados com avatar, codigo e numero da variacao.
 
@@ -153,9 +162,10 @@ como INITIAL FRAME (certo) mas colou o PROPRIO PROMPT DE IMAGEM no campo de text
 vez do prompt V correspondente. Isso nunca pode se repetir. Regras obrigatorias:
 
 1. **Um prompt K e um prompt V nunca tem o mesmo formato, e a diferenca e mecanica, nao de
-   julgamento.** Um prompt K e um UNICO paragrafo denso em ingles descrevendo uma imagem parada:
-   comeca tipicamente com `IMPORTANT: THIS IS IPHONE FOOTAGE` (geracao do zero) ou `Edit the
-   attached image` (edicao); um prompt `REF-P` comeca com `CHARACTER SHEET`. NUNCA contem as
+   julgamento.** Um prompt K e um objeto JSON em ingles descrevendo uma imagem parada: comeca
+   com `{` e termina com `}` (desde a v17; pacotes antigos traziam um paragrafo unico comecando
+   com `IMPORTANT: THIS IS IPHONE FOOTAGE`, `Edit the attached image` ou, no `REF-P`, `CHARACTER
+   SHEET`). Um prompt V NUNCA comeca com `{`. Um prompt K NUNCA contem as
    palavras `o avatar fala`, `falas no take`, `câmera:` ou `som ambiente:`. Um prompt V e sempre
    em portugues e sempre tem exatamente cinco partes na ordem: a abertura de fala (a linha `o
    avatar (homem/mulher) fala em ingles... a seguinte frase: "..."`, ou o bloco `falas no take`
@@ -236,6 +246,8 @@ v11, 2026-09-20: o portfolio 4/3/3 em tres familias foi REVOGADO pelo Luigi no m
 substituido pelo METODO PUZZLE aplicado ao hook do video modelo, igual ao Angulo 2: uma acao
 estrutural preservada e dez variacoes de uma variavel cada. Acrescentada a regra do T1 mudo com
 cortes internos ao clipe, que nao pode fazer o executor parar na checagem das tres marcas.
+v17, 2026-09-30: Morgan Vance entra no roster Auraly (conta organica nova). Sem mudanca de
+configuracao.
 v12, 2026-09-22: roster Auraly reduzido a Walt, Darlene e Lorraine. A fingerprint sai: a referencia
 e a anchor em cena real, com instrucao de usar so a identidade quando o K pede cenario novo. A
 excecao dos avatares de luxo (v9) foi removida junto com eles.
@@ -255,6 +267,9 @@ separadas: movie style com `REF-P` (v13), short form de crescimento sem anchor (
 de conteudo mudou nesta versao.
 v16, 2026-09-25: AVATAR FIXO POR CONTA tambem no Auraly. Revoga o cenario proprio e a roupa livre por
 gancho da v7: roupa e cenario-base da anchor em todo video e gancho; so o angulo de camera varia.
+v17, 2026-09-25: a pedido do Luigi, todo prompt de IMAGEM (K e REF-P) passa a ser entregue em JSON,
+para o modelo compreender melhor cada parte. As regras de conteudo nao mudam. O executor cola o
+objeto inteiro, de `{` a `}`; o reconhecimento K contra V ganha a marca mecanica do `{` inicial.
 v10, 2026-09-20: sincronizado com o portfolio Auraly 4/3/3, revogado poucas horas depois. K e V podem chegar na mesma entrega,
 mas a execucao continua em duas fases com selecao manual. T1 deixa de exigir kit completo, camera
 passa a servir o invariante da familia e um unico VFX funcional passa a ser permitido. A relacao

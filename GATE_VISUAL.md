@@ -97,7 +97,10 @@ lente numa selfie sem objeto. Sinais de gente real em `PERFIL_ORGANICO.md` seç�
 
 ---
 
-## PARTE 3 · TRECHOS PRONTOS (texto corrido, para os blocos do Flow)
+## PARTE 3 · TRECHOS PRONTOS (para os campos do JSON de imagem do Flow)
+
+Desde 2026-09-25 (contrato do Flow v17) o K entregue é JSON: cada trecho abaixo vai no campo
+correspondente (`lighting`, `composition`, `realism`, `negative`), com o mesmo texto.
 
 Colar **dentro** de cada prompt, adaptando só o que está entre colchetes. Os blocos do Flow são
 autossuficientes, então isto se repete em todo `K__`, sem exceção.
@@ -244,3 +247,78 @@ válidos em todos os ângulos, presentes e futuros.
 - **Item reprovado = o prompt não sai.** Corrige e roda o checklist de novo. Nunca enviar com ressalva.
 - Item que não se aplica vira `N/A`, nunca aprovado por omissão.
 - A entrega leva, **fora** dos blocos copiáveis: `Checklist de envio: X/X aprovados (N/A: ...)`.
+
+---
+
+## PARTE 6 · FICHA DO FRAME E PLACAR DE CADA K (BLOQUEANTE, Luigi, 2026-09-25)
+
+**Por que existe:** em `fitywell_growth_modelo_intestino` o K01 passou no linter com 0 falha e gerou
+outro gancho. O prompt tinha as palavras certas ("very close to the lens"), mas a forma do herói
+estava genericizada por medo de censura, a câmera estava no peito e havia props inventados. As regras
+das Partes 1 e 2 existiam; faltava obrigar a MEDIR o frame do modelo e provar, frase por frase, que o
+K usa a medida. Vale nos três ângulos, em todo `K__` e `REF-P` de produção nova.
+
+### 6.1 A ficha vem antes do K
+Na pasta da produção, `FICHA_FRAMES.md`, uma seção `## Kxx` por keyframe, escrita **olhando o frame
+do modelo daquele take** (`input/frames_modelo/Kxx_modelo.png`), nunca de memória:
+
+```
+## K01
+Frame: `input/frames_modelo/K01_modelo.png`
+Take: T1
+Herói: o que é, como se vê
+Termos de forma: "termo 1" · "termo 2"          (termos que o K TEM que usar, literais)
+Quadro: quanto do quadro o herói ocupa e onde  (porcentagem, bordas)
+Distância da lente: medida (centímetros, maior que a cabeça)
+Câmera: altura, lente (0,5x / 1x), ângulo
+Pose: onde o avatar está em relação ao herói, o que cada mão faz
+Lista fechada: tudo o que está em quadro, e nada mais
+Frame 0: o instante exato do primeiro frame
+Desvio (acabamento ou avatar fixo): o que muda e por qual regra
+```
+
+### 6.2 Desempate entre o modelo e o gate
+- **O frame do modelo manda no CONTEÚDO:** forma, cor e textura do herói, quanto do quadro ele ocupa,
+  distância, câmera, pose, o que está em quadro e o frame 0.
+- **O gate manda no ACABAMENTO:** luz neutra, céu ou janela com cor, foco total, pele real, sem texto,
+  negative, bandeira (formato IA), roupa e cenário da âncora (avatar fixo).
+- **Proximidade do herói tem piso:** a distância final é a MAIS PERTO entre o modelo e o gate. Nunca
+  mais longe que no modelo, e sempre mais perto que o rosto (Parte 2).
+- **Vocabulário seguro é só do negative.** No positivo a forma do herói vai descrita inteira, como se
+  vê no frame (Falha #6 e #8 de `erros-recorrentes`). Genericizar o herói troca o gancho.
+- **O texto nunca contradiz o frame anexado.** O anexo só ajuda; quando o texto diz outra coisa, o
+  modelo de imagem segue o texto.
+
+### 6.3 O placar de cada K, com evidência citada
+Logo abaixo de cada seção, uma tabela `| Item | Status | Evidência |`. Status `OK` exige o trecho
+**literal** do K entre aspas; `N/A` exige o motivo.
+
+| Item | Critério | N/A permitido? |
+|---|---|---|
+| F1 forma do herói | os termos de forma da ficha no prop | não |
+| F2 quanto do quadro | porcentagem, metade, dois terços, edge to edge | não |
+| F3 distância da lente | inches, centimeters, touching the lens | não |
+| F4 câmera | lente e altura | não |
+| F5 pose do avatar | posição relativa ao herói | sim, com motivo (ex.: só mãos) |
+| F6 lista fechada | frase que fecha o quadro ("the counter is empty", "no bottle in frame") | sim, com motivo |
+| G1 luz neutra | trecho da luz do gate | não |
+| G2 céu ou janela | "never white or blown out" ou equivalente | sim, com motivo |
+| G3 foco | "everything in sharp focus" | não |
+| G4 realismo | trecho de realismo | não |
+| G5 sem tom quente | "no warm orange color cast" | não |
+| G6 sem texto | "no captions" | não |
+| G7 bandeira | trecho da bandeira (opcional na origem orgânica, com motivo) | sim, com motivo |
+| G8 boca no K de fala | "caught mid-sentence" | sim, sem rosto ou sem fala |
+
+A evidência é escrita sem nome de avatar, para valer em todos os pacotes da fila.
+
+### 6.4 O que a máquina cobra e o que só o olho cobra
+- **`checar_entrega.py` (via `ficha_frame.py`) reprova** quando: falta a ficha ou a seção de um K; o
+  frame citado não existe; um termo de forma ou uma evidência não está literalmente no K de algum
+  avatar; o placar tem item faltando, reprovado ou N/A proibido; a composição do K não tem medida de
+  quadro; falta a distância até a lente; a câmera não diz lente e altura. Produções anteriores a esta
+  regra ficam em `controle/ficha_legado.json` e nunca entram produções novas nessa lista.
+- **Só o olho cobra:** se a ficha descreve o frame corretamente (por isso ela cita o arquivo do frame,
+  para o Luigi abrir lado a lado) e se a imagem gerada saiu igual. **No K do gancho, quando o Luigi
+  mandar o resultado, pontuar o resultado com o mesmo placar F1 a F6 contra o frame antes de seguir.**
+- A entrega leva, fora dos blocos: `Ficha: N/N K, placar 14/14 cada` junto da linha do checklist.

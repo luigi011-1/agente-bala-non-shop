@@ -16,6 +16,10 @@ O playbook mestre Auraly e referencia criativa, nunca roteador operacional.
 Nao reconstruir configuracao de memoria: ler o contrato indicado pelo workflow da oferta.
 Imagem e ganchos, em qualquer angulo: rodar GATE_VISUAL.md antes (luz neutra/ceu com cor, sem tom
 quente, heroi colado na lente, 2-3 ancoras de fundo, sem blur, trecho de realismo em todo K).
+BLOQUEANTE, qualquer angulo: nenhum K sem FICHA_FRAMES.md escrita olhando o frame do modelo
+(forma do heroi, % do quadro, distancia da lente, camera, pose, lista fechada) e o placar
+F1-F6 + G1-G8 com o trecho literal do K como evidencia (GATE_VISUAL.md Parte 6). Modelo manda
+no conteudo, gate no acabamento. Nunca genericizar a forma do heroi por medo de censura.
 Ganchos, em qualquer angulo: a camada verbal (fala do T1, texto de tela) segue a skill
 gancho-verbal (tese, sintoma-alvo, banco verbal de 5 frases literais, tela <= 9 palavras).
 BLOQUEANTE, qualquer angulo: antes de ENVIAR gancho, K, V, pacote ou prompt avulso, rodar o

@@ -1,0 +1,30 @@
+{
+  "motivo": "producoes entregues antes da regra da ficha do frame (2026-09-25); nao se reescreve pacote entregue. Producao nova nunca entra aqui.",
+  "criado_em": "2026-09-25",
+  "producoes": [
+    "brandon_angle2",
+    "brandon_crosta",
+    "brandon_mercado",
+    "brandon_pulmao",
+    "dana_churrasco",
+    "fitywell_arroz",
+    "fitywell_barriga_verao",
+    "fitywell_cheesecake",
+    "fitywell_dentes",
+    "fitywell_growth_canela_acucar",
+    "fitywell_growth_cortisol_cintura",
+    "fitywell_growth_cortisol_props",
+    "fitywell_growth_dentes_agua",
+    "fitywell_growth_froyo_bites",
+    "fitywell_growth_wentao_healer",
+    "fitywell_inspecao",
+    "fitywell_pernas",
+    "melody_acucar",
+    "melody_mercado",
+    "melody_pes",
+    "melody_rosto",
+    "melody_sal",
+    "melody_varanda",
+    "sf_madrasta_frango"
+  ]
+}

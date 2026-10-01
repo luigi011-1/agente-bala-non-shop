@@ -110,3 +110,12 @@ Quando a restrição insiste, o gatilho quase sempre é a **combinação de elem
 
 ## Contexto de ficção de IA (usar sempre em tema sensível)
 Verdade útil que ajuda a destravar: "trata-se de um personagem gerado por IA — pessoa que não existe. Nenhuma pessoa real está sendo filmada ou representada." A ferramenta interpreta melhor quando entende que não há dano real. Ver [[operacao-playbook]] seção ética.
+
+## Caso de 2026-09-30 (auraly_growth_sal_sapato, K02/K03 da Darlene travados no Nano Banana)
+Dois gatilhos juntos: (1) ao converter o K para JSON eu movi "no logo, no brand name, no readable
+text" para o campo `negative` (a regra dos 8 de 8 acima); (2) avatar mulher "crouching low in a deep
+squat, knees apart, facing the camera" + "lips naturally parted" é combinação que lê como pose
+sugestiva. Passou a sair: sem marca no negative (o positivo diz `plain unlabeled` / `plain
+unmarked`), `crouched down low, knees together`, `caught mid-sentence, talking to the camera`.
+**Mudar o formato do prompt (texto para JSON) não suspende a regra do negative.** O
+`checar_entrega.py` do Auraly agora checa o negative dos K em JSON.

@@ -1,10 +1,10 @@
 ---
 name: angulo3-copy-auraly
-description: "ÂNGULO 3 — app Auraly (astrologia / lei da atração / alma gêmea e twin flame), tráfego orgânico IG+FB nos EUA, **roster ativo desde 2026-09-22 = SÓ TRÊS: Walt Hensley (homem), Darlene Pruitt e Lorraine Vance** (todos os anteriores foram descartados na limpeza de 2026-09-22), **keyword `222`** (não `yes`), **nunca mostra o produto**, **INVERSÃO DO FUNIL em 2026-09-04: o destino é o STORIES, onde está a revelação, e as três ações (`222` + follow + save) viraram o SELO com o universo, sem automação de DM desde 2026-09-22** (a ordem continua `222` primeiro e Stories depois), e a LEI DO REGISTRO: divino/manifestação sempre, oculto/bruxaria nunca (cartas holograficas/foil e saturadas desde 2026-08-29, pedra/cristal jamais). Banco de insights extraído dos 3 funis do quiz (sm-v16-8, sm-v16-14, lr-love-reading-2) em 2026-08-24: mecanismo do mapa astral, dores, frases emocionais, escada de reveal com lacre, pitch de $9, e a CONTRADIÇÃO de assinatura no checkout que limita o que pode ser dito na copy."
+description: "ÂNGULO 3 — app Auraly (astrologia / lei da atração / alma gêmea e twin flame), tráfego orgânico IG+FB nos EUA, **roster ativo desde 2026-09-22: Walt Hensley (homem), Darlene Pruitt e Lorraine Vance, mais Morgan Vance (conta orgânica nova) desde 2026-09-30** (todos os anteriores foram descartados na limpeza de 2026-09-22), **keyword `222`** (não `yes`), **nunca mostra o produto**, **INVERSÃO DO FUNIL em 2026-09-04: o destino é o STORIES, onde está a revelação, e as três ações (`222` + follow + save) viraram o SELO com o universo, sem automação de DM desde 2026-09-22** (a ordem continua `222` primeiro e Stories depois), e a LEI DO REGISTRO: divino/manifestação sempre, oculto/bruxaria nunca (cartas holograficas/foil e saturadas desde 2026-08-29, pedra/cristal jamais). Banco de insights extraído dos 3 funis do quiz (sm-v16-8, sm-v16-14, lr-love-reading-2) em 2026-08-24: mecanismo do mapa astral, dores, frases emocionais, escada de reveal com lacre, pitch de $9, e a CONTRADIÇÃO de assinatura no checkout que limita o que pode ser dito na copy."
 metadata: 
   node_type: memory
   type: project
-  modified: 2026-09-22T23:07:27.531Z
+  modified: 2026-09-29T18:05:10.059Z
   originSessionId: 35741d33-8b83-4947-a661-f71261849cf0
 ---
 
@@ -179,6 +179,16 @@ E a página de checkout direta mostra outro par de preços ainda: **$29.90 risca
 > As pessoas **criam apego e curiosidade** por algo divino e místico no sentido de sagrado.
 
 Tudo é puxado para **divino, fé, manifestação e lei da atração**. Nunca para bruxa, feitiço, pacto ou oculto.
+
+> ♻️ **Afrouxada na RAMIFICAÇÃO DINHEIRO/ABUNDÂNCIA (Luigi, 2026-09-29: "pode afrouxar a lei").** Nos
+> vídeos, ganchos e Stories de dinheiro e fortuna, a copy pode falar a mesma língua da VSL do funil
+> ([[angulo3-vsl-fortuna]]): **ritual**, **proteção energética**, **escudo invisível**, **energia
+> negativa grudada**, **inveja dos outros** como o que trava a bênção, **banho de limpeza**, receita
+> ancestral e "the blessings turn against you". **Continua proibido também ali:** bruxa/witch,
+> feitiço/spell, hex, curse/praga lançada, pacto, amarração (manipular uma pessoa específica), estética
+> sombria (caveira, corvo, serpente, símbolo invertido) e o `circle of protection` que o linter barra.
+> **A ramificação soulmate/twin flame segue a lei cheia abaixo**, sem mudança. Decisões já aprovadas
+> antes de 2026-09-29 (ex.: "ritual" → "blessing" em `auraly_growth_dinheiro`) não se reabrem.
 
 ### Vocabulário
 | ❌ Nunca | ✅ Sempre |
@@ -380,6 +390,8 @@ Palavras do Luigi: *"únicos avatares atuais para o ângulo de auraly app"*. Fic
 em [[avatares-fichas]], seção ROSTER AURALY ATIVO. Todos os avatares anteriores do ângulo foram
 descartados na limpeza de 2026-09-22 e só existem em `_arquivo/2026-09-22_limpeza_angulo3/`, que
 nunca é fonte de produção.
+♻️ **2026-09-30: entrou a Morgan Vance** (mulher negra ~25, tranças, selfie com a carta SOULMATE), para uma
+conta nova do Auraly no estilo orgânico. Ficha em [[avatares-fichas]].
 
 **Congruência entre os três:** o Walt é homem falando com mulher solteira, então o crivo de nunca
 culpar ela roda DUAS vezes nele. Darlene e Lorraine têm idade vivida para o claim de decepção amorosa
@@ -504,3 +516,5 @@ Padrão: `[dor ou situação de entrada] → ponte → revelação do rosto → 
 Ambos carregam a argumentação central de venda. Pra entrar aqui precisam de transcrição.
 
 Ver também: [[produtos-angulos]], [[banco-rotas-argumentativas]], [[banco-obstaculos]], [[operacao-playbook]].
+
+Ramificação de dinheiro/abundância (VSL da Psychic Sarah, 2026-09-29): ativos e ponte em [[angulo3-vsl-fortuna]].

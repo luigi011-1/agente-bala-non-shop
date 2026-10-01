@@ -387,11 +387,18 @@ O mapa nao entra no campo de prompt do Flow. Dentro do bloco de imagem, somente 
 
 ```text
 K01
-[prompt completo e autossuficiente]
+{ ...objeto JSON completo e autossuficiente... }
 
 K02
-[prompt completo e autossuficiente]
+{ ...objeto JSON completo e autossuficiente... }
 ```
+
+Desde 2026-09-25 (Luigi, contrato do Flow v17) cada K do bloco e UM objeto JSON em ingles, de `{` a
+`}`, com os mesmos campos do JSON interno menos `shot_id`. As regras de conteudo nao mudam.
+
+**Antes do primeiro K (Luigi, 2026-09-25): `FICHA_FRAMES.md` com a ficha do frame e o placar de cada K**
+(`GATE_VISUAL.md` Parte 6). O K se escreve a partir da ficha, e o `checar_entrega.py` reprova o pacote
+sem ela, com evidencia que nao esta no K, heroi sem medida ou camera sem lente e altura.
 
 Sem descricao, titulo, `T__`, metadata ou `Prompt:` dentro do bloco. Depois do bloco K, entregar o
 bloco V previsto abaixo na mesma resposta. A seleção manual continua sendo gate do executor Flow,
@@ -570,7 +577,8 @@ arquivado em `_arquivo/2026-09-22_limpeza_angulo3/producao/oliviamadison671/`, s
 variedade de cenário, nunca de avatar.
 
 **Entrada do `/watch` desde 2026-09-22:** as imagens que vêm junto do `.mp4` são as âncoras em cena
-real do roster (Walt, Darlene, Lorraine). Se chegar imagem de um avatar fora do roster, perguntar antes
+real do roster (Walt, Darlene, Lorraine e, desde 2026-09-30, Morgan Vance em
+`producao/_ancoras/morgan_vance_ancora.jpg`, conta orgânica nova). Se chegar imagem de um avatar fora do roster, perguntar antes
 de produzir (`avatar-so-o-que-o-luigi-mandar`).
 
 **Instruções do agente Flow correspondentes: v10**, em `producao/_flow/INSTRUCOES_AGENTE_FLOW.md`.

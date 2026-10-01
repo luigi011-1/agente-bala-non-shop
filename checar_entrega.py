@@ -23,6 +23,7 @@ import sys, os, re, json, io, glob
 from pathlib import Path
 from auraly_validacao import auditar_pacote, objetivo, blocos, validar_portfolio_ganchos
 from gancho_verbal import validar_camada_verbal
+from ficha_frame import validar_ficha
 
 ESTRITO = False
 SEM_BASELINE = False
@@ -69,6 +70,26 @@ def c_gancho_verbal(pasta):
         texto = ler(os.path.join(pasta, nome))
         for nivel, check, msg, loc in validar_camada_verbal(texto, ESTRITO, nome):
             {"FALHA": falha, "AVISO": aviso}.get(nivel, lambda c, m, l="": ok(c, m))(check, msg, loc)
+
+
+def c_ficha_frame(pasta):
+    """Ficha do frame + placar com evidencia citada, em todo angulo (Luigi, 2026-09-25).
+    Le os K de cada arquivo de prompt de imagem (um por avatar) e cobra a ficha contra todos.
+    Fonte da regra: GATE_VISUAL.md Parte 6; logica em ficha_frame.py."""
+    ks_por_arquivo = {}
+    for p in sorted(Path(pasta).rglob("*.md")):
+        nome = p.name
+        if not (nome.startswith("PROMPTS") or nome.startswith("IMAGE_BLOCK")) or "VIDEO" in nome.upper():
+            continue
+        texto = p.read_text(encoding="utf-8")
+        ks = {k["id"]: k["json_raw"] or "" for k in parse_keyframes(texto)
+              if k["id"].startswith("K") and k["json_raw"]}
+        if not ks:
+            ks = {b["id"]: b["bloco"] for b in blocos(texto) if b["id"].startswith("K")}
+        if ks:
+            ks_por_arquivo[str(p.relative_to(pasta))] = ks
+    for nivel, check, msg, loc in validar_ficha(pasta, ks_por_arquivo):
+        {"FALHA": falha, "AVISO": aviso}.get(nivel, lambda c, m, l="": ok(c, m))(check, msg, loc)
 
 
 def ler(path):
@@ -494,7 +515,7 @@ def c_realismo_visual(prompts_k):
 def coletar_prompts_k(pasta):
     """Todo K__ de prompt (JSON interno ou bloco limpo do Flow) em qualquer .md da producao."""
     fora = ("ROTEIRO", "GANCHOS", "CHECKPOINT", "ANALISE", "AVATAR_QUEUE", "TRANSCRICAO", "PUZZLE",
-            "INSTRUCOES")
+            "INSTRUCOES", "FICHA_FRAMES")  # a ficha descreve o frame, nao e prompt (2026-09-25)
     out = []
     for p in sorted(Path(pasta).rglob("*.md")):
         if p.name.upper().startswith(fora):
@@ -1266,6 +1287,8 @@ def checar_auraly(pasta, roteiro):
             aviso("arquivos", "PROMPTS_IMAGEM.md sem headings K__/REF-__ reconheciveis")
         PROMPTS_FILE = "PROMPTS_PRODUCAO.md"
 
+    c_ficha_frame(pasta)
+
     # Registro divino (mesmo check do classico)
     antes = len([f for f in FALHAS if f[0] == "angulo3"])
     for nome, txt in arquivos.items():
@@ -1340,6 +1363,7 @@ def checar(pasta):
     c_patch(arquivos)
     c_realismo_visual(coletar_prompts_k(pasta))
     c_gancho_verbal(pasta)
+    c_ficha_frame(pasta)
     c_angulo3(angulo, arquivos, kfs, takes, pasta, roteiro)
     c_angulo4(angulo, arquivos, takes, kfs)
 

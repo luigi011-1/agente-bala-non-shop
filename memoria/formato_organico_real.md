@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: f4fd75e0-e338-4f80-a195-7c079e471917
-  modified: 2026-09-25T20:00:00.000Z
+  modified: 2026-09-30T18:12:20.015Z
 ---
 
 Em 2026-09-25 o Luigi abriu um segundo braco de producao: modelar videos **organicos de pessoas
@@ -40,7 +40,9 @@ de venda devolve o video para o formato saturado.
   então é direção e a frase se adapta ao original); keyword `yes` opcional; nunca "free" (o plano é
   pago) nem brinde que o funil não entrega.
 - **Decisões de 2026-09-25, depois do lote de 7 avatares IA** (`producao/_swipe_organico/rodada_2026_09_25_fitywell_ia/ANALISE.md`):
-  1. FitWell venda: **padrão é o link da bio**, mas ele some se a conta tomar restrição. Quando o
+  ♻️ **Item 1 revogado em 2026-09-30:** FitWell venda manda para o **comentário fixado** do vídeo,
+     com comment yes + follow como engajamento antes ([[fitywell-venda-cta-comentario-fixado]]).
+  1. (histórico) FitWell venda: **padrão é o link da bio**, mas ele some se a conta tomar restrição. Quando o
      Luigi disser que o link saiu, o CTA vira a reserva do molde v4 (keyword `yes` + "the simple
      routine I give to my clients" + follow "so I can send it to you"). Vale por conta.
   2. **Avatar fixo por conta** (roupa e cenário-base da âncora em todo vídeo); só movie style /

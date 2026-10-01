@@ -113,7 +113,7 @@ modelado **com o gancho fiel do modelo** → **aprovação do Luigi** → pacote
 
 1. **`INSTRUÇÕES PARA A MEMÓRIA DO AGENTE — GOOGLE FLOW AI`**, colado INTEIRO no chat, pronto pra
    copiar. Fonte canônica: `producao/_flow/INSTRUCOES_AGENTE_FLOW.md`.
-   Configuração vigente: **a tabela de perfis do próprio arquivo (v16, 2026-09-25) manda.** Clássico
+   Configuração vigente: **a tabela de perfis do próprio arquivo (v17, 2026-09-25) manda.** Clássico
    (Ângulos 1 e 2): Nano Banana 2 em 9:16, **4 imagens por K__ com seleção manual** (o Luigi apaga 3 e
    deixa 1); vídeo **só no Omni Flash**, 8 segundos, um único resultado por V__, a partir da imagem que
    sobrou. Auraly: 4 imagens por K__ com seleção manual e Veo 3.1 Lite com 3 variações por V__.
@@ -134,7 +134,7 @@ modelado **com o gancho fiel do modelo** → **aprovação do Luigi** → pacote
 O agente do Flow é executor e estava **lendo texto auxiliar como se fosse prompt**.
 
 ```
-IMAGE BLOCK:  UM K__ = UM PROMPT DE IMAGEM · K__ SÓ COMO RÓTULO · TODO PROMPT AUTOSSUFICIENTE
+IMAGE BLOCK:  UM K__ = UM PROMPT DE IMAGEM EM JSON · K__ SÓ COMO RÓTULO · TODO PROMPT AUTOSSUFICIENTE
 VIDEO BLOCK:  UM V__ = UM PROMPT DE VÍDEO  · V__ SÓ COMO RÓTULO · TODO PROMPT AUTOSSUFICIENTE
               K01 casa com V01 PELO NÚMERO
 
@@ -163,7 +163,14 @@ SEM instrução de INITIAL FRAME dentro do bloco · SEM configuração de modelo
 - **Tabela humana de leitura** (`K01 = coração quebrando`, `K06 = body`) pode existir, mas **sempre
   fora** dos blocos copiáveis. Dentro deles, zero texto auxiliar.
 - **O JSON continua sendo a fonte de verdade INTERNA** em `PROMPTS_IMAGEM.md`, que é o que o linter
-  lê. O bloco do Flow é a versão de execução, em texto corrido e autossuficiente.
+  lê. O bloco do Flow é a versão de execução, autossuficiente.
+- 🔴 **O prompt de imagem entregue é JSON (Luigi, 2026-09-25, contrato do Flow v17).** ♻️ Revoga o
+  "texto corrido" do bloco de imagem. Todo `K__` (e `REF-P`) sai como UM objeto JSON em inglês,
+  logo abaixo do código, com os campos `format`, `fiction_note`, `reference_use`, `identity_main`,
+  `wardrobe`, `scene`, `prop`, `posture`, `composition`, `camera`, `lighting`, `state`, `realism`,
+  `aspect_ratio` e `negative`, sem `shot_id` (é metadata). **As regras de conteúdo não mudam**:
+  autossuficiência, GATE_VISUAL, trecho de realismo, negative, bandeira, herói colado na lente,
+  checklist de envio. Vale nos três ângulos. O vídeo continua texto simples nos 5 blocos.
 5. (nos Ângulos 1, 2 e 4 segue valendo um prompt por bloco, com linha curta antes de cada um)
 6. Transcrição final completa em **INGLÊS**
 7. Transcrição final completa em **PORTUGUÊS**
@@ -178,7 +185,7 @@ misturam entre ângulos.**
 ### GOOGLE FLOW DELIVERY FORMAT (Luigi, 2026-09-09)
 
 Os blocos de execução devem ser estritamente machine-readable: `K__` sozinho, seguido somente de um
-prompt de imagem completo e autossuficiente; `V__` sozinho, seguido somente de um prompt de vídeo
+prompt de imagem completo e autossuficiente em JSON (desde 2026-09-25); `V__` sozinho, seguido somente de um prompt de vídeo
 completo e autossuficiente. Um K = um V pelo mesmo número. Nunca incluir nos blocos títulos,
 descrições, T__, metadata, settings, INITIAL FRAME, `uses K__`, caminhos ou notas. Nunca depender de
 "edit K__", "same as previous" ou contexto de outro prompt.
@@ -281,6 +288,12 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
 - **Um prompt de imagem por SETUP**, não por take.
 - **[TODOS OS ÂNGULOS] Nenhum prompt sai sem o CHECKLIST DE ENVIO 100% aprovado** (memória
   `checklist-envio-prompt`, insights do curso Lib Korella, Luigi 2026-09-22). Ver P9.
+- 🔴 **[TODOS OS ÂNGULOS] Nenhum `K__` sem a FICHA DO FRAME e o PLACAR (Luigi, 2026-09-25).** Antes de
+  escrever qualquer prompt de imagem, preencher `FICHA_FRAMES.md` olhando o frame do modelo daquele take
+  (forma do herói, quanto do quadro, distância da lente, câmera, pose, lista fechada, frame 0) e o
+  placar F1 a F6 + G1 a G8 com o trecho LITERAL do K como evidência. O modelo manda no conteúdo, o gate
+  no acabamento e no piso de proximidade. `checar_entrega.py` reprova ficha ausente, evidência que não
+  está no K, herói sem medida e câmera sem lente e altura. Método em `GATE_VISUAL.md` Parte 6.
 - **[TODOS OS ÂNGULOS] `GATE_VISUAL.md` é a fonte única dos dois gates abaixo e do método de gancho**,
   em Korella, FitWell e Auraly, sem exceção de ângulo (Luigi, 2026-09-22). Os bullets abaixo são o resumo.
 - **Rodar o GATE DE REALISMO junto com o de composição** (memória `realismo-anti-cara-de-ia`): herói isolado com
@@ -301,7 +314,10 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
   Formato exato em `prompts-imagem-json`. **A linha que descreve a cena nunca ocupa o lugar dessa.**
 - **Ângulo 3, lei do registro: divino, nunca oculto.** O teste é a LEITURA, não o objeto: prop que lê como
   manifestação entra (cartas, cristais, vela, defumador, tigela com pétalas), prop ou fala que lê como pacto não.
-  Sem bruxa, feitiço, spell, shield, círculo de proteção. **Cartas HOLOGRÁFICAS / FOIL, arte saturada e chamativa** (2026-08-29, revoga a paleta pálida): borda metálica espelhada com reflexo de arco-íris ou foil dourado, faixa de título na base. **A trava é a LEITURA, não a cor:** casal, coração, rosas, luz. Azul-noite com estrelas entra; caveira, corvo, serpente, espada e símbolo invertido não.
+  Sem bruxa, feitiço, spell, shield, círculo de proteção. ♻️ **Exceção da ramificação DINHEIRO/ABUNDÂNCIA
+  (Luigi, 2026-09-29):** ali a copy pode usar a língua da VSL do funil (ritual, proteção energética,
+  escudo invisível, energia negativa, inveja dos outros, banho de limpeza); bruxa, feitiço, spell, hex,
+  praga, pacto e amarração continuam proibidos. Detalhe em `angulo3-copy-auraly`. **Cartas HOLOGRÁFICAS / FOIL, arte saturada e chamativa** (2026-08-29, revoga a paleta pálida): borda metálica espelhada com reflexo de arco-íris ou foil dourado, faixa de título na base. **A trava é a LEITURA, não a cor:** casal, coração, rosas, luz. Azul-noite com estrelas entra; caveira, corvo, serpente, espada e símbolo invertido não.
 - **Ângulos 2 e 3 não mostram produto.** Ângulos 1 e 4 mostram sempre (no 4 é um **livro FÍSICO**, nunca mockup de ebook nem tela de celular).
 - **[FITYWELL] O processo dos Ângulos 2 e 4 vive em `PLAYBOOK_FITYWELL.md`**, que é o equivalente
   do `PLAYBOOK_MESTRE_AURALY.md` para esta marca. Ler antes de produzir.
@@ -485,6 +501,8 @@ pedido continua vindo na fala, na ordem do P7.
 - **[FITYWELL] `PLAYBOOK_FITYWELL.md`** → fila de avatares, pacote por ACTIVE, blocos do Flow, gancho pelo Puzzle
 - `workflow-entrega-gabarito` → as 8 coisas que eu perdi ao parar de conferir
 - **`GATE_VISUAL.md` Partes 1 a 3, em TODOS os ângulos** → realismo, herói colado na lente e trechos prontos
+- **`GATE_VISUAL.md` Parte 6 → escrever `FICHA_FRAMES.md` com o placar ANTES do primeiro JSON**, olhando
+  cada frame do modelo em `input/frames_modelo/`. O K se escreve a partir da ficha, nunca da memória
 - `checklist-composicao-visual` → os 10 itens (o porquê; a versão executável é o `GATE_VISUAL.md`)
 - `realismo-anti-cara-de-ia` → os 7 itens do gate de realismo
 - `prompts-imagem-json` → campos e blocos padrão
@@ -514,6 +532,8 @@ pedido continua vindo na fala, na ordem do P7.
   `GATE_VISUAL.md` Parte 5) antes de enviar qualquer gancho, `K__`, `V__`, pacote ou prompt avulso.
   Item reprovado = não envia, corrige e roda de novo. A entrega leva `Checklist de envio: X/X aprovados`
   fora dos blocos copiáveis (Luigi, 2026-09-22).
+- **Ficha do frame:** a entrega leva `Ficha: N/N K, placar 14/14 cada` ao lado do checklist. No K do
+  gancho, quando o Luigi mandar o resultado gerado, pontuar o resultado com F1 a F6 contra o frame.
 - **RODAR O LINTER, e só fechar com zero FALHAS:** `python checar_entrega.py producao/<avatar>_<slug>`
   Ele checa do DISCO o que dá pra checar por máquina, então **não depende de eu lembrar de nada**:
   travessão na copy, keyword do ângulo, 13 a 29 palavras por take, fala do prompt igual palavra por
@@ -621,7 +641,8 @@ stories, pois a revelação vai estar lá e não na DM."*
 
 **Ângulo de entrada é livre, a ponte pro rosto é obrigatória.** **Roster ativo desde 2026-09-22 =
 SÓ TRÊS: Walt Hensley (homem, 58), Darlene Pruitt (mulher, 56) e Lorraine Vance (mulher, 52)**, cada
-um numa conta só. Ficha na seção ROSTER AURALY ATIVO de `avatares-fichas`. O eixo de variação é
+um numa conta só. ♻️ **2026-09-30: entrou a Morgan Vance** (mulher, ~25, conta orgânica nova, âncora
+`producao/_ancoras/morgan_vance_ancora.jpg`). Ficha na seção ROSTER AURALY ATIVO de `avatares-fichas`. O eixo de variação é
 **1 esqueleto × N ângulos de entrada × os avatares anexados na produção** (a fila é sempre o que o
 Luigi mandou). ♻️ Todos os avatares anteriores do ângulo foram **descartados** na limpeza de
 2026-09-22: fichas, âncoras e pacotes estão em `_arquivo/2026-09-22_limpeza_angulo3/`, que nunca é
