@@ -29,6 +29,7 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 - [Roteiro final no fim](feedback_roteiro_final.md) — última coisa da entrega, depois de todos os prompts
 
 ## 🎬 AO RECEBER UM .MP4 (decomposição)
+- [P1: checar branches não mesclados](p1_checar_branches_nao_mesclados.md) — **antes de dizer que o esqueleto é novo:** produções de outras sessões podem estar só em branches claude/* (sal_tenis de 28/09 estava no claude/ola-d0d6f0)
 - [Skill /watch](skill_watch.md) — como rodar o pipeline
 - [Erros recorrentes](erros_recorrentes.md) — **micro-protocolo de 5 perguntas ANTES do prompt do T1.** Erros históricos de leitura de hook; Falha #8 (2026-09-25): K do gancho infiel ao frame
 - [Vídeo de crescimento não ganha bloco de venda](feedback_growth_video_sem_venda.md) — **classificar CRESCIMENTO x VENDA antes do roteiro.** Growth clona quase literal e fecha com follow; venda roda o processo cheio
@@ -40,11 +41,11 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 ## 🎯 AO DEFINIR ÂNGULO E AVATAR
 - [Produtos e ângulos](produtos_angulos.md) — **SEMPRE perguntar: Ângulo 1, 2, 3 ou 4?** Korella x FityWell x Auraly x Body Hacks, banco de insights do quiz
 - [Ângulo 4, doutrina Body Hacks For Men](angulo4_copy_bodyhacks.md) — só no Ângulo 4 (histórico). 42 hacks de HÁBITO, homens 40+; avatares PAR; limite honesto BANIDO; livro FÍSICO em quadro
-- [Ângulo 3, doutrina Auraly](angulo3_copy_auraly.md) — só no Ângulo 3. Roster único desde 2026-09-22 (Walt, Darlene, Lorraine), kit de tarólogo, lei do registro (divino, nunca oculto), destino Stories com `222` antes, sem DM desde 2026-09-22
+- [Ângulo 3, doutrina Auraly](angulo3_copy_auraly.md) — só no Ângulo 3. Roster desde 2026-09-22 (Walt, Darlene, Lorraine) + Morgan Vance em 2026-09-30, kit de tarólogo, lei do registro (divino, nunca oculto), destino Stories com `222` antes, sem DM desde 2026-09-22
 - [Swipe do Ângulo 3, 19 copies validadas](angulo3_swipe_padroes.md) — banco de COPY do nicho (não é processo): esqueleto de 8 beats, ritualizar a métrica, truque do WhatsApp, punição por inação
 - [Ângulo 3, VSL da ramificação FORTUNA](angulo3_vsl_fortuna.md) — **ao escrever vídeo, gancho ou Stories de dinheiro no Auraly:** funil free card reading → VSL → $19; ativos (cosmic receiver, cosmic birthright, I claim this) e a ponte obrigatória; lei do registro afrouxada nesta ramificação (2026-09-29: ritual, proteção, inveja liberados; bruxa/feitiço/pacto não)
 - [Matriz de congruência](congruencia_matriz.md) — usuário x coach por categoria. Claim de idade vivida exige avatar com a idade
-- [Fichas dos avatares](avatares_fichas.md) — traços canônicos e **caminho da âncora**. Ângulo 3: Walt, Darlene, Lorraine (âncora em cena real, nunca fingerprint). FityWell: Dana Morrison, Jamie Anderson, Lynn Parker (+7 no Ângulo 2). Korella: Melody Carter, holistic.trevor
+- [Fichas dos avatares](avatares_fichas.md) — traços canônicos e **caminho da âncora**. Ângulo 3: Walt, Darlene, Lorraine + Morgan Vance (conta orgânica nova, 2026-09-30) (âncora em cena real, nunca fingerprint). FityWell: Dana Morrison, Jamie Anderson, Lynn Parker (+7 no Ângulo 2, + holistic.brandon de volta ao Ângulo 2 em 2026-09-29, COACH). Korella: Melody Carter, holistic.trevor
 
 
 ## ✍️ AO ESCREVER O HOOK E O CORPO
@@ -60,6 +61,7 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 - [Banco de obstáculos](banco_obstaculos.md) — empilhar UM de cada rota de fuga, sempre
 - [Ponte argumentada, nunca afirmada](feedback_ponte_argumentada.md) — cadeia de 3 a 4 elos. Credibilidade se constrói com argumento, não com concessão
 - [CTA: 5 passos + produto](feedback_cta_produto.md) — **o produto NUNCA aparece insuficiente sozinho.** Limite honesto limita um claim nos Ângulos 1 e 2, e é **PROIBIDO no Ângulo 4**
+- [🔴 FityWell VENDA: link no COMENTÁRIO FIXADO](fitywell_venda_cta_comentario_fixado.md) — **no CTA de todo vídeo de venda do Ângulo 2 (Luigi, 2026-09-30):** comment yes + follow como engajamento, e o plano personalizado Metabolic Reset como a ÚNICA solução real da dor dela ("tap the link in the pinned comment"), nunca "if you want". Sem DM, sem "I'll send you"
 - [Ângulo 2, doutrina FityWell](angulo2_copy_fitywell.md) — só no Ângulo 2. Ponte das 3 causas, nunca culpar ela, não mostra produto; avatares COACH, crivo dobrado quando quem fala é homem
 
 ## 🎭 AO MODELAR UM VIDEO DE CENA ATUADA (movie style de venda OU short form de growth)
@@ -78,7 +80,7 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 
 ## 🖼️ AO ESCREVER OS PROMPTS
 - [Prompts de imagem (JSON)](prompts_imagem_json.md) — campos, blocos padrão, referências no título em caixa alta
-- [🔴 Prompt de imagem ENTREGUE em JSON](feedback_prompt_imagem_json_no_flow.md) — **desde 2026-09-25 (Flow v17), todo K e REF-P no chat, no FLOW e na ENTREGA sai como objeto JSON, nunca texto corrido.** Sem `shot_id`, com `format` na frente; regras de conteúdo idênticas, vídeo segue texto simples
+- [🔴🔴 Prompt de imagem SEMPRE em JSON](feedback_prompt_imagem_json_no_flow.md) — **todo K e REF-P, em qualquer ângulo, branch ou versão local do Flow, sai como objeto JSON. Contrato local atrasado se atualiza, texto corrido nunca é opção (reincidi em 2026-09-30).** Sem `shot_id`, `format` na frente; vídeo segue texto simples
 - [Prompts de vídeo Fase 7](prompts_video_fase7.md) — os 5 blocos, 13 a 29 palavras por take, fala é cópia literal
 - [Um prompt de imagem por BLOCO](feedback_prompt_imagem_compartilhado.md) — não por take. Reveal contínuo = uma imagem só
 - [🔴 GATE_VISUAL.md, fonte única transversal](realismo_anti_cara_de_ia.md) — **desde 2026-09-22, realismo + composição + checklist de gancho visual vivem em `GATE_VISUAL.md` na raiz, para os 3 ângulos.** Abrir ANTES do primeiro K e ANTES das 10 variações de gancho. As duas memórias abaixo guardam o porquê

@@ -577,7 +577,8 @@ arquivado em `_arquivo/2026-09-22_limpeza_angulo3/producao/oliviamadison671/`, s
 variedade de cenário, nunca de avatar.
 
 **Entrada do `/watch` desde 2026-09-22:** as imagens que vêm junto do `.mp4` são as âncoras em cena
-real do roster (Walt, Darlene, Lorraine). Se chegar imagem de um avatar fora do roster, perguntar antes
+real do roster (Walt, Darlene, Lorraine e, desde 2026-09-30, Morgan Vance em
+`producao/_ancoras/morgan_vance_ancora.jpg`, conta orgânica nova). Se chegar imagem de um avatar fora do roster, perguntar antes
 de produzir (`avatar-so-o-que-o-luigi-mandar`).
 
 **Instruções do agente Flow correspondentes: v10**, em `producao/_flow/INSTRUCOES_AGENTE_FLOW.md`.

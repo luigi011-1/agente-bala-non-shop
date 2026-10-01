@@ -1,6 +1,6 @@
 ---
 name: feedback-prompt-imagem-json-no-flow
-description: "Prompt de IMAGEM entregue ao Luigi (bloco do Flow, chat e ENTREGA_<AVATAR>.md) sai em JSON, nunca em texto corrido. Regras de conteudo identicas. Contrato do Flow v17 (Luigi, 2026-09-25), todos os angulos."
+description: "Prompt de IMAGEM (K, REF-P) SEMPRE em JSON, em qualquer angulo, branch ou versao local do Flow. Preferencia fixa do Luigi (2026-09-25), reforcada em 2026-09-30 depois de eu entregar texto corrido por o worktree estar no Flow v16. Contrato atrasado se atualiza; texto corrido nunca e opcao."
 metadata:
   type: feedback
 ---
@@ -29,3 +29,20 @@ do Flow de 2026-09-09; o JSON ja era a fonte interna, agora e tambem a versao de
   na frente. Gabarito: `producao/fitywell_growth_froyo_bites/gerar_pacote.py`.
 
 Relacionado: [[prompts-imagem-json]], [[feedback-blocos-imagem-video-separados]], [[workflow-entrega-gabarito]]
+
+## Reincidência de 2026-09-30 (auraly_growth_sal_sapato), a regra que ficou
+Entreguei os K em parágrafo único porque o worktree saiu da `main`, que ainda tinha o Flow v16 (o v17
+estava num branch não mesclado), e eu perguntei ao Luigi "mesclar ou usar a main, com K em texto
+corrido?". Ele escolheu não mesclar, e eu li isso como escolher texto corrido. Palavras dele: *"eu já
+deixei claro que todos os prompts de imagem é pra ser nesse formato e você acabou se esquecendo"*.
+
+**Why:** JSON é preferência DELE, não propriedade de uma versão de arquivo. Amarrar o formato a uma
+decisão técnica (branch, merge, versão do contrato) transforma preferência fixa em opção.
+
+**How to apply:**
+- K e REF-P saem em JSON **sempre**. Se o `INSTRUCOES_AGENTE_FLOW.md` local estiver abaixo da v17,
+  atualizar o contrato no mesmo passo, nunca descer o formato.
+- Nunca apresentar "texto corrido" como alternativa em pergunta nenhuma.
+- A regra está também no hook de roteamento (`.claude/hooks/gabarito_hook.py`, canal repetido a cada
+  mensagem, ver [[autocobranca-no-canal-repetido]]) e no linter: `checar_entrega.py --estrito` reprova
+  K fora de JSON (`k-json`).

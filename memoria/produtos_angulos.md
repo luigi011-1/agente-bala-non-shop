@@ -5,14 +5,14 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 76ee2741-6b6a-48f5-af27-5498dbe6f622
-  modified: 2026-09-22T22:33:20.045Z
+  modified: 2026-09-30T18:11:46.530Z
 ---
 
 # Quatro produtos / quatro ângulos + regra de workflow
 
 ## REGRA DE WORKFLOW (sempre) — confirmada pelo Luigi
 Depois de analisar o vídeo que ele envia (com o avatar em anexo), **SEMPRE perguntar: adaptamos pro Ângulo 1, 2, 3 ou 4?** e **explicar o que muda em cada** (copy, herói, dores atacadas, CTA/produto) antes de produzir. Só depois da escolha dele → roteiro cena a cena + prompts.
-- **O mesmo avatar pode rodar mais de um ângulo** (por isso perguntar sempre). Exceção: o Ângulo 3 roda **só com Walt Hensley, Darlene Pruitt e Lorraine Vance** (roster único desde 2026-09-22; todos os anteriores foram descartados).
+- **O mesmo avatar pode rodar mais de um ângulo** (por isso perguntar sempre). Exceção: o Ângulo 3 roda **só com Walt Hensley, Darlene Pruitt, Lorraine Vance e Morgan Vance** (roster desde 2026-09-22, Morgan desde 2026-09-30; todos os anteriores foram descartados).
 - **Keyword por ângulo:** `yes` nos Ângulos 1, 2 e 4, **`222` no Ângulo 3** (corrigido em 2026-08-26; a versão antiga dizia "sempre `yes` nos três", revogada em 2026-08-24). Autoridade em [[regras-universais]] regra 1. **No Ângulo 4 o Luigi decidiu manter `yes` em 2026-08-27**, recusando a sugestão de keyword temática.
 - **📎 O anexo decide o avatar:** `.mp4` + imagem de avatar na mesma mensagem = produzir para aquele avatar, sem perguntar. Nesse caso a pergunta que resta é só o ângulo. Ver [[angulo3-copy-auraly]].
 - CTA no vídeo é sempre "comment yes" (menos no 3); **muda só o destino da DM**: Ângulo 1 → deep link Amazon do nutra; Ângulo 2 → link do quiz FityWell; Ângulo 3 → link do quiz Auraly; Ângulo 4 → link do ebook Body Hacks For Men (destino exato pendente).
@@ -30,7 +30,7 @@ Depois de analisar o vídeo que ele envia (com o avatar em anexo), **SEMPRE perg
 ## ÂNGULO 2 — app feminino (FityWell "Metabolic Reset 40+")
 - **Produto:** app FityWell. **Funil = quiz** (quiz-fitywell.vercel.app) → captura de email → plano personalizado (pago).
 - **Público:** mulheres **40+**.
-- **Funil de conteúdo:** comment yes → DM → link do quiz.
+- **Funil de conteúdo:** ~~comment yes → DM → link do quiz~~ ♻️ desde 2026-09-30: comment yes + follow (engajamento) e o link do plano personalizado Metabolic Reset no **comentário fixado** do vídeo ([[fitywell-venda-cta-comentario-fixado]]).
 
 ### Posicionamento (promessas que a marca já usa)
 - "Real wellness, for your body after 40" · "Made for your stage, not your 20s"
@@ -71,6 +71,8 @@ Sem print de app, sem celular em quadro, sem mockup. Exceção explícita à reg
 
 ### Avatar do Ângulo 2: BRANDON, sempre como COACH (decisão do Luigi, 2026-08-21)
 
+> 🟢 **2026-09-29: a Brandon VOLTOU ao Ângulo 2, como COACH**, junto com o roster masculino ([[avatares-fichas]]). O bloco abaixo é histórico.
+>
 > 🔴 **REVOGADO EM 2026-08-27: a BRANDON MIGROU DE VEZ PRO ÂNGULO 4.** A audiência da página dela é
 > **97% homens dos EUA**, e o FityWell (mulheres 40+) estava queimando alcance. **O Ângulo 2 está sem
 > avatar.** Se voltar a rodar, precisa de decisão do Luigi sobre qual conta o recebe. A regra de
@@ -90,7 +92,7 @@ Contexto completo da operação em [[operacao-playbook]] e [[metodo-puzzle]].
 ## ÂNGULO 3 — app Auraly (alma gêmea / lei da atração)
 - **Produto:** app **Auraly**, leitura de mapa astral de alma gêmea. Funil = quiz → email gate → VSL → pitch $9 (ancorado em $79).
 - **Público:** mulheres, EUA. Tráfego orgânico Instagram + Facebook, contas já crescidas.
-- **Avatares:** **Walt Hensley, Darlene Pruitt e Lorraine Vance**, roster único desde 2026-09-22. Fichas em [[avatares-fichas]].
+- **Avatares:** **Walt Hensley, Darlene Pruitt e Lorraine Vance** (roster desde 2026-09-22) e **Morgan Vance** (conta orgânica nova, 2026-09-30). Fichas em [[avatares-fichas]].
 - **Atenção:** o link do quiz é um **rotator de 3 funis** (dois de retrato de alma gêmea, um de cartas de tarô com a persona Master Aura Solenne).
 - **Trava de copy:** nunca dizer "one-time" ou "pagamento único". O checkout renova a $29/mês e a FAQ da própria página se contradiz.
 - **Doutrina completa, banco de dores, frases verbatim, escada de reveal e oferta:** [[angulo3-copy-auraly]].

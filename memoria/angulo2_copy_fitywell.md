@@ -1,11 +1,11 @@
 ---
 name: angulo2-copy-fitywell
-description: "ATUALIZADO 2026-09-10: o angulo roda com TRES avatares MASCULINOS (Dana Morrison, Jamie Anderson, Lynn Parker), sempre COACH, e a Brandon saiu. Doutrina de copy do ÂNGULO 2 (app FityWell, mulheres 40+, funil de quiz). Como cada aprendizado do Ângulo 1 se traduz: limite honesto, a ponte das 3 causas ('qual das três é a sua'), as DUAS rotas de fuga desse público (fazer sozinha / app grátis) com banco de obstáculos EN+PT, a regra inviolável de NUNCA culpar ela, urgência por custo de demora (sem risco de FTC), a inversão da regra do reveal, e os 2 gaps abertos (congruência de idade do avatar e ausência de asset do produto)."
+description: "ATUALIZADO 2026-09-29: a holistic.brandon VOLTOU ao angulo, como COACH, ao lado dos avatares masculinos (Dana Morrison, Jamie Anderson, Lynn Parker e os sete de 2026-09-19), todos COACH. Doutrina de copy do ÂNGULO 2 (app FityWell, mulheres 40+, funil de quiz). Como cada aprendizado do Ângulo 1 se traduz: limite honesto, a ponte das 3 causas ('qual das três é a sua'), as DUAS rotas de fuga desse público (fazer sozinha / app grátis) com banco de obstáculos EN+PT, a regra inviolável de NUNCA culpar ela, urgência por custo de demora (sem risco de FTC), a inversão da regra do reveal, e os 2 gaps abertos (congruência de idade do avatar e ausência de asset do produto)."
 metadata:
   node_type: memory
   type: reference
   originSessionId: 32e5549f-536c-4d15-8e9c-ed26d399e783
-  modified: 2026-08-24T14:55:57.970Z
+  modified: 2026-09-30T18:11:43.803Z
 ---
 
 # Ângulo 2 (FityWell) — como a copy do Ângulo 1 se traduz
@@ -145,6 +145,11 @@ Eu vinha escrevendo *"It is free and it takes two minutes"* em TODOS os CTAs do 
 
 Keyword continua sendo **`yes`**. Destino da DM: link do quiz.
 
+> ♻️ **REVOGADO EM 2026-09-30 (Luigi): não existe mais DM na venda da FityWell.** Ela comenta `yes` e
+> segue como engajamento, e o link do **plano personalizado Metabolic Reset da FityWell** fica no
+> **comentário fixado** do vídeo: "just tap the link in the pinned comment". Nada de "I'll send you"
+> nem follow gate de entrega. Regra completa em [[fitywell-venda-cta-comentario-fixado]].
+
 ---
 
 ## 7. Produção: o que fica e o que INVERTE
@@ -174,6 +179,12 @@ Keyword continua sendo **`yes`**. Destino da DM: link do quiz.
 > ficou legítimo pela primeira vez neste ângulo. O que continua proibido é 1ª pessoa sobre corpo
 > feminino, e isso não tem conserto de idade.
 
+> 🟢 **2026-09-29: a BRANDON VOLTOU ao Ângulo 2** (Luigi), somando ao roster masculino, que continua.
+> Âncora e ficha em [[avatares-fichas]]. Com ela, **esta Decisão 1 original volta a valer como
+> escrita**: COACH, zero 1ª pessoa sobre corpo depois dos 40 (ela tem ~30), frases do quiz **citadas**
+> na boca das clientes. O crivo da seção 4 roda **uma vez** na boca dela e **duas** quando quem fala
+> é homem. Título de prompt: `ÂNCORA HOLISTIC BRANDON`.
+
 Histórico: eu havia recomendado criar um avatar feminino de 45 a 55 anos pra ter depoimento em 1ª pessoa. **Decisão do Luigi em 2026-08-21: manter só a Brandon por enquanto**, ele avisa quando tiver mais avatares. Ele avisou em 2026-09-10, e a resposta foram os três homens acima.
 
 **O que isso obriga na copy (aplicar automático):**
@@ -194,4 +205,4 @@ Histórico: eu havia recomendado criar um avatar feminino de 45 a 55 anos pra te
 - Continua obrigatório **falar o nome em voz alta** ("FityWell"), mesmo sem mostrar nada. O que se perde em imagem se compensa em nome dito com clareza.
 - Nada de celular em quadro, nada de print, nada de mockup.
 
-**Consequência prática:** o Ângulo 2 nunca precisa de imagem-âncora com 2ª referência. Todo título de prompt fica `ÂNCORA DANA MORRISON`, `ÂNCORA JAMIE ANDERSON` ou `ÂNCORA LYNN PARKER`, nunca `+ PRODUCT.PNG`.
+**Consequência prática:** o Ângulo 2 nunca precisa de imagem-âncora com 2ª referência. Todo título de prompt fica `ÂNCORA <NOME DO AVATAR>` (ex.: `ÂNCORA DANA MORRISON`, `ÂNCORA HOLISTIC BRANDON`), nunca `+ PRODUCT.PNG`.

@@ -63,7 +63,7 @@ so. Isto e obrigatorio em todo K do perfil CLASSICO:
 
 ### AURALY, anchor e avatar fixo por conta (Luigi, 2026-09-14; anchor revista em 2026-09-22; avatar fixo em 2026-09-25)
 
-Roster Auraly: Walt Hensley, Darlene Pruitt e Lorraine Vance. A referencia de cada um e a anchor
+Roster Auraly: Walt Hensley, Darlene Pruitt, Lorraine Vance e Morgan Vance (desde 2026-09-30). A referencia de cada um e a anchor
 em cena real (imagem de teste aprovada), anexada em todo K. Nao existe fingerprint.
 
 AVATAR FIXO POR CONTA (v16, 2026-09-25): cada conta usa o mesmo avatar com a roupa e o cenario-base
@@ -246,6 +246,8 @@ v11, 2026-09-20: o portfolio 4/3/3 em tres familias foi REVOGADO pelo Luigi no m
 substituido pelo METODO PUZZLE aplicado ao hook do video modelo, igual ao Angulo 2: uma acao
 estrutural preservada e dez variacoes de uma variavel cada. Acrescentada a regra do T1 mudo com
 cortes internos ao clipe, que nao pode fazer o executor parar na checagem das tres marcas.
+v17, 2026-09-30: Morgan Vance entra no roster Auraly (conta organica nova). Sem mudanca de
+configuracao.
 v12, 2026-09-22: roster Auraly reduzido a Walt, Darlene e Lorraine. A fingerprint sai: a referencia
 e a anchor em cena real, com instrucao de usar so a identidade quando o K pede cenario novo. A
 excecao dos avatares de luxo (v9) foi removida junto com eles.

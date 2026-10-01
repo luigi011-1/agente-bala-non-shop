@@ -641,7 +641,8 @@ stories, pois a revelação vai estar lá e não na DM."*
 
 **Ângulo de entrada é livre, a ponte pro rosto é obrigatória.** **Roster ativo desde 2026-09-22 =
 SÓ TRÊS: Walt Hensley (homem, 58), Darlene Pruitt (mulher, 56) e Lorraine Vance (mulher, 52)**, cada
-um numa conta só. Ficha na seção ROSTER AURALY ATIVO de `avatares-fichas`. O eixo de variação é
+um numa conta só. ♻️ **2026-09-30: entrou a Morgan Vance** (mulher, ~25, conta orgânica nova, âncora
+`producao/_ancoras/morgan_vance_ancora.jpg`). Ficha na seção ROSTER AURALY ATIVO de `avatares-fichas`. O eixo de variação é
 **1 esqueleto × N ângulos de entrada × os avatares anexados na produção** (a fila é sempre o que o
 Luigi mandou). ♻️ Todos os avatares anteriores do ângulo foram **descartados** na limpeza de
 2026-09-22: fichas, âncoras e pacotes estão em `_arquivo/2026-09-22_limpeza_angulo3/`, que nunca é

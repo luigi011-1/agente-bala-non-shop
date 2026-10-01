@@ -1,6 +1,6 @@
 ---
 name: angulo3-copy-auraly
-description: "ÂNGULO 3 — app Auraly (astrologia / lei da atração / alma gêmea e twin flame), tráfego orgânico IG+FB nos EUA, **roster ativo desde 2026-09-22 = SÓ TRÊS: Walt Hensley (homem), Darlene Pruitt e Lorraine Vance** (todos os anteriores foram descartados na limpeza de 2026-09-22), **keyword `222`** (não `yes`), **nunca mostra o produto**, **INVERSÃO DO FUNIL em 2026-09-04: o destino é o STORIES, onde está a revelação, e as três ações (`222` + follow + save) viraram o SELO com o universo, sem automação de DM desde 2026-09-22** (a ordem continua `222` primeiro e Stories depois), e a LEI DO REGISTRO: divino/manifestação sempre, oculto/bruxaria nunca (cartas holograficas/foil e saturadas desde 2026-08-29, pedra/cristal jamais). Banco de insights extraído dos 3 funis do quiz (sm-v16-8, sm-v16-14, lr-love-reading-2) em 2026-08-24: mecanismo do mapa astral, dores, frases emocionais, escada de reveal com lacre, pitch de $9, e a CONTRADIÇÃO de assinatura no checkout que limita o que pode ser dito na copy."
+description: "ÂNGULO 3 — app Auraly (astrologia / lei da atração / alma gêmea e twin flame), tráfego orgânico IG+FB nos EUA, **roster ativo desde 2026-09-22: Walt Hensley (homem), Darlene Pruitt e Lorraine Vance, mais Morgan Vance (conta orgânica nova) desde 2026-09-30** (todos os anteriores foram descartados na limpeza de 2026-09-22), **keyword `222`** (não `yes`), **nunca mostra o produto**, **INVERSÃO DO FUNIL em 2026-09-04: o destino é o STORIES, onde está a revelação, e as três ações (`222` + follow + save) viraram o SELO com o universo, sem automação de DM desde 2026-09-22** (a ordem continua `222` primeiro e Stories depois), e a LEI DO REGISTRO: divino/manifestação sempre, oculto/bruxaria nunca (cartas holograficas/foil e saturadas desde 2026-08-29, pedra/cristal jamais). Banco de insights extraído dos 3 funis do quiz (sm-v16-8, sm-v16-14, lr-love-reading-2) em 2026-08-24: mecanismo do mapa astral, dores, frases emocionais, escada de reveal com lacre, pitch de $9, e a CONTRADIÇÃO de assinatura no checkout que limita o que pode ser dito na copy."
 metadata: 
   node_type: memory
   type: project
@@ -390,6 +390,8 @@ Palavras do Luigi: *"únicos avatares atuais para o ângulo de auraly app"*. Fic
 em [[avatares-fichas]], seção ROSTER AURALY ATIVO. Todos os avatares anteriores do ângulo foram
 descartados na limpeza de 2026-09-22 e só existem em `_arquivo/2026-09-22_limpeza_angulo3/`, que
 nunca é fonte de produção.
+♻️ **2026-09-30: entrou a Morgan Vance** (mulher negra ~25, tranças, selfie com a carta SOULMATE), para uma
+conta nova do Auraly no estilo orgânico. Ficha em [[avatares-fichas]].
 
 **Congruência entre os três:** o Walt é homem falando com mulher solteira, então o crivo de nunca
 culpar ela roda DUAS vezes nele. Darlene e Lorraine têm idade vivida para o claim de decepção amorosa
