@@ -1,8 +1,8 @@
 # PLAYBOOK FITYWELL
 
 Documento operacional da marca **FITYWELL** para o **Ângulo 2** (app FityWell, quiz, mulheres
-40+). O **Ângulo 4** (Body Hacks for Men 40+, homens 40+) abaixo e historico, preservado para
-rastreabilidade; nao integra os tres angulos oficiais de AGENTS.md. É o equivalente do
+40+). O **Ângulo 4** (Body Hacks for Men 40+, homens 40+) abaixo voltou ao intake em 2026-10-02 (Luigi),
+para rodar na holistic.brandon como COACH, ao lado de Dana, Jamie e Lynn como PAR. É o equivalente do
 `PLAYBOOK_MESTRE_AURALY.md`, que é do Ângulo 3 e não se aplica aqui.
 
 Aberto em 2026-09-10, a partir da produção `producao/fitywell_pernas/`, que é o **gabarito vivo**.

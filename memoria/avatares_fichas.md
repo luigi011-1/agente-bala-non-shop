@@ -119,6 +119,11 @@ Cada avatar tem identidade visual FIXA — reproduzir igual em TODOS os takes e 
 - **É o avatar padrão até que se diga o contrário.**
 
 ## holistic.brandon (FEMININA, nome é "Brandon" mas é MULHER)
+> 🟢 **2026-10-02: também roda o SEA MOSS (Ângulo 1, Natural Rems) e o BODY HACKS (Ângulo 4, reativado
+> para ela), sempre COACH**, em paralelo com a FityWell na mesma conta. No Ângulo 4 vale a moldura dela
+> de 2026-08-27 (seção 7 de [[angulo4-copy-bodyhacks]]). Âncora `producao/_ancoras/holistic_brandon_ancora.jpg`. Ver
+> [[angulo1-copy-seamoss]] item 6.1.
+>
 > 🟢 **REATIVADA NO ÂNGULO 2 (app FityWell, mulheres 40+) EM 2026-09-29**, por decisão do Luigi.
 > Entra no roster do Ângulo 2 ao lado dos dez atuais, **sempre COACH** (mulher de ~30 anos não fala
 > em 1ª pessoa sobre o corpo depois dos 40; cita as clientes, ver [[angulo2-copy-fitywell]] seção 8).

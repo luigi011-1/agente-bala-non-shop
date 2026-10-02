@@ -2,6 +2,136 @@
   "versao": 1,
   "producoes": [
     {
+      "producao_id": "auraly_growth_dinheiro",
+      "angulo": 3,
+      "oferta": "Auraly",
+      "objetivo_declarado": "GROWTH",
+      "funil_documentado": "like + save + enviar para si + comentar `222` + follow. Sem Stories (mesmo contrato de growth aprovado no sal no tênis e na prece)",
+      "referencia": "`/Users/macbookairm2/Downloads/snapinsta-1790652632203.mp4` · 130,6s · 720x1280 · 30fps",
+      "avatares_documentados": "Darlene Pruitt, Lorraine Vance e Walt Hensley (fila no `CHECKPOINT.md`)",
+      "variavel_e_ponte_documentadas": "nenhuma. Clone literal (feedback-growth-video-sem-venda), exceto os cinco takes que repetiam frases das produções anteriores das mesmas contas (T4, T5, T6, T16, T17), reescritos com a mesma função, seguindo a decisão do Luigi em `auraly_growth_prece`",
+      "entrada_narrativa_documentada": null,
+      "formato_documentado": null,
+      "enquadramento_documentado": null,
+      "abertura_documentada": {
+        "id": "T1",
+        "head": "GANCHO · B-ROLL · MUDO · Setup A · CENA CURTA",
+        "fala": null,
+        "falantes": [],
+        "mudo": true,
+        "curta": true,
+        "linha": 74
+      },
+      "takes_reconhecidos": 19,
+      "estado_checkpoint": "PRODUCTION_COMPLETE",
+      "fonte": "producao/auraly_growth_dinheiro/ROTEIRO.md",
+      "evidencia": "Documento de producao; desempenho nao comprovado por este registro."
+    },
+    {
+      "producao_id": "auraly_growth_prece",
+      "angulo": 3,
+      "oferta": "Auraly",
+      "objetivo_declarado": "GROWTH",
+      "funil_documentado": "save + double tap + comentar `222` + follow. Sem Stories (decisão do Luigi: follow, como no sal no tênis)",
+      "referencia": "`/Users/macbookairm2/Downloads/snapinsta-1790643406245.mp4` · 117,3s · 720x1280 · 30fps",
+      "avatares_documentados": "Darlene Pruitt, Lorraine Vance e Walt Hensley (fila no `CHECKPOINT.md`)",
+      "variavel_e_ponte_documentadas": "as palavras. Decisão do Luigi (2026-09-28): a fala do modelo é ~90% igual à de `auraly_growth_sal_tenis`, que vai para as mesmas três contas, então a estrutura e a ordem dos beats ficam e as frases são reescritas (exceção consciente à cópia literal do perfil orgânico)",
+      "entrada_narrativa_documentada": null,
+      "formato_documentado": null,
+      "enquadramento_documentado": null,
+      "abertura_documentada": {
+        "id": "T1",
+        "head": "GANCHO · SEGREDO + ESCASSEZ · TALKING · Setup A",
+        "fala": "Once you watch this, you keep it to yourself. Tell nobody. Very few people will get to see this before the month is out.",
+        "falantes": [],
+        "mudo": false,
+        "curta": false,
+        "linha": 76
+      },
+      "takes_reconhecidos": 14,
+      "estado_checkpoint": "PRODUCTION_COMPLETE",
+      "fonte": "producao/auraly_growth_prece/ROTEIRO.md",
+      "evidencia": "Documento de producao; desempenho nao comprovado por este registro."
+    },
+    {
+      "producao_id": "auraly_growth_sal_tenis",
+      "angulo": 3,
+      "oferta": "Auraly",
+      "objetivo_declarado": "GROWTH",
+      "funil_documentado": "save + double tap + comentar `222` + follow. Sem Stories, sem DM, sem produto.",
+      "referencia": "`/Users/macbookairm2/Downloads/snapinsta-1790613043359.mp4` · 113,9s · 720x1280 · 30fps",
+      "avatares_documentados": "Darlene Pruitt, Lorraine Vance e Walt Hensley (fila no `CHECKPOINT.md`)",
+      "variavel_e_ponte_documentadas": "nenhuma. Clone quase literal (feedback-growth-video-sem-venda). Só mudam: data exata, uma frase de registro oculto, uma frase de terceiro mal-intencionado, e o beat final de Stories vira FOLLOW (contrato GROWTH do `WORKFLOW_AURALY.md`)",
+      "entrada_narrativa_documentada": null,
+      "formato_documentado": null,
+      "enquadramento_documentado": null,
+      "abertura_documentada": {
+        "id": "T1",
+        "head": "GANCHO · B-ROLL · VOZ-OVER · Setup A · CENA CURTA",
+        "fala": "Put salt inside your work shoes before you leave the house.",
+        "falantes": [],
+        "mudo": true,
+        "curta": true,
+        "linha": 88
+      },
+      "takes_reconhecidos": 17,
+      "estado_checkpoint": "PRODUCTION_COMPLETE",
+      "fonte": "producao/auraly_growth_sal_tenis/ROTEIRO.md",
+      "evidencia": "Documento de producao; desempenho nao comprovado por este registro."
+    },
+    {
+      "producao_id": "auraly_manifestacao_outubro",
+      "angulo": 3,
+      "oferta": "Auraly",
+      "objetivo_declarado": "SALE",
+      "funil_documentado": "like + save + share com uma pessoa + comentar `222` → foto de perfil → Stories (\"the other half of this sign is already waiting for you there\")",
+      "referencia": "`/Users/macbookairm2/Downloads/snapinsta-1790797788506.mp4` · 53,3s · 716x1274 · 30fps",
+      "avatares_documentados": "Darlene Pruitt, Lorraine Vance e Walt Hensley (fila no `CHECKPOINT.md`)",
+      "variavel_e_ponte_documentadas": "as datas, de 28, 29 e 30 de setembro para 1º, 2 e 3 de outubro (pedido do Luigi). Resto literal, menos o CTA e três frases que repetiam vídeos anteriores das mesmas contas (lista abaixo)",
+      "entrada_narrativa_documentada": null,
+      "formato_documentado": null,
+      "enquadramento_documentado": null,
+      "abertura_documentada": {
+        "id": "T1",
+        "head": "GANCHO · SELEÇÃO POR DATA · TALKING · Setup A",
+        "fala": "I don't know your name, but if this video found you on October 1st, 2nd or 3rd, it's because it was 100% meant for you.",
+        "falantes": [],
+        "mudo": false,
+        "curta": false,
+        "linha": 73
+      },
+      "takes_reconhecidos": 8,
+      "estado_checkpoint": "PRODUCTION_COMPLETE",
+      "fonte": "producao/auraly_manifestacao_outubro/ROTEIRO.md",
+      "evidencia": "Documento de producao; desempenho nao comprovado por este registro."
+    },
+    {
+      "producao_id": "auraly_venda_fortuna",
+      "angulo": 3,
+      "oferta": "Auraly",
+      "objetivo_declarado": "SALE",
+      "funil_documentado": "like + save + enviar para si + comentar `222` → foto de perfil → Stories (\"the rest of this message is waiting for you there\")",
+      "referencia": "`/Users/macbookairm2/Downloads/snapinsta-1790635245074.mp4` · 124,9s · 720x1280",
+      "avatares_documentados": "Darlene Pruitt, Lorraine Vance e Walt Hensley (fila no `CHECKPOINT.md`)",
+      "variavel_e_ponte_documentadas": "nenhuma no esqueleto. Copy lapidada para venda: registro divino, lei do selo no `222`, data sem dia cravado, duas frases longas enxugadas para caber em 8s e os beats que o modelo divide com `auraly_growth_sal_tenis` reescritos com a mesma engenharia (COPY THE ENGINEERING, NOT THE WORDS)",
+      "entrada_narrativa_documentada": null,
+      "formato_documentado": null,
+      "enquadramento_documentado": null,
+      "abertura_documentada": {
+        "id": "T1",
+        "head": "GANCHO · B-ROLL · MUDO · Setup A · CENA CURTA",
+        "fala": null,
+        "falantes": [],
+        "mudo": true,
+        "curta": true,
+        "linha": 81
+      },
+      "takes_reconhecidos": 18,
+      "estado_checkpoint": "PRODUCTION_COMPLETE",
+      "fonte": "producao/auraly_venda_fortuna/ROTEIRO.md",
+      "evidencia": "Documento de producao; desempenho nao comprovado por este registro."
+    },
+    {
       "producao_id": "brandon_angle2",
       "angulo": 2,
       "oferta": "FitWell",
@@ -17,7 +147,9 @@
         "id": "T1",
         "head": "HOOK A · TALKING · Setup A",
         "fala": "If your belly is flat in the morning and swollen by night, if your jeans only button on good days,",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 39
       },
       "takes_reconhecidos": 15,
@@ -28,7 +160,7 @@
     {
       "producao_id": "brandon_crosta",
       "angulo": 4,
-      "oferta": "Historico: Body Hacks",
+      "oferta": "Body Hacks",
       "objetivo_declarado": null,
       "funil_documentado": "comment `yes` -> DM -> landing -> checkout Hotmart embutido, $9.90",
       "referencia": "`holistic.brandon.mp4` (51,7s, 12 segmentos, uma pessoa só, cenário canônico da Brandon)",
@@ -41,7 +173,9 @@
         "id": "T1",
         "head": "HOOK · TALKING · Setup A",
         "fala": "Brother, this is what twenty years of sugar buildup looks like inside your champion. And nobody has ever shown you one.",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 71
       },
       "takes_reconhecidos": 18,
@@ -65,7 +199,9 @@
         "id": "T1",
         "head": "HOOK · TALKING · Setup A",
         "fala": "Pour boiling water over your bell peppers, ma'am, and let them dry.",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 50
       },
       "takes_reconhecidos": 20,
@@ -89,7 +225,9 @@
         "id": "T1",
         "head": "HOOK + REVEAL CONTÍNUO · TALKING · Setup A",
         "fala": "If you still wake up tired after eight full hours, it is not your sleep that is broken. It is your breathing.",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 44
       },
       "takes_reconhecidos": 24,
@@ -100,7 +238,7 @@
     {
       "producao_id": "dana_churrasco",
       "angulo": 4,
-      "oferta": "Historico: Body Hacks",
+      "oferta": "Body Hacks",
       "objetivo_declarado": null,
       "funil_documentado": "vídeo → comenta `yes` → DM com o link da landing",
       "referencia": "`Diane Jackson_Obtenha Rhodiola Rosea A_1617284839873263`, 94,7s",
@@ -113,7 +251,11 @@
         "id": "T1",
         "head": "HOOK · A ADMIRAÇÃO · TALKING · Setup A · K01",
         "fala": "Keith? Oh my God, look at you. You have not aged a single day. Terrell, do not just stand there. Say something.",
+        "falantes": [
+          "NIA"
+        ],
         "mudo": false,
+        "curta": false,
         "linha": 81
       },
       "takes_reconhecidos": 13,
@@ -137,7 +279,9 @@
         "id": "T1",
         "head": "HOOK / ERRO · TALKING · Setup A",
         "fala": "Next time you cook rice, don't pour that starchy water down the drain. It's exactly what most of the women who ask me about this throw away.",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 63
       },
       "takes_reconhecidos": 8,
@@ -161,7 +305,9 @@
         "id": "T1",
         "head": "HOOK / DEMO DE CONTRASTE · TALKING · Setup A",
         "fala": "If your belly looks like this after forty, and you want it to look like this before summer,",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 39
       },
       "takes_reconhecidos": 2,
@@ -185,7 +331,9 @@
         "id": "T1",
         "head": "HOOK · TALKING · Setup A",
         "fala": "How old were you when you found out that if you crack an egg into Greek yogurt and whisk it until the batter is completely smooth,",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 74
       },
       "takes_reconhecidos": 8,
@@ -209,12 +357,40 @@
         "id": "T1",
         "head": "HOOK · TALKING · Setup A",
         "fala": "Nobody's gonna tell you this because your dentist never wants you to find out.",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 78
       },
       "takes_reconhecidos": 6,
       "estado_checkpoint": null,
       "fonte": "producao/fitywell_dentes/ROTEIRO.md",
+      "evidencia": "Documento de producao; desempenho nao comprovado por este registro."
+    },
+    {
+      "producao_id": "fitywell_growth_canela_acucar",
+      "angulo": 2,
+      "oferta": "FitWell",
+      "objetivo_declarado": null,
+      "funil_documentado": "growth. Comentário `yes` + follow, como no modelo. Sem produto, sem quiz, sem preço.",
+      "referencia": "`input/reference_video.mp4` (James Smith, 26s, cortes em 4,0 · 7,8 · 10,1 · 12,6s)",
+      "avatares_documentados": "fila de 9 em `AVATAR_QUEUE.md`, todos COACH.",
+      "variavel_e_ponte_documentadas": "nenhuma no conteúdo (rodada de validação, clone fiel). Trocas obrigatórias: identidade",
+      "entrada_narrativa_documentada": null,
+      "formato_documentado": null,
+      "enquadramento_documentado": "do peito pra cima no corpo; no gancho, a montanha de açúcar colada na lente.",
+      "abertura_documentada": {
+        "id": "T1",
+        "head": "GANCHO · TALKING · Setup A · CENA CURTA",
+        "fala": "This is what cinnamon does to the sugar in your body.",
+        "falantes": [],
+        "mudo": false,
+        "curta": true,
+        "linha": 40
+      },
+      "takes_reconhecidos": 6,
+      "estado_checkpoint": null,
+      "fonte": "producao/fitywell_growth_canela_acucar/ROTEIRO.md",
       "evidencia": "Documento de producao; desempenho nao comprovado por este registro."
     },
     {
@@ -233,7 +409,9 @@
         "id": "T1",
         "head": "HOOK / JEANS E CINTURA · TALKING · Setup A",
         "fala": "You put on your favorite jeans. Your waist used to be here. Now it's closer to here.",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 26
       },
       "takes_reconhecidos": 8,
@@ -257,12 +435,92 @@
         "id": "T1",
         "head": "HOOK / SALTO E PERNAS · TALKING · Setup A",
         "fala": "You put on high heels. Your legs used to be here. Now they're closer to here.",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 62
       },
       "takes_reconhecidos": 8,
       "estado_checkpoint": null,
       "fonte": "producao/fitywell_growth_cortisol_props/ROTEIRO.md",
+      "evidencia": "Documento de producao; desempenho nao comprovado por este registro."
+    },
+    {
+      "producao_id": "fitywell_growth_dentes_agua",
+      "angulo": 2,
+      "oferta": "FitWell",
+      "objetivo_declarado": null,
+      "funil_documentado": "growth. Comentário `yes` + follow, exatamente como no modelo. Sem produto, sem quiz, sem preço.",
+      "referencia": "`input/reference_video.mp4` (37,7s, cortes em 5,93 · 11,43 · 13,07 · 17,47s)",
+      "avatares_documentados": "fila de 9 em `AVATAR_QUEUE.md`, todos COACH.",
+      "variavel_e_ponte_documentadas": "nenhuma no conteúdo (rodada de validação, clone fiel). Trocas obrigatórias:",
+      "entrada_narrativa_documentada": null,
+      "formato_documentado": null,
+      "enquadramento_documentado": "do peito pra cima no corpo; no gancho, o modelo dental colado na lente.",
+      "abertura_documentada": {
+        "id": "T1",
+        "head": "GANCHO · TALKING · Setup A",
+        "fala": "Your dentist will never tell you this, because the day you learn it is the day you stop paying for whitening.",
+        "falantes": [],
+        "mudo": false,
+        "curta": false,
+        "linha": 46
+      },
+      "takes_reconhecidos": 7,
+      "estado_checkpoint": null,
+      "fonte": "producao/fitywell_growth_dentes_agua/ROTEIRO.md",
+      "evidencia": "Documento de producao; desempenho nao comprovado por este registro."
+    },
+    {
+      "producao_id": "fitywell_growth_froyo_bites",
+      "angulo": 2,
+      "oferta": "FitWell",
+      "objetivo_declarado": null,
+      "funil_documentado": "growth. CTA = save do original + follow (\"so you don't miss my next healthy recipes\"), sem keyword, sem produto, sem quiz, sem preço.",
+      "referencia": "`input/reference_video.mp4` (snapinsta-1790352794223, 13,8s, pessoa real, 36 cortes,",
+      "avatares_documentados": "fila de 6 em `AVATAR_QUEUE.md`, todos COACH da FityWell.",
+      "variavel_e_ponte_documentadas": "nenhuma no conteúdo (rodada de validação, clone fiel, `PERFIL_ORGANICO.md`).",
+      "entrada_narrativa_documentada": null,
+      "formato_documentado": null,
+      "enquadramento_documentado": "gancho e fim com o froyo bite colado na lente e o rosto atrás; receita em POV de cima,",
+      "abertura_documentada": {
+        "id": "T1",
+        "head": "GANCHO · TALKING · Setup A",
+        "fala": "After brain tumor surgery, sugar spikes aren't an option for me. Inflammation completely stalls healing.",
+        "falantes": [],
+        "mudo": false,
+        "curta": false,
+        "linha": 54
+      },
+      "takes_reconhecidos": 12,
+      "estado_checkpoint": null,
+      "fonte": "producao/fitywell_growth_froyo_bites/ROTEIRO.md",
+      "evidencia": "Documento de producao; desempenho nao comprovado por este registro."
+    },
+    {
+      "producao_id": "fitywell_growth_modelo_intestino",
+      "angulo": 2,
+      "oferta": "FitWell",
+      "objetivo_declarado": null,
+      "funil_documentado": "growth. CTA do original: comentário com keyword + receita dos clientes + follow gate. Sem",
+      "referencia": "`input/reference_video.mp4` (snapinsta-1790373034350, 53,7s, avatar IA, 13 cenas)",
+      "avatares_documentados": "fila de 5 em `AVATAR_QUEUE.md`, todos COACH (o próprio modelo fala \"my clients\").",
+      "variavel_e_ponte_documentadas": "nenhuma no conteúdo (rodada de validação, clone fiel). Trocas obrigatórias:",
+      "entrada_narrativa_documentada": null,
+      "formato_documentado": null,
+      "enquadramento_documentado": "gancho em câmera baixa com o modelo colado na lente; receita com a panela no primeiro",
+      "abertura_documentada": {
+        "id": "T1",
+        "head": "GANCHO · TALKING · Setup A",
+        "fala": "You can eat apples, chicken, spinach, yogurt, anything, and it will not clear what has been sitting inside you for years.",
+        "falantes": [],
+        "mudo": false,
+        "curta": false,
+        "linha": 61
+      },
+      "takes_reconhecidos": 13,
+      "estado_checkpoint": null,
+      "fonte": "producao/fitywell_growth_modelo_intestino/ROTEIRO.md",
       "evidencia": "Documento de producao; desempenho nao comprovado por este registro."
     },
     {
@@ -281,7 +539,9 @@
         "id": "T1",
         "head": "HOOK / AÇÃO INCOMUM · TALKING · Setup A",
         "fala": "Put a thin slice of raw ginger on your tongue for ten seconds when an afternoon craving hits. Watch what happens before you reach for food.",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 50
       },
       "takes_reconhecidos": 9,
@@ -305,7 +565,9 @@
         "id": "T1",
         "head": "TESTE 1 / DEMO (frango) · TALKING · Setup A1",
         "fala": "Pour boiling water over raw chicken. If thick white clumps and slimy foam come oozing out, that is what they pumped into it.",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 68
       },
       "takes_reconhecidos": 9,
@@ -329,7 +591,9 @@
         "id": "T1",
         "head": "HOOK A / DEMO · TALKING · Setup A1",
         "fala": "This is what baking soda does to the fat on a woman's legs at twenty five, and at fifty five.",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 49
       },
       "takes_reconhecidos": 12,
@@ -340,7 +604,7 @@
     {
       "producao_id": "melody_acucar",
       "angulo": 1,
-      "oferta": "Korella Saffron",
+      "oferta": "Historico: Korella Saffron",
       "objetivo_declarado": null,
       "funil_documentado": "comment `yes` -> DM -> deep link Amazon",
       "referencia": "`e47258d0-5ab6-4c69-a982-5e4557a26cd5.mp4` (inspeção de corpo + receita anti-açúcar, Jupi Hydration, 86s)",
@@ -353,7 +617,9 @@
         "id": "T1",
         "head": "HOOK 1 · TALKING · Setup A",
         "fala": "This is sugar damage.",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 57
       },
       "takes_reconhecidos": 29,
@@ -364,7 +630,7 @@
     {
       "producao_id": "melody_mercado",
       "angulo": 1,
-      "oferta": "Korella Saffron",
+      "oferta": "Historico: Korella Saffron",
       "objetivo_declarado": null,
       "funil_documentado": "comment `yes` -> DM -> deep link Amazon",
       "referencia": "`f036698f-3446-482a-b9ac-cde212650d69.mp4` (3 dicas de inspeção de alimento em supermercado, 44,6s)",
@@ -377,7 +643,9 @@
         "id": "T1",
         "head": "HOOK · TALKING · Setup A",
         "fala": "Pour boiling water over your bell peppers, brother, and let them dry.",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 50
       },
       "takes_reconhecidos": 23,
@@ -388,7 +656,7 @@
     {
       "producao_id": "melody_pes",
       "angulo": 1,
-      "oferta": "Korella Saffron",
+      "oferta": "Historico: Korella Saffron",
       "objetivo_declarado": null,
       "funil_documentado": "comment `yes` -> DM -> deep link Amazon do Korella Saffron",
       "referencia": "`snapinsta-1787665585342.mp4` (escalda-pés com peróxido, 38,7s, 8 takes, growth puro)",
@@ -401,7 +669,9 @@
         "id": "T1",
         "head": "HOOK + REVEAL CONTÍNUO · TALKING · Setup A",
         "fala": "Pour hydrogen peroxide on your feet, brother, and watch what happens. Because if it starts foaming, it just found what has been living on them.",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 52
       },
       "takes_reconhecidos": 22,
@@ -412,7 +682,7 @@
     {
       "producao_id": "melody_rosto",
       "angulo": 1,
-      "oferta": "Korella Saffron",
+      "oferta": "Historico: Korella Saffron",
       "objetivo_declarado": null,
       "funil_documentado": "comment `yes` -> DM -> deep link Amazon do Korella Saffron",
       "referencia": "`snapinsta-1787707339628.mp4` (rosto inchado derretendo com chá de gengibre, 27,1s, 4 takes, original em espanhol)",
@@ -425,7 +695,9 @@
         "id": "T1",
         "head": "HOOK + REVEAL CONTÍNUO · TALKING · Setup A",
         "fala": "This is what sugar is doing to your face, brother. And nobody in that grocery store is telling you.",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 53
       },
       "takes_reconhecidos": 20,
@@ -436,7 +708,7 @@
     {
       "producao_id": "melody_sal",
       "angulo": 1,
-      "oferta": "Korella Saffron",
+      "oferta": "Historico: Korella Saffron",
       "objetivo_declarado": null,
       "funil_documentado": "comment `yes` -> DM -> deep link Amazon do Korella Saffron",
       "referencia": "`9a493713-cebb-4181-bd39-22c89d7ac462.mp4` (sal grosso no chão do chuveiro, 56,6s, 10 beats, 2 cortes)",
@@ -449,7 +721,9 @@
         "id": "T1",
         "head": "HOOK + REVEAL CONTÍNUO · TALKING · Setup A",
         "fala": "Pour salt in your shower, spread a thick layer on the floor, and stand on it barefoot for ten minutes.",
+        "falantes": [],
         "mudo": false,
+        "curta": false,
         "linha": 57
       },
       "takes_reconhecidos": 22,
@@ -460,7 +734,7 @@
     {
       "producao_id": "melody_varanda",
       "angulo": 1,
-      "oferta": "Korella Saffron",
+      "oferta": "Historico: Korella Saffron",
       "objetivo_declarado": null,
       "funil_documentado": "comment `yes` -> DM -> deep link Amazon",
       "referencia": "`Joseph&Coco_Comment _BIG_ and I will_2004575490207097_1080p_20260822.mp4` (movie style + VSL de disfunção erétil, 114,9s)",
@@ -473,12 +747,45 @@
         "id": "T1",
         "head": "HOOK · TALKING · Setup A",
         "fala": "Baby, I know you are seventy three, and I know I have a husband, but the way you carry yourself.",
+        "falantes": [
+          "MULHER"
+        ],
         "mudo": false,
+        "curta": false,
         "linha": 52
       },
       "takes_reconhecidos": 31,
       "estado_checkpoint": null,
       "fonte": "producao/melody_varanda/ROTEIRO.md",
+      "evidencia": "Documento de producao; desempenho nao comprovado por este registro."
+    },
+    {
+      "producao_id": "sf_madrasta_frango",
+      "angulo": 2,
+      "oferta": "FitWell",
+      "objetivo_declarado": null,
+      "funil_documentado": "nenhum. Sem produto, keyword ou CTA falado. Card `follow to part 2` na tela, via CapCut,",
+      "referencia": "`Muszynski Venetia_Cheguei em casa mais ced_2855227928192545_1080p_20260923.mp4`",
+      "avatares_documentados": "nenhum fixo (short form de growth, decisão do Luigi em 2026-09-22). Elenco próprio,",
+      "variavel_e_ponte_documentadas": "nenhuma. Crescimento clona quase palavra por palavra",
+      "entrada_narrativa_documentada": null,
+      "formato_documentado": "short-form",
+      "enquadramento_documentado": "câmera de quem está na cozinha assistindo, altura de adulto, troca de plano para a",
+      "abertura_documentada": {
+        "id": "T1",
+        "head": "TRANSGRESSÃO + FLAGRANTE · DIÁLOGO · Setup A",
+        "fala": "Don't touch my son's food! What did you do to my daughter?",
+        "falantes": [
+          "MADRASTA",
+          "PAI"
+        ],
+        "mudo": false,
+        "curta": false,
+        "linha": 70
+      },
+      "takes_reconhecidos": 7,
+      "estado_checkpoint": null,
+      "fonte": "producao/sf_madrasta_frango/ROTEIRO.md",
       "evidencia": "Documento de producao; desempenho nao comprovado por este registro."
     }
   ]

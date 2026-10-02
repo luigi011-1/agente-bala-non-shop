@@ -39,13 +39,14 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 - [Processo em 7 fases](processo_7_fases.md) — o pipeline inteiro
 
 ## 🎯 AO DEFINIR ÂNGULO E AVATAR
-- [Produtos e ângulos](produtos_angulos.md) — **SEMPRE perguntar: Ângulo 1, 2, 3 ou 4?** Korella x FityWell x Auraly x Body Hacks, banco de insights do quiz
-- [Ângulo 4, doutrina Body Hacks For Men](angulo4_copy_bodyhacks.md) — só no Ângulo 4 (histórico). 42 hacks de HÁBITO, homens 40+; avatares PAR; limite honesto BANIDO; livro FÍSICO em quadro
+- [Produtos e ângulos](produtos_angulos.md) — **SEMPRE perguntar: Ângulo 1, 2, 3 ou 4?** (o 4 voltou em 2026-10-02) Sea Moss (Korella virou histórico em 2026-10-02) x FityWell x Auraly x Body Hacks, banco de insights do quiz
+- [🔴 Ângulo 1, doutrina Natural Rems Sea Moss](angulo1_copy_seamoss.md) — **só no Ângulo 1, desde 2026-10-02 (substitui a Korella).** CTA da marca em 4 passos (PDF em `producao/_seamoss/`): frasco parado e legível, "Search Natural Rems Sea Moss on Amazon", link do comentário fixado depois (decisão do Luigi), fecha; comentário opcional com `yes`. Avatar: holistic.brandon; compliance que corta pagamento (#ad #syntheticperformer #naturalrems, sem antes/depois, sem médico, sem remédio/concorrente)
+- [Ângulo 4, doutrina Body Hacks For Men](angulo4_copy_bodyhacks.md) — só no Ângulo 4, **de volta ao intake em 2026-10-02 para a holistic.brandon (COACH)**. 42 hacks de HÁBITO, homens 40+; Dana/Jamie/Lynn PAR; limite honesto BANIDO; livro FÍSICO em quadro
 - [Ângulo 3, doutrina Auraly](angulo3_copy_auraly.md) — só no Ângulo 3. Roster desde 2026-09-22 (Walt, Darlene, Lorraine) + Morgan Vance em 2026-09-30, kit de tarólogo, lei do registro (divino, nunca oculto), destino Stories com `222` antes, sem DM desde 2026-09-22
 - [Swipe do Ângulo 3, 19 copies validadas](angulo3_swipe_padroes.md) — banco de COPY do nicho (não é processo): esqueleto de 8 beats, ritualizar a métrica, truque do WhatsApp, punição por inação
 - [Ângulo 3, VSL da ramificação FORTUNA](angulo3_vsl_fortuna.md) — **ao escrever vídeo, gancho ou Stories de dinheiro no Auraly:** funil free card reading → VSL → $19; ativos (cosmic receiver, cosmic birthright, I claim this) e a ponte obrigatória; lei do registro afrouxada nesta ramificação (2026-09-29: ritual, proteção, inveja liberados; bruxa/feitiço/pacto não)
 - [Matriz de congruência](congruencia_matriz.md) — usuário x coach por categoria. Claim de idade vivida exige avatar com a idade
-- [Fichas dos avatares](avatares_fichas.md) — traços canônicos e **caminho da âncora**. Ângulo 3: Walt, Darlene, Lorraine + Morgan Vance (conta orgânica nova, 2026-09-30) (âncora em cena real, nunca fingerprint). FityWell: Dana Morrison, Jamie Anderson, Lynn Parker (+7 no Ângulo 2, + holistic.brandon de volta ao Ângulo 2 em 2026-09-29, COACH). Korella: Melody Carter, holistic.trevor
+- [Fichas dos avatares](avatares_fichas.md) — traços canônicos e **caminho da âncora**. Ângulo 3: Walt, Darlene, Lorraine + Morgan Vance (conta orgânica nova, 2026-09-30) (âncora em cena real, nunca fingerprint). FityWell: Dana Morrison, Jamie Anderson, Lynn Parker (+7 no Ângulo 2, + holistic.brandon de volta ao Ângulo 2 em 2026-09-29, COACH, e desde 2026-10-02 também no Sea Moss e no Body Hacks). Korella (histórico): Melody Carter, holistic.trevor
 
 
 ## ✍️ AO ESCREVER O HOOK E O CORPO

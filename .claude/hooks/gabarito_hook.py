@@ -11,7 +11,7 @@ Auraly: WORKFLOW_AURALY.md -> CHECKPOINT.md -> somente Next action. Respeite WAI
 Oferta e objetivo sao distintos: SALE ou GROWTH conforme decisao registrada. Nao inferir growth
 pela referencia, nao misturar ofertas e nao exigir Stories de growth explicitamente aprovado.
 O checkpoint governa estado e fila; AVATAR_QUEUE e vista derivada. AVATAR DONE != PRODUCTION DONE.
-Para Angle 1/2: CLAUDE.md e PLAYBOOK_FITYWELL.md quando aplicavel. Angle 4 e historico.
+Para Angle 1/2/4: CLAUDE.md e PLAYBOOK_FITYWELL.md quando aplicavel. Angle 1 = Sea Moss.
 O playbook mestre Auraly e referencia criativa, nunca roteador operacional.
 Nao reconstruir configuracao de memoria: ler o contrato indicado pelo workflow da oferta.
 Imagem e ganchos, em qualquer angulo: rodar GATE_VISUAL.md antes (luz neutra/ceu com cor, sem tom
