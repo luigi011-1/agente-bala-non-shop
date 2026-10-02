@@ -5,13 +5,18 @@ Ele apenas identifica o workflow e roteia o Codex para a fonte de verdade corres
 
 ## Angulos comerciais oficiais
 
-- ANGLE 1: nutraceutical / Korella Saffron.
+- ANGLE 1: nutraceutical / Natural Rems Sea Moss 16-in-1 Gummies (Amazon), desde 2026-10-02.
+  Substitui a Korella Saffron, que fica como historico. Doutrina na memoria `angulo1-copy-seamoss`.
 - ANGLE 2: FitWell / health-weight-loss app.
 - ANGLE 3: Auraly app. Manifestation, soulmate, 11:11, 222, 333, 777, law of attraction,
   synchronicity, signs from the universe e romantic connection pertencem a esta oferta.
 
+- ANGLE 4: Body Hacks For Men 40+ (FitWell, ebook de habitos, homens 40+). De volta ao intake em
+  2026-10-02 para rodar na holistic.brandon (COACH); Dana, Jamie e Lynn seguem como PAR. Doutrina na
+  memoria `angulo4-copy-bodyhacks`.
+
 Nao existe um Angle 3 padrao de growth tarot. Oferta, promessa, mecanismo, nicho, CTA e linguagem
-especifica dos tres angulos nunca se misturam. Principios universais, como Metodo Puzzle, podem
+especifica dos quatro angulos nunca se misturam. Principios universais, como Metodo Puzzle, podem
 atravessar os angulos.
 
 ## Roteamento obrigatorio do Angle 3 / Auraly
@@ -54,15 +59,16 @@ Ao receber `.mp4` e anchors:
 4. se o angulo nao foi declarado, listar os arquivos recebidos e perguntar:
 
 > Qual angulo desta producao?  
-> 1 - Angle 1  
-> 2 - Angle 2  
-> 3 - Auraly
+> 1 - Angle 1 (Sea Moss)  
+> 2 - Angle 2 (FitWell)  
+> 3 - Auraly  
+> 4 - Angle 4 (Body Hacks)
 
 Nao analisar nem adaptar antes da definicao do angulo.
 
 ## Outros angulos
 
-Para Angle 1 e Angle 2, usar `CLAUDE.md` como roteador geral e consultar somente os arquivos
+Para Angle 1, Angle 2 e Angle 4, usar `CLAUDE.md` como roteador geral e consultar somente os arquivos
 especificos do angulo e da etapa. `AGENT_WORKFLOW.md` e Auraly Studio (ambos arquivados em `_arquivo/` em 2026-09-22), bridge, extensao Chrome e
 browser automation sao historicos, salvo pedido explicito do usuario.
 

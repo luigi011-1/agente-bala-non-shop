@@ -1,6 +1,6 @@
 ---
 name: produtos-angulos
-description: "Os QUATRO produtos/ângulos que o Luigi vende e a regra de workflow de sempre perguntar qual ângulo adaptar. Ângulo 1 = nutra masculino Korella Saffron (Amazon, vitalidade/blood flow/ED). Ângulo 2 = app feminino FityWell 'Metabolic Reset 40+' (quiz, mulheres 40+), inclui banco de insights de copy extraído do quiz. Ângulo 3 = app Auraly (alma gêmea/manifestação, mulheres EUA 40+, roster único desde 2026-09-22: Walt Hensley, Darlene Pruitt e Lorraine Vance), doutrina em angulo3-copy-auraly. Ângulo 4 = HISTÓRICO desde 2026-09-14 (Body Hacks For Men, playbook digital de hábitos, homens 40+), não é ângulo oficial no intake; doutrina em angulo4-copy-bodyhacks. ATENÇÃO: keyword é 222 no Ângulo 3, yes nos ângulos 1, 2 e 4 (keyword temática do 4 em aberto)."
+description: "Os QUATRO produtos/ângulos que o Luigi vende e a regra de workflow de sempre perguntar qual ângulo adaptar. Ângulo 1 = Natural Rems Sea Moss 16-in-1 Gummies desde 2026-10-02 (Amazon, perda de peso por estresse/cortisol + munição de ângulos; doutrina em angulo1-copy-seamoss), que SUBSTITUIU a Korella Saffron (histórico, nutra masculino ED). Ângulo 2 = app feminino FityWell 'Metabolic Reset 40+' (quiz, mulheres 40+), inclui banco de insights de copy extraído do quiz. Ângulo 3 = app Auraly (alma gêmea/manifestação, mulheres EUA 40+, roster único desde 2026-09-22: Walt Hensley, Darlene Pruitt e Lorraine Vance), doutrina em angulo3-copy-auraly. Ângulo 4 = Body Hacks For Men (playbook digital de hábitos, homens 40+), de volta ao intake em 2026-10-02 para rodar na holistic.brandon como COACH (Dana, Jamie e Lynn seguem PAR); doutrina em angulo4-copy-bodyhacks. ATENÇÃO: keyword é 222 no Ângulo 3, yes nos ângulos 1 (opcional no Sea Moss), 2 e 4 (keyword temática do 4 em aberto)."
 metadata: 
   node_type: memory
   type: project
@@ -15,10 +15,18 @@ Depois de analisar o vídeo que ele envia (com o avatar em anexo), **SEMPRE perg
 - **O mesmo avatar pode rodar mais de um ângulo** (por isso perguntar sempre). Exceção: o Ângulo 3 roda **só com Walt Hensley, Darlene Pruitt, Lorraine Vance e Morgan Vance** (roster desde 2026-09-22, Morgan desde 2026-09-30; todos os anteriores foram descartados).
 - **Keyword por ângulo:** `yes` nos Ângulos 1, 2 e 4, **`222` no Ângulo 3** (corrigido em 2026-08-26; a versão antiga dizia "sempre `yes` nos três", revogada em 2026-08-24). Autoridade em [[regras-universais]] regra 1. **No Ângulo 4 o Luigi decidiu manter `yes` em 2026-08-27**, recusando a sugestão de keyword temática.
 - **📎 O anexo decide o avatar:** `.mp4` + imagem de avatar na mesma mensagem = produzir para aquele avatar, sem perguntar. Nesse caso a pergunta que resta é só o ângulo. Ver [[angulo3-copy-auraly]].
-- CTA no vídeo é sempre "comment yes" (menos no 3); **muda só o destino da DM**: Ângulo 1 → deep link Amazon do nutra; Ângulo 2 → link do quiz FityWell; Ângulo 3 → link do quiz Auraly; Ângulo 4 → link do ebook Body Hacks For Men (destino exato pendente).
+- CTA no vídeo é sempre "comment yes" (menos no 3); **muda só o destino da DM**: Ângulo 1 → ♻️ desde 2026-10-02 NÃO é mais DM: "Search Natural Rems Sea Moss on Amazon" primeiro, link no comentário fixado depois, comentário opcional com a keyword `yes` ([[angulo1-copy-seamoss]]); Ângulo 2 → link do quiz FityWell; Ângulo 3 → link do quiz Auraly; Ângulo 4 → link do ebook Body Hacks For Men (destino exato pendente).
 - Nunca copiar 100% — adaptar (método puzzle). Ver [[metodo-puzzle]] refinamento de seleção de fonte.
 
-## ÂNGULO 1 — nutra masculino (Korella Saffron)
+## ÂNGULO 1 — Natural Rems Sea Moss (desde 2026-10-02)
+
+> ♻️ **2026-10-02 (Luigi): o Sea Moss SUBSTITUI a Korella no Ângulo 1.** Doutrina, CTA obrigatório da
+> marca e compliance em [[angulo1-copy-seamoss]]. O bloco Korella abaixo é **HISTÓRICO**: serve de
+> referência de formato, nunca de copy, claim, vocabulário ou avatar para o Sea Moss.
+> Avatar do Sea Moss: **holistic.brandon, COACH**, em paralelo com FityWell (Ângulo 2) e Body Hacks (Ângulo 4) na mesma conta.
+> Referência do frasco: `producao/_ancoras/natural_rems_seamoss_produto.jpg`.
+
+### HISTÓRICO: Korella Saffron (até 2026-10-01)
 - **2026-09-22:** a Korella também passa pela etapa de 10 variações de gancho (Puzzle com degrau) e pelos gates de realismo e composição, tudo em `GATE_VISUAL.md` na raiz. Travas da FityWell no gancho; o frasco nunca é a variável.
 - **Produto:** KORELLA Saffron 88.5mg, extrato puro de açafrão, 60 caps. Posicionado "Wellness, Energy Support & Focus – for Men & Women". Amazon (ASIN B0GVKNB82S). É o mesmo "Korella Saffron" dos vídeos da biblioteca.
 - **FOTO DE REFERÊNCIA DO PRODUTO (B-roll):** `C:\Users\luigi\Desktop\B-ROLL PRODUTOS\product.png` — frasco branco, rótulo roxo/branco "KORELLA 100% PURE SAFFRON 88.5MG", "Mood Support / Focus Boost / Body Balance", 60 CAPSULES. **Usar como referência de imagem em TODA geração que mostre o produto** (o Melody segurando o frasco no take de produto/CTA). Por enquanto é o **único produto** — o Luigi avisa quando tiver outro. Claims do rótulo pra ecoar na copy: mood support, focus, body balance, 100% pure, lab-tested-ish.

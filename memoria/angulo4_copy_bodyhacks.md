@@ -1,6 +1,6 @@
 ---
 name: angulo4-copy-bodyhacks
-description: "ATUALIZADO 2026-09-10: a Brandon saiu e o angulo roda com Dana Morrison, Jamie Anderson e Lynn Parker, tres homens 50+, que sao PAR e nao coach (secao 7 reescrita, o beat de testemunha feminina morreu). Doutrina de copy do ANGULO 4 (ebook Body Hacks for Men 40+, marca FITYWELL, homens 40+ EUA, avatar holistic.brandon como coach). CONFERIDA CONTRA A LANDING OFICIAL em 2026-08-27. O produto e um PLAYBOOK DIGITAL de 42 hacks de HABITO em 7 areas, NAO receitas ancestrais e NAO testosterona. A ponte oficial e a frase do proprio produto: 'drive is a readout, not the problem'. Contem o LIMITE HONESTO BANIDO, a regra de nunca culpar a masculinidade dele, o alibi 'it is not your age, it is your playbook', as rotas de fuga, a moldura hibrida da Brandon (coach na base, testemunha em UM beat), o vocabulario champion/johnson, os assets prontos da landing (8 sintomas, 6 objecoes, ancoragem de preco) e a tensao do livro fisico contra um produto digital."
+description: "ATUALIZADO 2026-10-02: o Angulo 4 VOLTOU ao intake e a holistic.brandon VOLTOU a ele como COACH (moldura de 2026-08-27, testemunha feminina em UM beat, so na boca dela); Dana Morrison, Jamie Anderson e Lynn Parker seguem PAR. Em 2026-09-10 a Brandon tinha saido. Doutrina de copy do ANGULO 4 (ebook Body Hacks for Men 40+, marca FITYWELL, homens 40+ EUA, avatar holistic.brandon como coach). CONFERIDA CONTRA A LANDING OFICIAL em 2026-08-27. O produto e um PLAYBOOK DIGITAL de 42 hacks de HABITO em 7 areas, NAO receitas ancestrais e NAO testosterona. A ponte oficial e a frase do proprio produto: 'drive is a readout, not the problem'. Contem o LIMITE HONESTO BANIDO, a regra de nunca culpar a masculinidade dele, o alibi 'it is not your age, it is your playbook', as rotas de fuga, a moldura hibrida da Brandon (coach na base, testemunha em UM beat), o vocabulario champion/johnson, os assets prontos da landing (8 sintomas, 6 objecoes, ancoragem de preco) e a tensao do livro fisico contra um produto digital."
 metadata: 
   node_type: memory
   type: reference
@@ -12,6 +12,12 @@ metadata:
 
 Aberto em 2026-08-27, decisao do Luigi.
 
+> 🟢 **2026-10-02 (Luigi): o Angulo 4 volta ao intake e a holistic.brandon volta a ele, como COACH**,
+> em paralelo com FityWell e Sea Moss na mesma conta. Na boca dela vale a moldura de 2026-08-27 da
+> secao 7 ("Moldura da Brandon"): autoridade por volume observado, nunca idade vivida, e UM beat de
+> testemunha feminina por roteiro, com as tres travas. Dana, Jamie e Lynn seguem PAR, e na boca deles
+> o beat continua morto. O resto da doutrina (produto, ponte, limite honesto banido) nao muda.
+>
 > 🔴 **TROCA DE AVATAR EM 2026-09-10.** A Brandon **saiu da marca FityWell inteira**. O Angulo 4 roda
 > com **Dana Morrison (52), Jamie Anderson (55) e Lynn Parker (70)**, tres homens negros americanos.
 > **A secao 7 inteira foi reescrita por causa disso**, e ela e a unica que muda de fundo: com avatar
@@ -255,10 +261,10 @@ video**:
 **Travas se usar:** um por roteiro, na escalada e nunca no hook, ele relata a propria casa e **nunca
 julga o espectador** (isso quebraria a secao 4). Marcar como teste no P10 quando rodar.
 
-### Historico, a moldura anterior (Brandon, 2026-08-27 a 2026-09-10)
+### Moldura da Brandon (2026-08-27, REATIVADA em 2026-10-02)
 Base coach `"the men I train"`, autoridade por volume observado e nunca por idade vivida, mais um
-beat de testemunha feminina por roteiro. **Nao usar.** Fica registrado porque explica os pacotes
-antigos dela.
+beat de testemunha feminina por roteiro. **Vale de novo, so quando quem fala e a Brandon.** Nos tres
+homens, a moldura PAR de cima continua.
 
 **O golpe de testemunha: UM beat so, e na ESCALADA, nunca no hook.**
 

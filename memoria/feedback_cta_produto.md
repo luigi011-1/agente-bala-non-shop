@@ -11,6 +11,11 @@ metadata:
 
 **SEMPRE mostrar o produto (frasco Korella Saffron) em todo video de venda**, mesmo que o video original que estamos modelando nao mostre nenhum produto.
 
+> ♻️ **2026-10-02: o Ângulo 1 passou a ser o Natural Rems Sea Moss.** Mostrar o frasco e dizer o nome
+> no gesto continua valendo, mas os passos 4 e 5 (comment yes, DM, follow gate) **não são mais o fecho
+> do Ângulo 1**: a marca exige "Search Natural Rems Sea Moss on Amazon" primeiro, com o frasco em
+> quadro, e o link do comentário fixado depois; comentário é opcional e a keyword continua `yes`. Ver [[angulo1-copy-seamoss]].
+>
 > ⚠️ **ESTA REGRA VALE SÓ PARA O ÂNGULO 1.** Decisão do Luigi em 2026-08-21: **no Ângulo 2 (FityWell) NÃO se mostra o produto.** Sem print de app, sem celular em quadro, sem mockup. A regra existe porque o prospect precisa ver e ouvir o frasco pra saber o que procurar na Amazon; no Ângulo 2 não há nada pra procurar, o CTA é um diagnóstico grátis e o link chega na DM. O take de CTA vira close puro falando na câmera, e o nome "FityWell" continua sendo dito em voz alta. Ver [[angulo2-copy-fitywell]].
 
 **Why:** A conversao em videos que nao mostram o produto e baixissima. O foco e fazer a pessoa querer o PRODUTO, nao querer fazer a receita em casa. A abordagem anterior de "curiosity gap" e "ingrediente secreto que potencializa 10x" esta batida e nao converte.
