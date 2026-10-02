@@ -12,7 +12,7 @@ video para venda de seamoss gummies para a holistic.brandon").
 
 | Ordem | Estado | Avatar | Âncora | Cenário (texto dos K) |
 |---:|---|---|---|---|
-| 1 | ACTIVE | holistic.brandon | `producao/_ancoras/holistic_brandon_ancora.jpg` | box de treino: parede de bloco branca, neon vermelho TRAIN PRAY REPEAT, quadro branco STAY READY, bandeira dos EUA, potes de grãos na prateleira; mesa preta e banco preto de academia |
+| 1 | DONE | holistic.brandon | `producao/_ancoras/holistic_brandon_ancora.jpg` | box de treino: parede de bloco branca, neon vermelho TRAIN PRAY REPEAT, quadro branco STAY READY, bandeira dos EUA, potes de grãos na prateleira; mesa preta e banco preto de academia |
 
 ## Travas da produção
 
@@ -25,4 +25,4 @@ video para venda de seamoss gummies para a holistic.brandon").
 
 ## Estado atual
 
-- Roteiro v1 com o gancho fiel entregue para aprovação em 2026-10-02.
+- Roteiro v1 aprovado em 2026-10-02. Pacote entregue em `ENTREGA_BRANDON.md`. Nenhum PENDING nem ACTIVE: PRODUCTION COMPLETE (entrega de prompts).

@@ -2,14 +2,14 @@
 Production: `brandon_seamoss_joelho`
 Angle: 1, Natural Rems Sea Moss · Objective: SALE · Round: VALIDATION
 Reference video: `input/reference_video.mp4`
-Current stage: WAITING_SCRIPT_APPROVAL
-Next action: Luigi aprova ou ajusta o roteiro v1 com o gancho fiel. Aprovado, escrever
-FICHA_FRAMES.md olhando `input/frames_modelo/`, depois o pacote (PROMPTS_PRODUCAO.md, bloco do Flow,
-K e V, transcrições).
+Current stage: PRODUCTION_COMPLETE
+Next action: Luigi gera a mídia no Flow com `ENTREGA_BRANDON.md`; quando mandar o K01 gerado, pontuar
+F1 a F6 contra o frame do modelo; depois da postagem, rodar o P10.
 
 ## Decisões do Luigi (2026-10-02)
 - Ângulo 1, Sea Moss, VENDA, avatar holistic.brandon ("vamos modelar esse video para venda de seamoss
   gummies para a holistic.brandon").
+- Roteiro v1 aprovado com o gancho fiel ("roteiro aprovado, prossiga").
 
 ## Log
 - 2026-10-02: `/watch` rodado: 77,3s, 8 cenas, cortes em 7,63 · 9,20 · 13,20 · 17,73 · 23,37 · 30,33 ·
@@ -22,3 +22,9 @@ K e V, transcrições).
   and"), que é medida da receita copiada literal do modelo, não argumento; fica. Checklist de envio,
   bloco A (gancho fiel): 11/11 aprovados (N/A: A1, A2, A7, fiel ao modelo). Linter: só a FALHA
   esperada de PROMPTS_PRODUCAO.md (pacote ainda não escrito).
+- 2026-10-02: roteiro aprovado. 14 frames do modelo (`input/frames_modelo/K01..K14_modelo.png`),
+  FICHA_FRAMES.md (14 K, placar 14/14), gerar_pacote.py e montar_entrega.py (Flow v17) geraram
+  PROMPTS_BRANDON.md, FLOW_BRANDON.md, PROMPTS_PRODUCAO.md e ENTREGA_BRANDON.md.
+- 2026-10-02: linter 0 FALHAS (aviso esperado: todos os K GERAR DO ZERO, bloco do Flow autossuficiente).
+  Checklist de envio 34/34 (N/A: A1, A2, A7, C4 a C7, E4). Fila: holistic.brandon DONE.
+  PRODUCTION COMPLETE (entrega de prompts).
