@@ -1,6 +1,6 @@
 # Roteamento vigente (2026-09-14)
 
-**AGENTS.md tem precedencia.** Angle 1 = Korella; Angle 2 = FitWell; Angle 3 = Auraly.
+**AGENTS.md tem precedencia.** Angle 1 = Natural Rems Sea Moss (desde 2026-10-02); Angle 2 = FitWell; Angle 3 = Auraly.
 Para Auraly, processo, estado, configuracao e formato de resposta vivem somente em
 `WORKFLOW_AURALY.md` e no CHECKPOINT da producao. As secoes Auraly abaixo documentam historico e
 contexto criativo, nao autorizam reabrir decisoes, juntar K/V ou pular esperas. Consultar o
@@ -9,9 +9,20 @@ playbook mestre somente nas secoes criativas indicadas pelo workflow.
 Para Angle 1 e Angle 2, as regras classicas abaixo continuam aplicaveis; FitWell usa
 `PLAYBOOK_FITYWELL.md`. A configuracao de execucao usa o perfil classico do arquivo Flow,
 que substitui os trechos antigos daqui sobre contagem de variacoes e casamento K/V.
-Angle 4 e um registro historico de Body Hacks, nao um quarto angulo oficial no intake.
+Angle 4 = Body Hacks For Men 40+, de volta ao intake em 2026-10-02 (Luigi) para rodar na holistic.brandon
+(COACH), ao lado de Dana, Jamie e Lynn (PAR).
 Nao perguntar novamente por angulo ou avatar ja definidos. Uma tarefa de analise, organizacao ou
 manutencao nao e uma ordem para executar a proxima etapa de producao.
+
+**🔴 ANGULO 1 = NATURAL REMS SEA MOSS (Luigi, 2026-10-02).** Substitui a Korella Saffron, que vira
+historico. Doutrina, CTA obrigatorio da marca e compliance na memoria `angulo1-copy-seamoss`. Onde
+este arquivo diz "Korella", ler "Sea Moss" para processo e formato; copy, claim, vocabulario e avatar
+da Korella nao passam. Tres travas que cortam o pagamento: (1) CTA de venda abre com **"Search Natural
+Rems Sea Moss on Amazon" com o frasco em quadro**, link no comentario fixado depois e fim (4 passos do PDF em `producao/_seamoss/`, com o passo 3 trocado pelo
+comentario fixado por decisao do Luigi em 2026-10-02), comentario opcional com `yes`, sem DM;
+(2) legenda com `#ad #syntheticperformer #naturalrems` no topo e chave de IA ligada, growth incluso;
+(3) sem antes/depois, sem medico/jaleco/clinica, sem cura ou resultado garantido, sem remedio nem
+concorrente. O linter cobra as tres quando a producao cita Natural Rems ou Sea Moss.
 
 Ferramentas de apoio: `controle/README.md`. Biblioteca e resultados nao substituem o workflow.
 **Gate visual transversal (2026-09-22): `GATE_VISUAL.md`** e a fonte unica de realismo anti cara de
@@ -83,7 +94,7 @@ não reiniciar o processo do zero sem necessidade.
 
 1. Rodar `/watch` no `.mp4`.
 2. **Ler `producao/fitywell_pernas/ROTEIRO.md` e `PROMPTS_PRODUCAO.md`.** São o gabarito vivo dos Ângulos 1, 2 e 4 desde 2026-09-10. Nunca reinventar o formato de memória. O `producao/brandon_angle2/` virou histórico junto com a Brandon.
-3. Perguntar o ângulo (1 Korella / 2 FityWell / 3 Auraly; o 4, Body Hacks, é histórico e não entra no intake) e confirmar o avatar.
+3. Perguntar o ângulo (1 Sea Moss / 2 FityWell / 3 Auraly / 4 Body Hacks, de volta ao intake em 2026-10-02) e confirmar o avatar.
    **Exceção do avatar:** `.mp4` + imagem de avatar na mesma mensagem já decide para quem é,
    ver a seção do Ângulo 3. Nesse caso só resta perguntar o ângulo.
    **Ângulo 3 tem fluxo próprio**, ver a seção no fim deste arquivo. O passo 1 vira opcional lá.
@@ -326,7 +337,8 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
   Ivy Carl, Jamie Voss, Lais Collins, Lia Carlla, Robert Alves e Roberta Carvalho. Não estender os
   sete ao Ângulo 4 sem decisão explícita. **No Ângulo 2 todos são COACH**; quando quem fala é homem,
   o crivo de nunca culpar ela roda DUAS vezes. **No Ângulo 4 os três originais são PAR**, com 1ª
-  pessoa liberada. A holistic.brandon segue aposentada. Âncoras em `producao/_ancoras/`.
+  pessoa liberada. ♻️ **2026-10-02: a holistic.brandon roda os Ângulos 1 (Sea Moss), 2 e 4, sempre
+  COACH** (no 4 com a moldura dela de 2026-08-27, seção 7 de `angulo4-copy-bodyhacks`). Âncoras em `producao/_ancoras/`.
 - **[ÂNGULO 4] LIMITE HONESTO É PROIBIDO.** Nenhuma ressalva, nenhum "isso não faz X". A dor prometida
   e o mecanismo do produto são a mesma linha, então toda ressalva encosta na promessa. O take vai pra
   autoridade, prova social, urgência ou escassez. No Ângulo 3 o objeto de desejo do CTA é
@@ -785,9 +797,9 @@ qualquer copy, porque prometer receita e entregar hábito **quebra no clique**, 
 **Avatares: Dana Morrison (52), Jamie Anderson (55) e Lynn Parker (70), e eles são PAR, não coach**
 (Luigi, 2026-09-10). Homens negros americanos, os três acima dos 50, falando com homens 40+.
 **1ª pessoa liberada:** "when I hit fifty", e no Lynn "in forty years of this". A prova social
-agregada empilha por cima. ♻️ **Revoga a moldura da holistic.brandon**, que era coach com autoridade
-por volume observado e um beat de testemunha feminina por roteiro. **Ela saiu da marca FityWell
-inteira**, e o beat de testemunha feminina **morreu, não se adapta**. Fichas, âncoras e a substituição
+agregada empilha por cima. ♻️ **2026-10-02: a holistic.brandon VOLTOU ao Ângulo 4 (Luigi), como
+COACH**, com a moldura dela de 2026-08-27 (autoridade por volume observado, nunca idade vivida, e UM
+beat de testemunha feminina por roteiro, só na boca dela). Nos três homens o beat continua morto. Fichas, âncoras e a substituição
 em teste (relato de casal em 1ª pessoa) em `avatares-fichas` e na seção 7 de `angulo4-copy-bodyhacks`.
 
 **Keyword `yes`**, decidida pelo Luigi em 2026-08-27.

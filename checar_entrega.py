@@ -340,7 +340,11 @@ def c_keyword(angulo, arquivos, takes, roteiro_txt=""):
     esperada = KEYWORD_POR_ANGULO.get(angulo, "yes")
     proibida = "yes" if esperada != "yes" else "222"
     txt = "\n".join(arquivos.values())
-    if ORGANICO and angulo != 3:
+    if angulo == 1 and detectar_seamoss(txt):
+        # 2026-10-02: no Sea Moss o comentario e opcional. O PDF da marca sugere MOSS, mas o Luigi
+        # decidiu manter 'yes'. A keyword errada e cobrada no c_seamoss.
+        ok("keyword", "Sea Moss: comentario opcional, keyword 'yes' (checada no c_seamoss)")
+    elif ORGANICO and angulo != 3:
         # 2026-09-25: FitWell venda de origem organica manda para o link da bio / comentario
         # fixado no Facebook (PERFIL_ORGANICO.md secao 3). A keyword so e cobrada se usada.
         ok("keyword", "origem organica FitWell: CTA de link da bio, keyword 'yes' opcional")
@@ -1036,6 +1040,107 @@ def c_angulo4(angulo, arquivos, takes, kfs):
         ok("angulo4", "travas do angulo 4 respeitadas")
 
 
+# ---------------------------------------------------------------- angulo 1 (Natural Rems Sea Moss)
+# Desde 2026-10-02 o Sea Moss substitui a Korella. As regras abaixo vem da marca e cortam o
+# pagamento se quebradas (memoria angulo1-copy-seamoss). So rodam quando a producao cita o produto,
+# para nao reprovar os pacotes historicos da Korella.
+
+def detectar_seamoss(txt):
+    return bool(re.search(r"natural rems|sea moss", txt or "", re.I))
+
+
+SEAMOSS_BUSCA_PAT = r"search\s+(for\s+)?natural rems sea moss on amazon"
+SEAMOSS_LINK_PAT = (r"pinned\s+comment|link\s+in\s+(my\s+)?bio|link\s+(is\s+)?(right\s+)?below"
+                    r"|in my profile")
+SEAMOSS_FALA_PROIBIDA = (
+    (r"\bday\s*(one|1)\b.{0,40}\bday\s*(thirty|30)\b|before\s+and\s+after|before\s*/\s*after",
+     "conteudo de transformacao (antes/depois, day 1 vs day 30) e proibido pela marca"),
+    (r"\b(doctors?|physicians?|nurses?|clinics?|scrubs|white coat)\b",
+     "nada medico na fala (medico, clinica, jaleco), regra da marca"),
+    (r"\b(cures?|cured|curing|treats?|treated|treating|treatment|guarantee[ds]?)\b",
+     "claim de cura, tratamento ou resultado garantido e proibido"),
+    (r"\b(ozempic|wegovy|mounjaro|zepbound|semaglutide|tirzepatide|metformin|glp-?1)\b",
+     "nome de remedio e proibido pela marca"),
+)
+SEAMOSS_VISUAL_PROIBIDO = (r"\b(doctors?|physicians?|nurses?|white coat|lab coat|scrubs|stethoscope|"
+                           r"clinic|hospital|exam room|medical office)\b")
+SEAMOSS_HASHTAGS = ("#ad", "#syntheticperformer", "#naturalrems")
+SEAMOSS_COMMENT_PAT = r"comment\s+[\"'`]?yes[\"'`]?\s+and\s+i.?ll\s+send\s+you\s+the\s+link\.?"
+SEAMOSS_NOME_CURTO_PAT = r"search\s+(for\s+)?sea moss\b|\bthis brand\b"
+
+
+def c_seamoss(angulo, arquivos, takes, kfs, roteiro_txt=""):
+    if angulo != 1 or not detectar_seamoss(roteiro_txt):
+        return
+    antes = len([f for f in FALHAS if f[0] == "seamoss"])
+    falas = [t for t in takes if t["fala"]]
+    crescimento = bool(re.search(r"^tipo:\s*crescimento\s*$", roteiro_txt[:600], re.M | re.I))
+
+    for t in falas:
+        for pat, msg in SEAMOSS_FALA_PROIBIDA:
+            m = re.search(pat, t["fala"], re.I)
+            if m:
+                falha("seamoss", "%s usa '%s': %s" % (t["id"], m.group(0), msg),
+                      "ROTEIRO.md:%d" % t["linha"])
+
+    # CTA da marca, so em venda: busca na Amazon PRIMEIRO, link depois.
+    if falas and not crescimento:
+        corrida = " ".join(t["fala"] for t in falas)
+        busca = re.search(SEAMOSS_BUSCA_PAT, corrida, re.I)
+        if not busca:
+            falha("seamoss", "o CTA de venda nao diz 'Search Natural Rems Sea Moss on Amazon'. "
+                             "E o passo 1 obrigatorio da marca, com o frasco em quadro")
+        else:
+            link = re.search(SEAMOSS_LINK_PAT, corrida, re.I)
+            if link and link.start() < busca.start():
+                falha("seamoss", "'%s' vem ANTES da busca na Amazon. A ordem da marca e: "
+                                 "Search Natural Rems Sea Moss on Amazon primeiro, link depois"
+                      % link.group(0))
+            elif link:
+                # Passo 4: a sequencia fecha no link. So o 'Comment yes' opcional vem depois.
+                resto = re.sub(SEAMOSS_COMMENT_PAT, " ", corrida[link.end():], flags=re.I)
+                m = re.search(SEAMOSS_LINK_PAT + r"|amazon|if you can.?t find|\bbio\b|\bprofile\b|\bbelow\b",
+                              resto, re.I)
+                if m:
+                    falha("seamoss", "depois do link aparece '%s'. Passo 4 da marca: o CTA fecha no "
+                                     "link, sem voltar, sem repetir, sem alternativa" % m.group(0))
+            else:
+                aviso("seamoss", "o CTA nao cita o link (passo 3, decisao do Luigi: 'Or you can "
+                                 "just tap the link I left in the pinned comment on this video.')")
+        m = re.search(SEAMOSS_NOME_CURTO_PAT, corrida, re.I)
+        if m:
+            falha("seamoss", "'%s': a marca exige o nome inteiro, 'Natural Rems Sea Moss'" % m.group(0))
+        for t in falas:
+            m = re.search(r"(?<!pinned )(?<!the )(?<!a )\bcomment\s+[\"'`]?(\w+)", t["fala"], re.I)
+            if m and m.group(1).lower() != "yes":
+                falha("seamoss", "%s pede 'comment %s'. A keyword do Sea Moss e yes"
+                      % (t["id"], m.group(1)), "ROTEIRO.md:%d" % t["linha"])
+
+    # Compliance de legenda, vale em growth tambem.
+    txt = "\n".join(arquivos.values())
+    faltam = [h for h in SEAMOSS_HASHTAGS if not re.search(re.escape(h) + r"\b", txt, re.I)]
+    if faltam:
+        falha("seamoss", "legenda sem %s. A marca exige '#ad #syntheticperformer #naturalrems' no "
+                         "topo da legenda em todo video, growth incluso" % " ".join(faltam))
+
+    for k in kfs:
+        if not k["json_raw"]:
+            continue
+        try:
+            d = json.loads(k["json_raw"])
+        except Exception:
+            continue
+        corpo = " ".join(str(v) for campo, v in d.items()
+                         if campo not in ("negative", "reference_use"))
+        m = re.search(SEAMOSS_VISUAL_PROIBIDO, corpo, re.I)
+        if m and not em_negacao(corpo, m.start(), janela=60):
+            falha("seamoss", "%s cita '%s'. Nada medico em quadro (medico, jaleco, scrubs, clinica)"
+                  % (k["id"], m.group(0)), (PROMPTS_FILE + ":%d") % k["linha"])
+
+    if len([f for f in FALHAS if f[0] == "seamoss"]) == antes:
+        ok("seamoss", "CTA e compliance da Natural Rems respeitados")
+
+
 # ---------------------------------------------------------------- pipeline Auraly (angulo 3)
 
 # Secoes obrigatorias do ROTEIRO.md hibrido do pipeline Auraly.
@@ -1366,6 +1471,7 @@ def checar(pasta):
     c_ficha_frame(pasta)
     c_angulo3(angulo, arquivos, kfs, takes, pasta, roteiro)
     c_angulo4(angulo, arquivos, takes, kfs)
+    c_seamoss(angulo, arquivos, takes, kfs, roteiro or "")
 
     return imprimir(pasta, "  %s   (angulo %s | %d takes | %d keyframes | %d clipes)"
                     % (pasta, angulo if angulo else "?", len(takes), len(kfs), len(videos)))

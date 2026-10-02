@@ -12,7 +12,7 @@ from checar_entrega import parse_takes
 
 ROOT = Path(__file__).resolve().parent
 CONTROLE = ROOT / 'controle'
-OFERTAS = {1: 'Korella Saffron', 2: 'FitWell', 3: 'Auraly', 4: 'Historico: Body Hacks'}
+OFERTAS = {1: 'Natural Rems Sea Moss', 2: 'FitWell', 3: 'Auraly', 4: 'Body Hacks'}
 CONTAGENS = ('impressoes', 'visualizacoes', 'reproducoes_3s', 'conclusoes', 'curtidas', 'comentarios', 'salvamentos', 'compartilhamentos', 'seguidores', 'cliques', 'visitas_destino', 'compras')
 VALORES = ('receita', 'custo', 'minutos_trabalho')
 
@@ -54,7 +54,8 @@ def biblioteca():
         takes = parse_takes(txt)
         registros.append({
             'producao_id': p.parent.name, 'angulo': numero,
-            'oferta': OFERTAS.get(numero, 'Nao identificado'),
+            'oferta': ('Historico: Korella Saffron' if numero == 1 and not re.search(r'natural rems|sea moss', txt, re.I)
+                       else OFERTAS.get(numero, 'Nao identificado')),
             'objetivo_declarado': objetivo, 'funil_documentado': funil,
             'referencia': linha_campo(header, 'Vídeo modelo'),
             'avatares_documentados': linha_campo(header, 'Avatares') or linha_campo(header, 'Avatar'),
@@ -165,11 +166,15 @@ def atualizar():
     dados = validar_resultados(ler_json(CONTROLE / 'resultados.json'), {r['producao_id']: r['objetivo_declarado'] for r in registros})
     gravar_json(CONTROLE / 'biblioteca_criativa.json', {'versao': 1, 'producoes': registros})
     linhas = ['# Biblioteca criativa', '', 'Índice derivado dos roteiros. Não é workflow nem ranking de performance. Campos ausentes permanecem não documentados. O campo de variável preserva o texto da fonte, incluindo alegações ainda não verificadas.', '', 'Para consultar: `python3 gerenciar_operacao.py buscar --angulo 3 --termo segredo`.', '']
+    # Agrupa pela oferta de cada registro: no angulo 1 a Korella historica e o Sea Moss ficam separados.
+    ofertas = []
     for n in (1, 2, 3, 4, None):
-        grupo = [r for r in registros if r['angulo'] == n]
-        if not grupo:
-            continue
-        linhas += ['## ' + OFERTAS.get(n, 'Sem classificação'), '', '| Produção / fonte | Objetivo explícito | Variável e ponte documentadas | Enquadramento |', '|---|---|---|---|']
+        for r in registros:
+            if r['angulo'] == n and r['oferta'] not in ofertas:
+                ofertas.append(r['oferta'])
+    for oferta in ofertas:
+        grupo = [r for r in registros if r['oferta'] == oferta]
+        linhas += ['## ' + (oferta if oferta != 'Nao identificado' else 'Sem classificação'), '', '| Produção / fonte | Objetivo explícito | Variável e ponte documentadas | Enquadramento |', '|---|---|---|---|']
         for r in grupo:
             link = '[%s](%s)' % (r['producao_id'], quote(str(ROOT / r['fonte']), safe='/'))
             linhas.append('| ' + ' | '.join([link, celula(r['objetivo_declarado']), celula(r['variavel_e_ponte_documentadas']), celula(r['enquadramento_documentado'])]) + ' |')
