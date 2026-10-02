@@ -18,14 +18,16 @@ Aberto em 2026-09-10, a partir da produção `producao/fitywell_pernas/`, que é
 |---|---|---|
 | Produto | app FityWell, funil de quiz | playbook digital de 42 hacks, $9.90 |
 | Público | mulheres 40+ | homens 40+ |
-| Avatares | Dana Morrison, Jamie Anderson, Lynn Parker + Eva Dall, Ivy Carl, Jamie Voss, Lais Collins, Lia Carlla, Robert Alves e Roberta Carvalho | Dana Morrison, Jamie Anderson e Lynn Parker |
+| Avatares | Dana Morrison, Jamie Anderson, Lynn Parker + Eva Dall, Ivy Carl, Jamie Voss, Lais Collins, Lia Carlla, Robert Alves e Roberta Carvalho + holistic.brandon (de volta em 2026-09-29) | Dana Morrison, Jamie Anderson e Lynn Parker |
 | Posição do avatar | **COACH**, sempre | **PAR**, 1ª pessoa liberada |
 | Keyword | `yes` | `yes` |
 | Produto em quadro | **não** | **sim**, livro físico |
-| Crivo extra | nunca culpar ela, rodado **duas vezes** porque quem fala é homem | nunca culpar a masculinidade dele |
+| Crivo extra | nunca culpar ela, rodado **duas vezes** quando quem fala é homem (uma na boca da Brandon) | nunca culpar a masculinidade dele |
 
 Fichas, âncoras e travas visuais em `avatares-fichas`, seção ROSTER FITYWELL. Os sete avatares
 adicionados em 2026-09-19 pertencem ao Ângulo 2; não estender ao Ângulo 4 sem decisão explícita.
+A holistic.brandon voltou ao Ângulo 2 em 2026-09-29, também COACH (mulher de ~30 anos: cita as
+clientes, nunca 1ª pessoa sobre o corpo depois dos 40); registro em `producao/_ancoras/AVATAR_BRANDON_RETORNO_2026-09-29.md`.
 
 ---
 
