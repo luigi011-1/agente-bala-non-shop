@@ -354,7 +354,7 @@ Desvio (acabamento ou avatar fixo): tablet com a capa do ebook → pote do Natur
 | F2 quanto do quadro | OK | "fills about 25 percent of the frame" |
 | F3 distancia da lente | OK | "about 40 centimeters from the jar" |
 | F4 camera | OK | "phone propped at table height about 40 centimeters from the jar, standard 1x lens" |
-| F5 pose do avatar | OK | "raised with both hands in front of her chest" |
+| F5 pose do avatar | OK | "Raised with both hands in front of her chest" |
 | F6 lista fechada | N/A | o quadro tem só ela e o pote; o fundo vem da âncora |
 | G1 luz neutra | OK | "Neutral overcast daylight" |
 | G2 ceu ou janela | N/A | janela fora do quadro, só a luz entra; nenhum céu em quadro |
@@ -414,7 +414,7 @@ Desvio (acabamento ou avatar fixo): tablet com a capa do ebook → pote do Natur
 | F2 quanto do quadro | OK | "fills about 30 percent of the frame" |
 | F3 distancia da lente | OK | "about 35 centimeters from the jar" |
 | F4 camera | OK | "phone propped at chest height, standard 1x lens" |
-| F5 pose do avatar | OK | "perfectly still with both hands" |
+| F5 pose do avatar | OK | "Perfectly still with both hands" |
 | F6 lista fechada | N/A | o quadro tem só ela e o pote; o fundo vem da âncora |
 | G1 luz neutra | OK | "Neutral overcast daylight" |
 | G2 ceu ou janela | N/A | janela fora do quadro, só a luz entra; nenhum céu em quadro |

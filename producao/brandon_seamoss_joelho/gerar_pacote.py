@@ -203,7 +203,7 @@ def keyframes(a):
                    state=f"Start frame: clear liquid is starting to pour from the bottle into the empty bowl. {n} is {boca}.",
                    negative=NEG_BASE + NEG_SOZINHA + NEG_SEM_FRASCO + ", no readable label on the bottle"),
         "T3": dict(ref=ref_base,
-                   prop=(f"{TIGELA} in the center of {MESA}, very close to the lens, with a little clear liquid in "
+                   prop=(f"{TIGELA[0].upper()}{TIGELA[1:]} in the center of {MESA}, very close to the lens, with a little clear liquid in "
                          "it; a small clear glass dish of white baking soda with a metal teaspoon at its right. She "
                          "holds one plain white ceramic mug full of warm water in each hand, tilted above the bowl."),
                    posture=post_mesa, composition=comp_receita, camera=cam_mesa,
@@ -264,7 +264,7 @@ def keyframes(a):
                     composition=comp_fala, camera=cam_fala, state=f"Start frame: {n} is {boca}, firm and sure.",
                     negative=NEG_BASE + NEG_SOZINHA),
         "T12": dict(ref=ref_prod,
-                    prop=(f"She holds {POTE}, raised with both hands in front of her chest, the label turned straight "
+                    prop=(f"Raised with both hands in front of her chest, she holds {POTE}. The label is turned straight "
                           "to the lens and fully readable, her fingers only on the sides of the jar."),
                     posture=f"{n} stands behind {MESA}, seen from the waist up, holding the jar toward the camera.",
                     composition=("Straight-on medium shot from table height: the phone lens is about 40 centimeters "
@@ -274,7 +274,7 @@ def keyframes(a):
                     camera=cam_pote, state=f"Start frame: {n} is smiling and {boca}.",
                     negative=NEG_BASE + NEG_SOZINHA + ", no second jar, no loose gummies, no banner on the jar, no fingers over the label"),
         "T13": dict(ref=ref_prod,
-                    prop=(f"She holds {POTE} in her left hand in front of her chest, the label turned straight to the "
+                    prop=(f"In her left hand, in front of her chest, she holds {POTE}. The label is turned straight to the "
                           "lens and fully readable, her right index finger pointing at the ingredient pills on the label."),
                     posture=f"{n} stands behind {MESA}, seen from the waist up, holding the jar toward the camera.",
                     composition=("Straight-on medium shot from table height: the phone lens is about 40 centimeters "
@@ -284,8 +284,8 @@ def keyframes(a):
                     camera=cam_pote, state=f"Start frame: {n} is {boca}, upbeat.",
                     negative=NEG_BASE + NEG_SOZINHA + ", no second jar, no loose gummies, no banner on the jar, no fingers over the label"),
         "T14": dict(ref=ref_prod,
-                    prop=(f"She holds {POTE} perfectly still with both hands in front of her chest, centered, the "
-                          "label turned straight to the lens, fully readable and with nothing covering it."),
+                    prop=(f"Perfectly still with both hands in front of her chest, centered, she holds {POTE}. The label is "
+                          "turned straight to the lens, fully readable and with nothing covering it."),
                     posture=f"{n} stands behind {MESA}, seen from the chest up, holding the jar toward the camera.",
                     composition=("The tightest shot of the video, straight-on from chest height: the phone lens is "
                                  "about 35 centimeters from the jar, which fills about 30 percent of the frame in the "
@@ -444,14 +444,14 @@ for _k, _quadro, _dist, _f2, _f3, _f4, _pose in (
         ("K12", "pote nuns 25% no centro de baixo (o tablet do modelo ocupava uns 30% à esquerda)", "uns 40 cm do pote",
          '"fills about 25 percent of the frame"', '"about 40 centimeters from the jar"',
          '"phone propped at table height about 40 centimeters from the jar, standard 1x lens"',
-         '"raised with both hands in front of her chest"'),
+         '"Raised with both hands in front of her chest"'),
         ("K13", "pote nuns 25% no centro de baixo", "uns 40 cm do pote",
          '"fills about 25 percent of the frame"', '"about 40 centimeters from the jar"',
          '"phone propped at table height about 40 centimeters from the jar, standard 1x lens"',
          '"pointing at the ingredient pills on the label"'),
         ("K14", "pote nuns 30% no centro de baixo, o plano mais fechado do vídeo", "uns 35 cm do pote",
          '"fills about 30 percent of the frame"', '"about 35 centimeters from the jar"',
-         '"phone propped at chest height, standard 1x lens"', '"perfectly still with both hands"')):
+         '"phone propped at chest height, standard 1x lens"', '"Perfectly still with both hands"')):
     FICHA[_k] = dict(heroi="o pote de Natural Rems Sea Moss no lugar do tablet do ebook, rótulo de frente para a lente",
                      termos=['"short wide jar of dark amber plastic with a black screw cap"', '"Sea Moss Gummies"'],
                      quadro=_quadro, dist=_dist,
