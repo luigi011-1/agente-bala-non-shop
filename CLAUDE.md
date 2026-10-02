@@ -600,6 +600,12 @@ powershell -ExecutionPolicy Bypass -File sync_memoria.ps1   # Windows
 Existe pelo mesmo motivo do PORTÃO P10: documento que ninguém atualiza envelhece em silêncio, e
 espelho desatualizado é pior que espelho nenhum, porque parece confiável.
 
+**Na nuvem (claude.ai/code, desde 2026-10-02 a operação roda só lá):** o container nasce sem memória
+viva, então o hook `SessionStart` de `.claude/settings.json` roda `restaurar_memoria.sh --force` e
+instala as dependências do `/watch`. Ali o espelho `memoria/` é a origem, e o container é apagado ao
+fim da sessão: **toda mudança de memória feita na nuvem só sobrevive se rodar `bash sync_memoria.sh`
+e commitar + dar push na mesma sessão.**
+
 ---
 
 ## ÂNGULO 3 (Auraly), o que muda em relação aos Ângulos 1 e 2
