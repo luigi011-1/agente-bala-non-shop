@@ -12,7 +12,7 @@ modelar mais um video para a holistic.brandon ainda para o sea moss da natural r
 
 | Ordem | Estado | Avatar | Âncora | Cenário (texto dos K) |
 |---:|---|---|---|---|
-| 1 | ACTIVE | holistic.brandon | `producao/_ancoras/holistic_brandon_ancora.jpg` | box de treino: parede de bloco branca, neon vermelho TRAIN PRAY REPEAT, quadro branco STAY READY, bandeira dos EUA; mesa preta e banco preto de academia |
+| 1 | DONE | holistic.brandon | `producao/_ancoras/holistic_brandon_ancora.jpg` | box de treino: parede de bloco branca, neon vermelho TRAIN PRAY REPEAT, quadro branco STAY READY, bandeira dos EUA; mesa preta e banco preto de academia |
 
 ## Travas da produção
 
@@ -25,4 +25,4 @@ modelar mais um video para a holistic.brandon ainda para o sea moss da natural r
 
 ## Estado atual
 
-- Roteiro v1 com o gancho fiel entregue para aprovação em 2026-10-02.
+- Roteiro v2 aprovado em 2026-10-02. Pacote entregue em `ENTREGA_BRANDON.md`. Nenhum PENDING nem ACTIVE: PRODUCTION COMPLETE (entrega de prompts).
