@@ -23,7 +23,7 @@ box de treino da âncora.
 
 Divisão dos takes: **um take por cena do modelo.** As cenas 1, 2 e 4 são curtas (4,7s · 1,5s · 3,8s)
 e viram `CENA CURTA`. O corte de 10,21s cai no meio da frase da receita, no próprio modelo. A cena do
-livro (8s) vira três takes no bloco de venda: ponte, produto e o CTA da marca.
+livro (8s) vira cinco takes no bloco de venda: ponte, causa e consequência, a saída, produto e o CTA da marca.
 
 Rota de fechamento: **rota 1, a ordem errada** (de fora para dentro), nunca usada na conta da Brandon.
 Ponte: a pasta trabalha na superfície; o que volta a escurecer vem de baixo da pele.
@@ -40,7 +40,7 @@ Ponte: a pasta trabalha na superfície; o que volta a escurecer vem de baixo da 
 | 4 | RECEITA | conta-gotas de óleo de coco, até virar pasta | idêntico |
 | 5 | PROTOCOLO | mexe a pasta, mostra o gesto em círculos, 30 segundos, 5 minutos, água fria | idêntico |
 | 6 | RESULTADO | segura a tigela de pasta para a lente: "a pele volta a respirar" | idêntico; "começa a clarear em dias" vira "pode começar a parecer mais clara" (desvio 2) |
-| 7 | CTA | o idoso mostra o livro: "comenta libro e te passo o link da Amazon do meu livro" | **ponte (rota 1) + pote do Sea Moss + CTA da marca** |
+| 7 | CTA | o idoso mostra o livro: "comenta libro e te passo o link da Amazon do meu livro" | **ponte (rota 1) + mecanismo (a inflamação é a causa, o escurecimento é a consequência) + pote do Sea Moss + CTA da marca** |
 
 ## Setups de cena
 
@@ -55,8 +55,8 @@ Ponte: a pasta trabalha na superfície; o que volta a escurecer vem de baixo da 
   coco sobre a tigela.
 - **Setup D (T5):** mesma mesa, a pasta branca na tigela, ela mexe com uma colher.
 - **Setup E (T6):** mesma mesa, ela segura a tigela de pasta com as duas mãos, inclinada para a lente.
-- **Setup F (T7):** mesma mesa, tigela de pasta parada no primeiro plano, mãos gesticulando.
-- **Setup G (T8, T9):** mesma mesa, pote de Natural Rems Sea Moss na mão, rótulo de frente. No T9 o
+- **Setup F (T7, T8, T9):** mesma mesa, tigela de pasta parada no primeiro plano, mãos gesticulando.
+- **Setup G (T10, T11):** mesma mesa, pote de Natural Rems Sea Moss na mão, rótulo de frente. No T11 o
   plano mais fechado do vídeo e o pote parado.
 
 ---
@@ -107,13 +107,27 @@ Cena de 21,79 a 28,75s. Ergue a tigela de pasta para a lente, depois abaixa e ge
 
 Começo do bloco de venda, no lugar do livro (28,75s em diante).
 
-### T8 · PRODUTO · TALKING · Setup G
+### T8 · MECANISMO · TALKING · Setup F
 
-> "That's why I have my clients add Natural Rems Sea Moss. Vitamin C and antioxidants to support your skin from the inside, in one green apple gummy."
+> "The darkening was never the problem, it's the consequence. Skin under constant inflammation makes extra pigment to protect itself, and it keeps going darker until that stops."
+
+A causa e a consequência, nessa ordem. Ela aponta a tigela no "problem" e encosta a mão aberta no
+próprio peito no "protect itself".
+
+### T9 · A SAÍDA · TALKING · Setup F
+
+> "Calm what's happening underneath, and the skin has no reason to keep making that pigment. That's the part no paste can reach."
+
+Ela empurra a tigela de pasta de leve para o lado no "no paste can reach", abrindo o espaço da mesa
+para o pote do take seguinte.
+
+### T10 · PRODUTO · TALKING · Setup G
+
+> "That's why I have my clients add Natural Rems Sea Moss. Turmeric, ginger and vitamin C to support your skin from the inside, in one green apple gummy."
 
 O pote sobe para a altura do peito exatamente quando ela diz "Natural Rems Sea Moss".
 
-### T9 · CTA · TALKING · Setup G
+### T11 · CTA · TALKING · Setup G
 
 > "Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video."
 
@@ -131,7 +145,7 @@ público do vídeo. A cliente não fala.
 
 ## Roteiro só-fala
 
-She started hiding her legs because of her dark inner thighs. Then she found this. Mix a spoonful of baking soda with the juice of half a lemon and two drops of coconut oil until it forms a paste. Rub it in gentle circles on your inner thighs for thirty seconds. Let it sit five minutes, then rinse with cold water. The skin breathes again. What took years to darken can start to look lighter in days. But the paste only works on the surface, and that darkening keeps coming back when your skin is inflamed underneath. That's why I have my clients add Natural Rems Sea Moss. Vitamin C and antioxidants to support your skin from the inside, in one green apple gummy. Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video.
+She started hiding her legs because of her dark inner thighs. Then she found this. Mix a spoonful of baking soda with the juice of half a lemon and two drops of coconut oil until it forms a paste. Rub it in gentle circles on your inner thighs for thirty seconds. Let it sit five minutes, then rinse with cold water. The skin breathes again. What took years to darken can start to look lighter in days. But the paste only works on the surface, and that darkening keeps coming back when your skin is inflamed underneath. The darkening was never the problem, it's the consequence. Skin under constant inflammation makes extra pigment to protect itself, and it keeps going darker until that stops. Calm what's happening underneath, and the skin has no reason to keep making that pigment. That's the part no paste can reach. That's why I have my clients add Natural Rems Sea Moss. Turmeric, ginger and vitamin C to support your skin from the inside, in one green apple gummy. Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video.
 
 ## Tabela bilíngue
 
@@ -144,8 +158,10 @@ She started hiding her legs because of her dark inner thighs. Then she found thi
 | T5 | Rub it in gentle circles on your inner thighs for thirty seconds. Let it sit five minutes, then rinse with cold water. | Esfregue em círculos suaves na parte interna das coxas por trinta segundos. Deixe agir cinco minutos e depois enxágue com água fria. |
 | T6 | The skin breathes again. What took years to darken can start to look lighter in days. | A pele volta a respirar. O que levou anos para escurecer pode começar a parecer mais claro em dias. |
 | T7 | But the paste only works on the surface, and that darkening keeps coming back when your skin is inflamed underneath. | Mas a pasta só age na superfície, e esse escurecimento continua voltando quando a sua pele está inflamada por baixo. |
-| T8 | That's why I have my clients add Natural Rems Sea Moss. Vitamin C and antioxidants to support your skin from the inside, in one green apple gummy. | É por isso que eu faço as minhas clientes acrescentarem o Natural Rems Sea Moss. Vitamina C e antioxidantes para apoiar a sua pele por dentro, numa goma de maçã verde. |
-| T9 | Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video. | Procure Natural Rems Sea Moss na Amazon. Ou é só tocar no link que eu deixei aqui embaixo, na legenda deste vídeo. |
+| T8 | The darkening was never the problem, it's the consequence. Skin under constant inflammation makes extra pigment to protect itself, and it keeps going darker until that stops. | O escurecimento nunca foi o problema, é a consequência. A pele sob inflamação constante produz pigmento a mais para se proteger, e continua escurecendo até isso parar. |
+| T9 | Calm what's happening underneath, and the skin has no reason to keep making that pigment. That's the part no paste can reach. | Acalme o que está acontecendo por baixo, e a pele não tem mais motivo para continuar produzindo esse pigmento. Essa é a parte que nenhuma pasta alcança. |
+| T10 | That's why I have my clients add Natural Rems Sea Moss. Turmeric, ginger and vitamin C to support your skin from the inside, in one green apple gummy. | É por isso que eu faço as minhas clientes acrescentarem o Natural Rems Sea Moss. Cúrcuma, gengibre e vitamina C para apoiar a sua pele por dentro, numa goma de maçã verde. |
+| T11 | Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video. | Procure Natural Rems Sea Moss na Amazon. Ou é só tocar no link que eu deixei aqui embaixo, na legenda deste vídeo. |
 
 ## Contagem de palavras
 
@@ -159,7 +175,9 @@ She started hiding her legs because of her dark inner thighs. Then she found thi
 | T6 | 16 | ok |
 | T7 | 20 | ok |
 | T8 | 27 | ok |
-| T9 | 25 | ok |
+| T9 | 22 | ok |
+| T10 | 28 | ok |
+| T11 | 25 | ok |
 
 ---
 
@@ -181,17 +199,22 @@ She started hiding her legs because of her dark inner thighs. Then she found thi
   bandeira continua na parede da âncora.
 - **Desvio 5, CTA da marca:** o livro por comentário vira o pote e o CTA em 4 passos: produto em quadro,
   Amazon primeiro, link da legenda depois, fim. Comentário opcional com `yes` fora, porque não há DM.
-- **Bloco de venda (T7 e T8), rota 1:** a pasta age na superfície e o escurecimento volta por baixo;
-  o pote entra como o que age por dentro. A ponte usa a mesma dor do gancho. Nenhuma fala promete que
-  a goma clareia a pele: T8 usa "support" e cita só o que está no rótulo (vitamina C, antioxidantes).
+- **Bloco de venda (T7 a T10), rota 1, ponte em quatro elos** (pedido do Luigi em 2026-10-02, v2:
+  explicar o mecanismo depois do T7): a pasta age na superfície (T7) → a inflamação é a causa e o
+  escurecimento é a consequência, a pele faz pigmento para se proteger (T8) → acalmar o que está por
+  baixo tira o motivo do pigmento, e isso nenhuma pasta alcança (T9) → o pote age por dentro (T10).
+  Nenhuma fala promete que a goma clareia a pele nem que trata inflamação: T10 usa "support" e cita só
+  ingredientes do rótulo (cúrcuma, gengibre, vitamina C). "Inflammation" aparece uma vez só no T8; T7
+  diz "inflamed" e T9 diz "what's happening underneath", para não repetir o sintoma em sequência.
 - **Herói do gancho:** a mancha escura e áspera na parte interna da coxa da cliente, colada na lente, com
   a mão da Brandon em cima. Fica o mesmo nos dois primeiros takes.
 - **Legenda do post:** primeira linha `#ad #syntheticperformer #naturalrems`, o link da Amazon logo
   abaixo, chave de conteúdo de IA ligada. Legenda de tela no CapCut em inglês, branca e grossa, no
   meio do quadro, como no modelo.
-- **Compliance, claim mais arriscado:** T7, "keeps coming back when your skin is inflamed underneath"
-  (diagnóstico de inflamação). Logo atrás, T6 com "can start to look lighter in days". A coxa perto da
+- **Compliance, claim mais arriscado:** T9 seguido do T10. Juntos eles sugerem que a goma acalma a
+  inflamação por baixo da pele, sem dizer isso com todas as letras. Logo atrás, T7 e T8 diagnosticando
+  inflamação, e T6 com "can start to look lighter in days". A coxa perto da
   virilha é o ponto de maior risco de moderação nas imagens: a cliente fica de short largo e nada além
   da coxa aparece.
-- **Duração:** ~52s (o modelo tem 37s; o bloco de venda ocupa o lugar dos 8s do livro com três takes).
-- **Se ficar longo:** o T7 é o único take que pode sair, mas leva junto o argumento da ponte.
+- **Duração:** ~68s (o modelo tem 37s; o bloco de venda ocupa o lugar dos 8s do livro com cinco takes).
+- **Se ficar longo:** o T9 é o que sai com menos perda; T7 e T8 seguram a ponte.

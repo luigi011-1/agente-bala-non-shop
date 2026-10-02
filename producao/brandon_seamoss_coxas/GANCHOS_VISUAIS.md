@@ -31,4 +31,4 @@ de hospital leem como clínica, proibida pela marca: vira o banco preto do box d
 de camiseta e short; (3) o casal de apresentadores vira só a Brandon, regata branca e cruz de ouro
 (avatar fixo). Acabamento pelo GATE_VISUAL Partes 1 a 3 (coxa colada na lente, luz neutra, sem blur).
 Delayed meaning: o gancho mostra a mancha e diz que "ela encontrou isto", mas o que é "isto" só chega
-no T3, e o porquê de voltar só no T7.
+no T3, e o porquê de voltar só no T7 e no T8.

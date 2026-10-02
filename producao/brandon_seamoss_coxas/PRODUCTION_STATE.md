@@ -20,3 +20,6 @@ modelo por take, escrever FICHA_FRAMES.md e o pacote (gerador no molde de `brand
 - 2026-10-02: checar_frases.py: 1 trecho igual à `brandon_maca_alho` no T3 ("the juice of half a
   lemon"), medida da receita, não argumento; fica. Checklist de envio, bloco A (gancho fiel): 11/11
   aprovados (N/A: A1, A2, A7, fiel ao modelo). Linter: só a FALHA esperada de PROMPTS_PRODUCAO.md.
+- 2026-10-02: roteiro v2 (pedido do Luigi: explicar depois do T7 o mecanismo, a inflamação como causa
+  real e o escurecimento como consequência). Entram T8 (causa e consequência) e T9 (a saída); o produto
+  vira T10 e o CTA vira T11. 11 takes, ~68s.
