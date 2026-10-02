@@ -64,10 +64,19 @@ precisa. Ele substitui o CTA original no mesmo lugar do vídeo e com o mesmo tam
 
 | | GROWTH | SALE |
 |---|---|---|
-| **FitWell (Ângulo 2)** | CTA do próprio original (save / comment / follow), como em `feedback-growth-video-sem-venda` | **padrão: link da bio** (no Facebook, o comentário fixado), com ponte de continuidade do próprio vídeo. **Reserva, se o link sair:** keyword `yes` + "so I can send it to you" + follow (ver abaixo). Sem "free", sem prometer brinde que o funil não entrega (livro, replay) |
+| **FitWell (Ângulo 2)** | CTA do próprio original (save / comment / follow), como em `feedback-growth-video-sem-venda` | ♻️ **desde 2026-09-30: comentário FIXADO** (ver abaixo): `comment yes` + follow como engajamento e, depois, o plano personalizado Metabolic Reset da FityWell como a única solução real da dor dela + "tap the link in the pinned comment" (nunca "if you want"). Sem DM, sem "I'll send you", sem "free", sem prometer brinde que o funil não entrega (livro, replay) |
 | **Auraly (Ângulo 3)** | CTA do original com a keyword trocada para `222`; Stories só com `growth-stories: aprovado` no checkpoint | engajamento do original com `222` e a consequência (LEI DO SELO), **depois** `tap my profile picture`, a resposta está no Stories. Ordem `222` → Stories inalterada (P7) |
 
-**FitWell SALE, a direção do CTA (Luigi, 2026-09-25, "não é regra, mas a ideia será essa"):** mandar
+**♻️ FitWell SALE, regra vigente (Luigi, 2026-09-30, vale em toda venda do Ângulo 2, orgânica ou IA):**
+ela ainda comenta e segue, mas o link do plano fica no **comentário fixado** que o Luigi deixa no
+vídeo. O CTA tem engajamento primeiro (`comment yes` com motivo do próprio vídeo + follow de
+continuidade) e destino depois, com o plano apresentado como a **única solução real** para a dor dela,
+nunca como sugestão ("if you want" proibido): *"Your personalized FityWell Metabolic Reset plan is the
+only way to find which of the three is yours. Tap the link in the pinned comment before tonight's
+craving hits."* **Revoga o link da bio como padrão e a reserva por DM
+abaixo**, que ficam como histórico. Memória `fitywell-venda-cta-comentario-fixado`.
+
+**(Histórico) FitWell SALE, a direção do CTA (Luigi, 2026-09-25, "não é regra, mas a ideia será essa"):** mandar
 para o link da bio e, para quem está no Facebook, para o comentário fixado do vídeo. A frase se adapta
 ao tom e ao tamanho do CTA original, e a keyword `yes` deixa de ser obrigatória nesse CTA. Exemplo:
 *"If you want more [recipes like this / o que o vídeo entregou], tap the link in my bio, or if you're
