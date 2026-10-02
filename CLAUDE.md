@@ -135,8 +135,12 @@ modelado **com o gancho fiel do modelo** → **aprovação do Luigi** → pacote
    permanece a mesma". Não existe atalho: o bloco é colado por inteiro em cada produção, porque
    ele é colado numa memória de agente nova a cada rodada. Se a configuração mudar, subir a versão
    na tabela do arquivo antes de colar.
-2. **[ÂNGULO 3] BLOCO ÚNICO DE IMAGEM, LIMPO PARA MÁQUINA** (Luigi, 2026-09-09)
-3. **[ÂNGULO 3] BLOCO ÚNICO DE VÍDEO, LIMPO PARA MÁQUINA** (Luigi, 2026-09-09)
+2. **PROMPTS DE IMAGEM, LIMPOS PARA MÁQUINA, UM BLOCO DE CÓDIGO POR `K__`** no chat
+3. **PROMPTS DE VÍDEO, LIMPOS PARA MÁQUINA, UM BLOCO DE CÓDIGO POR `V__`** no chat
+   🔴 **Workflow oficial em TODOS os ângulos (Luigi, 2026-10-02):** cada prompt vai no seu próprio
+   bloco pronto pra copiar, código na primeira linha. ♻️ Revoga o "bloco único" no chat do Ângulo 3
+   (2026-09-09); o `FLOW_<AVATAR>.md` com os blocos únicos fica só no disco, como apoio. Memória
+   `feedback-prompts-na-conversa`.
 4. Body e CTA entram DENTRO dos dois blocos acima, na ordem do vídeo, nunca como seção solta
 
 ### 🔴 GOOGLE FLOW DELIVERY FORMAT (Luigi, 2026-09-09)
@@ -182,7 +186,7 @@ SEM instrução de INITIAL FRAME dentro do bloco · SEM configuração de modelo
   `aspect_ratio` e `negative`, sem `shot_id` (é metadata). **As regras de conteúdo não mudam**:
   autossuficiência, GATE_VISUAL, trecho de realismo, negative, bandeira, herói colado na lente,
   checklist de envio. Vale nos três ângulos. O vídeo continua texto simples nos 5 blocos.
-5. (nos Ângulos 1, 2 e 4 segue valendo um prompt por bloco, com linha curta antes de cada um)
+5. Em todos os ângulos, uma linha curta com a cena e os anexos ANTES de cada bloco, sempre fora dele
 6. Transcrição final completa em **INGLÊS**
 7. Transcrição final completa em **PORTUGUÊS**
 

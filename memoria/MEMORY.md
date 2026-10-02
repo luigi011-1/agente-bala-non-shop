@@ -22,7 +22,7 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 - [Autocobranca vai no canal repetido](autocobranca_no_canal_repetido.md) — **nunca pedir ao Luigi que fiscalize comportamento meu.** Regra que compete com instrucao repetida a cada turno tem que entrar no mesmo canal repetido, nao no `CLAUDE.md`
 - [⚠️ Workflow de entrega, o gabarito é lei](workflow_entrega_gabarito.md) — **LER PRIMEIRO SEMPRE.** As 8 coisas que eu perdi ao parar de conferir o gabarito. Nomenclatura T/K/V/REF
 - [Ordem de entrega padrão](ordem_entrega_padrao.md) — transcrição → roteiro (tabela bilíngue única) → só então prompts
-- [Prompts colados na conversa](feedback_prompts_na_conversa.md) — arquivo E chat, nunca só um. Linha curta descrevendo a cena antes de cada prompt
+- [🔴 Prompts colados na conversa, um bloco por prompt](feedback_prompts_na_conversa.md) — **workflow oficial em todos os ângulos (Luigi, 2026-10-02):** cada K e cada V no seu próprio bloco pronto pra copiar, nunca um bloco único com vários prompts no chat. Arquivo E chat. Linha curta com cena e anexos fora, antes de cada bloco
 - [🔴 Avatar: só o que o Luigi mandar](avatar_so_o_que_o_luigi_mandar.md) — **ao montar a fila:** exatamente os avatares anexados naquela produção. Nunca inventar nem puxar de produção antiga; faltou, pergunta
 - [Âncora: abrir UMA por vez](feedback_ancora_ler_uma_por_vez.md) — nunca casar nome com rosto pela ordem de leitura em lote. Troquei 3 nomes em 2026-09-14 e o Luigi gerou imagem errada
 - [Bloco do Flow em CADA avatar](feedback_flow_instrucoes_por_avatar.md) — multi-avatar: instruções do agente Flow coladas inteiras no topo de todo pacote de avatar, nunca "igual ao anterior"
