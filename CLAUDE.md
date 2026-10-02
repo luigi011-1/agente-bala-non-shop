@@ -18,8 +18,8 @@ manutencao nao e uma ordem para executar a proxima etapa de producao.
 historico. Doutrina, CTA obrigatorio da marca e compliance na memoria `angulo1-copy-seamoss`. Onde
 este arquivo diz "Korella", ler "Sea Moss" para processo e formato; copy, claim, vocabulario e avatar
 da Korella nao passam. Tres travas que cortam o pagamento: (1) CTA de venda abre com **"Search Natural
-Rems Sea Moss on Amazon" com o frasco em quadro**, link no comentario fixado depois e fim (4 passos do PDF em `producao/_seamoss/`, com o passo 3 trocado pelo
-comentario fixado por decisao do Luigi em 2026-10-02), comentario opcional com `yes`, sem DM;
+Rems Sea Moss on Amazon" com o frasco em quadro**, link da LEGENDA do post depois e fim (4 passos do PDF em `producao/_seamoss/`, com o passo 3 trocado pela
+legenda por decisao do Luigi em 2026-10-02: o link do comentario fixado nao fica clicavel), comentario opcional com `yes`, sem DM;
 (2) legenda com `#ad #syntheticperformer #naturalrems` no topo e chave de IA ligada, growth incluso;
 (3) sem antes/depois, sem medico/jaleco/clinica, sem cura ou resultado garantido, sem remedio nem
 concorrente. O linter cobra as tres quando a producao cita Natural Rems ou Sea Moss.

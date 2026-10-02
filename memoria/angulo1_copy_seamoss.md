@@ -1,6 +1,6 @@
 ---
 name: angulo1-copy-seamoss
-description: "Doutrina do ÂNGULO 1 desde 2026-10-02: Natural Rems Sea Moss 16-in-1 Gummies (Amazon, ASIN B0DXHCJCC5) SUBSTITUI a Korella Saffron. Produto, ingredientes, prova da página, ângulo principal (perda de peso pelo mecanismo estresse/cortisol, nunca culpa dela), banco de ângulos secundários, CTA OBRIGATÓRIO da marca ('Search Natural Rems Sea Moss on Amazon' PRIMEIRO com o frasco em quadro, link no COMENTÁRIO FIXADO depois, comentário opcional com a keyword yes; os dois por decisão do Luigi sobre o PDF) e compliance que corta pagamento (#ad #syntheticperformer #naturalrems, toggle de IA, sem antes/depois, sem médico/jaleco/clínica, sem cura, sem nome de remédio ou concorrente). Avatar: holistic.brandon (COACH), em paralelo com FityWell e Body Hacks (Ângulo 4 reativado para ela em 2026-10-02). Foto do frasco em producao/_ancoras/natural_rems_seamoss_produto.jpg; PDF do CTA em producao/_seamoss/."
+description: "Doutrina do ÂNGULO 1 desde 2026-10-02: Natural Rems Sea Moss 16-in-1 Gummies (Amazon, ASIN B0DXHCJCC5) SUBSTITUI a Korella Saffron. Produto, ingredientes, prova da página, ângulo principal (perda de peso pelo mecanismo estresse/cortisol, nunca culpa dela), banco de ângulos secundários, CTA OBRIGATÓRIO da marca ('Search Natural Rems Sea Moss on Amazon' PRIMEIRO com o frasco em quadro, link na LEGENDA depois (2026-10-02, revisado no mesmo dia: o link do comentário fixado não fica clicável), comentário opcional com a keyword yes; os dois por decisão do Luigi sobre o PDF) e compliance que corta pagamento (#ad #syntheticperformer #naturalrems, toggle de IA, sem antes/depois, sem médico/jaleco/clínica, sem cura, sem nome de remédio ou concorrente). Avatar: holistic.brandon (COACH), em paralelo com FityWell e Body Hacks (Ângulo 4 reativado para ela em 2026-10-02). Foto do frasco em producao/_ancoras/natural_rems_seamoss_produto.jpg; PDF do CTA em producao/_seamoss/."
 metadata:
   node_type: memory
   type: project
@@ -71,10 +71,15 @@ compliance do item 5 vale em todos.
    enquanto o nome é dito: **sem cortar para outro plano e sem esconder** no meio do CTA.
 2. **AMAZON PRIMEIRO.** *"Search Natural Rems Sea Moss on Amazon."* Nome **devagar e por inteiro**.
    Nunca *"search sea moss"*, nunca *"this brand"*.
-3. **LINK DEPOIS.** ♻️ **Decisão do Luigi, 2026-10-02: o link é o do COMENTÁRIO FIXADO**, no lugar
-   da bio do PDF: *"Or you can just tap the link I left in the pinned comment on this video."*
-   O link nunca é dito antes da Amazon (o exemplo errado do PDF é errado pela ORDEM, não pelo
-   comentário fixado). O PDF original dizia *"Or you can also find the link in my bio."*
+3. **LINK DEPOIS.** ♻️ **Decisão do Luigi, 2026-10-02 (segunda do dia): o link é o da LEGENDA do
+   post**, no lugar da bio do PDF: *"Or you can just tap the link I left right down below, in the
+   caption of this video."* Motivo dele: *"o link que coloco nos comentários não fica clicável, mas o
+   link que coloco na legenda sim"*. ♻️ Revoga o comentário fixado, que valeu só no primeiro pacote
+   (`brandon_seamoss_joelho`). O link nunca é dito antes da Amazon (o exemplo errado do PDF é errado
+   pela ORDEM). O PDF original dizia *"Or you can also find the link in my bio."*
+   **Na legenda do post:** primeira linha `#ad #syntheticperformer #naturalrems`, o link logo abaixo.
+   **"caption" fecha a frase:** nada depois dela, nem "below" (o linter lê qualquer menção de link
+   depois do link como passo 4 quebrado).
 4. **FECHA O CTA.** Sem voltar, sem repetir o link, sem oferecer alternativa. A sequência acaba
    aqui; qualquer coisa a mais quebra a ordem.
 
@@ -82,8 +87,8 @@ compliance do item 5 vale em todos.
 é `yes`, igual aos outros ângulos clássicos**, no lugar do `MOSS` sugerido pelo PDF. Se usar, é a
 única fala depois do passo 3, e entra inteira.
 
-**Modelo pronto:** *"Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in
-the pinned comment on this video."*
+**Modelo pronto:** *"Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right
+down below, in the caption of this video."*
 
 **O que mata o vídeo (lista da marca):** link antes da Amazon · produto escondido ou corte no meio do
 CTA · nome da marca incompleto ou corrido · passo trocado de ordem ou pulado · claim de cura,
