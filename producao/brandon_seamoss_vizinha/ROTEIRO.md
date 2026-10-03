@@ -12,19 +12,22 @@ online", porque o corte entrega a Brandon, ~30 anos; (2) "I am 91 years old and 
 vira credencial de COACH (mulher de ~30 não diz idade vivida, e "doctors" é proibido pela Natural Rems);
 (3) o ingrediente nº 3, fibra, vira sea moss, com o mecanismo pelo estresse (ângulo principal da marca)
 no lugar do intestino; (4) Physician's Choice vira Natural Rems Sea Moss, e o CTA segue os 4 passos da
-marca com o link **na legenda** (decisão do Luigi, 2026-10-03); (5) cortados por regra da marca: o link
-do Facebook (alternativa depois do link) e o follow gate (nada depois do link além do `Comment yes`);
+marca com o link **na legenda** (decisão do Luigi, 2026-10-03); (5) o link do Facebook sai (alternativa depois do link é proibida); o
+comentário `yes` e o follow ficam, mas **antes** da busca na Amazon (decisão do Luigi, 2026-10-03:
+comentário + follow sempre; o passo 4 da marca não deixa nada depois do link);
 (6) o "within two weeks they came back looking better than in years" vira relato sem prazo e sem
 transformação (proibido pela marca).
-Funil: VENDA. Amazon primeiro ("Search Natural Rems Sea Moss on Amazon"), link na legenda depois,
-`Comment yes` opcional no fim. Legenda abre com `#ad #syntheticperformer #naturalrems`, link logo abaixo.
+Funil: VENDA. Comment `yes` + follow com o frasco já em quadro, depois Amazon ("Search Natural Rems
+Sea Moss on Amazon"), link na legenda e fim. Legenda abre com `#ad #syntheticperformer #naturalrems`, link logo abaixo.
 Enquadramento: esquete na calçada molhada de um bairro de casas de pedra, dia nublado, câmera de celular
 na altura do peito, cada fala no próprio plano; da Brandon em diante, ela atrás da mesa preta do box
 de treino (avatar fixo da conta), da cintura pra cima, com o prop de cada receita na mão colado na lente,
 e o frasco parado e legível no CTA.
 Divisão dos takes: **um take por cena do modelo** na esquete (T1 a T15 = cenas 1 a 15; T3 a T7, T9 a
 T15 são CENA CURTA). O plano único da apresentadora (30,9 a 160,2s) foi dividido só em fim de frase,
-seguindo os cortes de prop do modelo (T16 a T32).
+seguindo os cortes de prop do modelo (T16 a T31). O bloco do produto do modelo (140,4 a 160,2s,
+frasco na mão) virou o bloco de venda T31 a T35, no mesmo plano do frasco: os acréscimos de venda
+(diferenciais contra o sea moss genérico, prova social da coach, comentário e follow) ficam só aí.
 
 ## Tabela de esqueleto preservado
 
@@ -60,8 +63,11 @@ seguindo os cortes de prop do modelo (T16 a T32).
 | 28 | Conspiração | "They stripped fiber out of almost everything on the shelf because fiber fills you up and a full customer stops buying" | troca: os minerais; "a craving customer keeps buying" |
 | 29 | Responsabilidade | "So if they took it out, you need to put it back in yourself. Nobody is going to do that for you." | literal |
 | 30 | Obstáculo de suprimento, duas tigelas | "Not all fiber is the same. Most of what is left is packed with sugar and fillers that damage your gut even more." | troca: sea moss; "feed the cravings even more" |
-| 31 | Produto entra em quadro | "The only one I use is Physician's Choice fiber. Just two ingredients..." | Natural Rems Sea Moss; 16 em 1 com ashwagandha e menos de 1 g de açúcar responde o obstáculo item por item |
-| 32 | CTA | "Search up ... on Amazon or get it through the link in my profile... Facebook... comment fiber... following" | 4 passos da marca, link na legenda, `Comment yes`; Facebook e follow gate cortados |
+| 31 | Produto entra em quadro | "The only one I use is Physician's Choice fiber. Just two ingredients, guar fiber and corn fiber, nothing else added." | Natural Rems Sea Moss; o breakdown derruba o sea moss genérico item por item: selvagem irlandês, feito nos EUA, menos de 1 g de açúcar |
+| 32 | (acréscimo de venda) | não existe | 16 em 1 contra a fila de frascos + volume de compra |
+| 33 | (acréscimo de venda) | não existe | prova social das clientes da coach: a primeira rotina que elas não pulam |
+| 34 | Comentário + follow do modelo | "comment the word fiber... make sure you are following me" | comment `yes` + follow, **antes** da Amazon |
+| 35 | CTA | "Search up ... on Amazon or get it through the link in my profile... Facebook" | 4 passos da marca, link na legenda, fecha; Facebook cortado |
 
 ## Setups de cena
 
@@ -118,8 +124,8 @@ ela atrás da mesa preta, regata branca canelada, short preto, tranças com miç
   esquerda, pó branco fino de enchimento na direita.
 - **Setup W (T31):** sem prop no começo; ela traz o frasco Natural Rems Sea Moss de fora do quadro e o
   ergue ao lado do rosto.
-- **Setup X (T32):** o frasco Natural Rems Sea Moss parado na mão direita ao lado do rosto, rótulo de
-  frente e legível, do começo ao fim da fala.
+- **Setup X (T32 a T35):** o frasco Natural Rems Sea Moss parado na mão direita ao lado do rosto,
+  rótulo de frente e legível, do começo ao fim da fala; variação leve de câmera entre os takes.
 
 ## Roteiro cena a cena
 
@@ -290,22 +296,43 @@ Uma tigelinha em cada mão: açúcar e enchimento.
 
 ### T31 · PRODUTO · TALKING · Setup W
 
-> "The only one I use is Natural Rems Sea Moss. Sixteen ingredients in one green apple gummy, ashwagandha included, and less than a gram of sugar."
+> "The only one I use is Natural Rems Sea Moss. Wild Irish sea moss, made right here in the USA, with less than a gram of sugar."
 
 O nome e o frasco entram juntos: no "Natural Rems Sea Moss" ela traz o frasco de fora do quadro e o
-para ao lado do rosto, rótulo de frente. O breakdown responde o obstáculo do T30 item por item (sugar →
-less than a gram; fillers → sixteen ingredients).
+para ao lado do rosto, rótulo de frente. **Desvalorização do genérico, item por item contra o T30:**
+o genérico é "packed with sugar" → menos de 1 g; o genérico não diz de onde vem → selvagem irlandês,
+feito nos EUA (os dois estão no rótulo).
 
-### T32 · CTA · TALKING · Setup X
+### T32 · DIFERENCIAL · TALKING · Setup X
 
-> "Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the caption. Comment yes and I'll send you the link."
+> "Sixteen ingredients in one green apple gummy, ashwagandha included, so you are not lining up five bottles every morning. Thousands of people order it every month."
+
+Conveniência (a arma do briefing) contra a fila de frascos, e volume de compra da página ("10K+ bought
+in past month" em 2026-10-02, dito como "thousands" para não envelhecer).
+
+### T33 · PROVA SOCIAL DA COACH · TALKING · Setup X
+
+> "And the clients I train who switched to it all tell me the same thing: it is the first routine they have never skipped."
+
+Prova social na boca dela, sobre adesão e não sobre resultado (sem prazo, sem antes/depois).
+
+### T34 · COMENTÁRIO + FOLLOW · TALKING · Setup X
+
+> "Comment yes if your body has been stuck in alarm mode, and follow me so you do not lose these three."
+
+Frasco parado em quadro. O comentário e o follow vêm **antes** da Amazon: o passo 4 da marca fecha o
+CTA no link, e o toque no link tira ela do vídeo.
+
+### T35 · CTA · TALKING · Setup X
+
+> "Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the caption."
 
 Frasco parado e legível do começo ao fim, sem corte. Passos da marca na ordem: produto em quadro →
-Amazon → link na legenda → fecha. O `Comment yes` é a única fala depois do link.
+Amazon → link na legenda → fecha. Nada depois.
 
 ## Roteiro só-fala
 
-Hey! Hey. I'm your new neighbor next door. I saw you a couple times. You look so fine. Sweetheart, was that your wife running? Yes. But if my wife looked like you, I would have never left the house. Then she should probably start doing what I do. And what is that, hitting the gym every day? No. I am fifty-seven. I stopped training like a kid years ago. What? Fifty-seven? You're old enough to be my mom. What's your secret? I just listened to this holistic coach I found online. She taught me literally everything. I'm a holistic coach, and my oldest clients outwork people half their age. Save this video. You never know when your body will need it. Number one: lemon juice and warm water. Squeeze half a lemon into a glass of warm water and drink it every morning on an empty stomach. It flushes out your digestive system, jump-starts your metabolism, and cuts through sugar cravings before they even start. But a flat belly means little if your skin is still dull and wrinkly. Number two: apple cider vinegar and coconut oil. Mix one teaspoon of vinegar into a tablespoon of coconut oil and apply it to your face for fifteen minutes. It tightens the skin, fades fine lines, and brings back that glow. Women pay hundreds for facials that do less. But here is what most people miss. If your stress has been high for years, you will never get the body you want, no matter how clean you eat or how hard you work out. That is why this next one is the most important. Number three: sea moss. I started telling my clients to put sea moss back into every single morning years ago, and it became the one thing that changed everything. Every stressful day burns through your minerals, and when nothing puts them back, your body stays stuck in alarm mode, wired at night and hungry for sugar. Sea moss carries those minerals right back in, so your body stops guarding itself and finally gets out of alarm mode. I told our brothers and sisters in their forties to sixties about it, and they came back telling me they finally sleep through the night. And the scary part is they stripped the minerals out of almost everything on the shelf, because a starved body keeps craving, and a craving customer keeps buying. So if they took it out, you need to put it back in yourself. Nobody is going to do that for you. But I have to warn you, not all sea moss is the same. Most of it is packed with sugar and fillers that feed the cravings even more. The only one I use is Natural Rems Sea Moss. Sixteen ingredients in one green apple gummy, ashwagandha included, and less than a gram of sugar. Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the caption. Comment yes and I'll send you the link.
+Hey! Hey. I'm your new neighbor next door. I saw you a couple times. You look so fine. Sweetheart, was that your wife running? Yes. But if my wife looked like you, I would have never left the house. Then she should probably start doing what I do. And what is that, hitting the gym every day? No. I am fifty-seven. I stopped training like a kid years ago. What? Fifty-seven? You're old enough to be my mom. What's your secret? I just listened to this holistic coach I found online. She taught me literally everything. I'm a holistic coach, and my oldest clients outwork people half their age. Save this video. You never know when your body will need it. Number one: lemon juice and warm water. Squeeze half a lemon into a glass of warm water and drink it every morning on an empty stomach. It flushes out your digestive system, jump-starts your metabolism, and cuts through sugar cravings before they even start. But a flat belly means little if your skin is still dull and wrinkly. Number two: apple cider vinegar and coconut oil. Mix one teaspoon of vinegar into a tablespoon of coconut oil and apply it to your face for fifteen minutes. It tightens the skin, fades fine lines, and brings back that glow. Women pay hundreds for facials that do less. But here is what most people miss. If your stress has been high for years, you will never get the body you want, no matter how clean you eat or how hard you work out. That is why this next one is the most important. Number three: sea moss. I started telling my clients to put sea moss back into every single morning years ago, and it became the one thing that changed everything. Every stressful day burns through your minerals, and when nothing puts them back, your body stays stuck in alarm mode, wired at night and hungry for sugar. Sea moss carries those minerals right back in, so your body stops guarding itself and finally gets out of alarm mode. I told our brothers and sisters in their forties to sixties about it, and they came back telling me they finally sleep through the night. And the scary part is they stripped the minerals out of almost everything on the shelf, because a starved body keeps craving, and a craving customer keeps buying. So if they took it out, you need to put it back in yourself. Nobody is going to do that for you. But I have to warn you, not all sea moss is the same. Most of it is packed with sugar and fillers that feed the cravings even more. The only one I use is Natural Rems Sea Moss. Wild Irish sea moss, made right here in the USA, with less than a gram of sugar. Sixteen ingredients in one green apple gummy, ashwagandha included, so you are not lining up five bottles every morning. Thousands of people order it every month. And the clients I train who switched to it all tell me the same thing: it is the first routine they have never skipped. Comment yes if your body has been stuck in alarm mode, and follow me so you do not lose these three. Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the caption.
 
 ## Tabela bilíngue
 
@@ -341,8 +368,11 @@ Hey! Hey. I'm your new neighbor next door. I saw you a couple times. You look so
 | T28 | CONSPIRAÇÃO | And the scary part is they stripped the minerals out of almost everything on the shelf, because a starved body keeps craving, and a craving customer keeps buying. | E o assustador é que tiraram os minerais de quase tudo que está na prateleira, porque um corpo faminto continua com vontade, e um cliente com vontade continua comprando. |
 | T29 | RESPONSABILIDADE | So if they took it out, you need to put it back in yourself. Nobody is going to do that for you. | Então, se eles tiraram, você precisa colocar de volta sozinho. Ninguém vai fazer isso por você. |
 | T30 | OBSTÁCULO | But I have to warn you, not all sea moss is the same. Most of it is packed with sugar and fillers that feed the cravings even more. | Mas eu preciso te avisar: nem todo sea moss é igual. A maioria vem lotada de açúcar e enchimento que alimentam ainda mais a vontade de doce. |
-| T31 | PRODUTO | The only one I use is Natural Rems Sea Moss. Sixteen ingredients in one green apple gummy, ashwagandha included, and less than a gram of sugar. | O único que eu uso é o Natural Rems Sea Moss. Dezesseis ingredientes numa goma de maçã verde, ashwagandha incluída, e menos de um grama de açúcar. |
-| T32 | CTA | Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the caption. Comment yes and I'll send you the link. | Procure Natural Rems Sea Moss na Amazon. Ou é só tocar no link que eu deixei na legenda. Comente yes que eu te mando o link. |
+| T31 | PRODUTO | The only one I use is Natural Rems Sea Moss. Wild Irish sea moss, made right here in the USA, with less than a gram of sugar. | O único que eu uso é o Natural Rems Sea Moss. Sea moss irlandês selvagem, feito aqui mesmo nos EUA, com menos de um grama de açúcar. |
+| T32 | DIFERENCIAL | Sixteen ingredients in one green apple gummy, ashwagandha included, so you are not lining up five bottles every morning. Thousands of people order it every month. | Dezesseis ingredientes numa goma de maçã verde, ashwagandha incluída, pra você não ter que enfileirar cinco frascos toda manhã. Milhares de pessoas compram todo mês. |
+| T33 | PROVA SOCIAL | And the clients I train who switched to it all tell me the same thing: it is the first routine they have never skipped. | E as clientes que eu treino e trocaram por ele me dizem a mesma coisa: é a primeira rotina que elas nunca pularam. |
+| T34 | COMENTÁRIO + FOLLOW | Comment yes if your body has been stuck in alarm mode, and follow me so you do not lose these three. | Comente yes se o seu corpo anda preso no modo alarme, e me siga pra não perder essas três. |
+| T35 | CTA | Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the caption. | Procure Natural Rems Sea Moss na Amazon. Ou é só tocar no link que eu deixei na legenda. |
 
 ## Contagem de palavras
 
@@ -378,8 +408,11 @@ Hey! Hey. I'm your new neighbor next door. I saw you a couple times. You look so
 | T28 | 28 | ok |
 | T29 | 22 | ok |
 | T30 | 28 | ok |
-| T31 | 26 | ok |
-| T32 | 27 | ok |
+| T31 | 27 | ok |
+| T32 | 26 | ok |
+| T33 | 24 | ok |
+| T34 | 21 | ok |
+| T35 | 19 | ok |
 
 ## Notas de produção
 
@@ -387,17 +420,18 @@ Hey! Hey. I'm your new neighbor next door. I saw you a couple times. You look so
   frase de indicação do T14 entrega a Brandon, que conduz o corpo inteiro. Os três personagens da
   esquete ganham character sheet (`REF-P1` vizinha, `REF-P2` marido, `REF-P3` esposa) no pacote; a
   Brandon usa a âncora dela.
-- **Duração:** o modelo tem 2m40s. O clone fica em ~2m35s: esquete ~31s (T1 a T15 no tempo exato do
-  modelo) + 17 takes da Brandon de ~7s.
+- **Duração:** o modelo tem 2m40s. O clone fica em ~2m50s: esquete ~31s (T1 a T15 no tempo exato do
+  modelo) + 20 takes da Brandon de ~7s (o bloco de venda ganhou 3 takes).
 - **Se ficar longo:** cortar primeiro o T19 + T20 + T21 (a receita da pele) não é opção, porque o T21
   carrega a virada "But here is what most people miss"; o primeiro corte é o T18 (benefício do limão),
-  depois o T29 (responsabilidade), que não mudam o argumento.
+  depois o T29 (responsabilidade) e o T32 (diferencial), que não mudam o argumento. O T31, o T34 e
+  o T35 nunca saem.
 - **Herói do gancho:** o contraste da esquete, a vizinha de 57 anos com corpo de 25 podando a cerca
   enquanto o marido larga a esposa na corrida; o close de choque da esposa no T2 é o scroll-stop.
   O loop ("what's your secret?") só fecha no corpo do vídeo.
 - **Legenda de tela:** o modelo usa legenda branca sem serifa, duas ou três palavras por vez, no meio do
   quadro. Vai no CapCut, nunca dentro do `K__`. As setas vermelhas apontando para baixo no CTA do
-  modelo (147 a 160s) viram setas apontando para a legenda, na edição.
+  modelo (147 a 160s) viram setas apontando para a legenda, na edição, no T35.
 - **Legenda do post:** `#ad #syntheticperformer #naturalrems` na primeira linha, o link da Amazon logo
   abaixo, chave de conteúdo de IA ligada.
 - **Rotas (conta brandon):** o fechamento é o do próprio modelo (conspiração da prateleira + "not all X

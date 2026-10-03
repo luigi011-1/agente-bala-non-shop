@@ -2,8 +2,8 @@
 Production: `brandon_seamoss_vizinha`
 Angle: 1, Natural Rems Sea Moss · Objective: SALE · Round: VALIDATION
 Reference video: `input/reference_video.mp4`
-Current stage: WAITING_SCRIPT_APPROVAL
-Next action: Luigi aprova ou ajusta o roteiro v1 (gancho fiel = a esquete). Depois da aprovação:
+Current stage: PACKAGE_IN_PROGRESS
+Next action: montar o pacote do roteiro v2 (aprovado com ajustes em 2026-10-03):
 P5 (gabarito, GATE_VISUAL 1 a 3), `FICHA_FRAMES.md` com os 32 frames de `input/frames_modelo/`,
 REF-P1 a REF-P3 da esquete, pacote (`PROMPTS_PRODUCAO.md` + entrega do Flow), checklist de envio,
 linter com 0 FALHAS e as duas transcrições no fim.
@@ -12,6 +12,11 @@ linter com 0 FALHAS e as duas transcrições no fim.
 - Ângulo 1, Natural Rems Sea Moss Gummies, VENDA, avatar holistic.brandon (imagem da âncora na mensagem).
 - Link do CTA **na legenda** do post ("mandando para o link da legenda"; reconfirmado: "seguindo o que
   eu disse na mensagem anterior"). Registrado na memória `angulo1-copy-seamoss` e aceito no linter.
+- Roteiro v1 aprovado com ajustes ("continue usando argumentos de copy como esse... adiciona um cta de
+  comentário e follow sempre também... me manda o roteiro atualizado e prossiga"): mais desvalorização
+  do sea moss genérico com diferencial verificado (feito nos EUA, selvagem irlandês, <1 g de açúcar,
+  16 em 1, volume de compra, prova social das clientes) e comment `yes` + follow sempre, antes da
+  Amazon. As duas regras viraram doutrina em `angulo1-copy-seamoss` (seção 4 e 5.1).
 
 ## Log
 - 2026-10-03: vídeo enviado por upload na sessão da nuvem; `/watch` rodado (small.en, 20 cenas no
@@ -24,3 +29,6 @@ linter com 0 FALHAS e as duas transcrições no fim.
   "91 years... without doctors", nº 3 vira sea moss pelo estresse, prova social sem prazo, CTA da marca
   com link na legenda, Facebook e follow gate cortados. `checar_frases.py`: nada repetido da conta.
   Linter: 0 falhas de copy (a única FALHA é o `PROMPTS_PRODUCAO.md`, que só nasce depois da aprovação).
+- 2026-10-03: roteiro v2 (35 takes): bloco de venda T31 a T35 (produto com breakdown contra o genérico,
+  diferencial 16 em 1 + volume, prova social da coach, comentário + follow, CTA da marca). "Tested and
+  approved in the USA" não entrou: não está no rótulo nem verificado na página.

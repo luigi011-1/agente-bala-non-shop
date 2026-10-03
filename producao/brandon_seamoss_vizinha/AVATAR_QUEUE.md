@@ -15,7 +15,7 @@ Fila é estado em disco. O Luigi mandou o vídeo e a imagem da âncora da holist
 ## Travas da produção
 
 - COACH, ~30 anos: nenhuma idade vivida em 1ª pessoa; idade só na boca da vizinha (personagem) e das clientes (citadas).
-- CTA da Natural Rems: frasco parado e legível, "Search Natural Rems Sea Moss on Amazon" primeiro, link **na legenda** depois (decisão do Luigi, 2026-10-03), `Comment yes` opcional, nada depois.
+- CTA da Natural Rems: frasco parado e legível, "Search Natural Rems Sea Moss on Amazon" primeiro, link **na legenda** depois (decisão do Luigi, 2026-10-03), nada depois. Comment `yes` + follow sempre, ANTES da Amazon, com o frasco em quadro (Luigi, 2026-10-03).
 - Legenda: `#ad #syntheticperformer #naturalrems` no topo, link logo abaixo; chave de IA ligada.
 - Sem antes/depois, nada médico, sem cura ou resultado garantido, sem remédio nem concorrente.
 - Rodada de validação: um gancho só, a esquete do modelo, fiel.
