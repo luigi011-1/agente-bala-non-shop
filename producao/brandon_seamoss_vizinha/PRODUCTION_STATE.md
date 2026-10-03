@@ -37,3 +37,4 @@ biblioteca; resultados.json).
   ENTREGA_BRANDON.md (Flow v17). Linter normal e --estrito: 0 FALHAS (1 aviso esperado de GERAR DO ZERO).
   Checklist de envio 35/35 (N/A: A1, A10, A12, A13, A14, C4, C7). Fila: holistic.brandon DONE.
   PRODUCTION COMPLETE (entrega de prompts).
+- 2026-10-03: Luigi confirmou "roteiro aprovado, prossiga" depois da entrega; prompts colados no chat em lotes (REF-P + K, depois V).
