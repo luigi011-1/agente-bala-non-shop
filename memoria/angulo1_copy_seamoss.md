@@ -1,6 +1,6 @@
 ---
 name: angulo1-copy-seamoss
-description: "Doutrina do ÂNGULO 1 desde 2026-10-02: Natural Rems Sea Moss 16-in-1 Gummies (Amazon, ASIN B0DXHCJCC5) SUBSTITUI a Korella Saffron. Produto, ingredientes, prova da página, ângulo principal (perda de peso pelo mecanismo estresse/cortisol, nunca culpa dela), banco de ângulos secundários, CTA OBRIGATÓRIO da marca ('Search Natural Rems Sea Moss on Amazon' PRIMEIRO com o frasco em quadro, link no COMENTÁRIO FIXADO depois, comentário opcional com a keyword yes; os dois por decisão do Luigi sobre o PDF) e compliance que corta pagamento (#ad #syntheticperformer #naturalrems, toggle de IA, sem antes/depois, sem médico/jaleco/clínica, sem cura, sem nome de remédio ou concorrente). Avatar: holistic.brandon (COACH), em paralelo com FityWell e Body Hacks (Ângulo 4 reativado para ela em 2026-10-02). Foto do frasco em producao/_ancoras/natural_rems_seamoss_produto.jpg; PDF do CTA em producao/_seamoss/."
+description: "Doutrina do ÂNGULO 1 desde 2026-10-02: Natural Rems Sea Moss 16-in-1 Gummies (Amazon, ASIN B0DXHCJCC5) SUBSTITUI a Korella Saffron. Produto, ingredientes, prova da página, ângulo principal (perda de peso pelo mecanismo estresse/cortisol, nunca culpa dela), banco de ângulos secundários, CTA OBRIGATÓRIO da marca ('Search Natural Rems Sea Moss on Amazon' PRIMEIRO com o frasco em quadro, link no COMENTÁRIO FIXADO depois (ou na LEGENDA quando o Luigi declarar, desde 2026-10-03), comentário opcional com a keyword yes; os dois por decisão do Luigi sobre o PDF) e compliance que corta pagamento (#ad #syntheticperformer #naturalrems, toggle de IA, sem antes/depois, sem médico/jaleco/clínica, sem cura, sem nome de remédio ou concorrente). Avatar: holistic.brandon (COACH), em paralelo com FityWell e Body Hacks (Ângulo 4 reativado para ela em 2026-10-02). Foto do frasco em producao/_ancoras/natural_rems_seamoss_produto.jpg; PDF do CTA em producao/_seamoss/."
 metadata:
   node_type: memory
   type: project
@@ -75,6 +75,10 @@ compliance do item 5 vale em todos.
    da bio do PDF: *"Or you can just tap the link I left in the pinned comment on this video."*
    O link nunca é dito antes da Amazon (o exemplo errado do PDF é errado pela ORDEM, não pelo
    comentário fixado). O PDF original dizia *"Or you can also find the link in my bio."*
+   ♻️ **2026-10-03 (Luigi, `brandon_seamoss_vizinha`): o link também pode ir na LEGENDA do post**,
+   quando ele declarar na produção: *"Or you can just tap the link I left in the caption."* A legenda
+   abre com `#ad #syntheticperformer #naturalrems` e o link vem logo abaixo. O destino é decisão da
+   produção (comentário fixado continua sendo o padrão quando ele não disser nada); o linter aceita os dois.
 4. **FECHA O CTA.** Sem voltar, sem repetir o link, sem oferecer alternativa. A sequência acaba
    aqui; qualquer coisa a mais quebra a ordem.
 
