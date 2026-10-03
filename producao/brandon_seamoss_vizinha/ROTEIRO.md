@@ -122,8 +122,8 @@ ela atrás da mesa preta, regata branca canelada, short preto, tranças com miç
 - **Setup U (T28 e T29):** sem prop, mãos apoiadas na mesa, um pouco mais perto.
 - **Setup V (T30):** uma tigelinha de vidro em cada mão, colada na lente: açúcar branco cristal na
   esquerda, pó branco fino de enchimento na direita.
-- **Setup W (T31):** sem prop no começo; ela traz o frasco Natural Rems Sea Moss de fora do quadro e o
-  ergue ao lado do rosto.
+- **Setup W (T31):** o frasco Natural Rems Sea Moss já na mão direita, baixo, na altura da cintura,
+  logo acima da mesa preta, rótulo de frente; no nome ela o ergue até o lado do rosto.
 - **Setup X (T32 a T35):** o frasco Natural Rems Sea Moss parado na mão direita ao lado do rosto,
   rótulo de frente e legível, do começo ao fim da fala; variação leve de câmera entre os takes.
 
@@ -298,8 +298,9 @@ Uma tigelinha em cada mão: açúcar e enchimento.
 
 > "The only one I use is Natural Rems Sea Moss. Wild Irish sea moss, made right here in the USA, with less than a gram of sugar."
 
-O nome e o frasco entram juntos: no "Natural Rems Sea Moss" ela traz o frasco de fora do quadro e o
-para ao lado do rosto, rótulo de frente. **Desvalorização do genérico, item por item contra o T30:**
+O nome e o frasco sobem juntos: o frasco já está na mão, baixo, e no "Natural Rems Sea Moss" ela o
+ergue até o lado do rosto, rótulo de frente (assim o vídeo nasce de um K com o frasco real anexado,
+sem inventar rótulo). **Desvalorização do genérico, item por item contra o T30:**
 o genérico é "packed with sugar" → menos de 1 g; o genérico não diz de onde vem → selvagem irlandês,
 feito nos EUA (os dois estão no rótulo).
 

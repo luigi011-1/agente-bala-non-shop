@@ -2,11 +2,11 @@
 Production: `brandon_seamoss_vizinha`
 Angle: 1, Natural Rems Sea Moss · Objective: SALE · Round: VALIDATION
 Reference video: `input/reference_video.mp4`
-Current stage: PACKAGE_IN_PROGRESS
-Next action: montar o pacote do roteiro v2 (aprovado com ajustes em 2026-10-03):
-P5 (gabarito, GATE_VISUAL 1 a 3), `FICHA_FRAMES.md` com os 32 frames de `input/frames_modelo/`,
-REF-P1 a REF-P3 da esquete, pacote (`PROMPTS_PRODUCAO.md` + entrega do Flow), checklist de envio,
-linter com 0 FALHAS e as duas transcrições no fim.
+Current stage: PRODUCTION_COMPLETE
+Next action: Luigi gera a mídia no Flow com `ENTREGA_BRANDON.md` (REF-P1 a REF-P3 primeiro, aprovar, depois
+K01 a K35, seleção manual, V no Omni Flash); quando mandar o K02 gerado (o close de choque do gancho),
+pontuar F1 a F6 contra o frame do modelo; depois da postagem, rodar o P10 (log de rotação: rota 6;
+biblioteca; resultados.json).
 
 ## Decisões do Luigi (2026-10-03)
 - Ângulo 1, Natural Rems Sea Moss Gummies, VENDA, avatar holistic.brandon (imagem da âncora na mensagem).
@@ -32,3 +32,8 @@ linter com 0 FALHAS e as duas transcrições no fim.
 - 2026-10-03: roteiro v2 (35 takes): bloco de venda T31 a T35 (produto com breakdown contra o genérico,
   diferencial 16 em 1 + volume, prova social da coach, comentário + follow, CTA da marca). "Tested and
   approved in the USA" não entrou: não está no rótulo nem verificado na página.
+- 2026-10-03: pacote gerado por `gerar_pacote.py` + `montar_entrega.py`: 3 REF-P (vizinha, marido, esposa),
+  35 K e 35 V, FICHA_FRAMES.md com 35 frames do modelo e placar completo (evidência conferida por assert),
+  ENTREGA_BRANDON.md (Flow v17). Linter normal e --estrito: 0 FALHAS (1 aviso esperado de GERAR DO ZERO).
+  Checklist de envio 35/35 (N/A: A1, A10, A12, A13, A14, C4, C7). Fila: holistic.brandon DONE.
+  PRODUCTION COMPLETE (entrega de prompts).
