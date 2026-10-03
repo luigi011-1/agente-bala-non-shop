@@ -52,7 +52,7 @@ REALISMO = ("Real skin with visible pores, irregular texture, fine lines and sof
 NEG_BASE = ("no captions, no subtitles, no words overlaid on the image, no studio, no plastic-looking skin, "
             "no extra fingers, no third hand, no blur, no bokeh, no warm orange color cast, no yellow tint, "
             "no golden glow, no golden hour light, no sunset, no HDR, no cinematic lighting, no de-aging, "
-            "no beauty smoothing, no visible phone, no glasses, no gray t-shirt, no kitchen cabinets, no white marble "
+            "no beauty smoothing, no visible phone, no eyeglasses, no gray t-shirt, no kitchen cabinets, no white marble "
             "counter, no cartoon magnet, no silver cross, no white coat, no second person")
 NEG_RECEITA = ", no readable lettering on the tank, glasses, spoons or jars"
 
@@ -111,7 +111,7 @@ ACOES = {
            "afunda soltando fios marrons."),
     "T6": "{n} mostra as duas canelas bem perto da câmera e depois aproxima a da direita.",
     "T7": "{n}, atrás da mesa com os ingredientes, abre as mãos com as palmas para cima enquanto fala.",
-    "T8": "{n} passa a mão aberta por cima dos ingredientes enfileirados na mesa no separate jars.",
+    "T8": "{n} passa a mão aberta por cima dos ingredientes enfileirados na mesa quando diz separate jars.",
     "T9": ("{n} segura o pote de Natural Rems Sea Moss com as duas mãos na altura do peito, rótulo de frente para a "
            "câmera, e aproxima o pote um pouco da câmera quando diz o nome."),
     "T10": ("{n} segura o pote parado com as duas mãos, rótulo de frente e legível, sem nada cobrindo, do começo ao "
@@ -134,7 +134,7 @@ def keyframes(a):
     boca = "caught mid-sentence, lips naturally parted, animated expression, looking straight into the lens"
     ref_base = (f"Use the first attached image only for {n}'s exact identity, wardrobe and her own garage gym. Use the "
                 "second attached image only as a composition reference for the camera position, framing and the "
-                "action; do not copy its man, glasses, gray t-shirt, kitchen, marble counter, cartoon magnet or the "
+                "action; do not copy its man, his eyeglasses, his gray t-shirt, kitchen, marble counter, cartoon magnet or the "
                 "caption text.")
     ref_prod = (ref_base + " Use the third attached image only for the exact look of the front jar and its label; "
                 "ignore the MADE IN USA banner, the second jar with the Supplement Facts panel and the loose gummies.")
