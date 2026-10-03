@@ -1050,8 +1050,10 @@ def detectar_seamoss(txt):
 
 
 SEAMOSS_BUSCA_PAT = r"search\s+(for\s+)?natural rems sea moss on amazon"
+# 2026-10-02 (Luigi): o link do Sea Moss vai na LEGENDA do post ("caption"); o do comentario fixado
+# nao fica clicavel. As outras formas continuam reconhecidas para cobrar a ordem Amazon -> link.
 SEAMOSS_LINK_PAT = (r"pinned\s+comment|link\s+in\s+(my\s+)?bio|link\s+(is\s+)?(right\s+)?below"
-                    r"|in my profile")
+                    r"|in my profile|\bcaption\b")
 SEAMOSS_FALA_PROIBIDA = (
     (r"\bday\s*(one|1)\b.{0,40}\bday\s*(thirty|30)\b|before\s+and\s+after|before\s*/\s*after",
      "conteudo de transformacao (antes/depois, day 1 vs day 30) e proibido pela marca"),
@@ -1106,7 +1108,7 @@ def c_seamoss(angulo, arquivos, takes, kfs, roteiro_txt=""):
                                      "link, sem voltar, sem repetir, sem alternativa" % m.group(0))
             else:
                 aviso("seamoss", "o CTA nao cita o link (passo 3, decisao do Luigi: 'Or you can "
-                                 "just tap the link I left in the pinned comment on this video.')")
+                                 "just tap the link I left right down below, in the caption of this video.')")
         m = re.search(SEAMOSS_NOME_CURTO_PAT, corrida, re.I)
         if m:
             falha("seamoss", "'%s': a marca exige o nome inteiro, 'Natural Rems Sea Moss'" % m.group(0))

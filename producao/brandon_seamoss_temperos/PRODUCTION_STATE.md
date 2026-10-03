@@ -1,0 +1,30 @@
+# PRODUCTION STATE
+Production: `brandon_seamoss_temperos`
+Angle: 1, Natural Rems Sea Moss · Objective: SALE · Round: VALIDATION
+Reference video: `input/reference_video.mp4`
+Current stage: PRODUCTION_COMPLETE
+Next action: Luigi gera a mídia no Flow com `ENTREGA_BRANDON.md`; quando mandar o K01 gerado, pontuar
+F1 a F6 contra o frame do modelo; depois da postagem, rodar o P10.
+
+## Decisões do Luigi (2026-10-02)
+- Ângulo 1, Sea Moss, VENDA, holistic.brandon ("quero modelar mais um video para a holistic.brandon
+  ainda para o sea moss da natural rems, também será um video de venda").
+- Transição opção C e roteiro v2 aprovados ("roteiro aprovado, prossiga", 2026-10-03).
+
+## Log
+- 2026-10-02: `/watch` rodado: 57,8s; trocas de cenário em 9,57 · 17,07 · 24,97 · 32,73 · 40,17s, mais
+  jump cuts curtos dentro de cada teste. Origem: pessoa real (mesmo criador do vídeo do joelho).
+- 2026-10-02: P1: esqueleto de inspeção de alimento (família do caso 28, `brandon_mercado`), com cinco
+  testes que nunca rodaram na conta.
+- 2026-10-02: roteiro v1 (9 takes). Desvios: CTA da marca no lugar da coleção de truques, do "comment
+  coffee" e do follow gate. checar_frases.py: "them in a bowl of water" (T3) igual à `brandon_mercado`,
+  instrução de teste copiada literal do modelo; fica. Checklist de envio, bloco A (gancho fiel): 11/11
+  (N/A: A1, A2, A7). Linter: só a FALHA esperada de PROMPTS_PRODUCAO.md.
+- 2026-10-03: o Luigi não gostou da transição dos testes para o produto e pediu opções; escolheu a
+  opção C (conveniência: "My clients always ask how I test all of this..."). Roteiro v2: T8 transição,
+  T9 oferta com o pote, T10 CTA. "one green apple gummy a day" virou "each day" (frase queimada do
+  joelho). Texto de tela do gancho passa a repetir "Real peppercorns sink" (sincronia do gancho verbal).
+- 2026-10-03: roteiro v2 aprovado. 10 frames do modelo (`input/frames_modelo/K01..K10_modelo.png`),
+  FICHA_FRAMES.md (10 K, placar 14/14), gerar_pacote.py e montar_entrega.py (Flow v17) geraram
+  PROMPTS_BRANDON.md, FLOW_BRANDON.md, PROMPTS_PRODUCAO.md e ENTREGA_BRANDON.md. Linter 0 FALHAS.
+  Checklist de envio 34/34 (N/A: A1, A2, A7, C3 a C7). Fila: holistic.brandon DONE. PRODUCTION COMPLETE.
