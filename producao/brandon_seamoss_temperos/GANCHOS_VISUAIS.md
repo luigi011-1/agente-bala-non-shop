@@ -24,7 +24,7 @@ Cena: plano contínuo de ~5,7s atrás da mesa preta. O aquário retangular de vi
 terço de baixo do quadro, colado na lente; a Brandon inclinada atrás dele vira a colher cheia de grãos
 de pimenta; a maioria afunda. Corte seco (~3,8s): a maior parte no fundo, alguns grãos boiando, e ela
 aponta para eles.
-Screen text: legenda serifada branca palavra a palavra, como no modelo, começando por "If you bought black pepper".
+Screen text: legenda serifada branca palavra a palavra, como no modelo; texto fixo no topo do T1: "Real peppercorns sink"...
 Desvios obrigatorios: (1) a cozinha do modelo vira a mesa preta do box da Brandon, com a parede de
 bloco, o neon e a bandeira ao fundo (avatar fixo por conta); (2) a camiseta cinza e os óculos do
 modelo viram a regata branca, o short preto e a cruz de ouro dela. Acabamento pelo GATE_VISUAL Partes

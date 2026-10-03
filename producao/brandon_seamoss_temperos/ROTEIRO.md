@@ -26,7 +26,7 @@ ingredientes na mesa. Avatar fixo por conta: regata branca, short preto, cruz de
 
 Divisão dos takes: **um take por cena do modelo**, e cada cena é um teste. A cena da pimenta (9,6s)
 passa de 8s e se divide no jump cut de 5,73s, que cai em fim de frase. A cena do fecho (40,17s até o
-fim) se divide em fim de frase: a primeira frase fica literal (T7) e o resto, que é o CTA, vira T8 e T9.
+fim) se divide em fim de frase: a primeira frase fica literal (T7) e o resto, que é o CTA, vira T8, T9 e T10 (transição v2, opção C do Luigi).
 
 ---
 
@@ -41,8 +41,9 @@ fim) se divide em fim de frase: a primeira frase fica literal (T7) e o resto, qu
 | 5 | TESTE 4 | café em dois copos de água fria: o puro boia, o misturado afunda e solta cor | idêntico |
 | 6 | TESTE 5 | close de duas canelas: a verdadeira em camadas finas, a cássia uma casca grossa | idêntico |
 | 7 | AUTORIDADE | plano aberto, ingredientes na mesa: "only some of the food secrets I have collected" | literal |
-| 8 | OFERTA | "I can send you my full collection with over 100 tricks" | **pote do Sea Moss entra em quadro e o nome é dito no gesto**, com a cúrcuma e a pimenta |
-| 9 | CTA | "comment coffee + follow gate" | **CTA da marca**: Amazon primeiro, link da legenda depois, fim |
+| 8 | TRANSIÇÃO | "If you want, I can send you my full collection" | as clientes perguntam como ela testa tudo; ela parou de comprar cúrcuma, pimenta e sea moss em potes separados |
+| 9 | OFERTA | "with over 100 tricks like these" | **pote do Sea Moss entra em quadro e o nome é dito no gesto**: os três e mais treze numa goma, dezesseis potes a menos para testar |
+| 10 | CTA | "comment coffee + follow gate" | **CTA da marca**: Amazon primeiro, link da legenda depois, fim |
 
 ## Setups de cena
 
@@ -55,10 +56,10 @@ fim) se divide em fim de frase: a primeira frase fica literal (T7) e o resto, qu
 - **Setup D (T5):** dois copos de vidro com água fria; ela segura uma colher de café moído sobre cada um.
 - **Setup E (T6):** close: ela segura duas canelas em pau na frente do rosto, quase encostando na lente,
   a da esquerda fina e enrolada em várias camadas de papel, a da direita uma casca grossa só.
-- **Setup F (T7):** plano aberto da cintura pra cima, de pé atrás da mesa, com os ingredientes enfileirados
+- **Setup F (T7, T8):** plano aberto da cintura pra cima, de pé atrás da mesa, com os ingredientes enfileirados
   na mesa (canelas, os copos, um montinho de pimenta, uma batata), mãos gesticulando.
-- **Setup G (T8, T9):** mesmo plano, mais perto, pote de Natural Rems Sea Moss na mão, rótulo de frente.
-  No T9 o plano mais fechado do vídeo e o pote parado.
+- **Setup G (T9, T10):** mesmo plano, mais perto, pote de Natural Rems Sea Moss na mão, rótulo de frente.
+  No T10 o plano mais fechado do vídeo e o pote parado.
 
 ---
 
@@ -109,14 +110,19 @@ Cena de 32,73 a 40,17s. Mostra as duas canelas bem perto da lente, depois aproxi
 
 De 40,17 a ~45,5s, plano aberto do modelo; divisão em fim de frase.
 
-### T8 · OFERTA · TALKING · Setup G
+### T8 · TRANSIÇÃO · TALKING · Setup F
 
-> "That's why my turmeric and black pepper come from Natural Rems Sea Moss, all sixteen ingredients packed into a single gummy."
+> "My clients always ask how I test all of this. Honestly, I stopped buying turmeric, black pepper and sea moss in separate jars."
 
-No lugar da coleção de truques. O pote sobe para a altura do peito exatamente quando ela diz
-"Natural Rems Sea Moss".
+Mesmo plano aberto do T7. No "separate jars" ela passa a mão pelos ingredientes enfileirados na mesa.
 
-### T9 · CTA · TALKING · Setup G
+### T9 · OFERTA · TALKING · Setup G
+
+> "I get all of them, plus thirteen more, in Natural Rems Sea Moss. One green apple gummy each day, and sixteen fewer jars to test."
+
+O pote sobe para a altura do peito exatamente quando ela diz "Natural Rems Sea Moss".
+
+### T10 · CTA · TALKING · Setup G
 
 > "Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video."
 
@@ -128,13 +134,13 @@ corte. O nome sai devagar e por inteiro. O vídeo acaba aqui.
 ## Congruência por avatar
 
 A Brandon é COACH e o modelo fala em "you" nos cinco testes. "During years of my practice" vale na boca
-de uma treinadora de uns trinta anos, porque não diz quantos anos nem fala de idade vivida. "My
-turmeric and black pepper" é ela como usuária de bem-estar geral, que a matriz libera para ela.
+de uma treinadora de uns trinta anos, porque não diz quantos anos nem fala de idade vivida. "My clients" e
+"I stopped buying" são ela como coach e como usuária de bem-estar geral, que a matriz libera para ela.
 **Nenhuma fala muda por avatar.**
 
 ## Roteiro só-fala
 
-If you bought black pepper from the store, drop a spoonful into cold water. Real peppercorns sink. If some float, those are dried papaya seeds they mixed in to fill the jar. Potatoes, place them in a bowl of water. If they sink, they are good. If they float, they are hollow and already going bad. Turmeric, stir a spoonful into warm water. Real turmeric slowly settles to the bottom. If the water turns bright yellow right away, it has been dyed. Coffee, sprinkle a little into a glass of cold water. If it floats on top, it is pure. If it sinks and releases color, it has been mixed. Cinnamon sticks. A real cinnamon roll has thin paper layers like a cigar. If it is one thick hard curl, you bought cassia, the cheap one. These are only some of the food secrets I have collected during years of my practice. That's why my turmeric and black pepper come from Natural Rems Sea Moss, all sixteen ingredients packed into a single gummy. Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video.
+If you bought black pepper from the store, drop a spoonful into cold water. Real peppercorns sink. If some float, those are dried papaya seeds they mixed in to fill the jar. Potatoes, place them in a bowl of water. If they sink, they are good. If they float, they are hollow and already going bad. Turmeric, stir a spoonful into warm water. Real turmeric slowly settles to the bottom. If the water turns bright yellow right away, it has been dyed. Coffee, sprinkle a little into a glass of cold water. If it floats on top, it is pure. If it sinks and releases color, it has been mixed. Cinnamon sticks. A real cinnamon roll has thin paper layers like a cigar. If it is one thick hard curl, you bought cassia, the cheap one. These are only some of the food secrets I have collected during years of my practice. My clients always ask how I test all of this. Honestly, I stopped buying turmeric, black pepper and sea moss in separate jars. I get all of them, plus thirteen more, in Natural Rems Sea Moss. One green apple gummy each day, and sixteen fewer jars to test. Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video.
 
 ## Tabela bilíngue
 
@@ -147,8 +153,9 @@ If you bought black pepper from the store, drop a spoonful into cold water. Real
 | T5 | Coffee, sprinkle a little into a glass of cold water. If it floats on top, it is pure. If it sinks and releases color, it has been mixed. | Café, polvilhe um pouco num copo de água fria. Se boiar, é puro. Se afundar e soltar cor, foi misturado. |
 | T6 | Cinnamon sticks. A real cinnamon roll has thin paper layers like a cigar. If it is one thick hard curl, you bought cassia, the cheap one. | Canela em pau. A canela de verdade tem camadas finas como papel, feito um charuto. Se for uma casca grossa e dura, você comprou cássia, a barata. |
 | T7 | These are only some of the food secrets I have collected during years of my practice. | Esses são só alguns dos segredos de comida que eu juntei em anos de prática. |
-| T8 | That's why my turmeric and black pepper come from Natural Rems Sea Moss, all sixteen ingredients packed into a single gummy. | É por isso que a minha cúrcuma e a minha pimenta-do-reino vêm do Natural Rems Sea Moss, os dezesseis ingredientes numa goma só. |
-| T9 | Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video. | Procure Natural Rems Sea Moss na Amazon. Ou é só tocar no link que eu deixei aqui embaixo, na legenda deste vídeo. |
+| T8 | My clients always ask how I test all of this. Honestly, I stopped buying turmeric, black pepper and sea moss in separate jars. | As minhas clientes sempre perguntam como eu testo tudo isso. Sinceramente, eu parei de comprar cúrcuma, pimenta-do-reino e sea moss em potes separados. |
+| T9 | I get all of them, plus thirteen more, in Natural Rems Sea Moss. One green apple gummy each day, and sixteen fewer jars to test. | Eu pego todos, mais treze, no Natural Rems Sea Moss. Uma goma de maçã verde a cada dia, e dezesseis potes a menos para testar. |
+| T10 | Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video. | Procure Natural Rems Sea Moss na Amazon. Ou é só tocar no link que eu deixei aqui embaixo, na legenda deste vídeo. |
 
 ## Contagem de palavras
 
@@ -161,22 +168,26 @@ If you bought black pepper from the store, drop a spoonful into cold water. Real
 | T5 | 28 | ok |
 | T6 | 26 | ok |
 | T7 | 16 | ok |
-| T8 | 21 | ok |
+| T8 | 23 | ok |
 | T9 | 25 | ok |
+| T10 | 25 | ok |
 
 ---
 
 ## Notas de produção
 
 - **Rodada:** VALIDAÇÃO. Um gancho só, o do modelo, aprovado junto com este roteiro (`GANCHOS_VISUAIS.md`).
-- **Origem orgânica:** copy literal do T1 ao T7. Só o bloco de oferta e CTA (T8 e T9) foi reescrito,
+- **Origem orgânica:** copy literal do T1 ao T7. Só o bloco de oferta e CTA (T8 a T10) foi reescrito,
   no lugar da coleção de truques, do "comment coffee" e do follow gate, com o tamanho aproximado do original.
 - **Desvio 1, CTA da marca (obrigatório):** a coleção de truques por DM vira o pote, e o follow gate vira
   os passos 2 a 4 do PDF da Natural Rems, com o link da legenda do post. "Comment coffee" sai: a keyword
   do ângulo é `yes`, e o comentário opcional fica de fora porque não há DM.
-- **A ponte do T8 sai do próprio vídeo:** dois dos cinco temperos falsificados (cúrcuma tingida e pimenta
-  com semente de mamão) estão no rótulo do pote. "That's why" amarra a oferta ao que ela acabou de provar,
-  sem claim de saúde nenhum.
+- **Transição v2, opção C do Luigi (2026-10-03):** a v1 ("That's why my turmeric and black pepper come
+  from...") pulava do teste para o pote sem argumento. Agora a ponte é a conveniência, que é a arma do
+  briefing da marca: as clientes perguntam como ela testa tudo (T8, prova social de coach), ela parou de
+  comprar cúrcuma, pimenta e sea moss em potes separados, e o pote junta os três e mais treze (T9). Fecha
+  na mesma dor do gancho: "sixteen fewer jars to test". Dois dos três ingredientes nomeados (cúrcuma e
+  pimenta) são temperos que o vídeo acabou de mostrar falsificados. Sem claim de saúde.
 - **Desvio 2, cenário e figurino:** a cozinha do modelo vira a mesa preta do box da Brandon, regata
   branca e short preto (avatar fixo por conta).
 - **Herói do gancho:** o aquário de vidro com água fria colado na lente e os grãos de pimenta caindo e
@@ -189,7 +200,7 @@ If you bought black pepper from the store, drop a spoonful into cold water. Real
   palavra a palavra, com a palavra carregada maior.
 - **Compliance, claim mais arriscado:** nenhum claim de saúde no vídeo inteiro. O que mais se expõe é
   acusar fraude ("they mixed in", "it has been dyed") sem nomear marca, copiado literal do modelo, e o
-  teste do café, que é de credibilidade fraca. O T8 fala de ingrediente, não de resultado.
+  teste do café, que é de credibilidade fraca. O T9 fala de ingrediente e de conveniência, nunca de resultado; "fewer jars to test" não diz que o pote foi testado.
 - **Mesma conta:** a Brandon já tem um vídeo de inspeção de mercado (`brandon_mercado`, Ângulo 2, 3
   dicas). Os testes aqui são outros (nenhuma dica repetida) e a oferta é outra.
 - **Duração:** ~66s (o modelo tem 58s; o CTA da marca é mais longo que o "comment coffee").

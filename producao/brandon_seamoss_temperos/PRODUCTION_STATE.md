@@ -20,3 +20,7 @@ entregando um bloco de código por K e por V no chat.
   coffee" e do follow gate. checar_frases.py: "them in a bowl of water" (T3) igual à `brandon_mercado`,
   instrução de teste copiada literal do modelo; fica. Checklist de envio, bloco A (gancho fiel): 11/11
   (N/A: A1, A2, A7). Linter: só a FALHA esperada de PROMPTS_PRODUCAO.md.
+- 2026-10-03: o Luigi não gostou da transição dos testes para o produto e pediu opções; escolheu a
+  opção C (conveniência: "My clients always ask how I test all of this..."). Roteiro v2: T8 transição,
+  T9 oferta com o pote, T10 CTA. "one green apple gummy a day" virou "each day" (frase queimada do
+  joelho). Texto de tela do gancho passa a repetir "Real peppercorns sink" (sincronia do gancho verbal).
