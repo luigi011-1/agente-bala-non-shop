@@ -118,7 +118,7 @@ Cena: a mão espalmada no coração, a carta na borda do quadro.
   "realism": "Real skin with visible pores, irregular texture, fine lines and soft asymmetry, hair in uneven natural clumps, iPhone footage look, flat natural light, low contrast, slight JPEG compression, boring everyday reality, background fully in focus, everything in sharp focus, no AI polish, no beauty smoothing.",
   "aspect_ratio": "9:16 vertical",
   "shot_id": "K03_walt_hensley",
-  "prop": "In his weathered hands with faded tattoos on the forearms: one hand pressed flat over his heart on the chest, fingers relaxed; the other hand holds the Wheel of Fortune tarot card from the same gold deck: a shiny gold foil card with a metallic gold border and a saturated illustration of a large orange and red wheel in the center over teal clouds with a red ribbon low at the right edge of the frame, partly cut off by the frame edge.",
+  "prop": "In his weathered hands with faded tattoos on the forearms: one hand pressed flat over his heart on the chest, fingers relaxed; the other hand holds the gold Wheel of Fortune card low at the right edge of the frame, partly cut off by the frame edge. The card is the Wheel of Fortune tarot card from the same gold deck: a shiny gold foil card with a metallic gold border and a saturated illustration of a large orange and red wheel in the center over teal clouds with a red ribbon.",
   "posture": "Walt Hensley sits in his old wooden rocking chair, facing the lens, upright and still, one hand pressed flat over his heart, looking softly into the lens.",
   "composition": "The hand pressed flat over the heart is in the center of the frame on the chest, about 20 inches from the lens, taking up about 10 percent of the frame, closer to the camera than his face; the card is only a sliver at the right edge, partly cut off by the frame edge. His face sits in the upper middle of the frame with a little headroom, his chest in the middle, the setting behind in the top third, framed from the top of the head to the waist. Nothing else is in the foreground. The background is reduced by framing, never by blur.",
   "state": "Start frame: Walt Hensley looks softly into the lens, caught mid-sentence, lips naturally parted, calm and sincere expression, as if saying a prayer.",
@@ -159,7 +159,7 @@ som ambiente: varanda tranquila, leve vento e passarinhos ao longe, sem música
 ### V03 · T3 · usa K02
 
 ```text
-o avatar Walt Hensley (homem) fala em inglês com sotaque americano do Tennessee, voz masculina grave, devagar e gentil de um homem de cinquenta e oito anos do Tennessee, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, confiante, quase em segredo, no mesmo ritmo do vídeo modelo, a seguinte frase: "Okay, this keeps happening to people who claim it. So send this to yourself right now."
+o avatar Walt Hensley (homem) fala em inglês com sotaque americano do Tennessee, voz masculina grave, devagar e gentil de um homem de cinquenta e oito anos do Tennessee, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, em voz mais baixa, quase em segredo, no mesmo ritmo do vídeo modelo, a seguinte frase: "Okay, this keeps happening to people who claim it. So send this to yourself right now."
 
 o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
 

@@ -130,7 +130,7 @@ AVATARES = [
 
 EMOCAO = {
     "T1": "calma e direta, como quem dá uma ordem baixinha", "T2": "animada e segura",
-    "T3": "confiante, quase em segredo", "T4": "calorosa e convidativa",
+    "T3": "em voz mais baixa, quase em segredo", "T4": "calorosa e convidativa",
     "T5": "devagar e sincera, a voz um pouco mais baixa, com uma pausa curta no fim de cada frase, como numa oração",
     "T6": "devagar e serena, a voz um pouco mais baixa, com uma pausa curta no fim de cada frase, como numa oração",
     "T7": "sorridente e leve", "T8": "próxima e animada",
@@ -213,7 +213,8 @@ def keyframes(a):
     k3 = dict(base, shot_id=f"K03_{a['arquivo'].lower()}")
     k3.update({
         "prop": (f"In {a['maos']}: one hand pressed flat over {p} heart on the chest, fingers relaxed; the other hand "
-                 f"holds {CARTA} low at the right edge of the frame, partly cut off by the frame edge."),
+                 f"holds the gold Wheel of Fortune card low at the right edge of the frame, partly cut off by the frame "
+                 f"edge. The card is {CARTA}."),
         "posture": (f"{n} {a['assento']}, facing the lens, upright and still, one hand pressed flat over {p} heart, "
                     f"looking softly into the lens."),
         "composition": (f"The hand pressed flat over the heart is in the center of the frame on the chest, about 20 inches "
