@@ -231,7 +231,7 @@ Ficha: 3/3 K conferidos contra o frame do modelo, placar 14/14 em cada (`FICHA_F
 
 ## Anexos e mapa
 
-- **Âncora Morgan Vance:** `producao/_ancoras/morgan_vance_ancora.jpg` no K01, no K02 e no K03.
+- **Âncora Morgan Vance:** `/Users/macbookairm2/Desktop/AVATARES/avatares appyon/Morgan Vance.jpg` no K01, no K02 e no K03.
 - Em cada K, anexar também o frame do modelo do mesmo código (`input/frames_modelo/K01_modelo.png`, `K02_modelo.png`, `K03_modelo.png`), só como composição.
 
 ```text

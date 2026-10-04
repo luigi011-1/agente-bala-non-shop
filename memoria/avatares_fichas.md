@@ -8,6 +8,13 @@ metadata:
   modified: 2026-09-22T23:16:39.799Z
 ---
 
+> 🔴 **2026-10-04 (Luigi): o NOME do avatar é o nome do ARQUIVO que ele manda.** Os arquivos dele em
+> `/Users/macbookairm2/Desktop/AVATARES/avatares appyon/` se chamam `avery.knox_ .jpeg` (a imagem da ficha
+> Darlene Pruitt), `devon.price_usa .jpeg` (ficha Lorraine Vance), `jordan_vale.us .jpeg` (ficha Walt
+> Hensley) e `Morgan Vance.jpg`; conteúdo idêntico por md5 às âncoras de `producao/_ancoras/`. Nos pacotes
+> sai **Avery Knox, Devon Price, Jordan Vale e Morgan Vance**, com o caminho da pasta dele como âncora. Os
+> traços, a roupa e o cenário das fichas abaixo continuam valendo. Ver [[feedback-ancora-ler-uma-por-vez]].
+>
 > ♻️ **2026-09-30: entrou a Morgan Vance** (conta orgânica nova, ficha abaixo). O roster passa a ser
 > Walt, Darlene, Lorraine e Morgan; o resto deste aviso continua valendo.
 >

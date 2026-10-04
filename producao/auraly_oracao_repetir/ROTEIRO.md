@@ -8,7 +8,7 @@ CTA original: "I want you to save this and I want you to come back in seven days
 **Vídeo modelo:** `producao/auraly_oracao_repetir/input/modelo.mp4` (upload `snapinsta-1791128977098.mp4`) · 41,4s · 720x1280 · 29,97fps
 **Origem do modelo:** pessoa real (orgânico): mulher de cabelo castanho longo, camiseta branca, sentada no sofá de pernas cruzadas com jeans, celular apoiado baixo no colo olhando levemente de baixo para cima, baralho de tarô dourado nas mãos, zero cortes em 41s. Vale o `PERFIL_ORGANICO.md`.
 **Rodada:** VALIDAÇÃO (gancho do modelo, fiel)
-**Avatares:** Darlene Pruitt, Lorraine Vance, Walt Hensley e Morgan Vance (fila no `CHECKPOINT.md`)
+**Avatares:** Avery Knox, Devon Price, Jordan Vale e Morgan Vance (fila no `CHECKPOINT.md`)
 **Objetivo:** GROWTH (resposta do Luigi, 2026-10-04)
 **Variável trocada:** a oração. No modelo ela toca como áudio de um app de afirmações sobre o rosto parado; aqui o próprio avatar convida quem assiste a repetir junto e fala a oração (pedido do Luigi). Resto literal, menos o CTA de growth.
 **Funil:** save + voltar em 7 dias (do original) + comentar `222` + follow. Sem Stories.
@@ -60,7 +60,7 @@ Esqueleto novo para as quatro contas: talking head orgânico com uma carta tirad
 | 7 | CTA · SAVE + 7 DIAS | I want you to save this and I want you to come back in seven days and just tell me what happens. | literal |
 | 8 | CTA · 222 + FOLLOW | (não existe) | Comment 222 right now so this gets tied to your name, and follow me so you don't miss what comes next. (contrato GROWTH: keyword `222` com a consequência da LEI DO SELO + follow de continuidade) |
 
-**Congruência por avatar:** nenhuma frase depende de gênero ou idade; a oração é em primeira pessoa de quem repete, então soa igual na boca da Darlene, da Lorraine, do Walt e da Morgan.
+**Congruência por avatar:** nenhuma frase depende de gênero ou idade; a oração é em primeira pessoa de quem repete, então soa igual na boca da Avery, da Devon, do Jordan e da Morgan.
 **Data:** "the best October" é o mês corrente (postagem em outubro de 2026), sem dia cravado.
 **Registro:** divino. "prayer", "luckiest timeline", "everything works out for me": nada lê como pacto.
 

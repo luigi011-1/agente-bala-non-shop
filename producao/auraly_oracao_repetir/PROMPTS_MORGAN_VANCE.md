@@ -4,7 +4,7 @@ pipeline: auraly
 
 Vídeo modelo: `producao/auraly_oracao_repetir/input/modelo.mp4` (41,4 s, pessoa real)
 
-Âncora: `producao/_ancoras/morgan_vance_ancora.jpg`
+Âncora: `/Users/macbookairm2/Desktop/AVATARES/avatares appyon/Morgan Vance.jpg`
 
 Funil: growth, save + voltar em 7 dias + `222` + follow. Origem orgânica, rodada de validação.
 
@@ -39,7 +39,7 @@ Funil: growth, save + voltar em 7 dias + `222` + follow. Origem orgânica, rodad
 ## K01 · T1 · GERAR DO ZERO · ÂNCORA MORGAN VANCE + FRAME DO MODELO
 
 > ### 📎 ANEXAR: **2 IMAGENS**
-> **1️⃣ ÂNCORA MORGAN VANCE** `producao/_ancoras/morgan_vance_ancora.jpg`
+> **1️⃣ ÂNCORA MORGAN VANCE** `/Users/macbookairm2/Desktop/AVATARES/avatares appyon/Morgan Vance.jpg`
 > **2️⃣ FRAME DO MODELO, só composição** `input/frames_modelo/K01_modelo.png`
 >
 > ### 🆕 GERAR DO ZERO
@@ -69,7 +69,7 @@ Cena: baralho de tarô dourado nas duas mãos colado na lente.
 ## K02 · T2 a T4 · GERAR DO ZERO · ÂNCORA MORGAN VANCE + FRAME DO MODELO
 
 > ### 📎 ANEXAR: **2 IMAGENS**
-> **1️⃣ ÂNCORA MORGAN VANCE** `producao/_ancoras/morgan_vance_ancora.jpg`
+> **1️⃣ ÂNCORA MORGAN VANCE** `/Users/macbookairm2/Desktop/AVATARES/avatares appyon/Morgan Vance.jpg`
 > **2️⃣ FRAME DO MODELO, só composição** `input/frames_modelo/K02_modelo.png`
 >
 > ### 🆕 GERAR DO ZERO
@@ -99,7 +99,7 @@ Cena: a carta da Roda da Fortuna de pé colada na lente.
 ## K03 · T5 a T8 · GERAR DO ZERO · ÂNCORA MORGAN VANCE + FRAME DO MODELO
 
 > ### 📎 ANEXAR: **2 IMAGENS**
-> **1️⃣ ÂNCORA MORGAN VANCE** `producao/_ancoras/morgan_vance_ancora.jpg`
+> **1️⃣ ÂNCORA MORGAN VANCE** `/Users/macbookairm2/Desktop/AVATARES/avatares appyon/Morgan Vance.jpg`
 > **2️⃣ FRAME DO MODELO, só composição** `input/frames_modelo/K03_modelo.png`
 >
 > ### 🆕 GERAR DO ZERO

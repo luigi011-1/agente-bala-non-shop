@@ -1,7 +1,9 @@
 """Gera os pacotes por avatar da producao auraly_oracao_repetir (Auraly, growth, origem organica, validacao).
 
 Fonte unica da fala: ROTEIRO.md aprovado (lido do disco, nunca redigitado). Identidade, roupa e
-cenario: ROSTER AURALY ATIVO (avatares-fichas) e as ancoras em cena real. Medidas: FICHA_FRAMES.md.
+cenario: ROSTER AURALY ATIVO (avatares-fichas) e as ancoras em cena real. Nomes = nomes dos arquivos
+que o Luigi enviou (2026-10-04): avery.knox_ (ficha Darlene Pruitt), devon.price_usa (ficha Lorraine Vance),
+jordan_vale.us (ficha Walt Hensley) e Morgan Vance; mesmas imagens, conferidas por md5. Medidas: FICHA_FRAMES.md.
 Origem organica (PERFIL_ORGANICO.md): celular apoiado na altura do peito olhando levemente para cima,
 baralho de taro dourado colado na lente, sem kit obrigatorio, sem carta SOULMATE, primeira linha do V
 no tom de conversa de celular. Prompt de imagem em JSON (Flow v17). Mapa K/V como no modelo:
@@ -54,9 +56,9 @@ CARTA = ("the Wheel of Fortune tarot card from the same gold deck: a shiny gold 
          "and a saturated illustration of a large orange and red wheel in the center over teal clouds with a red ribbon")
 
 AVATARES = [
-    dict(nome="Darlene Pruitt", arquivo="DARLENE_PRUITT", genero="mulher", pos="her",
-         ancora="producao/_ancoras/darlene_pruitt_ancora.jpg",
-         identidade=("The exact fictional AI character Darlene Pruitt: white American woman around fifty-six from Texas, "
+    dict(nome="Avery Knox", arquivo="AVERY_KNOX", genero="mulher", pos="her",
+         ancora="/Users/macbookairm2/Desktop/AVATARES/avatares appyon/avery.knox_ .jpeg",
+         identidade=("The exact fictional AI character Avery Knox: white American woman around fifty-six from Texas, "
                      "voluminous shaggy layered platinum-blonde hair with visible dark roots, brown eyes, fair skin with "
                      "crow's feet and fine lines, everyday makeup with defined brows, mascara and pink lipstick."),
          roupa=("White long-sleeve button-up shirt with the cuffs loosely rolled, blue jeans, a large turquoise and silver "
@@ -72,9 +74,9 @@ AVATARES = [
          luz=LUZ_INTERNA, sotaque="texano carregado",
          voz="voz feminina média, levemente rouca e calorosa de uma texana de cinquenta e seis anos",
          som="cozinha residencial silenciosa"),
-    dict(nome="Lorraine Vance", arquivo="LORRAINE_VANCE", genero="mulher", pos="her",
-         ancora="producao/_ancoras/lorraine_vance_ancora.jpg",
-         identidade=("The exact fictional AI character Lorraine Vance: white American woman around fifty-two, closely "
+    dict(nome="Devon Price", arquivo="DEVON_PRICE", genero="mulher", pos="her",
+         ancora="/Users/macbookairm2/Desktop/AVATARES/avatares appyon/devon.price_usa .jpeg",
+         identidade=("The exact fictional AI character Devon Price: white American woman around fifty-two, closely "
                      "shaved head with grey stubble, freckles and sunspots on her face and scalp, light grey-green eyes, "
                      "defined jaw, fine lines and no makeup."),
          roupa=("Light-wash denim shirt worn open over a fitted black crew-neck T-shirt, dark jeans, large silver hoop "
@@ -89,9 +91,9 @@ AVATARES = [
          luz=LUZ_INTERNA, sotaque="de Chicago",
          voz="voz feminina grave, direta e de humor seco de uma mulher de cinquenta e dois anos de Chicago",
          som="cozinha residencial silenciosa"),
-    dict(nome="Walt Hensley", arquivo="WALT_HENSLEY", genero="homem", pos="his",
-         ancora="producao/_ancoras/walt_hensley_ancora.jpg",
-         identidade=("The exact fictional AI character Walt Hensley, explicitly male: white American man around fifty-eight, "
+    dict(nome="Jordan Vale", arquivo="JORDAN_VALE", genero="homem", pos="his",
+         ancora="/Users/macbookairm2/Desktop/AVATARES/avatares appyon/jordan_vale.us .jpeg",
+         identidade=("The exact fictional AI character Jordan Vale, explicitly male: white American man around fifty-eight, "
                      "long grey-white beard down to mid-chest, grey moustache, grey hair combed back short on the sides, "
                      "sun-weathered skin with freckles and deep crow's feet, light grey eyes, both forearms covered in faded "
                      "traditional American tattoos with no lettering, a swallow and a red rose on the left forearm."),
@@ -107,7 +109,7 @@ AVATARES = [
          voz="voz masculina grave, devagar e gentil de um homem de cinquenta e oito anos do Tennessee",
          som="varanda tranquila, leve vento e passarinhos ao longe"),
     dict(nome="Morgan Vance", arquivo="MORGAN_VANCE", genero="mulher", pos="her",
-         ancora="producao/_ancoras/morgan_vance_ancora.jpg",
+         ancora="/Users/macbookairm2/Desktop/AVATARES/avatares appyon/Morgan Vance.jpg",
          identidade=("The exact fictional AI character Morgan Vance: Black American woman around twenty-five, long knotless "
                      "box braids down to the waist with a middle part and a few small gold cuffs in the braids, neat baby "
                      "hairs, dark brown skin with real texture, visible pores and acne marks on the forehead and cheeks, "

@@ -12,16 +12,16 @@ Current avatar: NONE
 Next action: quando o Luigi confirmar a postagem, registrar com python3 gerenciar_operacao.py registrar --origem REAL (controle/README.md)
 
 ## Avatar queue
-[DONE] Darlene Pruitt
-[DONE] Lorraine Vance
-[DONE] Walt Hensley
+[DONE] Avery Knox
+[DONE] Devon Price
+[DONE] Jordan Vale
 [DONE] Morgan Vance
 
-Anchors (conferidas por md5 contra producao/_ancoras/, uma por vez):
-- Darlene Pruitt: producao/_ancoras/darlene_pruitt_ancora.jpg (anexo 1 da mensagem)
-- Lorraine Vance: producao/_ancoras/lorraine_vance_ancora.jpg (anexo 2 da mensagem)
-- Walt Hensley: producao/_ancoras/walt_hensley_ancora.jpg (anexo 3 da mensagem)
-- Morgan Vance: producao/_ancoras/morgan_vance_ancora.jpg (anexo 4 da mensagem)
+Anchors (nome = nome do arquivo do Luigi; conteudo identico por md5 a producao/_ancoras/):
+- Avery Knox: /Users/macbookairm2/Desktop/AVATARES/avatares appyon/avery.knox_ .jpeg (anexo 1; = darlene_pruitt_ancora.jpg)
+- Devon Price: /Users/macbookairm2/Desktop/AVATARES/avatares appyon/devon.price_usa .jpeg (anexo 2; = lorraine_vance_ancora.jpg)
+- Jordan Vale: /Users/macbookairm2/Desktop/AVATARES/avatares appyon/jordan_vale.us .jpeg (anexo 3; = walt_hensley_ancora.jpg)
+- Morgan Vance: /Users/macbookairm2/Desktop/AVATARES/avatares appyon/Morgan Vance.jpg (anexo 4; = morgan_vance_ancora.jpg)
 
 ## Approved script
 status: APPROVED (Luigi, 2026-10-04)
@@ -39,7 +39,7 @@ image prompts: FLOW_<AVATAR>.md dos 4 avatares (K01 a K03)
 video prompts: FLOW_<AVATAR>.md dos 4 avatares (V01 a V08)
 
 ## Completed
-- Intake: video + 4 anchors (Darlene, Lorraine, Walt, Morgan)
+- Intake: video + 4 anchors (Avery Knox, Devon Price, Jordan Vale, Morgan Vance)
 - ANALYSIS: /watch em _watch/; plano unico de 41s, pessoa real, fala desde o frame 0; de 22s a 36s a oracao toca como audio de app sobre o rosto parado
 - SCRIPT_MODELLING: ROTEIRO.md + GANCHOS_VISUAIS.md, aprovados 2026-10-04
 - FICHA_FRAMES.md (K01 a K03, placar 14/14) + gerar_pacote.py
@@ -62,6 +62,10 @@ video prompts: FLOW_<AVATAR>.md dos 4 avatares (V01 a V08)
 - Decision: pacotes dos quatro avatares numa entrega so
   Reason: Luigi, 2026-10-04 ("roteiro aprovado, me manda os packs de todos os avatares")
   Operational consequence: sem AVATAR_TRANSITION entre avatares
+
+- Decision: nomes dos avatares = nomes dos arquivos do Luigi (avery.knox_, devon.price_usa, jordan_vale.us, Morgan Vance)
+  Reason: Luigi, 2026-10-04, os pacotes sairam com os nomes do repositorio (Darlene, Lorraine, Walt) e ele reprovou
+  Operational consequence: pacotes regerados com os nomes novos e o caminho da pasta dele como ancora; tracos, roupa e cenario das mesmas imagens
 
 ## Next response format
 - STATUS em poucas linhas; ao confirmar postagem, registrar resultados
