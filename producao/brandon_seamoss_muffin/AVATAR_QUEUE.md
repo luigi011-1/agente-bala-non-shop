@@ -8,7 +8,7 @@ Reference video: `input/reference_video.mp4` (41,8s, muffin de cenoura e aveia s
 
 | Ordem | Estado | Avatar | Âncora | Cenário (texto dos K) |
 |---:|---|---|---|---|
-| 1 | ACTIVE | holistic.brandon | `producao/_ancoras/holistic_brandon_ancora.jpg` | box de treino: parede de bloco branca, neon vermelho TRAIN PRAY REPEAT, quadro branco STAY READY, bandeira dos EUA; mesa preta como bancada |
+| 1 | DONE | holistic.brandon | `producao/_ancoras/holistic_brandon_ancora.jpg` | box de treino: parede de bloco branca, neon vermelho TRAIN PRAY REPEAT, quadro branco STAY READY, bandeira dos EUA; mesa preta como bancada |
 
 ## Travas da produção
 
@@ -20,4 +20,4 @@ Reference video: `input/reference_video.mp4` (41,8s, muffin de cenoura e aveia s
 
 ## Estado atual
 
-- Roteiro v1 entregue para aprovação em 2026-10-04. Nenhum prompt antes da aprovação.
+- Roteiro v2 aprovado em 2026-10-04. Pacote entregue em `ENTREGA_BRANDON.md`. Nenhum PENDING nem ACTIVE: PRODUCTION COMPLETE (entrega de prompts).

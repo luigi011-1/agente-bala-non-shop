@@ -2,10 +2,9 @@
 Production: `brandon_seamoss_muffin`
 Angle: 1, Natural Rems Sea Moss · Objective: SALE · Round: VALIDATION
 Reference video: `input/reference_video.mp4`
-Current stage: WAITING_SCRIPT_APPROVAL
-Next action: Luigi aprova ou ajusta o roteiro v1. Depois: FICHA_FRAMES.md com os 17 frames de
-`input/frames_modelo/`, pacote (gerador no molde de `brandon_seamoss_vizinha/gerar_pacote.py`, sem REF-P,
-só a âncora + foto do produto do T13 ao T17), checklist de envio, linter com 0 FALHAS e transcrições.
+Current stage: PRODUCTION_COMPLETE
+Next action: Luigi gera a mídia no Flow com `ENTREGA_BRANDON.md`; quando mandar o K01 gerado (gancho do
+ralador), pontuar F1 a F6 contra o frame do modelo; depois da postagem, rodar o P10.
 
 ## Decisões do Luigi (2026-10-04)
 - Ângulo 1, Natural Rems Sea Moss, VENDA, avatar holistic.brandon.
@@ -19,3 +18,7 @@ só a âncora + foto do produto do T13 ao T17), checklist de envio, linter com 0
   moss genérico, comment `yes` + follow antes da Amazon, link na legenda. `checar_frases.py`: o T13
   repetia "Natural Rems Sea Moss. Wild Irish sea moss" da vizinha; reescrito, nada repetido.
 - 2026-10-04: roteiro v2: ponte refeita (Luigi: o T12 alertava sobre sea moss sem conexão). Cadeia de 4 elos pela mesma dor (tarde lenta): a fornada acaba → sea moss faz o mesmo trabalho → gomas com açúcar desfazem o zero sugar → Natural Rems < 1 g. Lição na memória feedback-ponte-argumentada.
+- 2026-10-04: Luigi aprovou o roteiro v2 ("roteiro aprovado, prossiga"). Pacote gerado por `gerar_pacote.py`
+  + `montar_entrega.py`: 17 K e 17 V, FICHA_FRAMES.md com placar completo (evidência por assert),
+  ENTREGA_BRANDON.md (Flow v17). Linter: 0 FALHAS. Checklist de envio 34/34 (N/A: A1, A10, A12, A13, C3, C4,
+  C6, C7). Fila: holistic.brandon DONE. PRODUCTION COMPLETE (entrega de prompts).
