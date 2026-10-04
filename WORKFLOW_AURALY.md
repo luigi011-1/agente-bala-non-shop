@@ -203,7 +203,8 @@ impresso dentro do `K__` nem solicitado como legenda no `V__`.
 
 ### IMAGE_PROMPTS
 
-Abrir somente checkpoint, hooks selecionados, roteiro aprovado, anchor ativa e **`GATE_VISUAL.md`**
+Abrir somente checkpoint, hooks selecionados, roteiro aprovado, o **character sheet** do avatar ativo,
+`producao/_ancoras/CENARIOS_AURALY.md` (cenário novo, 2026-10-04) e **`GATE_VISUAL.md`**
 (Partes 1 a 3: realismo, composicao do heroi e trechos prontos), que sao as regras vigentes de
 prompt de imagem. Rodar o gate antes do primeiro `K__`: todo `K__` carrega luz neutra ou ceu com
 cor, heroi colado na lente e o trecho de realismo, porque o bloco do Flow e autossuficiente.
@@ -506,7 +507,40 @@ analises longas.
 
 ## Âncora e cenário por gancho (Luigi, 2026-09-14; âncora revista em 2026-09-22)
 
-> ♻️ **2026-09-25: AVATAR FIXO POR CONTA (Luigi).** *"sim, vale para o Auraly também"*. Cada conta
+> 🔴🔴 **2026-10-04 (Luigi): CENÁRIO NOVO E DETALHADO A CADA PRODUÇÃO, ANEXO = CHARACTER SHEET.
+> VALE SÓ PARA O AURALY APP.** Palavras dele: *"quero que os prompts sejam detalhando bem o ambiente
+> para esses avatares, porque eu quero diversificar o cenário e não me prender a somente um que não
+> está validado"*. **Revoga, só no Auraly, a parte de CENÁRIO do avatar fixo por conta (2026-09-25,
+> logo abaixo).** FitWell (Ângulos 2 e 4) e Sea Moss (Ângulo 1) continuam com avatar fixo por conta,
+> roupa e cenário da âncora em todo vídeo, sem mudança nenhuma.
+>
+> 1. **Anexo de identidade em todo `K__` = o CHARACTER SHEET do avatar**, em
+>    `producao/_ancoras/character_sheets/<avatar>_character_sheet.jpg` (close extremo do rosto + frente,
+>    costas, lado esquerdo e lado direito, fundo cinza), gerado com
+>    `producao/_ancoras/PROMPT_CHARACTER_SHEET_AURALY_2026-10-04.md`. Ele trava rosto, pele, cabelo,
+>    corpo e roupa. A foto em cena real deixa de ser anexo dos K (continua só como registro).
+>    Roster com sheet: Avery Knox, Devon Price, Jordan Vale e Morgan Vance (nomes = arquivos do Luigi).
+> 2. **`reference_use` padrão:** `Use the attached character sheet only for [Name]'s exact identity
+>    (face, skin, hair, body) and wardrobe; ignore its grey studio background. The setting comes only
+>    from this text.` Proibido no K do Auraly: `the same lived-in room as the reference`, `as the
+>    reference, unchanged`, `own setting` (o `checar_entrega.py` reprova).
+> 3. **Cada produção nova escolhe um cenário NOVO**, que não repete nenhum cenário já usado pela mesma
+>    conta (`producao/_ancoras/CENARIOS_AURALY.md`), real, americano, congruente com o vídeo modelo e
+>    com o avatar. Dentro da MESMA produção todos os K ficam no mesmo cenário (continuidade do vídeo).
+>    Registrar `Scenario: <descrição curta>` no `CHECKPOINT.md` (o linter reprova sem) e acrescentar a
+>    linha no `CENARIOS_AURALY.md` ao entregar o pacote.
+> 4. **O campo `scene` descreve o ambiente inteiro, sem depender de anexo**, nesta ordem: (a) o lugar e
+>    a região dos EUA (tipo de cômodo ou local, casa ou comércio, cidade ou estado); (b) arquitetura e
+>    materiais com cor (parede, piso, bancada ou móvel principal); (c) janela ou céu com cor e textura,
+>    e de onde vem a luz; (d) as 2 a 3 âncoras de fundo nomeadas com a posição no quadro; (e) a bandeira
+>    dos EUA (formato IA; opcional no orgânico) e o kit Auraly quando o formato pedir. **Detalhar não é
+>    inventariar:** o teto de 2 a 3 âncoras de fundo visíveis do `GATE_VISUAL.md` continua.
+> 5. **Roupa:** a do character sheet, igual em todo K e todo vídeo da conta, até o Luigi decidir outra
+>    coisa. O ângulo de câmera continua servindo a ação estrutural.
+> 6. **Pacotes entregues antes de 2026-10-04 não se reescrevem** (`controle/cenario_auraly_legado.json`).
+
+> ♻️ **2026-09-25: AVATAR FIXO POR CONTA (Luigi).** ⚠️ *No Auraly a parte de CENÁRIO foi revogada em
+> 2026-10-04 (bloco acima); a roupa continua fixa, agora pelo character sheet.* *"sim, vale para o Auraly também"*. Cada conta
 > usa **o mesmo avatar com a roupa e o cenário-base da âncora em todo vídeo e em todo gancho**; o que
 > varia entre vídeos é o conteúdo. **Revoga os itens 2 e 3 abaixo** (cenário próprio e roupa livre
 > por gancho). O ângulo de câmera continua podendo variar para servir à ação estrutural (item 4).
@@ -590,6 +624,8 @@ identidade/corpo/pele, roupa e cenário vêm do texto de cada `K`".
 ## Travas permanentes
 
 - Roteiro aprovado uma vez para toda a fila.
+- **Cenário novo e detalhado a cada produção, anexo = character sheet (Luigi, 2026-10-04, só
+  Auraly).** `Scenario:` no checkpoint, registro em `producao/_ancoras/CENARIOS_AURALY.md`.
 - Hooks selecionados uma vez para toda a fila.
 - **Validar antes de variar (2026-09-23):** producao nova e `Round: VALIDATION`, com UM hook fiel ao
   modelo e sem selecao de hook. As 10 so existem em `Round: VARIATION`, aberta pelo Luigi depois de

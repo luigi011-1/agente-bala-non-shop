@@ -11,6 +11,7 @@ Para Angle 1 e Angle 2, as regras classicas abaixo continuam aplicaveis; FitWell
 que substitui os trechos antigos daqui sobre contagem de variacoes e casamento K/V.
 Angle 4 = Body Hacks For Men 40+, de volta ao intake em 2026-10-02 (Luigi) para rodar na holistic.brandon
 (COACH), ao lado de Dana, Jamie e Lynn (PAR).
+🔴 **SÓ AURALY (Luigi, 2026-10-04):** anexo de todo K = character sheet do avatar e cenário NOVO, descrito por inteiro, a cada produção (`WORKFLOW_AURALY.md`, `producao/_ancoras/CENARIOS_AURALY.md`). Nos outros ângulos nada muda.
 Nao perguntar novamente por angulo ou avatar ja definidos. Uma tarefa de analise, organizacao ou
 manutencao nao e uma ordem para executar a proxima etapa de producao.
 
@@ -688,6 +689,10 @@ FLOW DELIVERY FORMAT), cada `K__` descreve o cenário inteiro por escrito (ficha
 ♻️ **Avatar fixo por conta (Luigi, 2026-09-25), nos três ângulos:** a roupa e o cenário-base da âncora
 se repetem em todo vídeo e todo gancho da conta; o que varia é o conteúdo e o ângulo de câmera. Só o
 movie style / short form não tem avatar fixo. Revoga o cenário e a roupa próprios por gancho do Auraly.
+🔴 **Exceção SÓ do Auraly App (Luigi, 2026-10-04):** no Auraly o anexo de todo `K__` passa a ser o
+**character sheet** do avatar (`producao/_ancoras/character_sheets/`) e **cada produção ganha um cenário
+NOVO, descrito por inteiro no `scene`**, sem repetir `producao/_ancoras/CENARIOS_AURALY.md`; a roupa
+continua a do sheet. FitWell, Sea Moss e Body Hacks seguem com o avatar fixo acima. Detalhe em `WORKFLOW_AURALY.md`.
 
 **📎 SINAL DE ENTRADA: `.mp4` + IMAGEM DE AVATAR na mesma mensagem = produzir PARA AQUELE AVATAR primeiro.**
 Quando o Luigi manda o vídeo modelo junto de uma âncora, a âncora **diz para quem é**. Não perguntar,

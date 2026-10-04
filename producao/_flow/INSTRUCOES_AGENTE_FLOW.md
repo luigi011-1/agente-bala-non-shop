@@ -1,6 +1,6 @@
 # Instrucoes do agente executor do Google Flow AI
 
-Versao 17, 2026-09-25. Contrato de execucao, subordinado ao roteador de cada oferta.
+Versao 18, 2026-10-04. Contrato de execucao, subordinado ao roteador de cada oferta.
 Auraly segue exclusivamente WORKFLOW_AURALY.md. Angle 1/2 seguem CLAUDE.md e, no FitWell,
 PLAYBOOK_FITYWELL.md. Os pacotes existentes permanecem como foram aprovados.
 
@@ -61,12 +61,19 @@ so. Isto e obrigatorio em todo K do perfil CLASSICO:
 8. Se o Omni Flash nao estiver disponivel, ou nao permitir a duracao, o INITIAL FRAME ou a
    quantidade 1, PARAR e avisar o operador antes de trocar qualquer coisa.
 
-### AURALY, anchor e avatar fixo por conta (Luigi, 2026-09-14; anchor revista em 2026-09-22; avatar fixo em 2026-09-25)
+### AURALY, character sheet e cenario novo por producao (Luigi, 2026-10-04; vale SO no Auraly)
 
-Roster Auraly: Walt Hensley, Darlene Pruitt, Lorraine Vance e Morgan Vance (desde 2026-09-30). A referencia de cada um e a anchor
-em cena real (imagem de teste aprovada), anexada em todo K. Nao existe fingerprint.
+Roster Auraly: Avery Knox, Devon Price, Jordan Vale e Morgan Vance. Desde a v18 o anexo de todo K
+Auraly e o CHARACTER SHEET do avatar ativo (close do rosto mais frente, costas e os dois lados, fundo
+cinza): ele trava identidade, corpo e roupa. O cenario NAO vem do anexo: vem inteiro do texto do K, e
+cada producao nova traz um cenario diferente. Nunca copiar o fundo cinza do sheet para a cena e nunca
+trocar o cenario descrito no K pelo de uma producao anterior. Dentro da mesma producao todos os K
+seguem o mesmo cenario descrito. FitWell e Sea Moss (perfil CLASSICO) continuam com a anchor em cena
+real e o avatar fixo por conta abaixo.
 
-AVATAR FIXO POR CONTA (v16, 2026-09-25): cada conta usa o mesmo avatar com a roupa e o cenario-base
+(Historico ate a v17:) A referencia de cada um era a anchor em cena real, anexada em todo K.
+
+AVATAR FIXO POR CONTA (v16, 2026-09-25; no Auraly so a ROUPA continua fixa desde a v18): cada conta usa o mesmo avatar com a roupa e o cenario-base
 da anchor em todo video e em todo gancho. O texto do K descreve esse cenario e essa roupa. Quando o
 video modelo tem uma cena em outro lugar, o texto do K descreve o lugar novo e manda usar a anchor
 para identidade e roupa; a pessoa e a roupa nunca mudam. O angulo de camera serve a acao estrutural
@@ -267,6 +274,9 @@ separadas: movie style com `REF-P` (v13), short form de crescimento sem anchor (
 de conteudo mudou nesta versao.
 v16, 2026-09-25: AVATAR FIXO POR CONTA tambem no Auraly. Revoga o cenario proprio e a roupa livre por
 gancho da v7: roupa e cenario-base da anchor em todo video e gancho; so o angulo de camera varia.
+v18, 2026-10-04: Auraly passa a anexar o CHARACTER SHEET em todo K e a trazer um cenario NOVO,
+descrito inteiro no texto, a cada producao. Revoga so no Auraly a parte de cenario do avatar fixo
+da v16; a roupa segue fixa pelo sheet. FitWell e Sea Moss nao mudam.
 v17, 2026-09-25: a pedido do Luigi, todo prompt de IMAGEM (K e REF-P) passa a ser entregue em JSON,
 para o modelo compreender melhor cada parte. As regras de conteudo nao mudam. O executor cola o
 objeto inteiro, de `{` a `}`; o reconhecimento K contra V ganha a marca mecanica do `{` inicial.

@@ -28,6 +28,9 @@ montagem, E marca). Item reprovado = corrigir e rodar de novo; nunca enviar com 
 entrega leva, fora dos blocos copiaveis: "Checklist de envio: X/X aprovados (N/A: ...)".
 Validar antes da entrega com checar_entrega.py. Nao pedir ao usuario que fiscalize o processo.
 Nao gerar imagens nem executar navegador/Flow. Nao reabrir decisoes aprovadas.
+SO AURALY (Luigi, 2026-10-04): anexo de todo K = character sheet (producao/_ancoras/character_sheets/);
+cenario NOVO e descrito por inteiro no scene a cada producao, sem repetir CENARIOS_AURALY.md;
+Scenario: no checkpoint. FitWell/Sea Moss/Body Hacks seguem com avatar fixo (roupa e cenario da ancora).
 """
 
 def main():

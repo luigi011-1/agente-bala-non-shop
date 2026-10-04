@@ -90,7 +90,9 @@ lente numa selfie sem objeto. Sinais de gente real em `PERFIL_ORGANICO.md` seç�
 - **Ângulo 3:** o kit de tarólogo é obrigatório e entra **agrupado em dois blocos** (prateleira +
   parede), que é como o teto de âncoras convive com ele. Âncora em cena real (Walt, Darlene,
   Lorraine), com a roupa e o cenário-base dela em todo vídeo e gancho (avatar fixo por conta,
-  Luigi 2026-09-25; revoga o cenário próprio por gancho).
+  Luigi 2026-09-25; revoga o cenário próprio por gancho). ♻️ **Só no Auraly, desde 2026-10-04:** o anexo
+  é o character sheet e o cenário é NOVO a cada produção, descrito por inteiro no `scene` com as 2 a 3
+  âncoras de fundo deste gate (`WORKFLOW_AURALY.md`). FitWell e Sea Moss não mudam.
 - **T1 do Ângulo 3:** cortes internos no `V__`, macro das mãos no payoff e split vertical liberado.
   Do T2 em diante, plano único.
 - **Corpo neutro ao gancho:** o prop que muda entre os ganchos fica FORA de quadro no corpo.
@@ -281,7 +283,8 @@ Desvio (acabamento ou avatar fixo): o que muda e por qual regra
 - **O frame do modelo manda no CONTEÚDO:** forma, cor e textura do herói, quanto do quadro ele ocupa,
   distância, câmera, pose, o que está em quadro e o frame 0.
 - **O gate manda no ACABAMENTO:** luz neutra, céu ou janela com cor, foco total, pele real, sem texto,
-  negative, bandeira (formato IA), roupa e cenário da âncora (avatar fixo).
+  negative, bandeira (formato IA), roupa e cenário da âncora (avatar fixo; no Auraly, desde 2026-10-04,
+  roupa do character sheet e cenário novo da produção).
 - **Proximidade do herói tem piso:** a distância final é a MAIS PERTO entre o modelo e o gate. Nunca
   mais longe que no modelo, e sempre mais perto que o rosto (Parte 2).
 - **Vocabulário seguro é só do negative.** No positivo a forma do herói vai descrita inteira, como se

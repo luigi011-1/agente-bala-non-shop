@@ -8,6 +8,12 @@ metadata:
   modified: 2026-09-22T23:16:39.799Z
 ---
 
+> 🔴 **2026-10-04 (Luigi), SÓ AURALY: o anexo de todo K é o CHARACTER SHEET**
+> (`producao/_ancoras/character_sheets/avery_knox_character_sheet.jpg`, `devon_price_...`,
+> `jordan_vale_...`, `morgan_vance_...`) e o cenário é NOVO a cada produção. Os cenários das fichas
+> abaixo viraram "já usados" (`producao/_ancoras/CENARIOS_AURALY.md`), não são mais a base da conta.
+> Ver [[auraly-cenario-novo-character-sheet]].
+>
 > 🔴 **2026-10-04 (Luigi): o NOME do avatar é o nome do ARQUIVO que ele manda.** Os arquivos dele em
 > `/Users/macbookairm2/Desktop/AVATARES/avatares appyon/` se chamam `avery.knox_ .jpeg` (a imagem da ficha
 > Darlene Pruitt), `devon.price_usa .jpeg` (ficha Lorraine Vance), `jordan_vale.us .jpeg` (ficha Walt

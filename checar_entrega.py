@@ -1408,6 +1408,7 @@ def checar_auraly(pasta, roteiro):
         ok("angulo3", "travas do angulo 3 (auraly) respeitadas")
 
     c_realismo_visual(coletar_prompts_k(pasta))
+    c_cenario_auraly(pasta)
 
     # Blocos limpos e arquivos por avatar, inclusive os da raiz da producao.
     for nivel, check, msg, loc in auditar_pacote(pasta, takes, ESTRITO):
@@ -1419,6 +1420,49 @@ def checar_auraly(pasta, roteiro):
             ok(check, msg)
 
     return takes
+
+
+CENARIO_LEGADO_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "controle", "cenario_auraly_legado.json")
+# Frases que prendem o K ao cenario da foto em cena real. No Auraly, desde 2026-10-04, o cenario
+# nasce do texto a cada producao e o anexo e o character sheet de fundo cinza.
+CENARIO_PRESO = [r"same lived-in", r"as the reference, unchanged", r"own setting"]
+
+
+def c_cenario_auraly(pasta):
+    """Auraly, Luigi 2026-10-04: cenario NOVO e detalhado a cada producao, anexo = character sheet.
+
+    So Auraly. FitWell, Sea Moss e Body Hacks seguem com avatar fixo por conta. Producoes anteriores
+    a regra ficam em controle/cenario_auraly_legado.json e nunca entram producoes novas nessa lista."""
+    nome = os.path.basename(os.path.normpath(pasta))
+    try:
+        with open(CENARIO_LEGADO_PATH, encoding="utf-8") as f:
+            legado = set(json.load(f).get("producoes", []))
+    except (OSError, ValueError):
+        legado = set()
+    if nome in legado:
+        ok("cenario", "producao anterior a regra do cenario novo (2026-10-04), legado")
+        return
+    checkpoint = ler(os.path.join(pasta, "CHECKPOINT.md")) or ""
+    m = re.search(r"^\s*Scenario\s*:\s*(\S.*)$", checkpoint, re.M | re.I)
+    if not m:
+        falha("cenario", "CHECKPOINT sem 'Scenario:'. No Auraly cada producao declara um cenario NOVO, "
+                         "que nao repete producao/_ancoras/CENARIOS_AURALY.md (WORKFLOW_AURALY.md, 2026-10-04)",
+              "CHECKPOINT.md")
+    ks = coletar_prompts_k(pasta)
+    ruim = False
+    for rotulo, bloco, loc in ks:
+        for frase in CENARIO_PRESO:
+            if re.search(frase, bloco, re.I):
+                ruim = True
+                falha("cenario", "%s prende o cenario a foto da ancora ('%s'). No Auraly o cenario e "
+                                 "descrito inteiro no texto, sem depender do anexo" % (rotulo, frase), loc)
+        if not re.search(r"character sheet", bloco, re.I):
+            ruim = True
+            falha("cenario", "%s nao usa o character sheet como referencia de identidade "
+                             "(producao/_ancoras/character_sheets/)" % rotulo, loc)
+    if ks and not ruim and m:
+        ok("cenario", "cenario declarado (%s) e %d K com character sheet, sem cenario da ancora"
+           % (m.group(1).strip()[:60], len(ks)))
 
 
 # ---------------------------------------------------------------- runner

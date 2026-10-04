@@ -192,7 +192,8 @@ aparece. Regras:
 - **Avatar fixo por conta (2026-09-25):** cada conta usa o mesmo avatar com a roupa e o
   cenário-base da âncora em todo vídeo, nos dois perfis. Só o movie style / short form não tem
   avatar fixo. Quando o vídeo modelo tem uma cena em outro lugar, o texto do K descreve o lugar
-  novo; a pessoa e a roupa continuam as da âncora.
+  novo; a pessoa e a roupa continuam as da âncora. ♻️ **Auraly, desde 2026-10-04 (instruções v18):**
+  o anexo é o character sheet e o cenário é novo a cada produção, descrito no texto do K.
 
 ### 7.2 Character sheets `REF-P` (cenas atuadas)
 Nas cenas com vários personagens (short form e movie style), cada **personagem principal** (quem
