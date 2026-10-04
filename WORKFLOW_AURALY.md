@@ -204,7 +204,7 @@ impresso dentro do `K__` nem solicitado como legenda no `V__`.
 ### IMAGE_PROMPTS
 
 Abrir somente checkpoint, hooks selecionados, roteiro aprovado, o **character sheet** do avatar ativo,
-`producao/_ancoras/CENARIOS_AURALY.md` (cenário novo, 2026-10-04) e **`GATE_VISUAL.md`**
+os frames do vídeo modelo (cenário e ângulo fiéis, 2026-10-04) e **`GATE_VISUAL.md`**
 (Partes 1 a 3: realismo, composicao do heroi e trechos prontos), que sao as regras vigentes de
 prompt de imagem. Rodar o gate antes do primeiro `K__`: todo `K__` carrega luz neutra ou ceu com
 cor, heroi colado na lente e o trecho de realismo, porque o bloco do Flow e autossuficiente.
@@ -507,37 +507,56 @@ analises longas.
 
 ## Âncora e cenário por gancho (Luigi, 2026-09-14; âncora revista em 2026-09-22)
 
-> 🔴🔴 **2026-10-04 (Luigi): CENÁRIO NOVO E DETALHADO A CADA PRODUÇÃO, ANEXO = CHARACTER SHEET.
-> VALE SÓ PARA O AURALY APP.** Palavras dele: *"quero que os prompts sejam detalhando bem o ambiente
-> para esses avatares, porque eu quero diversificar o cenário e não me prender a somente um que não
-> está validado"*. **Revoga, só no Auraly, a parte de CENÁRIO do avatar fixo por conta (2026-09-25,
-> logo abaixo).** FitWell (Ângulos 2 e 4) e Sea Moss (Ângulo 1) continuam com avatar fixo por conta,
-> roupa e cenário da âncora em todo vídeo, sem mudança nenhuma.
+> 🔴🔴 **2026-10-04 (Luigi): CENÁRIO E ÂNGULO DO VÍDEO MODELO, QUASE 100% FIÉIS; ANEXO = CHARACTER
+> SHEET; TUDO ORGÂNICO, NADA SOBRENATURAL. VALE SÓ PARA O AURALY APP.** Palavras dele: *"quero que os
+> prompts sejam detalhando bem o ambiente [...] porque eu quero diversificar o cenário e não me prender
+> a somente um que não está validado"* e, na mesma data, *"quero que seja o mais orgânico possível, não
+> quero nada sobrenatural; puxe bastante do cenário do vídeo que está sendo modelado, não inventa muita
+> moda em questão de cenário; só coloca as regras padrões de realismo [...] mas o ângulo e o cenário
+> têm que ser quase 100% fiéis ao vídeo que a gente está modelando"*. **Revoga, só no Auraly, a parte
+> de CENÁRIO do avatar fixo por conta (2026-09-25, logo abaixo).** FitWell (Ângulos 2 e 4) e Sea Moss
+> (Ângulo 1) continuam com avatar fixo por conta, roupa e cenário da âncora, sem mudança nenhuma.
 >
-> 1. **Anexo de identidade em todo `K__` = o CHARACTER SHEET do avatar**, em
->    `producao/_ancoras/character_sheets/<avatar>_character_sheet.jpg` (close extremo do rosto + frente,
->    costas, lado esquerdo e lado direito, fundo cinza), gerado com
->    `producao/_ancoras/PROMPT_CHARACTER_SHEET_AURALY_2026-10-04.md`. Ele trava rosto, pele, cabelo,
->    corpo e roupa. A foto em cena real deixa de ser anexo dos K (continua só como registro).
->    Roster com sheet: Avery Knox, Devon Price, Jordan Vale e Morgan Vance (nomes = arquivos do Luigi).
-> 2. **`reference_use` padrão:** `Use the attached character sheet only for [Name]'s exact identity
->    (face, skin, hair, body) and wardrobe; ignore its grey studio background. The setting comes only
->    from this text.` Proibido no K do Auraly: `the same lived-in room as the reference`, `as the
->    reference, unchanged`, `own setting` (o `checar_entrega.py` reprova).
-> 3. **Cada produção nova escolhe um cenário NOVO**, que não repete nenhum cenário já usado pela mesma
->    conta (`producao/_ancoras/CENARIOS_AURALY.md`), real, americano, congruente com o vídeo modelo e
->    com o avatar. Dentro da MESMA produção todos os K ficam no mesmo cenário (continuidade do vídeo).
->    Registrar `Scenario: <descrição curta>` no `CHECKPOINT.md` (o linter reprova sem) e acrescentar a
->    linha no `CENARIOS_AURALY.md` ao entregar o pacote.
-> 4. **O campo `scene` descreve o ambiente inteiro, sem depender de anexo**, nesta ordem: (a) o lugar e
->    a região dos EUA (tipo de cômodo ou local, casa ou comércio, cidade ou estado); (b) arquitetura e
->    materiais com cor (parede, piso, bancada ou móvel principal); (c) janela ou céu com cor e textura,
->    e de onde vem a luz; (d) as 2 a 3 âncoras de fundo nomeadas com a posição no quadro; (e) a bandeira
->    dos EUA (formato IA; opcional no orgânico) e o kit Auraly quando o formato pedir. **Detalhar não é
->    inventariar:** o teto de 2 a 3 âncoras de fundo visíveis do `GATE_VISUAL.md` continua.
-> 5. **Roupa:** a do character sheet, igual em todo K e todo vídeo da conta, até o Luigi decidir outra
->    coisa. O ângulo de câmera continua servindo a ação estrutural.
-> 6. **Pacotes entregues antes de 2026-10-04 não se reescrevem** (`controle/cenario_auraly_legado.json`).
+> 1. **O CENÁRIO É O DO VÍDEO MODELO.** O `scene` reproduz o ambiente do modelo quase 100%: o mesmo tipo
+>    de lugar, a mesma disposição, os mesmos móveis e superfícies, as mesmas cores, a mesma janela ou
+>    parede atrás, os mesmos objetos de fundo. **Não inventar cenário.** É assim que o cenário varia
+>    entre produções: cada vídeo modelo traz o seu. Se o modelo está num sofá de couro com parede creme,
+>    o nosso está num sofá de couro com parede creme.
+> 2. **O ÂNGULO DE CÂMERA É O DO VÍDEO MODELO**, quase 100%: altura, distância, lente, inclinação,
+>    selfie na mão ou celular apoiado, enquadramento e quanto do corpo aparece. Medido no frame do modelo
+>    e escrito na `FICHA_FRAMES.md` (F4) e no campo `camera`. Não adaptar a câmera ao cenário da âncora.
+> 3. **Muda só o que a lei e o acabamento obrigam**, as regras de sempre do `GATE_VISUAL.md` Partes 1 a
+>    3: luz neutra de dia nublado no lugar de abajur ou luz quente; céu ou janela com cor e textura,
+>    nunca branco ou estourado; herói do gancho colado na lente (nunca mais longe que no modelo); tudo
+>    em foco, sem blur; trecho de realismo; 2 a 3 âncoras de fundo (as do próprio modelo); bandeira dos
+>    EUA como detalhe discreto (obrigatória no formato IA, opcional no orgânico); sem texto na imagem.
+>    Cada mudança dessas vai declarada como desvio na ficha, nunca como cenário novo.
+> 4. **ORGÂNICO, NADA SOBRENATURAL.** Nos K e nos V do Auraly: nada de brilho mágico, aura, luz que sai
+>    de objeto, partícula, objeto flutuando, fumaça mística, portal ou efeito visual. Cartas, cristal e
+>    vela entram só como objetos comuns de casa. O único caso de efeito é quando o PRÓPRIO vídeo modelo
+>    tem, e aí ele é copiado como no modelo (fidelidade), nunca acrescentado.
+> 5. **Anexo de identidade em todo `K__` = o CHARACTER SHEET do avatar**, em
+>    `producao/_ancoras/character_sheets/<avatar>_character_sheet.jpg` (gerado com
+>    `producao/_ancoras/PROMPT_CHARACTER_SHEET_AURALY_2026-10-04.md`). Trava rosto, pele, cabelo, corpo e
+>    roupa. Junto dele vai o frame do modelo do mesmo código, só como composição e cenário. A foto em
+>    cena real deixa de ser anexo dos K. Roster com sheet: Avery Knox, Devon Price, Jordan Vale e Morgan
+>    Vance (nomes = arquivos do Luigi).
+> 6. **`reference_use` padrão:** `Use the first attached image (character sheet) only for [Name]'s exact
+>    identity (face, skin, hair, body) and wardrobe; ignore its grey studio background. Use the second
+>    attached image (frame of the model video) as the reference for the setting, camera angle and
+>    framing; do not copy its person, clothes or on-screen text.` Proibido no K do Auraly: `the same
+>    lived-in room as the reference`, `as the reference, unchanged`, `own setting` (o linter reprova).
+> 7. **O `scene` descreve por escrito o cenário do modelo**, porque o K é autossuficiente: o lugar (e a
+>    região dos EUA quando dá para ler), parede, piso e móveis com cor, a janela ou o céu com cor e de
+>    onde vem a luz, as 2 a 3 âncoras de fundo do modelo com a posição no quadro, e a bandeira. Na
+>    `FICHA_FRAMES.md` cada `## Kxx` ganha a linha `Cenário do modelo:` com o que se vê atrás no frame,
+>    e o `scene` sai dela (o linter reprova a ficha sem essa linha).
+> 8. **Registro:** `Scenario: <cenário do modelo em poucas palavras>` no `CHECKPOINT.md` (o linter
+>    reprova sem) e a linha em `producao/_ancoras/CENARIOS_AURALY.md`, que é histórico por conta e
+>    nunca vence a fidelidade ao modelo: se dois modelos têm o mesmo tipo de cômodo, copia-se o modelo.
+> 9. **Roupa:** a do character sheet, igual em todo K e todo vídeo da conta, até o Luigi decidir outra
+>    coisa.
+> 10. **Pacotes entregues antes de 2026-10-04 não se reescrevem** (`controle/cenario_auraly_legado.json`).
 
 > ♻️ **2026-09-25: AVATAR FIXO POR CONTA (Luigi).** ⚠️ *No Auraly a parte de CENÁRIO foi revogada em
 > 2026-10-04 (bloco acima); a roupa continua fixa, agora pelo character sheet.* *"sim, vale para o Auraly também"*. Cada conta
@@ -624,8 +643,9 @@ identidade/corpo/pele, roupa e cenário vêm do texto de cada `K`".
 ## Travas permanentes
 
 - Roteiro aprovado uma vez para toda a fila.
-- **Cenário novo e detalhado a cada produção, anexo = character sheet (Luigi, 2026-10-04, só
-  Auraly).** `Scenario:` no checkpoint, registro em `producao/_ancoras/CENARIOS_AURALY.md`.
+- **Cenário e ângulo de câmera do VÍDEO MODELO, quase 100% fiéis, orgânico e sem nada
+  sobrenatural; anexo = character sheet (Luigi, 2026-10-04, só Auraly).** Só o acabamento do
+  `GATE_VISUAL.md` muda. `Scenario:` no checkpoint e `Cenário do modelo:` em cada K da ficha.
 - Hooks selecionados uma vez para toda a fila.
 - **Validar antes de variar (2026-09-23):** producao nova e `Round: VALIDATION`, com UM hook fiel ao
   modelo e sem selecao de hook. As 10 so existem em `Round: VARIATION`, aberta pelo Luigi depois de
@@ -639,7 +659,8 @@ identidade/corpo/pele, roupa e cenário vêm do texto de cada `K`".
 - Declarar a acao estrutural uma vez no topo e a variavel trocada em cada hook.
 - O metodo e o mesmo da FitWell; o que muda e que aqui clickbait puro e liberado e a congruencia
   trava na fala, nunca no objeto do gancho.
-- Efeito visual simples e legivel e permitido no T1 (uma rachadura, brilho, cor ou revelacao). Nao
+- ♻️ **2026-10-04 (Luigi): orgânico, nada sobrenatural.** Efeito visual só quando o PRÓPRIO vídeo modelo
+  tem, copiado como no modelo. (Histórico:) Efeito visual simples e legivel e permitido no T1 (uma rachadura, brilho, cor ou revelacao). Nao
   combinar varios efeitos nem transformar o hook em cena cinematografica desconectada do roteiro.
 - Formatos limpos `K__` e `V__`; a relacao de INITIAL FRAME vem do `MAPA K/V` explicito.
 - Um K pode alimentar varios V do mesmo setup; nenhum V pode existir sem K mapeado e aprovado.

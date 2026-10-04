@@ -61,14 +61,16 @@ so. Isto e obrigatorio em todo K do perfil CLASSICO:
 8. Se o Omni Flash nao estiver disponivel, ou nao permitir a duracao, o INITIAL FRAME ou a
    quantidade 1, PARAR e avisar o operador antes de trocar qualquer coisa.
 
-### AURALY, character sheet e cenario novo por producao (Luigi, 2026-10-04; vale SO no Auraly)
+### AURALY, character sheet e cenario do video modelo (Luigi, 2026-10-04; vale SO no Auraly)
 
-Roster Auraly: Avery Knox, Devon Price, Jordan Vale e Morgan Vance. Desde a v18 o anexo de todo K
-Auraly e o CHARACTER SHEET do avatar ativo (close do rosto mais frente, costas e os dois lados, fundo
-cinza): ele trava identidade, corpo e roupa. O cenario NAO vem do anexo: vem inteiro do texto do K, e
-cada producao nova traz um cenario diferente. Nunca copiar o fundo cinza do sheet para a cena e nunca
-trocar o cenario descrito no K pelo de uma producao anterior. Dentro da mesma producao todos os K
-seguem o mesmo cenario descrito. FitWell e Sea Moss (perfil CLASSICO) continuam com a anchor em cena
+Roster Auraly: Avery Knox, Devon Price, Jordan Vale e Morgan Vance. Desde a v18 todo K Auraly leva
+DOIS anexos: 1) o CHARACTER SHEET do avatar ativo (close do rosto mais frente, costas e os dois lados,
+fundo cinza), que trava identidade, corpo e roupa; 2) o frame do video modelo do mesmo codigo, que e a
+referencia de cenario, angulo de camera e enquadramento. O cenario e o angulo sao os do video modelo,
+quase 100% fieis, e vem tambem escritos no texto do K. Nunca copiar o fundo cinza do sheet para a
+cena, nunca trocar o cenario descrito no K e nunca copiar a pessoa, a roupa ou o texto de tela do
+frame do modelo. Tudo organico: nada sobrenatural (brilho magico, aura, particulas, objeto flutuando,
+efeito visual) que o texto do K nao peca. FitWell e Sea Moss (perfil CLASSICO) continuam com a anchor em cena
 real e o avatar fixo por conta abaixo.
 
 (Historico ate a v17:) A referencia de cada um era a anchor em cena real, anexada em todo K.
@@ -81,9 +83,9 @@ preservada: pode ser exotico quando aumenta a anomalia, mas pode se repetir entr
 preservar composicao e timing. Mudar o angulo conta como a unica variavel dessa variacao.
 
 No T1, a anomalia visual domina. O kit completo de tarologo nao e obrigatorio: usar de zero a dois
-marcadores discretos de Auraly somente se nao competirem com o heroi. Um unico VFX simples e legivel
-(rachadura, brilho, mudanca de cor ou revelacao) e permitido quando for a propria anomalia; efeitos
-multiplos ou cinematograficos continuam proibidos. Do T2 ao CTA, volta o kit de credencial visual
+marcadores discretos de Auraly somente se nao competirem com o heroi. Desde a v18 (Luigi, 2026-10-04)
+nao ha efeito visual nem nada sobrenatural, salvo quando o proprio video modelo tem e o texto do V
+pede; efeitos multiplos ou cinematograficos continuam proibidos. Do T2 ao CTA, volta o kit de credencial visual
 (cartas, cristal, incenso, vela, cruz, bandeira dos EUA) e a carta na mao. Doutrina completa em
 WORKFLOW_AURALY.md.
 
@@ -274,9 +276,10 @@ separadas: movie style com `REF-P` (v13), short form de crescimento sem anchor (
 de conteudo mudou nesta versao.
 v16, 2026-09-25: AVATAR FIXO POR CONTA tambem no Auraly. Revoga o cenario proprio e a roupa livre por
 gancho da v7: roupa e cenario-base da anchor em todo video e gancho; so o angulo de camera varia.
-v18, 2026-10-04: Auraly passa a anexar o CHARACTER SHEET em todo K e a trazer um cenario NOVO,
-descrito inteiro no texto, a cada producao. Revoga so no Auraly a parte de cenario do avatar fixo
-da v16; a roupa segue fixa pelo sheet. FitWell e Sea Moss nao mudam.
+v18, 2026-10-04: Auraly passa a anexar o CHARACTER SHEET (identidade e roupa) mais o frame do video
+modelo (cenario, angulo e enquadramento) em todo K. O cenario e o angulo sao os do modelo, quase 100%
+fieis, organicos e sem nada sobrenatural. Revoga so no Auraly a parte de cenario do avatar fixo da
+v16; a roupa segue fixa pelo sheet. FitWell e Sea Moss nao mudam.
 v17, 2026-09-25: a pedido do Luigi, todo prompt de IMAGEM (K e REF-P) passa a ser entregue em JSON,
 para o modelo compreender melhor cada parte. As regras de conteudo nao mudam. O executor cola o
 objeto inteiro, de `{` a `}`; o reconhecimento K contra V ganha a marca mecanica do `{` inicial.

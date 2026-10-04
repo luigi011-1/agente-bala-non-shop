@@ -10,8 +10,8 @@ metadata:
 
 # Cenário por gancho é o padrão do Ângulo 3 (a fingerprint caiu em 2026-09-22)
 
-> 🔴 **2026-10-04: o cenário voltou a variar no Auraly, agora POR PRODUÇÃO, com character sheet como
-> anexo.** Regra viva em [[auraly-cenario-novo-character-sheet]]; esta memória segue histórica.
+> 🔴 **2026-10-04: o cenário voltou a variar no Auraly, agora copiado do VÍDEO MODELO (cenário e
+> ângulo quase 100% fiéis), com character sheet como anexo.** Regra viva em [[auraly-cenario-novo-character-sheet]]; esta memória segue histórica.
 
 > 🔴 **REVOGADO EM 2026-09-25 (Luigi): "sim, vale para o Auraly também".** O Auraly passou a ter
 > **avatar fixo por conta**, como a FitWell: a **roupa e o cenário-base da âncora** se repetem em todo

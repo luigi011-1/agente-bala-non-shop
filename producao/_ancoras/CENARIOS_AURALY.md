@@ -1,9 +1,10 @@
 # Cenários já usados por conta · Auraly App
 
-Regra (Luigi, 2026-10-04, **só Auraly**): cada produção nova escolhe um cenário NOVO, descrito por
-inteiro no campo `scene` de cada K, e que **não repete nenhuma linha desta tabela da mesma conta**.
-Dentro de uma produção, todos os K ficam no mesmo cenário. Ao entregar o pacote, acrescentar a linha
-aqui e registrar `Scenario:` no `CHECKPOINT.md`. Processo em `WORKFLOW_AURALY.md`.
+Regra (Luigi, 2026-10-04, **só Auraly**): o cenário e o ângulo de câmera de cada produção são os do
+**vídeo modelo, quase 100% fiéis**, descritos por inteiro no `scene` de cada K; não se inventa
+cenário. É assim que o cenário varia: cada modelo traz o seu. Esta tabela é **histórico por conta**,
+para saber o que já foi ao ar, e **nunca vence a fidelidade ao modelo**. Ao entregar o pacote,
+acrescentar a linha aqui e registrar `Scenario:` no `CHECKPOINT.md`. Processo em `WORKFLOW_AURALY.md`.
 
 Anexo de identidade de todo K: `producao/_ancoras/character_sheets/<avatar>_character_sheet.jpg`.
 

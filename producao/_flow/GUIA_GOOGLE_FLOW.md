@@ -193,7 +193,7 @@ aparece. Regras:
   cenário-base da âncora em todo vídeo, nos dois perfis. Só o movie style / short form não tem
   avatar fixo. Quando o vídeo modelo tem uma cena em outro lugar, o texto do K descreve o lugar
   novo; a pessoa e a roupa continuam as da âncora. ♻️ **Auraly, desde 2026-10-04 (instruções v18):**
-  o anexo é o character sheet e o cenário é novo a cada produção, descrito no texto do K.
+  o anexo é o character sheet mais o frame do modelo, e o cenário e o ângulo são os do vídeo modelo.
 
 ### 7.2 Character sheets `REF-P` (cenas atuadas)
 Nas cenas com vários personagens (short form e movie style), cada **personagem principal** (quem
