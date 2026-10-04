@@ -34,11 +34,11 @@ bloco de venda T10 a T17, falado no mesmo plano; os acréscimos de venda ficam s
 | 7 | Resultado: muffin na mão, forma na mesa | "You end up with soft, moist muffins that taste like carrot cake..." | literal |
 | 8 | Mecanismo 1 | "The oats feed the good bacteria in your gut" | literal |
 | 9 | Mecanismo 2 + dor | "and the carrots are full of prebiotic fiber. It keeps everything moving so you stop feeling backed up and sluggish by the afternoon." | literal |
-| 10 | Rotina + virada | "I make a batch every Sunday morning and eat them all week." | literal + virada: o muffin só resolve a fibra |
-| 11 | (acréscimo de venda) | não existe | ponte: o que o muffin não tem (sea moss, gengibre, dente-de-leão) |
-| 12 | (acréscimo de venda) | não existe | obstáculo: o sea moss da prateleira (açúcar, gosto de mar, cinco frascos) |
+| 10 | Rotina + virada | "I make a batch every Sunday morning and eat them all week." | literal + virada: a fornada acaba e a tarde lenta volta (mesma dor do T9) |
+| 11 | (acréscimo de venda) | não existe | ponte por substituição: o sea moss faz o mesmo trabalho sem forno e alimenta as mesmas bactérias boas do T8 |
+| 12 | (acréscimo de venda) | não existe | obstáculo: as gomas de sea moss com açúcar desfazem o "zero refined sugar" do T7; o cru tem gosto de mar |
 | 13 | (acréscimo de venda) | não existe | produto: Natural Rems Sea Moss, o frasco sobe no nome |
-| 14 | (acréscimo de venda) | não existe | diferencial: uma goma por dia, 16 em 1, menos de 1 g de açúcar, sem gosto de alga |
+| 14 | (acréscimo de venda) | não existe | diferencial: menos de 1 g de açúcar e sem gosto de alga (responde o T12) e cobre os dias sem muffin (fecha o T10) |
 | 15 | (acréscimo de venda) | não existe | prova social das clientes da coach |
 | 16 | Comentário + follow do modelo | "Comment recipe... make sure you're following me first or I can't reach you" | comment `yes` + follow com motivo, **antes** da Amazon |
 | 17 | (destino de venda) | não existe | CTA da marca: Amazon, link na legenda, fim |
@@ -124,37 +124,38 @@ canelada, short preto, tranças com miçangas, cruz de ouro.
 
 ### T10 · ROTINA + VIRADA · TALKING · Setup G
 
-> "I make a batch every Sunday morning and eat them all week. But a muffin only fixes the fiber, and fiber was never the whole story."
+> "I make a batch every Sunday morning and eat them all week. But some weeks the batch runs out early, and that sluggish afternoon comes right back."
 
-A rotina do modelo, literal, e a virada que abre o bloco de venda.
+A rotina do modelo, literal, e a virada pela mesma dor do T9 (a tarde lenta): a receita funciona, mas
+não está lá todo dia. Elo 1 da ponte.
 
 ### T11 · PONTE · TALKING · Setup G
 
-> "If you still feel heavy by the afternoon, your gut is missing what sea moss, ginger and dandelion give it, and no muffin has those."
+> "So I added one thing that does the same job with no oven: sea moss. It's a sea plant that feeds the same good bacteria in your gut."
 
-Ponte pelo próprio produto: os três estão no rótulo da Natural Rems. Álibi embutido: o que falta é
-ingrediente, não esforço dela.
+Elo 2, substituição de ingrediente: o sea moss faz o mesmo trabalho do muffin e ecoa o T8 ("feeds the
+good bacteria in your gut"). Agora o sea moss existe na cabeça de quem assiste antes de qualquer alerta.
 
 ### T12 · OBSTÁCULO · TALKING · Setup G
 
-> "But careful with the sea moss on the shelf. Most of it is loaded with sugar, tastes like seawater, and still leaves you buying five other bottles."
+> "But be careful, most sea moss gummies are loaded with sugar, which undoes the whole point of a zero sugar muffin, and the raw stuff tastes like seawater."
 
-Desvalorização do genérico em três itens (açúcar, gosto, fila de frascos), respondidos um a um no T13
-e no T14.
+Elo 3, o obstáculo nasce da própria receita: açúcar desfaz o "zero refined sugar" do T7. Desvalorização
+do genérico em dois itens (açúcar e gosto de mar), respondidos no T14.
 
 ### T13 · PRODUTO · TALKING · Setup H
 
 > "The one I trust is Natural Rems Sea Moss. It's made in the USA with wild Irish sea moss, plus ginger, dandelion and apple cider vinegar."
 
 O frasco já está na mão, baixo, e no "Natural Rems Sea Moss" ela o ergue até o lado do rosto, rótulo de
-frente. Fecha a ponte do T11 (sea moss, gengibre e dente-de-leão juntos) e o "five other bottles".
+frente. Elo 4: o sea moss certo, com gengibre, dente-de-leão e vinagre de maçã (do rótulo) a mais.
 
 ### T14 · DIFERENCIAL · TALKING · Setup I
 
-> "One green apple gummy a day, sixteen ingredients, less than one gram of sugar and no seaweed taste. It replaces a whole shelf of bottles."
+> "One green apple gummy a day, under a gram of sugar, no seaweed taste. It covers the days the muffins run out, and every other day too."
 
-Responde o obstáculo item por item: açúcar → menos de 1 g; gosto de mar → sem gosto de alga; cinco
-frascos → uma goma, dezesseis ingredientes (tudo do rótulo e da página).
+Responde o obstáculo item por item: açúcar → menos de 1 g; gosto de mar → sem gosto de alga (rótulo e
+FAQ). Fecha o loop do T10: cobre os dias em que a fornada acaba.
 
 ### T15 · PROVA SOCIAL DA COACH · TALKING · Setup I
 
@@ -164,9 +165,10 @@ Prova social na boca dela, sobre sensação do dia a dia, sem prazo e sem númer
 
 ### T16 · COMENTÁRIO + FOLLOW · TALKING · Setup I
 
-> "Comment yes if your afternoons feel heavy too, and follow me so you have this recipe when Sunday comes."
+> "Comment yes if your afternoons feel sluggish too, and follow me so you have this recipe when Sunday comes."
 
-Frasco parado em quadro. Comentário e follow **antes** da Amazon (regra da marca e decisão do Luigi).
+Frasco parado em quadro. Mesma dor do T9 ("sluggish"). Comentário e follow **antes** da Amazon (regra da
+marca e decisão do Luigi).
 
 ### T17 · CTA · TALKING · Setup I
 
@@ -176,7 +178,7 @@ Frasco parado e legível do começo ao fim, sem corte. Amazon → link na legend
 
 ## Roteiro só-fala
 
-Did you know, if you grate two large carrots into a bowl, mix in one cup of oats, two eggs, a quarter cup of raw honey, and a teaspoon of cinnamon. Then pour the batter into a muffin tin. You end up with soft, moist muffins that taste like carrot cake but are loaded with fiber and have zero flour and zero refined sugar. The oats feed the good bacteria in your gut and the carrots are full of prebiotic fiber. It keeps everything moving so you stop feeling backed up and sluggish by the afternoon. I make a batch every Sunday morning and eat them all week. But a muffin only fixes the fiber, and fiber was never the whole story. If you still feel heavy by the afternoon, your gut is missing what sea moss, ginger and dandelion give it, and no muffin has those. But careful with the sea moss on the shelf. Most of it is loaded with sugar, tastes like seawater, and still leaves you buying five other bottles. The one I trust is Natural Rems Sea Moss. It's made in the USA with wild Irish sea moss, plus ginger, dandelion and apple cider vinegar. One green apple gummy a day, sixteen ingredients, less than one gram of sugar and no seaweed taste. It replaces a whole shelf of bottles. My clients keep it right next to their Sunday muffins, and the ones who stuck with it tell me their afternoons finally feel light. Comment yes if your afternoons feel heavy too, and follow me so you have this recipe when Sunday comes. Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the caption.
+Did you know, if you grate two large carrots into a bowl, mix in one cup of oats, two eggs, a quarter cup of raw honey, and a teaspoon of cinnamon. Then pour the batter into a muffin tin. You end up with soft, moist muffins that taste like carrot cake but are loaded with fiber and have zero flour and zero refined sugar. The oats feed the good bacteria in your gut and the carrots are full of prebiotic fiber. It keeps everything moving so you stop feeling backed up and sluggish by the afternoon. I make a batch every Sunday morning and eat them all week. But some weeks the batch runs out early, and that sluggish afternoon comes right back. So I added one thing that does the same job with no oven: sea moss. It's a sea plant that feeds the same good bacteria in your gut. But be careful, most sea moss gummies are loaded with sugar, which undoes the whole point of a zero sugar muffin, and the raw stuff tastes like seawater. The one I trust is Natural Rems Sea Moss. It's made in the USA with wild Irish sea moss, plus ginger, dandelion and apple cider vinegar. One green apple gummy a day, under a gram of sugar, no seaweed taste. It covers the days the muffins run out, and every other day too. My clients keep it right next to their Sunday muffins, and the ones who stuck with it tell me their afternoons finally feel light. Comment yes if your afternoons feel sluggish too, and follow me so you have this recipe when Sunday comes. Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the caption.
 
 ## Tabela bilíngue
 
@@ -191,13 +193,13 @@ Did you know, if you grate two large carrots into a bowl, mix in one cup of oats
 | T7 | RESULTADO | You end up with soft, moist muffins that taste like carrot cake but are loaded with fiber and have zero flour and zero refined sugar. | Você fica com muffins macios e úmidos com gosto de bolo de cenoura, mas cheios de fibra, com zero farinha e zero açúcar refinado. |
 | T8 | MECANISMO | The oats feed the good bacteria in your gut | A aveia alimenta as bactérias boas do seu intestino |
 | T9 | MECANISMO | and the carrots are full of prebiotic fiber. It keeps everything moving so you stop feeling backed up and sluggish by the afternoon. | e a cenoura é cheia de fibra prebiótica. Isso mantém tudo andando, e você para de se sentir travada e lenta à tarde. |
-| T10 | VIRADA | I make a batch every Sunday morning and eat them all week. But a muffin only fixes the fiber, and fiber was never the whole story. | Eu faço uma fornada todo domingo de manhã e como a semana inteira. Mas o muffin só resolve a fibra, e a fibra nunca foi a história toda. |
-| T11 | PONTE | If you still feel heavy by the afternoon, your gut is missing what sea moss, ginger and dandelion give it, and no muffin has those. | Se você ainda se sente pesada à tarde, falta pro seu intestino o que o sea moss, o gengibre e o dente-de-leão dão, e nenhum muffin tem isso. |
-| T12 | OBSTÁCULO | But careful with the sea moss on the shelf. Most of it is loaded with sugar, tastes like seawater, and still leaves you buying five other bottles. | Mas cuidado com o sea moss da prateleira. A maioria vem cheia de açúcar, tem gosto de água do mar e ainda te faz comprar outros cinco frascos. |
+| T10 | VIRADA | I make a batch every Sunday morning and eat them all week. But some weeks the batch runs out early, and that sluggish afternoon comes right back. | Eu faço uma fornada todo domingo de manhã e como a semana inteira. Mas tem semana que a fornada acaba antes, e aquela tarde lenta volta na hora. |
+| T11 | PONTE | So I added one thing that does the same job with no oven: sea moss. It's a sea plant that feeds the same good bacteria in your gut. | Então eu acrescentei uma coisa que faz o mesmo trabalho sem forno: sea moss. É uma planta do mar que alimenta as mesmas bactérias boas do seu intestino. |
+| T12 | OBSTÁCULO | But be careful, most sea moss gummies are loaded with sugar, which undoes the whole point of a zero sugar muffin, and the raw stuff tastes like seawater. | Mas cuidado: a maioria das gomas de sea moss vem cheia de açúcar, o que estraga todo o sentido de um muffin sem açúcar, e o sea moss cru tem gosto de água do mar. |
 | T13 | PRODUTO | The one I trust is Natural Rems Sea Moss. It's made in the USA with wild Irish sea moss, plus ginger, dandelion and apple cider vinegar. | O que eu confio é o Natural Rems Sea Moss. É feito nos EUA com sea moss irlandês selvagem, mais gengibre, dente-de-leão e vinagre de maçã. |
-| T14 | DIFERENCIAL | One green apple gummy a day, sixteen ingredients, less than one gram of sugar and no seaweed taste. It replaces a whole shelf of bottles. | Uma goma de maçã verde por dia, dezesseis ingredientes, menos de um grama de açúcar e sem gosto de alga. Substitui uma prateleira inteira de frascos. |
+| T14 | DIFERENCIAL | One green apple gummy a day, under a gram of sugar, no seaweed taste. It covers the days the muffins run out, and every other day too. | Uma goma de maçã verde por dia, menos de um grama de açúcar, sem gosto de alga. Ela cobre os dias em que os muffins acabam, e todos os outros dias também. |
 | T15 | PROVA SOCIAL | My clients keep it right next to their Sunday muffins, and the ones who stuck with it tell me their afternoons finally feel light. | Minhas clientes deixam ele do lado dos muffins de domingo, e as que mantiveram me dizem que as tardes finalmente ficaram leves. |
-| T16 | COMENTÁRIO + FOLLOW | Comment yes if your afternoons feel heavy too, and follow me so you have this recipe when Sunday comes. | Comente yes se as suas tardes também são pesadas, e me siga pra ter essa receita quando o domingo chegar. |
+| T16 | COMENTÁRIO + FOLLOW | Comment yes if your afternoons feel sluggish too, and follow me so you have this recipe when Sunday comes. | Comente yes se as suas tardes também são lentas, e me siga pra ter essa receita quando o domingo chegar. |
 | T17 | CTA | Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the caption. | Procure Natural Rems Sea Moss na Amazon. Ou é só tocar no link que eu deixei na legenda. |
 
 ## Contagem de palavras
@@ -213,11 +215,11 @@ Did you know, if you grate two large carrots into a bowl, mix in one cup of oats
 | T7 | 25 | ok |
 | T8 | 9 | CENA CURTA (cena do modelo) |
 | T9 | 23 | ok |
-| T10 | 26 | ok |
-| T11 | 25 | ok |
-| T12 | 27 | ok |
+| T10 | 27 | ok |
+| T11 | 28 | ok |
+| T12 | 28 | ok |
 | T13 | 26 | ok |
-| T14 | 25 | ok |
+| T14 | 27 | ok |
 | T15 | 24 | ok |
 | T16 | 19 | ok |
 | T17 | 19 | ok |
@@ -226,8 +228,8 @@ Did you know, if you grate two large carrots into a bowl, mix in one cup of oats
 
 - **Duração:** o modelo tem 41,8s; com o bloco de venda o vídeo fica em ~85s (T1 a T9 no tempo das cenas
   do modelo, ~29s, e T10 a T17 com ~7s cada).
-- **Se ficar longo:** cortar primeiro o T15 (prova social); depois o segundo período do T14 ("It replaces
-  a whole shelf of bottles"). O T13, o T16 e o T17 nunca saem.
+- **Se ficar longo:** cortar primeiro o T15 (prova social). A ponte T10 a T14 não perde elo; o T13, o T16 e
+  o T17 nunca saem.
 - **Herói do gancho:** a cenoura sendo ralada no ralador de inox dentro da tigela branca, colada na lente,
   com ela falando desde o segundo 0. Uma imagem só, do estado inicial (cenoura no ralador, já com um pouco
   de cenoura ralada na tigela).
@@ -236,11 +238,15 @@ Did you know, if you grate two large carrots into a bowl, mix in one cup of oats
   no T17, setas apontando para a legenda.
 - **Legenda do post:** `#ad #syntheticperformer #naturalrems` na primeira linha, o link da Amazon logo
   abaixo, chave de conteúdo de IA ligada.
-- **Rotas (conta brandon):** desvalorização do genérico respondida item por item (T12 → T13/T14), a ponte
-  pelo próprio rótulo (o muffin só tem a fibra; gengibre e dente-de-leão estão no produto) e prova social
+- **Ponte (v2, depois do Luigi apontar que a v1 alertava sobre sea moss sem ter apresentado o sea moss):**
+  cadeia de 4 elos com a mesma dor do T9, a tarde lenta: (1) a fornada acaba e a tarde lenta volta;
+  (2) o sea moss faz o mesmo trabalho sem forno e alimenta as mesmas bactérias boas do T8; (3) as gomas de
+  sea moss com açúcar desfazem o "zero refined sugar" do T7; (4) a Natural Rems tem menos de 1 g. Dá pra
+  apagar nenhum elo sem quebrar o raciocínio.
+- **Rotas (conta brandon):** desvalorização do genérico respondida item por item (T12 → T14) e prova social
   de adesão. `checar_frases.py` rodado contra os pacotes da conta, inclusive a vizinha do Sea Moss.
 - **Compliance (o claim mais arriscado):** o T9 e o T11, claims de intestino ("keeps everything moving",
-  "your gut is missing"), escritos sem cura, sem tratamento e sem número; o T15, relato de cliente sem
+  "feeds the same good bacteria in your gut", dito do sea moss como ingrediente, não da goma), escritos sem cura, sem tratamento e sem número; o T15, relato de cliente sem
   prazo nem antes/depois. O "lose 42 pounds after 51" do modelo saiu inteiro. Nada médico, nenhum
   concorrente nomeado ("the sea moss on the shelf" é genérico).
 - **Congruência:** a Brandon é COACH, ~30. A rotina do muffin ("I make a batch every Sunday") é dela e não

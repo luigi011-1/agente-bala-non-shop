@@ -18,3 +18,4 @@ só a âncora + foto do produto do T13 ao T17), checklist de envio, linter com 0
 - 2026-10-04: roteiro v1 (17 takes; T1 a T6 e T8 CENA CURTA). Bloco de venda com desvalorização do sea
   moss genérico, comment `yes` + follow antes da Amazon, link na legenda. `checar_frases.py`: o T13
   repetia "Natural Rems Sea Moss. Wild Irish sea moss" da vizinha; reescrito, nada repetido.
+- 2026-10-04: roteiro v2: ponte refeita (Luigi: o T12 alertava sobre sea moss sem conexão). Cadeia de 4 elos pela mesma dor (tarde lenta): a fornada acaba → sea moss faz o mesmo trabalho → gomas com açúcar desfazem o zero sugar → Natural Rems < 1 g. Lição na memória feedback-ponte-argumentada.
