@@ -225,7 +225,7 @@ avatar nao conclui a fila inteira. Entrega de prompts, midia gerada, montagem e 
 marcos diferentes. Nunca declarar publicacao ou resultado comercial pela existencia de assets.
 ```
 
-Checklist de envio: 36/36 aprovados (N/A: A1, A10, A12 e A13 fiéis ao modelo na rodada de validação, sem arquivo de ganchos; C3 sem segunda pessoa; C4 sem selfie; C6 sem cena atuada; C7 sem motion control)
+Checklist de envio: 34/34 aprovados (N/A: A1, A10, A12 e A13 fiéis ao modelo na rodada de validação, sem arquivo de ganchos; C3 sem segunda pessoa; C4 sem selfie; C6 sem cena atuada; C7 sem motion control)
 
 Ficha: 17/17 K conferidos contra o frame do modelo, placar F1 a F6 + G1 a G8 completo em cada um, com evidência literal (G2 N/A: sem céu nem janela em quadro) (`FICHA_FRAMES.md`, GATE_VISUAL Parte 6)
 

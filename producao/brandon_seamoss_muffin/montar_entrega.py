@@ -16,7 +16,7 @@ VERSAO = re.search(r"^Versao (\d+)", INSTR, re.M).group(1)
 assert int(VERSAO) >= 17, "o prompt de imagem sai em JSON: precisa do contrato do Flow v17 ou maior"
 BLOCO_FLOW = re.search(r"## Bloco para a memoria do executor\n\n(.*?)\n## Historico resumido", INSTR, re.S).group(1).rstrip()
 
-CHECKLIST = ("Checklist de envio: 36/36 aprovados (N/A: A1, A10, A12 e A13 fiéis ao modelo na rodada de validação, "
+CHECKLIST = ("Checklist de envio: 34/34 aprovados (N/A: A1, A10, A12 e A13 fiéis ao modelo na rodada de validação, "
              "sem arquivo de ganchos; C3 sem segunda pessoa; C4 sem selfie; C6 sem cena atuada; C7 sem motion control)")
 
 
