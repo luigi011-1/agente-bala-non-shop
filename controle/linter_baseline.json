@@ -2,11 +2,54 @@
   "gerado_em": "2026-09-22",
   "motivo": "falhas de pacotes publicados antes das regras que as acusam; roteiro publicado nao se reescreve",
   "pacotes": {
+    "auraly_growth_dinheiro": [
+      "flow-variacoes|ENTREGA_DARLENE_PRUITT.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_LORRAINE_VANCE.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_WALT_HENSLEY.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "auraly_growth_manifestar_dinheiro": [
+      "flow-variacoes|ENTREGA_AVERY_KNOX.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_DEVON_PRICE.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_JORDAN_VALE.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_MORGAN_VANCE.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "auraly_growth_maos_vidro": [
+      "flow-variacoes|ENTREGA_MORGAN_VANCE.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "auraly_growth_prece": [
+      "flow-variacoes|ENTREGA_DARLENE_PRUITT.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_LORRAINE_VANCE.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_WALT_HENSLEY.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "auraly_growth_sal_tenis": [
+      "flow-variacoes|ENTREGA_DARLENE_PRUITT.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_LORRAINE_VANCE.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_WALT_HENSLEY.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "auraly_manifestacao_outubro": [
+      "flow-variacoes|ENTREGA_DARLENE_PRUITT.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_LORRAINE_VANCE.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_WALT_HENSLEY.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "auraly_oracao_repetir": [
+      "flow-variacoes|ENTREGA_AVERY_KNOX.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_DEVON_PRICE.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_JORDAN_VALE.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_MORGAN_VANCE.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "auraly_venda_fortuna": [
+      "flow-variacoes|ENTREGA_DARLENE_PRUITT.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_LORRAINE_VANCE.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_WALT_HENSLEY.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
     "brandon_angle2": [
       "palavras|T4 tem 30 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
       "fala-literal|V02 NAO e copia literal de T2.\n           roteiro: if you feel puffy no matter what you eat, you need to hear this right now.\n           prompt : if you feel puffy no matter what you eat, you need to hear this right now. Because nobody ever explained this to you properly.",
       "negative|K06 lista 'logo' no negative. Orgao, gore e marca NUNCA entram la (restricoes-protocolo): o token injeta o conceito. Descrever a forma certa no positivo.",
       "sem-produto|angulo 2 nao mostra produto, mas K06 cita 'smartphone': ...ht hand she holds up a second ordinary black smartphone right beside her face, pushed well..."
+    ],
+    "brandon_maca_alho": [
+      "flow-variacoes|ENTREGA_BRANDON.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
     ],
     "brandon_mercado": [
       "palavras|T1 tem 12 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
@@ -25,6 +68,12 @@
       "sem-produto|angulo 2 nao mostra produto, mas K05 cita 'bottle': ...n it. Her right hand now holds a clear glass bottle of pale vinegar, tilted just above the...",
       "sem-produto|angulo 2 nao mostra produto, mas K07 cita 'bottle': ...n water in the lower foreground. The vinegar bottle is gone from her hand and from the tab..."
     ],
+    "brandon_pao_sementes": [
+      "flow-variacoes|ENTREGA_BRANDON.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "brandon_pes_peroxido": [
+      "flow-variacoes|ENTREGA_BRANDON.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
     "brandon_pulmao": [
       "palavras|T3 tem 9 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
       "palavras|T7 tem 12 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
@@ -34,6 +83,59 @@
       "bandeira|K03 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
       "bandeira|K04 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
       "bandeira|K05 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)"
+    ],
+    "brandon_seamoss_coxas": [
+      "flow-variacoes|ENTREGA_BRANDON.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "brandon_seamoss_joelho": [
+      "flow-variacoes|ENTREGA_BRANDON.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "brandon_seamoss_muffin": [
+      "flow-variacoes|ENTREGA_BRANDON.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "brandon_seamoss_temperos": [
+      "flow-variacoes|ENTREGA_BRANDON.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "brandon_seamoss_vizinha": [
+      "flow-variacoes|ENTREGA_BRANDON.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "fitywell_brownie_feijao": [
+      "flow-variacoes|ENTREGA_HOLISTIC_BRANDON.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "fitywell_growth_dentes_agua": [
+      "flow-variacoes|ENTREGA_DANA_MORRISON.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_EVA_DALL.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_IVY_CARL.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_JAMIE_ANDERSON.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_JAMIE_VOSS.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_LAIS_COLLINS.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_LYNN_PARKER.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_ROBERTA_CARVALHO.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_ROBERT_ALVES.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "fitywell_growth_froyo_bites": [
+      "flow-variacoes|ENTREGA_EVA_DALL.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_IVY_CARL.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_JAMIE_VOSS.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_LAIS_COLLINS.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_ROBERTA_CARVALHO.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_ROBERT_ALVES.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "fitywell_growth_modelo_intestino": [
+      "flow-variacoes|ENTREGA_EVA_DALL.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_IVY_CARL.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_LAIS_COLLINS.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_ROBERTA_CARVALHO.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_ROBERT_ALVES.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "fitywell_growth_salmao_agua": [
+      "flow-variacoes|ENTREGA_EVA_DALL.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_HOLISTIC_BRANDON.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
+    ],
+    "fitywell_pernas": [
+      "flow-variacoes|PROMPTS_DANA_MORRISON.md manda 3 variacoes por V ('8 segundos, 3 varia'); a regra e 1 video por V.",
+      "flow-variacoes|PROMPTS_JAMIE_ANDERSON.md manda 3 variacoes por V ('8 segundos, 3 varia'); a regra e 1 video por V.",
+      "flow-variacoes|PROMPTS_PRODUCAO.md manda 3 variacoes por V ('8 segundos, 3 varia'); a regra e 1 video por V."
     ],
     "melody_acucar": [
       "palavras|T1 tem 4 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
@@ -91,6 +193,17 @@
       "palavras|T19 tem 12 palavras (faixa 13 a 29). Quebrar em fim de frase, nunca inventar filler.",
       "bandeira|K01 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)",
       "bandeira|K02 nao tem bandeira dos EUA no cenario (obrigatoria, discreta porem visivel, no campo scene)"
+    ],
+    "sf_torta_vovo": [
+      "flow-variacoes|ENTREGA_CONTA_01.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_CONTA_02.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_CONTA_03.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_CONTA_04.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_CONTA_05.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_CONTA_06.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_CONTA_07.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_CONTA_08.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V.",
+      "flow-variacoes|ENTREGA_CONTA_09.md manda 3 variacoes por V ('Variacoes por V | 3'); a regra e 1 video por V."
     ]
   }
 }

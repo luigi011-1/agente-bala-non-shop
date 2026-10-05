@@ -128,7 +128,7 @@ modelado **com o gancho fiel do modelo** → **aprovação do Luigi** → pacote
    Configuração vigente: **a tabela de perfis do próprio arquivo (v17, 2026-09-25) manda.** Clássico
    (Ângulos 1 e 2): Nano Banana 2 em 9:16, **4 imagens por K__ com seleção manual** (o Luigi apaga 3 e
    deixa 1); vídeo **só no Omni Flash**, 8 segundos, um único resultado por V__, a partir da imagem que
-   sobrou. Auraly: 4 imagens por K__ com seleção manual e Veo 3.1 Lite com 3 variações por V__.
+   sobrou. Auraly: 4 imagens por K__ com seleção manual e Veo 3.1 Lite com 1 resultado por V__ (regra única v19, Luigi 2026-10-05: sempre 4 imagens por K e 1 vídeo por V, em todos os perfis).
    ⚠️ **No Ângulo 3 (Auraly) vai TODA VEZ, sem exceção** (Luigi, 2026-09-08). O momento é fixo:
    **logo depois de o Luigi aprovar o roteiro com o gancho fiel (rodada de validação) ou escolher
    os ganchos (rodada de variação), e ANTES do primeiro prompt de imagem.**
