@@ -126,6 +126,21 @@ Antes de entregar qualquer roteiro, checar: **qual rota o último vídeo desta c
 | 2026-08-25 | Sal no chuveiro (Melody) `producao/melody_sal/` | 1 | **Rota 3** (o manual que mudou). Virada por **perda ativa** (gatilho 4). Obstáculos: custo real do caseiro + cadeia sem fiscalização |
 | 2026-08-25 | Rosto inchado / açúcar (Melody) `producao/melody_rosto/` | 1 | **Rota 4** (a pesquisa foi feita em outra pessoa). Virada por **pergunta sem saída** (gatilho 6). Obstáculos: efeito colateral do caseiro + **a prateleira de volume, gatilho NOVO** |
 | 2026-08-27 | Crosta / vinagre (Brandon) `producao/brandon_crosta/` | **4** | **Rota 3** (o manual que mudou). Virada por **reversão do vilão** (gatilho 3). Obstáculo: a ordem, não a informação. **Primeiro vídeo do Ângulo 4** |
+| 2026-09-10 | Pernas / bicarbonato (Dana, Jamie, Lynn) `producao/fitywell_pernas/` | 2 | Rota "uma das três causas", **nomeadas** (hormônios, metabolismo, intestino), mais álibi dentro do CTA |
+| 2026-09-10 | Água de arroz / intestino (Dana, Jamie, Lynn) `producao/fitywell_arroz/` | 2 | Rota "uma das três causas": a água só toca o intestino, mais álibi no T6 |
+| 2026-09-10 | Churrasco, movie style integral (Dana, Lynn) `producao/dana_churrasco/` | 4 | Mecanismo do mostrador (sono, carga, cintura) + álibi "it is not your age, it is your playbook". Obstáculo: **rota de fuga A**, "eu acho isso de graça na internet" (T13) |
+| 2026-10-01 | Alho na maçã que espuma (Brandon) `producao/brandon_maca_alho/` | 2 | **Rota 7** (a receita sem diagnóstico). Virada por **contagem quebrada** (gatilho 1, o quinto ingrediente). Obstáculo novo: o app de graça escreve a mesma receita pra todas |
+| 2026-10-02 | Brownie de feijão preto (Brandon) `producao/fitywell_brownie_feijao/` | 2 | **Rota 7 de novo** (repetição consciente, os dois foram ao ar). Virada por **escalada de magnitude** (gatilho 2). Obstáculos: custo de tempo de fazer sozinha + app de caloria grátis |
+
+> **Registro de 2026-10-05 (Luigi confirmou que todos foram ao ar).** Datas acima são as do pacote,
+> não a do post. **Sem rota consumida** (growth com clone literal, ou Ângulo 3 que fecha em ritual):
+> `fitywell_inspecao`, `fitywell_barriga_verao`, `fitywell_cheesecake`, `fitywell_dentes`, `fitywell_growth_canela_acucar`,
+> `fitywell_growth_cortisol_cintura`, `fitywell_growth_cortisol_props`, `fitywell_growth_dentes_agua`,
+> `fitywell_growth_froyo_bites`, `fitywell_growth_modelo_intestino`, `fitywell_growth_salmao_agua`,
+> `fitywell_growth_wentao_healer`, `brandon_pao_sementes`, `brandon_pes_peroxido`, `sf_madrasta_frango`,
+> `auraly_growth_sal_tenis`, `auraly_growth_prece`, `auraly_growth_dinheiro`, `auraly_growth_maos_vidro`,
+> `auraly_venda_fortuna`, `auraly_manifestacao_outubro`. As frases desses vídeos continuam queimadas
+> para a conta que postou (`checar_frases.py` cobre).
 
 > 🟢 **O ÂNGULO 3 QUASE NUNCA APARECE NESTE LOG, E ISSO ESTÁ CERTO.** Os modelos do nicho de
 > alma gêmea não têm beat de fechamento argumentativo: eles fecham em ação ritualizada, não em
@@ -145,9 +160,25 @@ Antes de entregar qualquer roteiro, checar: **qual rota o último vídeo desta c
 | Supermercado 3 dicas | 2 | rota 8, o rótulo que mentiu | (autodiagnóstico como recurso) |
 | Pulmão | 2 | rota 5, a data em que parou de funcionar | confissão (gatilho 5) |
 | Crosta / vinagre | 4 | rota 3, o manual que mudou | reversão do vilão (gatilho 3) |
+| Alho na maçã | 2 | rota 7, a receita sem diagnóstico | contagem quebrada (gatilho 1) |
+| Brownie de feijão | 2 | rota 7 de novo (repetida, os dois no ar) | escalada de magnitude (gatilho 2) |
 
-**Ainda disponíveis pra Brandon:** rotas 1, 2, 4, 6 e 7. Gatilhos: contagem quebrada, escalada de
-magnitude, perda ativa e pergunta sem saída.
+**Ainda disponíveis pra Brandon (atualizado em 2026-10-05):** rotas 1, 2, 4 e 6. Gatilhos: perda
+ativa e pergunta sem saída. A rota 7 já rodou duas vezes seguidas (maçã e brownie), então é a última
+a voltar.
+
+**Log de rotação de DANA, JAMIE e LYNN no Ângulo 2** (mesmas três contas, não repetir):
+| Vídeo | Rota | Observação |
+|---|---|---|
+| Pernas / bicarbonato | uma das três causas, nomeadas | álibi no CTA |
+| Água de arroz | uma das três causas | álibi no T6 |
+
+A rota das três causas já rodou duas vezes nestas contas: **a próxima venda delas usa outra rota.**
+
+**Log de rotação de DANA e LYNN no Ângulo 4:**
+| Vídeo | Mecanismo | Obstáculo |
+|---|---|---|
+| Churrasco (movie style integral) | o mostrador: sono, carga e cintura | rota de fuga A, "eu acho isso de graça na internet" |
 
 ### O DEVICE NOVO DO ÂNGULO 4: o incidente com a desculpa (2026-08-27)
 Não é rota nem gatilho, é uma **camada que entra antes da ponte** e vale pra qualquer nicho de dor
