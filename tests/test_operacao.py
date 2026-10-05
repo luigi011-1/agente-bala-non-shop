@@ -410,6 +410,11 @@ class FlowQuantidade(unittest.TestCase):
         self.assertIn("flow-variacoes", self.falhas("FLOW_X.md", "Veo 3.1 Lite, oito segundos, tres variacoes"))
         self.assertIn("flow-variacoes", self.falhas("ENTREGA_X.md", "| Variacoes por V | 3 | 1 |"))
 
+    def test_formato_diferente_de_916_reprova(self):
+        self.assertIn("flow-formato", self.falhas("PROMPTS_X.md", '{"aspect_ratio": "16:9 horizontal"}'))
+        self.assertIn("flow-formato", self.falhas("FLOW_X.md", "Formato: 16:9"))
+        self.assertEqual([], self.falhas("PROMPTS_X.md", '{"aspect_ratio": "9:16 vertical"}'))
+
     def test_instrucoes_vigentes_sem_falha(self):
         txt = (Path(__file__).resolve().parent.parent / "producao/_flow/INSTRUCOES_AGENTE_FLOW.md").read_text(encoding="utf-8")
         self.assertEqual([], self.falhas("ENTREGA_X.md", txt))

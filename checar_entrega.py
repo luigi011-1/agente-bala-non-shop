@@ -71,8 +71,12 @@ RE_FLOW_3VAR = re.compile(
     r"|(?:oito|8)\s+segundos,\s*(?:tres|três|3)\s+varia", re.I)
 
 
+RE_FLOW_ASPECT_K = re.compile(r'"aspect_ratio"\s*:\s*"\s*(?!9:16)[^"]*"')
+RE_FLOW_FORMATO = re.compile(r"(?:formato|format|aspect[ _]ratio)[^\n]{0,25}\b(?:16:9|1:1|4:5|3:4)\b", re.I)
+
+
 def c_flow_quantidade(pasta):
-    """Regra unica do executor Flow (v19, Luigi 2026-10-05): 4 imagens por K e 1 video por V em TODO perfil.
+    """Regra unica do executor Flow (v19, Luigi 2026-10-05): 4 imagens por K, 1 video por V e 9:16 em TODO perfil.
     Reprova bloco do Flow colado numa versao anterior e qualquer texto de 3 variacoes por V."""
     for p in sorted(Path(pasta).rglob("*.md")):
         if not p.name.startswith(("ENTREGA", "FLOW", "PROMPTS", "IMAGE_BLOCK")):
@@ -83,6 +87,10 @@ def c_flow_quantidade(pasta):
                 falha("flow-versao", "%s traz o bloco do Flow na v%s; o vigente e a v%d (1 video por V). "
                       "Regerar a entrega a partir de producao/_flow/INSTRUCOES_AGENTE_FLOW.md."
                       % (p.name, m.group(1), FLOW_VERSAO_MIN))
+        m = RE_FLOW_ASPECT_K.search(texto) or RE_FLOW_FORMATO.search(texto)
+        if m:
+            falha("flow-formato", "%s traz formato diferente de 9:16 (%r); imagem e video sao sempre 9:16."
+                  % (p.name, m.group(0)[:60]))
         m = RE_FLOW_3VAR.search(texto)
         if m:
             falha("flow-variacoes", "%s manda 3 variacoes por V (%r); a regra e 1 video por V." % (p.name, m.group(0)))

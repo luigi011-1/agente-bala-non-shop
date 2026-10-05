@@ -20,7 +20,7 @@ incompativel com os codigos recebidos exige esclarecimento, nunca escolha silenc
 | Configuracao | AURALY | CLASSICO (Angle 1/2) |
 |---|---|---|
 | Imagem | Nano Banana 2 | Nano Banana 2 |
-| Formato | 9:16 | 9:16 |
+| Formato | 9:16 vertical, imagem e video | 9:16 vertical, imagem e video |
 | Referencia de imagem | Anchor em cena real do avatar ativo (ver secao abaixo) | Anchor do avatar ativo |
 | Imagens por K | 4, com selecao manual | 4, com selecao manual (o operador apaga 3 e deixa 1) |
 | Relacao K/V | Mapa explicito recebido com o pacote; um K pode alimentar varios V | Maior K menor ou igual ao numero de V |
@@ -31,8 +31,9 @@ incompativel com os codigos recebidos exige esclarecimento, nunca escolha silenc
 | Anexo do video | INITIAL FRAME | INITIAL FRAME |
 | Lote de video | Fechado, no maximo 7 codigos V | Fechado, no maximo 7 codigos V |
 
-REGRA UNICA DE QUANTIDADE (v19, Luigi, 2026-10-05), vale em TODOS os perfis: **4 imagens por K e
-1 video por V**. Antes de cada V, colocar a quantidade de saida do video em 1; nunca gerar duas ou
+REGRA UNICA DE QUANTIDADE E FORMATO (v19, Luigi, 2026-10-05), vale em TODOS os perfis: **4 imagens por K,
+1 video por V, e SEMPRE 9:16 vertical tanto na imagem quanto no video**. Antes de cada K e de cada V,
+conferir a proporcao 9:16; nunca 16:9, 1:1 nem 4:5. Se a interface nao permitir 9:16, parar e avisar. Antes de cada V, colocar a quantidade de saida do video em 1; nunca gerar duas ou
 mais versoes do mesmo V. Os valores Auraly reproduzem as travas de WORKFLOW_AURALY.md (modelo e
 prioridade). Nunca transportar o modelo de video classico (Omni Flash) para Auraly. Um pacote historico com outro contrato nao autoriza alterar uma producao
 nova; preservar seu contrato aprovado quando o usuario solicitar especificamente sua retomada.
@@ -279,7 +280,7 @@ v16, 2026-09-25: AVATAR FIXO POR CONTA tambem no Auraly. Revoga o cenario propri
 gancho da v7: roupa e cenario-base da anchor em todo video e gancho; so o angulo de camera varia.
 v19, 2026-10-05: regra unica para todos os perfis, a pedido do Luigi: SEMPRE 4 imagens por K e SEMPRE 1
 video (um unico resultado) por V. Revoga o video com mais de um resultado por V no Auraly (Veo 3.1 Lite). Modelo e prioridade
-de cada perfil nao mudam.
+de cada perfil nao mudam. Tambem fixado: formato 9:16 para imagem e video em todos os perfis.
 v18, 2026-10-04: Auraly passa a anexar o CHARACTER SHEET (identidade e roupa) mais o frame do video
 modelo (cenario, angulo e enquadramento) em todo K. O cenario e o angulo sao os do modelo, quase 100%
 fieis, organicos e sem nada sobrenatural. Revoga so no Auraly a parte de cenario do avatar fixo da
