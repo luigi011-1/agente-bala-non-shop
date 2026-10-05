@@ -2,7 +2,7 @@
 
 Production: auraly_venda_familiar_corredor
 Angle: 3 (Auraly)
-Objective: SALE
+Objective: GROWTH
 Round: VALIDATION
 Reference video: producao/auraly_venda_familiar_corredor/input/modelo.mp4 (upload snapinsta-1791227010938.mp4, 105,7s, 720x1280, 30fps; o .mp4 fica fora do git)
 Scenario: corredor residencial americano de paredes cremes, rodape branco, piso de tabua de carvalho e portas de madeira de seis paineis, camera baixa e depois selfie de perto (do video modelo)
@@ -43,15 +43,14 @@ video prompts: pendente
 
 ## Pending
 - Aprovacao do roteiro e do hook fiel pelo Luigi
-- Respostas do Luigi: venda ou growth, e um video por avatar ou os tres avatares em cada video
 
 ## User decisions
-- Decision: fila de tres avatares nas tres producoes do lote (padrao Auraly)
-  Reason: default do coordenador enquanto o Luigi nao responde
-  Operational consequence: pacote para Avery, Devon e Jordan; muda se ele disser que cada avatar fica com um video
-- Decision: objetivo SALE adotado provisoriamente
-  Reason: o CTA do modelo termina em tap my profile picture e Stories; o Luigi ainda nao respondeu venda ou growth
-  Operational consequence: CTA com 222 + Stories; se ele disser growth, troco o fechamento por follow
+- Decision: cada video vai para os tres avatares
+  Reason: Luigi, 2026-10-05 ("cada video vai para os 3 avatares")
+  Operational consequence: pacote para Avery, Devon e Jordan nesta producao
+- Decision: objetivo GROWTH, com o CTA de comentar 222 antes da metade do roteiro
+  Reason: Luigi, 2026-10-05 ("os videos serao de growth, tente colocar o cta de comentar 222 antes da metade do roteiro pra alcancar mais pessoas")
+  Operational consequence: 222 no T7 (de 15 takes), depois save, toque na tela e follow; sem Stories e sem venda
 
 ## Next response format
 - Roteiro no OUTPUT CONTRACT (01 a 05) e parar em WAITING_SCRIPT_APPROVAL

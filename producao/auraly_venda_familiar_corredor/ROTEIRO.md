@@ -1,5 +1,5 @@
 pipeline: auraly
-objective: SALE
+objective: GROWTH
 
 # auraly_venda_familiar_corredor | ANGLE 3 (Auraly) | Roteiro para aprovação
 
@@ -7,14 +7,14 @@ objective: SALE
 **Origem do modelo:** avatar IA (mulher gerada de moletom marrom, porta que abre sozinha, fumaça no corredor, sem cortes no corpo). Vale o formato de avatar IA: T1 mudo com cortes internos ao `V__`, bandeira discreta em todo K.
 **Rodada:** VALIDAÇÃO (gancho do modelo, fiel)
 **Avatares:** Avery Knox, Devon Price e Jordan Vale (fila no `CHECKPOINT.md`)
-**Objetivo:** SALE (o CTA do modelo termina em "tap my profile picture and check my stories", que é o destino Stories do Auraly; a decisão de venda ou growth está pendente do Luigi, adotei SALE porque o modelo fecha no Stories)
-**Variável trocada:** nenhuma no esqueleto. Fala com a mesma engenharia do modelo; mudam a data (sem dia cravado), a keyword (`222` com a consequência), e as frases que já saíram nas mesmas contas, reescritas com a mesma função. Cenário e ângulo de câmera do modelo (regra de 2026-10-04).
-**Funil:** save (1º selo) + toque na tela (2º selo) + comentar `222` + foto de perfil → Stories
+**Objetivo:** GROWTH (Luigi, 2026-10-05: "os videos serao de growth"); sem Stories e sem venda, o CTA do modelo vira follow
+**Variável trocada:** nenhuma no esqueleto. Fala com a mesma engenharia do modelo; mudam a data (sem dia cravado), a keyword (`222` sobe para o T7 com a consequência), o fechamento (follow no lugar dos Stories) e as frases que já saíram nas mesmas contas, reescritas com a mesma função. Cenário e ângulo de câmera do modelo (regra de 2026-10-04).
+**Funil:** comentar `222` logo no T7, antes da metade do vídeo (pedido do Luigi, 2026-10-05, para alcançar mais gente) + save + toque na tela + follow. Sem Stories.
 **Estado:** WAITING_SCRIPT_APPROVAL
 
 ## P1, veredito
 
-Esqueleto novo para as três contas: ritual de fogo numa fileira de sal e folhas no chão de um corredor, a porta do fim abrindo sozinha, e depois a mensagem de um familiar que está no céu, dita de perto, em selfie. **Parentesco:** a fala vem da mesma família de criadores de `auraly_venda_fortuna`, `auraly_growth_sal_tenis` e `auraly_growth_manifestar_dinheiro` (portal, onda de prosperidade, "don't tell anyone", gesto da mão, selos), que já rodaram nestas mesmas três contas; por isso o `checar_frases.py` manda e cada beat repetido foi reescrito. A ponte do "familiar no céu" é inédita na operação. O gancho tem o mesmo tipo de ritual do `auraly_growth_manifestar_dinheiro` (fogo no sal e no louro), só que em fileira no corredor e com a porta abrindo; fica declarado para o Luigi decidir se quer outro gancho (não abri rodada de variação).
+Esqueleto novo para as três contas: ritual de fogo numa fileira de sal e folhas no chão de um corredor, a porta do fim abrindo sozinha, e depois a mensagem de um familiar que está no céu, dita de perto, em selfie. **Parentesco:** a fala vem da mesma família de criadores de `auraly_venda_fortuna`, `auraly_growth_sal_tenis` e `auraly_growth_manifestar_dinheiro` (portal, onda de prosperidade, "don't tell anyone", gesto da mão, selos), que já rodaram nestas mesmas três contas; por isso o `checar_frases.py` manda e cada beat repetido foi reescrito. A ponte do "familiar no céu" é inédita na operação. O gancho é parente do `auraly_growth_manifestar_dinheiro` (fogo no sal, mesmas contas), mas é outra cena: corredor em vez de banheiro, fileira reta de sal e folhas em vez de círculo, o fogo corre até a porta que abre sozinha em vez de ela pisar no fogo, e não há pote nem louro; fica declarado para o Luigi decidir se quer outro gancho (não abri rodada de variação).
 
 ## Transcrição integral do vídeo modelo
 
@@ -45,7 +45,7 @@ Esqueleto novo para as três contas: ritual de fogo numa fileira de sal e folhas
 - **Corpo, 4,6 a 105,7s, plano único sem cortes:** selfie de perto, câmera na altura do peito dela olhando levemente para cima, ela agachada no mesmo corredor, rosto grande no centro e ombro e capuz à esquerda; o corredor foge em perspectiva atrás, com portas de madeira à direita e à esquerda; no canto inferior direito, os restos da fileira de sal e folhas no piso. Ela fala olhando na lente o tempo todo, sem gesto de mão visível.
 - **Cenário:** corredor residencial americano: paredes cremes, rodapé branco, piso de tábua corrida de carvalho, porta de madeira de seis painéis ao fundo, outra porta de madeira à direita. A luz do modelo é amarelada; no clone vira luz neutra (GATE_VISUAL).
 - **Roupa do modelo:** moletom marrom escuro com capuz, calça escura. No clone, a roupa é a do character sheet de cada avatar.
-- **Camada de tela:** legenda karaokê branca com a palavra falada em amarelo, no meio do quadro; seta vermelha para baixo à esquerda nos últimos segundos (aponta a foto de perfil). Sem tarja de gancho.
+- **Camada de tela:** legenda karaokê branca com a palavra falada em amarelo, no meio do quadro; seta vermelha para baixo à esquerda nos últimos segundos (aponta a foto de perfil; no clone ela sai, o CTA é follow). Sem tarja de gancho.
 
 ### Herói do hook (micro-protocolo)
 
@@ -63,16 +63,17 @@ Esqueleto novo para as três contas: ritual de fogo numa fileira de sal e folhas
 | 2 | MENSAGEM DE UM FAMILIAR NO CÉU + CONVITE | A deceased family member of yours, who is in heaven, asked me to convey a very important message to you. If your answer is yes, accept it, and watch this video to the end. | A family member of yours who is in heaven asked me to bring you a very important message. If you are ready to hear it, stay until the end. ("deceased" sai porque a voz gerada lê "deceased" como frase fria; "heaven" fica) |
 | 3 | SEGREDO + ESCASSEZ | You will be left speechless after hearing this. Don't tell anyone. Not everyone will see this video before October 5th. | You will be left speechless when you hear it. This one is only for you. Not everyone will see this video before the week is over. (sem dia cravado, `feedback-data-sem-dia-exato`; "Don't tell anyone" já saiu nas três contas) |
 | 4 | ELEIÇÃO + AVISO | I don't know your name, but don't write it down yet, because if this reached you today, it arrived as a final warning. | I can't see your name, but I can feel you, and if this reached your screen today, it came as one last call to listen. ("I don't know your name" e "final warning" já saíram nas mesmas contas) |
-| 5 | PROFECIA + PORTAL | A powerful wave of prosperity, love, and money is heading your way. Don't tell anyone, but the portal of abundance has opened. The worst is finally over. | A strong current of abundance, love and money is turning your way. Quietly, between us, the gate of abundance just opened. Everything heavy is behind you. (frases do modelo já saíram em `auraly_venda_fortuna` e `auraly_growth_sal_tenis`) |
+| 5 | PROFECIA + PORTAL | A powerful wave of prosperity, love, and money is heading your way. Don't tell anyone, but the portal of abundance has opened. The worst is finally over. | A strong current of abundance, love and money is turning your way. Quietly, between us, the road to it just cleared. Everything heavy is behind you. (frases do modelo já saíram em `auraly_venda_fortuna` e `auraly_growth_sal_tenis`) |
 | 6 | VISÃO + GESTO | I see a great deal of money and prosperity entering your life. Before commenting, close your right hand and listen to the end. | I see a great deal of money and prosperity coming into your life. Before you comment, rest your right hand over your heart and listen to the end. (o "punho fechado" já saiu duas vezes nas mesmas contas; a mão no coração é o gesto divino com a mesma função de reter) |
-| 7 | ELEIÇÃO + QUEBRA DA ENERGIA | This video isn't for everyone. The universe has chosen you. If you skip ahead now, the energy will break. | Not everyone is meant to hear this, and you were picked to hear it. If you skip ahead now, the energy around you will scatter. |
-| 8 | SENSAÇÃO + CORRENTES | I sense something very unusual happening to you right now. I see the chains that were keeping you trapped in darkness being shattered. | Something unusual is moving around you right now, and I can sense it. I see the chains that kept your prosperity locked away finally breaking apart. ("darkness" sai: estética sombria fora da lei do registro) |
-| 9 | INVEJA + 7 MINUTOS | The block on your prosperity that was cast upon you is going straight back to the person who sent it. In the next 7 minutes, the dark energy ... destroyed forever. | The envy others sent your way is losing its hold on you. In the next 7 minutes, the heavy energy around you will be cleared away for good. (o bloqueio "lançado" que volta ao remetente é praga lançada e retaliação, proibido na lei do registro; a inveja dos outros é o que a ramificação dinheiro libera) |
-| 10 | SHARE + VOLTA EM 7 MIN | So send this video to yourself right now, because in 7 minutes you will come back to confirm this energetic shift in your life. | So forward this one to yourself this minute, because in 7 minutes you will return here to confirm this shift in your life. |
-| 11 | SELOS 1 E 2 | Now open your hand and save this video. First seal. Tap the screen quickly. Second seal. | Now lower your hand and press save. That seals the first part. Tap the screen fast. That seals the second part. (o par "first seal / second seal" já saiu nas mesmas contas) |
-| 12 | 222 + RECOMPENSA | Type 222 in the comments so I can see that you did everything correctly. If you did everything right, tomorrow at 11am, you will receive some incredibly good news. | Write 222 below so this message is bound to your name. Do all of it, and tomorrow at 11 in the morning you will hear very good news. (LEI DO SELO: o `222` ganha a consequência de quem escreve) |
-| 13 | ALERTA FINAL | Pay attention. This energy is highly sensitive, and the envy of others could shatter it completely. | Pay close attention. This energy is very delicate, and the envy of others could break it completely. |
-| 14 | STORIES | So tap my profile picture and check out my stories before they disappear, because the second part of this signal is waiting for you there. | Now tap my profile picture and go through my stories before they vanish, because what comes next is already sitting in there for you. (SALE, modo CURIOSIDADE, depois do `222`) |
+| 7 | 222 ANTECIPADO | (o modelo pede o `222` só no minuto 82: "Type 222 in the comments so I can see that you did everything correctly") | Now write 222 below, so this message is marked with your name and the abundance I see knows where to land. (pedido do Luigi em 2026-10-05: o comentário `222` antes da metade do roteiro, para alcançar mais pessoas; entra logo depois de "before you comment" do beat 6, que já anuncia o comentário. Consequência de quem escreve: LEI DO SELO) |
+| 8 | ELEIÇÃO + QUEBRA DA ENERGIA | This video isn't for everyone. The universe has chosen you. If you skip ahead now, the energy will break. | Not everyone is meant to hear this, and you were picked to hear it. If you skip ahead now, the energy around you will scatter. |
+| 9 | SENSAÇÃO + CORRENTES | I sense something very unusual happening to you right now. I see the chains that were keeping you trapped in darkness being shattered. | Something unusual is moving around you right now, and I can sense it. I see the chains that kept your prosperity locked away finally breaking apart. ("darkness" sai: estética sombria fora da lei do registro) |
+| 10 | INVEJA + 7 MINUTOS | The block on your prosperity that was cast upon you is going straight back to the person who sent it. In the next 7 minutes, the dark energy ... destroyed forever. | The envy others sent your way is losing its hold on you. In the next 7 minutes, the heavy energy around you will be cleared away for good. (o bloqueio "lançado" que volta ao remetente é praga lançada e retaliação, proibido na lei do registro; a inveja dos outros é o que a ramificação dinheiro libera) |
+| 11 | SHARE + VOLTA EM 7 MIN | So send this video to yourself right now, because in 7 minutes you will come back to confirm this energetic shift in your life. | So forward this one to yourself this minute, because in 7 minutes you will return here to confirm this shift in your life. |
+| 12 | SALVAR E TOQUE NA TELA | Now open your hand and save this video. First seal. Tap the screen quickly. Second seal. | Now lower your hand and press save, so this message stays with you. Then tap the screen fast, so it stays open. (o par "first seal / second seal" já saiu nas mesmas contas e os vídeos 1 e 3 deste lote o usam; aqui cada ação ganha a própria consequência, sem a palavra seal) |
+| 13 | RECOMPENSA | If you did everything right, tomorrow at 11am, you will receive some incredibly good news. | Do all of it, and tomorrow at 11 in the morning you will hear very good news. Do not skip a single step. (o `222` saiu daqui e foi para o beat 10) |
+| 14 | ALERTA FINAL | Pay attention. This energy is highly sensitive, and the envy of others could shatter it completely. | Pay close attention. This energy is very delicate, and the envy of others could break it completely. |
+| 15 | CTA (growth) | So tap my profile picture and check out my stories before they disappear, because the second part of this signal is waiting for you there. | Now follow me, so the second part of this message can reach you, because it is already on its way. (follow no lugar dos Stories: GROWTH decidido pelo Luigi em 2026-10-05, precedente de `auraly_growth_prece` e `auraly_growth_dinheiro`) |
 
 **Congruência por avatar:** nenhuma frase depende de gênero ou idade; "a family member of yours who is in heaven" é mais crível na boca de uma pessoa de cinquenta e tantos anos (Avery 56, Devon 52, Jordan 58, que já perderam gente) do que numa mulher de trinta e poucos, que é a do modelo. É hipótese, não prova: ainda não há vídeo Auraly viral para comparar.
 **Registro:** ramificação dinheiro (lei afrouxada em 2026-09-29): ritual, energia, inveja dos outros e céu entram; nada de feitiço, pacto ou praga lançada, e a retaliação ao remetente saiu.
@@ -80,7 +81,7 @@ Esqueleto novo para as três contas: ritual de fogo numa fileira de sal e folhas
 ## Setups de cena
 
 - **Setup A (T1, gancho mudo):** corredor americano do modelo, câmera no chão olhando ao longo dele; ela ajoelhada à esquerda acendendo a ponta da fileira de sal e folhas; a porta de madeira do fundo abre dentro do clipe e sai fumaça. O resto da sequência (fogo correndo, porta, volta ao quadro) nasce dentro do V01.
-- **Setup B (T2 a T14, corpo):** mesmo corredor; selfie de perto, câmera na altura do peito dela olhando levemente para cima, ela agachada de frente, rosto grande no centro, os restos da fileira de sal no canto inferior direito.
+- **Setup B (T2 a T15, corpo):** mesmo corredor; selfie de perto, câmera na altura do peito dela olhando levemente para cima, ela agachada de frente, rosto grande no centro, os restos da fileira de sal no canto inferior direito.
 
 ## Roteiro cena a cena
 
@@ -97,40 +98,43 @@ Esqueleto novo para as três contas: ritual de fogo numa fileira de sal e folhas
 > "I can't see your name, but I can feel you, and if this reached your screen today, it came as one last call to listen."
 
 ### T5 · PROFECIA + PORTAL · TALKING · Setup B
-> "A strong current of abundance, love and money is turning your way. Quietly, between us, the gate of abundance just opened. Everything heavy is behind you."
+> "A strong current of abundance, love and money is turning your way. Quietly, between us, the road to it just cleared. Everything heavy is behind you."
 
 ### T6 · VISÃO + GESTO · TALKING · Setup B
 > "I see a great deal of money and prosperity coming into your life. Before you comment, rest your right hand over your heart and listen to the end."
 
-### T7 · ELEIÇÃO + QUEBRA DA ENERGIA · TALKING · Setup B
+### T7 · 222 ANTECIPADO + CONSEQUÊNCIA · TALKING · Setup B
+> "Now write 222 below, so this message is marked with your name and the abundance I see knows where to land."
+
+### T8 · ELEIÇÃO + QUEBRA DA ENERGIA · TALKING · Setup B
 > "Not everyone is meant to hear this, and you were picked to hear it. If you skip ahead now, the energy around you will scatter."
 
-### T8 · SENSAÇÃO + CORRENTES · TALKING · Setup B
+### T9 · SENSAÇÃO + CORRENTES · TALKING · Setup B
 > "Something unusual is moving around you right now, and I can sense it. I see the chains that kept your prosperity locked away finally breaking apart."
 
-### T9 · INVEJA + 7 MINUTOS · TALKING · Setup B
+### T10 · INVEJA + 7 MINUTOS · TALKING · Setup B
 > "The envy others sent your way is losing its hold on you. In the next 7 minutes, the heavy energy around you will be cleared away for good."
 
-### T10 · SHARE + VOLTA EM 7 MIN · TALKING · Setup B
+### T11 · SHARE + VOLTA EM 7 MIN · TALKING · Setup B
 > "So forward this one to yourself this minute, because in 7 minutes you will return here to confirm this shift in your life."
 
-### T11 · SELOS 1 E 2 · TALKING · Setup B
-> "Now lower your hand and press save. That seals the first part. Tap the screen fast. That seals the second part."
+### T12 · SALVAR E TOQUE NA TELA · TALKING · Setup B
+> "Now lower your hand and press save, so this message stays with you. Then tap the screen fast, so it stays open."
 
-### T12 · 222 + RECOMPENSA · TALKING · Setup B
-> "Write 222 below so this message is bound to your name. Do all of it, and tomorrow at 11 in the morning you will hear very good news."
+### T13 · RECOMPENSA · TALKING · Setup B
+> "Do all of it, and tomorrow at 11 in the morning you will hear very good news. Do not skip a single step."
 
-### T13 · ALERTA FINAL · TALKING · Setup B
+### T14 · ALERTA FINAL · TALKING · Setup B
 > "Pay close attention. This energy is very delicate, and the envy of others could break it completely."
 
-### T14 · STORIES · TALKING · Setup B
-> "Now tap my profile picture and go through my stories before they vanish, because what comes next is already sitting in there for you."
+### T15 · CTA · FOLLOW · TALKING · Setup B
+> "Now follow me, so the second part of this message can reach you, because it is already on its way."
 
 ## Roteiro só-fala (TTS)
 
-Voz do avatar, sotaque americano, baixa, calma e próxima, como quem conta um segredo para quem está ouvindo; mais lenta e solene no T2, firme no aviso do T7 e do T13, e acelera de leve nos selos.
+Voz do avatar, sotaque americano, baixa, calma e próxima, como quem conta um segredo para quem está ouvindo; mais lenta e solene no T2, firme no aviso do T8 e do T14, e acelera de leve em save e toque.
 
-A family member of yours who is in heaven asked me to bring you a very important message. If you are ready to hear it, stay until the end. You will be left speechless when you hear it. This one is only for you. Not everyone will see this video before the week is over. I can't see your name, but I can feel you, and if this reached your screen today, it came as one last call to listen. A strong current of abundance, love and money is turning your way. Quietly, between us, the gate of abundance just opened. Everything heavy is behind you. I see a great deal of money and prosperity coming into your life. Before you comment, rest your right hand over your heart and listen to the end. Not everyone is meant to hear this, and you were picked to hear it. If you skip ahead now, the energy around you will scatter. Something unusual is moving around you right now, and I can sense it. I see the chains that kept your prosperity locked away finally breaking apart. The envy others sent your way is losing its hold on you. In the next 7 minutes, the heavy energy around you will be cleared away for good. So forward this one to yourself this minute, because in 7 minutes you will return here to confirm this shift in your life. Now lower your hand and press save. That seals the first part. Tap the screen fast. That seals the second part. Write 222 below so this message is bound to your name. Do all of it, and tomorrow at 11 in the morning you will hear very good news. Pay close attention. This energy is very delicate, and the envy of others could break it completely. Now tap my profile picture and go through my stories before they vanish, because what comes next is already sitting in there for you.
+A family member of yours who is in heaven asked me to bring you a very important message. If you are ready to hear it, stay until the end. You will be left speechless when you hear it. This one is only for you. Not everyone will see this video before the week is over. I can't see your name, but I can feel you, and if this reached your screen today, it came as one last call to listen. A strong current of abundance, love and money is turning your way. Quietly, between us, the road to it just cleared. Everything heavy is behind you. I see a great deal of money and prosperity coming into your life. Before you comment, rest your right hand over your heart and listen to the end. Now write 222 below, so this message is marked with your name and the abundance I see knows where to land. Not everyone is meant to hear this, and you were picked to hear it. If you skip ahead now, the energy around you will scatter. Something unusual is moving around you right now, and I can sense it. I see the chains that kept your prosperity locked away finally breaking apart. The envy others sent your way is losing its hold on you. In the next 7 minutes, the heavy energy around you will be cleared away for good. So forward this one to yourself this minute, because in 7 minutes you will return here to confirm this shift in your life. Now lower your hand and press save, so this message stays with you. Then tap the screen fast, so it stays open. Do all of it, and tomorrow at 11 in the morning you will hear very good news. Do not skip a single step. Pay close attention. This energy is very delicate, and the envy of others could break it completely. Now follow me, so the second part of this message can reach you, because it is already on its way.
 
 ## Tradução completa (Português)
 
@@ -140,22 +144,23 @@ A family member of yours who is in heaven asked me to bring you a very important
 | T2 | A family member of yours who is in heaven asked me to bring you a very important message. If you are ready to hear it, stay until the end. | Um familiar seu que está no céu me pediu para trazer uma mensagem muito importante pra você. Se você está pronta para ouvir, fique até o final. |
 | T3 | You will be left speechless when you hear it. This one is only for you. Not everyone will see this video before the week is over. | Você vai ficar sem palavras quando ouvir isto. Esta é só pra você. Nem todo mundo vai ver este vídeo antes de a semana acabar. |
 | T4 | I can't see your name, but I can feel you, and if this reached your screen today, it came as one last call to listen. | Eu não consigo ver o seu nome, mas eu sinto você, e se isto chegou na sua tela hoje, veio como um último chamado para ouvir. |
-| T5 | A strong current of abundance, love and money is turning your way. Quietly, between us, the gate of abundance just opened. Everything heavy is behind you. | Uma forte corrente de abundância, amor e dinheiro está virando na sua direção. Em silêncio, só entre nós, o portão da abundância acabou de se abrir. Tudo que era pesado ficou pra trás. |
+| T5 | A strong current of abundance, love and money is turning your way. Quietly, between us, the road to it just cleared. Everything heavy is behind you. | Uma forte corrente de abundância, amor e dinheiro está virando na sua direção. Em silêncio, só entre nós, o caminho até ela acabou de se abrir. Tudo que era pesado ficou pra trás. |
 | T6 | I see a great deal of money and prosperity coming into your life. Before you comment, rest your right hand over your heart and listen to the end. | Eu vejo muito dinheiro e prosperidade entrando na sua vida. Antes de comentar, ponha a mão direita sobre o coração e ouça até o final. |
-| T7 | Not everyone is meant to hear this, and you were picked to hear it. If you skip ahead now, the energy around you will scatter. | Nem todo mundo está destinado a ouvir isto, e você foi escolhida para ouvir. Se você pular agora, a energia ao seu redor vai se dispersar. |
-| T8 | Something unusual is moving around you right now, and I can sense it. I see the chains that kept your prosperity locked away finally breaking apart. | Algo incomum está se movendo ao seu redor agora mesmo, e eu consigo sentir. Vejo as correntes que mantinham a sua prosperidade trancada finalmente se partindo. |
-| T9 | The envy others sent your way is losing its hold on you. In the next 7 minutes, the heavy energy around you will be cleared away for good. | A inveja que os outros mandaram na sua direção está perdendo a força sobre você. Nos próximos 7 minutos, a energia pesada ao seu redor vai ser limpa de vez. |
-| T10 | So forward this one to yourself this minute, because in 7 minutes you will return here to confirm this shift in your life. | Então encaminhe este pra você mesma neste minuto, porque em 7 minutos você vai retornar aqui para confirmar esta mudança na sua vida. |
-| T11 | Now lower your hand and press save. That seals the first part. Tap the screen fast. That seals the second part. | Agora abaixe a mão e aperte salvar. Isso sela a primeira parte. Toque na tela rápido. Isso sela a segunda parte. |
-| T12 | Write 222 below so this message is bound to your name. Do all of it, and tomorrow at 11 in the morning you will hear very good news. | Escreva 222 aí embaixo para esta mensagem ficar presa ao seu nome. Faça tudo, e amanhã às 11 da manhã você vai ouvir uma notícia muito boa. |
-| T13 | Pay close attention. This energy is very delicate, and the envy of others could break it completely. | Preste muita atenção. Esta energia é muito delicada, e a inveja dos outros pode quebrá-la por completo. |
-| T14 | Now tap my profile picture and go through my stories before they vanish, because what comes next is already sitting in there for you. | Agora toque na minha foto de perfil e passe pelos meus stories antes que se percam, porque o que vem a seguir já está lá dentro esperando por você. |
+| T7 | Now write 222 below, so this message is marked with your name and the abundance I see knows where to land. | Agora escreva 222 aí embaixo, para esta mensagem ficar marcada com o seu nome e a abundância que eu vejo saber onde pousar. |
+| T8 | Not everyone is meant to hear this, and you were picked to hear it. If you skip ahead now, the energy around you will scatter. | Nem todo mundo está destinado a ouvir isto, e você foi escolhida para ouvir. Se você pular agora, a energia ao seu redor vai se dispersar. |
+| T9 | Something unusual is moving around you right now, and I can sense it. I see the chains that kept your prosperity locked away finally breaking apart. | Algo incomum está se movendo ao seu redor agora mesmo, e eu consigo sentir. Vejo as correntes que mantinham a sua prosperidade trancada finalmente se partindo. |
+| T10 | The envy others sent your way is losing its hold on you. In the next 7 minutes, the heavy energy around you will be cleared away for good. | A inveja que os outros mandaram na sua direção está perdendo a força sobre você. Nos próximos 7 minutos, a energia pesada ao seu redor vai ser limpa de vez. |
+| T11 | So forward this one to yourself this minute, because in 7 minutes you will return here to confirm this shift in your life. | Então encaminhe este pra você mesma neste minuto, porque em 7 minutos você vai retornar aqui para confirmar esta mudança na sua vida. |
+| T12 | Now lower your hand and press save, so this message stays with you. Then tap the screen fast, so it stays open. | Agora abaixe a mão e aperte salvar, para esta mensagem ficar com você. Depois toque na tela rápido, para ela ficar aberta. |
+| T13 | Do all of it, and tomorrow at 11 in the morning you will hear very good news. Do not skip a single step. | Faça tudo, e amanhã às 11 da manhã você vai ouvir uma notícia muito boa. Não pule nenhum passo. |
+| T14 | Pay close attention. This energy is very delicate, and the envy of others could break it completely. | Preste muita atenção. Esta energia é muito delicada, e a inveja dos outros pode quebrá-la por completo. |
+| T15 | Now follow me, so the second part of this message can reach you, because it is already on its way. | Agora me siga, para a segunda parte desta mensagem poder chegar até você, porque ela já está a caminho. |
 
 ## Notas de produção
 
-- **Duração:** T1 mudo de ~4,5s (cortar quando ela olha para a lente) + 13 takes falados de até 8s em jump cut no mesmo enquadramento; cortar a sobra de cada take no fim da fala para voltar perto dos 105s do modelo.
+- **Duração:** T1 mudo de ~4,5s (cortar quando ela olha para a lente) + 14 takes falados de até 8s em jump cut no mesmo enquadramento; cortar a sobra de cada take no fim da fala para voltar perto dos 105s do modelo.
 - **T1 mudo** com som ambiente (isqueiro, fogo estalando, porta rangendo). Sem tarja de gancho: o modelo não tem.
-- **Camada de tela (CapCut):** legenda karaokê branca com a palavra falada em amarelo, no meio do quadro, do T2 ao fim; seta vermelha para baixo à esquerda nos últimos 2s do T14 (aponta a foto de perfil).
+- **Camada de tela (CapCut):** legenda karaokê branca com a palavra falada em amarelo, no meio do quadro, do T2 ao fim; sem seta para a foto de perfil (o CTA é follow); o `222` do T7 pode ganhar um sinal de comentário na legenda.
 - **Risco de geração:** o V01 pede fogo numa fileira de sal no chão e a porta abrindo sozinha com fumaça. Fogo no chão pode travar no Veo; o K01 mostra só a ponta da fileira com a chama pequena, sem o fogo correndo.
 - **Compliance:** o claim mais arriscado é a mensagem de um familiar falecido ("a family member of yours who is in heaven asked me to bring you a very important message"), que promete contato com os mortos e explora luto; vem do modelo e é o gancho verbal dele. Em seguida, "tomorrow at 11 in the morning you will hear some very good news" e o prazo de 7 minutos (prazo concreto), herdados do modelo. Sem preço, sem app, sem produto.
 - **Frases repetidas:** o modelo recicla blocos de `auraly_venda_fortuna` e `auraly_growth_sal_tenis`; todos reescritos com a mesma função. O resultado do `checar_frases.py` vai no chat da entrega.
