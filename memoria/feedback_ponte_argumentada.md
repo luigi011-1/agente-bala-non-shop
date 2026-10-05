@@ -34,6 +34,16 @@ Não é trade-off. **Credibilidade se constrói com ARGUMENTO, nunca com CONCESS
 
 **Segundo teste:** a ponte usa a MESMA dor do hook, ou introduz uma dor nova? Tem que usar a mesma. Dor nova no fechamento reabre o vídeo em vez de fechar.
 
+## Erro do muffin (Luigi, 2026-10-04, `brandon_seamoss_muffin`)
+*"após a ponte você falou pra tomar cuidado com a sea moss do nada, sem conexão nenhuma"*. Eu citei sea
+moss numa frase solta ("your gut is missing what sea moss... give it") e no take seguinte já alertei
+"careful with the sea moss on the shelf": **obstáculo sobre uma categoria que o vídeo nunca apresentou.**
+Conserto: a categoria entra primeiro como **substituição do ingrediente da receita** ("I added one thing
+that does the same job with no oven: sea moss", ecoando a frase do mecanismo do modelo), e só depois vem
+o obstáculo, que nasce de uma regra que a própria receita já estabeleceu ("zero refined sugar" → as gomas
+com açúcar desfazem o muffin). Ordem fixa: dor do modelo → categoria fazendo o mesmo trabalho → obstáculo
+derivado da receita → produto que responde o obstáculo.
+
 ## Onde a ponte muda de natureza
 No Ângulo 1 a ponte é **substituição de ingrediente** (receita → cápsula). No Ângulo 2 não existe substituição, então a ponte é outra e forçar a do Ângulo 1 produz afirmação de novo. Ver [[angulo2-copy-fitywell]].
 

@@ -1,6 +1,6 @@
 ---
 name: angulo1-copy-seamoss
-description: "Doutrina do ÂNGULO 1 desde 2026-10-02: Natural Rems Sea Moss 16-in-1 Gummies (Amazon, ASIN B0DXHCJCC5) SUBSTITUI a Korella Saffron. Produto, ingredientes, prova da página, ângulo principal (perda de peso pelo mecanismo estresse/cortisol, nunca culpa dela), banco de ângulos secundários, CTA OBRIGATÓRIO da marca ('Search Natural Rems Sea Moss on Amazon' PRIMEIRO com o frasco em quadro, link no COMENTÁRIO FIXADO depois, comentário opcional com a keyword yes; os dois por decisão do Luigi sobre o PDF) e compliance que corta pagamento (#ad #syntheticperformer #naturalrems, toggle de IA, sem antes/depois, sem médico/jaleco/clínica, sem cura, sem nome de remédio ou concorrente). Avatar: holistic.brandon (COACH), em paralelo com FityWell e Body Hacks (Ângulo 4 reativado para ela em 2026-10-02). Foto do frasco em producao/_ancoras/natural_rems_seamoss_produto.jpg; PDF do CTA em producao/_seamoss/."
+description: "Doutrina do ÂNGULO 1 desde 2026-10-02: Natural Rems Sea Moss 16-in-1 Gummies (Amazon, ASIN B0DXHCJCC5) SUBSTITUI a Korella Saffron. Produto, ingredientes, prova da página, ângulo principal (perda de peso pelo mecanismo estresse/cortisol, nunca culpa dela), banco de ângulos secundários, CTA OBRIGATÓRIO da marca ('Search Natural Rems Sea Moss on Amazon' PRIMEIRO com o frasco em quadro, link no COMENTÁRIO FIXADO depois (ou na LEGENDA quando o Luigi declarar, desde 2026-10-03), comment yes + follow SEMPRE, antes da busca na Amazon (2026-10-03); desvalorizar o sea moss genérico item por item só com diferencial verificado (seção 5.1)) e compliance que corta pagamento (#ad #syntheticperformer #naturalrems, toggle de IA, sem antes/depois, sem médico/jaleco/clínica, sem cura, sem nome de remédio ou concorrente). Avatar: holistic.brandon (COACH), em paralelo com FityWell e Body Hacks (Ângulo 4 reativado para ela em 2026-10-02). Foto do frasco em producao/_ancoras/natural_rems_seamoss_produto.jpg; PDF do CTA em producao/_seamoss/."
 metadata:
   node_type: memory
   type: project
@@ -75,12 +75,23 @@ compliance do item 5 vale em todos.
    da bio do PDF: *"Or you can just tap the link I left in the pinned comment on this video."*
    O link nunca é dito antes da Amazon (o exemplo errado do PDF é errado pela ORDEM, não pelo
    comentário fixado). O PDF original dizia *"Or you can also find the link in my bio."*
+   ♻️ **2026-10-03 (Luigi, `brandon_seamoss_vizinha`): o link também pode ir na LEGENDA do post**,
+   quando ele declarar na produção: *"Or you can just tap the link I left in the caption."* A legenda
+   abre com `#ad #syntheticperformer #naturalrems` e o link vem logo abaixo. O destino é decisão da
+   produção (comentário fixado continua sendo o padrão quando ele não disser nada); o linter aceita os dois.
 4. **FECHA O CTA.** Sem voltar, sem repetir o link, sem oferecer alternativa. A sequência acaba
    aqui; qualquer coisa a mais quebra a ordem.
 
 **Opcional:** *"Comment yes and I'll send you the link."* ♻️ **Decisão do Luigi, 2026-10-02: a keyword
 é `yes`, igual aos outros ângulos clássicos**, no lugar do `MOSS` sugerido pelo PDF. Se usar, é a
 única fala depois do passo 3, e entra inteira.
+
+♻️ **COMENTÁRIO + FOLLOW SEMPRE (Luigi, 2026-10-03, `brandon_seamoss_vizinha`):** todo vídeo de venda
+do Sea Moss leva comment `yes` + follow. Como o passo 4 fecha o CTA no link, os dois entram **ANTES**
+do "Search Natural Rems Sea Moss on Amazon", com o frasco já em quadro, num take próprio e com motivo
+(*"Comment yes if your body has been stuck in alarm mode, and follow me so you do not lose these
+three."*). Depois do link, nada. Isso substitui o `Comment yes and I'll send you the link` opcional,
+que prometia mandar link por mensagem (sem DM).
 
 **Modelo pronto:** *"Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in
 the pinned comment on this video."*
@@ -111,6 +122,24 @@ Sem compliance o vídeo não conta; reincidência corta o pagamento. Checagem se
   - **Claim de cura, tratamento ou resultado garantido.**
   - **Nome de remédio ou de concorrente** (Ozempic, Wegovy, Mounjaro, GLP-1, outras marcas de sea moss).
 - O listing tem o disclaimer padrão da FDA; o vídeo não precisa dizer, mas nunca contradiz.
+
+## 5.1 DESVALORIZAR O GENÉRICO, item por item (Luigi, 2026-10-03)
+
+O Luigi gosta muito da técnica de **tirar o valor do sea moss concorrente para mostrar o que só a
+Natural Rems tem** e mandou usar sempre. Como fazer:
+- **Obstáculo primeiro** ("not all sea moss is the same. Most of it is packed with sugar and
+  fillers..."), depois o **breakdown da marca respondendo item por item**, na mesma ordem.
+- **Nunca nomear concorrente** (regra da marca). O vilão é "most of it", "the stuff on the shelf".
+- **Só diferencial verificado.** No rótulo (foto oficial, conferido em 2026-10-03): **MADE IN USA**,
+  **Wild Irish Sea Moss** (*Chondrus crispus*), **equivalente a 6.000 mg** de sea moss irlandês,
+  **16-in-1**, **menos de 1 g de açúcar** e **4 calorias** por goma, **maçã verde**, **manuka honey
+  MGO 30+**, 30 gomas. Na página: 4.2 estrelas, 2.206 avaliações, "10K+ bought in past month" (dizer
+  "thousands of people order it every month" para não envelhecer), sem gosto forte de alga (FAQ).
+- ⚠️ **"Tested and approved in the USA", "third-party tested", GMP: NÃO verificados** (não estão no
+  rótulo nem na leitura da página de 2026-10-02). Não falar até o Luigi passar a fonte.
+- **Prova social na boca da avatar**, como coach: as clientes dela, sobre adesão ou sensação do dia a
+  dia ("the first routine they have never skipped", "they finally sleep through the night"), nunca
+  com prazo, número de quilos ou antes/depois.
 
 ## 6. Mostra produto: SIM, e a referência é a foto oficial
 
