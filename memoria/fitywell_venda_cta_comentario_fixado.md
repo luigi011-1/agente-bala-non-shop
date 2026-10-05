@@ -1,6 +1,6 @@
 ---
 name: fitywell-venda-cta-comentario-fixado
-description: "FityWell (Ângulo 2) VENDA, qualquer origem do modelo (Luigi, 2026-09-30): o link NÃO vai por DM. Ela ainda comenta e segue (engajamento), mas pega o link do plano personalizado Metabolic Reset no COMENTÁRIO FIXADO do vídeo. O plano é apresentado como NECESSIDADE, a única solução real para a dor dela, nunca como sugestão amigável ('if you want' proibido)."
+description: "FityWell (Ângulo 2) VENDA, qualquer origem do modelo (Luigi, 2026-09-30, destino trocado em 2026-10-05): o link NÃO vai por DM. Ela ainda comenta e segue (engajamento), mas pega o link do plano personalizado Metabolic Reset na LEGENDA do post (antes era o comentário fixado). O plano é apresentado como NECESSIDADE, a única solução real para a dor dela, nunca como sugestão amigável ('if you want' proibido)."
 metadata:
   node_type: memory
   type: feedback
@@ -14,6 +14,8 @@ comente e siga, mas ela vai pegar o link pelo comentário fixado que irei deixar
 que falar que se ela quiser plano personalizado metabolic reset do Fitywell, é só clicar no link do
 comentário fixado"*. Vale para **todo vídeo de VENDA do Ângulo 2**.
 
+♻️ **2026-10-05 (Luigi): o destino passou do comentário fixado para o LINK NA LEGENDA do post**, pelo mesmo motivo da Sea Moss (o link do comentário fixado não fica clicável). Frase: "tap the link I left right down below, in the caption of this video". Palavras dele: *"vamos manter somente link na legenda por enquanto, mas isso pode mudar a qualquer momento, irei te falar quando isso acontecer"*. Não perguntar de novo; mudar só quando ele avisar.
+
 **Why:** o link vive no comentário fixado que ele mesmo deixa no vídeo, então prometer "eu te mando"
 cria uma entrega que não existe e o follow gate com motivo de entrega ("so I can send it to you")
 fica falso. O comentário e o follow continuam, mas como engajamento e continuidade.
@@ -23,8 +25,8 @@ fica falso. O comentário e o follow continuam, mas como engajamento e continuid
   1. **Engajamento:** `comment yes` com um motivo congruente com o vídeo (ex.: "if that craving hits
      you every night") + follow com motivo de continuidade ("so you don't lose this"). Keyword
      continua `yes`.
-  2. **Destino:** o plano personalizado Metabolic Reset da FityWell + "tap the link in the pinned
-     comment". O nome **FityWell** e **personalized Metabolic Reset plan** saem ditos.
+  2. **Destino:** o plano personalizado Metabolic Reset da FityWell + "tap the link right down below,
+     in the caption of this video" (até 2026-10-04 era "tap the link in the pinned comment"). O nome **FityWell** e **personalized Metabolic Reset plan** saem ditos.
 - 🔴 **Tom do destino (Luigi, 2026-09-30, na mesma produção):** *"não é uma sugestão oferecer o plano do
   fitywell, mas sim uma necessidade que ela tem para conseguir resolver sua dor, não ofereça como se
   fosse amigável, mas sim apresente como se fosse a única e real solução para o problema daquela
@@ -32,7 +34,8 @@ fica falso. O comentário e o follow continuam, mas como engajamento e continuid
   é apresentado como a única saída real para a dor que o vídeo abriu, amarrado à ponte (o que só ele
   descobre) e com urgência nativa do vídeo. Gabarito (`fitywell_brownie_feijao` T16): *"Your
   personalized FityWell Metabolic Reset plan is the only way to find which of the three is yours. Tap
-  the link in the pinned comment before tonight's craving hits."* Superlativo ("the only way") é sobre
+  the link in the pinned comment before tonight's craving hits."* (frase de 2026-09-30; hoje o fim vira
+  "Tap the link right down below, in the caption of this video, before tonight's craving hits.") Superlativo ("the only way") é sobre
   o plano, nunca claim de cura; anotar em compliance.
 - O engajamento vem ANTES do destino: o toque no link tira ela do vídeo e quem sai não volta para
   comentar (mesma lógica do selo antes do destino no Auraly).

@@ -64,16 +64,16 @@ precisa. Ele substitui o CTA original no mesmo lugar do vídeo e com o mesmo tam
 
 | | GROWTH | SALE |
 |---|---|---|
-| **FitWell (Ângulo 2)** | CTA do próprio original (save / comment / follow), como em `feedback-growth-video-sem-venda` | ♻️ **desde 2026-09-30: comentário FIXADO** (ver abaixo): `comment yes` + follow como engajamento e, depois, o plano personalizado Metabolic Reset da FityWell como a única solução real da dor dela + "tap the link in the pinned comment" (nunca "if you want"). Sem DM, sem "I'll send you", sem "free", sem prometer brinde que o funil não entrega (livro, replay) |
+| **FitWell (Ângulo 2)** | CTA do próprio original (save / comment / follow), como em `feedback-growth-video-sem-venda` | ♻️ **desde 2026-10-05: link na LEGENDA do post** (antes, desde 2026-09-30, comentário fixado; ver abaixo): `comment yes` + follow como engajamento e, depois, o plano personalizado Metabolic Reset da FityWell como a única solução real da dor dela + "tap the link right down below, in the caption of this video" (nunca "if you want"). Sem DM, sem "I'll send you", sem "free", sem prometer brinde que o funil não entrega (livro, replay) |
 | **Auraly (Ângulo 3)** | CTA do original com a keyword trocada para `222`; Stories só com `growth-stories: aprovado` no checkpoint | engajamento do original com `222` e a consequência (LEI DO SELO), **depois** `tap my profile picture`, a resposta está no Stories. Ordem `222` → Stories inalterada (P7) |
 
 **♻️ FitWell SALE, regra vigente (Luigi, 2026-09-30, vale em toda venda do Ângulo 2, orgânica ou IA):**
-ela ainda comenta e segue, mas o link do plano fica no **comentário fixado** que o Luigi deixa no
-vídeo. O CTA tem engajamento primeiro (`comment yes` com motivo do próprio vídeo + follow de
+ela ainda comenta e segue, mas o link do plano fica na **legenda do post** (♻️ 2026-10-05; até ali era o
+**comentário fixado**, cujo link não fica clicável). O CTA tem engajamento primeiro (`comment yes` com motivo do próprio vídeo + follow de
 continuidade) e destino depois, com o plano apresentado como a **única solução real** para a dor dela,
 nunca como sugestão ("if you want" proibido): *"Your personalized FityWell Metabolic Reset plan is the
-only way to find which of the three is yours. Tap the link in the pinned comment before tonight's
-craving hits."* **Revoga o link da bio como padrão e a reserva por DM
+only way to find which of the three is yours. Tap the link right down below, in the caption of this
+video, before tonight's craving hits."* **Revoga o link da bio como padrão e a reserva por DM
 abaixo**, que ficam como histórico. Memória `fitywell-venda-cta-comentario-fixado`.
 
 **(Histórico) FitWell SALE, a direção do CTA (Luigi, 2026-09-25, "não é regra, mas a ideia será essa"):** mandar

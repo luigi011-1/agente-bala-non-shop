@@ -47,7 +47,8 @@ Nenhuma etapa pula. O roteiro não vira prompt sem aprovação explícita.
 **Vídeo modelo de pessoa real (Luigi, 2026-09-25):** `PERFIL_ORGANICO.md`. Copia literal de gancho
 visual, copy e estrutura, e só o CTA muda: growth mantém o CTA do original; venda usa a ponte de
 continuidade do próprio vídeo + link da bio, ou no Facebook o comentário fixado do vídeo (direção do
-Luigi, não frase fixa), nunca "free". Sem ponte das três
+Luigi, não frase fixa), nunca "free". ♻️ Desde 2026-10-05 toda venda FitWell manda para o **link na
+legenda** do post (memória `fitywell-venda-cta-comentario-fixado`). Sem ponte das três
 causas, sem álibi, sem bandeira obrigatória. `origem: organico` e `CTA original:` no topo do `ROTEIRO.md`.
 
 **`GATE_VISUAL.md` roda em dois momentos** (desde 2026-09-22, vale para todos os ângulos): a Parte 4

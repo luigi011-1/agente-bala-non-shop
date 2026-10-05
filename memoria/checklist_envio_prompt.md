@@ -140,7 +140,7 @@ rodado antes de todo envio segura.
 - [ ] **E1 Vocabulário proibido da marca varrido** em fala, texto de tela e prompt. **Sea Moss
   (Ângulo 1 desde 2026-10-02):** antes/depois e "day 1 vs day 30", médico, jaleco, scrubs, clínica,
   cura, tratamento, resultado garantido, nome de remédio (Ozempic, GLP-1...) ou de concorrente; e a
-  legenda leva `#ad #syntheticperformer #naturalrems` no topo; comment `yes` + follow antes da Amazon, CTA na ordem Amazon, link (comentário fixado ou legenda, 2026-10-03), fim ([[angulo1-copy-seamoss]]). Korella (histórico):
+  legenda leva `#ad #syntheticperformer #naturalrems` no topo; comment `yes` + follow antes da Amazon, CTA na ordem Amazon, link da legenda (só a legenda desde 2026-10-05), fim ([[angulo1-copy-seamoss]]). Korella (histórico):
   `mood`, `calm`, `calmer`, `serotonin`, `dopamine`, `flatness`, `happy`, `feeling better`,
   `erectile dysfunction`, e no ângulo rosto `skincare`, `glow`, `moon face`; no ângulo próstata `BPH`,
   `incontinence`. FitWell e Auraly: as travas já escritas em [[angulo2-copy-fitywell]] e

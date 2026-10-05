@@ -149,6 +149,8 @@ Keyword continua sendo **`yes`**. Destino da DM: link do quiz.
 > segue como engajamento, e o link do **plano personalizado Metabolic Reset da FityWell** fica no
 > **comentário fixado** do vídeo: "just tap the link in the pinned comment". Nada de "I'll send you"
 > nem follow gate de entrega. Regra completa em [[fitywell-venda-cta-comentario-fixado]].
+> ♻️ **2026-10-05 (Luigi): o link saiu do comentário fixado e foi para a LEGENDA do post**
+> ("tap the link right down below, in the caption of this video"), até ele avisar outra coisa.
 
 ---
 
