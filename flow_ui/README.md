@@ -3,7 +3,7 @@
 Faz o trabalho manual dentro do Flow no seu Chrome logado, sem o agente do Flow. ESQUELETO: os seletores
 em `seletores.json` são palpites e precisam ser calibrados na tela real (comando `calibrar`).
 
-Setup único (Mac): `pip install playwright` e `playwright install chromium`. Chrome instalado.
+Setup único (Mac): `bash flow_ui/setup.sh` (instala Playwright). Chrome instalado.
 1. `python flow_ui/flow_ui.py login` (loga no Flow; a sessão fica em ~/.flow_ui_perfil)
 2. `python flow_ui/flow_ui.py calibrar` (gera calibragem.json e prints; ajustar seletores.json)
 3. `imagens ENTREGA.md --saida out/x --anexo sheet.jpg --frames frames_modelo/`: por K, modelo Nano Banana 2, x4, 9:16, baixa as 4 como K01-1..4.
