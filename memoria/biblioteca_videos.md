@@ -166,6 +166,82 @@ Hook: **escultura de uma cabeça humana muito inchada** na mesa, chá quente des
 - **O que NÃO repetir:** rota 5 e o gatilho de confissão na conta da Brandon. A frase "I do not
   recognize myself in the mirror anymore" já estava queimada aqui, vinda do vídeo do fígado.
 
+## Registro de 2026-10-05: produções de setembro e outubro, todas no ar (Luigi)
+Datas são as do pacote, não as do post. Detalhe completo no `ROTEIRO.md` de cada caminho.
+
+## 33. Pernas / bicarbonato · `producao/fitywell_pernas/` · 2026-09-10
+- **Modelo:** herbalista asiático, 28s. **Ângulo 2** · Dana, Jamie e Lynn como COACH. VENDA (quiz).
+- **Esqueleto:** pó num modelo de pernas com glóbulos amarelos, espuma, pele lisa → receita → protocolo → ponte das três causas nomeadas → álibi → `yes`.
+- ⭐ Gabarito vivo do P5. **Não repetir:** três causas nestes três avatares.
+
+## 34. Água de arroz / intestino · `producao/fitywell_arroz/` · 2026-09-10
+- **Modelo:** casal idoso, 22s. **Ângulo 2** · Dana (Jamie e Lynn PENDING). VENDA (quiz).
+- **Esqueleto:** erro doméstico (a água desperdiçada pelo ralo), com o modelo de intestino no lugar do couro cabeludo → demo → mecanismo → três causas → álibi.
+- **Não repetir:** três causas, o ralo.
+
+## 35. Barriga antes do verão · `producao/fitywell_barriga_verao/` · 2026-09-12
+- **Modelo:** 12s, um take só. **Ângulo 2** · Dana, Jamie, Lynn. Growth.
+- **Esqueleto:** bastão aponta do modelo de tronco obeso ao magro, "one simple ingredient", `yes` + follow.
+
+## 36. Cheesecake de iogurte grego · `producao/fitywell_cheesecake/`
+- **Modelo:** 46,7s, solo. **Ângulo 2** · Dana, Jamie, Lynn. Growth com `comment cheesecake`.
+- **Esqueleto:** receita fit → forno → benefícios (digestão, açúcar, sono) → follow.
+
+## 37. Clareador dental caseiro · `producao/fitywell_dentes/` · 2026-09-17
+- **Modelo:** 34,9s. **Ângulo 2** · Dana, Jamie, Lynn. Growth.
+- Mesmo esqueleto do caso 6 (Andrew_Heals): modelo dental manchado molhado, pasta de coco, bicarbonato e limão.
+
+## 38. Gengibre sob a língua · `producao/fitywell_growth_wentao_healer/` · 2026-09-19
+- **Modelo:** 29s. **Ângulo 2** · fila de 10. Growth.
+- **Esqueleto:** cliente 40+ com fatia de gengibre na língua, coach aponta → pausa da vontade de beliscar → vilão institucional.
+
+## 39. Pernas, vestido e braço (cortisol) · `producao/fitywell_growth_cortisol_props/` · 2026-09-19
+- **Ângulo 2** · fila de 9. Growth. Comparação de props de corpo com luvas azuis, quatro ganchos num corpo só.
+
+## 40. Jeans, cinto e blusa (cortisol) · `producao/fitywell_growth_cortisol_cintura/` · 2026-09-19
+- **Ângulo 2** · fila de 9. Growth. Variação do 39 trocando a zona do corpo para a cintura.
+
+## 41. Canela sobre o açúcar da barriga · `producao/fitywell_growth_canela_acucar/` · 2026-09-23
+- **Modelo:** James Smith, 26s. **Ângulo 2** · fila de 9. Growth.
+- Canela desaba a montanha de açúcar num manequim → receita → `yes`. Parente do caso 12 (Melody), outra conta.
+
+## 42. Água lavando o modelo dental · `producao/fitywell_growth_dentes_agua/` · 2026-09-24
+- **Modelo:** 37,7s. **Ângulo 2** · fila de 9. Growth. Mesmo nicho do 37, outro modelo.
+- Precedente da voz fora de quadro saindo do próprio clipe.
+
+## 43. Froyo bites anti-inflamatórios · `producao/fitywell_growth_froyo_bites/` · 2026-09-25
+- **Modelo:** orgânico, 13,8s, 36 jump cuts. **Ângulo 2** · fila de 6. Growth, save + follow.
+
+## 44. Modelo transparente de intestino e chá de limão · `producao/fitywell_growth_modelo_intestino/` · 2026-09-25
+- **Modelo:** 53,7s. **Ângulo 2** · fila de 5. Growth. O bloco de produto Amazon de terceiro saiu inteiro.
+
+## 45. Salmão na água quente, peixe na fria, brócolis no vinagre · `producao/fitywell_growth_salmao_agua/` · 2026-10-02
+- **Modelo:** Jake Miller Health, 30s. **Ângulo 2** · Eva e Brandon. Growth.
+- Família de inspeção de comida (a mesma do `fitywell_inspecao`), com três testes diferentes.
+
+## 46. Pão de sementes sem farinha · `producao/brandon_pao_sementes/` · 2026-09-29
+- **Modelo:** 27,7s. **Ângulo 2** · Brandon. Growth: chia na água morna → receita → `yes`.
+
+## 47. Spray de peróxido nos pés · `producao/brandon_pes_peroxido/` · 2026-09-29
+- **Modelo:** 48,8s. **Ângulo 2** · Brandon. Growth.
+- WD-40 do modelo trocado por peróxido sem rótulo. Parente do caso 15 (Melody), outra conta.
+
+## 48. Alho na maçã que espuma · `producao/brandon_maca_alho/` · 2026-10-01
+- **Modelo:** Ken.remedie, 38,7s. **Ângulo 2** · Brandon. VENDA, plano Metabolic Reset no comentário fixado.
+- **Não repetir na Brandon:** rota 7, contagem quebrada, o quinto ingrediente.
+
+## 49. Brownie de feijão preto · `producao/fitywell_brownie_feijao/` · 2026-10-02
+- **Modelo:** Chef Joey, 32,5s. **Ângulo 2** · Brandon. VENDA: receita → virada → álibi → rota 7 → três causas.
+- **Não repetir na Brandon:** rota 7 (já repetida aqui), escalada de magnitude.
+
+## 50. Madrasta e o frango (short form) · `producao/sf_madrasta_frango/` · 2026-09-24
+- **Modelo:** 25s, 9 planos. **Ângulo 2** · elenco próprio, sem avatar fixo. Movie style de growth, card "follow to part 2".
+
+## 58. Inspeção de comida caseira (frango, carne moída, chá) · `producao/fitywell_inspecao/` · 2026-09-16
+- **Modelo:** `modelagem 16.09 .mp4`, 37,5s, canal de duas pessoas. **Ângulo 2** · Jamie e Lynn, COACH. Growth, save + comment + follow.
+- A segunda pessoa do original saiu e todo "we/us" virou primeira pessoa do singular. Mesma família do 45.
+- Registrado atrasado: até 2026-10-05 o checador o dava como presente por casar a palavra "inspeção" de outros casos.
+
 ---
 
 ---
@@ -178,6 +254,24 @@ desta biblioteca. Cópia integral em `_arquivo/2026-09-22_limpeza_angulo3/biblio
 consultada **só** no P1 para saber se um esqueleto do nicho já rodou (confissão em 24 h, três selos,
 véu de fumaça, inicial no WhatsApp, janela de 33 minutos, telefone às 11:11). Números não se reusam.
 Produções novas do roster Walt, Darlene e Lorraine entram aqui com o caminho `producao/<pacote>/`.
+
+## 51. Sal no tênis de trabalho · `producao/auraly_growth_sal_tenis/` · 2026-09-29
+- **Modelo:** avatar IA, 114s. Darlene, Lorraine, Walt. GROWTH: "keep your mouth shut" + selos + follow.
+
+## 52. Prece de mãos juntas · `producao/auraly_growth_prece/` · 2026-09-29
+- **Modelo:** orgânico, 117s. Darlene, Lorraine, Walt. GROWTH. Mesmo script do 51, frases reescritas por decisão do Luigi.
+
+## 53. Perfume nos pés (dinheiro) · `producao/auraly_growth_dinheiro/` · 2026-09-29
+- **Modelo:** avatar IA, 130s. Darlene, Lorraine, Walt. GROWTH de dinheiro, cinco takes reescritos contra repetição.
+
+## 54. Sal no prato dourado, portal 11:11 · `producao/auraly_venda_fortuna/` · 2026-09-29
+- **Modelo:** avatar IA, 125s. Darlene, Lorraine, Walt. SALE, ramificação dinheiro, `222` → Stories.
+
+## 55. Embaralhando o tarô, datas de outubro · `producao/auraly_manifestacao_outubro/` · 2026-09-30
+- **Modelo:** orgânico, 53s. Darlene, Lorraine, Walt. SALE, datas cravadas de 1º a 3 de outubro de 2026.
+
+## 56. Mãos na mesa de vidro · `producao/auraly_growth_maos_vidro/` · 2026-10-02
+- **Modelo:** orgânico, 100s. Morgan Vance (conta nova). GROWTH, mesmo script do 51 e 52, literal.
 
 # ÂNGULO 4 (Body Hacks for Men 40+) — vídeos produzidos
 
@@ -199,6 +293,11 @@ Produções novas do roster Walt, Darlene e Lorraine entram aqui com o caminho `
   fiel é o ambíguo**: descrito por forma, cor e material (`teaching model of a vascular bundle`,
   `dried crust cracked like dried clay`), nunca pelo nome. A legenda faz o trabalho anatômico.
 - **O que NÃO repetir:** rota 3, reversão do vilão, e a frase *"and you said you were tired"*.
+
+## 57. Churrasco, movie style integral · `producao/dana_churrasco/` · 2026-09-10
+- **Modelo:** Diane Jackson (Rhodiola), 94,7s. Dana DONE, Lynn ACTIVE, Jamie PENDING, os três PAR.
+- **Esqueleto:** o rival elogiado na frente da esposa → farpa → "your labs look fine" → picape → mentor → o mostrador da manhã → livro + $9.90 + `yes`.
+- Primeiro movie style integral da FityWell. **Não repetir:** rota de fuga A, o mostrador como pergunta física.
 
 ---
 

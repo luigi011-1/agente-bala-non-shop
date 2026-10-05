@@ -9,10 +9,9 @@ documentos envelhecem e a rota se repete sem que ninguem perceba.
 Este script compara as pastas de producao/ com o que os dois documentos
 registram e lista o que ficou de fora.
 
-HEURISTICA, e ele avisa que e: o log usa nome descritivo ("Escalda-pes /
-peroxido (Melody)"), nao o slug da pasta. O casamento e feito pelo token
-distintivo do slug (melody_pes -> "pes") procurado no texto sem acento. Falso
-negativo e possivel, entao a saida e AVISO e nunca FALHA.
+O casamento e pelo slug inteiro da pasta, que todo registro cita como
+`producao/<pacote>/` (2026-10-05; antes era pelo token do slug, que dava falso
+positivo com palavra comum). A saida continua AVISO e nunca FALHA.
 
 RESSALVA DO ANGULO 3: pode legitimamente nao ter beat de rota, porque o
 fechamento pode viver no DM.md. O script marca esses a parte.
@@ -47,15 +46,21 @@ def sem_acento(s):
                    if unicodedata.category(c) != "Mn").lower()
 
 
-def token_do_pacote(nome):
-    """melody_pes -> 'pes'. E a parte que distingue o video dentro da conta."""
-    partes = nome.split("_", 1)
-    return sem_acento(partes[1]) if len(partes) > 1 else sem_acento(nome)
+def casa(nome, texto):
+    """O pacote conta como registrado quando o slug aparece inteiro no texto,
+    normalmente como `producao/<pacote>/`. Ate 2026-10-05 o casamento era pelo token do
+    slug (melody_pes -> 'pes'), e palavras comuns como 'pernas', 'dentes' e 'inspecao'
+    davam falso positivo com texto de outros casos."""
+    return re.search(r"(?<![a-z0-9_])%s(?![a-z0-9_])" % re.escape(sem_acento(nome)), texto) is not None
 
 
 def angulo_do_pacote(pasta):
     roteiro = CE.ler(os.path.join(pasta, "ROTEIRO.md")) or ""
     prompts = CE.ler(os.path.join(pasta, "PROMPTS_PRODUCAO.md")) or ""
+    # Auraly e o Angulo 3 (Luigi, 2026-10-05). O ROTEIRO do pipeline auraly vem em
+    # ingles ("ANGLE 3") e o detectar_angulo so le "Angulo N", entao caia em "?" ou 1.
+    if re.search(r"^pipeline:\s*auraly", roteiro, re.M) or os.path.basename(pasta).startswith("auraly_"):
+        return 3
     return CE.detectar_angulo(roteiro, prompts)
 
 
@@ -84,9 +89,8 @@ def main():
 
     faltando_rot, faltando_bib, ok_dois, angulo3 = [], [], [], []
     for nome, pasta in pacotes:
-        tok = token_do_pacote(nome)
-        no_rot = tok in textos["rotacao"] or sem_acento(nome) in textos["rotacao"]
-        no_bib = tok in textos["biblioteca"] or sem_acento(nome) in textos["biblioteca"]
+        no_rot = casa(nome, textos["rotacao"])
+        no_bib = casa(nome, textos["biblioteca"])
         ang = angulo_do_pacote(pasta)
         if not no_rot and str(ang) == "3":
             angulo3.append((nome, no_bib))
@@ -124,7 +128,7 @@ def main():
         print("           -> a biblioteca e o que responde 'esse esqueleto ja rodou?' no P1")
 
     print("\n" + "-" * 82)
-    print("  Heuristica por token do slug. Falso negativo e possivel, por isso AVISO.")
+    print("  Casamento pelo slug inteiro (producao/<pacote>/). Registro sem caminho aparece como AVISO.")
     print()
     return 0
 
