@@ -29,7 +29,7 @@ HOOK 1 - FIEL - Sal dentro da carteira
 Cena:
 Um plano contínuo de 3,1s, macro nas mãos do avatar numa varanda de casa americana. A mão direita, no alto do quadro, inclina um saleiro cilíndrico azul-escuro de tampa branca perfurada e o sal grosso cai em fio dentro de uma carteira de couro marrom aberta, segurada pela outra mão na metade de baixo do quadro, a cerca de 30 cm da lente; o fio de sal diminui e para no fim do plano. Atrás, em foco: arbustos verdes, coluna branca da varanda, porta de madeira escura e o banco de madeira do modelo, com a bandeira dos EUA pequena presa na coluna. A voz do avatar diz a frase-instrução em off desde o frame 0, sem rosto. Corte seco aos 3,1s para o corpo (avatar sentado na varanda). Acabamento pelo GATE_VISUAL.md: carteira e mãos colados na lente, luz neutra de dia nublado, sem tom quente, três âncoras de fundo no máximo, sem blur.
 Screen text:
-Legenda karaokê em caixa alta, palavra atual em amarelo ou vermelho: "PUT SALT INSIDE" / "YOUR WALLET" / "BEFORE YOU LEAVE" / "THE HOUSE", a frase do banco verbal dita no mesmo instante. Camada de CapCut, nunca dentro do K.
+Legenda karaokê em caixa alta, palavra atual em amarelo ou vermelho: "PUT SALT INSIDE" / "YOUR WALLET" / "BEFORE YOU LEAVE" / "THE HOUSE", que é a frase do banco verbal dita pela voz no mesmo instante: "Put salt inside your wallet before you leave the house." Camada de CapCut, nunca dentro do K.
 Desvios obrigatorios:
 - Mãos do homem do modelo viram as mãos do avatar ativo (tatuagens do Jordan, anéis de turquesa e pulseira da Avery, mãos da Devon) e a manga azul-marinho vira a roupa do character sheet: identidade.
 - Saleiro e carteira sem marca nem logo: marca de terceiro, moderação.

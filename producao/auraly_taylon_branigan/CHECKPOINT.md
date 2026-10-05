@@ -7,14 +7,14 @@ Round: VALIDATION
 Reference video: producao/auraly_taylon_branigan/input/taylon_branigan.mp4
 Scenario: varanda de casa americana, banco/degrau de madeira, porta escura aberta para sala com estante, abajur e mapa dos EUA
 
-Current stage: WAITING_SCRIPT_APPROVAL
-Current avatar: Avery Knox
-Next action: aguardar o Luigi aprovar o ROTEIRO.md (tabela bilíngue) e o hook fiel; depois colar o bloco INSTRUCOES_AGENTE_FLOW.md inteiro e escrever FICHA_FRAMES.md antes do primeiro K
+Current stage: PRODUCTION_COMPLETE
+Current avatar: NONE
+Next action: Luigi gerar no Flow, montar e postar; quando performar, abrir a rodada de variação por pedido dele
 
 ## Avatar queue
-[ACTIVE] Avery Knox
-[PENDING] Devon Price
-[PENDING] Jordan Vale
+[DONE] Avery Knox
+[DONE] Devon Price
+[DONE] Jordan Vale
 
 Anchors (character sheets, nomes = arquivos do Luigi):
 - Avery Knox: producao/_ancoras/character_sheets/avery_knox_character_sheet.jpg (foto em producao/auraly_taylon_branigan/input/avery_knox.jpg)
@@ -22,27 +22,28 @@ Anchors (character sheets, nomes = arquivos do Luigi):
 - Jordan Vale: producao/_ancoras/character_sheets/jordan_vale_character_sheet.jpg (input/jordan_vale.jpg)
 
 ## Approved script
-status: PENDING APPROVAL (enviado ao Luigi)
+status: APPROVED (Luigi, 2026-10-05: "roteiros aprovados, prossiga")
 file: ROTEIRO.md
 
 ## Selected hooks
-status: PENDING (hook fiel aprovado junto com o roteiro)
+status: APPROVED (hook fiel aprovado junto com o roteiro, 2026-10-05)
 hooks: HOOK 1 - FIEL - Sal dentro da carteira
 formato: fiel-validacao
 acao estrutural: mão despeja sal grosso de um saleiro dentro de uma carteira aberta, macro, voz-over, plano único, corte seco para o avatar sentado
 eixos de troca: n/a (validacao)
 
 ## Current avatar assets
-image prompts: nenhum ainda
-video prompts: nenhum ainda
+image prompts: PROMPTS_<AVATAR>.md + FLOW_<AVATAR>.md (K01, K02), ficha em FICHA_FRAMES.md
+video prompts: PROMPTS_<AVATAR>.md + FLOW_<AVATAR>.md (V01 a V18); entrega completa em ENTREGA_<AVATAR>.md
 
 ## Completed
 - Intake: video + 3 character sheets registrados, identidades conferidas pelos nomes dos arquivos
 - ANALYSIS: /watch em _watch/ (1 corte aos 3,12s; corpo em plano único de ~84s)
-- SCRIPT_MODELLING: ROTEIRO.md + GANCHOS_VISUAIS.md
+- SCRIPT_MODELLING: ROTEIRO.md + GANCHOS_VISUAIS.md, revisados para GROWTH e aprovados 2026-10-05
+- FICHA_FRAMES.md (K01, K02, placar 14/14) + gerar_pacote.py; pacotes dos 3 avatares em disco (PROMPTS_/FLOW_/ENTREGA_)
 
 ## Pending
-- Aprovação do roteiro revisado (18 takes, GROWTH)
+- Geração no Flow, montagem e postagem (marcos do Luigi, fora deste checkpoint)
 
 ## User decisions
 - Decision: Objective GROWTH

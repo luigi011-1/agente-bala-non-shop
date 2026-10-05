@@ -33,7 +33,7 @@ objective: GROWTH
 **Medido:** um único corte, aos 3,12s (corte seco, sem flash). Zero cortes nos 84s seguintes. A voz já fala "Put salt inside your wallet..." sobre o gancho (voz-over, sem rosto), como no sal_tenis.
 
 - **Gancho, 0,00 a 3,12s, um plano contínuo, voz-over:** macro de duas mãos numa varanda de casa americana. A mão direita (do avatar, no alto do quadro, manga azul-marinho) inclina um saleiro cilíndrico azul-escuro com tampa branca perfurada e o sal grosso cai em fio dentro de uma carteira de couro marrom aberta, segurada pela mão esquerda na metade de baixo do quadro. A carteira fica a ~30 cm da lente, o fio de sal vai do saleiro ao fundo da carteira. Atrás, desfocado de leve pelo modelo (nosso K sai em foco): arbustos verdes, coluna branca da varanda, porta de madeira escura e um banco de madeira com luz salpicada de sol. O fio de sal diminui e para no fim do plano.
-- **Corpo e CTA, 3,12 a 87,0s, plano único fixo:** o avatar sentado no degrau/banco da varanda, ligeiramente de baixo, câmera na altura do peito dele a ~1,5 m, do joelho para cima. A carteira marrom aberta na mão esquerda, na altura da barriga, a mão direita gesticula (palma aberta, aponta, fecha a mão). O saleiro azul-escuro em pé no chão, no canto inferior esquerdo, colado na lente. Atrás: a porta de madeira aberta mostra uma sala com estante de livros, um abajur aceso e um mapa dos EUA emoldurado na parede; hera na coluna à esquerda. Luz de dia filtrada pela varanda.
+- **Corpo e CTA, 3,12 a 87,0s, plano único fixo:** o avatar sentado na soleira da porta de entrada aberta, câmera na altura do peito a ~1,2 m, da cabeça até a metade das coxas. A carteira marrom aberta na altura da barriga, nas duas mãos no primeiro frame e depois só na esquerda enquanto a direita gesticula (palma aberta, aponta, fecha a mão). O saleiro azul-escuro em pé no chão, no canto inferior esquerdo, colado na lente. Atrás: a porta de madeira aberta mostra uma sala com estante de livros, um abajur aceso e um mapa dos EUA emoldurado na parede; hera na coluna à esquerda. Luz de dia filtrada pela varanda.
 - **Camada de tela (edição):** legenda karaokê em caixa alta, palavra atual em amarelo ou vermelho, no meio-baixo do quadro. Nada de `222` fixo no modelo.
 
 ### Herói do hook (micro-protocolo)
@@ -57,7 +57,7 @@ objective: GROWTH
 | 7 | GESTO + ELEIÇÃO | "Before you scroll, close your right hand..." | literal | nenhuma |
 | 8 | PUNIÇÃO POR INAÇÃO | "If you skip right now, the energy breaks..." | literal | nenhuma |
 | 9 | CORRENTES | "I see the chains..." | literal | nenhuma |
-| 10 | AMOR DESTRAVADO | "The love block that was cast on you is going straight back to whoever sent it." | "The love that was being held back from you is finally coming straight to you." | LEI DO REGISTRO: "cast on you / whoever sent it" lê como feitiço lançado e devolvido. Mantém o beat de amor destravado e é a ponte para a pessoa especial do beat 6 |
+| 10 | AMOR DESTRAVADO | "The love block that was cast on you is going straight back to whoever sent it." | "The love that was being held back from you is finally coming straight to you." | LEI DO REGISTRO: "cast on you / whoever sent it" lê como algo lançado por terceiro e devolvido. Mantém o beat de amor destravado e é a ponte para a pessoa especial do beat 6 |
 | 11 | PRAZO CURTO | "In the next seven minutes..." | literal | nenhuma |
 | 12 | SHARE | "So send this video to yourself..." | literal | nenhuma |
 | 13 | SELO 1 | "open your hand and save... first seal" | literal | nenhuma |
@@ -72,7 +72,7 @@ objective: GROWTH
 ## Setups de cena
 
 - **Setup A (T1, gancho, B-ROLL com voz-over):** varanda do modelo: banco de madeira com luz de dia, arbustos, coluna branca, porta escura. Mãos do avatar ativo (pele, tatuagens, anéis do sheet), saleiro azul-escuro sem marca, carteira de couro marrom sem logo. Um plano contínuo.
-- **Setup B (T2 a T17, plano único):** avatar sentado no degrau da varanda como no modelo, roupa do character sheet, carteira marrom aberta na mão, saleiro azul-escuro no chão colado na lente, sala com estante, abajur e mapa dos EUA pela porta. Câmera na altura do peito, fixa.
+- **Setup B (T2 a T18, plano único):** avatar sentado na soleira da porta de entrada aberta como no modelo, roupa do character sheet, carteira marrom aberta na mão, saleiro azul-escuro no chão colado na lente, sala com estante, abajur e mapa dos EUA pela porta. Câmera na altura do peito, fixa.
 
 ## Roteiro cena a cena
 
