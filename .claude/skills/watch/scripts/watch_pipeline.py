@@ -13,6 +13,10 @@ Transforma um .mp4 numa decomposicao completa para analise frame-a-frame + audio
   5. Gera GRADES (montages) em tamanho legivel para visao geral rapida.
   6. Escreve manifest.json + transcript.txt/json.
 
+Desde 2026-10-05 as etapas independentes rodam AO MESMO TEMPO (a saida e a
+mesma de antes, arquivo por arquivo): cenas, timeline e transcricao em
+paralelo, e as grades em varios processos enquanto o Whisper ainda roda.
+
 Uso:
   python watch_pipeline.py --video "CAMINHO.mp4" [opcoes]
 
@@ -22,9 +26,11 @@ Opcoes principais:
   --scene-threshold 0.2
   --model small.en      (modelo faster-whisper; use medium.en p/ +precisao)
   --no-audio            pula a transcricao
+  --jobs N              processos para as grades (padrao: todos os nucleos)
 """
 
-import argparse, json, os, platform, re, shutil, subprocess, sys
+import argparse, json, os, platform, re, shutil, subprocess, sys, time
+from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
 # ---- localizar binarios (PATH pode estar "stale" em shell novo no Windows/macOS) ----
@@ -109,39 +115,51 @@ def extract_fps(video, outdir, fps, prefix, start=None, dur=None):
         result.append({"file": new.name, "t": t})
     return result
 
-# ------------------------- deteccao de cena -------------------------
-def extract_scenes(video, outdir, threshold):
-    if outdir.exists():
-        for old in outdir.glob("scene_*.png"):
-            old.unlink()
-    outdir.mkdir(parents=True, exist_ok=True)
-    meta = outdir / "_scene_meta.txt"
-    # roda com cwd=outdir e nomes relativos: evita o ':' do caminho Windows
-    # ser interpretado como separador dentro do filtergraph do ffmpeg.
+# ------------------- cenas + timeline numa passada -------------------
+def extract_frames(video, scenes_dir, timeline_dir, threshold, fps):
+    """Mesmo resultado de extract_scenes + extract_fps, decodificando o video
+    UMA vez so (split no filtergraph). Os PNGs saem byte a byte iguais."""
+    for d, pat in ((scenes_dir, "scene_*.png"), (timeline_dir, "tl_*.png")):
+        if d.exists():
+            for old in d.glob(pat):
+                old.unlink()
+        d.mkdir(parents=True, exist_ok=True)
+    meta = scenes_dir / "_scene_meta.txt"
+    # cwd=scenes_dir e nomes relativos dentro do filtro: evita o ':' do
+    # caminho Windows virar separador no filtergraph (mesma trava de antes).
+    tl_out = os.path.relpath(timeline_dir / "tl_%04d.png", scenes_dir)
+    graph = (f"[0:v]split=2[a][b];"
+             f"[a]select='gt(scene,{threshold})',metadata=print:file=_scene_meta.txt[s];"
+             f"[b]fps={fps}[t]")
     cmd = [FFMPEG, "-hide_banner", "-y", "-i", str(video),
-           "-vf", f"select='gt(scene,{threshold})',metadata=print:file=_scene_meta.txt",
-           "-fps_mode", "vfr", "-qscale:v", "2", "scene_%04d.png"]
-    r = run(cmd, cwd=str(outdir))
+           "-filter_complex", graph,
+           "-map", "[s]", "-fps_mode", "vfr", "-qscale:v", "2", "scene_%04d.png",
+           "-map", "[t]", "-qscale:v", "2", tl_out]
+    r = run(cmd, cwd=str(scenes_dir))
     if r.returncode != 0:
-        print(f"[aviso] deteccao de cena retornou {r.returncode}:\n{r.stderr[-500:]}")
-    # parse dos pts_time
+        print(f"[aviso] extracao de frames retornou {r.returncode}:\n{r.stderr[-500:]}")
     times = []
     if meta.exists():
         for line in meta.read_text(encoding="utf-8", errors="replace").splitlines():
             m = re.search(r"pts_time:([0-9.]+)", line)
             if m:
                 times.append(float(m.group(1)))
-    frames = sorted(outdir.glob("scene_[0-9]*.png"))
-    result = []
-    for i, f in enumerate(frames):
+        meta.unlink()
+    scenes = []
+    for i, f in enumerate(sorted(scenes_dir.glob("scene_[0-9]*.png"))):
         t = round(times[i], 2) if i < len(times) else round(i, 2)
-        new = outdir / f"scene_t{t:07.2f}.png"
+        new = scenes_dir / f"scene_t{t:07.2f}.png"
         if f != new:
             f.rename(new)
-        result.append({"file": new.name, "t": t})
-    if meta.exists():
-        meta.unlink()
-    return result
+        scenes.append({"file": new.name, "t": t})
+    timeline = []
+    for i, f in enumerate(sorted(timeline_dir.glob("tl_[0-9]*.png"))):
+        t = round(i / fps, 2)
+        new = timeline_dir / f"tl_t{t:07.2f}.png"
+        if f != new:
+            f.rename(new)
+        timeline.append({"file": new.name, "t": t})
+    return scenes, timeline
 
 # --------------------------- transcricao ---------------------------
 def transcribe(video, outdir, model_name):
@@ -158,54 +176,74 @@ def transcribe(video, outdir, model_name):
     except ImportError:
         print("[aviso] faster-whisper nao instalado; pulando transcricao.")
         return None
-    model = WhisperModel(model_name, device="cpu", compute_type="int8")
-    segments, info = model.transcribe(str(wav), language="en", beam_size=5,
-                                      vad_filter=True)
-    segs = []
-    lines = []
-    for s in segments:
-        segs.append({"start": round(s.start, 2), "end": round(s.end, 2),
-                     "text": s.text.strip()})
-        lines.append(f"[{s.start:6.2f} -> {s.end:6.2f}] {s.text.strip()}")
+    # Falha do Whisper (modelo que nao baixa, rede bloqueada) nao derruba
+    # o resto do /watch: frames, grades e manifest saem do mesmo jeito.
+    try:
+        model = WhisperModel(model_name, device="cpu", compute_type="int8")
+        segments, info = model.transcribe(str(wav), language="en", beam_size=5,
+                                          vad_filter=True)
+        segs = []
+        lines = []
+        for s in segments:
+            segs.append({"start": round(s.start, 2), "end": round(s.end, 2),
+                         "text": s.text.strip()})
+            lines.append(f"[{s.start:6.2f} -> {s.end:6.2f}] {s.text.strip()}")
+    except Exception as e:
+        print(f"[aviso] transcricao falhou ({type(e).__name__}: {e}); "
+              f"frames e grades seguem normalmente.")
+        return None
     (outdir / "transcript.json").write_text(
         json.dumps(segs, ensure_ascii=False, indent=2), encoding="utf-8")
     (outdir / "transcript.txt").write_text("\n".join(lines), encoding="utf-8")
     return {"segments": segs, "text": " ".join(s["text"] for s in segs)}
 
 # ----------------------------- montages -----------------------------
-def make_montages(frames_meta, frames_dir, out_dir, label, cols=4, tile_w=360,
-                  per_sheet=12):
-    from PIL import Image, ImageDraw, ImageFont
-    out_dir.mkdir(parents=True, exist_ok=True)
+def _load_font():
+    from PIL import ImageFont
     try:
-        font = ImageFont.truetype("arial.ttf", 20)
+        return ImageFont.truetype("arial.ttf", 20)
     except Exception:
-        font = ImageFont.load_default()
+        return ImageFont.load_default()
+
+def _make_sheet(job):
+    """Monta UMA grade. Roda num processo separado, entao recebe tudo pronto."""
+    from PIL import Image, ImageDraw
+    chunk, frames_dir, out_path, cols, tile_w = job
+    font = _load_font()
     bar = 26
-    sheets = []
+    thumbs = []
+    for fm in chunk:
+        img = Image.open(frames_dir / fm["file"]).convert("RGB")
+        w, h = img.size
+        tile_h = int(h * tile_w / w)
+        img = img.resize((tile_w, tile_h))
+        canvas = Image.new("RGB", (tile_w, tile_h + bar), (15, 15, 15))
+        canvas.paste(img, (0, bar))
+        d = ImageDraw.Draw(canvas)
+        d.text((6, 3), f"t={fm['t']:.2f}s", fill=(255, 220, 0), font=font)
+        thumbs.append(canvas)
+    tw, th = thumbs[0].size
+    rows = (len(thumbs) + cols - 1) // cols
+    sheet = Image.new("RGB", (cols * tw, rows * th), (0, 0, 0))
+    for idx, t in enumerate(thumbs):
+        r_, c_ = divmod(idx, cols)
+        sheet.paste(t, (c_ * tw, r_ * th))
+    sheet.save(out_path)
+    return out_path.name
+
+def montage_jobs(frames_meta, frames_dir, out_dir, label, cols=4, tile_w=360,
+                 per_sheet=12):
+    out_dir.mkdir(parents=True, exist_ok=True)
     chunks = [frames_meta[i:i + per_sheet] for i in range(0, len(frames_meta), per_sheet)]
-    for si, chunk in enumerate(chunks, 1):
-        thumbs = []
-        for fm in chunk:
-            img = Image.open(frames_dir / fm["file"]).convert("RGB")
-            w, h = img.size
-            tile_h = int(h * tile_w / w)
-            img = img.resize((tile_w, tile_h))
-            canvas = Image.new("RGB", (tile_w, tile_h + bar), (15, 15, 15))
-            canvas.paste(img, (0, bar))
-            d = ImageDraw.Draw(canvas)
-            d.text((6, 3), f"t={fm['t']:.2f}s", fill=(255, 220, 0), font=font)
-            thumbs.append(canvas)
-        tw, th = thumbs[0].size
-        rows = (len(thumbs) + cols - 1) // cols
-        sheet = Image.new("RGB", (cols * tw, rows * th), (0, 0, 0))
-        for idx, t in enumerate(thumbs):
-            r_, c_ = divmod(idx, cols)
-            sheet.paste(t, (c_ * tw, r_ * th))
-        name = f"overview_{label}_{si:02d}.png"
-        sheet.save(out_dir / name)
-        sheets.append(name)
-    return sheets
+    return [(chunk, frames_dir, out_dir / f"overview_{label}_{si:02d}.png", cols, tile_w)
+            for si, chunk in enumerate(chunks, 1)]
+
+def make_montages(frames_meta, frames_dir, out_dir, label, cols=4, tile_w=360,
+                  per_sheet=12, pool=None):
+    jobs = montage_jobs(frames_meta, frames_dir, out_dir, label, cols, tile_w, per_sheet)
+    if pool is None:
+        return [_make_sheet(j) for j in jobs]
+    return list(pool.map(_make_sheet, jobs))
 
 # ------------------------------- main -------------------------------
 def main():
@@ -216,6 +254,8 @@ def main():
     ap.add_argument("--scene-threshold", type=float, default=0.2)
     ap.add_argument("--model", default="small.en")
     ap.add_argument("--no-audio", action="store_true")
+    ap.add_argument("--jobs", type=int, default=0,
+                    help="processos para as grades (padrao: todos os nucleos)")
     args = ap.parse_args()
 
     video = Path(args.video).resolve()
@@ -225,36 +265,50 @@ def main():
         video.parent / f"{video.stem}_watch"
     outdir.mkdir(parents=True, exist_ok=True)
 
+    t0 = time.perf_counter()
     print(f"[1/5] sondando {video.name} ...")
     info = probe(video)
     print(f"      duracao={info['duration']}s fps={info['fps']} "
           f"{info['width']}x{info['height']} audio={info['has_audio']}")
 
-    print("[2/5] detectando cortes de cena ...")
-    scenes = extract_scenes(video, outdir / "frames" / "scenes",
-                            args.scene_threshold)
-    print(f"      {len(scenes)} cenas.")
-
-    print(f"[3/5] extraindo timeline densa COMPLETA "
-          f"(@ {args.timeline_fps}fps = 1 frame/{1/args.timeline_fps:.2f}s) ...")
-    timeline = extract_fps(video, outdir / "frames" / "timeline",
-                           args.timeline_fps, "tl")
-    print(f"      {len(timeline)} frames (vídeo inteiro na densidade do hook).")
-
-    transcript = None
-    if not args.no_audio and info["has_audio"]:
-        print(f"[4/5] transcrevendo audio (modelo {args.model}) ...")
-        transcript = transcribe(video, outdir / "audio", args.model)
-        if transcript:
-            print(f"      {len(transcript['segments'])} segmentos.")
+    # A transcricao vai para um processo proprio e roda enquanto o ffmpeg
+    # tira cenas e timeline numa passada so, e enquanto as grades sao montadas.
+    jobs = args.jobs or os.cpu_count() or 2
+    do_audio = not args.no_audio and info["has_audio"]
+    audio_pool = ProcessPoolExecutor(max_workers=1) if do_audio else None
+    if do_audio:
+        print(f"[4/5] transcrevendo audio (modelo {args.model}) em paralelo ...")
+        fut_tr = audio_pool.submit(transcribe, video, outdir / "audio", args.model)
     else:
         print("[4/5] audio pulado.")
+    print("[2/5] detectando cortes de cena ...")
+    print(f"[3/5] extraindo timeline densa COMPLETA "
+          f"(@ {args.timeline_fps}fps = 1 frame/{1/args.timeline_fps:.2f}s) ...")
+    scenes, timeline = extract_frames(video, outdir / "frames" / "scenes",
+                                      outdir / "frames" / "timeline",
+                                      args.scene_threshold, args.timeline_fps)
+    print(f"      {len(scenes)} cenas.")
+    print(f"      {len(timeline)} frames (vídeo inteiro na densidade do hook).")
+    t_frames = time.perf_counter() - t0
 
     print("[5/5] gerando grades de visao geral ...")
     ov = outdir / "overview"
-    m_scenes = make_montages(scenes, outdir / "frames" / "scenes", ov, "scenes") if scenes else []
-    m_tl = make_montages(timeline, outdir / "frames" / "timeline", ov, "timeline",
-                         cols=5, per_sheet=20) if timeline else []
+    with ProcessPoolExecutor(max_workers=jobs) as mpool:
+        m_scenes = make_montages(scenes, outdir / "frames" / "scenes", ov, "scenes",
+                                 pool=mpool) if scenes else []
+        m_tl = make_montages(timeline, outdir / "frames" / "timeline", ov, "timeline",
+                             cols=5, per_sheet=20, pool=mpool) if timeline else []
+    t_grades = time.perf_counter() - t0
+
+    transcript = None
+    if do_audio:
+        transcript = fut_tr.result()
+        audio_pool.shutdown()
+        if transcript:
+            print(f"      {len(transcript['segments'])} segmentos.")
+    t_total = time.perf_counter() - t0
+    print(f"      tempos: frames {t_frames:.1f}s · grades {t_grades:.1f}s · "
+          f"total {t_total:.1f}s")
 
     manifest = {
         "video": str(video),

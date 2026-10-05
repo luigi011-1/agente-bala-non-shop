@@ -39,8 +39,14 @@ Pegue o caminho do vídeo que o usuário enviou/apontou. Se não estiver claro, 
 
 ### 2. Rodar o pipeline
 ```
-powershell -File ".claude/skills/watch/scripts/run_watch.ps1" -Video "CAMINHO_DO_VIDEO.mp4"
+powershell -File ".claude/skills/watch/scripts/run_watch.ps1" -Video "CAMINHO_DO_VIDEO.mp4"   # Windows
+bash .claude/skills/watch/scripts/run_watch.sh "CAMINHO_DO_VIDEO.mp4"                          # nuvem, macOS, Linux
 ```
+Na nuvem não existe `.venv`: o `run_watch.sh` usa o Python do sistema, onde o `SessionStart` já
+instalou tudo e deixou o modelo do Whisper baixando em segundo plano. Desde 2026-10-05 o pipeline
+roda as etapas ao mesmo tempo (transcrição num processo próprio, cenas e timeline numa passada só do
+ffmpeg, grades em todos os núcleos) e imprime `tempos:` no fim. A saída é a mesma de antes, arquivo
+por arquivo. Se o Whisper falhar, frames, grades e manifest saem igual e o aviso diz o motivo.
 Opcional: `-Extra "--model medium.en"` para transcrição mais precisa (mais lenta); `-Extra "--timeline-fps 10"` para densidade ainda maior; `-Extra "--scene-threshold 0.15"` para pegar cortes mais sutis.
 
 Isso gera, em `<pasta_do_video>/<nome>_watch/`:
@@ -54,13 +60,20 @@ Isso gera, em `<pasta_do_video>/<nome>_watch/`:
 Abra `audio/transcript.txt`. Ela dá a fala beat a beat com tempo. Se o usuário mandou roteiro, confira as duas — divergências indicam onde o áudio/tempo importa.
 
 ### 4. Ler as grades de visão geral (em resolução cheia)
+🔴 **Ler EM LOTE, nunca uma imagem por vez** (2026-10-05). Várias chamadas `Read` na MESMA
+mensagem chegam juntas e cortam a maior parte da espera, sem perder nada: são as mesmas imagens,
+na mesma resolução, e quem olha continua sendo você. Lote 1: todas as `overview_scenes_*` mais a
+`transcript.txt`. Lote 2: as `overview_timeline_*` do hook (as 2 primeiras cobrem 8s). Depois o
+resto da timeline em lotes de até 6 grades. Nunca delegar a leitura das grades a um subagente:
+quem escreve a decomposição é quem precisa ter visto o vídeo.
+
 Leia, nesta ordem, as imagens em `overview/`:
 1. `overview_scenes_*` — entenda o arco/estrutura (quantos takes, o que é cada um).
 2. `overview_timeline_*` — varra o vídeo INTEIRO em sequência (0,2s por frame). Dê **atenção máxima aos primeiros ~6-8s (o hook — aqui mora o herói)**, mas varra também corpo e CTA procurando **mudanças dentro de um mesmo take** (algo derretendo, encolhendo, saindo, sendo lavado).
 
 ### 5. Zoom nos momentos-chave (full-res)
 Para o hook e para QUALQUER reveal/transformação que você suspeitar nas grades:
-- Dê `Read` nos frames **full-res** individuais correspondentes (em `frames/timeline/`, use o timestamp do nome).
+- Dê `Read` nos frames **full-res** individuais correspondentes (em `frames/timeline/`, use o timestamp do nome), todos os frames de um momento na mesma mensagem.
 - Se precisar de ainda mais densidade num intervalo (ex.: o exato instante do reveal entre t=3,0 e t=4,5), re-extraia ultra-denso só nessa janela:
   ```
   ffmpeg -ss 3.0 -t 1.5 -i "VIDEO.mp4" -vf "fps=15" -qscale:v 2 "SAIDA/zoom_%03d.png"

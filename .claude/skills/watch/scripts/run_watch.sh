@@ -21,6 +21,12 @@ py=""
 for cand in "$raiz/.venv/bin/python" "$principal/.venv/bin/python"; do
     if [ -x "$cand" ]; then py="$cand"; break; fi
 done
+# Na nuvem (claude.ai/code) nao ha .venv: o SessionStart instala as
+# dependencias no Python do sistema, entao usar ele direto.
+if [ -z "$py" ] && command -v python3 >/dev/null 2>&1 \
+        && python3 -c "import PIL" >/dev/null 2>&1; then
+    py="$(command -v python3)"
+fi
 if [ -z "$py" ]; then
     echo "ERRO: .venv nao encontrada. Rodar antes: bash .claude/skills/watch/scripts/setup_mac.sh" >&2
     exit 1
