@@ -1,5 +1,5 @@
 pipeline: auraly
-objective: SALE
+objective: GROWTH
 
 # auraly_venda_cofre_cama | ANGLE 3 (Auraly) | Roteiro para aprovação
 
@@ -7,9 +7,9 @@ objective: SALE
 **Origem do modelo:** avatar IA (mulher gerada; cofre de dinheiro sob a cama, rosto e pele sintéticos). Formato de avatar IA: gancho mudo com cortes internos ao `V__`, bandeira discreta em todo K.
 **Rodada:** VALIDAÇÃO (gancho do modelo, fiel)
 **Avatares:** Avery Knox, Devon Price e Jordan Vale (fila no `CHECKPOINT.md`)
-**Objetivo:** SALE (escolhido por mim, a confirmar): o modelo fecha com selos + comentário + "tap my profile picture and check my stories", que é o funil de Stories do Auraly; não é growth.
-**Variável trocada:** nenhuma de conteúdo. Fala na ordem do modelo; mudam só a data (sem dia cravado), a keyword (`received` vira `222` com a lei do selo), a pessoa que fala e as frases que já saíram nas mesmas contas.
-**Funil:** like + save + enviar para si (3 selos) + comentar `222` → foto de perfil → Stories ("the other half of this seal is waiting for you there"). Sem follow, sem preço, sem app.
+**Objetivo:** GROWTH, decidido pelo Luigi ("os vídeos serão de growth, tente colocar o CTA de comentar 222 antes da metade do roteiro pra alcançar mais pessoas"). Sem venda, sem Stories, sem preço.
+**Variável trocada:** nenhuma de conteúdo. Fala quase na ordem do modelo; mudam só a data (sem dia cravado), o CTA de growth (o `222` sobe para o T5, antes da metade; `received` vira `222`; os Stories viram follow) e as frases que já saíram nas mesmas contas ou que o vídeo do sal na carteira já usa.
+**Funil:** comentar `222` (T5, aos ~30% do vídeo) + curtir + salvar + enviar para si (T9) + follow (T11). Sem Stories, sem venda.
 **Estado:** WAITING_SCRIPT_APPROVAL
 
 ## P1, veredito
@@ -45,21 +45,21 @@ Esqueleto novo na biblioteca: cama de baú que abre e mostra uma escada escondid
 
 ## Método Puzzle, esqueleto preservado
 
-| # | Beat | Original | Adaptado Auraly (SALE, dinheiro) | Mudança |
+| # | Beat | Original | Adaptado Auraly (GROWTH, dinheiro) | Mudança |
 |---|---|---|---|---|
 | 1 | GANCHO MUDO | cama abre, escada, cofre de dinheiro, ela pega um maço | igual | nenhuma no conteúdo (acabamento pelo GATE_VISUAL) |
 | 2 | SEGREDO + DATA | "on the 4th or 5th of October, remain silent after watching. No matter what happens, keep this to yourself." | "today, stay silent after you watch it. No matter what happens, keep this to yourself." | data sem dia exato (Luigi, 2026-09-18) |
-| 3 | NÃO CONTE A NINGUÉM | sister, best friend, anyone | literal, com "Listen closely" no lugar de "Think carefully about what I am saying now" | enxugada para caber em 8s sem cortar frase |
-| 4 | PROMESSA DE VIRADA | "greatest and most transformative day of your life is about to begin" | "most transformative day of your life is about to begin" | nenhuma de função |
-| 5 | PUNIÇÃO POR INAÇÃO + ESCASSEZ | "this energy could turn against you and bring everything crashing down. Not everyone will see this before October 6th." | "this blessing could slip right through your fingers. Not everyone will see this before the week is over." | LEI DO REGISTRO (bênção perdida por inação, não energia que se volta contra ela) + data sem dia |
-| 6 | ELEIÇÃO + AUTORIDADE | "I don't know who you are, but don't spread this around. I see wealth and prosperity... Saint Michael." | "...but keep this between us. I see wealth and prosperity..." | "Saint Michael" fica: figura divina e protetora, dentro do registro divino |
-| 7 | CHAMADO À AÇÃO | "But it also calls for action... Something is shifting in your favor. A powerful blessing..." | literal | nenhuma |
-| 8 | RECONHECIMENTO + ÚLTIMA MENSAGEM | "Acknowledge... don't stop watching, or the news could turn against you. This is the universe's final message..." | "...or the news could pass you by..." | LEI DO REGISTRO |
-| 9 | TRÊS SELOS | like, save, send, "that is your first/second/third seal" | "Give this video a like, that's the first seal..." | palavras novas: a forma "Like this video, that's your first seal" já saiu em `auraly_venda_fortuna` nas mesmas contas |
-| 10 | COMENTÁRIO + PRAZO | "Comment, received. That way, I know you've completed all three. Tomorrow, when you wake up, check your phone." | "Now comment 222, so this blessing knows exactly whose name to find. Tomorrow, when you wake up, check your phone." | keyword do ângulo + LEI DO SELO (consequência de quem escreve, nunca rótulo) |
-| 11 | RECOMPENSA + STORIES | "You will receive good news. Now, pay attention. Tap my profile picture and check my stories, because the second part of this seal is waiting for you there." | "...the other half of this seal is waiting for you there." | destino do SALE, modo CURIOSIDADE (a promessa foi atmosférica); "second part of this sign" já está em vários vídeos das mesmas contas |
+| 3 | SIGILO + PROMESSA | "Don't tell your sister, don't tell your best friend, don't tell anyone. Think carefully... the greatest and most transformative day of your life is about to begin." | "Not your sister, not your best friend, not a single soul. Listen closely, because the most transformative day... about to begin." | palavras novas: o vídeo do sal na carteira já usa "do not tell anyone" nas mesmas contas |
+| 4 | CTA 222 (NOVO LUGAR) | no fim, "Comment, received. That way, I know you've completed all three." | T5 (~30% do vídeo): "Right now, comment 222 on this video, so the blessing knows where to find you." | pedido do Luigi: comentar 222 antes da metade; keyword do ângulo, consequência de quem escreve (lei do selo), sem "name" |
+| 5 | PUNIÇÃO POR INAÇÃO | "if you skipped this video, this energy could turn against you and bring everything crashing down" | "if you keep scrolling, it could slip right through your fingers" | LEI DO REGISTRO: bênção perdida por inação |
+| 6 | ESCASSEZ + ELEIÇÃO + VISÃO | "Not everyone will see this before October 6th. I don't know who you are, but don't spread this around. I see wealth and prosperity..." | "Not everyone will see this before the week is over. I can't tell who you are, but I see wealth and prosperity..." | data sem dia; "don't spread this around" cai (sigilo já foi dado no T3 e no T4) |
+| 7 | AUTORIDADE + CHAMADO À AÇÃO | "...this message comes directly from Saint Michael. But it also calls for action. Something is shifting in your favor. A powerful blessing..." | quase literal, "Saint Michael" abre o take | "Saint Michael" fica: figura divina e protetora, dentro do registro divino |
+| 8 | RECONHECIMENTO + ÚLTIMA MENSAGEM | "Acknowledge... don't stop watching, or the news could turn against you. This is the universe's final message..." | "...or the news could pass you by. One last word from the universe, so take it seriously." | LEI DO REGISTRO; frase "final message" já saiu em `auraly_growth_manifestar_dinheiro` |
+| 9 | LIKE + SAVE + ENVIO | like, save, send, "first/second/third seal" | "Tap like on this video, then save it, then send it to yourself. Each one locks this blessing in a little tighter." | sem "seal" numerado (o vídeo do sal na carteira já usa); consequência de cada ação (lei do selo) |
+| 10 | RECOMPENSA | "Tomorrow, when you wake up, check your phone. You will receive good news." | "Do all three, and tomorrow, when you wake up, check your phone. You will receive good news." | o "Comment, received" saiu daqui e foi para o T5 |
+| 11 | CTA DE GROWTH | "Tap my profile picture and check my stories, because the second part of this seal is waiting for you there." | "Now pay attention. Follow me before this disappears, because the next part of this message is already on its way to you." | growth fecha com FOLLOW de continuidade, nunca Stories nem follow gate de entrega |
 
-**Congruência por avatar:** nenhuma frase depende de gênero ou idade. O modelo é uma mulher de uns 35 anos; os três avatares têm de 50 a 60 anos e a fala é de mensageiro (autoridade de quem "vê"), então a idade só ajuda. "Saint Michael" na boca do Jordan Vale (homem de colete de couro e barba grisalha) lê como guardião; na da Avery Knox (colar de turquesa) e da Devon Price (cabeça raspada, argolas) lê como mensagem de fé. Não há "your soulmate" nesta copy, então não há o risco de quem fala ser o par.
+**Congruência por avatar:** nenhuma frase depende de gênero ou idade (o growth clona quase literal, só a congruência de voz por avatar). O modelo é uma mulher de uns 35 anos; os três avatares têm de 50 a 60 anos e a fala é de mensageiro (autoridade de quem "vê"), então a idade só ajuda. "Saint Michael" na boca do Jordan Vale (homem de colete de couro e barba grisalha) lê como guardião; na da Avery Knox (colar de turquesa) e da Devon Price (cabeça raspada, argolas) lê como mensagem de fé.
 
 ## Setups de cena
 
@@ -78,35 +78,35 @@ Esqueleto novo na biblioteca: cama de baú que abre e mostra uma escada escondid
 ### T3 · SEGREDO + DATA · TALKING · Setup C
 > "If you are watching this video today, stay silent after you watch it. No matter what happens, keep this to yourself."
 
-### T4 · NÃO CONTE + PROMESSA · TALKING · Setup C
-> "Don't tell your sister, don't tell your best friend, don't tell anyone. Listen closely, because the most transformative day of your life is about to begin."
+### T4 · SIGILO + PROMESSA · TALKING · Setup C
+> "Not your sister, not your best friend, not a single soul. Listen closely, because the most transformative day of your life is about to begin."
 
-### T5 · INAÇÃO + ESCASSEZ · TALKING · Setup C
-> "But if you keep scrolling, this blessing could slip right through your fingers. Not everyone will see this before the week is over."
+### T5 · CTA 222 ANTES DA METADE + INAÇÃO · TALKING · Setup C
+> "Right now, comment 222 on this video, so the blessing knows where to find you. But if you keep scrolling, it could slip right through your fingers."
 
-### T6 · ELEIÇÃO + AUTORIDADE · TALKING · Setup C
-> "I can't tell who you are, but keep this between us. I see wealth and prosperity coming into your life, and this message comes directly from Saint Michael."
+### T6 · ESCASSEZ + ELEIÇÃO · TALKING · Setup C
+> "Not everyone will see this before the week is over. I can't tell who you are, but I see wealth and prosperity coming into your life."
 
-### T7 · CHAMADO À AÇÃO · TALKING · Setup C
-> "But it also calls for action. Something is shifting in your favor. A powerful blessing is heading your way with incredible force."
+### T7 · AUTORIDADE + CHAMADO À AÇÃO · TALKING · Setup C
+> "This message comes directly from Saint Michael, and it also calls for action. Something is shifting in your favor. A powerful blessing is heading your way with incredible force."
 
 ### T8 · RECONHECIMENTO + ÚLTIMA MENSAGEM · TALKING · Setup C
 > "Acknowledge that this message is for you. But don't stop watching, or the news could pass you by. One last word from the universe, so take it seriously."
 
-### T9 · TRÊS SELOS · TALKING · Setup C
-> "Give this video a like, that's the first seal. Save it, that's the second. Send it to yourself, that's the third."
+### T9 · LIKE + SAVE + ENVIO · TALKING · Setup C
+> "Tap like on this video, then save it, then send it to yourself. Each one locks this blessing in a little tighter."
 
-### T10 · COMENTÁRIO + PRAZO · TALKING · Setup C
-> "Now comment 222, so this blessing knows exactly whose name to find. Tomorrow, when you wake up, check your phone."
+### T10 · RECOMPENSA · TALKING · Setup C
+> "Do all three, and tomorrow, when you wake up, check your phone. You will receive good news."
 
-### T11 · RECOMPENSA + STORIES · TALKING · Setup C
-> "You will receive good news. Now pay attention. Tap my profile picture and open my stories, because the other half of this seal is waiting for you there."
+### T11 · CTA · FOLLOW · TALKING · Setup C
+> "Now pay attention. Follow me before this disappears, because the next part of this message is already on its way to you."
 
 ## Roteiro só-fala (TTS)
 
-Voz do avatar, sotaque americano, baixa e lenta no segredo ("tell no one"), mais firme na autoridade (Saint Michael) e subindo para urgência nos selos.
+Voz do avatar, sotaque americano, baixa e lenta no sigilo, mais firme na autoridade (Saint Michael) e subindo para urgência no 222 e no follow.
 
-If you are watching this video today, stay silent after you watch it. No matter what happens, keep this to yourself. Don't tell your sister, don't tell your best friend, don't tell anyone. Listen closely, because the most transformative day of your life is about to begin. But if you keep scrolling, this blessing could slip right through your fingers. Not everyone will see this before the week is over. I can't tell who you are, but keep this between us. I see wealth and prosperity coming into your life, and this message comes directly from Saint Michael. But it also calls for action. Something is shifting in your favor. A powerful blessing is heading your way with incredible force. Acknowledge that this message is for you. But don't stop watching, or the news could pass you by. One last word from the universe, so take it seriously. Give this video a like, that's the first seal. Save it, that's the second. Send it to yourself, that's the third. Now comment 222, so this blessing knows exactly whose name to find. Tomorrow, when you wake up, check your phone. You will receive good news. Now pay attention. Tap my profile picture and open my stories, because the other half of this seal is waiting for you there.
+If you are watching this video today, stay silent after you watch it. No matter what happens, keep this to yourself. Not your sister, not your best friend, not a single soul. Listen closely, because the most transformative day of your life is about to begin. Right now, comment 222 on this video, so the blessing knows where to find you. But if you keep scrolling, it could slip right through your fingers. Not everyone will see this before the week is over. I can't tell who you are, but I see wealth and prosperity coming into your life. This message comes directly from Saint Michael, and it also calls for action. Something is shifting in your favor. A powerful blessing is heading your way with incredible force. Acknowledge that this message is for you. But don't stop watching, or the news could pass you by. One last word from the universe, so take it seriously. Tap like on this video, then save it, then send it to yourself. Each one locks this blessing in a little tighter. Do all three, and tomorrow, when you wake up, check your phone. You will receive good news. Now pay attention. Follow me before this disappears, because the next part of this message is already on its way to you.
 
 ## Tradução completa (Português)
 
@@ -115,19 +115,19 @@ If you are watching this video today, stay silent after you watch it. No matter 
 | T1 | (sem fala) | (sem fala) |
 | T2 | (sem fala) | (sem fala) |
 | T3 | If you are watching this video today, stay silent after you watch it. No matter what happens, keep this to yourself. | Se você está assistindo a este vídeo hoje, fique em silêncio depois de assistir. Aconteça o que acontecer, guarde isto só pra você. |
-| T4 | Don't tell your sister, don't tell your best friend, don't tell anyone. Listen closely, because the most transformative day of your life is about to begin. | Não conte pra sua irmã, não conte pra sua melhor amiga, não conte pra ninguém. Escute com atenção, porque o dia mais transformador da sua vida está prestes a começar. |
-| T5 | But if you keep scrolling, this blessing could slip right through your fingers. Not everyone will see this before the week is over. | Mas se você continuar rolando, esta bênção pode escorrer pelos seus dedos. Nem todo mundo vai ver isto antes de a semana acabar. |
-| T6 | I can't tell who you are, but keep this between us. I see wealth and prosperity coming into your life, and this message comes directly from Saint Michael. | Eu não consigo dizer quem você é, mas deixe isto só entre nós. Eu vejo riqueza e prosperidade chegando na sua vida, e esta mensagem vem direto de São Miguel. |
-| T7 | But it also calls for action. Something is shifting in your favor. A powerful blessing is heading your way with incredible force. | Mas ela também pede uma ação. Algo está mudando a seu favor. Uma bênção poderosa está indo na sua direção com uma força incrível. |
+| T4 | Not your sister, not your best friend, not a single soul. Listen closely, because the most transformative day of your life is about to begin. | Nem sua irmã, nem sua melhor amiga, nem uma única alma. Escute com atenção, porque o dia mais transformador da sua vida está prestes a começar. |
+| T5 | Right now, comment 222 on this video, so the blessing knows where to find you. But if you keep scrolling, it could slip right through your fingers. | Agora mesmo, comente 222 neste vídeo, pra bênção saber onde te encontrar. Mas se você continuar rolando, ela pode escorrer pelos seus dedos. |
+| T6 | Not everyone will see this before the week is over. I can't tell who you are, but I see wealth and prosperity coming into your life. | Nem todo mundo vai ver isto antes de a semana acabar. Eu não consigo dizer quem você é, mas vejo riqueza e prosperidade chegando na sua vida. |
+| T7 | This message comes directly from Saint Michael, and it also calls for action. Something is shifting in your favor. A powerful blessing is heading your way with incredible force. | Esta mensagem vem direto de São Miguel, e ela também pede uma ação. Algo está mudando a seu favor. Uma bênção poderosa está indo na sua direção com uma força incrível. |
 | T8 | Acknowledge that this message is for you. But don't stop watching, or the news could pass you by. One last word from the universe, so take it seriously. | Reconheça que esta mensagem é para você. Mas não pare de assistir, ou a notícia pode passar por você. Uma última palavra do universo, então leve isso a sério. |
-| T9 | Give this video a like, that's the first seal. Save it, that's the second. Send it to yourself, that's the third. | Curta este vídeo, esse é o primeiro selo. Salve, esse é o segundo. Mande pra você mesma, esse é o terceiro. |
-| T10 | Now comment 222, so this blessing knows exactly whose name to find. Tomorrow, when you wake up, check your phone. | Agora comente 222, pra esta bênção saber exatamente qual nome procurar. Amanhã, quando acordar, olhe o seu celular. |
-| T11 | You will receive good news. Now pay attention. Tap my profile picture and open my stories, because the other half of this seal is waiting for you there. | Você vai receber uma boa notícia. Agora preste atenção. Toque na minha foto de perfil e abra os meus stories, porque a outra metade deste selo está te esperando lá. |
+| T9 | Tap like on this video, then save it, then send it to yourself. Each one locks this blessing in a little tighter. | Toque em curtir neste vídeo, depois salve, depois mande pra você mesma. Cada um deles prende esta bênção um pouco mais forte. |
+| T10 | Do all three, and tomorrow, when you wake up, check your phone. You will receive good news. | Faça os três, e amanhã, quando acordar, olhe o seu celular. Você vai receber uma boa notícia. |
+| T11 | Now pay attention. Follow me before this disappears, because the next part of this message is already on its way to you. | Agora preste atenção. Siga-me antes que isto desapareça, porque a próxima parte desta mensagem já está a caminho de você. |
 
 ## Notas de produção
 
 - **Duração:** T1 5,2s + T2 ~4,3s mudos (juntos ~9,5s, como o gancho do modelo) e 9 takes falados de até 8s; cortar a sobra no fim de cada fala para ficar perto dos 88s do modelo.
-- **Gancho mudo** com som ambiente (pistão da cama, passos na madeira, lâmpada). Tarja de gancho no CapCut, legenda karaokê do T3 em diante e seta vermelha para baixo no canto inferior esquerdo do T11.
-- **Compliance:** o claim mais arriscado é "I see wealth and prosperity coming into your life... Saint Michael" (promessa de riqueza com figura religiosa). Sem valor, sem prazo em minutos, sem preço, sem app, sem quiz. O dinheiro em quadro é só do cenário.
+- **Gancho mudo** com som ambiente (pistão da cama, passos na madeira, lâmpada). Tarja de gancho no CapCut, legenda karaokê do T3 em diante e seta vermelha para baixo no canto inferior esquerdo do T11, apontando para o botão de seguir.
+- **Compliance:** o claim mais arriscado é "I see wealth and prosperity coming into your life... Saint Michael" (promessa de riqueza com figura religiosa). Growth: sem venda, sem valor, sem prazo em minutos, sem preço, sem app, sem quiz. O dinheiro em quadro é só do cenário.
 - **Risco de geração:** maços e pilhas de notas de 100 dólares em plano macro podem travar no classificador; o macro do T2 é a peça viral e fica fiel ao modelo (ver `GANCHOS_VISUAIS.md`).
-- **Se ficar longo:** o T7 pode sair sem quebrar a progressão.
+- **Se ficar longo:** o T8 pode sair sem quebrar a progressão.

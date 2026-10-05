@@ -2,7 +2,7 @@
 
 Production: auraly_venda_cofre_cama
 Angle: 3 (Auraly)
-Objective: SALE
+Objective: GROWTH
 Round: VALIDATION
 Reference video: producao/auraly_venda_cofre_cama/input/modelo.mp4 (upload snapinsta-1791226984122.mp4, 87,7s, 720x1280, 30fps; o .mp4 fica fora do git)
 Scenario: quarto principal americano de bege com cama de bau estofada cinza-chumbo de cabeceira capitone, abajures nos criados-mudos e carpete bege, que abre para uma escada de tabuas e um cofre subterraneo de paredes de terra, vigas, fio de lampadas e prateleiras de pilhas de notas de 100 (do video modelo)
@@ -42,12 +42,16 @@ video prompts: pendente
 - SCRIPT_MODELLING: ROTEIRO.md + GANCHOS_VISUAIS.md; checar_frases sem frase queimada
 
 ## Pending
-- Aprovacao do roteiro e do hook fiel; confirmacao de SALE; carta SOULMATE (padrao proposto: sem carta, mao do lado esquerdo do quadro com o maco de notas como no modelo)
+- Aprovacao do roteiro e do hook fiel; carta SOULMATE (padrao proposto: sem carta, mao do lado esquerdo do quadro com o maco de notas como no modelo)
 
 ## User decisions
 - Decision: Angle 3 Auraly, tres avatares
   Reason: declarado pelo Luigi na mensagem de intake ("avatares do Auraly app")
   Operational consequence: fila Avery Knox, Devon Price, Jordan Vale; cenario e camera do modelo, character sheet em todo K
+
+- Decision: GROWTH (sem venda, sem Stories), cada video para os 3 avatares, CTA de comentar 222 antes da metade do roteiro
+  Reason: Luigi, 2026-10-05: "cada video vai para os 3 avatares; os videos serao de growth, tente colocar o cta de comentar 222 antes da metade do roteiro pra alcancar mais pessoas"
+  Operational consequence: 222 no T5 (~30% do video), follow no T11, sem Stories
 
 ## Next response format
 - Roteiro no OUTPUT CONTRACT (01 a 05) e parar em WAITING_SCRIPT_APPROVAL
