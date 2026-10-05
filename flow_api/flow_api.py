@@ -204,11 +204,11 @@ def cmd_escolher(a):
                 self._o(PAGINA.encode())
             elif self.path == "/dados":
                 imgs = {}
-                for f in sorted(est.dir.glob("K*-*.png")):
+                for f in sorted(list(est.dir.glob("K*-*.png")) + list(est.dir.glob("K*-*.jpg"))):
                     imgs.setdefault(f.name.split("-")[0], []).append(f.name)
                 self._o(json.dumps({"imgs": imgs, "escolhas": json.loads(ef.read_text()) if ef.exists() else {}}).encode(), "application/json")
             elif self.path.startswith("/img/"):
-                self._o((est.dir / Path(self.path[5:]).name).read_bytes(), "image/png")
+                self._o((est.dir / Path(self.path[5:]).name).read_bytes(), "image/jpeg" if self.path.endswith(".jpg") else "image/png")
         def do_POST(self):
             esc = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
             ef.write_text(json.dumps(esc, indent=1))

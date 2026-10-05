@@ -24,3 +24,5 @@ Rei/
 producao/*/_watch/frames/
 producao/*/_watch/overview/
 flow_api/.env
+flow_ui/calibragem.json
+flow_ui/tela.png
