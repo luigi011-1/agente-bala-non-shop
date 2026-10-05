@@ -668,7 +668,7 @@ identidade/corpo/pele, roupa e cenário vêm do texto de cada `K`".
 - O Codex nao gera imagens nem executa navegador ou Google Flow.
 - Instrucoes canonicas do executor: `producao/_flow/INSTRUCOES_AGENTE_FLOW.md`.
 - Preservar Nano Banana 2, 9:16, anchor, 4 imagens por prompt e selecao manual.
-- Preservar Veo 3.1 Lite, Lower Priority, 8 segundos e 3 variacoes.
+- Preservar Veo 3.1 Lite, Lower Priority, 8 segundos e UM unico resultado por V (Luigi, 2026-10-05: sempre 4 imagens por K e 1 video por V, em todos os perfis; revoga as 3 variacoes).
 - Video usa o `K__` correspondente exclusivamente como INITIAL FRAME, nunca como Element.
 - Flow executa `V__` em CLOSED BATCHES de no maximo 7 codigos, sem preencher vaga liberada.
 - Esperar todos do lote; se houver pendentes, parar e aguardar `prossiga`.

@@ -1,6 +1,6 @@
 # Instrucoes do agente executor do Google Flow AI
 
-Versao 18, 2026-10-04. Contrato de execucao, subordinado ao roteador de cada oferta.
+Versao 19, 2026-10-05. Contrato de execucao, subordinado ao roteador de cada oferta.
 Auraly segue exclusivamente WORKFLOW_AURALY.md. Angle 1/2 seguem CLAUDE.md e, no FitWell,
 PLAYBOOK_FITYWELL.md. Os pacotes existentes permanecem como foram aprovados.
 
@@ -27,12 +27,14 @@ incompativel com os codigos recebidos exige esclarecimento, nunca escolha silenc
 | Video | Veo 3.1 Lite | Omni Flash, e somente ele |
 | Prioridade | Lower Priority | Padrao do Omni Flash |
 | Duracao por clipe | 8 segundos | 8 segundos |
-| Variacoes por V | 3 | 1, um unico resultado por prompt |
+| Variacoes por V | 1, um unico resultado por prompt | 1, um unico resultado por prompt |
 | Anexo do video | INITIAL FRAME | INITIAL FRAME |
 | Lote de video | Fechado, no maximo 7 codigos V | Fechado, no maximo 7 codigos V |
 
-Os valores Auraly reproduzem as travas de WORKFLOW_AURALY.md. Nunca transportar as configuracoes
-classicas para Auraly. Um pacote historico com outro contrato nao autoriza alterar uma producao
+REGRA UNICA DE QUANTIDADE (v19, Luigi, 2026-10-05), vale em TODOS os perfis: **4 imagens por K e
+1 video por V**. Antes de cada V, colocar a quantidade de saida do video em 1; nunca gerar duas ou
+mais versoes do mesmo V. Os valores Auraly reproduzem as travas de WORKFLOW_AURALY.md (modelo e
+prioridade). Nunca transportar o modelo de video classico (Omni Flash) para Auraly. Um pacote historico com outro contrato nao autoriza alterar uma producao
 nova; preservar seu contrato aprovado quando o usuario solicitar especificamente sua retomada.
 
 ### 🔴 CLASSICO: 4 imagens por K, selecao do operador, video so no Omni Flash (v14, 2026-09-24)
@@ -204,7 +206,7 @@ por exemplo, `V06: K06`, `V07: K06`, `V08: K06` e `V09: K06` quando varios takes
 frame de corpo. Isto e reutilizacao deliberada, nao ausencia de imagem. Cada V precisa ter exatamente
 um K mapeado, e esse K precisa ter uma candidata manualmente aprovada. Nunca inferir pelo numero,
 aparencia ou ordem da galeria quando o mapa estiver ausente ou ambiguo; parar e pedir correcao.
-Cada codigo V tem tres variacoes do mesmo prompt e frame selecionado.
+Cada codigo V tem uma unica variacao (um resultado), gerada do frame selecionado.
 
 CLASSICO: V usa o maior K disponivel cujo numero nao exceda o de V. Por exemplo, com K01, K03 e
 K06: V01/V02 usam K01; V03/V04/V05 usam K03; V06 usa K06. Se nao houver K anterior ou igual,
@@ -216,15 +218,14 @@ Flash a partir da UNICA imagem que o operador deixou naquele K.
 1. Receber e registrar toda a fila V, sem executar tudo automaticamente.
 2. Antes de cada V, conferir avatar, perfil e K indicado no MAPA K/V.
 3. Usar a imagem exclusivamente como INITIAL FRAME, nunca Element, ingredient ou referencia de objeto.
-4. Configurar o modelo do perfil: AURALY em Veo 3.1 Lite, Lower Priority, oito segundos, tres
-   variacoes; CLASSICO somente em Omni Flash, oito segundos, um unico resultado por V.
-5. Iniciar somente o primeiro lote de no maximo sete codigos V. Variacoes pertencem ao codigo;
-   o teto e de codigos, nao uma autorizacao para iniciar codigos adicionais por vaga liberada.
-6. Esperar todos os codigos e variacoes desse lote. Nao preencher vagas com o lote seguinte.
+4. Configurar o modelo do perfil: AURALY em Veo 3.1 Lite, Lower Priority, oito segundos, um
+   unico resultado por V; CLASSICO somente em Omni Flash, oito segundos, um unico resultado por V.
+5. Iniciar somente o primeiro lote de no maximo sete codigos V. O teto e de codigos, nao uma autorizacao para iniciar codigos adicionais por vaga liberada.
+6. Esperar todos os codigos desse lote. Nao preencher vagas com o lote seguinte.
 7. Informar concluidos, falhas e pendentes. Se houver pendentes, parar e aguardar `prossiga`.
 8. Mesmo quando o lote terminar, esperar `prossiga` para iniciar o proximo lote.
 9. Ao retomar, executar somente o trabalho pendente autorizado. Nunca reiniciar um V concluido
-   sem pedido explicito. Distinguir a variacao que falhou das que ja foram concluidas.
+   sem pedido explicito. Distinguir o V que falhou dos que ja foram concluidos.
 10. Se a interface nao permitir a configuracao requerida, informar a limitacao antes de mudar
     modelo, prioridade, quantidade, duracao ou modo de referencia.
 
@@ -276,6 +277,9 @@ separadas: movie style com `REF-P` (v13), short form de crescimento sem anchor (
 de conteudo mudou nesta versao.
 v16, 2026-09-25: AVATAR FIXO POR CONTA tambem no Auraly. Revoga o cenario proprio e a roupa livre por
 gancho da v7: roupa e cenario-base da anchor em todo video e gancho; so o angulo de camera varia.
+v19, 2026-10-05: regra unica para todos os perfis, a pedido do Luigi: SEMPRE 4 imagens por K e SEMPRE 1
+video (um unico resultado) por V. Revoga o video com mais de um resultado por V no Auraly (Veo 3.1 Lite). Modelo e prioridade
+de cada perfil nao mudam.
 v18, 2026-10-04: Auraly passa a anexar o CHARACTER SHEET (identidade e roupa) mais o frame do video
 modelo (cenario, angulo e enquadramento) em todo K. O cenario e o angulo sao os do modelo, quase 100%
 fieis, organicos e sem nada sobrenatural. Revoga so no Auraly a parte de cenario do avatar fixo da
