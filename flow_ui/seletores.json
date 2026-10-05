@@ -1,0 +1,22 @@
+{
+  "_comentario": "Palpites iniciais. Cada item e uma lista de estrategias tentadas em ordem. Estrategias: {role,name}, {text}, {css}, {label}, {placeholder}. Ajustar com 'calibrar'.",
+  "url": "https://labs.google/fx/tools/flow",
+  "novo_projeto": [{"role": "button", "name": "New project"}, {"text": "New project"}, {"text": "Novo projeto"}],
+  "modo_imagem": [{"role": "tab", "name": "Image"}, {"text": "Image"}, {"text": "Imagem"}],
+  "modo_video": [{"role": "tab", "name": "Video"}, {"text": "Video"}, {"text": "Vídeo"}],
+  "campo_prompt": [{"role": "textbox"}, {"css": "textarea"}, {"css": "[contenteditable=true]"}],
+  "anexar_input": [{"css": "input[type=file]"}],
+  "abrir_config": [{"role": "button", "name": "Settings"}, {"text": "Settings"}, {"text": "Configurações"}],
+  "modelo_imagem_opcao": [{"text": "Nano Banana 2"}],
+  "modelo_video_opcao": {"auraly": [{"text": "Veo 3.1 - Lite"}, {"text": "Veo 3.1 Lite"}], "classico": [{"text": "Omni Flash"}]},
+  "aspecto_9_16": [{"text": "9:16"}],
+  "saidas_4": [{"text": "x4"}, {"text": "4"}],
+  "saidas_1": [{"text": "x1"}, {"text": "1"}],
+  "gerar": [{"role": "button", "name": "Generate"}, {"role": "button", "name": "Create"}, {"text": "Generate"}, {"text": "Gerar"}],
+  "resultado_imagem": [{"css": "img[src*='googleusercontent'], img[src*='blob:'], img[src*='storage.googleapis']"}],
+  "resultado_video": [{"css": "video"}],
+  "erro_texto": ["failed", "something went wrong", "falha", "não foi possível", "try again"],
+  "bloqueio_texto": ["policy", "violat", "blocked", "not allowed", "política", "bloquead"],
+  "timeout_imagem_s": 300,
+  "timeout_video_s": 900
+}
