@@ -17,7 +17,7 @@ Variável trocada: nenhuma de conteúdo (rodada de validação, clone fiel). O e
 notas.
 
 Funil: venda Amazon. Frasco em quadro, "Search Natural Rems Sea Moss on Amazon" primeiro, link do
-comentário fixado depois, fim. Sem DM, sem follow gate.
+LEGENDA do post depois, fim. Sem DM, sem follow gate.
 
 Enquadramento: o joelho dela colado na lente nos takes da demo; da cintura pra cima, apoiada na mesa
 preta, no resto. Avatar fixo por conta: regata branca, short preto de treino, cruz de ouro, box de
@@ -47,7 +47,7 @@ ebook (9,7s) vira T12 e T13 em fim de frase; a cena do follow gate (2,8s) vira o
 | 11 | SOLUÇÃO | "cool the gut inflammation draining your energy" | literal |
 | 12 | OFERTA | tablet com a capa do ebook entra em quadro; "comment knee and I'll DM you the ebook" | **pote do Sea Moss entra em quadro e o nome é dito no gesto** |
 | 13 | CONTEÚDO DA OFERTA | "complete with the daily protocol and tracker to help lower body-wide inflammation" | os ingredientes do pote, cada um amarrado à dor do T11 (intestino e energia) |
-| 14 | FECHO | "Just make sure you are following, or else I can't reach you" | **CTA da marca**: Amazon primeiro, comentário fixado depois, fim |
+| 14 | FECHO | "Just make sure you are following, or else I can't reach you" | **CTA da marca**: Amazon primeiro, link da legenda depois, fim |
 
 ## Setups de cena
 
@@ -163,7 +163,7 @@ Até ~74,5s no modelo. O pote continua na mão, rótulo de frente; a outra mão 
 
 ### T14 · CTA · TALKING · Setup I
 
-> "Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the pinned comment on this video."
+> "Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video."
 
 No lugar do follow gate do modelo. Pote parado, rótulo legível do começo ao fim, sem corte. O nome sai
 devagar e por inteiro. O vídeo acaba aqui.
@@ -179,7 +179,7 @@ por avatar.**
 
 ## Roteiro só-fala
 
-Rub hydrogen peroxide on your knees and watch what happens. If it starts foaming, it just found what has been living inside your joints. Half a cup of hydrogen peroxide, two cups of warm water, and a spoonful of baking soda. Soak a cloth and press it firmly onto your knees for ten minutes. That foam is bacteria and inflammation. It has been rotting inside your joints for years. This is what roughs up the joint lining, adds to the grinding, and keeps causing that stiffness every morning. If you're dealing with knee joint discomfort, everyone tells you to just get up and move more. But how are you supposed to exercise when you're constantly sluggish, running on zero energy, and feeling bloated and inflamed? Here's what most people miss. Joint stiffness is often driven by systemic inflammation that starts right in your gut. When your digestion is out of balance, your body spends all its energy fighting inflammation, leaving you too drained to stay active, which only makes your joints feel tighter. To give your knees real relief, you have to cool the gut inflammation draining your energy. That's why I put my clients on Natural Rems Sea Moss. Sixteen ingredients in one green apple gummy a day. Turmeric, ginger and black seed oil to support your gut, and sea moss to help bring your energy back. Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the pinned comment on this video.
+Rub hydrogen peroxide on your knees and watch what happens. If it starts foaming, it just found what has been living inside your joints. Half a cup of hydrogen peroxide, two cups of warm water, and a spoonful of baking soda. Soak a cloth and press it firmly onto your knees for ten minutes. That foam is bacteria and inflammation. It has been rotting inside your joints for years. This is what roughs up the joint lining, adds to the grinding, and keeps causing that stiffness every morning. If you're dealing with knee joint discomfort, everyone tells you to just get up and move more. But how are you supposed to exercise when you're constantly sluggish, running on zero energy, and feeling bloated and inflamed? Here's what most people miss. Joint stiffness is often driven by systemic inflammation that starts right in your gut. When your digestion is out of balance, your body spends all its energy fighting inflammation, leaving you too drained to stay active, which only makes your joints feel tighter. To give your knees real relief, you have to cool the gut inflammation draining your energy. That's why I put my clients on Natural Rems Sea Moss. Sixteen ingredients in one green apple gummy a day. Turmeric, ginger and black seed oil to support your gut, and sea moss to help bring your energy back. Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video.
 
 ## Tabela bilíngue
 
@@ -198,7 +198,7 @@ Rub hydrogen peroxide on your knees and watch what happens. If it starts foaming
 | T11 | To give your knees real relief, you have to cool the gut inflammation draining your energy. | Pra dar alívio de verdade aos seus joelhos, você precisa acalmar a inflamação do intestino que está drenando a sua energia. |
 | T12 | That's why I put my clients on Natural Rems Sea Moss. Sixteen ingredients in one green apple gummy a day. | É por isso que eu coloco as minhas clientes no Natural Rems Sea Moss. Dezesseis ingredientes numa goma de maçã verde por dia. |
 | T13 | Turmeric, ginger and black seed oil to support your gut, and sea moss to help bring your energy back. | Cúrcuma, gengibre e óleo de semente preta pra apoiar o seu intestino, e sea moss pra ajudar a trazer a sua energia de volta. |
-| T14 | Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the pinned comment on this video. | Procure Natural Rems Sea Moss na Amazon. Ou é só tocar no link que eu deixei no comentário fixado deste vídeo. |
+| T14 | Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video. | Procure Natural Rems Sea Moss na Amazon. Ou é só tocar no link que eu deixei aqui embaixo, na legenda deste vídeo. |
 
 ## Contagem de palavras
 
@@ -227,7 +227,7 @@ Rub hydrogen peroxide on your knees and watch what happens. If it starts foaming
 - **Origem orgânica:** copy literal do T1 ao T11, a não ser pelo desvio 2. Só o bloco de oferta e CTA
   (T12 a T14) foi reescrito, no lugar do ebook e do follow gate, com o tamanho aproximado do original.
 - **Desvio 1, CTA da marca (obrigatório):** o ebook por DM vira o pote, e o follow gate vira os passos
-  2 a 4 do PDF da Natural Rems, com o comentário fixado no lugar da bio (decisão do Luigi, 2026-10-02).
+  2 a 4 do PDF da Natural Rems, com o link da legenda do post no lugar da bio (decisão do Luigi, 2026-10-02).
   O "get you moving pain-free again" do original saiu: é resultado garantido, proibido pela marca.
   O `Comment yes and I'll send you the link` opcional ficou de fora porque a operação está sem DM;
   se quiser, ele entra inteiro no fim do T14 e é a única fala depois do link.

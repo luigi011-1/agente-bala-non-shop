@@ -778,7 +778,7 @@ som ambiente: box de treino em casa, tranquilo, sem música
 
 ```text
 V14
-a avatar Brandon, mulher, fala em inglês com sotaque americano de uma mulher negra americana, voz feminina clara e firme de uma mulher de uns trinta anos, entonação clara e pausada, dizendo Natural Rems Sea Moss devagar e por inteiro, voz autêntica, como se exigisse ser ouvida, a seguinte frase: "Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the pinned comment on this video."
+a avatar Brandon, mulher, fala em inglês com sotaque americano de uma mulher negra americana, voz feminina clara e firme de uma mulher de uns trinta anos, entonação clara e pausada, dizendo Natural Rems Sea Moss devagar e por inteiro, voz autêntica, como se exigisse ser ouvida, a seguinte frase: "Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video."
 
 a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
 
@@ -801,7 +801,7 @@ som ambiente: box de treino em casa, tranquilo, sem música
 8. Sem Voice Changer: a voz vem do prompt de cada V.
 9. Música só depois do gancho (a partir do V02), nunca no pré-gancho, entre -19 e -20 dB, fora da biblioteca do TikTok.
 10. Rótulo pequeno `Synthetic performer` num canto do vídeo (a marca não exige mais, mas não custa).
-11. Legenda do post: `#ad #syntheticperformer #naturalrems` na primeira linha, e a chave de conteúdo de IA ligada na plataforma. O link da Amazon vai no comentário fixado.
+11. Legenda do post: `#ad #syntheticperformer #naturalrems` na primeira linha, e o link da Amazon logo abaixo; chave de conteúdo de IA ligada na plataforma.
 
 ## 5. Transcrição final por take
 
@@ -820,7 +820,7 @@ som ambiente: box de treino em casa, tranquilo, sem música
 | T11 | To give your knees real relief, you have to cool the gut inflammation draining your energy. | Pra dar alívio de verdade aos seus joelhos, você precisa acalmar a inflamação do intestino que está drenando a sua energia. |
 | T12 | That's why I put my clients on Natural Rems Sea Moss. Sixteen ingredients in one green apple gummy a day. | É por isso que eu coloco as minhas clientes no Natural Rems Sea Moss. Dezesseis ingredientes numa goma de maçã verde por dia. |
 | T13 | Turmeric, ginger and black seed oil to support your gut, and sea moss to help bring your energy back. | Cúrcuma, gengibre e óleo de semente preta pra apoiar o seu intestino, e sea moss pra ajudar a trazer a sua energia de volta. |
-| T14 | Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the pinned comment on this video. | Procure Natural Rems Sea Moss na Amazon. Ou é só tocar no link que eu deixei no comentário fixado deste vídeo. |
+| T14 | Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video. | Procure Natural Rems Sea Moss na Amazon. Ou é só tocar no link que eu deixei aqui embaixo, na legenda deste vídeo. |
 
 ## 6. Roteiro final em inglês
 
@@ -837,6 +837,6 @@ som ambiente: box de treino em casa, tranquilo, sem música
 11. To give your knees real relief, you have to cool the gut inflammation draining your energy.
 12. That's why I put my clients on Natural Rems Sea Moss. Sixteen ingredients in one green apple gummy a day.
 13. Turmeric, ginger and black seed oil to support your gut, and sea moss to help bring your energy back.
-14. Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the pinned comment on this video.
+14. Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video.
 
-Rub hydrogen peroxide on your knees and watch what happens. If it starts foaming, it just found what has been living inside your joints. Half a cup of hydrogen peroxide, two cups of warm water, and a spoonful of baking soda. Soak a cloth and press it firmly onto your knees for ten minutes. That foam is bacteria and inflammation. It has been rotting inside your joints for years. This is what roughs up the joint lining, adds to the grinding, and keeps causing that stiffness every morning. If you're dealing with knee joint discomfort, everyone tells you to just get up and move more. But how are you supposed to exercise when you're constantly sluggish, running on zero energy, and feeling bloated and inflamed? Here's what most people miss. Joint stiffness is often driven by systemic inflammation that starts right in your gut. When your digestion is out of balance, your body spends all its energy fighting inflammation, leaving you too drained to stay active, which only makes your joints feel tighter. To give your knees real relief, you have to cool the gut inflammation draining your energy. That's why I put my clients on Natural Rems Sea Moss. Sixteen ingredients in one green apple gummy a day. Turmeric, ginger and black seed oil to support your gut, and sea moss to help bring your energy back. Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the pinned comment on this video.
+Rub hydrogen peroxide on your knees and watch what happens. If it starts foaming, it just found what has been living inside your joints. Half a cup of hydrogen peroxide, two cups of warm water, and a spoonful of baking soda. Soak a cloth and press it firmly onto your knees for ten minutes. That foam is bacteria and inflammation. It has been rotting inside your joints for years. This is what roughs up the joint lining, adds to the grinding, and keeps causing that stiffness every morning. If you're dealing with knee joint discomfort, everyone tells you to just get up and move more. But how are you supposed to exercise when you're constantly sluggish, running on zero energy, and feeling bloated and inflamed? Here's what most people miss. Joint stiffness is often driven by systemic inflammation that starts right in your gut. When your digestion is out of balance, your body spends all its energy fighting inflammation, leaving you too drained to stay active, which only makes your joints feel tighter. To give your knees real relief, you have to cool the gut inflammation draining your energy. That's why I put my clients on Natural Rems Sea Moss. Sixteen ingredients in one green apple gummy a day. Turmeric, ginger and black seed oil to support your gut, and sea moss to help bring your energy back. Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video.

@@ -18,7 +18,7 @@ video para venda de seamoss gummies para a holistic.brandon").
 
 - COACH. Mulher de ~30 anos: nenhuma 1ª pessoa sobre dor ou idade. O modelo fala tudo em "you".
 - Origem orgânica: copy literal do T1 ao T11, só o bloco de oferta e CTA muda (mais o T6, por claim de tratamento).
-- CTA da marca: pote parado e legível, "Search Natural Rems Sea Moss on Amazon", link do comentário fixado depois, fim.
+- CTA da marca: pote parado e legível, "Search Natural Rems Sea Moss on Amazon", link da legenda do post depois, fim.
 - Compliance da marca: `#ad #syntheticperformer #naturalrems` no topo da legenda, chave de IA ligada,
   sem antes/depois, sem nada médico, sem cura, sem remédio nem concorrente.
 - Produto: foto oficial `producao/_ancoras/natural_rems_seamoss_produto.jpg`, só o pote da frente.

@@ -62,7 +62,7 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 - [Banco de obstáculos](banco_obstaculos.md) — empilhar UM de cada rota de fuga, sempre
 - [Ponte argumentada, nunca afirmada](feedback_ponte_argumentada.md) — cadeia de 3 a 4 elos. Credibilidade se constrói com argumento, não com concessão
 - [CTA: 5 passos + produto](feedback_cta_produto.md) — **o produto NUNCA aparece insuficiente sozinho.** Limite honesto limita um claim nos Ângulos 1 e 2, e é **PROIBIDO no Ângulo 4**
-- [🔴 FityWell VENDA: link no COMENTÁRIO FIXADO](fitywell_venda_cta_comentario_fixado.md) — **no CTA de todo vídeo de venda do Ângulo 2 (Luigi, 2026-09-30):** comment yes + follow como engajamento, e o plano personalizado Metabolic Reset como a ÚNICA solução real da dor dela ("tap the link in the pinned comment"), nunca "if you want". Sem DM, sem "I'll send you"
+- [🔴 FityWell VENDA: link na LEGENDA (era o comentário fixado)](fitywell_venda_cta_comentario_fixado.md) — **no CTA de todo vídeo de venda do Ângulo 2 (Luigi, 2026-09-30; destino na legenda desde 2026-10-05):** comment yes + follow como engajamento, e o plano personalizado Metabolic Reset como a ÚNICA solução real da dor dela ("tap the link right down below, in the caption of this video"), nunca "if you want". Sem DM, sem "I'll send you"
 - [Ângulo 2, doutrina FityWell](angulo2_copy_fitywell.md) — só no Ângulo 2. Ponte das 3 causas, nunca culpar ela, não mostra produto; avatares COACH, crivo dobrado quando quem fala é homem
 
 ## 🎭 AO MODELAR UM VIDEO DE CENA ATUADA (movie style de venda OU short form de growth)

@@ -15,7 +15,7 @@ Depois de analisar o vídeo que ele envia (com o avatar em anexo), **SEMPRE perg
 - **O mesmo avatar pode rodar mais de um ângulo** (por isso perguntar sempre). Exceção: o Ângulo 3 roda **só com Walt Hensley, Darlene Pruitt, Lorraine Vance e Morgan Vance** (roster desde 2026-09-22, Morgan desde 2026-09-30; todos os anteriores foram descartados).
 - **Keyword por ângulo:** `yes` nos Ângulos 1, 2 e 4, **`222` no Ângulo 3** (corrigido em 2026-08-26; a versão antiga dizia "sempre `yes` nos três", revogada em 2026-08-24). Autoridade em [[regras-universais]] regra 1. **No Ângulo 4 o Luigi decidiu manter `yes` em 2026-08-27**, recusando a sugestão de keyword temática.
 - **📎 O anexo decide o avatar:** `.mp4` + imagem de avatar na mesma mensagem = produzir para aquele avatar, sem perguntar. Nesse caso a pergunta que resta é só o ângulo. Ver [[angulo3-copy-auraly]].
-- CTA no vídeo é sempre "comment yes" (menos no 3); **muda só o destino da DM**: Ângulo 1 → ♻️ desde 2026-10-02 NÃO é mais DM: "Search Natural Rems Sea Moss on Amazon" primeiro, link no comentário fixado depois, comentário opcional com a keyword `yes` ([[angulo1-copy-seamoss]]); Ângulo 2 → link do quiz FityWell; Ângulo 3 → link do quiz Auraly; Ângulo 4 → link do ebook Body Hacks For Men (destino exato pendente).
+- CTA no vídeo é sempre "comment yes" (menos no 3); **muda só o destino da DM**: Ângulo 1 → ♻️ desde 2026-10-02 NÃO é mais DM: "Search Natural Rems Sea Moss on Amazon" primeiro, link da legenda do post depois (o comentário fixado valeu só no primeiro pacote), comentário opcional com a keyword `yes` ([[angulo1-copy-seamoss]]); Ângulo 2 → link do quiz FityWell; Ângulo 3 → link do quiz Auraly; Ângulo 4 → link do ebook Body Hacks For Men (destino exato pendente).
 - Nunca copiar 100% — adaptar (método puzzle). Ver [[metodo-puzzle]] refinamento de seleção de fonte.
 
 ## ÂNGULO 1 — Natural Rems Sea Moss (desde 2026-10-02)
@@ -38,7 +38,7 @@ Depois de analisar o vídeo que ele envia (com o avatar em anexo), **SEMPRE perg
 ## ÂNGULO 2 — app feminino (FityWell "Metabolic Reset 40+")
 - **Produto:** app FityWell. **Funil = quiz** (quiz-fitywell.vercel.app) → captura de email → plano personalizado (pago).
 - **Público:** mulheres **40+**.
-- **Funil de conteúdo:** ~~comment yes → DM → link do quiz~~ ♻️ desde 2026-09-30: comment yes + follow (engajamento) e o link do plano personalizado Metabolic Reset no **comentário fixado** do vídeo ([[fitywell-venda-cta-comentario-fixado]]).
+- **Funil de conteúdo:** ~~comment yes → DM → link do quiz~~ ♻️ desde 2026-09-30: comment yes + follow (engajamento) e o link do plano personalizado Metabolic Reset no **comentário fixado** do vídeo ([[fitywell-venda-cta-comentario-fixado]]). ♻️ Desde 2026-10-05 o link vai na **legenda** do post, não mais no comentário fixado.
 
 ### Posicionamento (promessas que a marca já usa)
 - "Real wellness, for your body after 40" · "Made for your stage, not your 20s"

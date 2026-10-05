@@ -534,7 +534,7 @@ def capcut():
         "8. Sem Voice Changer: a voz vem do prompt de cada V.",
         "9. Música só depois do gancho (a partir do V02), nunca no pré-gancho, entre -19 e -20 dB, fora da biblioteca do TikTok.",
         "10. Rótulo pequeno `Synthetic performer` num canto do vídeo (a marca não exige mais, mas não custa).",
-        "11. Legenda do post: `#ad #syntheticperformer #naturalrems` na primeira linha, e a chave de conteúdo de IA ligada na plataforma. O link da Amazon vai no comentário fixado.",
+        "11. Legenda do post: `#ad #syntheticperformer #naturalrems` na primeira linha, e o link da Amazon logo abaixo; chave de conteúdo de IA ligada na plataforma.",
     ]
 
 
@@ -550,8 +550,8 @@ def pacote(a):
     L = ["# holistic.brandon | Ângulo 1 Natural Rems Sea Moss | Joelho que espuma | Pacote de Prompts", "",
          "Vídeo modelo: `input/reference_video.mp4` (77,3 s, pessoa real)", "",
          f"Âncora: `{a['ancora']}` · Foto do produto: `{PRODUTO_IMG}`", "",
-         "Funil: venda Amazon. Frasco em quadro, \"Search Natural Rems Sea Moss on Amazon\" primeiro, link do "
-         "comentário fixado depois, fim. Rodada de validação, gancho fiel ao modelo.", "",
+         "Funil: venda Amazon. Frasco em quadro, \"Search Natural Rems Sea Moss on Amazon\" primeiro, link da "
+         "legenda do post depois, fim. Rodada de validação, gancho fiel ao modelo.", "",
          "## Índice de geração", "",
          "| Take | Keyframe | Anexar | Ação |", "|---|---|---|---|"]
     for k in ks:
@@ -596,7 +596,7 @@ def pacote(a):
           "2. Um take por cena do modelo; T2 e T3 marcados CENA CURTA; nenhum take acima de 29 palavras.",
           "3. Bandeira dos EUA no campo scene de todo K.",
           "4. Zero travessão.",
-          "5. CTA da marca no T14: Search Natural Rems Sea Moss on Amazon, depois o comentário fixado, e fim.",
+          "5. CTA da marca no T14: Search Natural Rems Sea Moss on Amazon, depois o link da legenda, e fim.",
           "6. Pote em quadro do T12 ao T14, rótulo legível; no T14 parado do começo ao fim.",
           "7. Nada médico em quadro nem na fala; sem antes e depois; sem cura nem tratamento.",
           "8. Negative sem termo sensível.",

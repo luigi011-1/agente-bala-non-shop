@@ -420,7 +420,7 @@ câmera: fixa
 som ambiente: box de treino em casa, tranquilo, sem música
 
 V14
-a avatar Brandon, mulher, fala em inglês com sotaque americano de uma mulher negra americana, voz feminina clara e firme de uma mulher de uns trinta anos, entonação clara e pausada, dizendo Natural Rems Sea Moss devagar e por inteiro, voz autêntica, como se exigisse ser ouvida, a seguinte frase: "Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the pinned comment on this video."
+a avatar Brandon, mulher, fala em inglês com sotaque americano de uma mulher negra americana, voz feminina clara e firme de uma mulher de uns trinta anos, entonação clara e pausada, dizendo Natural Rems Sea Moss devagar e por inteiro, voz autêntica, como se exigisse ser ouvida, a seguinte frase: "Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video."
 
 a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
 
@@ -468,4 +468,4 @@ som ambiente: box de treino em casa, tranquilo, sem música
 | T11 | To give your knees real relief, you have to cool the gut inflammation draining your energy. | Pra dar alívio de verdade aos seus joelhos, você precisa acalmar a inflamação do intestino que está drenando a sua energia. |
 | T12 | That's why I put my clients on Natural Rems Sea Moss. Sixteen ingredients in one green apple gummy a day. | É por isso que eu coloco as minhas clientes no Natural Rems Sea Moss. Dezesseis ingredientes numa goma de maçã verde por dia. |
 | T13 | Turmeric, ginger and black seed oil to support your gut, and sea moss to help bring your energy back. | Cúrcuma, gengibre e óleo de semente preta pra apoiar o seu intestino, e sea moss pra ajudar a trazer a sua energia de volta. |
-| T14 | Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the pinned comment on this video. | Procure Natural Rems Sea Moss na Amazon. Ou é só tocar no link que eu deixei no comentário fixado deste vídeo. |
+| T14 | Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video. | Procure Natural Rems Sea Moss na Amazon. Ou é só tocar no link que eu deixei aqui embaixo, na legenda deste vídeo. |

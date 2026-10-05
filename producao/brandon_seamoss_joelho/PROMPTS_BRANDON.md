@@ -4,7 +4,7 @@ Vídeo modelo: `input/reference_video.mp4` (77,3 s, pessoa real)
 
 Âncora: `producao/_ancoras/holistic_brandon_ancora.jpg` · Foto do produto: `producao/_ancoras/natural_rems_seamoss_produto.jpg`
 
-Funil: venda Amazon. Frasco em quadro, "Search Natural Rems Sea Moss on Amazon" primeiro, link do comentário fixado depois, fim. Rodada de validação, gancho fiel ao modelo.
+Funil: venda Amazon. Frasco em quadro, "Search Natural Rems Sea Moss on Amazon" primeiro, link da legenda do post depois, fim. Rodada de validação, gancho fiel ao modelo.
 
 ## Índice de geração
 
@@ -673,7 +673,7 @@ som ambiente: box de treino em casa, tranquilo, sem música
 ### V14 · T14 · usa K14
 
 ```text
-a avatar Brandon, mulher, fala em inglês com sotaque americano de uma mulher negra americana, voz feminina clara e firme de uma mulher de uns trinta anos, entonação clara e pausada, dizendo Natural Rems Sea Moss devagar e por inteiro, voz autêntica, como se exigisse ser ouvida, a seguinte frase: "Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left in the pinned comment on this video."
+a avatar Brandon, mulher, fala em inglês com sotaque americano de uma mulher negra americana, voz feminina clara e firme de uma mulher de uns trinta anos, entonação clara e pausada, dizendo Natural Rems Sea Moss devagar e por inteiro, voz autêntica, como se exigisse ser ouvida, a seguinte frase: "Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right down below, in the caption of this video."
 
 a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
 
@@ -715,7 +715,7 @@ som ambiente: box de treino em casa, tranquilo, sem música
 8. Sem Voice Changer: a voz vem do prompt de cada V.
 9. Música só depois do gancho (a partir do V02), nunca no pré-gancho, entre -19 e -20 dB, fora da biblioteca do TikTok.
 10. Rótulo pequeno `Synthetic performer` num canto do vídeo (a marca não exige mais, mas não custa).
-11. Legenda do post: `#ad #syntheticperformer #naturalrems` na primeira linha, e a chave de conteúdo de IA ligada na plataforma. O link da Amazon vai no comentário fixado.
+11. Legenda do post: `#ad #syntheticperformer #naturalrems` na primeira linha, e o link da Amazon logo abaixo; chave de conteúdo de IA ligada na plataforma.
 
 ## Gates de qualidade
 
@@ -723,7 +723,7 @@ som ambiente: box de treino em casa, tranquilo, sem música
 2. Um take por cena do modelo; T2 e T3 marcados CENA CURTA; nenhum take acima de 29 palavras.
 3. Bandeira dos EUA no campo scene de todo K.
 4. Zero travessão.
-5. CTA da marca no T14: Search Natural Rems Sea Moss on Amazon, depois o comentário fixado, e fim.
+5. CTA da marca no T14: Search Natural Rems Sea Moss on Amazon, depois o link da legenda, e fim.
 6. Pote em quadro do T12 ao T14, rótulo legível; no T14 parado do começo ao fim.
 7. Nada médico em quadro nem na fala; sem antes e depois; sem cura nem tratamento.
 8. Negative sem termo sensível.

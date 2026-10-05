@@ -143,7 +143,7 @@ Por enquanto só ela roda o Sea Moss, em paralelo com FityWell e Body Hacks na m
 - **O cenário já ajuda:** a lousa dela diz "Greens & Minerals" e há potes de grãos na prateleira.
   O pote do Sea Moss entra na mesa preta da frente, que é o lower foreground natural do GATE_VISUAL.
 - **Três ofertas na mesma conta:** a copy de uma nunca vaza para a outra. Sea Moss fecha em
-  Amazon; FityWell fecha em quiz/plano no comentário fixado; Body Hacks fecha no ebook. Rodar
+  Amazon; FityWell fecha no plano com o link da legenda; Body Hacks fecha no ebook. Rodar
   `checar_frases.py` contra os pacotes da Brandon antes de entregar roteiro.
 
 ## 7. Herança da Korella: o que NÃO passa

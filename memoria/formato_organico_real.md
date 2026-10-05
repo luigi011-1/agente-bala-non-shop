@@ -42,6 +42,7 @@ de venda devolve o video para o formato saturado.
 - **Decisões de 2026-09-25, depois do lote de 7 avatares IA** (`producao/_swipe_organico/rodada_2026_09_25_fitywell_ia/ANALISE.md`):
   ♻️ **Item 1 revogado em 2026-09-30:** FitWell venda manda para o **comentário fixado** do vídeo,
      com comment yes + follow como engajamento antes ([[fitywell-venda-cta-comentario-fixado]]).
+     ♻️ Desde 2026-10-05 o destino é o **link na legenda** do post, não mais o comentário fixado.
   1. (histórico) FitWell venda: **padrão é o link da bio**, mas ele some se a conta tomar restrição. Quando o
      Luigi disser que o link saiu, o CTA vira a reserva do molde v4 (keyword `yes` + "the simple
      routine I give to my clients" + follow "so I can send it to you"). Vale por conta.
