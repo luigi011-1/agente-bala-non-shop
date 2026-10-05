@@ -6,4 +6,4 @@ Reference video: `input/reference_video.mp4` (63,2s, monge demonstra dose de vod
 
 | Ordem | Estado | Avatar | Âncora |
 |---:|---|---|---|
-| 1 | ACTIVE | holistic.brandon | `producao/_ancoras/holistic_brandon_ancora.jpg` |
+| 1 | DONE | holistic.brandon | `producao/_ancoras/holistic_brandon_ancora.jpg` |
