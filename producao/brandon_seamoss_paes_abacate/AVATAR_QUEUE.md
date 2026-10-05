@@ -10,8 +10,8 @@ Fila é estado em disco. O Luigi mandou o vídeo para a holistic.brandon, venda 
 
 | Ordem | Estado | Avatar | Âncora | Cenário (texto dos K) |
 |---:|---|---|---|---|
-| 1 | ACTIVE | holistic.brandon | `producao/_ancoras/holistic_brandon_ancora.jpg` | box de treino: parede de bloco branca, neon vermelho TRAIN PRAY REPEAT, quadro branco STAY READY, bandeira dos EUA; mesa preta |
+| 1 | DONE | holistic.brandon | `producao/_ancoras/holistic_brandon_ancora.jpg` | box de treino: parede de bloco branca, neon vermelho TRAIN PRAY REPEAT, quadro branco STAY READY, bandeira dos EUA; mesa preta |
 
 ## Estado atual
 
-- Roteiro v1 aguardando aprovação do Luigi (via coordenação do lote).
+- Roteiro v1 aprovado em 2026-10-05. Pacote entregue em `ENTREGA_BRANDON.md`. Nenhum PENDING nem ACTIVE: PRODUCTION COMPLETE (entrega de prompts).
