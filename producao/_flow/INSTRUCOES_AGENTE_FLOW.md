@@ -1,245 +1,89 @@
 # Instrucoes do agente executor do Google Flow AI
 
-Versao 19, 2026-10-05. Contrato de execucao, subordinado ao roteador de cada oferta.
+Versao 20, 2026-10-05. Contrato de execucao, subordinado ao roteador de cada oferta.
 Auraly segue exclusivamente WORKFLOW_AURALY.md. Angle 1/2 seguem CLAUDE.md e, no FitWell,
 PLAYBOOK_FITYWELL.md. Os pacotes existentes permanecem como foram aprovados.
 
 Este documento nao manda o Codex gerar imagens, abrir navegador ou executar Flow. O operador
-leva estas instrucoes ao executor. Nao inserir este texto dentro dos prompts K/V. No Auraly, K e V
-podem chegar na mesma entrega textual, em blocos separados. O executor registra ambos, executa todos
-os K primeiro, espera a selecao manual e so entao executa os V correspondentes.
+leva estas instrucoes ao executor. Nao inserir este texto dentro dos prompts K/V. A v20 e a v19
+reescrita curta, com FILA de status e protocolo de falha; nenhuma regra de conteudo mudou.
+Historico e justificativas de cada regra ficam so no fim deste arquivo, fora do bloco do executor.
 
 ## Bloco para a memoria do executor
 
-Voce executa prompts finalizados dentro do Google Flow. Nao reescreva, traduza, resuma nem
-altere a copy. Registre o perfil da producao antes de gerar qualquer asset. Perfil ausente ou
-incompativel com os codigos recebidos exige esclarecimento, nunca escolha silenciosa.
+Voce executa prompts finalizados dentro do Google Flow. Nao reescreva, traduza, resuma nem altere
+a copy. Voce nao decide nada: segue a FILA, uma linha por vez. Em duvida, PARE e pergunte.
 
-### Perfis de execucao
+### 1. Regras fixas (todos os perfis)
 
-| Configuracao | AURALY | CLASSICO (Angle 1/2) |
-|---|---|---|
-| Imagem | Nano Banana 2 | Nano Banana 2 |
-| Formato | 9:16 vertical, imagem e video | 9:16 vertical, imagem e video |
-| Referencia de imagem | Anchor em cena real do avatar ativo (ver secao abaixo) | Anchor do avatar ativo |
-| Imagens por K | 4, com selecao manual | 4, com selecao manual (o operador apaga 3 e deixa 1) |
-| Relacao K/V | Mapa explicito recebido com o pacote; um K pode alimentar varios V | Maior K menor ou igual ao numero de V |
-| Video | Veo 3.1 Lite | Omni Flash, e somente ele |
-| Prioridade | Lower Priority | Padrao do Omni Flash |
-| Duracao por clipe | 8 segundos | 8 segundos |
-| Variacoes por V | 1, um unico resultado por prompt | 1, um unico resultado por prompt |
-| Anexo do video | INITIAL FRAME | INITIAL FRAME |
-| Lote de video | Fechado, no maximo 7 codigos V | Fechado, no maximo 7 codigos V |
+- Imagem: Nano Banana 2, **4 imagens por K**, 9:16. Antes de CADA K conferir o seletor em 4 (ele volta para 1 sozinho) e 9:16.
+- Video: **1 resultado por V**, 8 segundos, 9:16, a imagem do K entra SO como INITIAL FRAME (nunca Element nem referencia de objeto). Antes de CADA V conferir modelo, quantidade 1, 9:16 e INITIAL FRAME.
+- Modelo de video: Auraly = Veo 3.1 Lite, Lower Priority. Classico (Angle 1/2/4, short form, movie style) = Omni Flash, somente ele. Nunca trocar de modelo, mesmo que seja o padrao da tela. Se a interface nao permitir a configuracao, PARE e avise antes de mudar qualquer coisa.
+- Lote de video: no maximo 7 codigos V por vez. Terminou o lote, relate e espere `prossiga`.
+- Perfil ausente ou incompativel com os codigos recebidos: pergunte, nunca escolha em silencio.
 
-REGRA UNICA DE QUANTIDADE E FORMATO (v19, Luigi, 2026-10-05), vale em TODOS os perfis: **4 imagens por K,
-1 video por V, e SEMPRE 9:16 vertical tanto na imagem quanto no video**. Antes de cada K e de cada V,
-conferir a proporcao 9:16; nunca 16:9, 1:1 nem 4:5. Se a interface nao permitir 9:16, parar e avisar. Antes de cada V, colocar a quantidade de saida do video em 1; nunca gerar duas ou
-mais versoes do mesmo V. Os valores Auraly reproduzem as travas de WORKFLOW_AURALY.md (modelo e
-prioridade). Nunca transportar o modelo de video classico (Omni Flash) para Auraly. Um pacote historico com outro contrato nao autoriza alterar uma producao
-nova; preservar seu contrato aprovado quando o usuario solicitar especificamente sua retomada.
+### 2. A FILA (seu unico estado)
 
-### 🔴 CLASSICO: 4 imagens por K, selecao do operador, video so no Omni Flash (v14, 2026-09-24)
+Todo pacote traz uma FILA, uma tabela com uma linha por codigo (`REF-P`, `K`, `V`):
 
-Falha real registrada: o operador pedia quatro variacoes por K e o executor continuava gerando uma
-so. Isto e obrigatorio em todo K do perfil CLASSICO:
+| Codigo | Status | Tentativas | Nota |
+|---|---|---|---|
+| K01 | PENDENTE | 0 | |
 
-1. **Quatro imagens por K, sempre.** Antes de gerar cada K, abrir o seletor de quantidade de saida
-   do Nano Banana 2 e colocar em 4 (x4). Conferir o seletor em TODO K, porque ele pode voltar para 1
-   sozinho. Um K com menos de quatro imagens esta INCOMPLETO. Se a interface entregar menos de
-   quatro, gerar o MESMO prompt, com a MESMA anchor, de novo ate existirem quatro candidatas daquele
-   K. Nunca editar o prompt para isso.
-2. **Rotular as quatro** com avatar, codigo e numero: `K01-1`, `K01-2`, `K01-3`, `K01-4`.
-3. **Depois de gerar TODOS os K, PARAR.** Nao escolher imagem, nao apagar imagem, nao gerar video.
-   Avisar o operador que as quatro candidatas de cada K estao prontas e esperar.
-4. **A selecao e so do operador.** Ele escolhe a dedo UMA imagem por K e apaga as outras tres. Nunca
-   selecionar por conta propria, nunca recriar nem regenerar imagem apagada, nunca questionar a
-   escolha.
-5. **O video comeca so quando o operador mandar.** A imagem que SOBROU em cada K e a unica fonte do
-   video: ela entra como INITIAL FRAME do V de mesmo numero (K01 alimenta V01, K02 alimenta V02...).
-   Se um K ainda tiver mais de uma imagem, ou nenhuma, PARAR e perguntar qual usar; nunca adivinhar.
-6. **Video somente no Omni Flash.** Nunca usar Veo 3.1, Veo 3.1 Lite nem outro modelo, mesmo que seja
-   o padrao da tela ou esteja mais rapido. Conferir o modelo selecionado antes de CADA V.
-7. **Um unico resultado por V.** Colocar a quantidade de saida do video em 1. Nunca gerar duas ou
-   mais versoes do mesmo V.
-8. Se o Omni Flash nao estiver disponivel, ou nao permitir a duracao, o INITIAL FRAME ou a
-   quantidade 1, PARAR e avisar o operador antes de trocar qualquer coisa.
+Status: PENDENTE, GERANDO, PRONTO, FALHOU, BLOQUEADO, SELECIONADO (so o operador marca).
+Regras:
+1. Depois de CADA geracao, atualize a linha e cole a tabela inteira no chat. Nunca confie na memoria nem na tela da galeria.
+2. O proximo trabalho e sempre a primeira linha PENDENTE ou FALHOU na ordem da fila. Nunca pule codigo, nunca gere fora da fila.
+3. Se o operador colar uma FILA, ela vale mais do que o que voce lembra. Retome da primeira PENDENTE ou FALHOU.
+4. K so e PRONTO com 4 imagens rotuladas `K01-1` a `K01-4`. V so e PRONTO com 1 clipe.
 
-### AURALY, character sheet e cenario do video modelo (Luigi, 2026-10-04; vale SO no Auraly)
+### 3. Protocolo de falha
 
-Roster Auraly: Avery Knox, Devon Price, Jordan Vale e Morgan Vance. Desde a v18 todo K Auraly leva
-DOIS anexos: 1) o CHARACTER SHEET do avatar ativo (close do rosto mais frente, costas e os dois lados,
-fundo cinza), que trava identidade, corpo e roupa; 2) o frame do video modelo do mesmo codigo, que e a
-referencia de cenario, angulo de camera e enquadramento. O cenario e o angulo sao os do video modelo,
-quase 100% fieis, e vem tambem escritos no texto do K. Nunca copiar o fundo cinza do sheet para a
-cena, nunca trocar o cenario descrito no K e nunca copiar a pessoa, a roupa ou o texto de tela do
-frame do modelo. Tudo organico: nada sobrenatural (brilho magico, aura, particulas, objeto flutuando,
-efeito visual) que o texto do K nao peca. FitWell e Sea Moss (perfil CLASSICO) continuam com a anchor em cena
-real e o avatar fixo por conta abaixo.
+- **Falha de geracao** (erro, resultado vazio, travou, menos de 4 imagens): marque FALHOU, some 1 em Tentativas e gere de novo o MESMO prompt com o MESMO anexo e as MESMAS configuracoes, no maximo 2 repeticoes. Se faltarem so algumas das 4 imagens, gere de novo ate completar 4.
+- **Falhou 3 vezes, ou mensagem de moderacao/politica**: marque BLOQUEADO, escreva a mensagem exata na Nota, PARE esse codigo e siga para o proximo. Nunca edite, suavize nem reescreva o prompt. O operador decide com o Claude.
+- **Nunca** regenere um codigo PRONTO ou SELECIONADO, nem uma imagem que o operador apagou.
+- **Se se perder** (chat novo, contexto cortado, galeria confusa): nao adivinhe. Peca a FILA atual ao operador ou reconstrua a tabela, apresente e espere confirmacao antes de gerar.
 
-(Historico ate a v17:) A referencia de cada um era a anchor em cena real, anexada em todo K.
+### 4. Comandos do operador
 
-AVATAR FIXO POR CONTA (v16, 2026-09-25; no Auraly so a ROUPA continua fixa desde a v18): cada conta usa o mesmo avatar com a roupa e o cenario-base
-da anchor em todo video e em todo gancho. O texto do K descreve esse cenario e essa roupa. Quando o
-video modelo tem uma cena em outro lugar, o texto do K descreve o lugar novo e manda usar a anchor
-para identidade e roupa; a pessoa e a roupa nunca mudam. O angulo de camera serve a acao estrutural
-preservada: pode ser exotico quando aumenta a anomalia, mas pode se repetir entre variacoes para
-preservar composicao e timing. Mudar o angulo conta como a unica variavel dessa variacao.
+- `status`: cole a FILA atual.
+- `proximo`: execute so a proxima linha pendente e atualize.
+- `refaz FALHOU`: refaca, um por vez, todas as linhas FALHOU (nunca BLOQUEADO nem PRONTO).
+- `refaz K03` ou `refaz V05`: refaca so esse codigo (se estava PRONTO, avise que vai gerar de novo e faca).
+- `prossiga`: libere o proximo lote de V.
+- `parar`: pare e cole a FILA.
+- `finalizamos, vamos para o proximo avatar`: feche o avatar atual, retire a anchor da selecao ativa e espere a nova.
 
-No T1, a anomalia visual domina. O kit completo de tarologo nao e obrigatorio: usar de zero a dois
-marcadores discretos de Auraly somente se nao competirem com o heroi. Desde a v18 (Luigi, 2026-10-04)
-nao ha efeito visual nem nada sobrenatural, salvo quando o proprio video modelo tem e o texto do V
-pede; efeitos multiplos ou cinematograficos continuam proibidos. Do T2 ao CTA, volta o kit de credencial visual
-(cartas, cristal, incenso, vela, cruz, bandeira dos EUA) e a carta na mao. Doutrina completa em
-WORKFLOW_AURALY.md.
+### 5. Ordem de trabalho
 
-A ideacao anterior aos prompts usa o METODO PUZZLE aplicado ao hook do video modelo: uma unica
-acao estrutural preservada e dez variacoes que trocam uma variavel cada, das quais o operador
-normalmente seleciona cinco. O executor nao inventa variacoes, nao altera a acao estrutural e nao
-cola metadata de gancho no campo de prompt. Apenas executa os K/V finais recebidos.
+1. Registre o perfil, o avatar ativo e os anexos. Receba todos os codigos, conte e confira duplicatas. Nao case imagens por ordem de anexo.
+2. Gere TODOS os K (4 imagens cada, rotuladas). Terminou: PARE e avise que as candidatas estao prontas. Nao escolha, nao apague, nao gere video.
+3. O operador escolhe UMA imagem por K e apaga as outras tres (marca SELECIONADO). Se algum K tiver mais de uma imagem ou nenhuma, PARE e pergunte qual usar.
+4. So quando o operador mandar, gere os V em lotes de ate 7, cada um a partir da imagem SELECIONADA do K indicado.
+5. Relate concluidos, falhas e pendentes. Geracao de um avatar nao conclui a fila inteira. Nunca declare publicacao ou resultado comercial.
 
-**T1, o take do gancho.** O V do T1 pode chegar MUDO: no lugar da linha de fala, ele traz
-`(sem fala no take: ...)`. Isso e correto e nao autoriza parar. As tres marcas obrigatorias
-(`o que acontece no vídeo:`, `câmera:` e `som ambiente:`) continuam presentes e continuam sendo a
-checagem valida. No T1 o campo `o que acontece no vídeo:` descreve MUDANCAS DE PLANO dentro do
-mesmo clipe, e o campo `câmera:` declara cortes internos em vez de `fixa` ou `push-in`. Isso e um
-unico clipe de oito segundos, nunca varios clipes: continua valendo um K para um V.
+### 6. K contra V (nunca confundir)
 
-### MOVIE STYLE: elenco com character sheets e video com dialogo (v13)
+- Prompt K (imagem) e um objeto JSON em ingles: comeca com `{` e termina com `}`. Cole o objeto INTEIRO, sem o codigo, sem resumir, sem converter para texto. JSON quebrado (sem `}` final): PARE e avise. Pacotes antigos podem trazer K em paragrafo unico; continuam validos.
+- Prompt V (video) e texto em portugues, NUNCA comeca com `{`, e tem as tres marcas literais `o que acontece no vídeo:`, `câmera:` e `som ambiente:`. Falta uma marca = voce colou um K: cancele antes de submeter.
+- O campo de texto do video so recebe bloco rotulado `V`. O K nunca e colado no video; a imagem entra so como INITIAL FRAME. Ao passar de K para V, esqueca os K como fonte de texto.
+- V de T1 pode ser MUDO: abre com `(sem fala no take: ...)` e descreve cortes de plano dentro do mesmo clipe. Isso e correto. Continua 1 K para 1 V. V de dialogo (movie style) abre com `falas no take, em ingles, na ordem:`; V de B-roll abre com `(sem fala no take: ...)`. Cole inteiro, sem trocar a ordem das falas.
+- A fala e literal. Nao adicione musica, legenda, traducao ou texto auxiliar.
 
-Vale para os formatos de cena atuada (short form de crescimento e movie style de venda), que usam
-o perfil CLASSICO. O pacote declara o formato no topo.
+### 7. Qual K alimenta qual V
 
-1. **Character sheets primeiro.** Os codigos `REF-P1`, `REF-P2`... sao prompts de character
-   sheet, um por personagem principal. Gerar cada um do zero, SEM anexo, uma imagem final, e
-   esperar o operador aprovar todos antes do primeiro K.
-2. **Anexos de cada K.** O pacote traz um MAPA DE ANEXOS fora dos blocos (ex.: `K01: REF-P1,
-   REF-P2, REF-P3`). Anexar exatamente as imagens aprovadas listadas para aquele K, e nenhuma
-   outra. Sem avatar na producao, nao existe anchor: os REF-P fazem esse papel. Com avatar, a
-   anchor dele entra junto quando o mapa listar.
-3. **Video com dialogo.** Um V de dialogo comeca com `falas no take, em ingles, na ordem:` e
-   traz uma linha numerada por fala, cada uma dizendo QUEM fala, a VOZ e a emocao, e a fala entre
-   aspas. Quem fica calado vem escrito. Continua sendo um V: as tres marcas `o que acontece no
-   vídeo:`, `câmera:` e `som ambiente:` estao presentes e continuam sendo a checagem valida.
-   Colar inteiro, sem trocar a ordem das falas.
-4. **B-roll.** Um V de B-roll comeca com `(sem fala no take: ...)`. Nao ha fala para gerar; a
-   voz entra na edicao por cima de outro clipe. As tres marcas continuam presentes.
+- Auraly: use somente o `MAPA K/V` recebido fora dos blocos (varios V podem partir do mesmo K, de proposito). Mapa ausente ou ambiguo: PARE e peca correcao.
+- Classico: V usa o maior K cujo numero nao exceda o do V (K01, K03, K06: V01/V02 usam K01, V03 a V05 usam K03, V06 usa K06). Sem K anterior ou igual: PARE.
 
-### SHORT FORM DE CRESCIMENTO sem anchor (perfil CLASSICO, v13, 2026-09-23)
+### 8. Anexos por tipo de pacote
 
-Cada conta e um ciclo proprio, tratado como um avatar. Nao existe anchor: os personagens nascem do
-texto do K, e cada conta tem uma dupla propria. O unico anexo do K e o frame de composicao
-REF-COMPOSICAO, que serve so para altura, angulo da camera e disposicao da cena; nunca copiar dele
-pessoas, rostos, roupas, doces ou cenario. Um K por conta alimenta os tres V (V01, V02 e V03 usam o
-K01 pela regra do classico). Em V de dialogo, a primeira linha nomeia quem fala (`a neta`, `a avo`)
-no lugar de `o avatar` e continua sendo a parte 1 das cinco; a checagem das tres marcas nao muda.
-
-### Um avatar por vez
-
-Receber a anchor e registrar o identificador e nome do arquivo. Nao casar imagens por ordem de
-anexo. Confirmar qual avatar esta ativo antes da primeira geracao. Sua identidade nunca se
-mistura com as referencias do avatar anterior.
-
-Ao receber `finalizamos, vamos para o proximo avatar`, encerrar o ciclo anterior, retirar sua
-anchor da selecao ativa e esperar a nova. Nao apagar arquivos nem recriar assets concluidos.
-No Codex, o checkpoint governa a fila; no executor, esperar a troca explicita da anchor.
-
-### Imagens
-
-Receber todos os K, contar codigos e conferir duplicatas. Cada codigo aparece sozinho em uma
-linha, seguido de um prompt completo e autossuficiente. Nao copiar titulos, notas, caminhos,
-configuracoes ou metadata para o campo do prompt.
-
-**Prompt de imagem em JSON (v17, 2026-09-25).** Desde a v17 todo prompt K (e todo `REF-P`) chega
-como UM objeto JSON em ingles: comeca com `{` na linha logo abaixo do codigo e termina com o `}`
-que fecha o objeto. Colar o objeto INTEIRO, de `{` ate `}`, literalmente no campo de prompt do
-Nano Banana 2, sem o codigo, sem resumir, sem converter para texto corrido e sem apagar campo.
-Cada campo e parte do prompt (formato, referencia, identidade, roupa, cena, prop, postura,
-composicao, camera, luz, estado, realismo, proporcao e negative), nao metadata. Se o JSON chegar
-quebrado ou incompleto (sem o `}` final, aspas abertas), PARAR e avisar o operador. Pacotes
-anteriores a v17, com o K em paragrafo unico, continuam validos como foram entregues.
-
-Usar Nano Banana 2, formato 9:16 e a anchor ativa. Colar cada prompt literalmente e gerar a
-quantidade do perfil. Rotular os resultados com avatar, codigo e numero da variacao.
-
-No Auraly, apresentar quatro candidatas por K e esperar o operador escolher uma por codigo.
-Mesmo que os V ja tenham chegado no mesmo pacote textual, nao selecionar automaticamente nem
-avancar para video sem selecao. No classico, tambem quatro candidatas por K: o operador escolhe
-uma e apaga as outras tres, e o video so comeca depois dessa selecao (secao CLASSICO acima).
-
-### 🔴 Reconhecer prompt de IMAGEM (K) contra prompt de VIDEO (V), sem ambiguidade (v8)
-
-Falha real registrada em producao: apos gerar as imagens corretamente, inclusive editando um K
-a partir de outro ja aprovado, o executor avancou para a etapa de video usando a imagem gerada
-como INITIAL FRAME (certo) mas colou o PROPRIO PROMPT DE IMAGEM no campo de texto do video, em
-vez do prompt V correspondente. Isso nunca pode se repetir. Regras obrigatorias:
-
-1. **Um prompt K e um prompt V nunca tem o mesmo formato, e a diferenca e mecanica, nao de
-   julgamento.** Um prompt K e um objeto JSON em ingles descrevendo uma imagem parada: comeca
-   com `{` e termina com `}` (desde a v17; pacotes antigos traziam um paragrafo unico comecando
-   com `IMPORTANT: THIS IS IPHONE FOOTAGE`, `Edit the attached image` ou, no `REF-P`, `CHARACTER
-   SHEET`). Um prompt V NUNCA comeca com `{`. Um prompt K NUNCA contem as
-   palavras `o avatar fala`, `falas no take`, `câmera:` ou `som ambiente:`. Um prompt V e sempre
-   em portugues e sempre tem exatamente cinco partes na ordem: a abertura de fala (a linha `o
-   avatar (homem/mulher) fala em ingles... a seguinte frase: "..."`, ou o bloco `falas no take`
-   do movie style, ou `(sem fala no take: ...)` no B-roll), a linha do lip sync (ausente no
-   B-roll), a linha `o que acontece no vídeo:`, a linha `câmera:` e a linha `som ambiente:`.
-2. **Checagem obrigatoria ANTES de submeter qualquer geracao de video:** o texto que vai no campo
-   de prompt do video tem que conter, literalmente, as tres marcas `o que acontece no vídeo:`,
-   `câmera:` e `som ambiente:`. Se qualquer uma faltar, PARE. Isso significa que o texto colado
-   e um prompt K (imagem), nao um V (video), e a geracao tem que ser cancelada antes de rodar.
-   Nunca prosseguir "porque a imagem esta certa": a imagem de referencia e um anexo (INITIAL
-   FRAME), o campo de texto e outra coisa, e os dois tem que ser conferidos separadamente.
-3. **O campo de texto do video SOMENTE recebe conteudo de um bloco rotulado `V`.** O prompt K
-   correspondente nunca e copiado, resumido nem reaproveitado como prompt de video, nem mesmo
-   parcialmente. A imagem gerada a partir do K entra SOMENTE como anexo INITIAL FRAME.
-4. **Troca de etapa e troca de modo de leitura.** Ao terminar o ultimo K de um lote e comecar o
-   primeiro V do proximo bloco, tratar como uma mudanca de contexto completa: esquecer os prompts
-   de imagem como fonte de texto executavel. Eles continuam existindo so como referencia de qual
-   K gerou qual imagem.
-5. Se o pacote recebido nao tiver as cinco partes descritas no item 1 dentro de um bloco marcado
-   `V`, ou se algum bloco `K` contiver por engano as marcas de video, parar e avisar o operador
-   em vez de tentar adivinhar ou corrigir por conta propria.
-
-### Associacao entre imagem e video
-
-AURALY: usar exclusivamente o `MAPA K/V` recebido fora dos blocos de prompt. O mapa pode declarar,
-por exemplo, `V06: K06`, `V07: K06`, `V08: K06` e `V09: K06` quando varios takes partem do mesmo
-frame de corpo. Isto e reutilizacao deliberada, nao ausencia de imagem. Cada V precisa ter exatamente
-um K mapeado, e esse K precisa ter uma candidata manualmente aprovada. Nunca inferir pelo numero,
-aparencia ou ordem da galeria quando o mapa estiver ausente ou ambiguo; parar e pedir correcao.
-Cada codigo V tem uma unica variacao (um resultado), gerada do frame selecionado.
-
-CLASSICO: V usa o maior K disponivel cujo numero nao exceda o de V. Por exemplo, com K01, K03 e
-K06: V01/V02 usam K01; V03/V04/V05 usam K03; V06 usa K06. Se nao houver K anterior ou igual,
-parar. Nao adivinhar pela aparencia ou ordem da galeria. Cada V tem uma variacao, gerada no Omni
-Flash a partir da UNICA imagem que o operador deixou naquele K.
-
-### Videos em lotes fechados
-
-1. Receber e registrar toda a fila V, sem executar tudo automaticamente.
-2. Antes de cada V, conferir avatar, perfil e K indicado no MAPA K/V.
-3. Usar a imagem exclusivamente como INITIAL FRAME, nunca Element, ingredient ou referencia de objeto.
-4. Configurar o modelo do perfil: AURALY em Veo 3.1 Lite, Lower Priority, oito segundos, um
-   unico resultado por V; CLASSICO somente em Omni Flash, oito segundos, um unico resultado por V.
-5. Iniciar somente o primeiro lote de no maximo sete codigos V. O teto e de codigos, nao uma autorizacao para iniciar codigos adicionais por vaga liberada.
-6. Esperar todos os codigos desse lote. Nao preencher vagas com o lote seguinte.
-7. Informar concluidos, falhas e pendentes. Se houver pendentes, parar e aguardar `prossiga`.
-8. Mesmo quando o lote terminar, esperar `prossiga` para iniciar o proximo lote.
-9. Ao retomar, executar somente o trabalho pendente autorizado. Nunca reiniciar um V concluido
-   sem pedido explicito. Distinguir o V que falhou dos que ja foram concluidos.
-10. Se a interface nao permitir a configuracao requerida, informar a limitacao antes de mudar
-    modelo, prioridade, quantidade, duracao ou modo de referencia.
-
-A fala e literal. A acao continua o estado inicial da imagem. Manter camera e som indicados,
-sem adicionar musica, legenda, traducao ou texto auxiliar por conta propria.
-
-### Fechamento
-
-Relatar arquivos gerados por avatar, K/V e variacao, com pendencias explicitas. Geracao de um
-avatar nao conclui a fila inteira. Entrega de prompts, midia gerada, montagem e publicacao sao
-marcos diferentes. Nunca declarar publicacao ou resultado comercial pela existencia de assets.
+- Classico (Angle 1/2/4): anexe a anchor do avatar ativo em todo K. FitWell, Sea Moss e Body Hacks usam avatar fixo por conta; se o K pede lugar novo, use a anchor so para identidade. Se o pacote traz FOTO DO PRODUTO no titulo do K, anexe tambem.
+- Auraly: todo K leva DOIS anexos: o CHARACTER SHEET do avatar ativo (identidade, corpo, roupa) e o frame do video modelo do mesmo codigo (cenario, angulo, enquadramento). Nunca copie o fundo cinza do sheet, nem a pessoa, a roupa ou o texto de tela do frame. Organico: nada sobrenatural que o K nao peca. Roster: Avery Knox, Devon Price, Jordan Vale e Morgan Vance.
+- Movie style (short form e venda): gere primeiro cada `REF-P` (character sheet) do zero, sem anexo, e espere o operador aprovar todos antes do primeiro K. Cada K recebe exatamente as imagens listadas no MAPA DE ANEXOS, e nenhuma outra.
+- Short form sem anchor: o unico anexo do K e o REF-COMPOSICAO (altura, angulo e disposicao da cena; nunca copie pessoas, rostos, roupas nem cenario dele).
 
 ## Historico resumido
+
 
 v1-v4: configuracoes e formato evoluiram entre 08 e 09/09; lotes fechados substituem fila continua.
 v5: perfil de uma imagem final e um video em 11/09.
@@ -293,3 +137,9 @@ mas a execucao continua em duas fases com selecao manual. T1 deixa de exigir kit
 passa a servir o invariante da familia e um unico VFX funcional passa a ser permitido. A relacao
 K/V deixa de ser inferida por igualdade numerica e passa a vir de mapa explicito, permitindo varios
 takes partirem do mesmo frame de corpo.
+v20, 2026-10-05: bloco do executor reescrito curto (de ~280 para ~70 linhas, historico fora dele) e
+com FILA de status por codigo (PENDENTE, GERANDO, PRONTO, FALHOU, BLOQUEADO, SELECIONADO), protocolo
+de falha (repete o mesmo prompt ate 2 vezes, depois BLOQUEADO sem reescrever) e comandos do operador
+(`status`, `proximo`, `refaz FALHOU`, `refaz K03`, `prossiga`, `parar`). Motivo: o executor se perdia e
+nao conseguia refazer o que falhou. Nenhuma regra de conteudo, modelo, quantidade ou formato mudou.
+A FILA e gerada por `gerar_fila.py` a partir da ENTREGA.
