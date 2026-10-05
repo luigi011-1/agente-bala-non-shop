@@ -19,3 +19,7 @@ Rei/
 
 # backups que o graphify deixa ao mexer em settings
 *.graphify-bak
+
+# saida pesada do /watch (frames e grades, ~300 MB por video); transcript e manifest continuam versionados
+producao/*/_watch/frames/
+producao/*/_watch/overview/

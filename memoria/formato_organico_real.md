@@ -47,7 +47,8 @@ de venda devolve o video para o formato saturado.
      Luigi disser que o link saiu, o CTA vira a reserva do molde v4 (keyword `yes` + "the simple
      routine I give to my clients" + follow "so I can send it to you"). Vale por conta.
   2. **Avatar fixo por conta** (roupa e cenário-base da âncora em todo vídeo); só movie style /
-     short form não tem avatar fixo. Ver [[checklist-envio-prompt]] B8.
+     short form não tem avatar fixo. Ver [[checklist-envio-prompt]] B8. No Auraly, desde 2026-10-04,
+     o cenário e o ângulo são os do vídeo modelo ([[auraly-cenario-novo-character-sheet]]).
   3. **Receita pode repetir entre contas diferentes.**
   4. **Claim forte do original se copia literal**, sem suavizar; só fica anotado como o mais arriscado.
 - Marcador `origem: organico` + linha `CTA original:` no topo do `ROTEIRO.md` (o linter cobra e libera

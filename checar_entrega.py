@@ -1051,7 +1051,8 @@ def detectar_seamoss(txt):
 
 SEAMOSS_BUSCA_PAT = r"search\s+(for\s+)?natural rems sea moss on amazon"
 # 2026-10-02 (Luigi): o link do Sea Moss vai na LEGENDA do post ("caption"); o do comentario fixado
-# nao fica clicavel. As outras formas continuam reconhecidas para cobrar a ordem Amazon -> link.
+# nao fica clicavel. 2026-10-05: so a legenda, ate ordem nova. As outras formas continuam
+# reconhecidas para cobrar a ordem Amazon -> link.
 SEAMOSS_LINK_PAT = (r"pinned\s+comment|link\s+in\s+(my\s+)?bio|link\s+(is\s+)?(right\s+)?below"
                     r"|in my profile|\bcaption\b")
 SEAMOSS_FALA_PROIBIDA = (
@@ -1410,6 +1411,7 @@ def checar_auraly(pasta, roteiro):
         ok("angulo3", "travas do angulo 3 (auraly) respeitadas")
 
     c_realismo_visual(coletar_prompts_k(pasta))
+    c_cenario_auraly(pasta)
 
     # Blocos limpos e arquivos por avatar, inclusive os da raiz da producao.
     for nivel, check, msg, loc in auditar_pacote(pasta, takes, ESTRITO):
@@ -1421,6 +1423,58 @@ def checar_auraly(pasta, roteiro):
             ok(check, msg)
 
     return takes
+
+
+CENARIO_LEGADO_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "controle", "cenario_auraly_legado.json")
+# Frases que prendem o K ao cenario da foto em cena real. No Auraly, desde 2026-10-04, o cenario
+# e o do video modelo, descrito no texto, e o anexo de identidade e o character sheet de fundo cinza.
+CENARIO_PRESO = [r"same lived-in", r"as the reference, unchanged", r"own setting"]
+
+
+def c_cenario_auraly(pasta):
+    """Auraly, Luigi 2026-10-04: cenario e angulo do VIDEO MODELO (quase 100% fieis, organico, nada
+    sobrenatural), descritos por inteiro no scene; anexo = character sheet + frame do modelo.
+
+    So Auraly. FitWell, Sea Moss e Body Hacks seguem com avatar fixo por conta. Producoes anteriores
+    a regra ficam em controle/cenario_auraly_legado.json e nunca entram producoes novas nessa lista."""
+    nome = os.path.basename(os.path.normpath(pasta))
+    try:
+        with open(CENARIO_LEGADO_PATH, encoding="utf-8") as f:
+            legado = set(json.load(f).get("producoes", []))
+    except (OSError, ValueError):
+        legado = set()
+    if nome in legado:
+        ok("cenario", "producao anterior a regra do cenario novo (2026-10-04), legado")
+        return
+    checkpoint = ler(os.path.join(pasta, "CHECKPOINT.md")) or ""
+    m = re.search(r"^\s*Scenario\s*:\s*(\S.*)$", checkpoint, re.M | re.I)
+    if not m:
+        falha("cenario", "CHECKPOINT sem 'Scenario:'. No Auraly o cenario e o angulo sao os do VIDEO MODELO, "
+                         "quase 100% fieis, e vao declarados no checkpoint (WORKFLOW_AURALY.md, 2026-10-04)",
+              "CHECKPOINT.md")
+    ruim = False
+    ficha = ler(os.path.join(pasta, "FICHA_FRAMES.md")) or ""
+    for sec in re.split(r"^(?=## K\d+)", ficha, flags=re.M):
+        km = re.match(r"## (K\d+)", sec)
+        if km and not re.search(r"^Cen[aá]rio do modelo\s*:\s*\S", sec, re.M | re.I):
+            ruim = True
+            falha("cenario", "%s da ficha sem 'Cenario do modelo:'. No Auraly o scene copia o cenario do "
+                             "frame do modelo, quase 100%% fiel (WORKFLOW_AURALY.md, 2026-10-04)" % km.group(1),
+                  "FICHA_FRAMES.md")
+    ks = coletar_prompts_k(pasta)
+    for rotulo, bloco, loc in ks:
+        for frase in CENARIO_PRESO:
+            if re.search(frase, bloco, re.I):
+                ruim = True
+                falha("cenario", "%s prende o cenario a foto da ancora ('%s'). No Auraly o cenario e "
+                                 "o do video modelo, descrito por inteiro no texto" % (rotulo, frase), loc)
+        if not re.search(r"character sheet", bloco, re.I):
+            ruim = True
+            falha("cenario", "%s nao usa o character sheet como referencia de identidade "
+                             "(producao/_ancoras/character_sheets/)" % rotulo, loc)
+    if ks and not ruim and m:
+        ok("cenario", "cenario do modelo declarado (%s), ficha com 'Cenario do modelo' e %d K com character sheet"
+           % (m.group(1).strip()[:60], len(ks)))
 
 
 # ---------------------------------------------------------------- runner

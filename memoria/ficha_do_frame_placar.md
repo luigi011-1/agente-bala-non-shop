@@ -33,3 +33,5 @@ sem prova é autodeclaração. A evidência citada que a máquina procura dentro
 - A entrega leva `Ficha: N/N K, placar 14/14 cada` ao lado do checklist ([[checklist-envio-prompt]] B11).
 
 Relacionado: [[realismo-anti-cara-de-ia]], [[checklist-composicao-visual]], [[feedback-prompt-imagem-json-no-flow]]
+
+**Auraly, desde 2026-10-04:** cada `## Kxx` da ficha ganha a linha `Cenário do modelo:` (o que se vê atrás no frame do modelo), porque no Auraly o cenário e o ângulo são os do vídeo modelo, quase 100% fiéis, e o `scene` sai dessa linha. O linter (check `cenario`) reprova sem ela. Ver [[auraly-cenario-novo-character-sheet]].

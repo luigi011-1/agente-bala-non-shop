@@ -8,6 +8,19 @@ metadata:
   modified: 2026-09-22T23:16:39.799Z
 ---
 
+> 🔴 **2026-10-04 (Luigi), SÓ AURALY: o anexo de todo K é o CHARACTER SHEET**
+> (`producao/_ancoras/character_sheets/avery_knox_character_sheet.jpg`, `devon_price_...`,
+> `jordan_vale_...`, `morgan_vance_...`) e o cenário e o ângulo são os do VÍDEO MODELO, quase 100% fiéis.
+> Os cenários das fichas abaixo viraram "já usados" (`producao/_ancoras/CENARIOS_AURALY.md`), não são mais a base da conta.
+> Ver [[auraly-cenario-novo-character-sheet]].
+>
+> 🔴 **2026-10-04 (Luigi): o NOME do avatar é o nome do ARQUIVO que ele manda.** Os arquivos dele em
+> `/Users/macbookairm2/Desktop/AVATARES/avatares appyon/` se chamam `avery.knox_ .jpeg` (a imagem da ficha
+> Darlene Pruitt), `devon.price_usa .jpeg` (ficha Lorraine Vance), `jordan_vale.us .jpeg` (ficha Walt
+> Hensley) e `Morgan Vance.jpg`; conteúdo idêntico por md5 às âncoras de `producao/_ancoras/`. Nos pacotes
+> sai **Avery Knox, Devon Price, Jordan Vale e Morgan Vance**, com o caminho da pasta dele como âncora. Os
+> traços, a roupa e o cenário das fichas abaixo continuam valendo. Ver [[feedback-ancora-ler-uma-por-vez]].
+>
 > ♻️ **2026-09-30: entrou a Morgan Vance** (conta orgânica nova, ficha abaixo). O roster passa a ser
 > Walt, Darlene, Lorraine e Morgan; o resto deste aviso continua valendo.
 >

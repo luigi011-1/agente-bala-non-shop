@@ -87,7 +87,9 @@ rodado antes de todo envio segura.
   tem o mesmo avatar com a **roupa e o cenário-base da âncora em todo vídeo**; o que muda entre
   vídeos é o conteúdo. Revoga o antigo "muda roupa, fundo ou detalhe entre vídeos da mesma conta".
   Vale nos três ângulos, Auraly incluído (Luigi, 2026-09-25: "vale para o Auraly também"). Única
-  exceção: movie style / short form (elenco próprio a cada vídeo). **O mesmo rosto nunca
+  exceção: movie style / short form (elenco próprio a cada vídeo). 🔴 **Exceção SÓ do Auraly App
+  (Luigi, 2026-10-04):** anexo = character sheet e cenário e ângulo do VÍDEO MODELO, quase 100% fiéis,
+  orgânico e sem nada sobrenatural; só a roupa é fixa ([[auraly-cenario-novo-character-sheet]]). **O mesmo rosto nunca
   roda em duas contas** (violação de conteúdo original), isso não mudou.
 - [ ] **B9 Sem figura médica explícita no AVATAR que vende:** nada de jaleco, estetoscópio, crachá
   ou "Dr." no avatar ou na autoridade que recomenda o nosso produto. Médico como avatar dá banimento
@@ -138,7 +140,7 @@ rodado antes de todo envio segura.
 - [ ] **E1 Vocabulário proibido da marca varrido** em fala, texto de tela e prompt. **Sea Moss
   (Ângulo 1 desde 2026-10-02):** antes/depois e "day 1 vs day 30", médico, jaleco, scrubs, clínica,
   cura, tratamento, resultado garantido, nome de remédio (Ozempic, GLP-1...) ou de concorrente; e a
-  legenda leva `#ad #syntheticperformer #naturalrems` no topo; CTA na ordem Amazon, link da legenda, fim ([[angulo1-copy-seamoss]]). Korella (histórico):
+  legenda leva `#ad #syntheticperformer #naturalrems` no topo; comment `yes` + follow antes da Amazon, CTA na ordem Amazon, link da legenda (só a legenda desde 2026-10-05), fim ([[angulo1-copy-seamoss]]). Korella (histórico):
   `mood`, `calm`, `calmer`, `serotonin`, `dopamine`, `flatness`, `happy`, `feeling better`,
   `erectile dysfunction`, e no ângulo rosto `skincare`, `glow`, `moon face`; no ângulo próstata `BPH`,
   `incontinence`. FitWell e Auraly: as travas já escritas em [[angulo2-copy-fitywell]] e

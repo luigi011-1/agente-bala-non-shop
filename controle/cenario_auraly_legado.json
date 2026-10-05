@@ -1,0 +1,13 @@
+{
+  "motivo": "producoes Auraly entregues antes da regra do cenario novo por producao e do character sheet como anexo (Luigi, 2026-10-04); nao se reescreve pacote entregue. Producao nova nunca entra aqui.",
+  "criado_em": "2026-10-04",
+  "producoes": [
+    "auraly_growth_dinheiro",
+    "auraly_growth_maos_vidro",
+    "auraly_growth_prece",
+    "auraly_growth_sal_tenis",
+    "auraly_manifestacao_outubro",
+    "auraly_oracao_repetir",
+    "auraly_venda_fortuna"
+  ]
+}

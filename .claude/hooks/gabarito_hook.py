@@ -28,6 +28,11 @@ montagem, E marca). Item reprovado = corrigir e rodar de novo; nunca enviar com 
 entrega leva, fora dos blocos copiaveis: "Checklist de envio: X/X aprovados (N/A: ...)".
 Validar antes da entrega com checar_entrega.py. Nao pedir ao usuario que fiscalize o processo.
 Nao gerar imagens nem executar navegador/Flow. Nao reabrir decisoes aprovadas.
+SO AURALY (Luigi, 2026-10-04): anexo de todo K = character sheet (identidade e roupa) + frame do modelo.
+CENARIO E ANGULO DE CAMERA = OS DO VIDEO MODELO, quase 100% fieis; nao inventar cenario. Muda so o
+acabamento do GATE_VISUAL (luz neutra, ceu/janela com cor, heroi colado na lente, foco, realismo).
+Organico, nada sobrenatural. "Cenario do modelo:" em cada K da ficha; Scenario: no checkpoint.
+FitWell/Sea Moss/Body Hacks seguem com avatar fixo (roupa e cenario da ancora).
 """
 
 def main():
