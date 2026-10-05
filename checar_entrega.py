@@ -64,6 +64,38 @@ def ok(check, msg=""):
     OKS.append((check, msg))
 
 
+FLOW_VERSAO_MIN = 19
+RE_FLOW_VERSAO = re.compile(r"Instrucoes do agente executor do Google Flow AI\s+Versao\s+(\d+)", re.I)
+RE_FLOW_3VAR = re.compile(
+    r"(?:tres|três|3)\s+varia[cç][oõ]es\s+(?:por\s+V|do\s+mesmo\s+prompt)|Variacoes por V\s*\|\s*3\b"
+    r"|(?:oito|8)\s+segundos,\s*(?:tres|três|3)\s+varia", re.I)
+
+
+RE_FLOW_ASPECT_K = re.compile(r'"aspect_ratio"\s*:\s*"\s*(?!9:16)[^"]*"')
+RE_FLOW_FORMATO = re.compile(r"(?:formato|format|aspect[ _]ratio)[^\n]{0,25}\b(?:16:9|1:1|4:5|3:4)\b", re.I)
+
+
+def c_flow_quantidade(pasta):
+    """Regra unica do executor Flow (v19, Luigi 2026-10-05): 4 imagens por K, 1 video por V e 9:16 em TODO perfil.
+    Reprova bloco do Flow colado numa versao anterior e qualquer texto de 3 variacoes por V."""
+    for p in sorted(Path(pasta).rglob("*.md")):
+        if not p.name.startswith(("ENTREGA", "FLOW", "PROMPTS", "IMAGE_BLOCK")):
+            continue
+        texto = p.read_text(encoding="utf-8")
+        for m in RE_FLOW_VERSAO.finditer(texto):
+            if int(m.group(1)) < FLOW_VERSAO_MIN:
+                falha("flow-versao", "%s traz o bloco do Flow na v%s; o vigente e a v%d (1 video por V). "
+                      "Regerar a entrega a partir de producao/_flow/INSTRUCOES_AGENTE_FLOW.md."
+                      % (p.name, m.group(1), FLOW_VERSAO_MIN))
+        m = RE_FLOW_ASPECT_K.search(texto) or RE_FLOW_FORMATO.search(texto)
+        if m:
+            falha("flow-formato", "%s traz formato diferente de 9:16 (%r); imagem e video sao sempre 9:16."
+                  % (p.name, m.group(0)[:60]))
+        m = RE_FLOW_3VAR.search(texto)
+        if m:
+            falha("flow-variacoes", "%s manda 3 variacoes por V (%r); a regra e 1 video por V." % (p.name, m.group(0)))
+
+
 def c_gancho_verbal(pasta):
     """Camada verbal do gancho em qualquer angulo (skill gancho-verbal, 2026-09-22)."""
     for nome in ("GANCHOS_VISUAIS.md", "GANCHOS.md"):
@@ -1335,6 +1367,7 @@ def checar_auraly(pasta, roteiro):
         else:
             ok(check, msg)
     c_gancho_verbal(pasta)
+    c_flow_quantidade(pasta)
     if prompts_img is None and not any(any(b["id"].startswith("K") for b in blocos(p.read_text(encoding="utf-8"))) for p in Path(pasta).rglob("*.md") if p.name.startswith(("PROMPTS", "IMAGE_BLOCK"))):
         aviso("arquivos", "Pacote de imagem nao localizado pelo nome; conferir cobertura K/V abaixo")
 
@@ -1524,6 +1557,7 @@ def checar(pasta):
     c_patch(arquivos)
     c_realismo_visual(coletar_prompts_k(pasta))
     c_gancho_verbal(pasta)
+    c_flow_quantidade(pasta)
     c_ficha_frame(pasta)
     c_angulo3(angulo, arquivos, kfs, takes, pasta, roteiro)
     c_angulo4(angulo, arquivos, takes, kfs)
