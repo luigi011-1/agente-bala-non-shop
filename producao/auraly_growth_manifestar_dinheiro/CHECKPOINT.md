@@ -8,7 +8,7 @@ Reference video: producao/auraly_growth_manifestar_dinheiro/input/modelo.mp4 (up
 Scenario: banheiro americano de armarios brancos, quadro botanico e toalhas na prateleira, chao de porcelanato cinza claro, camera no chao (do video modelo)
 
 Current stage: PRODUCTION_COMPLETE
-Current avatar: (nenhum)
+Current avatar: NONE
 Next action: quando o Luigi postar, registrar em controle/resultados.json (P10)
 
 ## Avatar queue
