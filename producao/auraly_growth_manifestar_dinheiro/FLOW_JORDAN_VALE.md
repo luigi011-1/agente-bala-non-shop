@@ -66,7 +66,7 @@ K02
 V01
 (sem fala no take: gancho mudo, o avatar fica em silêncio o clipe inteiro, boca fechada)
 
-o que acontece no vídeo: plano 1, Jordan Vale ajoelhado no chão do banheiro inclina o pote de vidro e despeja o sal grosso com as folhas de louro em um círculo no chão, bem na frente da lente; corte seco para o plano 2, Jordan Vale agachado atrás do círculo pronto acende um isqueiro na borda e o círculo inteiro pega fogo; corte seco para o plano 3, Jordan Vale de pé pisa descalça dentro do círculo em chamas, sobe uma nuvem de fumaça branca, Jordan Vale se ajoelha dentro da fumaça com as duas mãos abertas para a lente e a fumaça cobre a câmera.
+o que acontece no vídeo: plano 1, Jordan Vale ajoelhado no chão do banheiro inclina o pote de vidro e despeja o sal grosso com as folhas de louro em um círculo no chão, bem na frente da lente; corte seco para o plano 2, Jordan Vale agachado atrás do círculo pronto acende um isqueiro na borda e o círculo inteiro pega fogo; corte seco para o plano 3, Jordan Vale de pé pisa descalço dentro do círculo em chamas, sobe uma nuvem de fumaça branca, Jordan Vale se ajoelha dentro da fumaça com as duas mãos abertas para a lente e a fumaça cobre a câmera.
 
 câmera: fixa no chão, olhando levemente para cima, com dois cortes secos internos ao clipe, sem movimento
 

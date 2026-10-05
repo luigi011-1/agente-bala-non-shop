@@ -185,7 +185,7 @@ def videos(a):
                    "câmera: fixa no chão, olhando levemente para cima, com dois cortes secos internos ao clipe, sem movimento\n\n"
                    "som ambiente: banheiro silencioso, o sal caindo no piso, o clique do isqueiro e o fogo estalando, sem música")
             if h:
-                txt = txt.replace("ajoelhada", "ajoelhado").replace("agachada", "agachado")
+                txt = txt.replace("ajoelhada", "ajoelhado").replace("agachada", "agachado").replace("descalça", "descalço")
         else:
             txt = (f"{art} {n}, {a['genero']}, fala em inglês com sotaque americano {a['sotaque']}, {a['voz']}, "
                    f"{emocao(t, h)}, voz autêntica, como se exigisse ser {ouvido}, a seguinte frase: \"{FALAS[t]}\"\n\n"
