@@ -7,14 +7,14 @@ Round: VALIDATION
 Reference video: producao/auraly_venda_familiar_corredor/input/modelo.mp4 (upload snapinsta-1791227010938.mp4, 105,7s, 720x1280, 30fps; o .mp4 fica fora do git)
 Scenario: corredor residencial americano de paredes cremes, rodape branco, piso de tabua de carvalho e portas de madeira de seis paineis, camera baixa e depois selfie de perto (do video modelo)
 
-Current stage: WAITING_SCRIPT_APPROVAL
+Current stage: PRODUCTION_COMPLETE
 Current avatar: NONE
-Next action: aguardar a aprovacao ou os ajustes do Luigi no roteiro (tabela bilingue) e no hook fiel; so depois escrever FICHA_FRAMES.md e os pacotes K/V
+Next action: quando o Luigi confirmar a postagem, registrar com python3 gerenciar_operacao.py registrar (controle/README.md)
 
 ## Avatar queue
-[PENDING] Avery Knox
-[PENDING] Devon Price
-[PENDING] Jordan Vale
+[DONE] Avery Knox
+[DONE] Devon Price
+[DONE] Jordan Vale
 
 Anchors (character sheets, nome = nome do arquivo do Luigi):
 - Avery Knox: producao/_ancoras/character_sheets/avery_knox_character_sheet.jpg
@@ -22,27 +22,28 @@ Anchors (character sheets, nome = nome do arquivo do Luigi):
 - Jordan Vale: producao/_ancoras/character_sheets/jordan_vale_character_sheet.jpg
 
 ## Approved script
-status: PENDING
+status: APPROVED (Luigi, 2026-10-05, "roteiros aprovados, prossiga")
 file: ROTEIRO.md
 
 ## Selected hooks
-status: PENDING (hook fiel vai junto com o roteiro)
+status: APPROVED (hook fiel aprovado junto com o roteiro, 2026-10-05)
 hooks: HOOK 1 - FIEL - Fogo na fileira de sal ate a porta que abre
 formato: fiel-validacao
 acao estrutural: avatar ajoelhado no chao de um corredor, camera baixa, acende uma fileira de sal e folhas ate a porta do fundo, o fogo corre, a porta abre sozinha e sai fumaca; T1 mudo com cortes internos ao V
 eixos de troca: n/a (validacao)
 
 ## Current avatar assets
-image prompts: pendente
-video prompts: pendente
+image prompts: PROMPTS_<AVATAR>.md + FLOW_<AVATAR>.md (K01, K02), ficha em FICHA_FRAMES.md
+video prompts: PROMPTS_<AVATAR>.md + FLOW_<AVATAR>.md (V01 a V15); entrega completa em ENTREGA_<AVATAR>.md
 
 ## Completed
 - Intake: video + 3 character sheets (Avery Knox, Devon Price, Jordan Vale)
 - ANALYSIS: /watch em _watch/; origem avatar IA; gancho mudo de 0 a 4,5s com 4 planos; corpo em plano unico de selfie de perto ate 105,7s
-- SCRIPT_MODELLING: ROTEIRO.md + GANCHOS_VISUAIS.md, checar_frases sem repeticao
+- SCRIPT_MODELLING: ROTEIRO.md + GANCHOS_VISUAIS.md, checar_frases sem repeticao, aprovados 2026-10-05
+- FICHA_FRAMES.md (2 K, placar 14/14) e pacotes dos tres avatares (Flow v18, MAPA K/V, K01 e K02, V01 a V15), checar_entrega --estrito
 
 ## Pending
-- Aprovacao do roteiro e do hook fiel pelo Luigi
+- Geracao no Flow, montagem e postagem (marcos do Luigi)
 
 ## User decisions
 - Decision: cada video vai para os tres avatares
