@@ -8,7 +8,7 @@ Tese: um gesto doméstico escondido (sal dentro da carteira antes de sair de cas
 
 Sintoma-alvo: abrir a carteira todo dia e ela continuar vazia, a escassez saindo de casa junto com você.
 
-Direcao: quem põe o sal, fica calado e sela (save, like, 222, follow) recebe a boa notícia amanhã / quem pula o vídeo ou conta cedo demais quebra a energia.
+Direcao: quem põe o sal, fica calado e sela (222, save, like, follow) recebe a boa notícia amanhã / quem pula o vídeo ou conta cedo demais quebra a energia.
 
 Padrao do modelo: A · PROVA
 

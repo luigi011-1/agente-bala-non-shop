@@ -2,7 +2,7 @@
 
 Production: auraly_taylon_branigan
 Angle: 3 (Auraly)
-Objective: SALE
+Objective: GROWTH
 Round: VALIDATION
 Reference video: producao/auraly_taylon_branigan/input/taylon_branigan.mp4
 Scenario: varanda de casa americana, banco/degrau de madeira, porta escura aberta para sala com estante, abajur e mapa dos EUA
@@ -42,15 +42,18 @@ video prompts: nenhum ainda
 - SCRIPT_MODELLING: ROTEIRO.md + GANCHOS_VISUAIS.md
 
 ## Pending
-- Aprovação do roteiro; confirmação do Luigi de SALE vs GROWTH e dos 3 avatares neste vídeo
+- Aprovação do roteiro revisado (18 takes, GROWTH)
 
 ## User decisions
-- Decision: Objective SALE (default do thread, a confirmar)
-  Reason: o modelo fecha em foto de perfil e Stories; ramificação dinheiro/abundância
-  Operational consequence: destino Stories depois do 222 e do follow; se virar GROWTH, T17 vira follow e sai o Stories
-- Decision: fila Avery Knox, Devon Price, Jordan Vale (default do coordenador, a confirmar)
-  Reason: avatares anexados pelo Luigi
-  Operational consequence: mesmo roteiro para os três, só identidade, roupa e mãos mudam
+- Decision: Objective GROWTH
+  Reason: Luigi, 2026-10-05: "os videos serao de growth"
+  Operational consequence: CTA save + double tap + 222 + follow, sem Stories e sem DM
+- Decision: 222 antes da metade do roteiro
+  Reason: Luigi, 2026-10-05: "tente colocar o cta de comentar 222 antes da metade do roteiro pra alcancar mais pessoas"
+  Operational consequence: novo T7 com o pedido de 222 (consequencia do selo); o 222 do T15 vira lembrete
+- Decision: cada video vai para os 3 avatares (Avery Knox, Devon Price, Jordan Vale)
+  Reason: Luigi, 2026-10-05: "cada video vai para os 3 avatares"
+  Operational consequence: mesmo roteiro para os tres, so identidade, roupa e maos mudam
 
 ## Next response format
 - Bloco do Flow inteiro, MAPA K/V, bloco K, bloco V, CapCut, tabela bilingue, roteiro final em ingles

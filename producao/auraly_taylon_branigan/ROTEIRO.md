@@ -1,5 +1,5 @@
 pipeline: auraly
-objective: SALE
+objective: GROWTH
 
 # auraly_taylon_branigan | ANGLE 3 (Auraly) | Roteiro para aprovação
 
@@ -7,9 +7,9 @@ objective: SALE
 **Origem do modelo:** avatar IA (homem ~50 gerado, plano único de ~84s depois do gancho, legenda karaokê). Sem `Source: ORGANIC`: vale o formato de avatar IA.
 **Rodada:** VALIDAÇÃO (um gancho só, o do modelo, fiel)
 **Avatares:** Avery Knox, Devon Price e Jordan Vale (fila no `CHECKPOINT.md`; character sheets em `producao/_ancoras/character_sheets/`)
-**Objetivo:** SALE (escolha minha, aguardando confirmação do Luigi): o modelo fecha em "tap my profile picture and check my stories". Ramificação dinheiro/abundância do funil Auraly.
-**Variável trocada:** nenhuma no esqueleto. Mudam só: data sem dia exato, o "love block cast on you" (lei do registro), o 222 com a consequência do selo e o follow com motivo antes do Stories.
-**Funil:** salvar + like + enviar para si + comentar `222` + follow → foto de perfil → Stories (modo CURIOSIDADE: "the second part of this sign is waiting for you there").
+**Objetivo:** GROWTH (Luigi, 2026-10-05: "os videos serao de growth"). Ramificação dinheiro/abundância do funil Auraly. Sem Stories, sem DM, sem produto.
+**Variável trocada:** nenhuma no esqueleto. Mudam só: data sem dia exato, o "love block cast on you" (lei do registro), um pedido de 222 antes da metade (T7, pedido do Luigi) e o beat final de Stories que vira FOLLOW (contrato GROWTH).
+**Funil:** 222 antes da metade (T7) + save + double tap + lembrete do 222 + follow. Sem Stories, sem DM, sem produto.
 **Estado:** WAITING_SCRIPT_APPROVAL
 
 ## P1, veredito
@@ -46,7 +46,7 @@ objective: SALE
 
 ## Método Puzzle, esqueleto preservado
 
-| # | Beat | Original | Adaptado Auraly (SALE, dinheiro) | Mudança |
+| # | Beat | Original | Adaptado Auraly (GROWTH, dinheiro) | Mudança |
 |---|---|---|---|---|
 | 1 | GANCHO-INSTRUÇÃO | "Put salt inside your wallet before you leave the house." | literal | nenhuma |
 | 2 | OBJEÇÃO + PROMESSA | "I know it sounds ridiculous, but you'll thank me..." | literal | nenhuma |
@@ -61,10 +61,11 @@ objective: SALE
 | 11 | PRAZO CURTO | "In the next seven minutes..." | literal | nenhuma |
 | 12 | SHARE | "So send this video to yourself..." | literal | nenhuma |
 | 13 | SELO 1 | "open your hand and save... first seal" | literal | nenhuma |
-| 14 | SELO 2 + 222 | "...Type 222 in the comments so I can see you did everything." | "Type 222 in the comments, that's how this gets tied to your name." | LEI DO SELO: a ação carrega a consequência, nunca um rótulo. Comentar é escrever, então amarra ao nome |
-| 15 | RECOMPENSA | "tomorrow at 11, 11 a.m...." | "tomorrow at 11:11 a.m." | grafia; hora relativa, não é dia cravado |
-| 16 | FRAGILIDADE + FOLLOW | "...other people's envy can completely break it. Follow me." | mesma frase + "Follow me, so this stays open." | follow sem motivo é proibido; o motivo é o do caminho ("so this stays open") |
-| 17 | STORIES | "So tap my profile picture and check my stories..." | literal | destino do SALE, depois do 222 e do follow, modo CURIOSIDADE (a promessa foi atmosférica, sem identidade concreta) |
+| 14 | 222 ANTES DA METADE (novo) | não existe no modelo | "Type 222 in the comments right now, that's how this gets tied to your name. Then stay with me until the end." | pedido do Luigi: CTA de 222 antes da metade do roteiro para alcançar mais gente. Entra depois da visão (T6), a ~40% do vídeo, com a LEI DO SELO (consequência, nunca rótulo) e a retenção "stay with me until the end" |
+| 15 | SELO 2 + LEMBRETE 222 | "Double tap... Type 222 in the comments so I can see you did everything." | "Double tap... And if you haven't typed 222 yet, do it now so I can see you did everything." | o 222 do fim vira lembrete para quem não escreveu no T7 |
+| 16 | RECOMPENSA | "tomorrow at 11, 11 a.m...." | "tomorrow at 11:11 a.m." | grafia; hora relativa, não é dia cravado |
+| 17 | FRAGILIDADE | "...other people's envy can completely break it." | literal (a inveja dos outros é aceita na ramificação dinheiro) | nenhuma |
+| 18 | FOLLOW (GROWTH) | "So tap my profile picture and check my stories..." | "So follow me right now, so this stays open, because the second part of this sign is coming to you next." | contrato GROWTH: save + 222 + follow, sem Stories. O follow leva motivo de caminho ("so this stays open") e mantém "second part of this sign" |
 
 **Congruência por avatar (peso extra, o Luigi suspeita de avatar x copy):** nenhuma frase depende de gênero ou idade vivida, então a copy vale para Avery, Devon e Jordan. O ajuste fica na entrega: voz baixa e confidencial no começo, firme e lenta nos selos. Jordan (biker de colete, barba grisalha) lê melhor como quem fala por experiência, com menos "mística" na cadência; Avery e Devon podem ter mais calor. A carteira é prop neutro nos três.
 
@@ -74,79 +75,102 @@ objective: SALE
 - **Setup B (T2 a T17, plano único):** avatar sentado no degrau da varanda como no modelo, roupa do character sheet, carteira marrom aberta na mão, saleiro azul-escuro no chão colado na lente, sala com estante, abajur e mapa dos EUA pela porta. Câmera na altura do peito, fixa.
 
 ## Roteiro cena a cena
+
 ### T1 · GANCHO · B-ROLL · VOZ-OVER · Setup A · CENA CURTA
 > "Put salt inside your wallet before you leave the house."
 
 *(10 palavras. Voz do avatar em off sobre as mãos; sal do saleiro caindo na carteira num plano único. Cena de 3,1s no modelo.)*
+
 ### T2 · OBJEÇÃO + PROMESSA · TALKING · Setup B
 > "I know it sounds ridiculous, but you'll thank me for the rest of your life."
 
 *(15 palavras)*
+
 ### T3 · SEGREDO + ESCASSEZ · TALKING · Setup B
 > "Keep your mouth shut after you watch this. Do not tell anyone. Not everyone is going to see this before this month ends."
 
 *(23 palavras)*
+
 ### T4 · ELEIÇÃO + AVISO · TALKING · Setup B
 > "I do not know your name, but do not scroll. Because if this reached you today, it reached you as a final warning."
 
 *(23 palavras)*
+
 ### T5 · PROFECIA + PORTAL · TALKING · Setup B
 > "A powerful wave of prosperity, love and money is heading your way. Don't tell anyone, but the abundance portal has opened."
 
 *(21 palavras)*
+
 ### T6 · VISÃO · TALKING · Setup B
 > "The worst is finally over. I see a lot of money, prosperity and someone incredibly wonderful walking into your life."
 
 *(20 palavras)*
-### T7 · GESTO DE RETENÇÃO + ELEIÇÃO · TALKING · Setup B
+
+### T7 · 222 ANTES DA METADE · TALKING · Setup B
+> "Type 222 in the comments right now, that's how this gets tied to your name. Then stay with me until the end."
+
+*(22 palavras)*
+
+### T8 · GESTO DE RETENÇÃO + ELEIÇÃO · TALKING · Setup B
 > "Before you scroll, close your right hand and listen until the end. This video isn't for everyone. The universe chose you."
 
 *(21 palavras)*
-### T8 · PUNIÇÃO POR INAÇÃO + LEITURA · TALKING · Setup B
+
+### T9 · PUNIÇÃO POR INAÇÃO + LEITURA · TALKING · Setup B
 > "If you skip right now, the energy breaks. I feel something very unusual happening to you right now."
 
 *(18 palavras)*
-### T9 · CORRENTES · TALKING · Setup B
+
+### T10 · CORRENTES · TALKING · Setup B
 > "I see the chains that were keeping you trapped in scarcity being broken."
 
 *(13 palavras)*
-### T10 · AMOR DESTRAVADO · TALKING · Setup B
+
+### T11 · AMOR DESTRAVADO · TALKING · Setup B
 > "The love that was being held back from you is finally coming straight to you."
 
 *(15 palavras)*
-### T11 · PRAZO CURTO · TALKING · Setup B
+
+### T12 · PRAZO CURTO · TALKING · Setup B
 > "In the next seven minutes, the energy of scarcity that was following you is going to be destroyed forever."
 
 *(19 palavras)*
-### T12 · SHARE · TALKING · Setup B
+
+### T13 · SHARE · TALKING · Setup B
 > "So send this video to yourself right now, because in seven minutes you're going to come back to confirm the energetic shift for yourself."
 
 *(24 palavras)*
-### T13 · SELO 1 (SAVE) · TALKING · Setup B
+
+### T14 · SELO 1 (SAVE) · TALKING · Setup B
 > "Now open your hand and save this video. That will be your first seal."
 
 *(14 palavras)*
-### T14 · SELO 2 (LIKE) + 222 · TALKING · Setup B
-> "Double tap quickly on your screen. That will be your second seal. Type 222 in the comments, that's how this gets tied to your name."
 
-*(25 palavras)*
-### T15 · RECOMPENSA + ALERTA · TALKING · Setup B
+### T15 · SELO 2 (LIKE) + LEMBRETE 222 · TALKING · Setup B
+> "Double tap quickly on your screen. That will be your second seal. And if you haven't typed 222 yet, do it now so I can see you did everything."
+
+*(29 palavras)*
+
+### T16 · RECOMPENSA + ALERTA · TALKING · Setup B
 > "If you did everything right, tomorrow at 11:11 a.m. you're going to receive some incredibly good news. But pay close attention."
 
 *(21 palavras)*
-### T16 · FRAGILIDADE + FOLLOW · TALKING · Setup B
-> "This energy is highly sensitive, and other people's envy can completely break it. Follow me, so this stays open."
 
-*(19 palavras)*
-### T17 · STORIES · TALKING · Setup B
-> "So tap my profile picture and check my stories before they disappear, because the second part of this sign is waiting for you there."
+### T17 · FRAGILIDADE · TALKING · Setup B
+> "This energy is highly sensitive, and other people's envy can completely break it."
 
-*(24 palavras)*
+*(13 palavras)*
+
+### T18 · FOLLOW (growth) · TALKING · Setup B
+> "So follow me right now, so this stays open, because the second part of this sign is coming to you next."
+
+*(21 palavras)*
+
 ## Roteiro só-fala (TTS)
 
 Voz do avatar, sotaque americano, tom baixo e confidencial no começo, subindo para urgência de aviso a partir do T4, firme e rápido nos selos.
 
-Put salt inside your wallet before you leave the house. I know it sounds ridiculous, but you'll thank me for the rest of your life. Keep your mouth shut after you watch this. Do not tell anyone. Not everyone is going to see this before this month ends. I do not know your name, but do not scroll. Because if this reached you today, it reached you as a final warning. A powerful wave of prosperity, love and money is heading your way. Don't tell anyone, but the abundance portal has opened. The worst is finally over. I see a lot of money, prosperity and someone incredibly wonderful walking into your life. Before you scroll, close your right hand and listen until the end. This video isn't for everyone. The universe chose you. If you skip right now, the energy breaks. I feel something very unusual happening to you right now. I see the chains that were keeping you trapped in scarcity being broken. The love that was being held back from you is finally coming straight to you. In the next seven minutes, the energy of scarcity that was following you is going to be destroyed forever. So send this video to yourself right now, because in seven minutes you're going to come back to confirm the energetic shift for yourself. Now open your hand and save this video. That will be your first seal. Double tap quickly on your screen. That will be your second seal. Type 222 in the comments, that's how this gets tied to your name. If you did everything right, tomorrow at 11:11 a.m. you're going to receive some incredibly good news. But pay close attention. This energy is highly sensitive, and other people's envy can completely break it. Follow me, so this stays open. So tap my profile picture and check my stories before they disappear, because the second part of this sign is waiting for you there.
+Put salt inside your wallet before you leave the house. I know it sounds ridiculous, but you'll thank me for the rest of your life. Keep your mouth shut after you watch this. Do not tell anyone. Not everyone is going to see this before this month ends. I do not know your name, but do not scroll. Because if this reached you today, it reached you as a final warning. A powerful wave of prosperity, love and money is heading your way. Don't tell anyone, but the abundance portal has opened. The worst is finally over. I see a lot of money, prosperity and someone incredibly wonderful walking into your life. Type 222 in the comments right now, that's how this gets tied to your name. Then stay with me until the end. Before you scroll, close your right hand and listen until the end. This video isn't for everyone. The universe chose you. If you skip right now, the energy breaks. I feel something very unusual happening to you right now. I see the chains that were keeping you trapped in scarcity being broken. The love that was being held back from you is finally coming straight to you. In the next seven minutes, the energy of scarcity that was following you is going to be destroyed forever. So send this video to yourself right now, because in seven minutes you're going to come back to confirm the energetic shift for yourself. Now open your hand and save this video. That will be your first seal. Double tap quickly on your screen. That will be your second seal. And if you haven't typed 222 yet, do it now so I can see you did everything. If you did everything right, tomorrow at 11:11 a.m. you're going to receive some incredibly good news. But pay close attention. This energy is highly sensitive, and other people's envy can completely break it. So follow me right now, so this stays open, because the second part of this sign is coming to you next.
 
 ## Tabela bilíngue completa
 
@@ -158,14 +182,15 @@ Put salt inside your wallet before you leave the house. I know it sounds ridicul
 | T4 | I do not know your name, but do not scroll. Because if this reached you today, it reached you as a final warning. | Eu não sei o seu nome, mas não passe. Porque se isto chegou até você hoje, chegou como um último aviso. |
 | T5 | A powerful wave of prosperity, love and money is heading your way. Don't tell anyone, but the abundance portal has opened. | Uma onda poderosa de prosperidade, amor e dinheiro está vindo na sua direção. Não conte pra ninguém, mas o portal da abundância se abriu. |
 | T6 | The worst is finally over. I see a lot of money, prosperity and someone incredibly wonderful walking into your life. | O pior finalmente passou. Eu vejo muito dinheiro, prosperidade e alguém incrivelmente maravilhoso entrando na sua vida. |
-| T7 | Before you scroll, close your right hand and listen until the end. This video isn't for everyone. The universe chose you. | Antes de passar, feche a mão direita e escute até o fim. Este vídeo não é pra todo mundo. O universo escolheu você. |
-| T8 | If you skip right now, the energy breaks. I feel something very unusual happening to you right now. | Se você pular agora, a energia se quebra. Eu sinto algo muito incomum acontecendo com você agora. |
-| T9 | I see the chains that were keeping you trapped in scarcity being broken. | Eu vejo as correntes que te prendiam na escassez sendo quebradas. |
-| T10 | The love that was being held back from you is finally coming straight to you. | O amor que estava sendo segurado longe de você finalmente está vindo direto pra você. |
-| T11 | In the next seven minutes, the energy of scarcity that was following you is going to be destroyed forever. | Nos próximos sete minutos, a energia de escassez que te seguia vai ser destruída para sempre. |
-| T12 | So send this video to yourself right now, because in seven minutes you're going to come back to confirm the energetic shift for yourself. | Então mande este vídeo pra você agora, porque em sete minutos você vai voltar pra confirmar a virada de energia com os próprios olhos. |
-| T13 | Now open your hand and save this video. That will be your first seal. | Agora abra a mão e salve este vídeo. Esse vai ser o seu primeiro selo. |
-| T14 | Double tap quickly on your screen. That will be your second seal. Type 222 in the comments, that's how this gets tied to your name. | Toque duas vezes rápido na tela. Esse vai ser o seu segundo selo. Escreva 222 nos comentários, é assim que isto fica amarrado ao seu nome. |
-| T15 | If you did everything right, tomorrow at 11:11 a.m. you're going to receive some incredibly good news. But pay close attention. | Se você fez tudo certo, amanhã às 11:11 da manhã você vai receber uma notícia incrivelmente boa. Mas preste muita atenção. |
-| T16 | This energy is highly sensitive, and other people's envy can completely break it. Follow me, so this stays open. | Essa energia é muito sensível, e a inveja dos outros pode quebrá-la por completo. Me siga, pra isso continuar aberto. |
-| T17 | So tap my profile picture and check my stories before they disappear, because the second part of this sign is waiting for you there. | Então toque na minha foto de perfil e veja meus stories antes que sumam, porque a segunda parte deste sinal está esperando você lá. |
+| T7 | Type 222 in the comments right now, that's how this gets tied to your name. Then stay with me until the end. | Escreva 222 nos comentários agora, é assim que isto fica amarrado ao seu nome. Depois fique comigo até o fim. |
+| T8 | Before you scroll, close your right hand and listen until the end. This video isn't for everyone. The universe chose you. | Antes de passar, feche a mão direita e escute até o fim. Este vídeo não é pra todo mundo. O universo escolheu você. |
+| T9 | If you skip right now, the energy breaks. I feel something very unusual happening to you right now. | Se você pular agora, a energia se quebra. Eu sinto algo muito incomum acontecendo com você agora. |
+| T10 | I see the chains that were keeping you trapped in scarcity being broken. | Eu vejo as correntes que te prendiam na escassez sendo quebradas. |
+| T11 | The love that was being held back from you is finally coming straight to you. | O amor que estava sendo segurado longe de você finalmente está vindo direto pra você. |
+| T12 | In the next seven minutes, the energy of scarcity that was following you is going to be destroyed forever. | Nos próximos sete minutos, a energia de escassez que te seguia vai ser destruída para sempre. |
+| T13 | So send this video to yourself right now, because in seven minutes you're going to come back to confirm the energetic shift for yourself. | Então mande este vídeo pra você agora, porque em sete minutos você vai voltar pra confirmar a virada de energia com os próprios olhos. |
+| T14 | Now open your hand and save this video. That will be your first seal. | Agora abra a mão e salve este vídeo. Esse vai ser o seu primeiro selo. |
+| T15 | Double tap quickly on your screen. That will be your second seal. And if you haven't typed 222 yet, do it now so I can see you did everything. | Toque duas vezes rápido na tela. Esse vai ser o seu segundo selo. E se você ainda não escreveu 222, escreva agora pra eu ver que você fez tudo. |
+| T16 | If you did everything right, tomorrow at 11:11 a.m. you're going to receive some incredibly good news. But pay close attention. | Se você fez tudo certo, amanhã às 11:11 da manhã você vai receber uma notícia incrivelmente boa. Mas preste muita atenção. |
+| T17 | This energy is highly sensitive, and other people's envy can completely break it. | Essa energia é muito sensível, e a inveja dos outros pode quebrá-la por completo. |
+| T18 | So follow me right now, so this stays open, because the second part of this sign is coming to you next. | Então me siga agora, pra isso continuar aberto, porque a segunda parte deste sinal chega pra você em seguida. |
