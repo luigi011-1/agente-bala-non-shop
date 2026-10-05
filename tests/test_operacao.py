@@ -386,3 +386,35 @@ class TakeSegueCenaDoModelo(unittest.TestCase):
         fala = ' '.join(['word'] * 30)
         r = '### T1 · X · TALKING · Setup A · CENA CURTA\n\n> "%s."\n' % fala
         self.assertTrue(self.falhas(r))
+
+
+class FlowQuantidade(unittest.TestCase):
+    """v19 (Luigi, 2026-10-05): 4 imagens por K e 1 video por V em todo perfil."""
+
+    def falhas(self, nome, texto):
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / nome).write_text(texto, encoding="utf-8")
+            ce.FALHAS, ce.AVISOS, ce.OKS = [], [], []
+            ce.c_flow_quantidade(d)
+            return [f[0] for f in ce.FALHAS]
+
+    def test_v18_reprova(self):
+        self.assertIn("flow-versao", self.falhas(
+            "ENTREGA_X.md", "# Instrucoes do agente executor do Google Flow AI\n\nVersao 18, 2026-10-04."))
+
+    def test_v19_passa(self):
+        self.assertEqual([], self.falhas(
+            "ENTREGA_X.md", "# Instrucoes do agente executor do Google Flow AI\n\nVersao 19, 2026-10-05."))
+
+    def test_tres_variacoes_reprova(self):
+        self.assertIn("flow-variacoes", self.falhas("FLOW_X.md", "Veo 3.1 Lite, oito segundos, tres variacoes"))
+        self.assertIn("flow-variacoes", self.falhas("ENTREGA_X.md", "| Variacoes por V | 3 | 1 |"))
+
+    def test_formato_diferente_de_916_reprova(self):
+        self.assertIn("flow-formato", self.falhas("PROMPTS_X.md", '{"aspect_ratio": "16:9 horizontal"}'))
+        self.assertIn("flow-formato", self.falhas("FLOW_X.md", "Formato: 16:9"))
+        self.assertEqual([], self.falhas("PROMPTS_X.md", '{"aspect_ratio": "9:16 vertical"}'))
+
+    def test_instrucoes_vigentes_sem_falha(self):
+        txt = (Path(__file__).resolve().parent.parent / "producao/_flow/INSTRUCOES_AGENTE_FLOW.md").read_text(encoding="utf-8")
+        self.assertEqual([], self.falhas("ENTREGA_X.md", txt))

@@ -54,7 +54,7 @@ galeria ou pela ordem de anexo. Ele lê o código.
 | **REF-...** | Referência auxiliar. `REF-P1`, `REF-P2`... são **character sheets** (folha de personagem) de cada personagem principal numa cena atuada. |
 | **Âncora** | A foto oficial do avatar da conta. É a referência de identidade anexada nas imagens. |
 | **INITIAL FRAME** | O modo em que a imagem aprovada entra como o **primeiro quadro** do vídeo. É o único modo que usamos. |
-| **Perfil** | A configuração da produção: **CLÁSSICO** ou **AURALY**. Muda quantas imagens por K, quantas variações por V e como K casa com V. |
+| **Perfil** | A configuração da produção: **CLÁSSICO** ou **AURALY**. Muda o modelo de vídeo e como K casa com V. Em todo perfil: 4 imagens por K e 1 vídeo por V (regra única, v19). |
 | **MAPA K/V** | A tabela que diz qual K serve de INITIAL FRAME para cada V. |
 | **MAPA DE ANEXOS** | A tabela que diz quais imagens anexar em cada K (âncora, REF-P, frame de composição). |
 | **Lote** | Grupo de no máximo 7 códigos V executados de uma vez. |
@@ -167,7 +167,7 @@ O agente precisa saber o perfil antes de gerar qualquer coisa. O pacote diz qual
 | Modelo de vídeo | **Omni Flash, e só ele** | Veo 3.1 Lite |
 | Prioridade | padrão do Omni Flash | Lower Priority |
 | Duração por clipe | 8 segundos | 8 segundos |
-| Variações por V | **1** | **3** |
+| Variações por V | **1** | **1** (regra única desde a v19) |
 | Como a imagem vira vídeo | INITIAL FRAME | INITIAL FRAME |
 | Como K casa com V | pelo número (regra do maior K ≤ V) | **só pelo MAPA K/V explícito** |
 | Lote de vídeo | até 7 códigos V por vez | até 7 códigos V por vez |
@@ -338,7 +338,7 @@ correção.
    objeto.
 4. Colar **só o texto do V** no campo de prompt (conferir as três marcas).
 5. Clássico: **Omni Flash**, 8 segundos, **1 resultado**. Auraly: Veo 3.1 Lite, Lower Priority,
-   8 segundos, 3 variações.
+   8 segundos, 1 resultado. Em todos os perfis, quantidade de saída do vídeo = 1.
 6. Salvar com o código no nome.
 
 **A fala é literal.** Não mexa em nenhuma palavra entre aspas. **Não adicione** música, legenda,
@@ -538,7 +538,7 @@ IMAGENS
 VÍDEOS
 [ ] Para cada V: MAPA K/V → imagem APROVADA do K → anexar como INITIAL FRAME
 [ ] Colar SÓ o texto do V e conferir as 3 marcas (o que acontece / câmera / som ambiente)
-[ ] Clássico: Omni Flash, 8s, 1 resultado · Auraly: Veo 3.1 Lite, Lower Priority, 8s, 3 variações
+[ ] Clássico: Omni Flash, 8s, 1 resultado · Auraly: Veo 3.1 Lite, Lower Priority, 8s, 1 resultado
 [ ] Lotes de até 7 V, esperar "prossiga"
 [ ] Aprovar cada clipe pelo checklist da seção 11
 
@@ -574,7 +574,7 @@ incompativel com os codigos recebidos exige esclarecimento, nunca escolha silenc
 | Video | Veo 3.1 Lite | Omni Flash, e somente ele |
 | Prioridade | Lower Priority | Padrao do Omni Flash |
 | Duracao por clipe | 8 segundos | 8 segundos |
-| Variacoes por V | 3 | 1, um unico resultado por prompt |
+| Variacoes por V | 1, um unico resultado por prompt | 1, um unico resultado por prompt |
 | Anexo do video | INITIAL FRAME | INITIAL FRAME |
 | Lote de video | Fechado, no maximo 7 codigos V | Fechado, no maximo 7 codigos V |
 
@@ -742,7 +742,7 @@ por exemplo, `V06: K06`, `V07: K06`, `V08: K06` e `V09: K06` quando varios takes
 frame de corpo. Isto e reutilizacao deliberada, nao ausencia de imagem. Cada V precisa ter exatamente
 um K mapeado, e esse K precisa ter uma candidata manualmente aprovada. Nunca inferir pelo numero,
 aparencia ou ordem da galeria quando o mapa estiver ausente ou ambiguo; parar e pedir correcao.
-Cada codigo V tem tres variacoes do mesmo prompt e frame selecionado.
+Cada codigo V tem uma unica variacao (um resultado), gerada do frame selecionado.
 
 CLASSICO: V usa o maior K disponivel cujo numero nao exceda o de V. Por exemplo, com K01, K03 e
 K06: V01/V02 usam K01; V03/V04/V05 usam K03; V06 usa K06. Se nao houver K anterior ou igual,
@@ -754,8 +754,8 @@ Flash a partir da UNICA imagem que o operador deixou naquele K.
 1. Receber e registrar toda a fila V, sem executar tudo automaticamente.
 2. Antes de cada V, conferir avatar, perfil e K indicado no MAPA K/V.
 3. Usar a imagem exclusivamente como INITIAL FRAME, nunca Element, ingredient ou referencia de objeto.
-4. Configurar o modelo do perfil: AURALY em Veo 3.1 Lite, Lower Priority, oito segundos, tres
-   variacoes; CLASSICO somente em Omni Flash, oito segundos, um unico resultado por V.
+4. Configurar o modelo do perfil: AURALY em Veo 3.1 Lite, Lower Priority, oito segundos, um
+   unico resultado por V; CLASSICO somente em Omni Flash, oito segundos, um unico resultado por V.
 5. Iniciar somente o primeiro lote de no maximo sete codigos V. Variacoes pertencem ao codigo;
    o teto e de codigos, nao uma autorizacao para iniciar codigos adicionais por vaga liberada.
 6. Esperar todos os codigos e variacoes desse lote. Nao preencher vagas com o lote seguinte.
