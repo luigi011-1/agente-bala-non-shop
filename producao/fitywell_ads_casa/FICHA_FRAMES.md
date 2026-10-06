@@ -31,7 +31,7 @@ Desvio (acabamento): academia vira sala de casa e cabo vira elástico (puzzle); 
 | G8 | N/A | sem rosto e sem fala |
 
 ## K02
-Frame: `input/frames_modelo/REF_senhora.png`
+Frame: `input/frames_modelo/REF_senhora.png` (so para conferencia, nao anexado)
 Take: T1b
 Herói: a senhora de cabelo prateado sentada de lado no banco olhando o celular
 Termos de forma: "silver-grey shoulder-length hair" · "burgundy short-sleeve athletic t-shirt"
@@ -61,7 +61,7 @@ Desvio (acabamento): academia vira sala de casa e aparelho vira banco de treino 
 | G8 | N/A | boca fechada, sem fala |
 
 ## K03
-Frame: `input/frames_modelo/REF_app_B.png`
+Frame: `input/frames_modelo/REF_app_B.png` (so para conferencia, nao anexado)
 Take: T2
 Herói: o celular com o template claro do app e as mãos dela rolando
 Termos de forma: "orange-tan leather case" · "two-column grid of white cards"
@@ -79,7 +79,7 @@ Desvio (acabamento): tela genérica sem marca com aba de refeição; luz neutra 
 | F2 | OK | "fill about 80 percent of the frame" |
 | F3 | OK | "about 25 cm from the lens" |
 | F4 | OK | "iPhone 1x lens held at chest height" |
-| F5 | OK | "Her right thumb rests on the right edge of the phone" |
+| F5 | OK | "Her right thumb rests along the right edge of the phone" |
 | F6 | OK | "Nobody else in frame" |
 | G1 | OK | "Neutral overcast daylight from the window" |
 | G2 | N/A | close, sem janela no quadro |
