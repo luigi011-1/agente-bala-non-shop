@@ -10,7 +10,7 @@ CTA original: "To definitively confirm that this message is for you, comment ame
 **Rodada:** VALIDAÇÃO (um gancho só, o do modelo, fiel)
 **Avatares:** Avery Knox, Devon Price, Jordan Vale (mesma copy nos três)
 **Objetivo:** SALE, ramificação dinheiro, prosperidade e fortuna. Destino: Stories
-**Estado:** WAITING_SCRIPT_APPROVAL
+**Estado:** APROVADO (Luigi, 2026-10-06)
 
 ## 01 - ORIGINAL STRUCTURE
 

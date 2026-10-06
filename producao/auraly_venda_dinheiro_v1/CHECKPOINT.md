@@ -8,37 +8,41 @@ Round: VALIDATION
 Reference video: producao/auraly_venda_dinheiro_v1/input/modelo.mp4 (snapinsta-1791302581803.mp4)
 Scenario: cozinha do modelo, azulejo branco tipo metrô, prateleiras de madeira com plantas e livros, janela grande com cerca e jardim, bancada cinza clara, recipiente de vidro retangular no primeiro plano
 
-Current stage: WAITING_SCRIPT_APPROVAL
-Current avatar: Avery Knox
-Next action: esperar o Luigi aprovar ou ajustar o roteiro e o hook fiel (ROTEIRO.md); depois colar INSTRUCOES_AGENTE_FLOW.md (versão com a regra nova: K só com character sheet, V só com a imagem escolhida) e entregar K+V do avatar ativo
+Current stage: PRODUCTION_COMPLETE
+Current avatar: NONE
+Next action: quando o Luigi confirmar a postagem, registrar com python3 gerenciar_operacao.py registrar (controle/README.md)
 
 ## Avatar queue
-[ACTIVE] Avery Knox (producao/_ancoras/character_sheets/avery_knox_character_sheet.jpg)
-[PENDING] Devon Price (producao/_ancoras/character_sheets/devon_price_character_sheet.jpg)
-[PENDING] Jordan Vale (producao/_ancoras/character_sheets/jordan_vale_character_sheet.jpg)
+[DONE] Avery Knox
+[DONE] Devon Price
+[DONE] Jordan Vale
+
+Character sheets: producao/_ancoras/character_sheets/<avatar>_character_sheet.jpg
 
 ## Approved script
-status: PENDING_APPROVAL
+status: APPROVED (Luigi, 2026-10-06)
 file: ROTEIRO.md
 
 ## Selected hooks
-status: PENDING_APPROVAL (hook fiel junto com o roteiro)
+status: APPROVED (hook fiel aprovado junto com o roteiro, 2026-10-06)
 hooks: HOOK 1 - FIEL - Álcool e canela no pote de vidro
 formato: fiel-validacao
 acao estrutural: avatar despeja um líquido e um pó num recipiente de vidro e mexe com o dedo, falando
 eixos de troca: n/a (validacao)
 
 ## Current avatar assets
-image prompts: pendente
-video prompts: pendente
+image prompts: FLOW_<AVATAR>.md dos 3 avatares (K01, K02)
+video prompts: FLOW_<AVATAR>.md dos 3 avatares (V01 a V16)
 
 ## Completed
 - Intake: 2 vídeos modelo + 3 character sheets; este chat fica com o vídeo 1
 - ANALYSIS: /watch em input/modelo_watch/; plano único de 110,8s, gancho falado desde 0s
-- SCRIPT_MODELLING: ROTEIRO.md + GANCHOS_VISUAIS.md
+- SCRIPT_MODELLING: ROTEIRO.md + GANCHOS_VISUAIS.md, aprovados 2026-10-06
+- FICHA_FRAMES.md (K01, K02, placar 14/14) + gerar_pacote.py
+- Pacotes dos três avatares entregues 2026-10-06 (K01, K02, V01 a V16), agente do Flow em flow_agente/AGENTE_FLOW_AURALY_ATUAL.md
 
 ## Pending
-- Aprovação do roteiro; pacote K+V dos 3 avatares
+- Geração no Flow, montagem e postagem (marcos do Luigi)
 
 ## User decisions
 - Decision: venda Auraly com oferta de dinheiro, prosperidade e fortuna, promessas e consequências agressivas se pular os selos
@@ -49,4 +53,4 @@ video prompts: pendente
   Operational consequence: cenário, pose e ação do modelo vão por escrito em cada K
 
 ## Next response format
-- Roteiro bilíngue completo e parar em WAITING_SCRIPT_APPROVAL
+- Pacote por avatar (MAPA K/V, K, V, transcrição); sem bloco de instruções do Flow (já está com o Luigi)

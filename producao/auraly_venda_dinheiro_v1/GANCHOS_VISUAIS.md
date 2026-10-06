@@ -31,7 +31,7 @@ HOOK 1 - FIEL - Álcool e canela no pote de vidro
 Cena:
 Plano único 0 a 5,4s, câmera fixa frontal na altura do peito, avatar em pé atrás da bancada, da cintura para cima. 0,0s: segura o frasco de álcool numa mão e o pote de canela na outra, ambos colados na lente, falando. 0,6 a 1,6s: inclina o frasco e o álcool cai num recipiente retangular de vidro no primeiro plano. 1,6 a 2,4s: polvilha a canela. 2,4 a 5,4s: mexe a mistura com o dedo indicador, depois ergue o recipiente com as duas mãos em direção à lente. 5,4 a 6,0s: flash branco de transição (feito no CapCut) para o plano falado fixo com o recipiente apoiado no primeiro plano. Fala desde 0,0s. O acabamento segue GATE_VISUAL.md Partes 1 a 3 (luz neutra, tudo em foco, herói colado na lente).
 Screen text:
-Legenda karaokê palavra a palavra da fala do T1 em branco, fonte serifada grossa, centro do quadro (como o modelo).
+"I know it sounds ridiculous" (legenda karaokê palavra a palavra da fala do T1, em branco, fonte serifada grossa, centro do quadro, como o modelo).
 Desvios obrigatorios:
 - Frasco e pote sem marca nem rótulo legível (moderação e regra de marca).
 - Acabamento do GATE_VISUAL no lugar da luz do modelo.
