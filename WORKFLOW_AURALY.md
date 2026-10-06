@@ -538,13 +538,14 @@ analises longas.
 > 5. **Anexo de identidade em todo `K__` = o CHARACTER SHEET do avatar**, em
 >    `producao/_ancoras/character_sheets/<avatar>_character_sheet.jpg` (gerado com
 >    `producao/_ancoras/PROMPT_CHARACTER_SHEET_AURALY_2026-10-04.md`). Trava rosto, pele, cabelo, corpo e
->    roupa. Junto dele vai o frame do modelo do mesmo código, só como composição e cenário. A foto em
->    cena real deixa de ser anexo dos K. Roster com sheet: Avery Knox, Devon Price, Jordan Vale e Morgan
+>    roupa. **É o ÚNICO anexo (Luigi, 2026-10-06): o frame do modelo NÃO é mais anexado** (nem no K nem no V; no V
+>    o único anexo é a imagem escolhida do K). Cenário, ângulo e enquadramento do modelo vão por extenso no
+>    texto. A foto em cena real deixa de ser anexo dos K. Roster com sheet: Avery Knox, Devon Price, Jordan Vale e Morgan
 >    Vance (nomes = arquivos do Luigi).
 > 6. **`reference_use` padrão:** `Use the first attached image (character sheet) only for [Name]'s exact
->    identity (face, skin, hair, body) and wardrobe; ignore its grey studio background. Use the second
->    attached image (frame of the model video) as the reference for the setting, camera angle and
->    framing; do not copy its person, clothes or on-screen text.` Proibido no K do Auraly: `the same
+>    identity (face, skin, hair, body) and wardrobe; ignore its grey studio background. The setting, camera
+>    angle and framing are described in full in the scene, camera and composition fields; no other image is
+>    attached.` (v20, 2026-10-06: sem segunda imagem.) Proibido no K do Auraly: `the same
 >    lived-in room as the reference`, `as the reference, unchanged`, `own setting` (o linter reprova).
 > 7. **O `scene` descreve por escrito o cenário do modelo**, porque o K é autossuficiente: o lugar (e a
 >    região dos EUA quando dá para ler), parede, piso e móveis com cor, a janela ou o céu com cor e de

@@ -11,7 +11,7 @@ Para Angle 1 e Angle 2, as regras classicas abaixo continuam aplicaveis; FitWell
 que substitui os trechos antigos daqui sobre contagem de variacoes e casamento K/V.
 Angle 4 = Body Hacks For Men 40+, de volta ao intake em 2026-10-02 (Luigi) para rodar na holistic.brandon
 (COACH), ao lado de Dana, Jamie e Lynn (PAR).
-🔴 **SÓ AURALY (Luigi, 2026-10-04):** anexo de todo K = character sheet do avatar + frame do modelo. **Cenário e ângulo de câmera = os do VÍDEO MODELO, quase 100% fiéis; não inventar cenário.** Muda só o acabamento do `GATE_VISUAL.md` (luz neutra, céu ou janela com cor, herói colado na lente, foco, realismo). Orgânico, nada sobrenatural. Detalhe em `WORKFLOW_AURALY.md`. Nos outros ângulos nada muda.
+🔴 **SÓ AURALY (Luigi, 2026-10-04):** anexo de todo K = SÓ o character sheet do avatar (2026-10-06: o frame do modelo não é mais anexado, o cenário e a câmera vão por extenso no texto); no V, só a imagem escolhida do K. **Cenário e ângulo de câmera = os do VÍDEO MODELO, quase 100% fiéis; não inventar cenário.** Muda só o acabamento do `GATE_VISUAL.md` (luz neutra, céu ou janela com cor, herói colado na lente, foco, realismo). Orgânico, nada sobrenatural. Detalhe em `WORKFLOW_AURALY.md`. Nos outros ângulos nada muda.
 Nao perguntar novamente por angulo ou avatar ja definidos. Uma tarefa de analise, organizacao ou
 manutencao nao e uma ordem para executar a proxima etapa de producao.
 
@@ -694,7 +694,7 @@ FLOW DELIVERY FORMAT), cada `K__` descreve o cenário inteiro por escrito (ficha
 se repetem em todo vídeo e todo gancho da conta; o que varia é o conteúdo e o ângulo de câmera. Só o
 movie style / short form não tem avatar fixo. Revoga o cenário e a roupa próprios por gancho do Auraly.
 🔴 **Exceção SÓ do Auraly App (Luigi, 2026-10-04):** no Auraly o anexo de todo `K__` passa a ser o
-**character sheet** do avatar (`producao/_ancoras/character_sheets/`) mais o frame do modelo, e **o
+**character sheet** do avatar (`producao/_ancoras/character_sheets/`), sozinho (o frame do modelo deixou de ser anexo em 2026-10-06), e **o
 cenário e o ângulo de câmera são os do VÍDEO MODELO, quase 100% fiéis**, descritos por inteiro no
 `scene`; não se inventa cenário. Só o acabamento do `GATE_VISUAL.md` muda (luz neutra, céu ou janela
 com cor, herói colado na lente, foco, realismo). Orgânico, nada sobrenatural. A roupa continua a do

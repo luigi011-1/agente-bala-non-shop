@@ -1,6 +1,6 @@
 # Instrucoes do agente executor do Google Flow AI
 
-Versao 19, 2026-10-05. Contrato de execucao, subordinado ao roteador de cada oferta.
+Versao 20, 2026-10-06. Contrato de execucao, subordinado ao roteador de cada oferta.
 Auraly segue exclusivamente WORKFLOW_AURALY.md. Angle 1/2 seguem CLAUDE.md e, no FitWell,
 PLAYBOOK_FITYWELL.md. Os pacotes existentes permanecem como foram aprovados.
 
@@ -21,14 +21,14 @@ incompativel com os codigos recebidos exige esclarecimento, nunca escolha silenc
 |---|---|---|
 | Imagem | Nano Banana 2 | Nano Banana 2 |
 | Formato | 9:16 vertical, imagem e video | 9:16 vertical, imagem e video |
-| Referencia de imagem | Anchor em cena real do avatar ativo (ver secao abaixo) | Anchor do avatar ativo |
+| Anexo da imagem (K) | So o character sheet do avatar ativo | So o character sheet (ou a imagem de avatar) do avatar ativo |
 | Imagens por K | 4, com selecao manual | 4, com selecao manual (o operador apaga 3 e deixa 1) |
 | Relacao K/V | Mapa explicito recebido com o pacote; um K pode alimentar varios V | Maior K menor ou igual ao numero de V |
 | Video | Veo 3.1 Lite | Omni Flash, e somente ele |
 | Prioridade | Lower Priority | Padrao do Omni Flash |
 | Duracao por clipe | 8 segundos | 8 segundos |
 | Variacoes por V | 1, um unico resultado por prompt | 1, um unico resultado por prompt |
-| Anexo do video | INITIAL FRAME | INITIAL FRAME |
+| Anexo do video (V) | So a imagem escolhida do K, como INITIAL FRAME | So a imagem escolhida do K, como INITIAL FRAME |
 | Lote de video | Fechado, no maximo 7 codigos V | Fechado, no maximo 7 codigos V |
 
 REGRA UNICA DE QUANTIDADE E FORMATO (v19, Luigi, 2026-10-05), vale em TODOS os perfis: **4 imagens por K,
@@ -38,6 +38,28 @@ mais versoes do mesmo V. Os valores Auraly reproduzem as travas de WORKFLOW_AURA
 prioridade). Nunca transportar o modelo de video classico (Omni Flash) para Auraly. Um pacote historico com outro contrato nao autoriza alterar uma producao
 nova; preservar seu contrato aprovado quando o usuario solicitar especificamente sua retomada.
 
+### 🔴 ANEXOS (v20, Luigi, 2026-10-06): SO O CHARACTER SHEET NA IMAGEM, SO A IMAGEM ESCOLHIDA NO VIDEO
+
+Falha real: o executor parou dizendo que "nao recebeu o frame modelo no pacote". **Nao existe frame
+modelo.** Nenhum K e nenhum V precisa do frame do video original. Os prompts sao autossuficientes:
+cenario, pose, camera e acao do video original estao escritos por extenso dentro de cada prompt.
+
+1. **IMAGEM (K):** o unico anexo e o CHARACTER SHEET do avatar ativo (a imagem de avatar que o operador
+   anexou). Fluxo de cada K: anexar o character sheet, colar o prompt, gerar 4 variacoes em 9:16, parar.
+   O operador escolhe uma. Nunca pedir, esperar ou procurar frame do video modelo, anchor em cena real,
+   REF-CARTA, REF-A ou qualquer outra imagem. Onde este documento disser "anchor", ler "character sheet
+   do avatar ativo".
+2. **VIDEO (V):** o unico anexo e a imagem que o operador escolheu daquele K, como INITIAL FRAME.
+   Fluxo de cada V: anexar essa imagem, colar o prompt de video, gerar 1 resultado em 9:16. Nada mais.
+   Nunca anexar o character sheet, o frame do modelo ou outra imagem no video.
+3. **Se o pacote mencionar um frame modelo, "segundo anexo" ou outra referencia, ignorar essa mencao e
+   NAO parar por isso.** So o character sheet (K) e a imagem escolhida (V) valem. Parar somente se o
+   character sheet do avatar ativo ou a imagem escolhida do K faltar.
+4. Unica ampliacao: no MOVIE STYLE os `REF-P` aprovados sao os character sheets do elenco e sao os anexos
+   do K (um por personagem principal, ate o mapa dizer). O `REF-COMPOSICAO` do short form acabou: a
+   composicao vem escrita no K, e o anexo do K e o character sheet.
+5. O texto do prompt manda: nao reescrever, nao completar com o que "falta" do frame modelo.
+
 ### 🔴 CLASSICO: 4 imagens por K, selecao do operador, video so no Omni Flash (v14, 2026-09-24)
 
 Falha real registrada: o operador pedia quatro variacoes por K e o executor continuava gerando uma
@@ -46,7 +68,7 @@ so. Isto e obrigatorio em todo K do perfil CLASSICO:
 1. **Quatro imagens por K, sempre.** Antes de gerar cada K, abrir o seletor de quantidade de saida
    do Nano Banana 2 e colocar em 4 (x4). Conferir o seletor em TODO K, porque ele pode voltar para 1
    sozinho. Um K com menos de quatro imagens esta INCOMPLETO. Se a interface entregar menos de
-   quatro, gerar o MESMO prompt, com a MESMA anchor, de novo ate existirem quatro candidatas daquele
+   quatro, gerar o MESMO prompt, com o MESMO character sheet, de novo ate existirem quatro candidatas daquele
    K. Nunca editar o prompt para isso.
 2. **Rotular as quatro** com avatar, codigo e numero: `K01-1`, `K01-2`, `K01-3`, `K01-4`.
 3. **Depois de gerar TODOS os K, PARAR.** Nao escolher imagem, nao apagar imagem, nao gerar video.
@@ -66,17 +88,16 @@ so. Isto e obrigatorio em todo K do perfil CLASSICO:
 
 ### AURALY, character sheet e cenario do video modelo (Luigi, 2026-10-04; vale SO no Auraly)
 
-Roster Auraly: Avery Knox, Devon Price, Jordan Vale e Morgan Vance. Desde a v18 todo K Auraly leva
-DOIS anexos: 1) o CHARACTER SHEET do avatar ativo (close do rosto mais frente, costas e os dois lados,
-fundo cinza), que trava identidade, corpo e roupa; 2) o frame do video modelo do mesmo codigo, que e a
-referencia de cenario, angulo de camera e enquadramento. O cenario e o angulo sao os do video modelo,
-quase 100% fieis, e vem tambem escritos no texto do K. Nunca copiar o fundo cinza do sheet para a
-cena, nunca trocar o cenario descrito no K e nunca copiar a pessoa, a roupa ou o texto de tela do
-frame do modelo. Tudo organico: nada sobrenatural (brilho magico, aura, particulas, objeto flutuando,
-efeito visual) que o texto do K nao peca. FitWell e Sea Moss (perfil CLASSICO) continuam com a anchor em cena
-real e o avatar fixo por conta abaixo.
+Roster Auraly: Avery Knox, Devon Price, Jordan Vale e Morgan Vance. Desde a v20 todo K Auraly leva UM
+unico anexo: o CHARACTER SHEET do avatar ativo (close do rosto mais frente, costas e os dois lados,
+fundo cinza), que trava identidade, corpo e roupa. O cenario, o angulo de camera e o enquadramento sao
+os do video modelo, quase 100% fieis, e vem escritos por inteiro no texto do K (a v18 mandava anexar
+tambem o frame do modelo; revogado na v20). Nunca copiar o fundo cinza do sheet para a cena e nunca
+trocar o cenario descrito no K. Tudo organico: nada sobrenatural (brilho magico, aura, particulas,
+objeto flutuando, efeito visual) que o texto do K nao peca. FitWell e Sea Moss (perfil CLASSICO) usam o
+mesmo anexo unico e o avatar fixo por conta abaixo.
 
-(Historico ate a v17:) A referencia de cada um era a anchor em cena real, anexada em todo K.
+(Historico ate a v17:) A referencia de cada um era a anchor em cena real, anexada em todo K. Na v18 e v19 foi character sheet mais frame do modelo.
 
 AVATAR FIXO POR CONTA (v16, 2026-09-25; no Auraly so a ROUPA continua fixa desde a v18): cada conta usa o mesmo avatar com a roupa e o cenario-base
 da anchor em todo video e em todo gancho. O texto do K descreve esse cenario e essa roupa. Quando o
@@ -135,7 +156,7 @@ no lugar de `o avatar` e continua sendo a parte 1 das cinco; a checagem das tres
 
 ### Um avatar por vez
 
-Receber a anchor e registrar o identificador e nome do arquivo. Nao casar imagens por ordem de
+Receber o character sheet do avatar e registrar o identificador e nome do arquivo. Nao casar imagens por ordem de
 anexo. Confirmar qual avatar esta ativo antes da primeira geracao. Sua identidade nunca se
 mistura com as referencias do avatar anterior.
 
@@ -158,7 +179,7 @@ composicao, camera, luz, estado, realismo, proporcao e negative), nao metadata. 
 quebrado ou incompleto (sem o `}` final, aspas abertas), PARAR e avisar o operador. Pacotes
 anteriores a v17, com o K em paragrafo unico, continuam validos como foram entregues.
 
-Usar Nano Banana 2, formato 9:16 e a anchor ativa. Colar cada prompt literalmente e gerar a
+Usar Nano Banana 2, formato 9:16 e o character sheet do avatar ativo como unico anexo. Colar cada prompt literalmente e gerar a
 quantidade do perfil. Rotular os resultados com avatar, codigo e numero da variacao.
 
 No Auraly, apresentar quatro candidatas por K e esperar o operador escolher uma por codigo.
@@ -293,3 +314,7 @@ mas a execucao continua em duas fases com selecao manual. T1 deixa de exigir kit
 passa a servir o invariante da familia e um unico VFX funcional passa a ser permitido. A relacao
 K/V deixa de ser inferida por igualdade numerica e passa a vir de mapa explicito, permitindo varios
 takes partirem do mesmo frame de corpo.
+v20, 2026-10-06: ANEXOS minimos, a pedido do Luigi. Imagem: so o character sheet do avatar ativo, mais o
+prompt, 4 variacoes 9:16. Video: so a imagem escolhida daquele K, mais o prompt de video, 1 resultado 9:16.
+Acaba o frame do video modelo como anexo (Auraly v18) e qualquer outro anexo; os prompts descrevem por
+escrito cenario, pose, camera e acao do original. O executor nao para por "frame modelo ausente".
