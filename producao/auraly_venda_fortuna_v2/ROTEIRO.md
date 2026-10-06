@@ -9,9 +9,9 @@ CTA original: "Send this video to yourself and comment 222 to lock this energy i
 **Origem:** ORGÂNICO (homem real, selfie agachado num hall de casa americana, plano único contínuo com jump cuts, números 777/888/111/222 em neon como camada de edição)
 **Rodada:** VALIDAÇÃO · **Objetivo:** SALE (dinheiro, prosperidade e fortuna)
 **Avatares:** Avery Knox, Devon Price, Jordan Vale (character sheets anexados pelo Luigi)
-**Estado:** WAITING_SCRIPT_APPROVAL
+**Estado:** APROVADO pelo Luigi em 2026-10-06 (IMAGE_PROMPTS + VIDEO_PROMPTS)
 
-## Esqueleto preservado
+## Esqueleto preservado (tabela)
 
 | # | Beat | Original | Adaptado |
 |---|---|---|---|
@@ -33,11 +33,67 @@ CTA original: "Send this video to yourself and comment 222 to lock this energy i
 5. **Voz por avatar:** nenhuma frase fala de gênero; Jordan fala igual.
 6. **Acabamento visual:** luz neutra, foco, realismo, herói colado na lente (GATE_VISUAL). Texto de tela e números neon (777, 888, 111, 222) ficam só no CapCut, nunca no K.
 
-## Tabela bilíngue (roteiro final completo)
+
+## Setups de cena
+
+- **Setup A (T1, gancho mudo, POV das mãos):** câmera do ponto de vista do avatar, na altura do peito olhando levemente para baixo; as duas mãos dele à frente, uma segurando o celular com capinha transparente, a outra encaixando a folha de louro sob a capinha. Hall branco ao fundo, piso de madeira clara.
+- **Setup B (T2 a T14, corpo):** avatar agachado nos calcanhares perto da lente, joelhos para cima, celular com a folha de louro visível na mão esquerda à esquerda do quadro, dedo da mão direita apontando para a lente. Mesmo enquadramento em todos os takes (jump cut a cada take, como no modelo).
+
+## Roteiro cena a cena
+
+### T1 · GANCHO FIEL · B-ROLL · MUDO · Setup A · CENA CURTA
+*(sem fala. POV das mãos: a mão direita encaixa a folha de louro sob a capinha transparente do celular e alisa com o polegar até a folha ficar centrada na parte de trás. Cena de ~3,3s no modelo, tarja fixa no CapCut "HIDE A BAY LEAF IN YOUR PHONE CASE".)*
+
+### T2 · INSTRUÇÃO + SEGREDO · TALKING · Setup B
+> "Hide a bay leaf inside your phone case and keep your mouth shut. Don't tell anyone about that while you're carrying it."
+
+### T3 · ESCASSEZ + SELEÇÃO · TALKING · Setup B
+> "Okay, I know it sounds ridiculous. Something extremely unusual is happening in your life right now. Almost everyone keeps scrolling,"
+
+### T4 · SELEÇÃO + AVISO · TALKING · Setup B
+> "but those who stay until the end often come back saying the timing was impossible to ignore. Don't you dare skip this video."
+
+### T5 · ELEIÇÃO · TALKING · Setup B
+> "This video is not for everyone. If this video found you, it found you for a reason. This message is for you."
+
+### T6 · ELEIÇÃO + PRAZO · TALKING · Setup B
+> "You were destined to see this. You are the chosen one. Tomorrow when you wake up, check your phone, okay?"
+
+### T7 · PROMESSA DO DINHEIRO · TALKING · Setup B
+> "Because you're about to receive some of the best news of your life: money you stopped waiting for is on its way to you."
+
+### T8 · SELO 1 (ENVIAR + 222) · TALKING · Setup B
+> "And I'm very serious about this. Send this video to yourself and comment 222, so this money gets locked to your name right now."
+
+### T9 · SELO 2 (SALVAR) · TALKING · Setup B
+> "Save this video, because it is going to happen, and when it finally does, you're going to be completely shocked."
+
+### T10 · CONSEQUÊNCIA DO SELO · TALKING · Setup B
+> "But hear this: skip even one of these seals and the seal stays open, and the money meant for your hands keeps slipping right through them."
+
+### T11 · PLANO ESPIRITUAL · TALKING · Setup B
+> "The spiritual realm is just, and it doesn't like when someone turns away from the help being sent to them."
+
+### T12 · PONTE STORIES · TALKING · Setup B
+> "But there's one last thing you need to know. Tap my profile picture and check my stories before they disappear."
+
+### T13 · SEGUNDA PARTE + PROFECIA · TALKING · Setup B
+> "Because the second part of this sign is waiting for you there. And I'm going to deliver a divine prophecy about the money and abundance coming into your life."
+
+### T14 · FECHAMENTO STORIES · TALKING · Setup B
+> "So go check my stories right now. Your message is waiting for you there."
+
+## Roteiro só-fala (TTS)
+
+Voz do avatar, sotaque americano, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, ficando mais firme e urgente nos selos e na consequência.
+
+Hide a bay leaf inside your phone case and keep your mouth shut. Don't tell anyone about that while you're carrying it. Okay, I know it sounds ridiculous. Something extremely unusual is happening in your life right now. Almost everyone keeps scrolling, but those who stay until the end often come back saying the timing was impossible to ignore. Don't you dare skip this video. This video is not for everyone. If this video found you, it found you for a reason. This message is for you. You were destined to see this. You are the chosen one. Tomorrow when you wake up, check your phone, okay? Because you're about to receive some of the best news of your life: money you stopped waiting for is on its way to you. And I'm very serious about this. Send this video to yourself and comment 222, so this money gets locked to your name right now. Save this video, because it is going to happen, and when it finally does, you're going to be completely shocked. But hear this: skip even one of these seals and the seal stays open, and the money meant for your hands keeps slipping right through them. The spiritual realm is just, and it doesn't like when someone turns away from the help being sent to them. But there's one last thing you need to know. Tap my profile picture and check my stories before they disappear. Because the second part of this sign is waiting for you there. And I'm going to deliver a divine prophecy about the money and abundance coming into your life. So go check my stories right now. Your message is waiting for you there.
+
+## Tradução completa (Português)
 
 | Take | English | Português |
 |---|---|---|
-| T1 · B-ROLL · MUDO | (sem fala. Tarja de tela: HIDE A BAY LEAF IN YOUR PHONE CASE) | (sem fala. Tarja de tela: ESCONDA UMA FOLHA DE LOURO NA CAPINHA DO CELULAR) |
+| T1 | (sem fala) | (sem fala) |
 | T2 | Hide a bay leaf inside your phone case and keep your mouth shut. Don't tell anyone about that while you're carrying it. | Esconda uma folha de louro dentro da capinha do seu celular e mantenha a boca fechada. Não conte a ninguém enquanto estiver carregando ela. |
 | T3 | Okay, I know it sounds ridiculous. Something extremely unusual is happening in your life right now. Almost everyone keeps scrolling, | Ok, eu sei que parece ridículo. Algo extremamente incomum está acontecendo na sua vida agora. Quase todo mundo continua rolando, |
 | T4 | but those who stay until the end often come back saying the timing was impossible to ignore. Don't you dare skip this video. | mas quem fica até o fim muitas vezes volta dizendo que o momento foi impossível de ignorar. Não se atreva a pular este vídeo. |
@@ -51,10 +107,6 @@ CTA original: "Send this video to yourself and comment 222 to lock this energy i
 | T12 | But there's one last thing you need to know. Tap my profile picture and check my stories before they disappear. | Mas há uma última coisa que você precisa saber. Toque na minha foto de perfil e veja meus stories antes que desapareçam. |
 | T13 | Because the second part of this sign is waiting for you there. And I'm going to deliver a divine prophecy about the money and abundance coming into your life. | Porque a segunda parte deste sinal está esperando por você lá. E eu vou entregar uma profecia divina sobre o dinheiro e a abundância que estão chegando na sua vida. |
 | T14 | So go check my stories right now. Your message is waiting for you there. | Então vá ver meus stories agora mesmo. Sua mensagem está esperando por você lá. |
-
-## Roteiro só-fala (inglês, para TTS)
-
-Hide a bay leaf inside your phone case and keep your mouth shut. Don't tell anyone about that while you're carrying it. Okay, I know it sounds ridiculous. Something extremely unusual is happening in your life right now. Almost everyone keeps scrolling, but those who stay until the end often come back saying the timing was impossible to ignore. Don't you dare skip this video. This video is not for everyone. If this video found you, it found you for a reason. This message is for you. You were destined to see this. You are the chosen one. Tomorrow when you wake up, check your phone, okay? Because you're about to receive some of the best news of your life: money you stopped waiting for is on its way to you. And I'm very serious about this. Send this video to yourself and comment 222, so this money gets locked to your name right now. Save this video, because it is going to happen, and when it finally does, you're going to be completely shocked. But hear this: skip even one of these seals and the seal stays open, and the money meant for your hands keeps slipping right through them. The spiritual realm is just, and it doesn't like when someone turns away from the help being sent to them. But there's one last thing you need to know. Tap my profile picture and check my stories before they disappear. Because the second part of this sign is waiting for you there. And I'm going to deliver a divine prophecy about the money and abundance coming into your life. So go check my stories right now. Your message is waiting for you there.
 
 ## Notas de produção
 
