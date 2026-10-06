@@ -23,3 +23,6 @@ Rei/
 # saida pesada do /watch (frames e grades, ~300 MB por video); transcript e manifest continuam versionados
 producao/*/_watch/frames/
 producao/*/_watch/overview/
+
+# videos modelo grandes ja cobertos por *.mp4; anexos crus do projeto Claude (sem extensao) tambem ficam fora
+uploads/
