@@ -1461,12 +1461,13 @@ def checar_auraly(pasta, roteiro):
 CENARIO_LEGADO_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "controle", "cenario_auraly_legado.json")
 # Frases que prendem o K ao cenario da foto em cena real. No Auraly, desde 2026-10-04, o cenario
 # e o do video modelo, descrito no texto, e o anexo de identidade e o character sheet de fundo cinza.
+RE_FRAME_ANEXO = re.compile(r"second attached image|frame of the model|model video frame|frame (?:do|of the) (?:modelo|original)", re.I)
 CENARIO_PRESO = [r"same lived-in", r"as the reference, unchanged", r"own setting"]
 
 
 def c_cenario_auraly(pasta):
     """Auraly, Luigi 2026-10-04: cenario e angulo do VIDEO MODELO (quase 100% fieis, organico, nada
-    sobrenatural), descritos por inteiro no scene; anexo = character sheet + frame do modelo.
+    sobrenatural), descritos por inteiro no scene; anexo = so o character sheet (sem frame do modelo, 2026-10-06).
 
     So Auraly. FitWell, Sea Moss e Body Hacks seguem com avatar fixo por conta. Producoes anteriores
     a regra ficam em controle/cenario_auraly_legado.json e nunca entram producoes novas nessa lista."""
@@ -1501,6 +1502,10 @@ def c_cenario_auraly(pasta):
                 ruim = True
                 falha("cenario", "%s prende o cenario a foto da ancora ('%s'). No Auraly o cenario e "
                                  "o do video modelo, descrito por inteiro no texto" % (rotulo, frase), loc)
+        if RE_FRAME_ANEXO.search(bloco):
+            ruim = True
+            falha("anexo", "%s manda anexar frame do modelo ou 'second attached image'. O unico anexo do K e o "
+                           "character sheet; cenario, camera e acao vao por extenso no texto (Luigi, 2026-10-06)" % rotulo, loc)
         if not re.search(r"character sheet", bloco, re.I):
             ruim = True
             falha("cenario", "%s nao usa o character sheet como referencia de identidade "
