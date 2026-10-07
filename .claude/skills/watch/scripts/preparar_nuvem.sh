@@ -1,34 +1,41 @@
 #!/usr/bin/env bash
-# Prepara a nuvem para o /watch: dependencias Python + modelo Whisper em cache.
-# Idempotente e barato quando ja esta pronto. Usado pelo hook SessionStart e
-# pode ser colado no "Setup script" do ambiente (ai o cache fica no snapshot).
-# Uso: preparar_nuvem.sh [modelo]   (padrao: small.en)
-# SO_DEPS=1 instala so as dependencias (rapido, sincrono no hook).
-MODEL="${1:-small.en}"
-DIR="$(cd "$(dirname "$0")/.." && pwd)"
-LOG="${TMPDIR:-/tmp}/preparar_nuvem.log"
-
-# 1) dependencias: so instala se faltar alguma
-if ! python3 -c "import faster_whisper, PIL, av" >/dev/null 2>&1; then
-  pip install -q -r "$DIR/requirements.txt" >>"$LOG" 2>&1
+# Existing SessionStart hook: prepare the canonical /watch baseline and cache its ASR model.
+# WhisperX is prepared by scripts/preparar_operacao.py, not downloaded on every cloud session.
+set -euo pipefail
+watch_model="${1:-small.en}"
+watch_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../../.." && pwd)"
+watch_log="${TMPDIR:-/tmp}/preparar_nuvem.log"
+watch_python="${BALA_PYTHON:-python3}"
+if [ -z "${BALA_PYTHON:-}" ] && [ -x "$watch_root/.venv-operacao/bin/python" ]; then
+  watch_python="$watch_root/.venv-operacao/bin/python"
 fi
-
-[ "$SO_DEPS" = "1" ] && exit 0
-
-# 2) modelo Whisper: so baixa se nao estiver no cache; falha de rede nao derruba nada
-python3 - >>"$LOG" 2>&1 <<PY
+if ! "$watch_python" - "$watch_root/.agents/skills/watch/requirements.txt" <<'CHECK_DEPS'
+import importlib.metadata as metadata
+from pathlib import Path
+import sys
+try:
+    for row in Path(sys.argv[1]).read_text().splitlines():
+        if row.strip() and not row.startswith("#"):
+            package, expected = row.split("==", 1)
+            if metadata.version(package) != expected:
+                raise ValueError("Versao diferente: " + package)
+except (metadata.PackageNotFoundError, ValueError):
+    sys.exit(1)
+CHECK_DEPS
+then
+  "$watch_python" -m pip install -q -r "$watch_root/.agents/skills/watch/requirements.txt" >>"$watch_log" 2>&1
+fi
+if [ "${SO_DEPS:-0}" = "1" ]; then exit 0; fi
+"$watch_python" - "$watch_model" >>"$watch_log" 2>&1 <<'WATCH_PY'
 import os
+import sys
 os.environ.setdefault("HF_HUB_ETAG_TIMEOUT", "10")
 os.environ.setdefault("HF_HUB_DOWNLOAD_TIMEOUT", "30")
 from faster_whisper.utils import download_model
+model = sys.argv[1]
 try:
-    download_model("$MODEL", local_files_only=True)
-    print("whisper $MODEL ja em cache")
+    download_model(model, local_files_only=True)
 except Exception:
-    try:
-        download_model("$MODEL")
-        print("whisper $MODEL baixado")
-    except Exception as e:
-        print("whisper $MODEL NAO baixou (rede bloqueada?):", type(e).__name__)
-PY
-exit 0
+    download_model(model)
+print(f"Whisper {model} pronto no cache")
+WATCH_PY

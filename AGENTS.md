@@ -88,6 +88,26 @@ browser automation sao historicos, salvo pedido explicito do usuario.
 - Nenhum gancho, K, V, pacote ou prompt avulso e enviado sem o checklist de envio 100% aprovado
   (`GATE_VISUAL.md` Parte 5, memoria `checklist-envio-prompt`). Item reprovado impede o envio.
 
+## Skills, especialistas e ferramentas da operacao (2026-10-06)
+
+`OPERACAO_AGENTES.md` descreve as interfaces de execucao, sem substituir os roteadores acima.
+As skills canonicas novas ficam em `.agents/skills/`: `operacao-bala`, `minerar-referencias`,
+`watch`, `adaptar-conteudo` e `revisar-producao`. Cada uma declara entradas, entregas e limites.
+`operacao/angulos.json` resolve os quatro produtos atuais e aponta suas doutrinas; nao e um workflow.
+
+O Codex orquestra com dois especialistas (`bala-pesquisador`, `bala-produtor`) e um revisor
+independente (`bala-revisor`, somente leitura), definidos em `.codex/agents/`. Antes de entregar
+um resultado destas skills, o revisor le os artefatos finais e as fontes, sem escrever a producao.
+Parecer tecnico nao substitui a aprovacao de roteiro do Luigi. Atualizar arquivos exige nova revisao.
+Taskpacks e fingerprints registram escopo e versao; o CHECKPOINT continua sendo o estado canonico.
+
+`scripts/dispatch.py` resolve a raiz real e usa `.venv-operacao`: `preflight`, `preparar`,
+`watch`, `minerar` e `registrar-revisao`. `scripts/preparar_operacao.py` prepara o runtime e
+registra as skills/agentes locais. Faster-Whisper transcreve; WhisperX e alinhamento opcional por
+palavra, sem diarizacao por padrao. A extracao do /watch nao substitui ver os frames.
+Crawlee coleta paginas publicas IG/FB limitadas e distingue filtros confirmados, desconhecidos
+e bloqueios. Nem idioma nem primeira postagem provam pais ou criacao do perfil.
+
 ## Regras de trabalho do projeto (espelho do projeto Claude, 2026-10-06)
 
 Estas regras vieram do projeto no claude.ai (instrucoes + memoria do projeto) e valem para o Codex

@@ -1,9 +1,17 @@
 ---
 name: gancho-verbal
-description: Escreve e audita a CAMADA VERBAL do gancho (fala do T1, texto de tela, legenda, titulo) em qualquer angulo (Korella, FitWell, Auraly). Use na etapa de ganchos de toda producao, junto com o Puzzle com degrau do GATE_VISUAL.md Parte 4, e sempre que o Luigi pedir hook, gancho escrito, texto de tela, legenda, caption, headline ou pedir para avaliar ou reescrever um gancho existente. Nao use para roteiro inteiro, corpo, CTA ou estrategia de marca.
+description: Escreve e audita a CAMADA VERBAL do gancho (fala do T1, texto de tela, legenda, titulo) em qualquer angulo (Sea Moss, FitWell, Auraly e Body Hacks). Use na etapa de ganchos de toda producao, junto com o Puzzle com degrau do GATE_VISUAL.md Parte 4, e sempre que o Luigi pedir hook, gancho escrito, texto de tela, legenda, caption, headline ou pedir para avaliar ou reescrever um gancho existente. Nao use para roteiro inteiro, corpo, CTA ou estrategia de marca.
 ---
 
 # /gancho-verbal · a camada que se LE e se OUVE no gancho
+
+## Contrato
+
+- **Entrada:** ângulo, roteiro, referência e rodada/estado registrados; aprovação quando exigida pela etapa.
+- **Entrega:** camada verbal e auditoria do gancho, com sincronização e desvios declarados quando aplicáveis.
+- **Limites:** não reescreve o corpo do roteiro, não muda oferta nem abre rodada VARIATION sem o gatilho de Luigi. A aprovação de roteiro não é inferida pela skill. Em VALIDATION, o hook fiel acompanha a modelagem/aprovação conforme o workflow; não se cria uma fila extra de dez hooks.
+
+Ler `AGENTS.md`, a doutrina do ângulo e a etapa atual antes de aplicar os exemplos. A gramática do T1 segue o vídeo modelo: fala se o modelo fala, mudo se o modelo é mudo. Os nomes e metáforas da Korella abaixo são histórico, sem migração para Sea Moss.
 
 Adaptado em 2026-09-22 da skill `hook-writer` (DR para suplementos DTC), a pedido do Luigi, para
 valer em todos os angulos. **Divisao de trabalho, que nao muda nada do que ja foi aprovado:**
@@ -94,14 +102,14 @@ Banco verbal:
 
 ## POR ANGULO (as travas da marca vencem a skill sempre)
 
-| | **Korella (A1)** | **FitWell (A2)** | **Auraly (A3)** |
-|---|---|---|---|
-| Filtro | homem 40+ pelo sujeito ou chamada direta | mulher 40+ | mulher 40+ dos EUA |
-| Onde mora o gancho verbal | fala do T1 + texto de tela | fala do T1 + texto de tela | **so texto de tela**: o T1 e MUDO, a voz entra no T2 |
-| Direcao | o homem do produto vence; narradora, ex, outros homens ficam para tras | **ela vence; a causa da falha e externa, nunca o esforco dela** (crivo roda duas vezes com coach homem) | ela faz o gesto, o universo responde; a perda e da inacao, nunca do valor dela |
-| Nivel 3 significa | estado, contagem ou duracao **pela metafora da marca** (`his soldier hasn't gone soft once this month`) | medida, numero, cena do dia (`zips the jeans without lying on the bed`) | situacao concreta e contavel (`sleeping on one side of the bed for 11 years`), nunca sexual |
-| Teste de print | mulher de 25 manda pro grupo com "OMG" | amiga de 45 manda com "this is literally me" | ela manda para a irma com "this is a sign" |
-| Travas que vencem esta skill | vocabulario proibido E1 (`mood`, `calm`, `erectile dysfunction`...), raiz so cortisol, produto nunca e a variavel | nunca culpar ela, sem produto em quadro, clickbait proibido | registro divino nunca oculto, rosto nunca revelado, clickbait liberado no fim e marcado, keyword `222` |
+| Ângulo | Oferta / público | Fonte da camada verbal |
+|---|---|---|
+| Sea Moss (A1) | Natural Rems Sea Moss Gummies, suplemento Amazon | `memoria/angulo1_copy_seamoss.md` |
+| FitWell (A2) | APP, homens e mulheres 40+ | `memoria/angulo2_copy_fitywell.md`; pago/organico conforme `AGENTS.md` |
+| Auraly (A3) | APP de manifestação e conexão | `WORKFLOW_AURALY.md` e as fontes da etapa/objetivo |
+| Body Hacks (A4) | Ebook de hábitos para homens 40+ | `memoria/angulo4_copy_bodyhacks.md`; papel COACH/PAR da conta |
+
+A oferta, público, mecanismo, promessa, metáfora e CTA não atravessam ângulos. Usar os testes verbais desta skill sobre a doutrina atual, sem transportar alegações históricas da Korella.
 
 **Onde o nivel 3 pode ficar mais cru:** no texto de tela, que nasce no CapCut e nao passa pela
 moderacao do Veo. Na FALA, o classificador de geracao le o token: usar a metafora da marca e nunca
@@ -122,7 +130,7 @@ paleta, sem `Recomendacao: HOOK X`, porque nao ha escolha.
 ## MODO PRODUCAO (dentro das 10 variacoes do Puzzle, so na rodada de variacao, todos os angulos)
 
 Usado na etapa de ganchos de toda producao (`WORKFLOW_AURALY.md` HOOK_IDEATION,
-`PLAYBOOK_FITYWELL.md` §3, P3.5 do `CLAUDE.md` na Korella).
+`PLAYBOOK_FITYWELL.md` §3, roteador `CLAUDE.md` nos ângulos 1, 2 e 4).
 
 1. Escrever o **PASSO 0** no topo, junto da acao estrutural, peca viral e degrau.
 2. Em cada uma das 10 variacoes, a frase muda **so porque a variavel visual mudou** (ela nomeia o

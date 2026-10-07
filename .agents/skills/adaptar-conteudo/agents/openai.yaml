@@ -1,0 +1,4 @@
+interface:
+  display_name: "Adaptar conteúdo"
+  short_description: "Adapta referências à etapa e ao produto corretos"
+  default_prompt: "Use $adaptar-conteudo para adaptar esta referência ao ângulo da produção ativa."

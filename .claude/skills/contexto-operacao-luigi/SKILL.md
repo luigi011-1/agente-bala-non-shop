@@ -5,7 +5,13 @@ description: "Contexto permanente da operação de afiliado/creator do Luigi —
 
 # Contexto da operação — Luigi
 
-Carregar este contexto antes de responder qualquer coisa sobre o negócio do Luigi. Não perguntar de novo o que já está aqui.
+## Contrato
+
+- **Entrada:** questão comercial ou operacional, ângulo e etapa quando necessários.
+- **Entrega:** contexto relevante com a fonte atual que sustenta a decisão, sem perguntar novamente o que já foi declarado.
+- **Limites:** este documento não determina aprovação, estado de produção, CTA ou receita realizada. Fase comercial e valores abaixo são contexto registrado; conferir a fonte atual quando a decisão depender deles.
+
+Ler `AGENTS.md` primeiro. Para decisões de produção, usar o roteador do ângulo e o checkpoint. O catálogo `operacao/angulos.json` distingue Sea Moss suplemento, FitWell APP, Auraly APP e Body Hacks ebook. Decisões atuais dos roteadores prevalecem sobre exemplos e roadmap desta skill.
 
 ## Momento atual (importante)
 
@@ -15,7 +21,7 @@ Consequência prática: até o primeiro retainer entrar, o que acelera **crescim
 
 ## Modelo de negócio
 
-Creator/afiliado no nicho de **nutracêuticos nos EUA** — saúde, beleza, bem-estar (encapsulados e em pó) e pets. Tráfego **100% orgânico**, principalmente **Instagram e Facebook**.
+Creator/afiliado no nicho de **nutracêuticos nos EUA** — saúde, beleza, bem-estar (encapsulados e em pó) e pets. Tráfego orgânico ou pago conforme o pedido, principalmente **Instagram e Facebook**; a operação também inclui os APPs FitWell/Auraly e o ebook Body Hacks, em ângulos separados.
 
 Três camadas de monetização:
 
@@ -36,7 +42,7 @@ Vários perfis com **1M+ seguidores**, **múltiplos retainers** e comissões ele
 ## Funil de venda
 
 1. Vídeo com **avatar de IA**; copy ataca a **dor** e só no final apresenta a solução.
-2. Pessoa **comenta a palavra-chave** → **DM automática** com link. Alternativa: link na bio.
+2. CTA atual conforme `AGENTS.md`: orgânico usa link na legenda, salvo a rota específica de Stories do Auraly; pago aponta ao botão do anúncio. Comentário → DM é usado quando Luigi pede esse funil explicitamente.
 3. **Deep link** abre direto no **app da Amazon** → compra em dois cliques.
 - Ferramenta de automação de DM citada no roadmap: **ReplyRush**.
 
@@ -57,7 +63,7 @@ Vários perfis com **1M+ seguidores**, **múltiplos retainers** e comissões ele
 
 **Crescimento** (~30–40s): valor puro (receita detox, health tip), CTA de engajamento + follow.
 **Venda** (~1min30): pesa na dor do prospect antes do produto, CTA de palavra-chave.
-*Nota do roadmap: os dois CTAs (comentário + follow) deveriam ir em **todo** vídeo, growth ou venda.*
+*Nota histórica do roadmap: comentário + follow não determina o CTA atual. Seguir objetivo, fonte orgânica/paga e roteador do ângulo.*
 
 ## Stack de produção
 

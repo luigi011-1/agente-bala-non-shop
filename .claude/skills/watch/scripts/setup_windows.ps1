@@ -42,7 +42,7 @@ if (-not (Get-Command ffprobe -ErrorAction SilentlyContinue)) {
 }
 
 $projectRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..\..\..")).Path
-$venvDir = Join-Path $projectRoot ".venv"
+$venvDir = Join-Path $projectRoot ".venv-operacao"
 $venvPython = Join-Path $venvDir "Scripts\python.exe"
 $requirements = Join-Path $PSScriptRoot "..\requirements.txt"
 

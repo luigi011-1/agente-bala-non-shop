@@ -1,4 +1,8 @@
 .venv/
+.venv-operacao/
+operacao/execucoes/
+.cache-operacao/
+storage/
 studio/data/
 studio/.venv/
 __pycache__/
