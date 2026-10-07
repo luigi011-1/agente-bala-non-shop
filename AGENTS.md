@@ -154,7 +154,7 @@ quando o assunto pedir.
 - Character sheets Auraly: Avery Knox = mulher loira ~60, camisa branca, jeans, joias turquesa; Devon
   Price = mulher de cabelo grisalho raspado, argolas, camisa jeans; Jordan Vale = homem de barba
   grisalha, colete de couro preto, tatuagens.
-- Avatares novos (2026-10-07, ainda sem character sheet gerado, prompts em `producao/auraly_avatares_rico_careca/`): Gordon Ashby = homem ~68, cabelo prateado, oculos de aro dourado, smoking creme com gravata-borboleta (rico); Celeste Marlow = mulher ~50 careca, blazer de renda creme, pulseira rose-gold, colar de coracao.
+- Avatares novos (2026-10-07, sheets aprovados em `producao/_ancoras/character_sheets/`, prompts em `producao/auraly_avatares_rico_careca/`; ficam no lugar de Devon Price e Jordan Vale): Gordon Ashby = homem ~68, cabelo prateado, oculos de aro dourado, smoking creme com gravata-borboleta (rico); Celeste Marlow = mulher ~50 careca, blazer de renda creme, pulseira rose-gold, colar de coracao.
 - Regra v19 (PR #26, ja no main): sempre 4 imagens por K e 1 video por V, sempre 9:16. Texto canonico
   em `producao/_flow/INSTRUCOES_AGENTE_FLOW.md`. Menu real do Flow: imagem "Nano Banana 2.1"; video
   "Veo 3.1 - Lite" (Auraly) e "Omni 1.1 Flash" (classico). Nao existe "Lower Priority".

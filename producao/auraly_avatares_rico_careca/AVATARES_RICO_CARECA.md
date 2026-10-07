@@ -2,8 +2,8 @@
 
 Criados a partir de 5 referências virais do estilo (homem grisalho elegante em cenário de luxo; mulher careca,
 acolhedora, com joias). Rostos ORIGINAIS: capturam o visual e o clima, não copiam as pessoas dos prints.
-Os dois leem como americanos. Ainda sem character sheet gerado: gerar abaixo, escolher 1 de 4, salvar em
-`producao/_ancoras/character_sheets/`.
+Os dois leem como americanos. Sheets escolhidos por Luigi em 2026-10-07 e salvos em `producao/_ancoras/character_sheets/`
+(`gordon_ashby_character_sheet.jpg`, `celeste_marlow_character_sheet.jpg`). Entram no lugar de Devon Price e Jordan Vale.
 
 ## Gordon Ashby (homem rico)
 Americano de ~68, magro e ereto, cabelo prateado cheio penteado para trás, óculos redondos de aro fino

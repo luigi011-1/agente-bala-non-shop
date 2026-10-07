@@ -540,8 +540,8 @@ analises longas.
 >    `producao/_ancoras/PROMPT_CHARACTER_SHEET_AURALY_2026-10-04.md`). Trava rosto, pele, cabelo, corpo e
 >    roupa. **É o ÚNICO anexo (Luigi, 2026-10-06): o frame do modelo NÃO é mais anexado** (nem no K nem no V; no V
 >    o único anexo é a imagem escolhida do K). Cenário, ângulo e enquadramento do modelo vão por extenso no
->    texto. A foto em cena real deixa de ser anexo dos K. Roster com sheet: Avery Knox, Devon Price, Jordan Vale e Morgan
->    Vance (nomes = arquivos do Luigi).
+>    texto. A foto em cena real deixa de ser anexo dos K. Roster com sheet: Avery Knox, Gordon Ashby, Celeste Marlow e Morgan
+>    Vance (nomes = arquivos do Luigi). 2026-10-07: Gordon e Celeste substituem Devon Price e Jordan Vale.
 > 6. **`reference_use` padrão:** `Use the first attached image (character sheet) only for [Name]'s exact
 >    identity (face, skin, hair, body) and wardrobe; ignore its grey studio background. The setting, camera
 >    angle and framing are described in full in the scene, camera and composition fields; no other image is
