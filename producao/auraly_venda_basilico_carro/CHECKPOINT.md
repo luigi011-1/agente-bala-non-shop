@@ -5,7 +5,9 @@ Angle: 3 (Auraly)
 Objective: SALE
 Round: VALIDATION
 Reference video: video1_modelo.mp4 (86,6s, homem agachado ao lado da porta traseira aberta de um SUV, pote de vidro nas mãos, folhas secas sob o tapete do carro)
-Scenario: entrada de garagem de bairro residencial americano em dia de sol, SUV escuro com a porta traseira aberta (bancos de couro preto, tapete de borracha), chão de concreto claro, casas e árvores ao fundo, céu azul
+Scenario (Avery): entrada de garagem de bairro residencial americano em dia de sol, SUV escuro com a porta traseira aberta (bancos de couro preto, tapete de borracha), chão de concreto claro, casas e árvores ao fundo, céu azul
+
+Scenario (Gordon, regra de luxo de Luigi 2026-10-07): mesma ação do modelo, porta traseira aberta de um Bentley Bentayga preto (carro de luxo) em frente ao portão de uma mansão, piso de pedra clara, jardim aparado e fachada de pedra ao fundo, céu azul
 
 Current stage: WAITING_SCRIPT_APPROVAL
 Current avatar: Gordon Ashby (sheet ainda não gerado; prompts escritos a partir de AVATARES_RICO_CARECA.md)
@@ -38,3 +40,6 @@ eixos de troca: n/a (validacao)
 - Decision: Avery Knox fica exatamente como está; ricaço = Gordon Ashby
   Reason: Luigi, 2026-10-07
   Operational consequence: mesma copy para os dois, só identidade muda
+- Decision: cenário do Gordon sempre de luxo máximo (dentro de casa = mansão; carro = carro de luxo ou esportivo; ar livre = viagem em lugar famoso: Torre Eiffel, Burj Khalifa, Marrocos etc.)
+  Reason: Luigi, 2026-10-07 (regra permanente para o Gordon)
+  Operational consequence: o scene dos K do Gordon troca o cenário do modelo pelo equivalente de luxo, mesma ação e câmera; Avery fica com o cenário do modelo

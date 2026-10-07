@@ -33,6 +33,6 @@ Plano 1 (0-3s): mãos coladas na lente, uma segura um pote de vidro e despeja fo
 Screen text:
 When you need money fast: / Tell nobody
 Desvios obrigatorios:
-Ingrediente trocado (louro vira manjericão) para não repetir a produção de ontem. Cortes dentro do V1 (modelo também corta de inserto para plano de corpo). T1 mudo; o modelo fala por cima.
+Gordon: SUV comum vira Bentley Bentayga preto em frente a uma mansão (regra de luxo do Luigi); Avery mantém o SUV do modelo. Ação e câmera iguais. Ingrediente trocado (louro vira manjericão) para não repetir a produção de ontem. Cortes dentro do V1 (modelo também corta de inserto para plano de corpo). T1 mudo; o modelo fala por cima.
 Delayed meaning:
 Por que o manjericão e o tapete ficam em aberto até o T6.
