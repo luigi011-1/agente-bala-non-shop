@@ -43,6 +43,7 @@ origem: avatar IA (formato IA: bandeira dos EUA em todo K; sem carta SOULMATE, o
 ## Setups de cena
 
 - **Setup A (T1, gancho mudo):** cozinha de casa americana de armários brancos e quina de mármore: o avatar ajoelhado no piso de lajotas bege, com o painel de madeira do rodapé inclinado para fora e os maços de notas de $100 à vista.
+- **Regra do Luigi, 2026-10-07 (só Gordon Ashby):** cenário sempre de luxo máximo. Vídeo modelo dentro de casa = o Gordon fica dentro de uma mansão fazendo a mesma ação (aqui: cozinha de mansão com o mesmo painel escondido no rodapé, mesma disposição e mesmo ângulo). Carro = carro de luxo ou esportivo; ao ar livre = lugar de luxo e conhecido (Torre Eiffel, prédio mais alto de Dubai, Marrocos). A Avery mantém o cenário original do modelo.
 - **Setup B (T2 a T14, corpo):** cozinha de armários de nogueira escura com puxadores dourados, quina de mármore branco com veios cinza à esquerda, backsplash de azulejo creme, piso de lajotas bege. Avatar agachado perto da lente, braço esquerdo apoiado na quina de mármore, nota de $100 na mão direita em primeiro plano baixo, olhando para a lente. Mesmo enquadramento em todos os takes.
 
 ## Roteiro cena a cena

@@ -46,5 +46,9 @@ video prompts: pendente
   Reason: Luigi, 2026-10-06
   Operational consequence: cenário, pose e ação do modelo vão por escrito em cada K
 
+- Decision: cenário do ricaço (Gordon Ashby) sempre de luxo máximo: dentro de casa = mansão com a mesma ação do modelo; carro = carro de luxo ou esportivo; ao ar livre = lugar de luxo famoso (Paris, Dubai, Marrocos). Avery mantém o cenário original.
+  Reason: Luigi, 2026-10-07
+  Operational consequence: K do Gordon descrevem cozinha de mansão com o painel do rodapé; Scenario do Gordon registrado à parte do da Avery
+
 ## Next response format
 - Roteiro bilíngue completo, depois pacote por avatar (MAPA K/V, K, V, transcrição) e o bloco do agente Flow só desta produção
