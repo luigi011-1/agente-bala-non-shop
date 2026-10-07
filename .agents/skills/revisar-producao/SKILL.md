@@ -7,17 +7,17 @@ description: Revisa de forma independente evidências de mineração e artefatos
 
 ## Contrato
 
-- **Entrada:** taskpack, arquivos reais da entrega, ângulo, etapa e fontes canônicas relevantes. Abrir os arquivos e formar a própria avaliação antes de aceitar as conclusões do autor.
+- **Entrada:** taskpack, arquivos reais da entrega, nicho/filtros para mineração ou ângulo/etapa para produção e fontes relevantes. Abrir os arquivos e formar a própria avaliação antes de aceitar as conclusões do autor.
 - **Entrega:** parecer no schema `operacao/schema_revisao.json`, com status, arquivos examinados, verificações realizadas, achados com evidência e limitações de cobertura.
 - **Limite:** revisão em leitura. Não corrigir arquivos, aprovar roteiro em nome de Luigi, atualizar checkpoint, executar Flow ou certificar mídia que não viu. O orquestrador salva e registra o parecer.
 
-Resolver a raiz real por este `SKILL.md` e ler `AGENTS.md`. Conferir o produto pelo catálogo e o estado pelo roteador; para Auraly, ler `WORKFLOW_AURALY.md` e o checkpoint da produção antes do artefato. Não exigir um pacote final durante uma revisão de roteiro.
+Resolver a raiz real por este `SKILL.md` e ler `AGENTS.md`. Em mineração, conferir o nicho e filtros do taskpack, sem exigir produto; em produção, conferir o produto pelo catálogo e o estado pelo roteador; para Auraly, ler `WORKFLOW_AURALY.md` e o checkpoint da produção antes do artefato. Não exigir um pacote final durante uma revisão de roteiro.
 
 ## Verificações relevantes
 
 | Entrega | Conferir independentemente |
 | --- | --- |
-| Mineração | URLs IG/FB, evidência de views e datas, EUA, criação da conta e IA exclusiva; candidatos desconhecidos não aparecem como aprovados. |
+| Mineração | Nicho solicitado sem restrição indevida a produto, URLs e identidade do vídeo/perfil, ranking por views confirmadas, datas no intervalo/fuso solicitado (padrão sete dias incluindo hoje), inglês do conteúdo, EUA, criação e IA exclusiva. Conferir fonte/método de cada campo; desconhecidos não aprovam filtros. |
 | `/watch` | Status real de áudio/alinhamento, cobertura da timeline, trechos-chave nos frames e correspondência de fala/timestamps; amostragem não equivale a assistir cada frame. |
 | Roteiro | Oferta e mecanismo do ângulo, origem da referência, objetivo/CTA, fidelidade aplicável, sequência/timing, tabela bilíngue completa e aprovação ainda pendente quando necessária. |
 | Prompts/pacote | Aprovação prévia real, fichas e evidências visuais exigidas, `GATE_VISUAL.md`, K/V e bloco Flow da produção; aplicar os validadores que os roteadores exigem. |

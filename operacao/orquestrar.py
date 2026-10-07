@@ -55,8 +55,18 @@ def checkpoint_fields(path):
             result[key] = match.group(1).strip()
     return result
 
-def prepare(angle_value, task, production=None, out=None, artifacts=None):
-    angle = resolve_angle(angle_value)
+def prepare(angle_value, task, production=None, out=None, artifacts=None, niche=None):
+    mining_context = niche is not None
+    if mining_context:
+        if task not in {'minerar', 'revisar'} or production or angle_value:
+            raise ValueError('Nicho é contexto de pesquisa/revisão; escolha oferta somente ao adaptar, sem misturar --angle/--production.')
+        from operacao.nichos import resolve_niche
+        niche = resolve_niche(niche)
+        angle = None
+    else:
+        if not angle_value:
+            raise ValueError('Informe --niche para minerar ou --angle para a etapa de produção.')
+        angle = resolve_angle(angle_value)
     prod = None
     if production:
         prod = Path(production).expanduser()
@@ -73,12 +83,16 @@ def prepare(angle_value, task, production=None, out=None, artifacts=None):
             raise ValueError("O ângulo informado conflita com o CHECKPOINT. Não misture produções.")
         if not state.get("Current stage") or not state.get("Next action"):
             raise ValueError("CHECKPOINT sem Current stage/Next action: regularize os fatos antes de executar.")
-    if angle["id"] == "3" and prod and not state:
+    if angle and angle["id"] == "3" and prod and not state:
         raise ValueError("Produção Auraly sem CHECKPOINT: registre o intake primeiro, sem inventar aprovações.")
-    sources = [ROOT / "AGENTS.md", ROOT / angle["canonical_router"], ROOT / "operacao/schema_revisao.json",
-               ROOT / "operacao/angulos.json", ROOT / ".agents/skills/revisar-producao/SKILL.md",
+    sources = [ROOT / "AGENTS.md", ROOT / "operacao/schema_revisao.json",
+               ROOT / ".agents/skills/revisar-producao/SKILL.md",
                ROOT / ".codex/agents/bala-revisor.toml"]
-    if task in {"adaptar", "revisar"}:
+    if angle:
+        sources += [ROOT / 'operacao/angulos.json', ROOT / angle['canonical_router']]
+    if mining_context:
+        sources += [ROOT / 'operacao/catalogo_nichos.json', ROOT / '.agents/skills/minerar-referencias/SKILL.md']
+    if angle and task in {"adaptar", "revisar"}:
         sources += [ROOT / path for path in angle["doctrine"]]
         sources += [ROOT / "GATE_VISUAL.md", ROOT / "PERFIL_ORGANICO.md",
                     ROOT / "producao/_flow/INSTRUCOES_AGENTE_FLOW.md"]
@@ -94,7 +108,7 @@ def prepare(angle_value, task, production=None, out=None, artifacts=None):
         raise ValueError("Todo --artifact deve apontar para um arquivo existente.")
     task_id = str(uuid.uuid4())
     target = Path(out).expanduser().resolve() if out else ROOT / "operacao/execucoes" / (
-        datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "-" + angle["slug"] + "-" + task_id[:8])
+        datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "-" + (niche["slug"] if mining_context else angle["slug"]) + "-" + task_id[:8])
     if target.exists() and any(target.iterdir()):
         raise ValueError(f"Saída ocupada: {target}. Use pasta nova para preservar a execução anterior.")
     target.mkdir(parents=True, exist_ok=True)
@@ -103,7 +117,7 @@ def prepare(angle_value, task, production=None, out=None, artifacts=None):
         role = "bala-revisor"
     pack = {
         "version": 1, "task_id": task_id, "created_at": datetime.now(timezone.utc).isoformat(),
-        "repo_root": str(ROOT), "angle": angle, "task": task, "worker": role,
+        "repo_root": str(ROOT), "angle": angle, "niche": niche, "task": task, "worker": role,
         "reviewer": "bala-revisor", "production": str(prod) if prod else None,
         "current_stage": state.get("Current stage"), "next_action": state.get("Next action"),
         "checkpoint": str(cp) if cp and cp.is_file() else None,
@@ -116,11 +130,11 @@ def prepare(angle_value, task, production=None, out=None, artifacts=None):
     }
     (target / "TASK.json").write_text(json.dumps(pack, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     instructions = (
-        f"# Execução {task_id}\n\nÂngulo: {angle['name']}\nTarefa: {task}\n"
+        f"# Execução {task_id}\n\nContexto: {niche['label'] if mining_context else angle['name']}\nTarefa: {task}\n"
         f"Especialista: {role}\nRevisor independente: bala-revisor\n\n"
         "Leia AGENTS.md e siga o roteador canônico. Abra somente os artefatos necessários à etapa.\n"
         f"Current stage: {pack['current_stage'] or 'não registrado'}\n"
-        f"Next action: {pack['next_action'] or 'registrar entradas e estado antes de adaptar'}\n\n"
+        f"Next action: {pack['next_action'] or ('pesquisar candidatos do nicho e verificar evidências' if task == 'minerar' else 'revisar os artefatos finais' if task == 'revisar' else 'registrar entradas e estado antes de adaptar')}\n\n"
         "Use as ferramentas do Codex para delegar; este CLI prepara contexto, não chama um modelo.\n"
         "Depois da autoria, prepare TASK novo para revisar a versão final. O revisor recebe as fontes e\n"
         "a entrega, avalia os fatos e retorna JSON conforme o schema, sem editar os arquivos.\n"
@@ -172,7 +186,7 @@ def register_review(task_path, review_path, out=None):
     return target, status
 
 def preflight():
-    packages = ["faster-whisper", "whisperx", "torch", "torchaudio", "Pillow", "av", "crawlee", "httpx2"]
+    packages = ["faster-whisper", "whisperx", "torch", "torchaudio", "Pillow", "av", "crawlee", "httpx2", "playwright"]
     versions = {}
     missing = []
     for package in packages:
@@ -181,6 +195,17 @@ def preflight():
         except importlib.metadata.PackageNotFoundError:
             missing.append(package)
     binaries = {x: shutil.which(x) for x in ("ffmpeg", "ffprobe")}
+    chrome = Path('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome')
+    browser = str(chrome) if chrome.is_file() else shutil.which('google-chrome') or shutil.which('google-chrome-stable')
+    if not browser and 'playwright' not in missing:
+        try:
+            from playwright.sync_api import sync_playwright
+            with sync_playwright() as playwright:
+                candidate = Path(playwright.chromium.executable_path)
+                browser = str(candidate) if candidate.is_file() else None
+        except Exception:
+            browser = None
+    binaries['browser'] = browser
     missing += [key for key, val in binaries.items() if not val]
     result = {"status": "READY" if not missing else "MISSING_DEPENDENCIES", "python": sys.version.split()[0],
               "runtime": sys.executable, "versions": versions, "binaries": binaries, "missing": missing,
@@ -192,7 +217,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
     prep = sub.add_parser("preparar")
-    prep.add_argument("--angle", required=True)
+    prep.add_argument("--angle")
+    prep.add_argument("--niche", help="Nicho livre de pesquisa, independente da oferta.")
     prep.add_argument("--task", required=True, choices=["minerar", "watch", "adaptar", "revisar"])
     prep.add_argument("--production")
     prep.add_argument("--out")
@@ -205,7 +231,7 @@ def main():
     args = parser.parse_args()
     try:
         if args.command == "preparar":
-            print(prepare(args.angle, args.task, args.production, args.out, args.artifact))
+            print(prepare(args.angle, args.task, args.production, args.out, args.artifact, args.niche))
         elif args.command == "registrar-revisao":
             path, status = register_review(args.taskpack, args.review, args.out)
             print(json.dumps({"path": str(path), "status": status}, ensure_ascii=False))

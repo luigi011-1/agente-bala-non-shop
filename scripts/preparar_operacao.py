@@ -70,6 +70,8 @@ def main():
             if sys.platform == "darwin" and platform.machine() == "arm64" and sys.version_info[:2] == (3, 12) and lock.is_file():
                 requirements = lock
             run([python, "-m", "pip", "install", "--disable-pip-version-check", "-r", requirements])
+            if not (Path('/Applications/Google Chrome.app').is_dir() or shutil.which('google-chrome') or shutil.which('google-chrome-stable')):
+                run([python, '-m', 'playwright', 'install', 'chromium'])
         run([python, "-m", "pip", "check"])
         missing = [name for name in ("ffmpeg", "ffprobe") if not shutil.which(name)]
         if missing:

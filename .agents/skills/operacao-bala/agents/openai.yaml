@@ -1,4 +1,4 @@
 interface:
   display_name: "Operação Bala"
-  short_description: "Orquestra os quatro ângulos com revisão independente"
-  default_prompt: "Use $operacao-bala para executar a próxima tarefa do ângulo que eu pedir, com revisão independente."
+  short_description: "Orquestra pesquisa por nicho e produção revisada"
+  default_prompt: "Use $operacao-bala para minerar no nicho de manifestação/tarot com pesquisador, Crawlee e revisor independente."

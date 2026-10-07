@@ -2,55 +2,454 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/luigi011-1/agente-bala-non-shop/operacao/schema_mineracao.json",
   "title": "Seeds e resultados da mineração pública",
-  "description": "Validar seeds usando $defs.seeds; resultado usando $defs.result. URL scope e evidências são validados novamente pelo executável. Observações são atestações auditáveis do pesquisador, não dados inventados nem snippets de buscador. Somente perfil EUA e vídeo Instagram/Facebook atendem à operação; fixture local exige flag de testes explícita.",
+  "description": "Validar seeds usando $defs.seeds; resultado usando $defs.result. URL scope e evidências são validados novamente pelo executável. Observações são atestações auditáveis do pesquisador, não dados inventados nem snippets de buscador. Somente perfil EUA e vídeo Instagram/Facebook atendem à operação; fixture local exige flag de testes explícita. Mineração por nicho, sete datas de calendário incluindo hoje, vídeos em inglês auditado; ranking somente entre vídeos coletados. --angle permanece como compatibilidade de entrada.",
   "$defs": {
-    "angle": {"enum": ["sea-moss", "fitwell", "auraly", "body-hacks"]},
-    "urls": {"type": "array", "minItems": 1, "maxItems": 100, "items": {"type": "string", "format": "uri"}},
+    "angle": {
+      "enum": [
+        "sea-moss",
+        "fitwell",
+        "auraly",
+        "body-hacks"
+      ]
+    },
+    "urls": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
     "observation": {
       "type": "object",
-      "required": ["subject_url", "source_url", "observed_at", "field", "value", "method", "scope", "verified", "note"],
+      "required": [
+        "subject_url",
+        "source_url",
+        "observed_at",
+        "field",
+        "value",
+        "method",
+        "scope",
+        "verified",
+        "note"
+      ],
       "properties": {
-        "subject_url": {"type": "string", "format": "uri", "description": "Perfil ao qual se aplica a observação; preferir o URL público canônico."},
-        "source_url": {"type": "string", "format": "uri", "description": "Fonte pública oficial Instagram/Facebook que permite verificar a observação."},
-        "observed_at": {"type": "string", "format": "date-time"},
-        "field": {"enum": ["profile_ai_only", "niche_match"]},
-        "value": {"type": "boolean"},
-        "method": {"enum": ["visual_audit", "content_audit"]},
-        "scope": {"enum": ["all_public_posts", "profile_content"]},
-        "verified": {"const": true},
-        "note": {"type": "string", "minLength": 1, "description": "Descrever o que foi inspecionado e a cobertura. Não marcar verified sem inspecionar as fontes."},
-        "angle": {"$ref": "#/$defs/angle", "description": "Obrigatório para niche_match: ângulo cuja compatibilidade foi auditada."}
+        "subject_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Perfil ao qual se aplica a observação; preferir o URL público canônico."
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Fonte pública oficial Instagram/Facebook que permite verificar a observação."
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "field": {
+          "enum": [
+            "profile_ai_only",
+            "niche_match",
+            "language"
+          ]
+        },
+        "value": {
+          "type": [
+            "boolean",
+            "string"
+          ]
+        },
+        "method": {
+          "enum": [
+            "visual_audit",
+            "content_audit",
+            "asr"
+          ]
+        },
+        "scope": {
+          "enum": [
+            "all_public_posts",
+            "profile_content",
+            "video_content"
+          ]
+        },
+        "verified": {
+          "const": true
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Descrever o que foi inspecionado e a cobertura. Não marcar verified sem inspecionar as fontes."
+        },
+        "angle": {
+          "$ref": "#/$defs/angle",
+          "description": "Compatibilidade legada: ângulo cujo nicho amplo foi auditado."
+        },
+        "niche": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "description": "Nicho editorial auditado, nome ou slug; independe da oferta."
+        }
       },
       "allOf": [
-        {"if": {"properties": {"field": {"const": "profile_ai_only"}}}, "then": {"properties": {"method": {"const": "visual_audit"}, "scope": {"const": "all_public_posts"}}}},
-        {"if": {"properties": {"field": {"const": "niche_match"}}}, "then": {"required": ["angle"], "properties": {"method": {"const": "content_audit"}, "scope": {"const": "profile_content"}}}}
+        {
+          "if": {
+            "properties": {
+              "field": {
+                "const": "profile_ai_only"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "method": {
+                "const": "visual_audit"
+              },
+              "scope": {
+                "const": "all_public_posts"
+              },
+              "value": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "field": {
+                "const": "niche_match"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "method": {
+                "const": "content_audit"
+              },
+              "scope": {
+                "const": "profile_content"
+              },
+              "value": {
+                "type": "boolean"
+              }
+            },
+            "anyOf": [
+              {
+                "required": [
+                  "niche"
+                ]
+              },
+              {
+                "required": [
+                  "angle"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "field": {
+                "const": "language"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "string",
+                "pattern": "^[a-z]{2,3}(-[A-Za-z]{2})?$"
+              },
+              "method": {
+                "enum": [
+                  "content_audit",
+                  "asr"
+                ]
+              },
+              "scope": {
+                "const": "video_content"
+              }
+            }
+          }
+        }
       ]
     },
     "seeds": {
       "oneOf": [
-        {"$ref": "#/$defs/urls"},
-        {"type": "object", "required": ["urls"], "properties": {"urls": {"$ref": "#/$defs/urls"}, "observations": {"type": "array", "items": {"$ref": "#/$defs/observation"}}}}
+        {
+          "$ref": "#/$defs/urls"
+        },
+        {
+          "type": "object",
+          "required": [
+            "urls"
+          ],
+          "properties": {
+            "urls": {
+              "$ref": "#/$defs/urls"
+            },
+            "observations": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/observation"
+              }
+            }
+          }
+        }
       ]
     },
-    "evidence": {"type": "object", "required": ["value", "source_url", "observed_at", "method", "excerpt"], "properties": {"source_url": {"type": "string", "format": "uri"}, "observed_at": {"type": "string", "format": "date-time"}, "method": {"type": "string"}, "excerpt": {"type": "string"}}},
-    "criterion": {"type": "object", "required": ["status", "evidence"], "properties": {"status": {"enum": ["confirmed", "unknown", "conflict", "rejected"]}, "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}}}},
-    "video": {
-      "type": "object", "required": ["url", "platform", "title", "profile_url", "status", "criteria", "missing", "blocked"],
+    "evidence": {
+      "type": "object",
+      "required": [
+        "value",
+        "source_url",
+        "observed_at",
+        "method",
+        "excerpt"
+      ],
       "properties": {
-        "url": {"type": "string", "format": "uri"}, "platform": {"enum": ["instagram", "facebook", "fixture"]},
-        "title": {"type": "string"}, "profile_url": {"type": ["string", "null"]}, "status": {"enum": ["approved", "candidate", "rejected"]},
-        "criteria": {"type": "object", "required": ["posted_at", "views", "profile_created_at", "profile_country", "profile_ai_only", "niche_match"], "additionalProperties": {"$ref": "#/$defs/criterion"}},
-        "missing": {"type": "array", "items": {"type": "string"}}, "blocked": {"type": "boolean"}
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "method": {
+          "type": "string"
+        },
+        "excerpt": {
+          "type": "string"
+        }
+      }
+    },
+    "criterion": {
+      "type": "object",
+      "required": [
+        "status",
+        "evidence"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "confirmed",
+            "unknown",
+            "conflict",
+            "rejected"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        }
+      }
+    },
+    "video": {
+      "type": "object",
+      "required": [
+        "url",
+        "platform",
+        "title",
+        "profile_url",
+        "status",
+        "criteria",
+        "missing",
+        "blocked"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "platform": {
+          "enum": [
+            "instagram",
+            "facebook",
+            "fixture"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "profile_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "approved",
+            "candidate",
+            "rejected"
+          ]
+        },
+        "criteria": {
+          "type": "object",
+          "required": [
+            "posted_at",
+            "views",
+            "profile_created_at",
+            "profile_country",
+            "profile_ai_only",
+            "niche_match",
+            "language"
+          ],
+          "additionalProperties": {
+            "$ref": "#/$defs/criterion"
+          }
+        },
+        "missing": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "blocked": {
+          "type": "boolean"
+        },
+        "confirmed_views": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
       }
     },
     "result": {
-      "type": "object", "required": ["schema_version", "angle", "status", "started_at", "finished_at", "filters", "limits", "limits_reached", "counts", "test_fixture_mode", "crawler", "approved", "candidates", "rejected", "errors"],
+      "type": "object",
+      "required": [
+        "schema_version",
+        "angle",
+        "status",
+        "started_at",
+        "finished_at",
+        "filters",
+        "limits",
+        "limits_reached",
+        "counts",
+        "test_fixture_mode",
+        "crawler",
+        "approved",
+        "candidates",
+        "rejected",
+        "errors",
+        "niche",
+        "ranking_scope"
+      ],
       "properties": {
-        "schema_version": {"const": 1}, "angle": {"$ref": "#/$defs/angle"}, "status": {"enum": ["COMPLETE", "PARTIAL", "BLOCKED", "FAILED"]},
-        "started_at": {"type": "string", "format": "date-time"}, "finished_at": {"type": "string", "format": "date-time"},
-        "filters": {"type": "object"}, "limits": {"type": "object"}, "limits_reached": {"type": "boolean"}, "counts": {"type": "object"},
-        "test_fixture_mode": {"type": "boolean"}, "crawler": {"type": "object"},
-        "approved": {"type": "array", "items": {"$ref": "#/$defs/video"}}, "candidates": {"type": "array", "items": {"$ref": "#/$defs/video"}}, "rejected": {"type": "array", "items": {"$ref": "#/$defs/video"}}, "errors": {"type": "array"}
+        "schema_version": {
+          "const": 2
+        },
+        "angle": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/angle"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "COMPLETE",
+            "PARTIAL",
+            "BLOCKED",
+            "FAILED"
+          ]
+        },
+        "started_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "finished_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "filters": {
+          "type": "object"
+        },
+        "limits": {
+          "type": "object"
+        },
+        "limits_reached": {
+          "type": "boolean"
+        },
+        "counts": {
+          "type": "object"
+        },
+        "test_fixture_mode": {
+          "type": "boolean"
+        },
+        "crawler": {
+          "type": "object"
+        },
+        "approved": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/video"
+          }
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/video"
+          }
+        },
+        "rejected": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/video"
+          }
+        },
+        "errors": {
+          "type": "array"
+        },
+        "niche": {
+          "$ref": "#/$defs/niche"
+        },
+        "ranking_scope": {
+          "const": "among_collected_videos"
+        }
+      }
+    },
+    "niche": {
+      "type": "object",
+      "required": [
+        "slug",
+        "label",
+        "search_terms_en",
+        "custom"
+      ],
+      "properties": {
+        "slug": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "search_terms_en": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "custom": {
+          "type": "boolean"
+        }
       }
     }
   }

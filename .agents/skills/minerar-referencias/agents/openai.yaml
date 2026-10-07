@@ -1,4 +1,4 @@
 interface:
   display_name: "Minerar referências"
-  short_description: "Pesquisa IG/FB com filtros e evidências verificáveis"
-  default_prompt: "Use $minerar-referencias para encontrar referências de vídeos para Sea Moss Gummies nos EUA."
+  short_description: "Vídeos virais da semana por nicho no IG/FB"
+  default_prompt: "Use $minerar-referencias para minerar no nicho de saúde e beleza os vídeos em inglês mais virais dos últimos sete dias no Instagram e Facebook."

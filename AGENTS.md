@@ -95,6 +95,15 @@ As skills canonicas novas ficam em `.agents/skills/`: `operacao-bala`, `minerar-
 `watch`, `adaptar-conteudo` e `revisar-producao`. Cada uma declara entradas, entregas e limites.
 `operacao/angulos.json` resolve os quatro produtos atuais e aponta suas doutrinas; nao e um workflow.
 
+Mineracao parte do NICHO, independente da oferta (Luigi, 2026-10-07): "saude e beleza",
+"manifestacao/tarot" ou outro nicho solicitado. `operacao/catalogo_nichos.json` e `operacao/nichos.py`
+resolvem esse contexto. Nao exigir numero de angulo nem pesquisar nome de produto por padrao.
+"Da semana" usa os ultimos sete dias, incluindo hoje; os videos devem ser em ingles, com evidencia
+propria de idioma. Manter os filtros EUA, mais de 800 mil views, perfil ate 30 dias e IA exclusiva
+ate pedido explicito de alteracao. Classificar por views confirmadas entre os videos descobertos,
+sem afirmar ranking exaustivo da plataforma. Escolher oferta somente na adaptacao posterior.
+Tarot e um nicho de pesquisa valido por si; a regra de oferta Auraly permanece na PRODUCAO.
+
 O Codex orquestra com dois especialistas (`bala-pesquisador`, `bala-produtor`) e um revisor
 independente (`bala-revisor`, somente leitura), definidos em `.codex/agents/`. Antes de entregar
 um resultado destas skills, o revisor le os artefatos finais e as fontes, sem escrever a producao.
