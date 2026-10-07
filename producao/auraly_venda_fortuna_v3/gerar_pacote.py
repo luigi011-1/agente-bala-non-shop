@@ -88,6 +88,19 @@ AVATARES = [
                 "silver cuff bracelet set with turquoise, and tan suede ankle boots."),
          maos="her fair hands with big turquoise rings and the silver turquoise cuff bracelet below the rolled white cuffs",
          voz="voz feminina quente e firme, levemente rouca, de uma mulher de sessenta anos"),
+    dict(nome="Celeste Marlow", arquivo="CELESTE_MARLOW", genero="mulher", pron="She", pos="her",
+         sheet="producao/_ancoras/character_sheets/celeste_marlow_character_sheet.jpg",
+         coz_a=COZ_A_ORIG, coz_b=COZ_B_ORIG, ambiente="cozinha do modelo",
+         identidade=("The exact fictional AI character Celeste Marlow: white American woman aged about 50, slim, "
+                     "completely bald with a smooth natural scalp with a few small freckles, no wig, no headscarf, light "
+                     "hazel-green eyes, thin natural pale eyebrows, oval face with high cheekbones, full natural lips, "
+                     "freckles across the nose and cheeks, fine lines and crow's feet, no makeup, small silver stud "
+                     "earrings."),
+         roupa=("Cream lace blazer over a cream lace camisole, slim dark blue jeans, simple nude leather flats, a rose-gold "
+                "beaded bracelet on the right wrist, a thin silver necklace with a small heart pendant, a silver band "
+                "ring on the right ring finger and a thin silver ring on the left index finger."),
+         maos="her freckled hands with silver rings and the rose-gold beaded bracelet on the right wrist below the cream lace sleeve",
+         voz="voz feminina calma, acolhedora e firme, de uma mulher de cinquenta anos que fala direto para a lente"),
 ]
 
 ACAO = {

@@ -7,7 +7,7 @@ origem: avatar IA (formato IA: bandeira dos EUA em todo K; sem carta SOULMATE, o
 **Vídeo modelo:** `input/modelo.mp4` (video2_modelo.mp4) · 102,2s · 720x1280
 **Modelo:** mulher careca, blusa verde-oliva canelada, joelhos no chão de uma cozinha americana; abre o painel escondido do rodapé do armário (maços de notas de $100), tira uma nota e mostra à lente (0 a 5,4s, mudo, com cortes e tarja "If you need urgent and unexpected money:"); depois plano único fixo, ela agachada com o braço apoiado na quina de mármore da bancada e a nota na mão, falando para a lente até o fim. Números `444` e `11:11` como camada de edição.
 **Rodada:** VALIDAÇÃO · **Objetivo:** SALE (dinheiro e fortuna)
-**Avatares:** Gordon Ashby (homem rico, character sheet ainda em geração pelo Luigi) e Avery Knox (como está)
+**Avatares:** Gordon Ashby (homem rico), Avery Knox (como está) e Celeste Marlow (a careca; cenário do modelo, como a Avery)
 **Estado:** APROVADO pelo Luigi em 2026-10-07 (IMAGE_PROMPTS + VIDEO_PROMPTS)
 
 ## Esqueleto preservado (tabela)

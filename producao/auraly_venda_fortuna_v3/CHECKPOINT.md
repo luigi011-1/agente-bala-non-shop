@@ -14,6 +14,7 @@ Next action: Luigi gera K e V no Flow com o AGENTE_FLOW.md (character sheet do G
 ## Avatar queue
 [DONE] Gordon Ashby: character sheet gerado pelo Luigi em 2026-10-07 (descrição em producao/auraly_avatares_rico_careca/AVATARES_RICO_CARECA.md); caminho esperado `producao/_ancoras/character_sheets/gordon_ashby_character_sheet.jpg`
 [DONE] Avery Knox: producao/_ancoras/character_sheets/avery_knox_character_sheet.jpg
+[DONE] Celeste Marlow: producao/_ancoras/character_sheets/celeste_marlow_character_sheet.jpg (sheet gerado pelo Luigi, arquivos em producao/auraly_avatares_rico_careca/)
 
 ## Approved script
 status: APPROVED (Luigi, 2026-10-07)
@@ -27,12 +28,12 @@ acao estrutural: avatar ajoelhado abre um painel escondido do rodapé, revela um
 eixos de troca: n/a (validacao)
 
 ## Current avatar assets
-image prompts: FLOW_<AVATAR>.md dos 2 avatares (K01, K02)
-video prompts: FLOW_<AVATAR>.md dos 2 avatares (V01 a V14)
+image prompts: FLOW_<AVATAR>.md dos 3 avatares (K01, K02)
+video prompts: FLOW_<AVATAR>.md dos 3 avatares (V01 a V14)
 
 ## Completed
 - Roteiro e hook fiel aprovados pelo Luigi em 2026-10-07
-- FICHA_FRAMES.md (K01, K02, placar 14/14) + gerar_pacote.py; pacotes de Gordon Ashby e Avery Knox entregues 2026-10-07, AGENTE_FLOW.md só desta produção
+- FICHA_FRAMES.md (K01, K02, placar 14/14) + gerar_pacote.py; pacotes de Gordon Ashby, Avery Knox e Celeste Marlow entregues 2026-10-07, AGENTE_FLOW.md só desta produção
 - Intake: video2_modelo.mp4, Avery Knox e Gordon Ashby (descrição)
 - ANALYSIS: /watch em input/modelo_watch/; 102,2s, gancho mudo de 5,4s com cortes, corpo em plano único
 - SCRIPT_MODELLING: ROTEIRO.md + GANCHOS_VISUAIS.md
