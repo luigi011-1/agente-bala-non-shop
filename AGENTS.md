@@ -151,6 +151,8 @@ quando o assunto pedir.
   frame do video modelo, sem nenhuma outra imagem.
 - Prompt de VIDEO: ele anexa SO a imagem escolhida para a cena e cola o prompt. 1 variacao, 9:16.
 - Logo todo prompt e autossuficiente: cena, pose e acao do original descritas por escrito.
+- ROSTER AURALY ATIVO (Luigi, 2026-10-07): Avery Knox, Gordon Ashby e Celeste Marlow (mais Morgan Vance,
+  conta organica). Devon Price e Jordan Vale estao APOSENTADOS: nao usar em producao nova.
 - Character sheets Auraly: Avery Knox = mulher loira ~60, camisa branca, jeans, joias turquesa; Devon
   Price = mulher de cabelo grisalho raspado, argolas, camisa jeans; Jordan Vale = homem de barba
   grisalha, colete de couro preto, tatuagens.
