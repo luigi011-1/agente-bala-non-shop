@@ -1,6 +1,6 @@
 ---
 name: produzir
-description: Executa a producao completa de um video modelado, na ordem travada, do roteiro ate os prompts. Escreve os DOIS arquivos em producao/<avatar>_<slug>/ (ROTEIRO.md e PROMPTS_PRODUCAO.md) com todas as secoes obrigatorias e cola tudo na conversa. No Angulo 3 (Auraly) o processo vive em WORKFLOW_AURALY.md e no CHECKPOINT da producao, sem DM.md. Use quando o usuario mandar /produzir, ou quando um roteiro for aprovado e for hora de gerar o pacote de prompts. Existe porque o formato de entrega se degradou quando dependia de eu lembrar dele.
+description: Monta os artefatos autorizados da produção Sea Moss, FitWell e Body Hacks após aprovação do roteiro, com prompts e bloco Flow da produção atual. Use em /produzir ou quando o roteiro aprovado avançar à montagem do pacote. Auraly segue exclusivamente WORKFLOW_AURALY.md e CHECKPOINT.md.
 ---
 
 # /produzir — pacote de producao completo
@@ -9,30 +9,20 @@ Esta skill existe por um motivo especifico: em 2026-08-21 o formato de entrega s
 
 ---
 
-## PASSO 0 — CARREGAR A MEMORIA INTEIRA, de uma vez, antes de tudo
+## Contrato
 
-**Executar esta skill NAO substitui ler.** A skill e a ordem, os documentos sao o conteudo.
+- **Entrada:** produção, ângulo, referência decomposta, objetivo, avatar/anchors e aprovação real do roteiro.
+- **Entrega:** artefatos da próxima etapa autorizada; quando for pacote, prompts e bloco Flow da produção atual com validação e revisão independente.
+- **Limites:** não aprova o roteiro por Luigi, não gera mídia, não executa Flow nem publica. Auraly usa somente WORKFLOW_AURALY.md e CHECKPOINT; não monta outro pacote paralelo.
 
-Ate 2026-08-26 este passo era uma lista de nove memorias pra abrir uma a uma (o PORTAO P5).
-Isso falhava por um motivo simples: **eu decidia o que era relevante ANTES de ler**, e errava a
-decisao. Regra que eu nao achava relevante era regra que eu nao abria.
+## PASSO 0 — CONTEXTO CANÔNICO DA ETAPA
 
-**Regra vigente: carregar TUDO. Um comando, uma chamada, antes de qualquer outra coisa.**
+Ler `AGENTS.md` antes desta skill. Resolver a oferta atual em `operacao/angulos.json`; Sea Moss substitui Korella no Angle 1 e Body Hacks está ativo no Angle 4.
+Para Auraly, seguir `WORKFLOW_AURALY.md -> CHECKPOINT.md -> Next action`, abrindo apenas os artefatos indicados. Nos ângulos 1, 2 e 4, `CLAUDE.md` roteia a doutrina e os portões da etapa.
 
-```bash
-cd ~/.claude/projects/-Users-macbookairm2-Desktop-agente-bala-non-shop-main/memory && for f in *.md; do echo "########## $f ##########"; cat "$f"; done
-```
+A antiga leitura integral de `~/.claude/.../memory` foi substituída pelo roteamento atual de `AGENTS.md`. Abrir as fontes dos portões aplicáveis antes de executá-los, sem despejar todas as memórias, depender de um caminho pessoal ou reconstruir decisões já registradas. Os arquivos de `memoria/` do checkout são as referências compartilháveis.
 
-Sao 64 arquivos, ~490 KB, ~150k tokens (contagem de 2026-09-22). Custa segundos e cerca de 1% do orcamento da sessao.
-**Nao existe desculpa de custo pra pular.** Nao ler custa retrabalho, que e mais caro.
-
-**Nao filtrar, nao ler por amostragem, nao abrir so os do angulo.** O ponto do passo e
-justamente eliminar o julgamento previo de relevancia.
-
-Depois de rodar, os PORTOES P1 a P9 continuam valendo, mas **como roteiro de APLICACAO**,
-nao de leitura: eles dizem em que momento cada regra e aplicada, e o conteudo ja esta carregado.
-
-**Ainda ler a parte, porque nao esta na memoria:**
+**Abrir estes gabaritos e regras quando a etapa os exigir:**
 
 ```
 [ ] producao/fitywell_pernas/ROTEIRO.md        (o gabarito vivo desde 2026-09-10, esta no repo)
@@ -70,7 +60,7 @@ Copiar dali o **FORMATO**, nunca o conteudo. Duas praticas antigas foram **revog
 Nao seguir sem os quatro:
 - [ ] `/watch` rodado e decomposicao beat a beat feita
 - [ ] Heroi do hook identificado sem ambiguidade (rodar o micro-protocolo de 5 perguntas de `erros-recorrentes`)
-- [ ] Angulo definido (1 Korella / 2 FityWell / **3 Auraly**, que sai desta skill e vai para `WORKFLOW_AURALY.md`) e avatar confirmado. Angulo ou avatar ja definidos nao se perguntam de novo
+- [ ] Angulo definido (1 Sea Moss / 2 FitWell APP / **3 Auraly**, que sai desta skill e vai para `WORKFLOW_AURALY.md` / 4 Body Hacks ebook) e avatar confirmado. Angulo ou avatar ja definidos nao se perguntam de novo
 - [ ] Roteiro aprovado pelo Luigi
 
 Faltando qualquer um, parar e pedir. Roteiro nao aprovado torna todo prompt retrabalho garantido.

@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "source_of_truth": "AGENTS.md",
+  "angles": [
+    {
+      "id": "1",
+      "slug": "sea-moss",
+      "name": "Sea Moss Gummies / Natural Rems",
+      "aliases": [
+        "1",
+        "angle 1",
+        "ângulo 1",
+        "angulo 1",
+        "sea moss",
+        "seamoss",
+        "sea moss gummies",
+        "natural rems"
+      ],
+      "historical_aliases": [
+        "Korella",
+        "Korella Saffron"
+      ],
+      "product_type": "supplement_amazon",
+      "audience": "Público dos EUA interessado em saúde, nutrição e envelhecimento saudável",
+      "canonical_router": "CLAUDE.md",
+      "doctrine": [
+        "memoria/angulo1_copy_seamoss.md"
+      ],
+      "niches": [
+        "health",
+        "wellness",
+        "nutrition",
+        "sea moss",
+        "healthy aging"
+      ],
+      "country": "US",
+      "content_language": "en-US",
+      "mining_defaults": {
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "min_views": 800000,
+        "min_views_operator": "gt",
+        "lookback_days": 2,
+        "max_profile_age_days": 30,
+        "country": "US",
+        "ai_avatar_only": true,
+        "timezone": "America/New_York"
+      }
+    },
+    {
+      "id": "2",
+      "slug": "fitwell",
+      "name": "FitWell / FityWell APP",
+      "aliases": [
+        "2",
+        "angle 2",
+        "ângulo 2",
+        "angulo 2",
+        "fitwell",
+        "fitywell",
+        "fity well"
+      ],
+      "historical_aliases": [],
+      "product_type": "app_health_weight_loss",
+      "audience": "Homens e mulheres dos EUA, 40+",
+      "canonical_router": "CLAUDE.md",
+      "doctrine": [
+        "memoria/angulo2_copy_fitywell.md"
+      ],
+      "niches": [
+        "health",
+        "fitness",
+        "weight loss",
+        "healthy aging",
+        "fitness over 40"
+      ],
+      "country": "US",
+      "content_language": "en-US",
+      "mining_defaults": {
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "min_views": 800000,
+        "min_views_operator": "gt",
+        "lookback_days": 2,
+        "max_profile_age_days": 30,
+        "country": "US",
+        "ai_avatar_only": true,
+        "timezone": "America/New_York"
+      }
+    },
+    {
+      "id": "3",
+      "slug": "auraly",
+      "name": "Auraly APP",
+      "aliases": [
+        "3",
+        "angle 3",
+        "ângulo 3",
+        "angulo 3",
+        "auraly",
+        "auraly app",
+        "manifestação",
+        "manifestacao",
+        "manifestation",
+        "soulmate"
+      ],
+      "historical_aliases": [],
+      "product_type": "app_manifestation_soulmate",
+      "audience": "Público dos EUA interessado em manifestação, conexão romântica e sinais",
+      "canonical_router": "WORKFLOW_AURALY.md",
+      "doctrine": [
+        "memoria/angulo3_copy_auraly.md",
+        "memoria/angulo3_swipe_padroes.md"
+      ],
+      "niches": [
+        "manifestation",
+        "soulmate",
+        "synchronicity",
+        "signs from the universe",
+        "prosperity"
+      ],
+      "optional_niches": [
+        "tarot"
+      ],
+      "optional_niches_rule": "Tarot exige pedido explícito; nunca define outro ângulo nem muda a oferta Auraly.",
+      "country": "US",
+      "content_language": "en-US",
+      "mining_defaults": {
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "min_views": 800000,
+        "min_views_operator": "gt",
+        "lookback_days": 2,
+        "max_profile_age_days": 30,
+        "country": "US",
+        "ai_avatar_only": true,
+        "timezone": "America/New_York"
+      }
+    },
+    {
+      "id": "4",
+      "slug": "body-hacks",
+      "name": "Body Hacks For Men 40+ / FitWell ebook",
+      "aliases": [
+        "4",
+        "angle 4",
+        "ângulo 4",
+        "angulo 4",
+        "body hacks",
+        "body hacks for men",
+        "body hacks for men 40+",
+        "bodyhacks"
+      ],
+      "historical_aliases": [],
+      "product_type": "ebook_habits_men_40_plus",
+      "audience": "Homens dos EUA, 40+",
+      "canonical_router": "CLAUDE.md",
+      "doctrine": [
+        "memoria/angulo4_copy_bodyhacks.md"
+      ],
+      "niches": [
+        "men's health",
+        "men over 40",
+        "healthy habits",
+        "men's wellness",
+        "fitness over 40"
+      ],
+      "country": "US",
+      "content_language": "en-US",
+      "mining_defaults": {
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "min_views": 800000,
+        "min_views_operator": "gt",
+        "lookback_days": 2,
+        "max_profile_age_days": 30,
+        "country": "US",
+        "ai_avatar_only": true,
+        "timezone": "America/New_York"
+      }
+    }
+  ]
+}

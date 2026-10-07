@@ -1,0 +1,6 @@
+interface:
+  display_name: "Watch: decomposição de vídeo"
+  short_description: "Frames, transcrição e alinhamento por palavra"
+  default_prompt: "Use $watch para decompor este vídeo no ângulo informado."
+policy:
+  allow_implicit_invocation: true

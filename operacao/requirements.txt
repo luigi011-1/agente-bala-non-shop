@@ -1,0 +1,13 @@
+# Dependências diretas testadas no macOS Apple Silicon / Python 3.12.
+# Runtime próprio: python3 scripts/preparar_operacao.py
+faster-whisper==1.2.1
+ctranslate2==4.8.2
+whisperx==3.8.6
+torch==2.8.0
+torchaudio==2.8.0
+torchvision==0.23.0
+Pillow==12.3.0
+# PyAV 19 remove metadata_errors usado por Faster-Whisper 1.2.1.
+av==18.0.0
+crawlee[beautifulsoup,httpx]==1.10.4
+PyYAML==6.0.3

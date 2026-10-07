@@ -1,0 +1,5 @@
+# CPU baseline shared with operacao/requirements.txt. WhisperX is installed by the operation setup.
+faster-whisper==1.2.1
+ctranslate2==4.8.2
+Pillow==12.3.0
+av==18.0.0

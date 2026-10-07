@@ -1,32 +1,28 @@
-# run_watch.ps1 — wrapper do pipeline /watch
-# Recarrega o PATH (ffmpeg/ffprobe entram via WinGet Links) e roda o pipeline.
-# Uso: powershell -File run_watch.ps1 -Video "CAMINHO.mp4" [-Extra "--model medium.en"]
-
 param(
     [Parameter(Mandatory=$true)][string]$Video,
     [string]$OutDir = "",
-    [string]$Extra = ""
+    [string]$Extra = "",
+    [string[]]$PipelineArgs = @()
 )
-
 $ErrorActionPreference = "Stop"
-
-# PATH atualizado (Machine + User) para achar ffmpeg/ffprobe/python
-$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" +
-            [System.Environment]::GetEnvironmentVariable("Path","User")
-
-$py = "C:\Users\luigi\AppData\Local\Programs\Python\Python312\python.exe"
-if (-not (Test-Path $py)) {
-    $py = (Get-Command python -ErrorAction SilentlyContinue |
-           Where-Object { $_.Source -notlike "*WindowsApps*" } |
-           Select-Object -First 1).Source
+$projectRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..\..\..")).Path
+$python = $env:BALA_PYTHON
+if (-not $python) {
+    foreach ($candidate in @(
+        (Join-Path $projectRoot ".venv-operacao\Scripts\python.exe"),
+        (Join-Path $projectRoot ".venv\Scripts\python.exe")
+    )) {
+        if (Test-Path -LiteralPath $candidate) { $python = $candidate; break }
+    }
 }
-if (-not $py) { throw "Python nao encontrado." }
-
-$script = Join-Path $PSScriptRoot "watch_pipeline.py"
-
-$args = @("--video", $Video)
-if ($OutDir -ne "") { $args += @("--outdir", $OutDir) }
-if ($Extra -ne "")  { $args += $Extra.Split(" ") }
-
-& $py $script @args
+if (-not $python) {
+    $python = (Get-Command python -ErrorAction SilentlyContinue | Where-Object { $_.Source -notlike "*WindowsApps*" } | Select-Object -First 1).Source
+}
+if (-not $python) { throw "Python ausente. Prepare scripts/preparar_operacao.py." }
+$watchArgs = @("--video", $Video)
+if ($OutDir) { $watchArgs += @("--outdir", $OutDir) }
+# Compatibility for old simple Extra flags. Use PipelineArgs for quoted paths or multiword values.
+if ($Extra) { $watchArgs += ($Extra -split '\s+' | Where-Object { $_ }) }
+$watchArgs += $PipelineArgs
+& $python (Join-Path $PSScriptRoot "watch_pipeline.py") @watchArgs
 exit $LASTEXITCODE

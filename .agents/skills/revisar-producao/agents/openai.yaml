@@ -1,0 +1,4 @@
+interface:
+  display_name: "Revisar produção"
+  short_description: "Revisão independente dos artefatos da Operação Bala"
+  default_prompt: "Use $revisar-producao para revisar os artefatos desta etapa de forma independente."

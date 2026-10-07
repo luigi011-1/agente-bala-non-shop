@@ -5,6 +5,12 @@ description: Gera prompts de AVATAR REALISTA para o Higgsfield Soul (Soul 2.0) a
 
 # Avatar Realista — gerador de prompts para o Higgsfield Soul
 
+## Contrato
+
+- **Entrada:** briefing de persona, papel, formato e ângulo; usar anchors e identidade já declaradas.
+- **Entrega:** prompt textual em inglês, com os três blocos abaixo e checklist visual pertinente; explicações em português.
+- **Limites:** não gera a imagem, não inventa aprovação da identidade e não redefine cena ou etapa de uma produção ativa. `AGENTS.md`, checkpoint e `GATE_VISUAL.md` prevalecem nas produções da operação.
+
 Esta skill transforma um briefing de persona (idade, gênero, papel, cenário, emoção, formato) num **prompt de imagem pronto pra colar no Higgsfield Soul 2.0** que gera um rosto realista, consistente e com cara de gravação de celular. É o framework que já validamos gerando dezenas de avatares (médico, host de podcast, filho comprador etc.).
 
 O prompt final sai em **inglês** por padrão, porque o Soul responde melhor em inglês. As conversas e explicações com o usuário são em português.

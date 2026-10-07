@@ -1,4 +1,2 @@
-faster-whisper==1.2.1
-ctranslate2==4.8.1
-Pillow==12.3.0
-av==18.0.0
+# Compatibility: one baseline dependency list for /watch.
+-r ../../../.agents/skills/watch/requirements.txt

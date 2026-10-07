@@ -1,273 +1,433 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+"""Canonical /watch: dense visual evidence, Faster-Whisper ASR, optional WhisperX alignment.
+
+Exit 0 means requested extraction succeeded; it never means the video was visually reviewed.
+Exit 2 means failed/partial processing. Each run replaces its own generated artifacts so an
+old transcript cannot be mistaken for the result of a failed rerun.
 """
-watch_pipeline.py — pipeline do /watch
-
-Transforma um .mp4 numa decomposicao completa para analise frame-a-frame + audio:
-  1. Sonda o video (ffprobe): duracao, fps, resolucao, se tem audio.
-  2. Extrai um frame em cada CORTE DE CENA (mapa de takes).
-  3. Extrai a TIMELINE inteira densa (padrao: 5 fps = 1 frame/0,2s no video
-     COMPLETO) -> pega reveals dentro de qualquer take (hook, corpo E cta),
-     ex.: cristais derretendo e revelando os gomos da barriga.
-  4. Extrai o audio e transcreve com faster-whisper (timestamps por segmento).
-  5. Gera GRADES (montages) em tamanho legivel para visao geral rapida.
-  6. Escreve manifest.json + transcript.txt/json.
-
-Uso:
-  python watch_pipeline.py --video "CAMINHO.mp4" [opcoes]
-
-Opcoes principais:
-  --outdir DIR          (padrao: <pasta_do_video>/<nome>_watch)
-  --timeline-fps 5      (densidade no video inteiro; 0,2s por frame)
-  --scene-threshold 0.2
-  --model small.en      (modelo faster-whisper; use medium.en p/ +precisao)
-  --no-audio            pula a transcricao
-"""
-
-import argparse, json, os, re, shutil, subprocess, sys
+import argparse
+from concurrent.futures import ThreadPoolExecutor
+from contextlib import contextmanager
+import importlib.metadata
+import json
+import math
+import numbers
+import os
 from pathlib import Path
+import platform
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+import time
+import uuid
 
-# ---- localizar binarios (PATH pode estar "stale" em shell novo no Windows) ----
-WINGET_LINKS = Path(os.environ.get("LOCALAPPDATA", "")) / "Microsoft" / "WinGet" / "Links"
+
+class PipelineError(RuntimeError):
+    pass
+
 
 def find_bin(name):
-    p = shutil.which(name)
-    if p:
-        return p
-    cand = WINGET_LINKS / f"{name}.exe"
-    if cand.exists():
-        return str(cand)
-    raise SystemExit(f"[ERRO] nao encontrei '{name}'. Instale ou ajuste o PATH.")
+    """Resolve at execution time; importing this module does not require FFmpeg."""
+    found = shutil.which(name)
+    if found:
+        return found
+    candidates = []
+    if platform.system() == "Windows":
+        local = os.environ.get("LOCALAPPDATA")
+        if local:
+            candidates.append(Path(local) / "Microsoft/WinGet/Links" / (name + ".exe"))
+    elif platform.system() == "Darwin":
+        candidates = [Path(d) / name for d in ("/opt/homebrew/bin", "/usr/local/bin")]
+    for candidate in candidates:
+        if candidate.is_file():
+            return str(candidate)
+    raise PipelineError(f"{name} nao encontrado. Prepare o ambiente da operacao e confira o PATH.")
 
-FFMPEG = find_bin("ffmpeg")
-FFPROBE = find_bin("ffprobe")
 
-def run(cmd, **kw):
-    return subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8",
-                          errors="replace", **kw)
-
-# ---------------------------- sonda ----------------------------
-def probe(video):
-    cmd = [FFPROBE, "-v", "error", "-print_format", "json",
-           "-show_format", "-show_streams", str(video)]
-    r = run(cmd)
-    if r.returncode != 0:
-        raise SystemExit(f"[ERRO] ffprobe falhou:\n{r.stderr}")
-    data = json.loads(r.stdout)
-    v = next((s for s in data["streams"] if s["codec_type"] == "video"), None)
-    a = next((s for s in data["streams"] if s["codec_type"] == "audio"), None)
-    if not v:
-        raise SystemExit("[ERRO] o arquivo nao tem stream de video.")
-    fps = 0.0
-    if v.get("avg_frame_rate", "0/0") not in ("0/0", "0"):
-        num, den = v["avg_frame_rate"].split("/")
-        fps = float(num) / float(den) if float(den) else 0.0
-    dur = float(data["format"].get("duration") or v.get("duration") or 0.0)
-    return {
-        "duration": round(dur, 3),
-        "fps": round(fps, 3),
-        "width": int(v.get("width", 0)),
-        "height": int(v.get("height", 0)),
-        "has_audio": a is not None,
-    }
-
-# ---------------------- extracao por fps fixo ----------------------
-def extract_fps(video, outdir, fps, prefix, start=None, dur=None):
-    if outdir.exists():
-        for old in outdir.glob(f"{prefix}_*.png"):
-            old.unlink()
-    outdir.mkdir(parents=True, exist_ok=True)
-    cmd = [FFMPEG, "-hide_banner", "-y"]
-    if start is not None:
-        cmd += ["-ss", str(start)]
-    if dur is not None:
-        cmd += ["-t", str(dur)]
-    cmd += ["-i", str(video), "-vf", f"fps={fps}", "-qscale:v", "2",
-            str(outdir / f"{prefix}_%04d.png")]
-    r = run(cmd)
-    if r.returncode != 0:
-        print(f"[aviso] extracao {prefix} retornou {r.returncode}:\n{r.stderr[-500:]}")
-    # renomear com timestamp
-    base = start or 0.0
-    frames = sorted(outdir.glob(f"{prefix}_[0-9]*.png"))
-    result = []
-    for i, f in enumerate(frames):
-        t = round(base + i / fps, 2)
-        new = outdir / f"{prefix}_t{t:07.2f}.png"
-        if f != new:
-            f.rename(new)
-        result.append({"file": new.name, "t": t})
-    return result
-
-# ------------------------- deteccao de cena -------------------------
-def extract_scenes(video, outdir, threshold):
-    if outdir.exists():
-        for old in outdir.glob("scene_*.png"):
-            old.unlink()
-    outdir.mkdir(parents=True, exist_ok=True)
-    meta = outdir / "_scene_meta.txt"
-    # roda com cwd=outdir e nomes relativos: evita o ':' do caminho Windows
-    # ser interpretado como separador dentro do filtergraph do ffmpeg.
-    cmd = [FFMPEG, "-hide_banner", "-y", "-i", str(video),
-           "-vf", f"select='gt(scene,{threshold})',metadata=print:file=_scene_meta.txt",
-           "-fps_mode", "vfr", "-qscale:v", "2", "scene_%04d.png"]
-    r = run(cmd, cwd=str(outdir))
-    if r.returncode != 0:
-        print(f"[aviso] deteccao de cena retornou {r.returncode}:\n{r.stderr[-500:]}")
-    # parse dos pts_time
-    times = []
-    if meta.exists():
-        for line in meta.read_text(encoding="utf-8", errors="replace").splitlines():
-            m = re.search(r"pts_time:([0-9.]+)", line)
-            if m:
-                times.append(float(m.group(1)))
-    frames = sorted(outdir.glob("scene_[0-9]*.png"))
-    result = []
-    for i, f in enumerate(frames):
-        t = round(times[i], 2) if i < len(times) else round(i, 2)
-        new = outdir / f"scene_t{t:07.2f}.png"
-        if f != new:
-            f.rename(new)
-        result.append({"file": new.name, "t": t})
-    if meta.exists():
-        meta.unlink()
-    return result
-
-# --------------------------- transcricao ---------------------------
-def transcribe(video, outdir, model_name):
-    outdir.mkdir(parents=True, exist_ok=True)
-    wav = outdir / "audio.wav"
-    cmd = [FFMPEG, "-hide_banner", "-y", "-i", str(video),
-           "-vn", "-ac", "1", "-ar", "16000", str(wav)]
-    r = run(cmd)
-    if r.returncode != 0 or not wav.exists():
-        print(f"[aviso] extracao de audio falhou:\n{r.stderr[-400:]}")
-        return None
+def run(cmd, timeout=300, **kwargs):
     try:
-        from faster_whisper import WhisperModel
-    except ImportError:
-        print("[aviso] faster-whisper nao instalado; pulando transcricao.")
-        return None
-    model = WhisperModel(model_name, device="cpu", compute_type="int8")
-    segments, info = model.transcribe(str(wav), language="en", beam_size=5,
-                                      vad_filter=True)
-    segs = []
-    lines = []
-    for s in segments:
-        segs.append({"start": round(s.start, 2), "end": round(s.end, 2),
-                     "text": s.text.strip()})
-        lines.append(f"[{s.start:6.2f} -> {s.end:6.2f}] {s.text.strip()}")
-    (outdir / "transcript.json").write_text(
-        json.dumps(segs, ensure_ascii=False, indent=2), encoding="utf-8")
-    (outdir / "transcript.txt").write_text("\n".join(lines), encoding="utf-8")
-    return {"segments": segs, "text": " ".join(s["text"] for s in segs)}
+        result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8",
+                                errors="replace", timeout=timeout, **kwargs)
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        raise PipelineError(f"{Path(cmd[0]).name}: {exc}") from exc
+    if result.returncode:
+        raise PipelineError(f"{Path(cmd[0]).name} retornou {result.returncode}: {result.stderr[-1500:]}")
+    return result
 
-# ----------------------------- montages -----------------------------
-def make_montages(frames_meta, frames_dir, out_dir, label, cols=4, tile_w=360,
-                  per_sheet=12):
+
+def json_compatible(value):
+    """WhisperX/Pandas produce NumPy scalars; preserve absent/non-finite times as null."""
+    if value is None or isinstance(value, (str, bool)):
+        return value
+    if isinstance(value, numbers.Integral):
+        return int(value)
+    if isinstance(value, numbers.Real):
+        return float(value) if math.isfinite(value) else None
+    if isinstance(value, dict):
+        return {key: json_compatible(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [json_compatible(item) for item in value]
+    return value
+
+
+def write_json(path, data):
+    temporary = path.with_name(path.name + ".tmp")
+    temporary.write_text(json.dumps(json_compatible(data), ensure_ascii=False, indent=2, allow_nan=False), encoding="utf-8")
+    temporary.replace(path)
+
+
+def probe(video, ffprobe=None, timeout=300):
+    result = run([ffprobe or find_bin("ffprobe"), "-v", "error", "-print_format", "json",
+                  "-show_format", "-show_streams", str(video)], timeout=timeout)
+    try:
+        data = json.loads(result.stdout)
+        stream = next(s for s in data.get("streams", []) if s.get("codec_type") == "video")
+        numerator, denominator = stream.get("avg_frame_rate", "0/1").split("/")
+        fps = float(numerator) / float(denominator) if float(denominator) else 0
+        duration = float(data.get("format", {}).get("duration") or stream.get("duration") or 0)
+        if not math.isfinite(duration) or duration <= 0:
+            raise ValueError("duracao invalida")
+        return {"duration": round(duration, 6), "fps": round(fps, 6),
+                "width": int(stream.get("width", 0)), "height": int(stream.get("height", 0)),
+                "has_audio": any(s.get("codec_type") == "audio" for s in data.get("streams", []))}
+    except (StopIteration, ValueError, KeyError, TypeError) as exc:
+        raise PipelineError(f"Arquivo sem video utilizavel: {exc}") from exc
+
+
+def extract_frames(video, scenes_dir, timeline_dir, threshold, fps, ffmpeg=None, timeout=300):
+    """Decode once; include the first frame plus cuts. Timeline labels are the FPS sampling grid."""
+    scenes_dir.mkdir(parents=True)
+    timeline_dir.mkdir(parents=True)
+    metadata = scenes_dir / "_scene_meta.txt"
+    timeline_output = os.path.relpath(timeline_dir / "tl_%06d.png", scenes_dir)
+    graph = (f"[0:v]split=2[a][b];"
+             f"[a]select='eq(n,0)+gt(scene,{threshold})',metadata=print:file=_scene_meta.txt[s];"
+             f"[b]fps={fps}[t]")
+    run([ffmpeg or find_bin("ffmpeg"), "-hide_banner", "-y", "-i", str(video),
+         "-filter_complex", graph, "-map", "[s]", "-fps_mode", "vfr", "scene_%06d.png",
+         "-map", "[t]", timeline_output], timeout=timeout, cwd=str(scenes_dir))
+    times = [float(match.group(1)) for line in metadata.read_text(encoding="utf-8").splitlines()
+             if (match := re.search(r"pts_time:([-+0-9.eE]+)", line))]
+    scene_files = sorted(scenes_dir.glob("scene_[0-9]*.png"))
+    if len(times) != len(scene_files):
+        raise PipelineError("Contagem de cenas diverge dos timestamps do FFmpeg; nenhum tempo sera inventado.")
+    scenes = []
+    for index, (frame, timestamp) in enumerate(zip(scene_files, times), 1):
+        name = f"scene_t{timestamp:010.4f}_{index:06d}.png"
+        frame.rename(scenes_dir / name)
+        scenes.append({"file": name, "t": round(timestamp, 6)})
+    metadata.unlink()
+    timeline = []
+    for index, frame in enumerate(sorted(timeline_dir.glob("tl_[0-9]*.png"))):
+        timestamp = index / fps
+        name = f"tl_t{timestamp:010.4f}_{index + 1:06d}.png"
+        frame.rename(timeline_dir / name)
+        timeline.append({"file": name, "t": round(timestamp, 6)})
+    if not scenes or not timeline:
+        raise PipelineError("FFmpeg nao produziu a timeline e o frame inicial esperados.")
+    return scenes, timeline
+
+
+def faster_transcription(wav, args):
+    from faster_whisper import WhisperModel
+    model = WhisperModel(args.model, device=args.device, compute_type=args.compute_type,
+                         cpu_threads=args.cpu_threads)
+    segments, info = model.transcribe(str(wav), language=None if args.language == "auto" else args.language,
+                                      beam_size=5, vad_filter=True,
+                                      word_timestamps=args.word_timestamps and args.alignment == "none")
+    output = []
+    for segment in segments:  # faster-whisper performs inference lazily here.
+        record = {"start": round(float(segment.start), 4), "end": round(float(segment.end), 4),
+                  "text": segment.text.strip()}
+        if args.word_timestamps and args.alignment == "none":
+            record["words"] = [{"word": word.word, "start": round(float(word.start), 4),
+                                "end": round(float(word.end), 4), "probability": float(word.probability)}
+                               for word in (segment.words or [])]
+        output.append(record)
+    return output, info.language
+
+
+def align_words(segments, wav, language, device, model_name=None):
+    """Use existing ASR text; do not load WhisperX ASR, VAD or diarization."""
+    import whisperx
+    model, metadata = whisperx.load_align_model(language_code=language, device=device,
+                                               model_name=model_name)
+    result = whisperx.align(segments, model, metadata, str(wav), device,
+                           return_char_alignments=False, interpolate_method="ignore")
+    words = result.get("word_segments") or [word for segment in result.get("segments", [])
+                                             for word in segment.get("words", [])]
+    # Missing timestamps remain missing. Never borrow a neighbor's timing or fill with zero.
+    timed = sum(isinstance(word.get("start"), (int, float))
+                and isinstance(word.get("end"), (int, float))
+                and math.isfinite(word["start"]) and math.isfinite(word["end"])
+                and 0 <= word["start"] <= word["end"] for word in words)
+    expected = sum(len(segment["text"]) if language in ("ja", "zh") else len(segment["text"].split())
+                   for segment in segments)
+    status = "SUCCEEDED" if words and timed == len(words) == expected else "PARTIAL" if words else "FAILED"
+    return {"status": status, "backend": "whisperx", "language": language,
+            "word_count": len(words), "expected_word_count": expected, "timed_word_count": timed,
+            "unaligned_word_count": max(expected, len(words)) - timed, "segments": result.get("segments", []),
+            "words": words}
+
+
+def transcribe(video, outdir, args, ffmpeg=None):
+    outdir.mkdir(parents=True, exist_ok=True)
+    audio = {"status": "FAILED", "backend": "faster-whisper", "language": None,
+             "segments": [], "text": ""}
+    alignment = {"status": "NOT_REQUESTED", "backend": None}
+    wav = outdir / "audio.wav"
+    try:
+        run([ffmpeg or find_bin("ffmpeg"), "-hide_banner", "-y", "-i", str(video),
+             "-vn", "-ac", "1", "-ar", "16000", str(wav)], timeout=args.command_timeout)
+        segments, language = faster_transcription(wav, args)
+        audio.update(status="SUCCEEDED" if segments else "NO_SPEECH_DETECTED", language=language,
+                     segments=segments, text=" ".join(segment["text"] for segment in segments))
+        write_json(outdir / "transcript.json", segments)
+        (outdir / "transcript.txt").write_text("\n".join(
+            f"[{segment['start']:7.3f} -> {segment['end']:7.3f}] {segment['text']}"
+            for segment in segments), encoding="utf-8")
+        if args.alignment == "whisperx":
+            if not segments:
+                alignment = {"status": "NOT_APPLICABLE", "backend": "whisperx", "reason": "no_speech_detected"}
+            else:
+                # Free the ASR model before loading the alignment model (function scope ended).
+                try:
+                    alignment = align_words(segments, wav, language, args.device, args.align_model)
+                    write_json(outdir / "alignment.json", alignment)
+                    write_json(outdir / "words.json", alignment["words"])
+                except Exception as exc:
+                    alignment = {"status": "FAILED", "backend": "whisperx",
+                                 "error": f"{type(exc).__name__}: {exc}"}
+    except Exception as exc:
+        audio["error"] = f"{type(exc).__name__}: {exc}"
+        if args.alignment == "whisperx":
+            alignment = {"status": "FAILED", "backend": "whisperx", "reason": "transcription_failed"}
+    return audio, alignment
+
+
+def make_sheet(job):
     from PIL import Image, ImageDraw, ImageFont
-    out_dir.mkdir(parents=True, exist_ok=True)
+    chunk, frames_dir, output, cols, tile_width = job
     try:
         font = ImageFont.truetype("arial.ttf", 20)
-    except Exception:
+    except OSError:
         font = ImageFont.load_default()
-    bar = 26
-    sheets = []
-    chunks = [frames_meta[i:i + per_sheet] for i in range(0, len(frames_meta), per_sheet)]
-    for si, chunk in enumerate(chunks, 1):
-        thumbs = []
-        for fm in chunk:
-            img = Image.open(frames_dir / fm["file"]).convert("RGB")
-            w, h = img.size
-            tile_h = int(h * tile_w / w)
-            img = img.resize((tile_w, tile_h))
-            canvas = Image.new("RGB", (tile_w, tile_h + bar), (15, 15, 15))
-            canvas.paste(img, (0, bar))
-            d = ImageDraw.Draw(canvas)
-            d.text((6, 3), f"t={fm['t']:.2f}s", fill=(255, 220, 0), font=font)
-            thumbs.append(canvas)
-        tw, th = thumbs[0].size
-        rows = (len(thumbs) + cols - 1) // cols
-        sheet = Image.new("RGB", (cols * tw, rows * th), (0, 0, 0))
-        for idx, t in enumerate(thumbs):
-            r_, c_ = divmod(idx, cols)
-            sheet.paste(t, (c_ * tw, r_ * th))
-        name = f"overview_{label}_{si:02d}.png"
-        sheet.save(out_dir / name)
-        sheets.append(name)
-    return sheets
+    thumbs = []
+    for record in chunk:
+        with Image.open(frames_dir / record["file"]) as source:
+            height = max(1, round(source.height * tile_width / source.width))
+            image = source.convert("RGB").resize((tile_width, height))
+        canvas = Image.new("RGB", (tile_width, height + 26), (15, 15, 15))
+        canvas.paste(image, (0, 26))
+        ImageDraw.Draw(canvas).text((6, 3), f"t={record['t']:.3f}s", fill=(255, 220, 0), font=font)
+        thumbs.append(canvas)
+    width, height = thumbs[0].size
+    sheet = Image.new("RGB", (cols * width, math.ceil(len(thumbs) / cols) * height))
+    for index, thumb in enumerate(thumbs):
+        sheet.paste(thumb, (index % cols * width, index // cols * height))
+    sheet.save(output)
+    return output.name
 
-# ------------------------------- main -------------------------------
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--video", required=True)
-    ap.add_argument("--outdir", default=None)
-    ap.add_argument("--timeline-fps", type=float, default=5.0)
-    ap.add_argument("--scene-threshold", type=float, default=0.2)
-    ap.add_argument("--model", default="small.en")
-    ap.add_argument("--no-audio", action="store_true")
-    args = ap.parse_args()
 
-    video = Path(args.video).resolve()
-    if not video.exists():
-        raise SystemExit(f"[ERRO] video nao encontrado: {video}")
-    outdir = Path(args.outdir).resolve() if args.outdir else \
-        video.parent / f"{video.stem}_watch"
+def montage_jobs(frames, frames_dir, output_dir, label, cols, per_sheet):
+    output_dir.mkdir(parents=True, exist_ok=True)
+    return [(frames[index:index + per_sheet], frames_dir,
+             output_dir / f"overview_{label}_{index // per_sheet + 1:02d}.png", cols, 360)
+            for index in range(0, len(frames), per_sheet)]
+
+
+@contextmanager
+def output_lock(outdir):
     outdir.mkdir(parents=True, exist_ok=True)
+    lock = outdir / ".watch.lock"
+    try:
+        fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
+    except FileExistsError as exc:
+        raise PipelineError(f"Outro /watch possui {lock}. Confira se o processo terminou antes de remover a trava.") from exc
+    try:
+        with os.fdopen(fd, "w") as file:
+            file.write(f"pid={os.getpid()}\n")
+        yield
+    finally:
+        lock.unlink(missing_ok=True)
 
-    print(f"[1/5] sondando {video.name} ...")
-    info = probe(video)
-    print(f"      duracao={info['duration']}s fps={info['fps']} "
-          f"{info['width']}x{info['height']} audio={info['has_audio']}")
 
-    print("[2/5] detectando cortes de cena ...")
-    scenes = extract_scenes(video, outdir / "frames" / "scenes",
-                            args.scene_threshold)
-    print(f"      {len(scenes)} cenas.")
+def check_output_ownership(outdir):
+    reserved = ("frames", "audio", "overview", "manifest.json")
+    if not any((outdir / name).exists() for name in reserved):
+        return
+    try:
+        old = json.loads((outdir / "manifest.json").read_text(encoding="utf-8"))
+        owned = old.get("pipeline") == "watch" or all(
+            key in old for key in ("video", "info", "scenes", "timeline", "overview"))
+    except (ValueError, OSError, AttributeError):
+        owned = False
+    if not owned:
+        raise PipelineError("A pasta de saida contem artefatos sem manifest do /watch. Use outra pasta; nenhum arquivo foi substituido.")
+    if any((outdir / name).is_symlink() for name in reserved):
+        raise PipelineError("A pasta de saida contem symlink em caminho reservado; use outra pasta.")
 
-    print(f"[3/5] extraindo timeline densa COMPLETA "
-          f"(@ {args.timeline_fps}fps = 1 frame/{1/args.timeline_fps:.2f}s) ...")
-    timeline = extract_fps(video, outdir / "frames" / "timeline",
-                           args.timeline_fps, "tl")
-    print(f"      {len(timeline)} frames (vídeo inteiro na densidade do hook).")
 
-    transcript = None
-    if not args.no_audio and info["has_audio"]:
-        print(f"[4/5] transcrevendo audio (modelo {args.model}) ...")
-        transcript = transcribe(video, outdir / "audio", args.model)
-        if transcript:
-            print(f"      {len(transcript['segments'])} segmentos.")
-    else:
-        print("[4/5] audio pulado.")
+def publish(staging, outdir):
+    # Only these generated directories belong to /watch. Other production artifacts stay intact.
+    for name in ("frames", "audio", "overview"):
+        current = outdir / name
+        if current.exists():
+            if current.is_dir():
+                shutil.rmtree(current)
+            else:
+                current.unlink()
+        fresh = staging / name
+        if fresh.exists():
+            fresh.replace(current)
 
-    print("[5/5] gerando grades de visao geral ...")
-    ov = outdir / "overview"
-    m_scenes = make_montages(scenes, outdir / "frames" / "scenes", ov, "scenes") if scenes else []
-    m_tl = make_montages(timeline, outdir / "frames" / "timeline", ov, "timeline",
-                         cols=5, per_sheet=20) if timeline else []
 
-    manifest = {
-        "video": str(video),
-        "outdir": str(outdir),
-        "info": info,
-        "params": {
-            "timeline_fps": args.timeline_fps,
-            "scene_threshold": args.scene_threshold, "model": args.model,
-        },
-        "scenes": scenes,
-        "timeline": timeline,
-        "overview": {"scenes": m_scenes, "timeline": m_tl},
-        "transcript": bool(transcript),
-    }
-    (outdir / "manifest.json").write_text(
-        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+def package_versions():
+    versions = {}
+    for package in ("faster-whisper", "whisperx", "ctranslate2", "Pillow", "av", "torch", "torchaudio"):
+        try:
+            versions[package] = importlib.metadata.version(package)
+        except importlib.metadata.PackageNotFoundError:
+            versions[package] = None
+    return versions
 
-    print("\n=== PRONTO ===")
-    print(f"saida: {outdir}")
-    print(f"grades: {ov}")
-    print(f"manifest: {outdir / 'manifest.json'}")
-    if transcript:
-        print(f"transcricao: {outdir / 'audio' / 'transcript.txt'}")
+
+def build_parser():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--video", required=True)
+    parser.add_argument("--outdir")
+    parser.add_argument("--timeline-fps", type=float, default=5)
+    parser.add_argument("--scene-threshold", type=float, default=0.2)
+    parser.add_argument("--model", default="small.en")
+    parser.add_argument("--language", default="en", help="ISO language code, or auto; .en models support English only")
+    parser.add_argument("--device", choices=("cpu", "cuda"), default="cpu")
+    parser.add_argument("--compute-type", default="int8")
+    parser.add_argument("--cpu-threads", type=int, default=4)
+    parser.add_argument("--jobs", type=int, default=min(4, os.cpu_count() or 1))
+    parser.add_argument("--alignment", choices=("none", "whisperx"), default="none")
+    parser.add_argument("--align-model", help="Optional explicit WhisperX alignment model")
+    parser.add_argument("--word-timestamps", action="store_true", help="Faster-Whisper words when alignment=none")
+    parser.add_argument("--no-audio", action="store_true", help="Explicitly skip transcription (e.g. silent paid reference)")
+    parser.add_argument("--allow-no-audio", action="store_true", help="Allow a missing audio stream; transcribe if present")
+    parser.add_argument("--max-frames", type=int, default=20000, help="Fail instead of truncating above this sampling budget")
+    parser.add_argument("--command-timeout", type=float, default=300)
+    return parser
+
+
+def validate_args(parser, args):
+    if not math.isfinite(args.timeline_fps) or not 0 < args.timeline_fps <= 60:
+        parser.error("--timeline-fps deve estar entre 0 (exclusivo) e 60")
+    if not math.isfinite(args.scene_threshold) or not 0 <= args.scene_threshold <= 1:
+        parser.error("--scene-threshold deve estar entre 0 e 1")
+    if args.jobs < 1 or args.cpu_threads < 1 or args.max_frames < 1:
+        parser.error("--jobs, --cpu-threads e --max-frames devem ser positivos")
+    if not math.isfinite(args.command_timeout) or args.command_timeout <= 0:
+        parser.error("--command-timeout deve ser positivo")
+    if args.no_audio and args.alignment != "none":
+        parser.error("--no-audio nao combina com alinhamento solicitado")
+    if args.align_model and args.alignment != "whisperx":
+        parser.error("--align-model exige --alignment whisperx")
+    if args.model.endswith(".en") and args.language not in ("en", "auto"):
+        parser.error("Modelo .en suporta apenas ingles; use --model small para outro idioma")
+
+
+def process(args):
+    video = Path(args.video).expanduser().resolve()
+    if not video.is_file():
+        raise PipelineError(f"Video nao encontrado: {video}")
+    outdir = Path(args.outdir).expanduser().resolve() if args.outdir else video.parent / (video.stem + "_watch")
+    if outdir == video or outdir in video.parents:
+        raise PipelineError("Use uma pasta de saida que nao contenha o video de entrada.")
+    check_output_ownership(outdir)
+    started = time.perf_counter()
+    manifest = {"schema_version": 2, "pipeline": "watch", "run_id": str(uuid.uuid4()),
+                "status": "RUNNING", "analysis_status": "PENDING_VISUAL_REVIEW", "video": str(video),
+                "outdir": str(outdir), "info": None, "scenes": [], "timeline": [],
+                "overview": {"scenes": [], "timeline": []}, "transcript": False,
+                "audio": {"status": "PENDING"}, "alignment": {"status": "NOT_REQUESTED"},
+                "params": {key: value for key, value in vars(args).items() if key not in ("video", "outdir")},
+                "environment": {"os": platform.platform(), "architecture": platform.machine(),
+                                "python": sys.version.split()[0], "packages": package_versions()}, "errors": []}
+    with output_lock(outdir):
+        write_json(outdir / "manifest.json", manifest)
+        with tempfile.TemporaryDirectory(prefix=".watch-run-", dir=outdir.parent) as temporary:
+            staging = Path(temporary)
+            audio_future = None
+            with ThreadPoolExecutor(max_workers=1) as audio_pool:
+                try:
+                    ffmpeg, ffprobe = find_bin("ffmpeg"), find_bin("ffprobe")
+                    manifest["environment"].update(ffmpeg=ffmpeg, ffprobe=ffprobe)
+                    info = probe(video, ffprobe, args.command_timeout)
+                    manifest["info"] = info
+                    if math.ceil(info["duration"] * args.timeline_fps) > args.max_frames:
+                        raise PipelineError("Timeline excede --max-frames. Aumente o limite se necessario; o video nao sera truncado.")
+                    if args.no_audio:
+                        manifest["audio"] = {"status": "SKIPPED_BY_REQUEST"}
+                    elif not info["has_audio"]:
+                        manifest["audio"] = {"status": "NO_AUDIO_STREAM", "allowed": args.allow_no_audio}
+                        if args.alignment == "whisperx":
+                            manifest["alignment"] = {"status": "NOT_APPLICABLE", "backend": "whisperx", "reason": "no_audio_stream"}
+                        if not args.allow_no_audio:
+                            manifest["errors"].append("Audio ausente sem modo mudo explicito (--no-audio ou --allow-no-audio).")
+                    else:
+                        audio_future = audio_pool.submit(transcribe, video, staging / "audio", args, ffmpeg)
+                    print(f"Extraindo video completo: {info['duration']}s, {args.timeline_fps}fps ...", flush=True)
+                    scenes, timeline = extract_frames(video, staging / "frames/scenes", staging / "frames/timeline",
+                                                      args.scene_threshold, args.timeline_fps, ffmpeg, args.command_timeout)
+                    manifest.update(scenes=scenes, timeline=timeline)
+                    if len(timeline) > args.max_frames:
+                        raise PipelineError("FFmpeg excedeu o limite de frames; a execucao nao sera marcada completa.")
+                    manifest["coverage"] = {"source_duration_s": info["duration"], "sample_interval_s": 1 / args.timeline_fps,
+                                            "timeline_count": len(timeline), "timestamp_basis": "fps_filter_sampling_grid",
+                                            "visual_review_performed": False}
+                    jobs = (montage_jobs(scenes, staging / "frames/scenes", staging / "overview", "scenes", 4, 12)
+                            + montage_jobs(timeline, staging / "frames/timeline", staging / "overview", "timeline", 5, 20))
+                    with ThreadPoolExecutor(max_workers=args.jobs) as montage_pool:
+                        sheets = list(montage_pool.map(make_sheet, jobs))
+                    manifest["overview"] = {label: [name for name in sheets if name.startswith("overview_" + label + "_")]
+                                            for label in ("scenes", "timeline")}
+                    manifest["status"] = "COMPLETE" if not manifest["errors"] else "PARTIAL"
+                except Exception as exc:
+                    manifest["status"] = "FAILED"
+                    manifest["errors"].append(f"{type(exc).__name__}: {exc}")
+                if audio_future:
+                    try:
+                        audio, alignment = audio_future.result()
+                        manifest.update(audio=audio, alignment=alignment, transcript=audio["status"] in ("SUCCEEDED", "NO_SPEECH_DETECTED"))
+                        if audio["status"] == "FAILED":
+                            manifest["errors"].append("Transcricao: " + audio.get("error", "falhou"))
+                        if alignment["status"] in ("FAILED", "PARTIAL"):
+                            manifest["errors"].append("Alinhamento: " + alignment.get("error", alignment["status"]))
+                        if manifest["errors"] and manifest["status"] == "COMPLETE":
+                            manifest["status"] = "PARTIAL"
+                    except Exception as exc:
+                        manifest["audio"] = {"status": "FAILED", "error": str(exc)}
+                        manifest["errors"].append(f"Transcricao: {exc}")
+                        if manifest["status"] == "COMPLETE":
+                            manifest["status"] = "PARTIAL"
+            publish(staging, outdir)
+            manifest["elapsed_seconds"] = round(time.perf_counter() - started, 3)
+            write_json(outdir / "manifest.json", manifest)
+    return manifest
+
+
+def main(argv=None):
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    validate_args(parser, args)
+    try:
+        manifest = process(args)
+    except (PipelineError, OSError, ValueError) as exc:
+        print(f"[ERRO] {exc}", file=sys.stderr)
+        return 2
+    print(f"{manifest['status']}: {manifest['outdir']} ({manifest['elapsed_seconds']}s)")
+    print("A extracao aguarda leitura visual das grades e frames pelo analista.")
+    for error in manifest["errors"]:
+        print(f"[ERRO] {error}", file=sys.stderr)
+    return 0 if manifest["status"] == "COMPLETE" else 2
+
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
