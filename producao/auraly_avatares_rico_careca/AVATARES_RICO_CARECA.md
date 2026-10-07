@@ -14,7 +14,7 @@ REGRA DE CENARIO DO JORDAN ASHBY (Luigi, 2026-10-07, permanente): o cenario dele
 - modelo dentro de casa -> ele fica dentro de uma mansao, fazendo a mesma acao do modelo;
 - modelo dentro de um carro -> ele fica em um carro de luxo ou esportivo;
 - modelo ao ar livre -> ele fica em um lugar de luxo, viajando, em cenarios famosos (torre Eiffel em Paris, em frente ao predio mais alto do mundo em Dubai, curtindo no Marrocos, iate na costa, e assim por diante).
-Sobrepoe, so para o Gordon, o 'cenario do modelo quase 100% fiel' do Auraly: aqui o tipo de lugar e a acao seguem o modelo, mas o lugar vira o equivalente de luxo.
+Sobrepoe, so para o Jordan Vale, o 'cenario do modelo quase 100% fiel' do Auraly: aqui o tipo de lugar e a acao seguem o modelo, mas o lugar vira o equivalente de luxo.
 
 ## Devon Price (mulher careca)
 Americana de ~50, magra, careca (sem peruca, sem lenço), olhos avelã-esverdeados, sardas, sem maquiagem,
