@@ -8,7 +8,13 @@ Os dois leem como americanos. Sheets escolhidos por Luigi em 2026-10-07 e salvos
 ## Gordon Ashby (homem rico)
 Americano de ~68, magro e ereto, cabelo prateado cheio penteado para trás, óculos redondos de aro fino
 dourado, pele envelhecida real, smoking creme com gravata-borboleta preta, relógio e aliança dourados.
-Clima: dinheiro antigo, calmo, fala baixo e devagar, autoridade tranquila. Cenários de luxo vêm do vídeo modelo.
+Clima: dinheiro antigo, calmo, fala baixo e devagar, autoridade tranquila.
+
+REGRA DE CENARIO DO GORDON ASHBY (Luigi, 2026-10-07, permanente): o cenario dele e SEMPRE de luxo maximo, adaptado ao cenario do video modelo, mantendo a mesma acao e o mesmo enquadramento:
+- modelo dentro de casa -> ele fica dentro de uma mansao, fazendo a mesma acao do modelo;
+- modelo dentro de um carro -> ele fica em um carro de luxo ou esportivo;
+- modelo ao ar livre -> ele fica em um lugar de luxo, viajando, em cenarios famosos (torre Eiffel em Paris, em frente ao predio mais alto do mundo em Dubai, curtindo no Marrocos, iate na costa, e assim por diante).
+Sobrepoe, so para o Gordon, o 'cenario do modelo quase 100% fiel' do Auraly: aqui o tipo de lugar e a acao seguem o modelo, mas o lugar vira o equivalente de luxo.
 
 ## Celeste Marlow (mulher careca)
 Americana de ~50, magra, careca (sem peruca, sem lenço), olhos avelã-esverdeados, sardas, sem maquiagem,
