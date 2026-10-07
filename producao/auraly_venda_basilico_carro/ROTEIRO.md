@@ -8,7 +8,7 @@ CTA original: "Send this video to yourself and comment 222 to lock this energy i
 **Vídeo modelo:** `input/modelo.mp4` (video1_modelo.mp4) · 86,6s · 720x1280 · pessoa real agachada à porta aberta de um SUV, com cortes para um inserto das mãos
 **Origem:** pessoa real (organico). `PERFIL_ORGANICO.md` governa; desvios pedidos pelo Luigi: tom agressivo com consequência do selo (T6) e ingrediente trocado (louro vira manjericão)
 **Rodada:** VALIDAÇÃO (um gancho só, o do modelo, fiel)
-**Avatares:** Gordon Ashby (cenário de luxo, regra do Luigi de 2026-10-07) e Avery Knox e Celeste Marlow (cenário do modelo). Mesma copy nos três
+**Avatares:** Jordan Vale (cenário de luxo, regra do Luigi de 2026-10-07) e Avery Knox e Devon Price (cenário do modelo). Mesma copy nos três
 **Objetivo:** SALE, dinheiro e fortuna. CTA `222` e depois Stories
 **Estado:** APROVADO (Luigi, 2026-10-07)
 
@@ -30,7 +30,7 @@ CTA original: "Send this video to yourself and comment 222 to lock this energy i
 ## Setups de cena
 
 - **Setup A (T1):** inserto das mãos de cima para baixo sobre o piso traseiro do carro: o pote de vidro inclinado despeja as folhas, a outra mão levanta o tapete. Depois corte para o plano aberto dele agachado. K01 é o primeiro plano da sequência; os cortes nascem dentro do V01.
-- **Setup B (T2 a T10):** agachado ao lado da porta traseira aberta do carro, pote de vidro vazio nas duas mãos na altura do peito, olhando para a lente, câmera à altura do peito dele a uns 4 pés. Gordon: carro de luxo em frente a uma mansão. Avery: SUV de entrada de garagem, como no modelo.
+- **Setup B (T2 a T10):** agachado ao lado da porta traseira aberta do carro, pote de vidro vazio nas duas mãos na altura do peito, olhando para a lente, câmera à altura do peito dele a uns 4 pés. Jordan: carro de luxo em frente a uma mansão. Avery: SUV de entrada de garagem, como no modelo.
 
 ## Roteiro cena a cena
 ### T1 · GANCHO MUDO · B-ROLL · MUDO · Setup A
@@ -80,7 +80,7 @@ Put dry basil leaves under your car floor mat, and keep your mouth shut. Tell no
 - **Números 222, 333, 888, 999 que brilham no modelo:** são sobreposição de edição. Não entram nos K nem nos V (regra orgânico, nada sobrenatural); o `222` vive na fala do T7.
 - **Tom pedido pelo Luigi:** agressivo dentro da lógica do selo. Consequência = o dinheiro continua passando direto. Sem valor garantido, sem ameaça de doença, morte ou acidente.
 - **Compliance, claim mais arriscado:** T5, promessa de dinheiro de volta amanhã. Sem valor e sem prazo além de "amanhã de manhã", no padrão aprovado do orgânico.
-- **Congruência por avatar:** nada depende de idade ou gênero. Gordon fala devagar e baixo, dinheiro antigo; Avery, calorosa e direta.
-- **Gordon, regra de luxo (2026-10-07):** carro de luxo (Bentley Bentayga preto) em frente a uma mansão; mesma ação e câmera. Avery mantém o cenário do modelo.
+- **Congruência por avatar:** nada depende de idade ou gênero. Jordan fala devagar e baixo, dinheiro antigo; Avery, calorosa e direta.
+- **Jordan, regra de luxo (2026-10-07):** carro de luxo (Bentley Bentayga preto) em frente a uma mansão; mesma ação e câmera. Avery mantém o cenário do modelo.
 - **Sem produto, sem preço, sem app, sem quiz.** Origem orgânica: sem carta SOULMATE, sem kit de tarólogo, sem bandeira obrigatória.
 - **Se ficar longo:** T9 pode sair sem quebrar nada.

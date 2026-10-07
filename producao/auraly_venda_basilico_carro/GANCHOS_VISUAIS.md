@@ -33,6 +33,6 @@ Plano 1: mãos coladas na lente, vista de cima, uma segura um pote de vidro e de
 Screen text:
 Keep your mouth shut / Tell nobody
 Desvios obrigatorios:
-Gordon: SUV comum vira Bentley Bentayga preto em frente a uma mansão (regra de luxo do Luigi); Avery mantém o SUV do modelo. Ação e câmera iguais. Ingrediente trocado (louro vira manjericão) para não repetir a produção de ontem. Cortes dentro do V1 (modelo também corta de inserto para plano de corpo). T1 mudo; o modelo fala por cima.
+Jordan: SUV comum vira Bentley Bentayga preto em frente a uma mansão (regra de luxo do Luigi); Avery mantém o SUV do modelo. Ação e câmera iguais. Ingrediente trocado (louro vira manjericão) para não repetir a produção de ontem. Cortes dentro do V1 (modelo também corta de inserto para plano de corpo). T1 mudo; o modelo fala por cima.
 Delayed meaning:
 Por que o manjericão e o tapete ficam em aberto até o T6.

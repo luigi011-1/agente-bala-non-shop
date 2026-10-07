@@ -2,7 +2,7 @@
 
 Fonte unica da fala: ROTEIRO.md aprovado (lido do disco). Regra do Luigi de 2026-10-06: K so com o character sheet
 do avatar; V so com a imagem escolhida do K. Cenario e camera do modelo vao por escrito. Regra de 2026-10-07: o cenario
-do Gordon e sempre de luxo maximo (carro vira carro de luxo). Mapa: K01 -> V01 (T1 mudo), K02 -> V02 a V10.
+do Jordan e sempre de luxo maximo (carro vira carro de luxo). Mapa: K01 -> V01 (T1 mudo), K02 -> V02 a V10.
 Saidas por avatar: PROMPTS_<AVATAR>.md, FLOW_<AVATAR>.md e ENTREGA_<AVATAR>.md.  Uso: python3 gerar_pacote.py
 """
 import json
@@ -44,8 +44,8 @@ NEG = ("no captions, no subtitles, no words overlaid on the image, no floating n
 JAR = ("a clear glass jar with a wide screw mouth, lid off and out of frame, no label and no printed text")
 
 AVATARES = [
-    dict(nome="Gordon Ashby", arquivo="GORDON_ASHBY", genero="homem", pos="his", sheet="producao/_ancoras/character_sheets/gordon_ashby_character_sheet.jpg",
-         identidade=("The exact fictional AI character Gordon Ashby, explicitly male: American man aged about 68, slim and upright, full "
+    dict(nome="Jordan Vale", arquivo="JORDAN_VALE", genero="homem", pos="his", sheet="producao/_ancoras/character_sheets/jordan_vale_character_sheet.jpg",
+         identidade=("The exact fictional AI character Jordan Vale, explicitly male: American man aged about 68, slim and upright, full "
                      "head of thick silver-white hair combed back, thin gold-rimmed round glasses, narrow elegant face, light "
                      "blue-grey eyes with heavy lids, real aged skin with deep forehead lines, crow's feet, sun spots and soft "
                      "jowls, clean-shaven, a calm closed-mouth half smile."),
@@ -72,8 +72,8 @@ AVATARES = [
          agach=("squats low on her heels beside the open rear door in jeans and the white shirt, knees bent, forearms resting on her thighs"),
          sotaque="texano carregado", voz="voz feminina média, levemente rouca e calorosa de uma texana de cinquenta e seis anos",
          tom="de voz firme e calorosa", lux=False),
-    dict(nome="Celeste Marlow", arquivo="CELESTE_MARLOW", genero="mulher", pos="her", sheet="producao/_ancoras/character_sheets/celeste_marlow_character_sheet.jpg",
-         identidade=("The exact fictional AI character Celeste Marlow: American woman aged about 50, slim, completely bald with a smooth "
+    dict(nome="Devon Price", arquivo="DEVON_PRICE", genero="mulher", pos="her", sheet="producao/_ancoras/character_sheets/devon_price_character_sheet.jpg",
+         identidade=("The exact fictional AI character Devon Price: American woman aged about 50, slim, completely bald with a smooth "
                      "natural scalp and a few small freckles, no wig, no headscarf, light hazel-green eyes, thin natural pale eyebrows, "
                      "oval face with high cheekbones, freckles across the nose and cheeks, real aged skin with fine forehead lines, "
                      "crow's feet and laugh lines, no makeup, small silver stud earrings, a warm gentle half smile."),
