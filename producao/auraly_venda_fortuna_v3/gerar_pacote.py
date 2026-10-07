@@ -2,7 +2,7 @@
 
 Fonte unica da fala: ROTEIRO.md aprovado (lido do disco). Regra do Luigi de 2026-10-06: o K so anexa o
 character sheet do avatar e o V so anexa a imagem escolhida; cenario, camera, pose e acao do modelo vao por
-extenso dentro de cada prompt. Regra do Luigi de 2026-10-07: o cenario do Gordon Ashby e sempre de luxo maximo
+extenso dentro de cada prompt. Regra do Luigi de 2026-10-07: o cenario do Jordan Vale e sempre de luxo maximo
 (dentro de casa = mansao fazendo a mesma acao). Mapa K/V: K01 -> V01 (gancho mudo), K02 -> V02 a V14 (corpo).
 Saidas por avatar: PROMPTS_<AVATAR>.md, FLOW_<AVATAR>.md e ENTREGA_<AVATAR>.md. Uso: python3 gerar_pacote.py
 """
@@ -43,7 +43,7 @@ NOTA = ("a crisp US one-hundred-dollar bill, pale green-blue with a blue securit
 MACOS = ("tight stacks of US one-hundred-dollar bills, each stack held by a yellow paper band, piled in rows to the "
          "top of the cavity")
 
-# Cenarios (modelo: cozinha americana; Avery copia o modelo, Gordon o mesmo layout em mansao, regra de 2026-10-07)
+# Cenarios (modelo: cozinha americana; Avery copia o modelo, Jordan o mesmo layout em mansao, regra de 2026-10-07)
 COZ_A_ORIG = ("An ordinary American family kitchen as in the model: white shaker cabinets with small brass pulls, a "
               "white marble island end with grey veining and a squared waterfall edge on the left of the frame, large "
               "beige floor tiles, a white tile backsplash at the top of the frame, and a small American flag in a "
@@ -65,10 +65,10 @@ COZ_B_MANSAO = ("The kitchen of a luxury mansion, the same layout as the model: 
                 "counter.")
 
 AVATARES = [
-    dict(nome="Gordon Ashby", arquivo="GORDON_ASHBY", genero="homem", pron="He", pos="his",
-         sheet="producao/_ancoras/character_sheets/gordon_ashby_character_sheet.jpg",
+    dict(nome="Jordan Vale", arquivo="JORDAN_VALE", genero="homem", pron="He", pos="his",
+         sheet="producao/_ancoras/character_sheets/jordan_vale_character_sheet.jpg",
          coz_a=COZ_A_MANSAO, coz_b=COZ_B_MANSAO, ambiente="cozinha de mansão",
-         identidade=("The exact fictional AI character Gordon Ashby, explicitly male: white American man aged about 68, "
+         identidade=("The exact fictional AI character Jordan Vale, explicitly male: white American man aged about 68, "
                      "slim and upright, full thick silver-white hair combed back, thin gold-rimmed round glasses, "
                      "light blue-grey eyes with heavy lids, narrow face, long straight nose, deep forehead lines, "
                      "crow's feet, sun spots on temples and cheeks, real aged skin, clean-shaven."),
@@ -88,10 +88,10 @@ AVATARES = [
                 "silver cuff bracelet set with turquoise, and tan suede ankle boots."),
          maos="her fair hands with big turquoise rings and the silver turquoise cuff bracelet below the rolled white cuffs",
          voz="voz feminina quente e firme, levemente rouca, de uma mulher de sessenta anos"),
-    dict(nome="Celeste Marlow", arquivo="CELESTE_MARLOW", genero="mulher", pron="She", pos="her",
-         sheet="producao/_ancoras/character_sheets/celeste_marlow_character_sheet.jpg",
+    dict(nome="Devon Price", arquivo="DEVON_PRICE", genero="mulher", pron="She", pos="her",
+         sheet="producao/_ancoras/character_sheets/devon_price_character_sheet.jpg",
          coz_a=COZ_A_ORIG, coz_b=COZ_B_ORIG, ambiente="cozinha do modelo",
-         identidade=("The exact fictional AI character Celeste Marlow: white American woman aged about 50, slim, "
+         identidade=("The exact fictional AI character Devon Price: white American woman aged about 50, slim, "
                      "completely bald with a smooth natural scalp with a few small freckles, no wig, no headscarf, light "
                      "hazel-green eyes, thin natural pale eyebrows, oval face with high cheekbones, full natural lips, "
                      "freckles across the nose and cheeks, fine lines and crow's feet, no makeup, small silver stud "

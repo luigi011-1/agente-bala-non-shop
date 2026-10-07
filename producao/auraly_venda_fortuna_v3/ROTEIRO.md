@@ -7,7 +7,7 @@ origem: avatar IA (formato IA: bandeira dos EUA em todo K; sem carta SOULMATE, o
 **Vídeo modelo:** `input/modelo.mp4` (video2_modelo.mp4) · 102,2s · 720x1280
 **Modelo:** mulher careca, blusa verde-oliva canelada, joelhos no chão de uma cozinha americana; abre o painel escondido do rodapé do armário (maços de notas de $100), tira uma nota e mostra à lente (0 a 5,4s, mudo, com cortes e tarja "If you need urgent and unexpected money:"); depois plano único fixo, ela agachada com o braço apoiado na quina de mármore da bancada e a nota na mão, falando para a lente até o fim. Números `444` e `11:11` como camada de edição.
 **Rodada:** VALIDAÇÃO · **Objetivo:** SALE (dinheiro e fortuna)
-**Avatares:** Gordon Ashby (homem rico), Avery Knox (como está) e Celeste Marlow (a careca; cenário do modelo, como a Avery)
+**Avatares:** Jordan Vale (homem rico), Avery Knox (como está) e Devon Price (a careca; cenário do modelo, como a Avery)
 **Estado:** APROVADO pelo Luigi em 2026-10-07 (IMAGE_PROMPTS + VIDEO_PROMPTS)
 
 ## Esqueleto preservado (tabela)
@@ -37,13 +37,13 @@ origem: avatar IA (formato IA: bandeira dos EUA em todo K; sem carta SOULMATE, o
 4. **T10 e T11:** cada selo carrega a consequência (LEI DO SELO) e `222` entra amarrado ao nome ("comment received" do modelo vira comentar 222). Comentar é escrever, nunca "dizer em voz alta".
 5. **T14:** "second part of this sign" vira "what comes next", porque a v2 usou a frase literal.
 6. **Prop herói = nota de $100** (como no modelo), sem carta SOULMATE. Motivo: fidelidade ao modelo e ângulo de dinheiro.
-7. **Voz por avatar:** nenhuma frase fala de gênero ou idade; serve ao Gordon (68, dinheiro antigo) e à Avery (60).
+7. **Voz por avatar:** nenhuma frase fala de gênero ou idade; serve ao Jordan (68, dinheiro antigo) e à Avery (60).
 8. **Acabamento visual:** luz neutra de dia nublado no lugar da luz quente de fita LED sob o armário, foco, realismo, herói colado na lente (GATE_VISUAL). Texto de tela, `444` e `11:11` ficam só no CapCut.
 
 ## Setups de cena
 
 - **Setup A (T1, gancho mudo):** cozinha de casa americana de armários brancos e quina de mármore: o avatar ajoelhado no piso de lajotas bege, com o painel de madeira do rodapé inclinado para fora e os maços de notas de $100 à vista.
-- **Regra do Luigi, 2026-10-07 (só Gordon Ashby):** cenário sempre de luxo máximo. Vídeo modelo dentro de casa = o Gordon fica dentro de uma mansão fazendo a mesma ação (aqui: cozinha de mansão com o mesmo painel escondido no rodapé, mesma disposição e mesmo ângulo). Carro = carro de luxo ou esportivo; ao ar livre = lugar de luxo e conhecido (Torre Eiffel, prédio mais alto de Dubai, Marrocos). A Avery mantém o cenário original do modelo.
+- **Regra do Luigi, 2026-10-07 (só Jordan Vale):** cenário sempre de luxo máximo. Vídeo modelo dentro de casa = o Jordan fica dentro de uma mansão fazendo a mesma ação (aqui: cozinha de mansão com o mesmo painel escondido no rodapé, mesma disposição e mesmo ângulo). Carro = carro de luxo ou esportivo; ao ar livre = lugar de luxo e conhecido (Torre Eiffel, prédio mais alto de Dubai, Marrocos). A Avery mantém o cenário original do modelo.
 - **Setup B (T2 a T14, corpo):** cozinha de armários de nogueira escura com puxadores dourados, quina de mármore branco com veios cinza à esquerda, backsplash de azulejo creme, piso de lajotas bege. Avatar agachado perto da lente, braço esquerdo apoiado na quina de mármore, nota de $100 na mão direita em primeiro plano baixo, olhando para a lente. Mesmo enquadramento em todos os takes.
 
 ## Roteiro cena a cena

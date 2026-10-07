@@ -3,7 +3,7 @@
 Regra e método: `GATE_VISUAL.md` Parte 6. Cada K sai daqui. O frame do modelo manda no CONTEÚDO (forma, quadro,
 distância, câmera, pose, cenário); o gate manda no ACABAMENTO e no piso de proximidade. Formato avatar IA: bandeira
 em todo K. Regra do Luigi de 2026-10-06: o frame NÃO é anexado; tudo o que está aqui vai por extenso no K.
-Regra do Luigi de 2026-10-07: o cenário do Gordon Ashby é sempre de luxo máximo (dentro de casa = mansão fazendo a
+Regra do Luigi de 2026-10-07: o cenário do Jordan Vale é sempre de luxo máximo (dentro de casa = mansão fazendo a
 mesma ação); a Avery mantém o cenário do modelo.
 
 ## K01
@@ -17,7 +17,7 @@ Câmera: celular na altura do joelho olhando um pouco para baixo, lente 1x, mão
 Pose: ajoelhada no joelho direito ao lado da quina de mármore, braço esquerdo esticado com a mão apoiada na quina, mão direita segurando a borda do painel, olhando para o vão
 Lista fechada: avatar, painel do rodapé, maços de notas, armário, quina de mármore, piso, bandeira discreta; nada mais
 Frame 0: painel recém-inclinado para fora, olhos nos maços
-Desvio (acabamento ou avatar fixo): a mulher careca do modelo vira o avatar do character sheet com a roupa dele; luz neutra de dia nublado no lugar da luz quente (gate); no Gordon a cozinha vira a de uma mansão, mesmo layout (regra do Luigi, 2026-10-07)
+Desvio (acabamento ou avatar fixo): a mulher careca do modelo vira o avatar do character sheet com a roupa dele; luz neutra de dia nublado no lugar da luz quente (gate); no Jordan a cozinha vira a de uma mansão, mesmo layout (regra do Luigi, 2026-10-07)
 Cenário do modelo: cozinha americana de armários brancos tipo shaker com puxadores dourados, quina de mármore branco com veios cinza à esquerda, piso de lajotas bege grandes, backsplash claro no alto, painel de madeira clara do rodapé inclinado para fora com notas de $100 dentro
 
 | Item | Status | Evidência (trecho literal do K) |
@@ -48,7 +48,7 @@ Câmera: celular na altura da cintura de quem está ajoelhado (uns dois pés do 
 Pose: ajoelhada perto da lente, inclinada para a frente, antebraço esquerdo apoiado na quina quadrada de mármore à esquerda, cabeça levemente inclinada, olhando para a lente no meio da frase
 Lista fechada: avatar, nota de $100, quina de mármore, armários, backsplash, piso, bandeira discreta; nada mais nas mãos
 Frame 0: já olhando para a lente, no meio da frase, nota baixa e inclinada
-Desvio (acabamento ou avatar fixo): a mulher careca do modelo vira o avatar do character sheet com a roupa dele; luz neutra de dia nublado no lugar da fita LED quente sob o armário (gate); no Gordon a cozinha vira a de uma mansão, mesmo layout (regra do Luigi, 2026-10-07); números `444` e `11:11` e legenda ficam só no CapCut
+Desvio (acabamento ou avatar fixo): a mulher careca do modelo vira o avatar do character sheet com a roupa dele; luz neutra de dia nublado no lugar da fita LED quente sob o armário (gate); no Jordan a cozinha vira a de uma mansão, mesmo layout (regra do Luigi, 2026-10-07); números `444` e `11:11` e legenda ficam só no CapCut
 Cenário do modelo: cozinha americana de armários de nogueira escura com puxadores dourados, quina de mármore branco com veios à esquerda, backsplash de azulejo creme com faca em bloco, lajotas bege no piso, fita de luz sob o armário
 
 | Item | Status | Evidência (trecho literal do K) |

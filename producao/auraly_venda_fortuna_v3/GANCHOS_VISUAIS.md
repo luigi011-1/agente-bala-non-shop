@@ -38,6 +38,6 @@ Desvios obrigatorios:
 - Nota de $100 sem número de série legível e sem texto legível (moderação).
 - Bandeira dos EUA discreta na cozinha (formato avatar IA).
 - Linha 2 do texto de tela acrescentada para a sincronia com a fala do T3 (o modelo só tem a linha 1).
-- Gordon Ashby: a mesma cozinha como cozinha de mansão de luxo (regra do Luigi, 2026-10-07); Avery mantém a do modelo.
+- Jordan Vale: a mesma cozinha como cozinha de mansão de luxo (regra do Luigi, 2026-10-07); Avery mantém a do modelo.
 Delayed meaning:
 O que é o painel e por que o dinheiro está lá só se explica a partir do T3 ("it has been hiding closer to you than you think") e se fecha no T12.
