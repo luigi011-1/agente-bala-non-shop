@@ -29,9 +29,9 @@ Gesto doméstico levemente constrangedor, mãos coladas na lente, com a ordem fa
 
 HOOK 1 - FIEL - Manjericão seco sob o tapete do carro
 Cena:
-Plano 1 (0-3s): mãos coladas na lente, uma segura um pote de vidro e despeja folhas secas de manjericão sob o tapete de borracha do carro, a outra levanta a borda do tapete; corte para macro das folhas caindo. Plano 2: ele/ela agachado(a) ao lado da porta traseira aberta do SUV, ajeita o tapete com uma mão e o pote de vidro vazio no colo. Luz neutra de céu aberto, sem tom quente, sem blur.
+Plano 1: mãos coladas na lente, vista de cima, uma segura um pote de vidro e despeja folhas secas de manjericão no piso do carro, a outra levanta a borda do tapete (é o K01); corte para macro das folhas caindo. Plano 2: ele/ela agachado(a) ao lado da porta traseira aberta do SUV, ajeita o tapete com uma mão e o pote de vidro vazio no colo. Luz neutra de céu aberto, sem tom quente, sem blur.
 Screen text:
-When you need money fast: / Tell nobody
+Keep your mouth shut / Tell nobody
 Desvios obrigatorios:
 Gordon: SUV comum vira Bentley Bentayga preto em frente a uma mansão (regra de luxo do Luigi); Avery mantém o SUV do modelo. Ação e câmera iguais. Ingrediente trocado (louro vira manjericão) para não repetir a produção de ontem. Cortes dentro do V1 (modelo também corta de inserto para plano de corpo). T1 mudo; o modelo fala por cima.
 Delayed meaning:
