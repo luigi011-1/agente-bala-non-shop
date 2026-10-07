@@ -2,28 +2,28 @@
 
 Criados a partir de 5 referências virais do estilo (homem grisalho elegante em cenário de luxo; mulher careca,
 acolhedora, com joias). Rostos ORIGINAIS: capturam o visual e o clima, não copiam as pessoas dos prints.
-Os dois leem como americanos. Sheets escolhidos por Luigi em 2026-10-07 e salvos em `producao/_ancoras/character_sheets/`
-(`gordon_ashby_character_sheet.jpg`, `celeste_marlow_character_sheet.jpg`). Entram no lugar de Devon Price e Jordan Vale.
+Os dois leem como americanos. Nomes definidos por Luigi em 2026-10-07 (o ricaço era 'Gordon Ashby' e a careca 'Celeste Marlow' no rascunho). Sheets escolhidos por Luigi em 2026-10-07 e salvos em `producao/_ancoras/character_sheets/`
+(`jordan_vale_character_sheet.jpg`, `devon_price_character_sheet.jpg`). Estes sao os Jordan Vale e Devon Price ATUAIS; os sheets velhos com esses nomes viraram `*_antigo.jpg` e nao valem mais.
 
-## Gordon Ashby (homem rico)
+## Jordan Vale (homem rico, ricaço)
 Americano de ~68, magro e ereto, cabelo prateado cheio penteado para trás, óculos redondos de aro fino
 dourado, pele envelhecida real, smoking creme com gravata-borboleta preta, relógio e aliança dourados.
 Clima: dinheiro antigo, calmo, fala baixo e devagar, autoridade tranquila.
 
-REGRA DE CENARIO DO GORDON ASHBY (Luigi, 2026-10-07, permanente): o cenario dele e SEMPRE de luxo maximo, adaptado ao cenario do video modelo, mantendo a mesma acao e o mesmo enquadramento:
+REGRA DE CENARIO DO JORDAN ASHBY (Luigi, 2026-10-07, permanente): o cenario dele e SEMPRE de luxo maximo, adaptado ao cenario do video modelo, mantendo a mesma acao e o mesmo enquadramento:
 - modelo dentro de casa -> ele fica dentro de uma mansao, fazendo a mesma acao do modelo;
 - modelo dentro de um carro -> ele fica em um carro de luxo ou esportivo;
 - modelo ao ar livre -> ele fica em um lugar de luxo, viajando, em cenarios famosos (torre Eiffel em Paris, em frente ao predio mais alto do mundo em Dubai, curtindo no Marrocos, iate na costa, e assim por diante).
 Sobrepoe, so para o Gordon, o 'cenario do modelo quase 100% fiel' do Auraly: aqui o tipo de lugar e a acao seguem o modelo, mas o lugar vira o equivalente de luxo.
 
-## Celeste Marlow (mulher careca)
+## Devon Price (mulher careca)
 Americana de ~50, magra, careca (sem peruca, sem lenço), olhos avelã-esverdeados, sardas, sem maquiagem,
 blazer de renda creme sobre camisole de renda, jeans escuro, pulseira de contas rose-gold, colar de coração,
 anéis de prata. Clima: acolhedora, espiritual, feminina, fala direto para a lente.
 
 Roupa e rosto fixos em toda produção da conta; o cenário vem do vídeo modelo.
 
-## Prompt do character sheet: Gordon Ashby (sem anexo)
+## Prompt do character sheet: Jordan Vale (sem anexo)
 Flow: Nano Banana 2.1, 4 variações, 9:16. Colar de `{` até `}`.
 
 ```json
@@ -31,7 +31,7 @@ Flow: Nano Banana 2.1, 4 variações, 9:16. Colar de `{` até `}`.
   "format": "IMPORTANT: THIS IS A REAL PHOTOGRAPHIC CHARACTER REFERENCE SHEET, NOT AN ILLUSTRATION. Vertical 9:16.",
   "fiction_note": "This is a fictional AI-generated character, no real person is depicted.",
   "reference_use": "No reference image is attached. Create this person from the description only.",
-  "identity_main": "Gordon Ashby, an American man aged about 68, slim and upright, around 5 ft 11, the quiet look of old money. Full head of thick silver-white hair combed back and slightly to the side, natural thinning at the temples. Narrow elegant face, long straight nose, thin lips with a small calm closed-mouth half smile, light blue-grey eyes with heavy lids, thin gold-rimmed round glasses. Real aged skin: deep forehead lines, crow's feet, nasolabial folds, soft jowls, sun spots on the temples and cheeks, a few small age spots, slightly uneven skin tone. Clean-shaven, a faint trace of stubble on the chin. Age marks must stay, never younger, never idealized.",
+  "identity_main": "Jordan Vale, an American man aged about 68, slim and upright, around 5 ft 11, the quiet look of old money. Full head of thick silver-white hair combed back and slightly to the side, natural thinning at the temples. Narrow elegant face, long straight nose, thin lips with a small calm closed-mouth half smile, light blue-grey eyes with heavy lids, thin gold-rimmed round glasses. Real aged skin: deep forehead lines, crow's feet, nasolabial folds, soft jowls, sun spots on the temples and cheeks, a few small age spots, slightly uneven skin tone. Clean-shaven, a faint trace of stubble on the chin. Age marks must stay, never younger, never idealized.",
   "wardrobe": "Identical in all five panels: cream off-white tailored dinner jacket with a white dress shirt and a black silk bow tie, black dress trousers, black polished leather oxford shoes. A slim gold wristwatch on the left wrist and a plain gold ring on the left ring finger.",
   "layout": "One single vertical image divided into two areas with thin plain gaps and no borders, no labels. TOP area, about 35 percent of the height, full width: one extreme close-up of the face, cropped from the top of the forehead to the chin, straight on, eyes looking into the lens, filling the panel edge to edge, every pore and skin detail visible. BOTTOM area, about 65 percent of the height: four full-body standing views of the same person side by side in one row, all at exactly the same scale, head-to-toe with the feet fully visible and a little space above the head: panel 1 front view facing the camera, panel 2 back view facing away, panel 3 left side profile, panel 4 right side profile.",
   "posture": "In the four full-body views the man stands upright and relaxed in a neutral pose, arms hanging naturally at the sides with hands visible and empty, feet slightly apart, same posture in all four. In the close-up the face is relaxed with the mouth closed in a faint calm smile.",
@@ -45,7 +45,7 @@ Flow: Nano Banana 2.1, 4 variações, 9:16. Colar de `{` até `}`.
 }
 ```
 
-## Prompt do character sheet: Celeste Marlow (sem anexo)
+## Prompt do character sheet: Devon Price (sem anexo)
 Flow: Nano Banana 2.1, 4 variações, 9:16. Colar de `{` até `}`.
 
 ```json
@@ -53,7 +53,7 @@ Flow: Nano Banana 2.1, 4 variações, 9:16. Colar de `{` até `}`.
   "format": "IMPORTANT: THIS IS A REAL PHOTOGRAPHIC CHARACTER REFERENCE SHEET, NOT AN ILLUSTRATION. Vertical 9:16.",
   "fiction_note": "This is a fictional AI-generated character, no real person is depicted.",
   "reference_use": "No reference image is attached. Create this person from the description only.",
-  "identity_main": "Celeste Marlow, an American woman aged about 50, slim, around 5 ft 6, a warm, calm, feminine presence. Completely bald, smooth natural scalp with a few small freckles, a subtle natural scalp shape, no stubble, no wig, no headscarf. Oval face, high cheekbones, light hazel-green eyes, thin natural pale eyebrows, full natural lips with a gentle half smile. Real aged skin: fine lines on the forehead, crow's feet, laugh lines, faint neck lines, freckles across the nose and cheeks, slightly uneven skin tone, no makeup. Small silver stud earrings. Age marks must stay, never younger, never idealized.",
+  "identity_main": "Devon Price, an American woman aged about 50, slim, around 5 ft 6, a warm, calm, feminine presence. Completely bald, smooth natural scalp with a few small freckles, a subtle natural scalp shape, no stubble, no wig, no headscarf. Oval face, high cheekbones, light hazel-green eyes, thin natural pale eyebrows, full natural lips with a gentle half smile. Real aged skin: fine lines on the forehead, crow's feet, laugh lines, faint neck lines, freckles across the nose and cheeks, slightly uneven skin tone, no makeup. Small silver stud earrings. Age marks must stay, never younger, never idealized.",
   "wardrobe": "Identical in all five panels: cream lace blazer over a cream lace camisole, slim dark blue jeans, simple nude leather flats. Rose-gold beaded bracelet on the right wrist, a thin silver necklace with a small heart pendant, a silver band ring on the right ring finger and a thin silver ring on the left index finger.",
   "layout": "One single vertical image divided into two areas with thin plain gaps and no borders, no labels. TOP area, about 35 percent of the height, full width: one extreme close-up of the face, cropped from the top of the scalp to the chin, straight on, eyes looking into the lens, filling the panel edge to edge, every pore and skin detail visible. BOTTOM area, about 65 percent of the height: four full-body standing views of the same person side by side in one row, all at exactly the same scale, head-to-toe with the feet fully visible and a little space above the head: panel 1 front view facing the camera, panel 2 back view facing away, panel 3 left side profile, panel 4 right side profile.",
   "posture": "In the four full-body views the woman stands upright and relaxed in a neutral pose, arms hanging naturally at the sides with hands visible and empty, feet slightly apart, same posture in all four. In the close-up the face is relaxed with the mouth closed in a faint warm smile.",

@@ -88,7 +88,7 @@ so. Isto e obrigatorio em todo K do perfil CLASSICO:
 
 ### AURALY, character sheet e cenario do video modelo (Luigi, 2026-10-04; vale SO no Auraly)
 
-Roster Auraly: Avery Knox, Gordon Ashby, Celeste Marlow e Morgan Vance (Gordon e Celeste substituem Devon Price e Jordan Vale desde 2026-10-07). Desde a v20 todo K Auraly leva UM
+Roster Auraly: Avery Knox, Jordan Vale (ricaço), Devon Price (careca) e Morgan Vance (Jordan e Devon sao avatares novos desde 2026-10-07; os antigos com esses nomes foram aposentados). Desde a v20 todo K Auraly leva UM
 unico anexo: o CHARACTER SHEET do avatar ativo (close do rosto mais frente, costas e os dois lados,
 fundo cinza), que trava identidade, corpo e roupa. O cenario, o angulo de camera e o enquadramento sao
 os do video modelo, quase 100% fieis, e vem escritos por inteiro no texto do K (a v18 mandava anexar
