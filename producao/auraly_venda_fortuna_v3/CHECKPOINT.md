@@ -9,10 +9,10 @@ Scenario: cozinha americana do modelo (armários brancos no gancho, nogueira esc
 
 Current stage: PRODUCTION_COMPLETE
 Current avatar: NONE
-Next action: Luigi gera o character sheet do Gordon, depois K e V no Flow com o AGENTE_FLOW.md; quando ele confirmar a postagem, registrar com python3 gerenciar_operacao.py registrar
+Next action: Luigi gera K e V no Flow com o AGENTE_FLOW.md (character sheet do Gordon já gerado por ele, arquivos em producao/auraly_avatares_rico_careca/, PR #35); quando ele confirmar a postagem, registrar com python3 gerenciar_operacao.py registrar
 
 ## Avatar queue
-[DONE] Gordon Ashby: character sheet ainda não gerado (descrição em producao/auraly_avatares_rico_careca/AVATARES_RICO_CARECA.md); gerar `producao/_ancoras/character_sheets/gordon_ashby_character_sheet.jpg`
+[DONE] Gordon Ashby: character sheet gerado pelo Luigi em 2026-10-07 (descrição em producao/auraly_avatares_rico_careca/AVATARES_RICO_CARECA.md); caminho esperado `producao/_ancoras/character_sheets/gordon_ashby_character_sheet.jpg`
 [DONE] Avery Knox: producao/_ancoras/character_sheets/avery_knox_character_sheet.jpg
 
 ## Approved script
@@ -38,7 +38,7 @@ video prompts: FLOW_<AVATAR>.md dos 2 avatares (V01 a V14)
 - SCRIPT_MODELLING: ROTEIRO.md + GANCHOS_VISUAIS.md
 
 ## Pending
-- Character sheet do Gordon (gerar com o prompt de AVATARES_RICO_CARECA.md); geração no Flow, montagem e postagem (marcos do Luigi)
+- Geração no Flow, montagem e postagem (marcos do Luigi)
 
 ## User decisions
 - Decision: venda Auraly com dinheiro e fortuna, promessas e consequências agressivas se pular os selos
