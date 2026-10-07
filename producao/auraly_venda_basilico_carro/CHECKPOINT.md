@@ -17,6 +17,7 @@ Next action: aguardar o Luigi gerar as imagens (4 por K, 1 escolhida) e os víde
 ## Avatar queue
 [DONE] Gordon Ashby
 [DONE] Avery Knox
+[DONE] Celeste Marlow (producao/auraly_avatares_rico_careca/AVATARES_RICO_CARECA.md; cenário do modelo como a Avery)
 
 ## Approved script
 status: APPROVED (Luigi, 2026-10-07)
@@ -30,17 +31,17 @@ acao estrutural: avatar despeja ervas secas de um pote de vidro sob um tapete de
 eixos de troca: n/a (validacao)
 
 ## Completed
-- Intake: 1 vídeo modelo + 2 avatares
+- Intake: 1 vídeo modelo + 3 avatares
 - ANALYSIS: transcrição (Whisper) e frames; plano único com inserto de abertura
 - SCRIPT_MODELLING: ROTEIRO.md + GANCHOS_VISUAIS.md, aprovados 2026-10-07
 - IMAGE_PROMPTS + VIDEO_PROMPTS: Gordon e Avery (gerar_pacote.py)
 
 ## Current avatar assets
-image prompts: FLOW_<AVATAR>.md dos 2 avatares (K01, K02)
-video prompts: FLOW_<AVATAR>.md dos 2 avatares (V01 a V10)
+image prompts: FLOW_<AVATAR>.md dos 3 avatares (K01, K02)
+video prompts: FLOW_<AVATAR>.md dos 3 avatares (V01 a V10)
 
 ## Pending
-- Luigi gerar K e V no Flow com AGENTE_FLOW.md; character sheet do Gordon ainda não gerado (anexo do K do Gordon)
+- Luigi gerar K e V no Flow com AGENTE_FLOW.md
 
 ## User decisions
 - Decision: Avery Knox fica exatamente como está; ricaço = Gordon Ashby

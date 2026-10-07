@@ -1,6 +1,6 @@
 # FICHA DO FRAME · auraly_venda_basilico_carro
 
-Regra e método: `GATE_VISUAL.md` Parte 6, com a regra do Auraly de 2026-10-04 (cenário e ângulo do vídeo modelo, quase 100% fiéis; identidade e roupa do character sheet; o gate muda só o acabamento). Origem orgânica (`PERFIL_ORGANICO.md`). Regra do Luigi de 2026-10-06: o K leva só o character sheet de anexo; o frame do modelo serve só para esta ficha e o cenário vai por escrito no K. Regra do Luigi de 2026-10-07: o cenário do Gordon é sempre de luxo máximo (carro vira Bentley Bentayga em frente a uma mansão), com a mesma ação e câmera; Avery fica com o cenário do modelo. A evidência de cada OK existe literalmente no K dos dois avatares.
+Regra e método: `GATE_VISUAL.md` Parte 6, com a regra do Auraly de 2026-10-04 (cenário e ângulo do vídeo modelo, quase 100% fiéis; identidade e roupa do character sheet; o gate muda só o acabamento). Origem orgânica (`PERFIL_ORGANICO.md`). Regra do Luigi de 2026-10-06: o K leva só o character sheet de anexo; o frame do modelo serve só para esta ficha e o cenário vai por escrito no K. Regra do Luigi de 2026-10-07: o cenário do Gordon é sempre de luxo máximo (carro vira Bentley Bentayga em frente a uma mansão), com a mesma ação e câmera; Avery e Celeste ficam com o cenário do modelo. A evidência de cada OK existe literalmente no K dos dois avatares.
 
 ## K01
 Frame: `input/frames_modelo/K01_modelo.png`
@@ -13,7 +13,7 @@ Câmera: celular na mão a uns 50 cm (20 inches) acima do piso do carro, olhando
 Pose: só duas mãos e antebraços, sem rosto: a direita inclina o pote, a esquerda ergue a borda do tapete
 Lista fechada: duas mãos, pote, tapete levantado, piso escuro do carro, parte baixa do banco traseiro no topo; nada mais no primeiro plano
 Frame 0: pote já inclinado, primeiras folhas escorregando pela boca, borda do tapete erguida
-Desvio (acabamento ou avatar): manjericão seco no lugar do louro (ingrediente trocado); pote sem tampa e sem rótulo; mãos e punhos viram os do avatar (Gordon: relógio e aliança de ouro; Avery: anéis de turquesa); banco e tapete de luxo no Gordon (Bentley, banco de couro creme, tapete de carpete com friso creme); luz neutra
+Desvio (acabamento ou avatar): manjericão seco no lugar do louro (ingrediente trocado); pote sem tampa e sem rótulo; mãos e punhos viram os do avatar (Gordon: relógio e aliança de ouro; Avery: anéis de turquesa; Celeste: anel de prata e pulseira rose-gold); banco e tapete de luxo no Gordon (Bentley, banco de couro creme, tapete de carpete com friso creme); luz neutra
 Cenário do modelo: piso traseiro de um SUV de cabine dupla: tapete de borracha preto com sulcos levantado, carpete preto embaixo com fiapos de folha, banco traseiro cinza ao fundo, porta aberta
 
 | Item | Status | Evidência (trecho literal do K) |
@@ -45,7 +45,7 @@ Pose: agachado de cócoras sobre os calcanhares ao lado da porta traseira aberta
 Lista fechada: avatar, pote, porta aberta do carro com banco e tapete, chão da entrada, casa ou mansão ao fundo; nada mais no primeiro plano
 Frame 0: no meio de uma frase, lábios entreabertos, pote nas duas mãos, tapete já no lugar
 Desvio (acabamento ou avatar): avatar do modelo (homem careca de preto) vira o avatar com a roupa do character sheet; números brilhantes 222, 333, 888, 999 e legenda do modelo saem (sobreposição de edição, nada sobrenatural); pote do modelo sem tampa e sem rótulo; luz neutra; Gordon: SUV vira Bentley Bentayga preto em frente a mansão (regra de luxo do Luigi, 2026-10-07)
-Cenário do modelo: entrada de garagem de bairro americano: concreto claro, SUV cinza escuro de porta traseira aberta (bancos de tecido preto, tapete de borracha preto), casas bege com garagem branca e árvores ao fundo, céu azul com nuvens; Avery mantém este cenário
+Cenário do modelo: entrada de garagem de bairro americano: concreto claro, SUV cinza escuro de porta traseira aberta (bancos de tecido preto, tapete de borracha preto), casas bege com garagem branca e árvores ao fundo, céu azul com nuvens; Avery e Celeste mantêm este cenário
 
 | Item | Status | Evidência (trecho literal do K) |
 |---|---|---|

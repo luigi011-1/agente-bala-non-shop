@@ -72,6 +72,21 @@ AVATARES = [
          agach=("squats low on her heels beside the open rear door in jeans and the white shirt, knees bent, forearms resting on her thighs"),
          sotaque="texano carregado", voz="voz feminina média, levemente rouca e calorosa de uma texana de cinquenta e seis anos",
          tom="de voz firme e calorosa", lux=False),
+    dict(nome="Celeste Marlow", arquivo="CELESTE_MARLOW", genero="mulher", pos="her", sheet="producao/_ancoras/character_sheets/celeste_marlow_character_sheet.jpg",
+         identidade=("The exact fictional AI character Celeste Marlow: American woman aged about 50, slim, completely bald with a smooth "
+                     "natural scalp and a few small freckles, no wig, no headscarf, light hazel-green eyes, thin natural pale eyebrows, "
+                     "oval face with high cheekbones, freckles across the nose and cheeks, real aged skin with fine forehead lines, "
+                     "crow's feet and laugh lines, no makeup, small silver stud earrings, a warm gentle half smile."),
+         roupa=("Cream lace blazer over a cream lace camisole, slim dark blue jeans, simple nude leather flats, a rose-gold beaded bracelet on the "
+                "right wrist, a thin silver necklace with a small heart pendant, a silver band ring on the right ring finger and a thin "
+                "silver ring on the left index finger."),
+         mao_quem="her freckled fair hand with a silver ring on the index finger", manga="a cream lace blazer cuff",
+         carro="a grey full-size SUV", pisoDesc="a black ribbed rubber floor mat",
+         assento="black fabric", chao="pale concrete",
+         fundo=("behind it a beige two-storey house with a white garage door and a leafy green tree"),
+         agach=("squats low on her heels beside the open rear door in the cream lace blazer and dark jeans, knees bent, forearms resting on her thighs"),
+         sotaque="neutro da Califórnia", voz="voz feminina suave, calorosa e feminina de uma mulher de cinquenta anos, acolhedora e espiritual",
+         tom="de voz suave e calorosa", lux=False),
 ]
 
 EMOCAO = {

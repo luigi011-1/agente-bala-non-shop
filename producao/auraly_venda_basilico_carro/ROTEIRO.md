@@ -8,7 +8,7 @@ CTA original: "Send this video to yourself and comment 222 to lock this energy i
 **Vídeo modelo:** `input/modelo.mp4` (video1_modelo.mp4) · 86,6s · 720x1280 · pessoa real agachada à porta aberta de um SUV, com cortes para um inserto das mãos
 **Origem:** pessoa real (organico). `PERFIL_ORGANICO.md` governa; desvios pedidos pelo Luigi: tom agressivo com consequência do selo (T6) e ingrediente trocado (louro vira manjericão)
 **Rodada:** VALIDAÇÃO (um gancho só, o do modelo, fiel)
-**Avatares:** Gordon Ashby (cenário de luxo, regra do Luigi de 2026-10-07) e Avery Knox (cenário do modelo). Mesma copy nos dois
+**Avatares:** Gordon Ashby (cenário de luxo, regra do Luigi de 2026-10-07) e Avery Knox e Celeste Marlow (cenário do modelo). Mesma copy nos três
 **Objetivo:** SALE, dinheiro e fortuna. CTA `222` e depois Stories
 **Estado:** APROVADO (Luigi, 2026-10-07)
 
