@@ -84,7 +84,7 @@ o avatar Jordan Vale (homem) fala em inglês com sotaque americano de Jordan Val
 
 o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
 
-o que acontece no vídeo: Jordan Vale faz uma pausa curta, ergue as sobrancelhas na frase da ficha caindo e aponta o indicador da mão livre para a lente em "nobody was signing for them".
+o que acontece no vídeo: Jordan Vale faz uma pausa curta, ergue as sobrancelhas ao dizer que as bênçãos dela estavam chegando e aponta o indicador da mão livre para a lente em "nobody was signing for them".
 
 câmera: fixa, na altura do peito de quem está sentado, com leve tremor natural de celular
 

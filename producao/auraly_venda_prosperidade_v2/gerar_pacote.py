@@ -84,7 +84,7 @@ ACAO = {
     "T1": "{n} olha firme para a lente e fala com a mão do microfone parada perto do peito, a outra mão pousada na coxa, um leve aceno de cabeça na última frase.",
     "T2": "{n} balança a cabeça de leve ao dizer que não é azar, e a mão livre sobe da coxa e conta os itens no ar, voltando para a coxa no fim.",
     "T3": "{n} fala em tom de lembrança, o olhar firme na lente, a mão do microfone parada, a mão livre aberta e baixa sobre a coxa.",
-    "T4": "{n} faz uma pausa curta, ergue as sobrancelhas na frase da ficha caindo e aponta o indicador da mão livre para a lente em \"nobody was signing for them\".",
+    "T4": "{n} faz uma pausa curta, ergue as sobrancelhas ao dizer que as bênçãos dela estavam chegando e aponta o indicador da mão livre para a lente em \"nobody was signing for them\".",
     "T5": "{n} inclina o corpo um pouco para a lente e abre a mão livre, a palma para cima, ao dizer \"three delivery attempts\".",
     "T6": "{n} fala calmo e certo, a mão livre desenha um arco curto no ar na imagem da tela de rastreio, o microfone parado.",
     "T7": "{n} olha para cima por um instante ao citar o arcanjo e volta para a lente, a mão livre aberta sobre o peito na palavra Seal.",
