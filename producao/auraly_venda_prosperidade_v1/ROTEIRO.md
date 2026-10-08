@@ -60,22 +60,22 @@ Transcrição reconstruída do áudio em espanhol (o Whisper `small.en` do `/wat
 | 9 | CTA | "diga nos comentários quantos sinais, compartilhe, me siga" | T13 a T15: 222 com o número de sinais, curtir e salvar, seguir, Stories | **desvio de venda:** compartilhar cai (lista de pedidos curta, lei do selo); entra 222 e Stories |
 | 10 | DESPEDIDA | "Shalom, amigo mío." | T15 fecha com "Blessings, my friend." | "Shalom" vira "Blessings" |
 
-**Congruência por avatar:** nenhuma frase fala de idade ou gênero do emissor. "My neighbor Loretta" e "my friend" funcionam para os três. O Jordan Vale (homem muito rico, 68) pode dizer "I used to tell people to chase prosperity" sem "I did all of it" soar falso porque o texto fala de buscar, não de passar aperto (ver nota de risco abaixo).
+**Congruência por avatar:** nenhuma frase fala de idade ou gênero do emissor. "My aunt Loretta" e "my friend" funcionam para os três. O Jordan Vale (homem muito rico, 68) pode dizer "I used to tell people to chase prosperity" sem "I did all of it" soar falso porque o texto fala de buscar, não de passar aperto (ver nota de risco abaixo).
 
 ## Checklist de copy de venda (`CHECKLIST_COPY_VENDA.md`, variante Auraly)
 
 Checklist de copy de venda: **A 14/14, B 5/5, D 8/8** (N/A: nenhum)
-Pessoa: Loretta, 64, vizinha, US$ 400 por mês guardados e sumindo por 11 anos · Mecanismo do problema: "o problema não é que a bênção nunca chega, é que nada a segura" (ralo aberto) · Mecanismo único: Sunrise Seal · Terceiro: Arcanjo Jophiel
-Objeções: já tentei=T2 (confissão) e T11 (nega emprego novo, orçamento, orações), remédio/produto atual=T5 e T9 (a casa, não o dinheiro), golpe=T3 e T4 (pessoa com nome e um terceiro) e T15 (poucos segundos, nada a comprar no vídeo), tempo=T11 (um minuto), não é para mim=T13 (qualifica quem fez tudo certo)
+Pessoa: Loretta, 64, tia, US$ 400 por mês guardados e sumindo por 11 anos · Mecanismo do problema: "o problema não é que a bênção nunca chega, é que nada a segura" (ralo aberto) · Mecanismo único: Sunrise Seal · Terceiro: Arcanjo Jophiel
+Objeções: já tentei=T2 (confissão) e T4 (já ouvi todo professor, oração e plano) e T11 (nega emprego novo, orçamento, orações), remédio/produto atual=T5 e T9 (a casa, não o dinheiro), golpe=T3 e T4 (tia com nome e um terceiro, o arcanjo) e T15 (poucos segundos, nada a comprar no vídeo), tempo=T11 (um minuto), não é para mim=T13 (qualifica quem fez tudo certo)
 
 | # | Item | Onde | Veredito |
 |---|---|---|---|
 | A1 | Gancho que o público já procura | T1: sinais de casa abençoada | ✓ |
 | A2 | Inversão seca | T1: "And no, it's not about how big the house is." | ✓ (~4,5s) |
 | A3 | Confissão do emissor | T2 | ✓ |
-| A4 | Uma pessoa, nome, idade, laço, número | T3: Loretta, 64, vizinha, quatrocentos dólares, onze anos | ✓ |
-| A5 | Injustiça | T3: "did everything right" | ✓ |
-| A6 | Desafio sem resposta | T4: "I had no answer" | ✓ |
+| A4 | Uma pessoa, nome, idade, laço, número | T3: Loretta, 64, tia, quatrocentos dólares, onze anos | ✓ |
+| A5 | Injustiça | T3: "played by every rule" | ✓ |
+| A6 | Desafio sem resposta | T4: "I couldn't answer" (objeção: já ouvi todo professor, oração e plano) | ✓ |
 | A7 | Insight que contradiz o óbvio | T5 e T9: não é o dinheiro, é a casa; três sinais não provam que fica | ✓ |
 | A8 | Dado redondo como segredo | T9: "What nobody teaches: three signs..." | ✓ |
 | A9 | Problema em uma frase | T9: "The problem isn't that it never arrives. It's that nothing holds it." | ✓ |
@@ -84,7 +84,7 @@ Objeções: já tentei=T2 (confissão) e T11 (nega emprego novo, orçamento, ora
 | A12 | Mecanismo único | T11: Sunrise Seal (2 palavras), um minuto, primeira luz, fecha o que sempre esteve aberto; nega novo emprego, orçamento, orações (as falhas de T2); passo a passo guardado | ✓ |
 | A13 | Prova emocional | T12: parou de olhar o app do banco de noite, dorme até de manhã | ✓ |
 | A14 | CTA em camadas | T13 a T15 | ✓ |
-| B1 | Qualifica | T13 "If you've done everything right and the money still leaves" | ✓ |
+| B1 | Qualifica | T13 "If you follow every rule and the money still leaves" | ✓ |
 | B2 | Remove fricção, só o verdadeiro | T15 "getting there takes a few seconds" (sem "grátis") | ✓ |
 | B3 | Arrependimento | T12 "I only wish I had known it eleven years sooner" | ✓ |
 | B4 | Destino correto | 222 + Stories (organico Auraly), sem link de legenda | ✓ |
@@ -112,10 +112,10 @@ Objeções: já tentei=T2 (confissão) e T11 (nega emprego novo, orçamento, ora
 > "I used to tell people to chase prosperity: new job, tighter budget, longer prayers. I did all of it. Then I learned it was never about chasing."
 
 ### T3 · PESSOA + INJUSTIÇA · TALKING · Setup A
-> "My neighbor Loretta, sixty-four, did everything right. Two jobs, no vacations, four hundred dollars set aside every month. And every month it vanished. Eleven years like that."
+> "My aunt Loretta, sixty-four, played by every rule. Two jobs, no vacations, four hundred dollars set aside each month, and each month it disappeared. Eleven years of that."
 
 ### T4 · DESAFIO SEM RESPOSTA + TERCEIRO · TALKING · Setup A
-> "One day she asked me, what could you possibly tell me that I haven't already tried? And I had no answer. So I sat down and asked Archangel Jophiel."
+> "One day she said, I've heard every teacher, every prayer, every plan. Why is this different? I couldn't answer. So I sat down and asked Archangel Jophiel."
 
 ### T5 · INSIGHT (A CASA, NÃO O DINHEIRO) · TALKING · Setup A
 > "What came back wasn't about her money. It was about her house. Most people look for prosperity outside, never realizing they already live where it was sent."
@@ -142,7 +142,7 @@ Objeções: já tentei=T2 (confissão) e T11 (nega emprego novo, orçamento, ora
 > "Loretta did it. She stopped checking her bank app at night. She sleeps till morning now. I only wish I had known it eleven years sooner, for her sake."
 
 ### T13 · CTA 1 · QUALIFICA + 222 · TALKING · Setup A
-> "If you've done everything right and the money still leaves, comment 222 and tell me how many signs your home has. That ties this seal to your name."
+> "If you follow every rule and the money still leaves, comment 222 and tell me how many signs your home has. That ties this seal to your name."
 
 ### T14 · CTA 2 · SELO + CONSEQUÊNCIA + FOLLOW · TALKING · Setup A
 > "Like and save this, so the blessing holds stronger. Loretta's drain stayed open eleven years, and all she earned ran out. Follow me, so you don't lose what's next."
@@ -153,7 +153,7 @@ Objeções: já tentei=T2 (confissão) e T11 (nega emprego novo, orçamento, ora
 
 Voz do avatar, sotaque americano, de quem conversa com um amigo: calma e acolhedora nos sinais, mais baixa e séria no segredo (T9, T10), firme e urgente no 222 e no follow.
 
-If your home has one of these three signs, don't sell it. And no, it's not about how big the house is. Don't even think about moving, my friend. I used to tell people to chase prosperity: new job, tighter budget, longer prayers. I did all of it. Then I learned it was never about chasing. My neighbor Loretta, sixty-four, did everything right. Two jobs, no vacations, four hundred dollars set aside every month. And every month it vanished. Eleven years like that. One day she asked me, what could you possibly tell me that I haven't already tried? And I had no answer. So I sat down and asked Archangel Jophiel. What came back wasn't about her money. It was about her house. Most people look for prosperity outside, never realizing they already live where it was sent. Sign one: the plants in your home grow with ease, whether it's one small pot or a whole garden. When life blooms inside a house, opportunity blooms too. Sign two: your home gets good light during the day. Light brings clarity, joy and movement. A house full of light keeps prosperity's door open. Sign three: nature comes close to your home. Birds, butterflies, even bees keep showing up, because they recognize a place where there is harmony. Peace, and blessing. What nobody teaches: three signs prove the blessing is in your house, not that it stays. The problem isn't that it never arrives. It's that nothing holds it. It comes in, nothing closes behind it, and it drains out. Like a bathtub with the stopper out: run the faucet eleven years and it never fills. Jophiel called it the Sunrise Seal. One minute, at first light, inside your home. No new job, no tighter budget, no longer prayers. It closes what was always open. Loretta did it. She stopped checking her bank app at night. She sleeps till morning now. I only wish I had known it eleven years sooner, for her sake. If you've done everything right and the money still leaves, comment 222 and tell me how many signs your home has. That ties this seal to your name. Like and save this, so the blessing holds stronger. Loretta's drain stayed open eleven years, and all she earned ran out. Follow me, so you don't lose what's next. Now tap my profile picture and open my stories. The Sunrise Seal is waiting for you there, and getting there takes a few seconds. Blessings, my friend.
+If your home has one of these three signs, don't sell it. And no, it's not about how big the house is. Don't even think about moving, my friend. I used to tell people to chase prosperity: new job, tighter budget, longer prayers. I did all of it. Then I learned it was never about chasing. My aunt Loretta, sixty-four, played by every rule. Two jobs, no vacations, four hundred dollars set aside each month, and each month it disappeared. Eleven years of that. One day she said, I've heard every teacher, every prayer, every plan. Why is this different? I couldn't answer. So I sat down and asked Archangel Jophiel. What came back wasn't about her money. It was about her house. Most people look for prosperity outside, never realizing they already live where it was sent. Sign one: the plants in your home grow with ease, whether it's one small pot or a whole garden. When life blooms inside a house, opportunity blooms too. Sign two: your home gets good light during the day. Light brings clarity, joy and movement. A house full of light keeps prosperity's door open. Sign three: nature comes close to your home. Birds, butterflies, even bees keep showing up, because they recognize a place where there is harmony. Peace, and blessing. What nobody teaches: three signs prove the blessing is in your house, not that it stays. The problem isn't that it never arrives. It's that nothing holds it. It comes in, nothing closes behind it, and it drains out. Like a bathtub with the stopper out: run the faucet eleven years and it never fills. Jophiel called it the Sunrise Seal. One minute, at first light, inside your home. No new job, no tighter budget, no longer prayers. It closes what was always open. Loretta did it. She stopped checking her bank app at night. She sleeps till morning now. I only wish I had known it eleven years sooner, for her sake. If you follow every rule and the money still leaves, comment 222 and tell me how many signs your home has. That ties this seal to your name. Like and save this, so the blessing holds stronger. Loretta's drain stayed open eleven years, and all she earned ran out. Follow me, so you don't lose what's next. Now tap my profile picture and open my stories. The Sunrise Seal is waiting for you there, and getting there takes a few seconds. Blessings, my friend.
 
 ## Tradução completa (Português)
 
@@ -161,8 +161,8 @@ If your home has one of these three signs, don't sell it. And no, it's not about
 |---|---|---|
 | T1 | If your home has one of these three signs, don't sell it. And no, it's not about how big the house is. Don't even think about moving, my friend. | Se a sua casa tem um destes três sinais, não a venda. E não, não é sobre o tamanho da casa. Nem pense em se mudar, meu amigo. |
 | T2 | I used to tell people to chase prosperity: new job, tighter budget, longer prayers. I did all of it. Then I learned it was never about chasing. | Eu costumava dizer às pessoas para correrem atrás de prosperidade: emprego novo, orçamento mais apertado, orações mais longas. Eu fiz tudo isso. Aí aprendi que nunca foi sobre correr atrás. |
-| T3 | My neighbor Loretta, sixty-four, did everything right. Two jobs, no vacations, four hundred dollars set aside every month. And every month it vanished. Eleven years like that. | Minha vizinha Loretta, de sessenta e quatro anos, fez tudo certo. Dois empregos, nenhuma férias, quatrocentos dólares guardados todo mês. E todo mês eles sumiam. Onze anos assim. |
-| T4 | One day she asked me, what could you possibly tell me that I haven't already tried? And I had no answer. So I sat down and asked Archangel Jophiel. | Um dia ela me perguntou: o que você poderia me dizer que eu ainda não tentei? E eu não tinha resposta. Então me sentei e pedi ao Arcanjo Jophiel. |
+| T3 | My aunt Loretta, sixty-four, played by every rule. Two jobs, no vacations, four hundred dollars set aside each month, and each month it disappeared. Eleven years of that. | Minha tia Loretta, de sessenta e quatro anos, seguiu todas as regras. Dois empregos, sem férias, quatrocentos dólares guardados por mês, e todo mês sumiam. Onze anos disso. |
+| T4 | One day she said, I've heard every teacher, every prayer, every plan. Why is this different? I couldn't answer. So I sat down and asked Archangel Jophiel. | Um dia ela disse: já ouvi todo professor, toda oração, todo plano. Por que isto seria diferente? Eu não soube responder. Então me sentei e pedi ao Arcanjo Jophiel. |
 | T5 | What came back wasn't about her money. It was about her house. Most people look for prosperity outside, never realizing they already live where it was sent. | O que veio de volta não era sobre o dinheiro dela. Era sobre a casa dela. A maioria das pessoas procura prosperidade lá fora, sem perceber que já vive onde ela foi enviada. |
 | T6 | Sign one: the plants in your home grow with ease, whether it's one small pot or a whole garden. When life blooms inside a house, opportunity blooms too. | Sinal um: as plantas da sua casa crescem com facilidade, seja um vasinho ou um jardim inteiro. Quando a vida floresce dentro de uma casa, as oportunidades também florescem. |
 | T7 | Sign two: your home gets good light during the day. Light brings clarity, joy and movement. A house full of light keeps prosperity's door open. | Sinal dois: a sua casa recebe boa luz durante o dia. A luz traz clareza, alegria e movimento. Uma casa cheia de luz mantém a porta da prosperidade aberta. |
@@ -171,7 +171,7 @@ If your home has one of these three signs, don't sell it. And no, it's not about
 | T10 | It comes in, nothing closes behind it, and it drains out. Like a bathtub with the stopper out: run the faucet eleven years and it never fills. | Ela entra, nada fecha atrás dela, e ela escorre pelo ralo. Como uma banheira com o tampão fora: deixe a torneira aberta onze anos e ela nunca enche. |
 | T11 | Jophiel called it the Sunrise Seal. One minute, at first light, inside your home. No new job, no tighter budget, no longer prayers. It closes what was always open. | Jophiel chamou isso de Selo do Amanhecer. Um minuto, na primeira luz, dentro da sua casa. Nada de emprego novo, orçamento mais apertado, orações mais longas. Ele fecha o que sempre esteve aberto. |
 | T12 | Loretta did it. She stopped checking her bank app at night. She sleeps till morning now. I only wish I had known it eleven years sooner, for her sake. | A Loretta fez. Parou de olhar o app do banco de noite. Dorme até de manhã agora. Só queria ter sabido onze anos antes, por ela. |
-| T13 | If you've done everything right and the money still leaves, comment 222 and tell me how many signs your home has. That ties this seal to your name. | Se você fez tudo certo e o dinheiro ainda vai embora, comente 222 e me diga quantos sinais a sua casa tem. Isso amarra este selo ao seu nome. |
+| T13 | If you follow every rule and the money still leaves, comment 222 and tell me how many signs your home has. That ties this seal to your name. | Se você segue todas as regras e o dinheiro ainda vai embora, comente 222 e me diga quantos sinais a sua casa tem. Isso amarra este selo ao seu nome. |
 | T14 | Like and save this, so the blessing holds stronger. Loretta's drain stayed open eleven years, and all she earned ran out. Follow me, so you don't lose what's next. | Curta e salve, para a bênção ficar mais forte. O ralo da Loretta ficou aberto onze anos, e tudo que ela ganhou escorreu. Me siga, para não perder o que vem. |
 | T15 | Now tap my profile picture and open my stories. The Sunrise Seal is waiting for you there, and getting there takes a few seconds. Blessings, my friend. | Agora toque na minha foto de perfil e abra meus stories. O Selo do Amanhecer está esperando por você lá, e chegar lá leva poucos segundos. Bênçãos, meu amigo. |
 
@@ -183,4 +183,4 @@ If your home has one of these three signs, don't sell it. And no, it's not about
 - **Stories obrigatório:** o CTA nomeia o Sunrise Seal. O Story precisa ser sobre ele (a revelação do selo), senão o claim fica cobrável.
 - **Pós-produção (CapCut):** legenda karaokê branca em caixa alta com contorno preto, uma palavra por vez, a partir do T1; seta apontando para a foto de perfil no T15.
 - **Mudo/inserts:** nenhum. O vídeo é plano único de fala do T1 ao T15, sem inserts mudos.
-- **Rotação com os vídeos irmãos (lote 2026-10-08):** Arcanjo Jophiel e a vizinha Loretta são só deste vídeo; vídeo 3 usa Uriel e Marlene, vídeo 2 usa Gabriel.
+- **Rotação com os vídeos irmãos (lote 2026-10-08):** Arcanjo Jophiel e a tia Loretta são só deste vídeo; vídeo 3 usa Uriel e Marlene, vídeo 2 usa Gabriel.
