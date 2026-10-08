@@ -18,13 +18,14 @@ A · PROVA (tres sinais verificaveis dentro da propria casa)
 
 Banco verbal:
 - "If your home has one of these three signs, don't sell it."
+- "Don't even think about moving"
 - "And no, it's not about how big the house is."
 - "Most people look for prosperity outside, never realizing they already live where it was sent."
 - "What nobody teaches: three signs prove the blessing is in your house, not that it stays."
 - "The problem isn't that it never arrives. It's that nothing holds it."
 
 Acao estrutural:
-O avatar de pe numa sala de estar de luxo cheia de plantas e luz, de frente para a lente, mao esquerda no peito e direita apoiada numa console de madeira, e ja abre FALANDO a promessa dos tres sinais da casa, em plano unico do inicio ao fim, sem cortes e sem insert.
+O avatar de pe numa sala de estar de luxo cheia de plantas e luz, de frente para a lente, a mao do lado esquerdo do quadro no peito e a do lado direito apoiada numa console de madeira, e ja abre FALANDO a promessa dos tres sinais da casa, em plano unico do inicio ao fim, sem cortes e sem insert.
 
 Peca viral:
 Autoridade calma em plano unico numa sala de luxo que ja mostra os proprios sinais (plantas, luz entrando pela janela, natureza la fora), mais a lista numerada de tres sinais que o espectador confere na propria casa. Intocavel.
@@ -33,10 +34,11 @@ HOOK 1 - FIEL - A casa que ja tem os sinais
 Cena:
 Plano unico, sem cortes, T1 falado desde o segundo 0 (o modelo abre falando). Camera fixa na altura do peito, levemente de baixo para cima, de frente, a mais ou menos dois metros do avatar, que ocupa cerca de 70% da altura do quadro, do joelho para cima, no terco esquerdo do quadro, rosto e tronco colados na lente (nunca mais longe que no modelo). Mao esquerda dobrada no peito, mao direita apoiada numa console de madeira lustrada com detalhes dourados. Ao fundo, em foco: janela em arco alta a esquerda com colinas de pedra clara e ciprestes sob ceu azul, estante de livros, plantas grandes e um vaso dourado com planta no canto direito, sofa creme com almofadas. A pequena bandeira dos EUA aparece discreta e em foco no vaso da console. Luz neutra de dia entrando pela janela, sem tom quente. Jordan Vale: o mesmo plano, mesma pose, no salao de mansao de pe-direito duplo (marmore, lustre de cristal, janelao em arco sobre jardim de propriedade com ciprestes).
 Screen text:
-Nenhum texto de gancho no modelo alem da legenda karaoke em caixa alta, palavra por palavra (CapCut), a partir do T1.
+These three signs? Don't even think about moving.
 Desvios obrigatorios:
 1. Luz neutra de dia e ceu azul no lugar do sol dourado quente do modelo (GATE_VISUAL: zero tom quente). Motivo: acabamento.
-2. Painel preto da parede sem o texto hebraico nem a estrela de seis pontas, trocado por um painel escuro emoldurado com ornamento dourado liso. Motivo: sem texto na imagem e registro Auraly (divino, sem religiao especifica).
+2. O painel preto da parede com texto hebraico e estrela de seis pontas sai do quadro, sem substituto. Motivo: sem texto na imagem, registro Auraly (divino, sem religiao especifica) e limite de 2 a 3 ancoras de fundo (ficam a janela em arco, a estante e o vaso dourado na console).
+6. Texto de tela de gancho acrescentado no T1 (CapCut, 8 palavras, repete "Don't even think about moving" do banco verbal); o modelo so tem a legenda karaoke em caixa alta, que continua do T1 ao T15. Motivo: sincronia verbal do gancho (skill gancho-verbal).
 3. Roupa e corpo do character sheet de cada avatar no lugar da roupa do rabino. Motivo: identidade.
 4. Jordan Vale em salao de mansao de maximo luxo no lugar da sala do modelo. Motivo: regra de cenario do Jordan (permanente, Luigi 2026-10-07).
 5. Sem livro hebraico na console (so a console e o vaso). Motivo: sem texto na imagem.

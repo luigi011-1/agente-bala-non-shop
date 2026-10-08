@@ -33,14 +33,14 @@ Transcrição reconstruída do áudio em espanhol (o Whisper `small.en` do `/wat
 
 ## Leitura visual
 
-**Medido** (grades de cenas e linha do tempo a 5 fps abertas): plano único de 103,4s, sem corte de plano. Câmera fixa na altura do peito, ligeiramente de baixo para cima, de frente, enquadrando o avatar do joelho para cima no terço esquerdo do quadro, com a mão esquerda no peito e a direita apoiada numa console de madeira lustrada com dourado e um livro em hebraico. A fala começa no segundo 0 (o modelo abre FALANDO). Legenda karaokê branca em caixa alta com contorno preto, uma palavra por vez, no centro-baixo do quadro, de 25s em diante (camada de edição).
+**Medido** (grades de cenas e linha do tempo a 5 fps abertas): plano único de 103,4s, sem corte de plano. Câmera fixa na altura do peito, ligeiramente de baixo para cima, de frente, enquadrando o avatar do joelho para cima no terço esquerdo do quadro, com a mão do lado esquerdo do quadro no peito e a do lado direito apoiada numa console de madeira lustrada com dourado e um livro em hebraico. A fala começa no segundo 0 (o modelo abre FALANDO). Legenda karaokê branca em caixa alta com contorno preto, uma palavra por vez, no centro-baixo do quadro, de 25s em diante (camada de edição).
 
 **Cenário do modelo:** sala de estar de mansão, janela em arco alta à esquerda com colinas de pedra clara e ciprestes, estante de livros ao fundo, painel preto emoldurado com texto hebraico e estrela de seis pontas na parede, plantas grandes e um vaso dourado com planta no canto direito, sofás creme com almofadas douradas, tapete persa. Luz de sol quente e dourada.
 
 ### Herói do hook (micro-protocolo)
 
 1. **O que muda entre os frames:** nada de cenário; muda só o gesto da mão e a expressão da fala. O herói é o próprio avatar falando (autoridade) numa sala de luxo cheia de plantas e luz.
-2. **Quem faz o quê:** só o avatar; mão esquerda no peito e direita na console.
+2. **Quem faz o quê:** só o avatar; a mão do lado esquerdo do quadro no peito e a do lado direito na console.
 3. **Prop:** nenhum prop de produto; a console e as plantas são cenário.
 4. **A transcrição confirma:** o gancho é a primeira fala ("se a sua casa tem um destes sinais, não a venda").
 5. Não é movie style. Sem segunda pessoa.
@@ -100,7 +100,7 @@ Objeções: já tentei=T2 (confissão) e T4 (já ouvi todo professor, oração e
 
 ## Setups de cena
 
-- **Setup A (T1 a T15, plano único):** sala de estar de mansão do vídeo modelo, o avatar de pé do joelho para cima, de frente para a lente, mão esquerda no peito e direita apoiada numa console de madeira lustrada. Janela em arco alta à esquerda com colinas claras e ciprestes sob céu azul, estante de livros ao fundo, plantas grandes, vaso dourado com planta no canto direito, sofá creme com almofadas. **Avery Knox e Devon Price:** o cenário do modelo (sala acima). **Jordan Vale:** versão de máximo luxo do mesmo cenário (salão de mansão de pé-direito duplo, mármore, lustre de cristal, janelões em arco sobre um jardim de propriedade com ciprestes), mesma ação.
+- **Setup A (T1 a T15, plano único):** sala de estar de mansão do vídeo modelo, o avatar de pé do joelho para cima, de frente para a lente, a mão do lado esquerdo do quadro no peito e a do lado direito apoiada numa console de madeira lustrada. Janela em arco alta à esquerda com colinas claras e ciprestes sob céu azul, estante de livros ao fundo, plantas grandes, vaso dourado com planta no canto direito, sofá creme com almofadas. **Avery Knox e Devon Price:** o cenário do modelo (sala acima). **Jordan Vale:** versão de máximo luxo do mesmo cenário (salão de mansão de pé-direito duplo, mármore, lustre de cristal, janelões em arco sobre um jardim de propriedade com ciprestes), mesma ação.
 - **Desvios de acabamento, declarados** (ver `GANCHOS_VISUAIS.md`): luz neutra de dia com céu azul no lugar do sol dourado; painel da parede sem texto nem símbolo (sem texto na imagem e fora do registro Auraly); roupa e corpo do character sheet do avatar.
 
 ## Roteiro cena a cena
