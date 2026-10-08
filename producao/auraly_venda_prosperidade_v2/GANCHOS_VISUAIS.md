@@ -15,11 +15,11 @@ Padrao do modelo:
 B · DOR DIRETA
 
 Banco verbal:
-- "Something with your name on it has been sent to you twice already, and nobody signed for it."
-- "And no, it's not bad luck."
-- "Her blessings were arriving. Nobody was signing for them."
-- "The problem isn't that you aren't receiving. It's that nothing was ever signed."
-- "If you do everything right and the month still ends empty, this was meant for you."
+- "nobody signed for it"
+- "it's not bad luck"
+- "Nobody was signing for them"
+- "nothing was ever signed"
+- "the month still ends empty"
 
 Acao estrutural:
 Avatar sentado no banco de trás de um carro de luxo, olhando a lente, falando direto desde o primeiro frame, mic de lapela na mão perto do peito.
@@ -31,7 +31,7 @@ HOOK 1 - FIEL - Aviso no banco de trás
 Cena:
 Plano único fixo, câmera na altura do peito do outro lado do carro, avatar do peito para cima centralizado, olhando a lente e falando desde o frame 0. Banco de trás de sedã de luxo, couro creme, teto claro com alça, janela ao lado com palmeiras e muro branco, luz de dia aberta. Mic de lapela pequeno na mão direita perto do peito, mão esquerda no colo, relógio no pulso. Sem corte, sem split. A fala do T1 é falada (o modelo abre falando).
 Screen text:
-Topo fixo: "DELIVERY ATTEMPT 3 OF 3". Karaokê embaixo com as palavras do T1.
+Topo fixo, linha 1: "DELIVERY ATTEMPT 3 OF 3". Linha 2: "Nobody signed for it." (frase do banco verbal). Karaokê embaixo com as palavras do T1.
 Desvios obrigatorios:
 - Copy reescrita pelo checklist de venda (o modelo é growth, copy própria, nunca literal). Motivo: pedido do Luigi.
 - Jordan Vale: Rolls-Royce Phantom diante de uma mansão em vez do sedã do modelo (regra do cenário Jordan).
