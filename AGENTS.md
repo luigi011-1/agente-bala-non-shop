@@ -202,9 +202,21 @@ quando o assunto pedir.
   frame do video modelo, sem nenhuma outra imagem.
 - Prompt de VIDEO: ele anexa SO a imagem escolhida para a cena e cola o prompt. 1 variacao, 9:16.
 - Logo todo prompt e autossuficiente: cena, pose e acao do original descritas por escrito.
-- Character sheets Auraly: Avery Knox = mulher loira ~60, camisa branca, jeans, joias turquesa; Devon
-  Price = mulher de cabelo grisalho raspado, argolas, camisa jeans; Jordan Vale = homem de barba
-  grisalha, colete de couro preto, tatuagens.
+- ROSTER AURALY ATIVO (Luigi, 2026-10-07): Avery Knox, Jordan Vale e Devon Price (mais Morgan Vance, conta
+  organica). ATENCAO: Jordan Vale e Devon Price sao AVATARES NOVOS que reaproveitam os nomes dos antigos.
+  Os sheets antigos viraram `*_antigo.jpg` em `producao/_ancoras/character_sheets/` e NAO valem mais;
+  producoes antigas que citam Jordan (barba grisalha, colete de couro) ou Devon (cabelo raspado grisalho,
+  camisa jeans) sao historico.
+- Character sheets Auraly (`producao/_ancoras/character_sheets/`, prompts em `producao/auraly_avatares_rico_careca/`):
+  Avery Knox = mulher loira ~60, camisa branca, jeans, joias turquesa (mantida);
+  Jordan Vale = o ricaço, homem ~68, cabelo prateado, oculos redondos de aro dourado, smoking creme com
+  gravata-borboleta preta, relogio e alianca dourados;
+  Devon Price = mulher ~50 careca, blazer de renda creme, pulseira rose-gold, colar de coracao, aneis de prata.
+- REGRA DE CENARIO DO JORDAN VALE, o ricaço (Luigi, 2026-10-07, permanente): o cenario dele e SEMPRE de luxo maximo, adaptado ao cenario do video modelo, mantendo a mesma acao e o mesmo enquadramento:
+  - modelo dentro de casa -> ele fica dentro de uma mansao, fazendo a mesma acao do modelo;
+  - modelo dentro de um carro -> ele fica em um carro de luxo ou esportivo;
+  - modelo ao ar livre -> ele fica em um lugar de luxo, viajando, em cenarios famosos (torre Eiffel em Paris, em frente ao predio mais alto do mundo em Dubai, curtindo no Marrocos, iate na costa, e assim por diante).
+  Sobrepoe, so para o Jordan Vale, o 'cenario do modelo quase 100% fiel' do Auraly: aqui o tipo de lugar e a acao seguem o modelo, mas o lugar vira o equivalente de luxo.
 - Regra v19 (PR #26, ja no main): sempre 4 imagens por K e 1 video por V, sempre 9:16. Texto canonico
   em `producao/_flow/INSTRUCOES_AGENTE_FLOW.md`. Menu real do Flow: imagem "Nano Banana 2.1"; video
   "Veo 3.1 - Lite" (Auraly) e "Omni 1.1 Flash" (classico). Nao existe "Lower Priority".
