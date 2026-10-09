@@ -105,6 +105,10 @@ browser automation sao historicos, salvo pedido explicito do usuario.
   `Fixed camera. Natural lip sync, no music.` (selfie: `Handheld selfie camera, slight natural shake.`). Jordan Vale
   em espanhol: `neutral Latin American Spanish`. Clipe mudo: `(no speech) <acao curta em ingles>`. Sem cena, roupa,
   objeto, tom de voz nem som ambiente (ja estao na imagem anexada). Anexo: so a imagem escolhida. 1 variacao, 9:16.
+- **ENTREGA_ legivel (Luigi, 2026-10-09):** todo `ENTREGA_<AVATAR>.md` abre com `## Qual vídeo é este` (nome do video,
+  "o que acontece" em 2 a 3 linhas e o gancho: fala de abertura + visual, em portugues) e leva uma linha `Cena:` em
+  portugues acima de cada bloco K e V (take, beat e o que a fala diz). Tudo FORA dos blocos copiaveis. O linter
+  reprova ENTREGA_ marcado `flow_seguro: v1` sem isso.
 - **Codigo:** `flow_seguro.py` e a fonte unica (`seguro_k`, `texto_flow`, `minimo_v`, varredura de gatilhos); os
   `gerar_pacote.py` chamam esse modulo. O `PROMPTS_<AVATAR>.md` continua com o K em JSON como fonte INTERNA
   (linter e ficha do frame leem dele) e **nunca e colado no Flow**; `FLOW_` e `ENTREGA_` carregam so o padrao curto.

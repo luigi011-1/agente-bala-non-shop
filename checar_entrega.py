@@ -665,12 +665,21 @@ def c_flow_seguro(pasta):
                 continue
             for b in blocos(p.read_text(encoding="utf-8")):
                 cod, txt = b["id"], re.sub(r"^\s*[KV]\d+\s*\n", "", b["bloco"])
-                if not txt.strip():
+                if not txt.strip() or txt.startswith("Cena: "):
                     continue
                 if cod.startswith("K") and (txt.lstrip().startswith("{") or len(txt) > 2600):
                     formato.append("%s:%s K fora do padrao curto (JSON longo aposentado)" % (p.name, cod))
                 if cod.startswith("V") and len(cod) <= 3 and not RE_V_MINIMO.match(txt):
                     formato.append("%s:%s V fora do padrao minimalista" % (p.name, cod))
+        # Cabecalho "Qual video e este" e uma linha `Cena:` por K/V no ENTREGA (Luigi, 2026-10-09), fora dos blocos
+        for p in sorted(Path(pasta).glob("ENTREGA_*.md")):
+            t = p.read_text(encoding="utf-8")
+            if "## Qual vídeo é este" not in t:
+                formato.append("%s: sem o cabecalho '## Qual vídeo é este' (nome, o que acontece, gancho)" % p.name)
+            n_heads = len(re.findall(r"^### [KV]\d+ ", t, re.M))
+            n_cena = len(re.findall(r"^Cena: ", t, re.M))
+            if n_cena < n_heads:
+                formato.append("%s: %d K/V sem linha 'Cena:' em portugues acima do bloco" % (p.name, n_heads - n_cena))
         for msg in sorted(set(formato))[:12]:
             falha("flow_seguro", msg, msg.split(":")[0])
         achados_falha = achados_falha + formato

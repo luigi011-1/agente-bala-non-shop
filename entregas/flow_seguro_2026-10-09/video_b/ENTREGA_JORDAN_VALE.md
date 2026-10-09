@@ -29,9 +29,19 @@ V13: K02
 V14: K02
 ```
 
+## Qual vídeo é este
+
+**Vídeo B: o ritual do fogo com sal, louro e canela (Selo da Tampa)**
+
+**O que acontece:** O dinheiro que chega sem tampa vai embora antes de quinta. A pessoa avisa para não passar de largo, confessa que revisou tudo e o dinheiro ainda escorria, conta a história da cunhada Wanda (26 anos fechando o talão, conta zerada toda quinta), compara com uma panela fervendo sem tampa, apresenta o Selo da Tampa (com o Arcanjo Zadkiel, em menos de 10 minutos) e fecha com 222 e o Stories.
+
+**Gancho:** Gancho mudo de uns 5 segundos, com cortes dentro do clipe: ela abre a garrafa âmbar, derrama sobre sal grosso, louro e canela numa tábua, uma pequena chama surge, e as mãos se juntam em oração com a chama na frente. Depois, plano único falando: "No pases de largo este fuego todavía. Todo el dinero que llegue a tus manos esta semana, si no lleva tapa, se vuelve a ir antes del jueves."
+
 ## 1. PROMPTS DE IMAGEM (um bloco por K)
 
 ### K01 · T1, gancho mudo, segurando a garrafa de uísque diante da tábua · anexar SÓ o CHARACTER SHEET
+
+Cena: gancho mudo, segurando a garrafa de uísque diante da tábua.
 
 ```text
 K01
@@ -39,6 +49,8 @@ Match the attached character sheet exactly. Jordan Vale: white American man arou
 ```
 
 ### K02 · T2 a T14, corpo, mãos em oração com a chama entre elas · anexar SÓ o CHARACTER SHEET
+
+Cena: corpo, mãos em oração com a chama entre elas.
 
 ```text
 K02
@@ -49,12 +61,16 @@ Match the attached character sheet exactly. Jordan Vale: white American man arou
 
 ### V01 · T1 · anexar SÓ a imagem escolhida do K01
 
+Cena: T1 · HOOK FIEL. Diz: (mudo) Ela segura uma garrafa de uísque, derrama sobre sal, louro e canela na tábua, acende, e a chama sobe entre as suas mãos.
+
 ```text
 V01
 (no speech) The person in the image smiles at the camera, opens the amber bottle and pours it over the salt on the board, then presses the hands together in prayer as a small flame rises on the board. Fixed camera, quick cuts, no voice, no music.
 ```
 
 ### V02 · T2 · anexar SÓ a imagem escolhida do K02
+
+Cena: T2 · GANCHO VERBAL + AVISO. Diz: Não passe direto por este fogo ainda. Todo dinheiro que chegar às suas mãos esta semana, se não tiver tampa, vai embora de novo antes de quinta.
 
 ```text
 V02
@@ -65,6 +81,8 @@ Fixed camera. Natural lip sync, no music.
 
 ### V03 · T3 · anexar SÓ a imagem escolhida do K02
 
+Cena: T3 · INVERSÃO + CONFISSÃO. Diz: Não, não é que você gaste demais. Eu também achava. Contei cada conta, rezei sobre os meus extratos, e mesmo assim todo pagamento escorria das minhas mãos.
+
 ```text
 V03
 The person in the image speaks in neutral Latin American Spanish, looking at the camera: "No, no es que gastes de más. Yo también lo creía. Revisé cada cuenta, recé sobre mis estados, y aun así cada pago se me escurría entre las manos."
@@ -73,6 +91,8 @@ Fixed camera. Natural lip sync, no music.
 ```
 
 ### V04 · T4 · anexar SÓ a imagem escolhida do K02
+
+Cena: T4 · PESSOA + INJUSTIÇA. Diz: Minha cunhada Wanda, cinquenta e oito anos, fechou o talão de cheques no centavo por vinte e seis anos, e toda quinta-feira a conta dela voltava a zero, como um relógio.
 
 ```text
 V04
@@ -83,6 +103,8 @@ Fixed camera. Natural lip sync, no music.
 
 ### V05 · T5 · anexar SÓ a imagem escolhida do K02
 
+Cena: T5 · DESAFIO + INSIGHT. Diz: Ela me perguntou: 'Se é tão simples, por que comigo não funcionou?' Fiquei calado. Aí caiu a ficha: o dinheiro dela evaporava assim que chegava.
+
 ```text
 V05
 The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Me miró y me dijo: 'Si es tan simple, ¿por qué conmigo no ha funcionado?' Me quedé callado. Y entonces lo entendí: su dinero se evaporaba apenas llegaba."
@@ -91,6 +113,8 @@ Fixed camera. Natural lip sync, no music.
 ```
 
 ### V06 · T6 · anexar SÓ a imagem escolhida do K02
+
+Cena: T6 · SEGREDO REDONDO + MECANISMO DO PROBLEMA. Diz: Eis o que ninguém conta. Dinheiro que chega sem selo fica uns três dias. Entra, encontra a porta aberta e vai embora com o fim de semana.
 
 ```text
 V06
@@ -101,6 +125,8 @@ Fixed camera. Natural lip sync, no music.
 
 ### V07 · T7 · anexar SÓ a imagem escolhida do K02
 
+Cena: T7 · PROBLEMA EM UMA FRASE + METÁFORA. Diz: O problema não é que o dinheiro não venha. É que nada se fecha atrás dele. Imagine uma panela sem tampa: tudo o que você põe sobe como vapor e some.
+
 ```text
 V07
 The person in the image speaks in neutral Latin American Spanish, looking at the camera: "El problema no es que el dinero no llegue. Es que nada se cierra detrás. Imagina una olla sin tapa: todo lo que pones sube como vapor y desaparece."
@@ -109,6 +135,8 @@ Fixed camera. Natural lip sync, no music.
 ```
 
 ### V08 · T8 · anexar SÓ a imagem escolhida do K02
+
+Cena: T8 · AUTORIDADE + MECANISMO ÚNICO. Diz: O Arcanjo Zadkiel é quem transforma o que pesa em algo que permanece. Ele deu à Wanda um único ato de menos de dez minutos: o Selo da Tampa.
 
 ```text
 V08
@@ -119,6 +147,8 @@ Fixed camera. Natural lip sync, no music.
 
 ### V09 · T9 · anexar SÓ a imagem escolhida do K02
 
+Cena: T9 · A QUEIMA = 1ª METADE. Diz: O que estou queimando é a primeira metade. Sal para segurar, louro para marcar como seu, canela para puxar para perto. Não é quadro de visão, nem outro orçamento.
+
 ```text
 V09
 The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Lo que quemo es la primera mitad. Sal para retenerlo, laurel para marcarlo como tuyo, canela para atraerlo. No es un tablero de visión ni otro presupuesto."
@@ -127,6 +157,8 @@ Fixed camera. Natural lip sync, no music.
 ```
 
 ### V10 · T10 · anexar SÓ a imagem escolhida do K02
+
+Cena: T10 · SELOS 1 E 2. Diz: Primeiro selo: salve este vídeo, para a tampa ficar onde você a encontre. Segundo selo: toque em seguir aqui embaixo, para isto continuar aberto e continuar chegando até você.
 
 ```text
 V10
@@ -137,6 +169,8 @@ Fixed camera. Natural lip sync, no music.
 
 ### V11 · T11 · anexar SÓ a imagem escolhida do K02
 
+Cena: T11 · SELO 3 + CONSEQUÊNCIA. Diz: Terceiro selo: escreva 222 e o seu primeiro nome aqui embaixo, e a tampa fica amarrada a você. A Wanda pulou este. O dinheiro dela subiu como vapor e foi embora antes de quinta.
+
 ```text
 V11
 The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Tercer sello: escribe 222 y tu nombre, y la tapa queda atada a ti. Wanda se saltó este. Su dinero subió como vapor y se fue antes del jueves."
@@ -145,6 +179,8 @@ Fixed camera. Natural lip sync, no music.
 ```
 
 ### V12 · T12 · anexar SÓ a imagem escolhida do K02
+
+Cena: T12 · PROVA EMOCIONAL. Diz: Na semana em que a Wanda fechou os três, uma quinta-feira passou com dinheiro ainda na conta, a primeira vez em vinte e seis anos. Ela chorou na cozinha dela.
 
 ```text
 V12
@@ -155,6 +191,8 @@ Fixed camera. Natural lip sync, no music.
 
 ### V13 · T13 · anexar SÓ a imagem escolhida do K02
 
+Cena: T13 · QUALIFICA + FRICÇÃO + ARREPENDIMENTO. Diz: Se o seu dinheiro vai embora antes de o mês acabar, isto é para você. Salvar, seguir e comentar, menos de dez minutos. Queria que me tivessem dito antes.
+
 ```text
 V13
 The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Si tu dinero se va antes de que termine el mes, esto era para ti. Guardar, seguir y comentar, menos de diez minutos. Ojalá me lo hubieran dicho antes."
@@ -163,6 +201,8 @@ Fixed camera. Natural lip sync, no music.
 ```
 
 ### V14 · T14 · anexar SÓ a imagem escolhida do K02
+
+Cena: T14 · STORIES. Diz: Agora toque na minha foto de perfil e depois veja meus stories antes que expirem. Tudo o que fecha a tampa está esperando lá, e a chama ainda está morna.
 
 ```text
 V14

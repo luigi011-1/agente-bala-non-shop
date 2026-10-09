@@ -29,9 +29,19 @@ V14: K02
 V15: K02
 ```
 
+## Qual vídeo é este
+
+**Vídeo A: a ligação que vai mudar seu dinheiro (Selo da Luz da Varanda)**
+
+**O que acontece:** A pessoa promete uma ligação nas próximas 1 a 2 semanas que muda o dinheiro e diz que o vídeo a encontrou de propósito. Derruba a objeção (não adianta ter mandado currículo, o mercado está ruim), conta a história de Imelda e do currículo guardado, apresenta o Selo da Luz da Varanda (3 minutos na varanda, com o Arcanjo Chamuel) e fecha pedindo 222 com o nome, curtir/salvar, seguir e abrir o Stories.
+
+**Gancho:** Abertura falada, sem corte: selfie de celular na mão com três cartas de tarô em leque coladas na lente, e a fala "Te va a llegar una llamada en una o dos semanas, y va a cambiar tu dinero." Por volta do 4º segundo ela baixa as cartas e só gesticula.
+
 ## 2. PROMPTS DE IMAGEM (um bloco por K)
 
 ### K01 · T1, gancho, selfie com três cartas de tarô em leque perto da lente · anexar SÓ o CHARACTER SHEET
+
+Cena: gancho, selfie com três cartas de tarô em leque perto da lente.
 
 ```text
 K01
@@ -39,6 +49,8 @@ Match the attached character sheet exactly. Jordan Vale: American man aged about
 ```
 
 ### K02 · T2 a T15, corpo, Jordan Vale em selfie, mão aberta gesticulando · anexar SÓ o CHARACTER SHEET
+
+Cena: corpo, Jordan Vale em selfie, mão aberta gesticulando.
 
 ```text
 K02
@@ -49,6 +61,8 @@ Match the attached character sheet exactly. Jordan Vale: American man aged about
 
 ### V01 · T1 · anexar SÓ a imagem escolhida do K01
 
+Cena: T1 · GANCHO. Diz: Uma ligação vai chegar em uma ou duas semanas, e vai mudar o seu dinheiro. Este vídeo te encontrou de propósito, e é para você.
+
 ```text
 V01
 The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Te va a llegar una llamada en una o dos semanas, y va a cambiar tu dinero. Este video te encontró a propósito, y es para ti."
@@ -57,6 +71,8 @@ Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V02 · T2 · anexar SÓ a imagem escolhida do K02
+
+Cena: T2 · INVERSÃO + OBJEÇÃO. Diz: Não, isto não depende de quantas candidaturas você mandou. Eu sei que o mercado está horrível e ninguém responde. É verdade. Mesmo assim, não consegue frear o que está vindo para você.
 
 ```text
 V02
@@ -67,6 +83,8 @@ Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 
 ### V03 · T3 · anexar SÓ a imagem escolhida do K02
 
+Cena: T3 · CONFISSÃO. Diz: Eu também fazia como todo mundo. Mandava currículo, olhava o e-mail toda hora, pedia favores, fazia todos os cursos. E nada se movia.
+
 ```text
 V03
 The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Yo también lo hacía como todos. Mandaba currículums, revisaba el correo cada hora, pedía favores, tomaba todos los cursos. Y nada se movía."
@@ -75,6 +93,8 @@ Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V04 · T4 · anexar SÓ a imagem escolhida do K02
+
+Cena: T4 · PESSOA + INJUSTIÇA. Diz: Minha prima Imelda, de quarenta e seis anos, mandou duzentas e doze candidaturas em onze meses. Caprichou no currículo, fez contatos, sorriu em cada entrevista e ninguém respondeu.
 
 ```text
 V04
@@ -85,6 +105,8 @@ Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 
 ### V05 · T5 · anexar SÓ a imagem escolhida do K02
 
+Cena: T5 · DESAFIO SEM RESPOSTA. Diz: Perguntei o que mais ela podia tentar. Ela me disse: diga uma única coisa que eu não tenha feito. Não consegui dizer nenhuma. Meus conselhos já tinham acabado.
+
 ```text
 V05
 The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Le pregunté qué más podía intentar. Me dijo: dime una sola cosa que no haya hecho. No pude decirle ni una. Ya se me habían acabado los consejos."
@@ -93,6 +115,8 @@ Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V06 · T6 · anexar SÓ a imagem escolhida do K02
+
+Cena: T6 · INSIGHT + PROBLEMA EM UMA FRASE. Diz: Todo mundo diz para bater mais forte. Ninguém conta que essa ligação não responde a batidas. O problema não é o seu currículo. É a luz da sua varanda.
 
 ```text
 V06
@@ -103,6 +127,8 @@ Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 
 ### V07 · T7 · anexar SÓ a imagem escolhida do K02
 
+Cena: T7 · MECANISMO DO PROBLEMA + METÁFORA. Diz: A oportunidade procura a casa com a luz da varanda acesa. A sua foi se apagando, um não de cada vez. Então a ligação toca em outro lugar.
+
 ```text
 V07
 The person in the image speaks in neutral Latin American Spanish, looking at the camera: "La oportunidad busca la casa con la luz del porche encendida. La tuya se fue apagando, un no a la vez. Así que la llamada suena en otro lado."
@@ -111,6 +137,8 @@ Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V08 · T8 · anexar SÓ a imagem escolhida do K02
+
+Cena: T8 · AUTORIDADE DE TERCEIRO. Diz: Aprendi a acendê-la de novo com a minha tia-avó Beatriz. Ela chamava de Selo da Luz da Varanda, e dizia que quem responde é o Arcanjo Chamuel.
 
 ```text
 V08
@@ -121,6 +149,8 @@ Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 
 ### V09 · T9 · anexar SÓ a imagem escolhida do K02
 
+Cena: T9 · MECANISMO ÚNICO. Diz: Três minutos esta noite, na varanda da sua casa, ao pôr do sol. Sem currículo, sem favores, sem bater mais forte. Só uma coisa pequena com as suas chaves e três frases.
+
 ```text
 V09
 The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Tres minutos esta noche, en el porche de tu casa, al atardecer. Sin currículum, sin favores, sin tocar más fuerte. Solo algo pequeño con tus llaves y tres frases."
@@ -129,6 +159,8 @@ Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V10 · T10 · anexar SÓ a imagem escolhida do K02
+
+Cena: T10 · FUNÇÃO + CONTEÚDO GUARDADO. Diz: Ele volta a acender a luz da sua varanda, para a ligação te encontrar. As frases exatas, e como segurar as chaves, estão esperando por você.
 
 ```text
 V10
@@ -139,6 +171,8 @@ Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 
 ### V11 · T11 · anexar SÓ a imagem escolhida do K02
 
+Cena: T11 · PROVA EMOCIONAL. Diz: A Imelda fez naquela mesma noite. Naquela semana o telefone tocou: uma gerente que guardou o currículo dela por três anos. Chorou na cozinha, mas de alívio.
+
 ```text
 V11
 The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Imelda lo hizo esa misma noche. Esa semana le sonó el teléfono: una gerente que guardó su currículum tres años. Lloró en la cocina, pero de alivio."
@@ -147,6 +181,8 @@ Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V12 · T12 · anexar SÓ a imagem escolhida do K02
+
+Cena: T12 · CTA 1 · QUALIFICA + 222. Diz: Se você já fez de tudo e o telefone segue calado, comente 222 agora mesmo. Assim o Selo da Luz da Varanda fica amarrado ao seu nome.
 
 ```text
 V12
@@ -157,6 +193,8 @@ Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 
 ### V13 · T13 · anexar SÓ a imagem escolhida do K02
 
+Cena: T13 · CTA 2 · SELOS + FOLLOW. Diz: Curta, para a bênção que vai na sua direção ficar mais forte. Salve e mande para alguém que espera uma ligação. E me siga, para isto continuar aberto.
+
 ```text
 V13
 The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Dale like, para que la bendición que va hacia ti sea más fuerte. Guárdalo y mándaselo a alguien que espera una llamada. Y sígueme, para que esto siga abierto."
@@ -166,6 +204,8 @@ Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 
 ### V14 · T14 · anexar SÓ a imagem escolhida do K02
 
+Cena: T14 · CONSEQUÊNCIA EM 3ª PESSOA. Diz: A vizinha da Imelda ouviu e nunca fez. A varanda dela continuou apagada, e a ligação tocou na casa iluminada do vizinho. Que não seja você.
+
 ```text
 V14
 The person in the image speaks in neutral Latin American Spanish, looking at the camera: "La vecina de Imelda lo escuchó y nunca lo hizo. Su porche siguió apagado, y la llamada sonó en la casa iluminada del vecino. Que no seas tú."
@@ -174,6 +214,8 @@ Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V15 · T15 · anexar SÓ a imagem escolhida do K02
+
+Cena: T15 · CTA 3 · STORIES. Diz: Agora toque na minha foto de perfil. As três frases esperam por você nos meus stories, e levam três minutos esta noite. Queria ter sabido antes da primeira candidatura.
 
 ```text
 V15
