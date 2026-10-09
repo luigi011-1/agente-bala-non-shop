@@ -1,0 +1,703 @@
+{
+  "schema_version": 2,
+  "pipeline": "watch",
+  "run_id": "21147837-1015-4e0a-acbe-fb2364e66f36",
+  "status": "COMPLETE",
+  "analysis_status": "PENDING_VISUAL_REVIEW",
+  "video": "/tmp/claude-0/videoB.mp4",
+  "outdir": "/tmp/claude-0/watchB_es",
+  "info": {
+    "duration": 119.79034,
+    "fps": 30.0,
+    "width": 720,
+    "height": 1280,
+    "has_audio": true
+  },
+  "scenes": [
+    {
+      "file": "scene_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "scene_t00002.6000_000002.png",
+      "t": 2.6
+    },
+    {
+      "file": "scene_t00002.6667_000003.png",
+      "t": 2.66667
+    },
+    {
+      "file": "scene_t00003.8000_000004.png",
+      "t": 3.8
+    },
+    {
+      "file": "scene_t00004.9667_000005.png",
+      "t": 4.96667
+    }
+  ],
+  "timeline": [
+    {
+      "file": "tl_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "tl_t00001.0000_000002.png",
+      "t": 1.0
+    },
+    {
+      "file": "tl_t00002.0000_000003.png",
+      "t": 2.0
+    },
+    {
+      "file": "tl_t00003.0000_000004.png",
+      "t": 3.0
+    },
+    {
+      "file": "tl_t00004.0000_000005.png",
+      "t": 4.0
+    },
+    {
+      "file": "tl_t00005.0000_000006.png",
+      "t": 5.0
+    },
+    {
+      "file": "tl_t00006.0000_000007.png",
+      "t": 6.0
+    },
+    {
+      "file": "tl_t00007.0000_000008.png",
+      "t": 7.0
+    },
+    {
+      "file": "tl_t00008.0000_000009.png",
+      "t": 8.0
+    },
+    {
+      "file": "tl_t00009.0000_000010.png",
+      "t": 9.0
+    },
+    {
+      "file": "tl_t00010.0000_000011.png",
+      "t": 10.0
+    },
+    {
+      "file": "tl_t00011.0000_000012.png",
+      "t": 11.0
+    },
+    {
+      "file": "tl_t00012.0000_000013.png",
+      "t": 12.0
+    },
+    {
+      "file": "tl_t00013.0000_000014.png",
+      "t": 13.0
+    },
+    {
+      "file": "tl_t00014.0000_000015.png",
+      "t": 14.0
+    },
+    {
+      "file": "tl_t00015.0000_000016.png",
+      "t": 15.0
+    },
+    {
+      "file": "tl_t00016.0000_000017.png",
+      "t": 16.0
+    },
+    {
+      "file": "tl_t00017.0000_000018.png",
+      "t": 17.0
+    },
+    {
+      "file": "tl_t00018.0000_000019.png",
+      "t": 18.0
+    },
+    {
+      "file": "tl_t00019.0000_000020.png",
+      "t": 19.0
+    },
+    {
+      "file": "tl_t00020.0000_000021.png",
+      "t": 20.0
+    },
+    {
+      "file": "tl_t00021.0000_000022.png",
+      "t": 21.0
+    },
+    {
+      "file": "tl_t00022.0000_000023.png",
+      "t": 22.0
+    },
+    {
+      "file": "tl_t00023.0000_000024.png",
+      "t": 23.0
+    },
+    {
+      "file": "tl_t00024.0000_000025.png",
+      "t": 24.0
+    },
+    {
+      "file": "tl_t00025.0000_000026.png",
+      "t": 25.0
+    },
+    {
+      "file": "tl_t00026.0000_000027.png",
+      "t": 26.0
+    },
+    {
+      "file": "tl_t00027.0000_000028.png",
+      "t": 27.0
+    },
+    {
+      "file": "tl_t00028.0000_000029.png",
+      "t": 28.0
+    },
+    {
+      "file": "tl_t00029.0000_000030.png",
+      "t": 29.0
+    },
+    {
+      "file": "tl_t00030.0000_000031.png",
+      "t": 30.0
+    },
+    {
+      "file": "tl_t00031.0000_000032.png",
+      "t": 31.0
+    },
+    {
+      "file": "tl_t00032.0000_000033.png",
+      "t": 32.0
+    },
+    {
+      "file": "tl_t00033.0000_000034.png",
+      "t": 33.0
+    },
+    {
+      "file": "tl_t00034.0000_000035.png",
+      "t": 34.0
+    },
+    {
+      "file": "tl_t00035.0000_000036.png",
+      "t": 35.0
+    },
+    {
+      "file": "tl_t00036.0000_000037.png",
+      "t": 36.0
+    },
+    {
+      "file": "tl_t00037.0000_000038.png",
+      "t": 37.0
+    },
+    {
+      "file": "tl_t00038.0000_000039.png",
+      "t": 38.0
+    },
+    {
+      "file": "tl_t00039.0000_000040.png",
+      "t": 39.0
+    },
+    {
+      "file": "tl_t00040.0000_000041.png",
+      "t": 40.0
+    },
+    {
+      "file": "tl_t00041.0000_000042.png",
+      "t": 41.0
+    },
+    {
+      "file": "tl_t00042.0000_000043.png",
+      "t": 42.0
+    },
+    {
+      "file": "tl_t00043.0000_000044.png",
+      "t": 43.0
+    },
+    {
+      "file": "tl_t00044.0000_000045.png",
+      "t": 44.0
+    },
+    {
+      "file": "tl_t00045.0000_000046.png",
+      "t": 45.0
+    },
+    {
+      "file": "tl_t00046.0000_000047.png",
+      "t": 46.0
+    },
+    {
+      "file": "tl_t00047.0000_000048.png",
+      "t": 47.0
+    },
+    {
+      "file": "tl_t00048.0000_000049.png",
+      "t": 48.0
+    },
+    {
+      "file": "tl_t00049.0000_000050.png",
+      "t": 49.0
+    },
+    {
+      "file": "tl_t00050.0000_000051.png",
+      "t": 50.0
+    },
+    {
+      "file": "tl_t00051.0000_000052.png",
+      "t": 51.0
+    },
+    {
+      "file": "tl_t00052.0000_000053.png",
+      "t": 52.0
+    },
+    {
+      "file": "tl_t00053.0000_000054.png",
+      "t": 53.0
+    },
+    {
+      "file": "tl_t00054.0000_000055.png",
+      "t": 54.0
+    },
+    {
+      "file": "tl_t00055.0000_000056.png",
+      "t": 55.0
+    },
+    {
+      "file": "tl_t00056.0000_000057.png",
+      "t": 56.0
+    },
+    {
+      "file": "tl_t00057.0000_000058.png",
+      "t": 57.0
+    },
+    {
+      "file": "tl_t00058.0000_000059.png",
+      "t": 58.0
+    },
+    {
+      "file": "tl_t00059.0000_000060.png",
+      "t": 59.0
+    },
+    {
+      "file": "tl_t00060.0000_000061.png",
+      "t": 60.0
+    },
+    {
+      "file": "tl_t00061.0000_000062.png",
+      "t": 61.0
+    },
+    {
+      "file": "tl_t00062.0000_000063.png",
+      "t": 62.0
+    },
+    {
+      "file": "tl_t00063.0000_000064.png",
+      "t": 63.0
+    },
+    {
+      "file": "tl_t00064.0000_000065.png",
+      "t": 64.0
+    },
+    {
+      "file": "tl_t00065.0000_000066.png",
+      "t": 65.0
+    },
+    {
+      "file": "tl_t00066.0000_000067.png",
+      "t": 66.0
+    },
+    {
+      "file": "tl_t00067.0000_000068.png",
+      "t": 67.0
+    },
+    {
+      "file": "tl_t00068.0000_000069.png",
+      "t": 68.0
+    },
+    {
+      "file": "tl_t00069.0000_000070.png",
+      "t": 69.0
+    },
+    {
+      "file": "tl_t00070.0000_000071.png",
+      "t": 70.0
+    },
+    {
+      "file": "tl_t00071.0000_000072.png",
+      "t": 71.0
+    },
+    {
+      "file": "tl_t00072.0000_000073.png",
+      "t": 72.0
+    },
+    {
+      "file": "tl_t00073.0000_000074.png",
+      "t": 73.0
+    },
+    {
+      "file": "tl_t00074.0000_000075.png",
+      "t": 74.0
+    },
+    {
+      "file": "tl_t00075.0000_000076.png",
+      "t": 75.0
+    },
+    {
+      "file": "tl_t00076.0000_000077.png",
+      "t": 76.0
+    },
+    {
+      "file": "tl_t00077.0000_000078.png",
+      "t": 77.0
+    },
+    {
+      "file": "tl_t00078.0000_000079.png",
+      "t": 78.0
+    },
+    {
+      "file": "tl_t00079.0000_000080.png",
+      "t": 79.0
+    },
+    {
+      "file": "tl_t00080.0000_000081.png",
+      "t": 80.0
+    },
+    {
+      "file": "tl_t00081.0000_000082.png",
+      "t": 81.0
+    },
+    {
+      "file": "tl_t00082.0000_000083.png",
+      "t": 82.0
+    },
+    {
+      "file": "tl_t00083.0000_000084.png",
+      "t": 83.0
+    },
+    {
+      "file": "tl_t00084.0000_000085.png",
+      "t": 84.0
+    },
+    {
+      "file": "tl_t00085.0000_000086.png",
+      "t": 85.0
+    },
+    {
+      "file": "tl_t00086.0000_000087.png",
+      "t": 86.0
+    },
+    {
+      "file": "tl_t00087.0000_000088.png",
+      "t": 87.0
+    },
+    {
+      "file": "tl_t00088.0000_000089.png",
+      "t": 88.0
+    },
+    {
+      "file": "tl_t00089.0000_000090.png",
+      "t": 89.0
+    },
+    {
+      "file": "tl_t00090.0000_000091.png",
+      "t": 90.0
+    },
+    {
+      "file": "tl_t00091.0000_000092.png",
+      "t": 91.0
+    },
+    {
+      "file": "tl_t00092.0000_000093.png",
+      "t": 92.0
+    },
+    {
+      "file": "tl_t00093.0000_000094.png",
+      "t": 93.0
+    },
+    {
+      "file": "tl_t00094.0000_000095.png",
+      "t": 94.0
+    },
+    {
+      "file": "tl_t00095.0000_000096.png",
+      "t": 95.0
+    },
+    {
+      "file": "tl_t00096.0000_000097.png",
+      "t": 96.0
+    },
+    {
+      "file": "tl_t00097.0000_000098.png",
+      "t": 97.0
+    },
+    {
+      "file": "tl_t00098.0000_000099.png",
+      "t": 98.0
+    },
+    {
+      "file": "tl_t00099.0000_000100.png",
+      "t": 99.0
+    },
+    {
+      "file": "tl_t00100.0000_000101.png",
+      "t": 100.0
+    },
+    {
+      "file": "tl_t00101.0000_000102.png",
+      "t": 101.0
+    },
+    {
+      "file": "tl_t00102.0000_000103.png",
+      "t": 102.0
+    },
+    {
+      "file": "tl_t00103.0000_000104.png",
+      "t": 103.0
+    },
+    {
+      "file": "tl_t00104.0000_000105.png",
+      "t": 104.0
+    },
+    {
+      "file": "tl_t00105.0000_000106.png",
+      "t": 105.0
+    },
+    {
+      "file": "tl_t00106.0000_000107.png",
+      "t": 106.0
+    },
+    {
+      "file": "tl_t00107.0000_000108.png",
+      "t": 107.0
+    },
+    {
+      "file": "tl_t00108.0000_000109.png",
+      "t": 108.0
+    },
+    {
+      "file": "tl_t00109.0000_000110.png",
+      "t": 109.0
+    },
+    {
+      "file": "tl_t00110.0000_000111.png",
+      "t": 110.0
+    },
+    {
+      "file": "tl_t00111.0000_000112.png",
+      "t": 111.0
+    },
+    {
+      "file": "tl_t00112.0000_000113.png",
+      "t": 112.0
+    },
+    {
+      "file": "tl_t00113.0000_000114.png",
+      "t": 113.0
+    },
+    {
+      "file": "tl_t00114.0000_000115.png",
+      "t": 114.0
+    },
+    {
+      "file": "tl_t00115.0000_000116.png",
+      "t": 115.0
+    },
+    {
+      "file": "tl_t00116.0000_000117.png",
+      "t": 116.0
+    },
+    {
+      "file": "tl_t00117.0000_000118.png",
+      "t": 117.0
+    },
+    {
+      "file": "tl_t00118.0000_000119.png",
+      "t": 118.0
+    },
+    {
+      "file": "tl_t00119.0000_000120.png",
+      "t": 119.0
+    }
+  ],
+  "overview": {
+    "scenes": [
+      "overview_scenes_01.png"
+    ],
+    "timeline": [
+      "overview_timeline_01.png",
+      "overview_timeline_02.png",
+      "overview_timeline_03.png",
+      "overview_timeline_04.png",
+      "overview_timeline_05.png",
+      "overview_timeline_06.png"
+    ]
+  },
+  "transcript": true,
+  "audio": {
+    "status": "SUCCEEDED",
+    "backend": "faster-whisper",
+    "language": "es",
+    "segments": [
+      {
+        "start": 4.69,
+        "end": 10.15,
+        "text": "Ni se te ocurra pasar de largo este vídeo o el universo podría saltarse tu bendición. La"
+      },
+      {
+        "start": 10.15,
+        "end": 15.31,
+        "text": "mujer que se detuvo en este vídeo está oficialmente protegida de cualquier decepción durante el"
+      },
+      {
+        "start": 15.31,
+        "end": 21.95,
+        "text": "resto de 2026. No sé tu nombre, pero si este vídeo te encontró los días 7, 8 o 9 de octubre,"
+      },
+      {
+        "start": 21.95,
+        "end": 27.03,
+        "text": "no sigas deslizando. Un gran cambio está viniendo hacia ti. Cuando recibas esta bendición,"
+      },
+      {
+        "start": 27.03,
+        "end": 32.47,
+        "text": "mantén la boca cerrada. Una poderosa ola de prosperidad viene hacia ti. No se lo cuentes"
+      },
+      {
+        "start": 32.47,
+        "end": 37.39,
+        "text": "a nadie, pero el portal de la abundancia se ha abierto. Lo peor, finalmente terminó."
+      },
+      {
+        "start": 37.39,
+        "end": 42.83,
+        "text": "Veo mucho dinero, prosperidad y a alguien increíblemente maravilloso entrando en tu vida."
+      },
+      {
+        "start": 42.83,
+        "end": 48.55,
+        "text": "Antes de seguir deslizando, cierra tu mano derecha y escuchaste el final. Este vídeo no es para"
+      },
+      {
+        "start": 48.55,
+        "end": 53.63,
+        "text": "todos. Pero presta atención. Tu conexión con este mensaje determina el tamaño del milagro"
+      },
+      {
+        "start": 53.63,
+        "end": 58.39,
+        "text": "que viene hacia ti. El universo te eligió. Si lo saltas ahora mismo, la energía se"
+      },
+      {
+        "start": 58.39,
+        "end": 63.87,
+        "text": "rompe. Siento que algo muy inusual está sucediéndote en este momento. Veo las cadenas que te mantenían"
+      },
+      {
+        "start": 63.87,
+        "end": 68.75,
+        "text": "atrapada en la escasez siendo destruidas. El bloqueo amoroso que fue lanzado sobre"
+      },
+      {
+        "start": 68.75,
+        "end": 73.07,
+        "text": "ti está regresando directamente a quien lo envió. En los próximos 7 minutos,"
+      },
+      {
+        "start": 73.07,
+        "end": 77.83,
+        "text": "la energía de escasez que te estaba siguiendo va a ser destruida para siempre. Así que"
+      },
+      {
+        "start": 77.83,
+        "end": 83.27,
+        "text": "envíate este vídeo a ti misma ahora mismo, porque en 7 minutos vas a volver para confirmar"
+      },
+      {
+        "start": 83.27,
+        "end": 88.31,
+        "text": "este cambio energético por ti misma. Ahora guarda este vídeo. Ese será tu primer sello."
+      },
+      {
+        "start": 88.31,
+        "end": 93.63,
+        "text": "Toca el botón de seguir que está abajo. Ese será tu segundo sello. Comenta 2 2 2"
+      },
+      {
+        "start": 93.63,
+        "end": 98.99,
+        "text": "para que pueda ver que hiciste todo. Si hiciste todo correctamente, tu protección durante el resto"
+      },
+      {
+        "start": 98.99,
+        "end": 104.03,
+        "text": "del año está garantizada. Pero escucha con atención. Esta energía es altamente sensible"
+      },
+      {
+        "start": 104.03,
+        "end": 108.91,
+        "text": "y si la dejas desprotegida puede escapar fácilmente. Así que haz clic en mi foto de"
+      },
+      {
+        "start": 108.91,
+        "end": 113.71,
+        "text": "perfil y ve a mirar mi historia más reciente antes de que desaparezca. Casi todo el mundo"
+      },
+      {
+        "start": 113.71,
+        "end": 117.73,
+        "text": "llora cuando ve lo que dejé allí. La señal exacta que has estado esperando está"
+      },
+      {
+        "start": 117.73,
+        "end": 119.43,
+        "text": "esperando por ti ahora mismo."
+      }
+    ],
+    "text": "Ni se te ocurra pasar de largo este vídeo o el universo podría saltarse tu bendición. La mujer que se detuvo en este vídeo está oficialmente protegida de cualquier decepción durante el resto de 2026. No sé tu nombre, pero si este vídeo te encontró los días 7, 8 o 9 de octubre, no sigas deslizando. Un gran cambio está viniendo hacia ti. Cuando recibas esta bendición, mantén la boca cerrada. Una poderosa ola de prosperidad viene hacia ti. No se lo cuentes a nadie, pero el portal de la abundancia se ha abierto. Lo peor, finalmente terminó. Veo mucho dinero, prosperidad y a alguien increíblemente maravilloso entrando en tu vida. Antes de seguir deslizando, cierra tu mano derecha y escuchaste el final. Este vídeo no es para todos. Pero presta atención. Tu conexión con este mensaje determina el tamaño del milagro que viene hacia ti. El universo te eligió. Si lo saltas ahora mismo, la energía se rompe. Siento que algo muy inusual está sucediéndote en este momento. Veo las cadenas que te mantenían atrapada en la escasez siendo destruidas. El bloqueo amoroso que fue lanzado sobre ti está regresando directamente a quien lo envió. En los próximos 7 minutos, la energía de escasez que te estaba siguiendo va a ser destruida para siempre. Así que envíate este vídeo a ti misma ahora mismo, porque en 7 minutos vas a volver para confirmar este cambio energético por ti misma. Ahora guarda este vídeo. Ese será tu primer sello. Toca el botón de seguir que está abajo. Ese será tu segundo sello. Comenta 2 2 2 para que pueda ver que hiciste todo. Si hiciste todo correctamente, tu protección durante el resto del año está garantizada. Pero escucha con atención. Esta energía es altamente sensible y si la dejas desprotegida puede escapar fácilmente. Así que haz clic en mi foto de perfil y ve a mirar mi historia más reciente antes de que desaparezca. Casi todo el mundo llora cuando ve lo que dejé allí. La señal exacta que has estado esperando está esperando por ti ahora mismo."
+  },
+  "alignment": {
+    "status": "NOT_REQUESTED",
+    "backend": null
+  },
+  "params": {
+    "timeline_fps": 1.0,
+    "scene_threshold": 0.2,
+    "model": "small",
+    "language": "es",
+    "device": "cpu",
+    "compute_type": "int8",
+    "cpu_threads": 4,
+    "jobs": 4,
+    "alignment": "none",
+    "align_model": null,
+    "word_timestamps": false,
+    "no_audio": false,
+    "allow_no_audio": false,
+    "max_frames": 20000,
+    "command_timeout": 300
+  },
+  "environment": {
+    "os": "Linux-6.18.44-fc-v80-x86_64-with-glibc2.39",
+    "architecture": "x86_64",
+    "python": "3.13.16",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "whisperx": null,
+      "ctranslate2": "4.8.2",
+      "Pillow": "12.3.0",
+      "av": "18.0.0",
+      "torch": null,
+      "torchaudio": null
+    },
+    "ffmpeg": "/usr/bin/ffmpeg",
+    "ffprobe": "/usr/bin/ffprobe"
+  },
+  "errors": [],
+  "coverage": {
+    "source_duration_s": 119.79034,
+    "sample_interval_s": 1.0,
+    "timeline_count": 120,
+    "timestamp_basis": "fps_filter_sampling_grid",
+    "visual_review_performed": false
+  },
+  "elapsed_seconds": 70.978
+}
