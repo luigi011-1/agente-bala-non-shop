@@ -6,7 +6,7 @@ Tese:
 "A call is coming in the next week or two, and it will change your money."
 
 Sintoma-alvo:
-Quem mandou candidatura atrás de candidatura, pediu favor, fez curso e só recebeu silêncio; as três cartas coladas na lente e a promessa de que "only the right people see this" selecionam quem fica.
+Quem mandou candidatura atrás de candidatura, pediu favor, fez curso e só recebeu silêncio; as três cartas coladas na lente e a promessa de que "this video found you on purpose" selecionam quem fica.
 
 Direcao:
 Ela faz o gesto (o selo) e a ligação encontra a casa; a perda é da inação (a luz continua apagada), nunca do valor dela.
@@ -18,7 +18,7 @@ Banco verbal:
 - "A call is coming"
 - "in the next week or two"
 - "it will change your money"
-- "only the right people see this"
+- "meant for you"
 - "Nobody tells you this kind of call doesn't answer to knocking"
 - "It's your porch light"
 
