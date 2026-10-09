@@ -1,87 +1,1544 @@
 [
   {
     "start": 0.0,
-    "end": 7.84,
-    "text": "Citelevantas, con los ojos, así, y los quieres así, con la cara enchada, así, y la quieres así,"
+    "end": 8.36,
+    "text": "Si te levantas con los ojos así y los quieres así con la cara hinchada así y la quieres así y los dedos",
+    "words": [
+      {
+        "word": " Si",
+        "start": 0.0,
+        "end": 0.12,
+        "probability": 0.7289332151412964
+      },
+      {
+        "word": " te",
+        "start": 0.12,
+        "end": 0.24,
+        "probability": 0.9931128621101379
+      },
+      {
+        "word": " levantas",
+        "start": 0.24,
+        "end": 0.86,
+        "probability": 0.9956454634666443
+      },
+      {
+        "word": " con",
+        "start": 0.86,
+        "end": 2.2,
+        "probability": 0.9202226400375366
+      },
+      {
+        "word": " los",
+        "start": 2.2,
+        "end": 2.38,
+        "probability": 0.9979814291000366
+      },
+      {
+        "word": " ojos",
+        "start": 2.38,
+        "end": 2.64,
+        "probability": 0.998479425907135
+      },
+      {
+        "word": " así",
+        "start": 2.64,
+        "end": 3.14,
+        "probability": 0.6202118992805481
+      },
+      {
+        "word": " y",
+        "start": 3.14,
+        "end": 3.64,
+        "probability": 0.7354503273963928
+      },
+      {
+        "word": " los",
+        "start": 3.64,
+        "end": 3.82,
+        "probability": 0.982736349105835
+      },
+      {
+        "word": " quieres",
+        "start": 3.82,
+        "end": 4.06,
+        "probability": 0.9939889907836914
+      },
+      {
+        "word": " así",
+        "start": 4.06,
+        "end": 4.58,
+        "probability": 0.9907276630401611
+      },
+      {
+        "word": " con",
+        "start": 4.58,
+        "end": 5.08,
+        "probability": 0.7538129091262817
+      },
+      {
+        "word": " la",
+        "start": 5.08,
+        "end": 5.24,
+        "probability": 0.9983223080635071
+      },
+      {
+        "word": " cara",
+        "start": 5.24,
+        "end": 5.46,
+        "probability": 0.9984328150749207
+      },
+      {
+        "word": " hinchada",
+        "start": 5.46,
+        "end": 5.88,
+        "probability": 0.9428049723307291
+      },
+      {
+        "word": " así",
+        "start": 5.88,
+        "end": 6.22,
+        "probability": 0.8439531326293945
+      },
+      {
+        "word": " y",
+        "start": 6.22,
+        "end": 6.72,
+        "probability": 0.931198000907898
+      },
+      {
+        "word": " la",
+        "start": 6.72,
+        "end": 6.84,
+        "probability": 0.9335159659385681
+      },
+      {
+        "word": " quieres",
+        "start": 6.84,
+        "end": 7.06,
+        "probability": 0.9959511756896973
+      },
+      {
+        "word": " así",
+        "start": 7.06,
+        "end": 7.46,
+        "probability": 0.9935645461082458
+      },
+      {
+        "word": " y",
+        "start": 7.46,
+        "end": 8.0,
+        "probability": 0.7696535587310791
+      },
+      {
+        "word": " los",
+        "start": 8.0,
+        "end": 8.14,
+        "probability": 0.9979535341262817
+      },
+      {
+        "word": " dedos",
+        "start": 8.14,
+        "end": 8.36,
+        "probability": 0.9994784295558929
+      }
+    ]
   },
   {
-    "start": 7.84,
-    "end": 12.72,
-    "text": "y los dedos tan enchados, que la nío no pasa, y los quieres así, pon me attention,"
+    "start": 8.36,
+    "end": 15.56,
+    "text": "tan hinchados que el anillo no pasa y los quieres así ponme atención porque esto nadie más te lo va",
+    "words": [
+      {
+        "word": " tan",
+        "start": 8.36,
+        "end": 8.52,
+        "probability": 0.9208303689956665
+      },
+      {
+        "word": " hinchados",
+        "start": 8.52,
+        "end": 8.94,
+        "probability": 0.9935222069422404
+      },
+      {
+        "word": " que",
+        "start": 8.94,
+        "end": 9.34,
+        "probability": 0.8874555826187134
+      },
+      {
+        "word": " el",
+        "start": 9.34,
+        "end": 9.44,
+        "probability": 0.9021169543266296
+      },
+      {
+        "word": " anillo",
+        "start": 9.44,
+        "end": 9.6,
+        "probability": 0.9954231977462769
+      },
+      {
+        "word": " no",
+        "start": 9.6,
+        "end": 9.76,
+        "probability": 0.9910684823989868
+      },
+      {
+        "word": " pasa",
+        "start": 9.76,
+        "end": 9.98,
+        "probability": 0.9864485859870911
+      },
+      {
+        "word": " y",
+        "start": 9.98,
+        "end": 10.54,
+        "probability": 0.8720672130584717
+      },
+      {
+        "word": " los",
+        "start": 10.54,
+        "end": 10.68,
+        "probability": 0.9936390519142151
+      },
+      {
+        "word": " quieres",
+        "start": 10.68,
+        "end": 10.9,
+        "probability": 0.989654004573822
+      },
+      {
+        "word": " así",
+        "start": 10.9,
+        "end": 11.28,
+        "probability": 0.9925450682640076
+      },
+      {
+        "word": " ponme",
+        "start": 11.28,
+        "end": 12.04,
+        "probability": 0.56984943151474
+      },
+      {
+        "word": " atención",
+        "start": 12.04,
+        "end": 12.5,
+        "probability": 0.9952071309089661
+      },
+      {
+        "word": " porque",
+        "start": 12.5,
+        "end": 12.96,
+        "probability": 0.7893942594528198
+      },
+      {
+        "word": " esto",
+        "start": 12.96,
+        "end": 13.5,
+        "probability": 0.9575311541557312
+      },
+      {
+        "word": " nadie",
+        "start": 13.5,
+        "end": 14.5,
+        "probability": 0.9801992774009705
+      },
+      {
+        "word": " más",
+        "start": 14.5,
+        "end": 14.98,
+        "probability": 0.9310888648033142
+      },
+      {
+        "word": " te",
+        "start": 14.98,
+        "end": 15.36,
+        "probability": 0.9781226515769958
+      },
+      {
+        "word": " lo",
+        "start": 15.36,
+        "end": 15.48,
+        "probability": 0.9928953051567078
+      },
+      {
+        "word": " va",
+        "start": 15.48,
+        "end": 15.56,
+        "probability": 0.9976824522018433
+      }
+    ]
   },
   {
-    "start": 12.72,
-    "end": 18.7,
-    "text": "porque esto nadie mas de lo vadécir. Esto no es la idad, no es que dormistemal."
+    "start": 15.56,
+    "end": 21.68,
+    "text": "a decir esto no es la edad no es que dormiste mal te van a decir que duermas más y que te pongas",
+    "words": [
+      {
+        "word": " a",
+        "start": 15.56,
+        "end": 15.68,
+        "probability": 0.9797818660736084
+      },
+      {
+        "word": " decir",
+        "start": 15.68,
+        "end": 15.8,
+        "probability": 0.9976929426193237
+      },
+      {
+        "word": " esto",
+        "start": 15.8,
+        "end": 16.16,
+        "probability": 0.23451189696788788
+      },
+      {
+        "word": " no",
+        "start": 16.16,
+        "end": 16.36,
+        "probability": 0.973829448223114
+      },
+      {
+        "word": " es",
+        "start": 16.36,
+        "end": 16.5,
+        "probability": 0.9971711039543152
+      },
+      {
+        "word": " la",
+        "start": 16.5,
+        "end": 16.66,
+        "probability": 0.9955061674118042
+      },
+      {
+        "word": " edad",
+        "start": 16.66,
+        "end": 17.02,
+        "probability": 0.9771900475025177
+      },
+      {
+        "word": " no",
+        "start": 17.02,
+        "end": 17.54,
+        "probability": 0.7596930265426636
+      },
+      {
+        "word": " es",
+        "start": 17.54,
+        "end": 17.66,
+        "probability": 0.9972791075706482
+      },
+      {
+        "word": " que",
+        "start": 17.66,
+        "end": 17.78,
+        "probability": 0.9968883395195007
+      },
+      {
+        "word": " dormiste",
+        "start": 17.78,
+        "end": 18.22,
+        "probability": 0.9699825048446655
+      },
+      {
+        "word": " mal",
+        "start": 18.22,
+        "end": 18.58,
+        "probability": 0.997732400894165
+      },
+      {
+        "word": " te",
+        "start": 18.58,
+        "end": 18.86,
+        "probability": 0.8568959832191467
+      },
+      {
+        "word": " van",
+        "start": 18.86,
+        "end": 19.0,
+        "probability": 0.9969407916069031
+      },
+      {
+        "word": " a",
+        "start": 19.0,
+        "end": 19.1,
+        "probability": 0.998330295085907
+      },
+      {
+        "word": " decir",
+        "start": 19.1,
+        "end": 19.38,
+        "probability": 0.9988634586334229
+      },
+      {
+        "word": " que",
+        "start": 19.38,
+        "end": 19.58,
+        "probability": 0.9833112955093384
+      },
+      {
+        "word": " duermas",
+        "start": 19.58,
+        "end": 20.0,
+        "probability": 0.9827208320299784
+      },
+      {
+        "word": " más",
+        "start": 20.0,
+        "end": 20.36,
+        "probability": 0.9890676140785217
+      },
+      {
+        "word": " y",
+        "start": 20.36,
+        "end": 21.04,
+        "probability": 0.9937447905540466
+      },
+      {
+        "word": " que",
+        "start": 21.04,
+        "end": 21.16,
+        "probability": 0.988581120967865
+      },
+      {
+        "word": " te",
+        "start": 21.16,
+        "end": 21.32,
+        "probability": 0.99212646484375
+      },
+      {
+        "word": " pongas",
+        "start": 21.32,
+        "end": 21.68,
+        "probability": 0.9959507882595062
+      }
+    ]
   },
   {
-    "start": 18.7,
-    "end": 25.26,
-    "text": "Te vana decir que duermas mas y que te pongas cremas, pero nada de eso toca la casa."
+    "start": 21.68,
+    "end": 29.82,
+    "text": "cremas pero nada de eso toca la causa te enseño lo que sí funciona en una olla con dos tazas de agua",
+    "words": [
+      {
+        "word": " cremas",
+        "start": 21.68,
+        "end": 22.16,
+        "probability": 0.7646510004997253
+      },
+      {
+        "word": " pero",
+        "start": 22.16,
+        "end": 22.94,
+        "probability": 0.3450618386268616
+      },
+      {
+        "word": " nada",
+        "start": 22.94,
+        "end": 23.3,
+        "probability": 0.9866547584533691
+      },
+      {
+        "word": " de",
+        "start": 23.3,
+        "end": 23.54,
+        "probability": 0.9949853420257568
+      },
+      {
+        "word": " eso",
+        "start": 23.54,
+        "end": 23.86,
+        "probability": 0.9858378767967224
+      },
+      {
+        "word": " toca",
+        "start": 23.86,
+        "end": 24.54,
+        "probability": 0.9605331420898438
+      },
+      {
+        "word": " la",
+        "start": 24.54,
+        "end": 24.74,
+        "probability": 0.9631479382514954
+      },
+      {
+        "word": " causa",
+        "start": 24.74,
+        "end": 25.08,
+        "probability": 0.9959385395050049
+      },
+      {
+        "word": " te",
+        "start": 25.08,
+        "end": 25.4,
+        "probability": 0.10922852903604507
+      },
+      {
+        "word": " enseño",
+        "start": 25.4,
+        "end": 25.86,
+        "probability": 0.9650382697582245
+      },
+      {
+        "word": " lo",
+        "start": 25.86,
+        "end": 26.52,
+        "probability": 0.9900116324424744
+      },
+      {
+        "word": " que",
+        "start": 26.52,
+        "end": 26.68,
+        "probability": 0.9987574815750122
+      },
+      {
+        "word": " sí",
+        "start": 26.68,
+        "end": 26.98,
+        "probability": 0.7685406804084778
+      },
+      {
+        "word": " funciona",
+        "start": 26.98,
+        "end": 27.6,
+        "probability": 0.9978997707366943
+      },
+      {
+        "word": " en",
+        "start": 27.6,
+        "end": 28.02,
+        "probability": 0.7730681300163269
+      },
+      {
+        "word": " una",
+        "start": 28.02,
+        "end": 28.22,
+        "probability": 0.9962886571884155
+      },
+      {
+        "word": " olla",
+        "start": 28.22,
+        "end": 28.46,
+        "probability": 0.9906420111656189
+      },
+      {
+        "word": " con",
+        "start": 28.46,
+        "end": 28.82,
+        "probability": 0.990155816078186
+      },
+      {
+        "word": " dos",
+        "start": 28.82,
+        "end": 29.02,
+        "probability": 0.9136595726013184
+      },
+      {
+        "word": " tazas",
+        "start": 29.02,
+        "end": 29.38,
+        "probability": 0.9695342977841696
+      },
+      {
+        "word": " de",
+        "start": 29.38,
+        "end": 29.56,
+        "probability": 0.9965465664863586
+      },
+      {
+        "word": " agua",
+        "start": 29.56,
+        "end": 29.82,
+        "probability": 0.9978500604629517
+      }
+    ]
   },
   {
-    "start": 25.26,
-    "end": 30.04,
-    "text": "Tenseño lo que sí funciona. En una holla, con dos tasas de agua,"
+    "start": 29.82,
+    "end": 39.1,
+    "text": "pones una cucharadita de jengibre y una pizca de pimienta negra le exprimes el jugo de medio limón",
+    "words": [
+      {
+        "word": " pones",
+        "start": 29.82,
+        "end": 30.34,
+        "probability": 0.652807742357254
+      },
+      {
+        "word": " una",
+        "start": 30.34,
+        "end": 30.96,
+        "probability": 0.9637967944145203
+      },
+      {
+        "word": " cucharadita",
+        "start": 30.96,
+        "end": 31.64,
+        "probability": 0.9949275702238083
+      },
+      {
+        "word": " de",
+        "start": 31.64,
+        "end": 32.02,
+        "probability": 0.9977166652679443
+      },
+      {
+        "word": " jengibre",
+        "start": 32.02,
+        "end": 32.62,
+        "probability": 0.9290644824504852
+      },
+      {
+        "word": " y",
+        "start": 32.62,
+        "end": 33.54,
+        "probability": 0.9929869771003723
+      },
+      {
+        "word": " una",
+        "start": 33.54,
+        "end": 33.94,
+        "probability": 0.9930670261383057
+      },
+      {
+        "word": " pizca",
+        "start": 33.94,
+        "end": 34.38,
+        "probability": 0.9375202258427938
+      },
+      {
+        "word": " de",
+        "start": 34.38,
+        "end": 34.72,
+        "probability": 0.9993769526481628
+      },
+      {
+        "word": " pimienta",
+        "start": 34.72,
+        "end": 35.24,
+        "probability": 0.9891351461410522
+      },
+      {
+        "word": " negra",
+        "start": 35.24,
+        "end": 35.7,
+        "probability": 0.9953231513500214
+      },
+      {
+        "word": " le",
+        "start": 35.7,
+        "end": 36.22,
+        "probability": 0.4689844250679016
+      },
+      {
+        "word": " exprimes",
+        "start": 36.22,
+        "end": 36.8,
+        "probability": 0.8697483738263448
+      },
+      {
+        "word": " el",
+        "start": 36.8,
+        "end": 37.1,
+        "probability": 0.9958272576332092
+      },
+      {
+        "word": " jugo",
+        "start": 37.1,
+        "end": 37.98,
+        "probability": 0.9931597709655762
+      },
+      {
+        "word": " de",
+        "start": 37.98,
+        "end": 38.24,
+        "probability": 0.9923654198646545
+      },
+      {
+        "word": " medio",
+        "start": 38.24,
+        "end": 38.54,
+        "probability": 0.9898309111595154
+      },
+      {
+        "word": " limón",
+        "start": 38.54,
+        "end": 39.1,
+        "probability": 0.9894628524780273
+      }
+    ]
   },
   {
-    "start": 30.04,
-    "end": 35.96,
-    "text": "con es una cucharadita de jenjibre y una pisca de pimenta negra."
+    "start": 39.1,
+    "end": 49.2,
+    "text": "lo hierves 10 minutos y te lo tomas tibio en ayunas cada mañana sin fallar 8 horas acostado sin un",
+    "words": [
+      {
+        "word": " lo",
+        "start": 39.1,
+        "end": 39.66,
+        "probability": 0.8142748475074768
+      },
+      {
+        "word": " hierves",
+        "start": 39.66,
+        "end": 40.0,
+        "probability": 0.5886873602867126
+      },
+      {
+        "word": " 10",
+        "start": 40.0,
+        "end": 40.64,
+        "probability": 0.7817367911338806
+      },
+      {
+        "word": " minutos",
+        "start": 40.64,
+        "end": 41.36,
+        "probability": 0.9929682612419128
+      },
+      {
+        "word": " y",
+        "start": 41.36,
+        "end": 42.14,
+        "probability": 0.99165278673172
+      },
+      {
+        "word": " te",
+        "start": 42.14,
+        "end": 42.24,
+        "probability": 0.9874492883682251
+      },
+      {
+        "word": " lo",
+        "start": 42.24,
+        "end": 42.32,
+        "probability": 0.9762078523635864
+      },
+      {
+        "word": " tomas",
+        "start": 42.32,
+        "end": 42.56,
+        "probability": 0.9640522599220276
+      },
+      {
+        "word": " tibio",
+        "start": 42.56,
+        "end": 43.1,
+        "probability": 0.8000173370043436
+      },
+      {
+        "word": " en",
+        "start": 43.1,
+        "end": 43.72,
+        "probability": 0.9892085194587708
+      },
+      {
+        "word": " ayunas",
+        "start": 43.72,
+        "end": 44.16,
+        "probability": 0.9552551706631979
+      },
+      {
+        "word": " cada",
+        "start": 44.16,
+        "end": 45.48,
+        "probability": 0.8648383021354675
+      },
+      {
+        "word": " mañana",
+        "start": 45.48,
+        "end": 45.76,
+        "probability": 0.9982367753982544
+      },
+      {
+        "word": " sin",
+        "start": 45.76,
+        "end": 46.42,
+        "probability": 0.9637258648872375
+      },
+      {
+        "word": " fallar",
+        "start": 46.42,
+        "end": 46.96,
+        "probability": 0.9931331872940063
+      },
+      {
+        "word": " 8",
+        "start": 46.96,
+        "end": 47.48,
+        "probability": 0.5642349123954773
+      },
+      {
+        "word": " horas",
+        "start": 47.48,
+        "end": 47.8,
+        "probability": 0.9959930181503296
+      },
+      {
+        "word": " acostado",
+        "start": 47.8,
+        "end": 48.44,
+        "probability": 0.8565126061439514
+      },
+      {
+        "word": " sin",
+        "start": 48.44,
+        "end": 49.06,
+        "probability": 0.990247905254364
+      },
+      {
+        "word": " un",
+        "start": 49.06,
+        "end": 49.2,
+        "probability": 0.9986929297447205
+      }
+    ]
   },
   {
-    "start": 35.96,
-    "end": 42.04,
-    "text": "L'exprimes el hugo de medio limón. Loy eres días minutos."
+    "start": 49.2,
+    "end": 56.36,
+    "text": "trago de agua el agua se estanca aquí en la cara esto tibio es lo primero que le llega al cuerpo y",
+    "words": [
+      {
+        "word": " trago",
+        "start": 49.2,
+        "end": 49.48,
+        "probability": 0.561581589281559
+      },
+      {
+        "word": " de",
+        "start": 49.48,
+        "end": 49.6,
+        "probability": 0.9780489206314087
+      },
+      {
+        "word": " agua",
+        "start": 49.6,
+        "end": 49.84,
+        "probability": 0.9968892931938171
+      },
+      {
+        "word": " el",
+        "start": 49.84,
+        "end": 50.46,
+        "probability": 0.18235473334789276
+      },
+      {
+        "word": " agua",
+        "start": 50.46,
+        "end": 50.68,
+        "probability": 0.9951962828636169
+      },
+      {
+        "word": " se",
+        "start": 50.68,
+        "end": 50.84,
+        "probability": 0.9907365441322327
+      },
+      {
+        "word": " estanca",
+        "start": 50.84,
+        "end": 51.26,
+        "probability": 0.9412410259246826
+      },
+      {
+        "word": " aquí",
+        "start": 51.26,
+        "end": 51.78,
+        "probability": 0.9465094804763794
+      },
+      {
+        "word": " en",
+        "start": 51.78,
+        "end": 52.74,
+        "probability": 0.8933101296424866
+      },
+      {
+        "word": " la",
+        "start": 52.74,
+        "end": 52.86,
+        "probability": 0.9915416836738586
+      },
+      {
+        "word": " cara",
+        "start": 52.86,
+        "end": 53.1,
+        "probability": 0.9981714487075806
+      },
+      {
+        "word": " esto",
+        "start": 53.1,
+        "end": 53.62,
+        "probability": 0.388238787651062
+      },
+      {
+        "word": " tibio",
+        "start": 53.62,
+        "end": 54.04,
+        "probability": 0.9436612327893575
+      },
+      {
+        "word": " es",
+        "start": 54.04,
+        "end": 54.5,
+        "probability": 0.984844982624054
+      },
+      {
+        "word": " lo",
+        "start": 54.5,
+        "end": 54.76,
+        "probability": 0.98708575963974
+      },
+      {
+        "word": " primero",
+        "start": 54.76,
+        "end": 55.04,
+        "probability": 0.9995322227478027
+      },
+      {
+        "word": " que",
+        "start": 55.04,
+        "end": 55.22,
+        "probability": 0.9961620569229126
+      },
+      {
+        "word": " le",
+        "start": 55.22,
+        "end": 55.32,
+        "probability": 0.9823880791664124
+      },
+      {
+        "word": " llega",
+        "start": 55.32,
+        "end": 55.48,
+        "probability": 0.9824119210243225
+      },
+      {
+        "word": " al",
+        "start": 55.48,
+        "end": 55.6,
+        "probability": 0.9124705195426941
+      },
+      {
+        "word": " cuerpo",
+        "start": 55.6,
+        "end": 55.86,
+        "probability": 0.9997387528419495
+      },
+      {
+        "word": " y",
+        "start": 55.86,
+        "end": 56.36,
+        "probability": 0.9764783382415771
+      }
+    ]
   },
   {
-    "start": 42.04,
-    "end": 47.18,
-    "text": "Y te lo tomas tíbio en agunas. Cada manana, sin fadar."
+    "start": 56.36,
+    "end": 63.08,
+    "text": "en cuanto te para si te mueves se va la cara se te va a ver descansada de una forma que te va a",
+    "words": [
+      {
+        "word": " en",
+        "start": 56.36,
+        "end": 56.48,
+        "probability": 0.9908439517021179
+      },
+      {
+        "word": " cuanto",
+        "start": 56.48,
+        "end": 56.64,
+        "probability": 0.9969323873519897
+      },
+      {
+        "word": " te",
+        "start": 56.64,
+        "end": 56.9,
+        "probability": 0.859861433506012
+      },
+      {
+        "word": " para",
+        "start": 56.9,
+        "end": 57.16,
+        "probability": 0.4062119126319885
+      },
+      {
+        "word": " si",
+        "start": 57.16,
+        "end": 57.36,
+        "probability": 0.8090358376502991
+      },
+      {
+        "word": " te",
+        "start": 57.36,
+        "end": 57.48,
+        "probability": 0.9943341016769409
+      },
+      {
+        "word": " mueves",
+        "start": 57.48,
+        "end": 57.82,
+        "probability": 0.9958733022212982
+      },
+      {
+        "word": " se",
+        "start": 57.82,
+        "end": 58.18,
+        "probability": 0.9649959206581116
+      },
+      {
+        "word": " va",
+        "start": 58.18,
+        "end": 58.36,
+        "probability": 0.9939138293266296
+      },
+      {
+        "word": " la",
+        "start": 58.36,
+        "end": 58.92,
+        "probability": 0.7830691337585449
+      },
+      {
+        "word": " cara",
+        "start": 58.92,
+        "end": 59.3,
+        "probability": 0.9980499744415283
+      },
+      {
+        "word": " se",
+        "start": 59.3,
+        "end": 59.7,
+        "probability": 0.997281551361084
+      },
+      {
+        "word": " te",
+        "start": 59.7,
+        "end": 59.86,
+        "probability": 0.9915030002593994
+      },
+      {
+        "word": " va",
+        "start": 59.86,
+        "end": 60.04,
+        "probability": 0.9982482194900513
+      },
+      {
+        "word": " a",
+        "start": 60.04,
+        "end": 60.1,
+        "probability": 0.9937717318534851
+      },
+      {
+        "word": " ver",
+        "start": 60.1,
+        "end": 60.34,
+        "probability": 0.9850078821182251
+      },
+      {
+        "word": " descansada",
+        "start": 60.34,
+        "end": 61.48,
+        "probability": 0.9931010802586874
+      },
+      {
+        "word": " de",
+        "start": 61.48,
+        "end": 61.76,
+        "probability": 0.9746109247207642
+      },
+      {
+        "word": " una",
+        "start": 61.76,
+        "end": 61.9,
+        "probability": 0.997437596321106
+      },
+      {
+        "word": " forma",
+        "start": 61.9,
+        "end": 62.26,
+        "probability": 0.9995653033256531
+      },
+      {
+        "word": " que",
+        "start": 62.26,
+        "end": 62.76,
+        "probability": 0.9970434308052063
+      },
+      {
+        "word": " te",
+        "start": 62.76,
+        "end": 62.88,
+        "probability": 0.9979629516601562
+      },
+      {
+        "word": " va",
+        "start": 62.88,
+        "end": 63.0,
+        "probability": 0.9964635968208313
+      },
+      {
+        "word": " a",
+        "start": 63.0,
+        "end": 63.08,
+        "probability": 0.9793186783790588
+      }
+    ]
   },
   {
-    "start": 47.18,
-    "end": 53.38,
-    "text": "Ocho hora sacostado, sin un trago de agua. El agua es tanca aquí, en la cara."
+    "start": 63.08,
+    "end": 69.62,
+    "text": "sorprender la gente te va a preguntar cuántas horas dormiste qué crema te pusiste cuál es tu secreto",
+    "words": [
+      {
+        "word": " sorprender",
+        "start": 63.08,
+        "end": 63.58,
+        "probability": 0.9952242573102316
+      },
+      {
+        "word": " la",
+        "start": 63.58,
+        "end": 63.78,
+        "probability": 0.9268457293510437
+      },
+      {
+        "word": " gente",
+        "start": 63.78,
+        "end": 63.96,
+        "probability": 0.9990886449813843
+      },
+      {
+        "word": " te",
+        "start": 63.96,
+        "end": 64.14,
+        "probability": 0.9968247413635254
+      },
+      {
+        "word": " va",
+        "start": 64.14,
+        "end": 64.24,
+        "probability": 0.9984155893325806
+      },
+      {
+        "word": " a",
+        "start": 64.24,
+        "end": 64.28,
+        "probability": 0.970069944858551
+      },
+      {
+        "word": " preguntar",
+        "start": 64.28,
+        "end": 64.9,
+        "probability": 0.9983036518096924
+      },
+      {
+        "word": " cuántas",
+        "start": 64.9,
+        "end": 65.7,
+        "probability": 0.8906047642230988
+      },
+      {
+        "word": " horas",
+        "start": 65.7,
+        "end": 65.94,
+        "probability": 0.9984525442123413
+      },
+      {
+        "word": " dormiste",
+        "start": 65.94,
+        "end": 66.7,
+        "probability": 0.9824415445327759
+      },
+      {
+        "word": " qué",
+        "start": 66.7,
+        "end": 67.1,
+        "probability": 0.6569193005561829
+      },
+      {
+        "word": " crema",
+        "start": 67.1,
+        "end": 67.46,
+        "probability": 0.9969967007637024
+      },
+      {
+        "word": " te",
+        "start": 67.46,
+        "end": 67.62,
+        "probability": 0.9899236559867859
+      },
+      {
+        "word": " pusiste",
+        "start": 67.62,
+        "end": 68.16,
+        "probability": 0.9967019855976105
+      },
+      {
+        "word": " cuál",
+        "start": 68.16,
+        "end": 68.62,
+        "probability": 0.9479960799217224
+      },
+      {
+        "word": " es",
+        "start": 68.62,
+        "end": 68.8,
+        "probability": 0.9985002279281616
+      },
+      {
+        "word": " tu",
+        "start": 68.8,
+        "end": 68.88,
+        "probability": 0.9636672735214233
+      },
+      {
+        "word": " secreto",
+        "start": 68.88,
+        "end": 69.62,
+        "probability": 0.9984824657440186
+      }
+    ]
   },
   {
-    "start": 53.38,
-    "end": 58.66,
-    "text": "Esto tíbio es lo primero que le llegal cuerpo. Y en cuanto que paras y te mueves se va."
+    "start": 69.62,
+    "end": 74.74,
+    "text": "no hiciste nada de eso nada más le diste al cuerpo lo que le faltaba a la hora que lo pedía y",
+    "words": [
+      {
+        "word": " no",
+        "start": 69.62,
+        "end": 70.0,
+        "probability": 0.9021456837654114
+      },
+      {
+        "word": " hiciste",
+        "start": 70.0,
+        "end": 70.28,
+        "probability": 0.9835414886474609
+      },
+      {
+        "word": " nada",
+        "start": 70.28,
+        "end": 70.44,
+        "probability": 0.9990345239639282
+      },
+      {
+        "word": " de",
+        "start": 70.44,
+        "end": 70.66,
+        "probability": 0.997873067855835
+      },
+      {
+        "word": " eso",
+        "start": 70.66,
+        "end": 70.86,
+        "probability": 0.993459165096283
+      },
+      {
+        "word": " nada",
+        "start": 70.86,
+        "end": 71.42,
+        "probability": 0.9882827401161194
+      },
+      {
+        "word": " más",
+        "start": 71.42,
+        "end": 71.6,
+        "probability": 0.9830473065376282
+      },
+      {
+        "word": " le",
+        "start": 71.6,
+        "end": 71.74,
+        "probability": 0.957503616809845
+      },
+      {
+        "word": " diste",
+        "start": 71.74,
+        "end": 71.9,
+        "probability": 0.9527590274810791
+      },
+      {
+        "word": " al",
+        "start": 71.9,
+        "end": 72.0,
+        "probability": 0.9260876178741455
+      },
+      {
+        "word": " cuerpo",
+        "start": 72.0,
+        "end": 72.2,
+        "probability": 0.9973166584968567
+      },
+      {
+        "word": " lo",
+        "start": 72.2,
+        "end": 72.36,
+        "probability": 0.9964379072189331
+      },
+      {
+        "word": " que",
+        "start": 72.36,
+        "end": 72.44,
+        "probability": 0.9982448816299438
+      },
+      {
+        "word": " le",
+        "start": 72.44,
+        "end": 72.54,
+        "probability": 0.9928440451622009
+      },
+      {
+        "word": " faltaba",
+        "start": 72.54,
+        "end": 72.98,
+        "probability": 0.9964207708835602
+      },
+      {
+        "word": " a",
+        "start": 72.98,
+        "end": 73.32,
+        "probability": 0.9678842425346375
+      },
+      {
+        "word": " la",
+        "start": 73.32,
+        "end": 73.38,
+        "probability": 0.9948086142539978
+      },
+      {
+        "word": " hora",
+        "start": 73.38,
+        "end": 73.48,
+        "probability": 0.9968222379684448
+      },
+      {
+        "word": " que",
+        "start": 73.48,
+        "end": 73.6,
+        "probability": 0.9973135590553284
+      },
+      {
+        "word": " lo",
+        "start": 73.6,
+        "end": 73.72,
+        "probability": 0.9803333878517151
+      },
+      {
+        "word": " pedía",
+        "start": 73.72,
+        "end": 74.02,
+        "probability": 0.9599638879299164
+      },
+      {
+        "word": " y",
+        "start": 74.02,
+        "end": 74.74,
+        "probability": 0.9914436936378479
+      }
+    ]
   },
   {
-    "start": 58.66,
-    "end": 63.6,
-    "text": "La cara se te va ver descansada. De una forma que te va sorprender."
+    "start": 74.74,
+    "end": 80.56,
+    "text": "eso nadie te lo dice comenta rutina y te mando mi rutina completa de la mañana la que le doy a mi",
+    "words": [
+      {
+        "word": " eso",
+        "start": 74.74,
+        "end": 74.96,
+        "probability": 0.12153245508670807
+      },
+      {
+        "word": " nadie",
+        "start": 74.96,
+        "end": 75.44,
+        "probability": 0.8598877787590027
+      },
+      {
+        "word": " te",
+        "start": 75.44,
+        "end": 75.64,
+        "probability": 0.9927170276641846
+      },
+      {
+        "word": " lo",
+        "start": 75.64,
+        "end": 75.72,
+        "probability": 0.9922047257423401
+      },
+      {
+        "word": " dice",
+        "start": 75.72,
+        "end": 75.94,
+        "probability": 0.9961022138595581
+      },
+      {
+        "word": " comenta",
+        "start": 75.94,
+        "end": 76.56,
+        "probability": 0.5735161751508713
+      },
+      {
+        "word": " rutina",
+        "start": 76.56,
+        "end": 77.1,
+        "probability": 0.9908388555049896
+      },
+      {
+        "word": " y",
+        "start": 77.1,
+        "end": 77.3,
+        "probability": 0.9938740134239197
+      },
+      {
+        "word": " te",
+        "start": 77.3,
+        "end": 77.44,
+        "probability": 0.9831336140632629
+      },
+      {
+        "word": " mando",
+        "start": 77.44,
+        "end": 77.76,
+        "probability": 0.9901954531669617
+      },
+      {
+        "word": " mi",
+        "start": 77.76,
+        "end": 77.9,
+        "probability": 0.9924370646476746
+      },
+      {
+        "word": " rutina",
+        "start": 77.9,
+        "end": 78.32,
+        "probability": 0.9962948560714722
+      },
+      {
+        "word": " completa",
+        "start": 78.32,
+        "end": 78.82,
+        "probability": 0.9968869090080261
+      },
+      {
+        "word": " de",
+        "start": 78.82,
+        "end": 79.08,
+        "probability": 0.997637152671814
+      },
+      {
+        "word": " la",
+        "start": 79.08,
+        "end": 79.18,
+        "probability": 0.9972087740898132
+      },
+      {
+        "word": " mañana",
+        "start": 79.18,
+        "end": 79.56,
+        "probability": 0.9962095022201538
+      },
+      {
+        "word": " la",
+        "start": 79.56,
+        "end": 79.86,
+        "probability": 0.9034100770950317
+      },
+      {
+        "word": " que",
+        "start": 79.86,
+        "end": 80.02,
+        "probability": 0.9974963068962097
+      },
+      {
+        "word": " le",
+        "start": 80.02,
+        "end": 80.16,
+        "probability": 0.99126136302948
+      },
+      {
+        "word": " doy",
+        "start": 80.16,
+        "end": 80.4,
+        "probability": 0.9489070177078247
+      },
+      {
+        "word": " a",
+        "start": 80.4,
+        "end": 80.44,
+        "probability": 0.9971737861633301
+      },
+      {
+        "word": " mi",
+        "start": 80.44,
+        "end": 80.56,
+        "probability": 0.9893159866333008
+      }
+    ]
   },
   {
-    "start": 63.6,
-    "end": 68.4,
-    "text": "La gente te va preguntar, cuantas horas dormiste que crema te pusiste."
-  },
-  {
-    "start": 68.4,
-    "end": 69.66,
-    "text": "Cuáles tus ecreto."
-  },
-  {
-    "start": 69.66,
-    "end": 74.46,
-    "text": "Nue siste nada de eso. Nada mada de distel cuerpo lo que le fal tada, a la cuerpo el pería."
-  },
-  {
-    "start": 74.46,
-    "end": 76.14,
-    "text": "Y eso, nadie te los dice."
-  },
-  {
-    "start": 76.14,
-    "end": 81.38,
-    "text": "Comenta rutina y te mando mi rutina completa de la manana, la que le doja mi gente."
-  },
-  {
-    "start": 81.38,
-    "end": 83.94,
-    "text": "Pero sí, geme. Sí, no? No te puede escribir."
+    "start": 80.56,
+    "end": 83.66,
+    "text": "gente pero sígueme si no no te puedo escribir",
+    "words": [
+      {
+        "word": " gente",
+        "start": 80.56,
+        "end": 80.9,
+        "probability": 0.9891202449798584
+      },
+      {
+        "word": " pero",
+        "start": 80.9,
+        "end": 81.66,
+        "probability": 0.897146999835968
+      },
+      {
+        "word": " sígueme",
+        "start": 81.66,
+        "end": 82.14,
+        "probability": 0.952037513256073
+      },
+      {
+        "word": " si",
+        "start": 82.14,
+        "end": 82.42,
+        "probability": 0.6837624907493591
+      },
+      {
+        "word": " no",
+        "start": 82.42,
+        "end": 82.62,
+        "probability": 0.9985264539718628
+      },
+      {
+        "word": " no",
+        "start": 82.62,
+        "end": 82.98,
+        "probability": 0.9546905159950256
+      },
+      {
+        "word": " te",
+        "start": 82.98,
+        "end": 83.1,
+        "probability": 0.995010256767273
+      },
+      {
+        "word": " puedo",
+        "start": 83.1,
+        "end": 83.26,
+        "probability": 0.9182630181312561
+      },
+      {
+        "word": " escribir",
+        "start": 83.26,
+        "end": 83.66,
+        "probability": 0.9943715035915375
+      }
+    ]
   }
 ]

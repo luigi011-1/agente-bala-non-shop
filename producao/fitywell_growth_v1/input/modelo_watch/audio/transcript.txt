@@ -1,17 +1,12 @@
-[  0.000 ->   7.840] Citelevantas, con los ojos, así, y los quieres así, con la cara enchada, así, y la quieres así,
-[  7.840 ->  12.720] y los dedos tan enchados, que la nío no pasa, y los quieres así, pon me attention,
-[ 12.720 ->  18.700] porque esto nadie mas de lo vadécir. Esto no es la idad, no es que dormistemal.
-[ 18.700 ->  25.260] Te vana decir que duermas mas y que te pongas cremas, pero nada de eso toca la casa.
-[ 25.260 ->  30.040] Tenseño lo que sí funciona. En una holla, con dos tasas de agua,
-[ 30.040 ->  35.960] con es una cucharadita de jenjibre y una pisca de pimenta negra.
-[ 35.960 ->  42.040] L'exprimes el hugo de medio limón. Loy eres días minutos.
-[ 42.040 ->  47.180] Y te lo tomas tíbio en agunas. Cada manana, sin fadar.
-[ 47.180 ->  53.380] Ocho hora sacostado, sin un trago de agua. El agua es tanca aquí, en la cara.
-[ 53.380 ->  58.660] Esto tíbio es lo primero que le llegal cuerpo. Y en cuanto que paras y te mueves se va.
-[ 58.660 ->  63.600] La cara se te va ver descansada. De una forma que te va sorprender.
-[ 63.600 ->  68.400] La gente te va preguntar, cuantas horas dormiste que crema te pusiste.
-[ 68.400 ->  69.660] Cuáles tus ecreto.
-[ 69.660 ->  74.460] Nue siste nada de eso. Nada mada de distel cuerpo lo que le fal tada, a la cuerpo el pería.
-[ 74.460 ->  76.140] Y eso, nadie te los dice.
-[ 76.140 ->  81.380] Comenta rutina y te mando mi rutina completa de la manana, la que le doja mi gente.
-[ 81.380 ->  83.940] Pero sí, geme. Sí, no? No te puede escribir.
+[  0.000 ->   8.360] Si te levantas con los ojos así y los quieres así con la cara hinchada así y la quieres así y los dedos
+[  8.360 ->  15.560] tan hinchados que el anillo no pasa y los quieres así ponme atención porque esto nadie más te lo va
+[ 15.560 ->  21.680] a decir esto no es la edad no es que dormiste mal te van a decir que duermas más y que te pongas
+[ 21.680 ->  29.820] cremas pero nada de eso toca la causa te enseño lo que sí funciona en una olla con dos tazas de agua
+[ 29.820 ->  39.100] pones una cucharadita de jengibre y una pizca de pimienta negra le exprimes el jugo de medio limón
+[ 39.100 ->  49.200] lo hierves 10 minutos y te lo tomas tibio en ayunas cada mañana sin fallar 8 horas acostado sin un
+[ 49.200 ->  56.360] trago de agua el agua se estanca aquí en la cara esto tibio es lo primero que le llega al cuerpo y
+[ 56.360 ->  63.080] en cuanto te para si te mueves se va la cara se te va a ver descansada de una forma que te va a
+[ 63.080 ->  69.620] sorprender la gente te va a preguntar cuántas horas dormiste qué crema te pusiste cuál es tu secreto
+[ 69.620 ->  74.740] no hiciste nada de eso nada más le diste al cuerpo lo que le faltaba a la hora que lo pedía y
+[ 74.740 ->  80.560] eso nadie te lo dice comenta rutina y te mando mi rutina completa de la mañana la que le doy a mi
+[ 80.560 ->  83.660] gente pero sígueme si no no te puedo escribir

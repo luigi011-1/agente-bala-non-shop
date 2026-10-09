@@ -203,9 +203,9 @@ Um setup por take (um take por cena do modelo, sem juntar cenas; `K__` = `T__`).
 
 ### T24 · TALKING · Setup T24
 
-> "didn't do any of that. You just gave your body what it was missing, when it needed it. Nobody tells you that."
+> "didn't do any of that. You just gave your body what it was missing, when it needed it. That's the part you never hear."
 
-22 palavras, cena do modelo de 69.7 a 76.1s (6.4s).
+23 palavras, cena do modelo de 69.7 a 76.1s (6.4s).
 
 ### T25 · TALKING · Setup T25
 
@@ -215,7 +215,7 @@ Um setup por take (um take por cena do modelo, sem juntar cenas; `K__` = `T__`).
 
 ## Roteiro só-fala
 
-If you wake up with eyes swollen like this, and want them like this, or a face swollen like this, and want it like this, or fingers so swollen your ring won't go on, and want them like this? Stay with me, because you won't hear this from the cream aisle. It's not your age, it's not bad sleep, They'll tell you to sleep more and buy another cream, but none of that touches the cause. Let me show you what works. Take a pot, two cups of water, add a handful of fresh parsley and a teaspoon of fennel seeds, squeeze in half a lemon, simmer it for ten minutes, and drink it warm, first thing, before you eat, every morning, no skipping. Eight hours lying down without one sip of water, so the water gets stuck right here in your face. This warm drink is the first thing your body gets, and once you stand up and move, it drains. Your face is going to look so rested, in a way that's going to surprise you. People will ask how many hours you slept, what cream you used, what your secret is. And you didn't do any of that. You just gave your body what it was missing, when it needed it. Nobody tells you that. My full morning routine, the one I give my clients, is in the link in the caption. Follow me so the next one finds you.
+If you wake up with eyes swollen like this, and want them like this, or a face swollen like this, and want it like this, or fingers so swollen your ring won't go on, and want them like this? Stay with me, because you won't hear this from the cream aisle. It's not your age, it's not bad sleep, They'll tell you to sleep more and buy another cream, but none of that touches the cause. Let me show you what works. Take a pot, two cups of water, add a handful of fresh parsley and a teaspoon of fennel seeds, squeeze in half a lemon, simmer it for ten minutes, and drink it warm, first thing, before you eat, every morning, no skipping. Eight hours lying down without one sip of water, so the water gets stuck right here in your face. This warm drink is the first thing your body gets, and once you stand up and move, it drains. Your face is going to look so rested, in a way that's going to surprise you. People will ask how many hours you slept, what cream you used, what your secret is. And you didn't do any of that. You just gave your body what it was missing, when it needed it. That's the part you never hear. My full morning routine, the one I give my clients, is in the link in the caption. Follow me so the next one finds you.
 
 ## Tabela bilíngue
 
@@ -244,7 +244,7 @@ If you wake up with eyes swollen like this, and want them like this, or a face s
 | T21 | Your face is going to look so rested, in a | Seu rosto vai parecer tão descansado, de um |
 | T22 | way that's going to surprise you. | jeito que vai te surpreender. |
 | T23 | People will ask how many hours you slept, what cream you used, what your secret is. And you | As pessoas vão perguntar quantas horas você dormiu, que creme usou, qual é o seu segredo. E você |
-| T24 | didn't do any of that. You just gave your body what it was missing, when it needed it. Nobody tells you that. | não fez nada disso. Só deu ao corpo o que faltava, na hora em que ele precisava. Ninguém te conta isso. |
+| T24 | didn't do any of that. You just gave your body what it was missing, when it needed it. That's the part you never hear. | não fez nada disso. Só deu ao corpo o que faltava, na hora em que ele precisava. Essa é a parte que você nunca ouve. |
 | T25 | My full morning routine, the one I give my clients, is in the link in the caption. Follow me so the next one finds you. | A minha rotina completa da manhã, a que eu passo para as minhas clientes, está no link da legenda. Me segue para o próximo vídeo te achar. |
 
 ## Contagem de palavras
@@ -274,7 +274,7 @@ If you wake up with eyes swollen like this, and want them like this, or a face s
 | T21 | 10 | CENA CURTA (2.8s no modelo) |
 | T22 | 6 | CENA CURTA (2.1s no modelo) |
 | T23 | 18 | ok |
-| T24 | 22 | ok |
+| T24 | 23 | ok |
 | T25 | 25 | ok |
 
 ## Notas de produção
