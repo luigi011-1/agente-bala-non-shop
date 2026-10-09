@@ -25,7 +25,9 @@ legenda por decisao do Luigi em 2026-10-02: o link do comentario fixado nao fica
 (3) sem antes/depois, sem medico/jaleco/clinica, sem cura ou resultado garantido, sem remedio nem
 concorrente. O linter cobra as tres quando a producao cita Natural Rems ou Sea Moss.
 
-Ferramentas de apoio: `controle/README.md`. Biblioteca e resultados nao substituem o workflow.
+Ferramentas de apoio: `controle/README.md`. Pós-produção (edição de takes, anúncio animado de app,
+manifesto/imóvel em HyperFrames): skills `edicao`, `anuncio-app`, `manifesto` e `docs/pos-producao-casos.md`;
+não alteram copy, ângulo nem workflow. Biblioteca e resultados nao substituem o workflow.
 **Gate visual transversal (2026-09-22): `GATE_VISUAL.md`** e a fonte unica de realismo anti cara de
 IA, composicao do heroi e checklist de gancho visual nos tres angulos. Os gates de realismo e de
 composicao citados abaixo apontam para ele.

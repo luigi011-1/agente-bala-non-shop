@@ -1,0 +1,26 @@
+{
+  "voice_note": "Cada cena vira uma fala separada na locução. *palavra* = destaque laranja. 'say' substitui o texto falado quando a pronúncia precisa de ajuda.",
+  "scenes": [
+    { "id": "s01", "theme": "light", "text": "Durante muito tempo, gerir obra era *planilha*,", "prop": "tile", "icon": "sheet" },
+    { "id": "s02", "theme": "light", "text": "grupo de *WhatsApp*", "prop": "chat" },
+    { "id": "s03", "theme": "light", "text": "e *memória*.", "prop": "tile", "icon": "note" },
+    { "id": "s04", "theme": "dark", "text": "Mas a obra *cresceu*.", "prop": "helmets" },
+    { "id": "s05", "theme": "dark", "text": "E o *prejuízo* passou a chegar sem avisar.", "prop": "margin" },
+    { "id": "s06", "theme": "dark", "text": "Foi pra isso que nasceu o *ObraUp*.", "say": "Foi pra isso que nasceu o Obra Up.", "prop": "logo" },
+    { "id": "s07", "theme": "light", "text": "Mais *controle*,", "prop": "tile", "icon": "calendar" },
+    { "id": "s08", "theme": "light", "text": "mais *margem*", "prop": "tile", "icon": "trend" },
+    { "id": "s09", "theme": "light", "text": "e uma obra que o cliente *vê*.", "prop": "tile", "icon": "eye" },
+    { "id": "s10", "theme": "dark", "text": "Aqui, gestão *não é* só lançar gasto.", "prop": "receipt" },
+    { "id": "s11", "theme": "light", "text": "É *saber* quanto cada obra te dá de lucro.", "prop": "bars" },
+    { "id": "s12", "theme": "dark", "text": "Orçamento, *cronograma*, diário de obra, cotações, *estoque*, equipe e financeiro.", "prop": "modules" },
+    { "id": "s13", "theme": "light", "text": "Do *canteiro* ao *escritório*.", "prop": "bridge" },
+    { "id": "s14", "theme": "dark", "text": "Com a *UpIA*, você descreve e ela *organiza*.", "say": "Com a Up I A, você descreve e ela organiza.", "prop": "upia" },
+    { "id": "s15", "theme": "light", "text": "Compare *fornecedores* lado a lado,", "prop": "compare" },
+    { "id": "s16", "theme": "light", "text": "e o diário de obra chega ao cliente pelo *WhatsApp*.", "prop": "rdo" },
+    { "id": "s17", "theme": "dark", "text": "Porque obra *não se gere* no improviso.", "prop": "nochaos" },
+    { "id": "s18", "theme": "light", "text": "A gente acredita em *dado*, *prazo* e decisão *na hora certa*.", "prop": "checklist" },
+    { "id": "s19", "theme": "dark", "text": "Feito por quem é *engenheiro civil* e já viveu o problema.", "prop": "tile", "icon": "ruler" },
+    { "id": "s20", "theme": "dark", "text": "ObraUp. Pare de perder *margem* sem perceber.", "say": "Obra Up. Pare de perder margem sem perceber.", "prop": "final" },
+    { "id": "s21", "theme": "light", "text": "Fale com a gente no *WhatsApp*. Demo de 20 minutos.", "say": "Fale com a gente no WhatsApp. Demo de vinte minutos.", "prop": "cta" }
+  ]
+}
