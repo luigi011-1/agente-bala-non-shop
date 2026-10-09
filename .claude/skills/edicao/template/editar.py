@@ -137,6 +137,12 @@ def segmentos(takes, words, ramp):
 def um_trecho(arg):
     i, s, src, tmp = arg
     out = f"{tmp}/seg{i:03d}.mkv"
+    fixo = f"{tmp}/segf{i:03d}.mkv"
+    chave = json.dumps([s.get("a"), s.get("b"), s.get("sp"), s.get("mute"), src, FPS, W, H])
+    if os.path.exists(fixo) and os.path.exists(f"{fixo}.key") and open(f"{fixo}.key").read() == chave:
+        # rodada repetida na mesma pasta de trabalho: reaproveita o trecho já montado
+        return fixo, int(sh(["ffprobe", "-v", "error", "-count_packets", "-select_streams", "v:0", "-show_entries",
+                             "stream=nb_read_packets", "-of", "csv=p=0", fixo]).strip())
     v = (f"[0:v]trim=start={s['a']:.3f}:end={s['b']:.3f},setpts=(PTS-STARTPTS)/{s['sp']},"
          f"minterpolate=fps={FPS}:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1:scd=none,"
          f"scale={W}:{H}:flags=lanczos,setsar=1,"
@@ -154,9 +160,9 @@ def um_trecho(arg):
     # áudio do trecho com a duração exata do vídeo do trecho (quadros inteiros): sem deriva de lábio ao juntar
     n = int(sh(["ffprobe", "-v", "error", "-count_packets", "-select_streams", "v:0", "-show_entries",
                 "stream=nb_read_packets", "-of", "csv=p=0", out]).strip())
-    fixo = f"{tmp}/segf{i:03d}.mkv"
     sh(["ffmpeg", "-y", "-loglevel", "error", "-i", out, "-c:v", "copy", "-af", f"apad,atrim=end={n / FPS:.6f}",
         "-c:a", "pcm_s16le", fixo])
+    open(f"{fixo}.key", "w").write(chave)
     return fixo, n
 
 def montar_base(segs, src, tmp):
@@ -174,11 +180,36 @@ def montar_base(segs, src, tmp):
 
 
 # ---------- 5. legenda, leak, música ----------
+def alinhar(heard, roteiro_palavras, max_dif=0.08):
+    """Tempo de cada palavra do roteiro a partir do que o whisper ouviu, mesmo com contagem diferente
+    ("gut-friendly" ouvido como "gut friendly", palavra engolida). None se divergir demais."""
+    h = [" ".join(norm(w)) for w, _, _ in heard]; r = [" ".join(norm(w)) for w in roteiro_palavras]
+    ops = difflib.SequenceMatcher(None, h, r, autojunk=False).get_opcodes()
+    dif = sum(max(i2 - i1, j2 - j1) for op, i1, i2, j1, j2 in ops if op != "equal")
+    if dif > max_dif * max(len(r), 1):
+        return None
+    t = [None] * len(r)
+    for op, i1, i2, j1, j2 in ops:
+        if op == "equal":
+            for d in range(j2 - j1): t[j1 + d] = heard[i1 + d][1]
+        elif op == "replace" or op == "insert":
+            a = heard[i1][1] if i1 < len(heard) else (heard[-1][2] if heard else 0.0)
+            b = heard[i2 - 1][2] if op == "replace" else a
+            for d in range(j2 - j1): t[j1 + d] = a + (b - a) * d / max(j2 - j1, 1)
+    for i in range(1, len(t)):  # nunca volta no tempo
+        t[i] = max(t[i], t[i - 1])
+    return t
+
+
 def legenda_html(segs, heard, roteiro_palavras, total, leaks, up):
     def seg_at(t):
         return next((s for s in segs if s["o"] <= t < s["o"] + s["d"]), segs[-1])
-    usa_roteiro = len(heard) == len(roteiro_palavras)
-    ws = [dict(w=roteiro_palavras[i] if usa_roteiro else w, t=a, k=seg_at(a + 0.05)["k"]) for i, (w, a, _) in enumerate(heard)]
+    tempos = alinhar(heard, roteiro_palavras)
+    usa_roteiro = tempos is not None
+    if usa_roteiro:
+        ws = [dict(w=w, t=a, k=seg_at(a + 0.05)["k"]) for w, a in zip(roteiro_palavras, tempos)]
+    else:
+        ws = [dict(w=w, t=a, k=seg_at(a + 0.05)["k"]) for w, a, _ in heard]
     pages, cur = [], []
     for i, w in enumerate(ws):
         cur.append(w); nx = ws[i + 1] if i + 1 < len(ws) else None
@@ -356,8 +387,10 @@ def main():
     nerr = re.search(r"(\d+) error", lint)
     sh(f"npx -y hyperframes@0.8.143 render . -o renders/final.mp4 --quality high --quiet", cwd=tmp)
     saida = f"{tmp}/{nome}_editado.mp4"
-    sh(["ffmpeg", "-loglevel", "error", "-y", "-i", f"{tmp}/renders/final.mp4", "-c:v", "libx264", "-crf", "19", "-preset", "slow",
-        "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-c:a", "aac", "-b:a", "192k", saida])
+    for crf in (19, 22, 24, 25, 26, 28):  # sobe o crf até caber na cópia para o Mac (limite de 25 MB)
+        sh(["ffmpeg", "-loglevel", "error", "-y", "-i", f"{tmp}/renders/final.mp4", "-c:v", "libx264", "-crf", str(crf), "-preset", "slow",
+            "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-c:a", "aac", "-b:a", "192k", saida])
+        if os.path.getsize(saida) < 24.5e6: break
 
     log("7/7 conferências")
     cortes = [s["o"] for s in segs[1:]]
@@ -371,7 +404,7 @@ def main():
         "Sem silêncio fora da rampa": not sil,
         "Sem quadro fantasma nos cortes": not fant,
         "Legenda com o texto do roteiro (contagem bateu)": usa_rot,
-        "Arquivo abaixo de 30 MB": mb < 30,
+        "Arquivo abaixo de 25 MB": mb < 25,
     }
     rel += [f"- {k}: {'OK' if v else 'FALHA'}" for k, v in ok.items()]
     if sil: rel.append(f"  - silêncios: {sil}")
