@@ -21,6 +21,13 @@ Funil: growth, post orgânico. CTA para o link da legenda + follow (regra de 202
 | 6 | Resultado em 30 dias | literal | literal |
 | 7 | Fecho + CTA comenta + follow | `comment glow` | link da legenda + follow |
 
+## Setups de cena
+
+- **Setup A (T1):** cabeça-manequim coberta de açúcar mascavo e mel na mesa preta, colada na lente; ela despeja mel de um béquer.
+- **Setup B (T2):** atrás da mesa, copo vazio em primeiro plano, gengibre fresco erguido na mão.
+- **Setup C (T3, T4):** macros das mãos na mesa preta: colher de cúrcuma sobre o copo; dois paus de canela na panela de vidro.
+- **Setup D (T5, T6, T7):** ela de peito pra cima: copo âmbar na mão (T5), mão na bochecha (T6), mais próxima com mão aberta (T7).
+
 ## Roteiro cena a cena
 
 | Take | English | Português |
@@ -38,3 +45,10 @@ Palavras por take: 16 · 5 · 4 · 3 · 9 · 18 · 20 (takes curtos marcam CENA 
 ## Roteiro só-fala (inglês)
 
 This is what sugar is doing to your face, and nobody around you is telling you this. One piece of fresh ginger, one teaspoon of turmeric, two cinnamon sticks. Boil them together, and drink it warm every morning. In 30 days, your face changes. The puffiness lifts, the dull skin brightens, the lines that are deepening start to soften. My full glow protocol is in the link in my caption. Follow me so it reaches you.
+
+## Notas de produção
+
+- Duração estimada ~21s, igual ao modelo. T3 e T4 são macros mudos com voz-over na edição.
+- Herói do gancho: cabeça-manequim coberta de açúcar e mel colada na lente (cena 0 a 4,4s do modelo).
+- Compliance: growth, sem produto e sem tela de app. Promessas de "30 dias" vêm literais do modelo; o claim mais arriscado é "your face changes" (efeito em 30 dias).
+- Se ficar longo, cortar T4 (macro da canela) mantendo a fala em voz-over no T3.
