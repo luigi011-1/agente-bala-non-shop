@@ -5,7 +5,9 @@ description: Edição dopaminérgica de takes já gravados ou gerados (Veo/Flow)
 
 # Edição dopaminérgica
 
-> 🔴 **Antes de editar, ler `docs/pos-producao-edicao-regras.md`** (acertos e erros do 1º teste aprovado,
+> 🔴 **Vale para TODOS os ângulos** (Sea Moss, FitWell, Auraly, Body Hacks e os próximos; venda e growth;
+> Luigi, 2026-10-09). A ordem dos takes vem da fala, não do nome do arquivo.
+> **Antes de editar, ler `docs/pos-producao-edicao-regras.md`** (acertos e erros do 1º teste aprovado,
 > 2026-10-09). Os 22 itens são regra fixa, e as conferências 17 a 20 bloqueiam a entrega. Use o
 > comando único `python3 template/editar.py <pasta_dos_takes>` (estilo v3, paralelo, roteiro achado
 > sozinho, música a -25 dB, conferências automáticas e `RELATORIO.md`). Entregue só com tudo OK e

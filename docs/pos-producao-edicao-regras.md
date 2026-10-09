@@ -1,7 +1,8 @@
 # Edição de takes do Flow: regras fixas (acertos e erros)
 
 Fonte: 1º teste nosso, FitWell growth v2 chá glow, 2026-10-09 (caso 31 em `pos-producao-casos.md`),
-aprovado pelo Luigi ("o resultado me agradou muito"). Vale para TODA edição com a skill `edicao`.
+aprovado pelo Luigi ("o resultado me agradou muito"). Vale para TODA edição, em **todos os ângulos**
+(Sea Moss, FitWell, Auraly, Body Hacks e os próximos; venda e growth).
 O estilo aprovado é o v3. **Desde 2026-10-09 ele roda num comando só**, que cumpre e confere estes
 itens sozinho: `python3 .claude/skills/edicao/template/editar.py <pasta_dos_takes>` (ver o fim deste
 arquivo). Nenhum item aqui é opcional.
@@ -88,7 +89,10 @@ python3 .claude/skills/edicao/template/editar.py <pasta_dos_takes> [--producao <
    trechos são juntados sem recodificar. Mesmo filtro do v3, trecho a trecho. O minterpolate engole
    os últimos quadros de cada trecho: o script completa clonando o último quadro e numera os quadros
    de novo, e o áudio do trecho fica com a duração exata do vídeo (sem deriva de lábio).
-3. **Roteiro achado sozinho**: compara a fala dos takes com todas as falas entre aspas dos `.md` de
+3. **Roteiro e ORDEM achados pela fala**: a ordem dos takes é a ordem das frases no roteiro, não o
+   nome do arquivo (qualquer nome serve; o relatório avisa quando o nome discorda). Take mudo precisa
+   do número no nome; frase repetida em dois takes gera aviso. O roteiro sai da comparação da fala
+   dos takes com todas as falas entre aspas dos `.md` de
    `producao/` e de `/mnt/project-files/entregas/`. Abaixo de 85% de semelhança, para e pede `--producao`.
 4. **Quadro fantasma automático**: em cada corte, um quadro parecido com os DOIS vizinhos de uma troca
    de cena reprova. Testado: acha o erro do caso 31 e passa a versão aprovada.

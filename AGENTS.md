@@ -113,6 +113,23 @@ palavra, sem diarizacao por padrao. A extracao do /watch nao substitui ver os fr
 Crawlee coleta paginas publicas IG/FB limitadas e distingue filtros confirmados, desconhecidos
 e bloqueios. Nem idioma nem primeira postagem provam pais ou criacao do perfil.
 
+## Edicao dos takes (pos-producao), TODOS os angulos (Luigi, 2026-10-09)
+
+O processo de edicao vale para Sea Moss, FitWell, Auraly, Body Hacks e qualquer angulo novo, venda
+ou growth. Quando o Luigi manda a pasta com os takes do Flow, rodar o comando unico:
+`python3 .claude/skills/edicao/template/editar.py <pasta_dos_takes>`.
+- Regras fixas e porques: `docs/pos-producao-edicao-regras.md` (aprovado no 1o teste, caso 31 em
+  `docs/pos-producao-casos.md`). Skill: `.claude/skills/edicao/SKILL.md`.
+- A ORDEM dos takes vem da fala de cada um comparada com o roteiro da producao, nao do nome do
+  arquivo. Take mudo (sem fala) precisa do numero no nome. Frase repetida em dois takes gera aviso.
+- Estilo v3: sem silencio, fala 1,12x, legenda serifada branca no centro com o texto do roteiro,
+  light leak em 2 trocas, take-heroi com pausa acelerada em vez de cortada.
+- Musica SEMPRE 25 dB abaixo da voz (Luigi; -10 dB atrapalhou a fala). Faixas dele em
+  `/mnt/project-files/edicao/musicas/`, fora do repo.
+- Entrega so com `RELATORIO.md` todo OK e depois de olhar `cortes.png` e `legendas.png`: anexado na
+  thread e gravado na pasta dos takes do Luigi, < 30 MB. Video nunca entra no repo.
+- Roteiro de Jordan em espanhol: o comando hoje transcreve em ingles (`small.en`); adaptar antes de usar.
+
 ## Regras de trabalho do projeto (espelho do projeto Claude, 2026-10-06)
 
 Estas regras vieram do projeto no claude.ai (instrucoes + memoria do projeto) e valem para o Codex

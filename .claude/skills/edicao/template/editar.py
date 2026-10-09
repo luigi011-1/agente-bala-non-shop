@@ -49,6 +49,8 @@ def log(msg):
 _modelo = None
 def palavras(f):
     global _modelo
+    if not sh(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=index", "-of", "csv=p=0", f]).strip():
+        return []  # sem trilha de áudio: take mudo
     if _modelo is None:
         from faster_whisper import WhisperModel
         _modelo = WhisperModel("small.en", device="cpu", compute_type="int8")
@@ -78,7 +80,7 @@ def parecido(a, b):
     return difflib.SequenceMatcher(None, norm(a), norm(b)).ratio()
 
 def achar_roteiro(ditos, forcada=None):
-    """ditos: {take: texto ouvido}. Devolve (pasta, arquivo, {take: fala}, nota)."""
+    """ditos: {take: texto ouvido} (só takes com fala). Devolve (pasta, arquivo, {take: fala}, nota, linhas)."""
     melhor = None
     for pasta, arqs in falas_por_producao().items():
         if forcada and os.path.basename(pasta.rstrip("/")) != forcada and pasta != forcada:
@@ -87,7 +89,7 @@ def achar_roteiro(ditos, forcada=None):
             esc = {k: max(linhas, key=lambda l: parecido(t, l)) for k, t in ditos.items()}
             nota = sum(parecido(ditos[k], esc[k]) for k in ditos) / len(ditos)
             if not melhor or nota > melhor[3]:
-                melhor = (pasta, arq, esc, nota)
+                melhor = (pasta, arq, esc, nota, list(dict.fromkeys(linhas)))
     return melhor
 
 
@@ -120,11 +122,13 @@ def ilhas(f, ws):
 def segmentos(takes, words, ramp):
     segs = []
     for k, f in takes:
-        sp = ilhas(f, words[k])
+        sp = ilhas(f, words[k]) if words[k] else [[0.0, dur(f)]]  # take mudo (insert) entra inteiro
         for j, (a, b) in enumerate(sp):
             segs.append(dict(k=k, a=a, b=b, sp=SP))
             if k in ramp and j + 1 < len(sp) and sp[j + 1][0] > b:
                 segs.append(dict(k=k, a=b, b=sp[j + 1][0], sp=ramp[k], mute=True))
+        if not words[k]:
+            segs[-1]["mute"] = True
     o = 0.0
     for s in segs:
         s["o"] = o; s["d"] = (s["b"] - s["a"]) / s["sp"]; o += s["d"]
@@ -268,21 +272,49 @@ def main():
     ap.add_argument("--nota-minima", type=float, default=0.85)
     a = ap.parse_args()
     t0 = time.time(); rel = []
-    takes = sorted((int(m.group(1)), os.path.abspath(f)) for f in glob.glob(f"{a.pasta}/*.mp4")
-                   if (m := re.match(r"t(\d+)\.mp4$", os.path.basename(f))))
-    if not takes: sys.exit("Nenhum tNN.mp4 na pasta")
+    # qualquer nome de arquivo serve: a ORDEM vem da fala comparada com o roteiro (passo 2)
+    arquivos = sorted(os.path.abspath(f) for f in glob.glob(f"{a.pasta}/*.mp4") if "_editado" not in os.path.basename(f))
+    if not arquivos: sys.exit("Nenhum .mp4 na pasta")
+    def numero(f):
+        m = re.search(r"(\d+)", os.path.splitext(os.path.basename(f))[0])
+        return int(m.group(1)) if m else None
     nome = a.nome or os.path.basename(os.path.abspath(a.pasta).rstrip("/"))
     tmp = a.trabalho or f"/tmp/edicao/{nome}"
     os.makedirs(f"{tmp}/assets", exist_ok=True); shutil.copytree(os.path.join(AQUI, "fonts"), f"{tmp}/fonts", dirs_exist_ok=True)
 
-    log(f"1/7 transcrevendo {len(takes)} takes")
-    words = {k: palavras(f) for k, f in takes}
-    ditos = {k: " ".join(w for w, _, _ in words[k]) for k in words}
+    log(f"1/7 transcrevendo {len(arquivos)} takes")
+    w_arq = {f: palavras(f) for f in arquivos}
+    d_arq = {f: " ".join(w for w, _, _ in w_arq[f]) for f in arquivos}
+    falantes = {f: t for f, t in d_arq.items() if len(norm(t)) >= 2}
+    if not falantes: sys.exit("Nenhum take com fala")
 
-    log("2/7 achando o roteiro")
-    achado = achar_roteiro(ditos, a.producao)
+    log("2/7 achando o roteiro e a ordem dos takes pela fala")
+    achado = achar_roteiro(falantes, a.producao)
     if not achado: sys.exit("Nenhum roteiro encontrado")
-    pasta, arq, falas, nota = achado
+    pasta, arq, falas_arq, nota, linhas = achado
+    # posição de cada take = posição da frase dele no roteiro; mudo usa o número do nome do arquivo
+    pos = {f: linhas.index(falas_arq[f]) + 1 for f in falantes}
+    avisos = []
+    repetidas = {p for p in pos.values() if list(pos.values()).count(p) > 1}
+    if repetidas:
+        avisos.append("Dois takes com a mesma frase do roteiro: " + ", ".join(
+            os.path.basename(f) for f in pos if pos[f] in repetidas) + " (desempate pelo nome do arquivo)")
+    for f in arquivos:
+        if f not in falantes:
+            if numero(f) is None:
+                sys.exit(f"Take mudo sem número no nome: {os.path.basename(f)}. Renomeie com a posição (ex.: t03.mp4).")
+            pos[f] = numero(f) - 0.5  # mudo entra antes do take falado de mesmo número
+            avisos.append(f"{os.path.basename(f)} é mudo: posição pelo nome ({numero(f)}), conferir no cortes.png")
+    ordem = sorted(arquivos, key=lambda f: (pos[f], numero(f) or 0, f))
+    for i, f in enumerate(ordem, 1):
+        if f in falantes and numero(f) is not None and numero(f) != i:
+            avisos.append(f"{os.path.basename(f)} foi para a posição {i} pela fala (o nome dizia {numero(f)})")
+    takes = [(i, f) for i, f in enumerate(ordem, 1)]
+    words = {i: w_arq[f] for i, f in takes}
+    ditos = {i: d_arq[f] for i, f in takes}
+    falas = {i: falas_arq[f] for i, f in takes if f in falantes}
+    rel.append("- Ordem dos takes (pela fala): " + " → ".join(f"{i}. {os.path.basename(f)}" for i, f in takes))
+    rel += [f"  - aviso: {x}" for x in avisos]
     rel.append(f"- Produção: `{os.path.basename(pasta)}` (`{arq.replace(REPO + '/', '').replace('/mnt/project-files/', '')}`), semelhança {nota:.0%}")
     if nota < a.nota_minima: sys.exit(f"Roteiro incerto ({nota:.0%} < {a.nota_minima:.0%}): {arq}. Rode com --producao.")
 
