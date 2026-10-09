@@ -221,9 +221,26 @@ def varrer_arquivo(caminho):
     return res
 
 
-# ---- Versao CURTA (2026-10-09): se o limite for o tamanho do prompt, nao a palavra ----
+# ---- V MINIMO (Luigi, 2026-10-09): o V e so quem fala, o idioma e a fala literal ----
+def minimo_v(txt, mudo=None):
+    """V minimalista. Falado: 'The person in the image speaks in <idioma>: "<fala>"' + camera + lip sync.
+    Mudo: `mudo` (texto curto em ingles, ja com a acao) ou so silencio. A fala vem do V completo, intacta."""
+    if re.match(r"\s*(?:\(no speech\)|The person in the image)", txt):
+        return txt  # ja minimo
+    if re.match(r"\s*\(sem fala no take", txt):
+        corpo = mudo or "The person in the image stays silent with the mouth closed."
+        return "(no speech) " + corpo
+    q = re.search(r'"(.*)"', txt.split("\n")[0])  # a fala pode conter aspas internas (ex.: "222")
+    assert q, "V sem fala entre aspas: " + txt[:80]
+    es = bool(re.search(r"ESPANHOL|espanhol", txt))
+    idioma = "neutral Latin American Spanish" if es else "American English"
+    cam = "Handheld selfie camera, slight natural shake." if "selfie" in txt else "Fixed camera."
+    return ('The person in the image speaks in %s, looking at the camera: "%s"\n\n%s Natural lip sync, no music.'
+            % (idioma, q.group(1), cam))
+
+
 def compacto_k(j):
-    """K em um paragrafo so (~600-900 caracteres): identidade, roupa, cena, prop, estado, camera e fecho fixo."""
+    """K em um paragrafo so (~1800 caracteres): identidade, roupa, cena, prop, estado, camera e fecho fixo."""
     j = seguro_k(j) if "clean_frame" not in j else j
     partes = ["Match the attached character sheet exactly.", j["identity_main"], j["wardrobe"], j["scene"], j["prop"],
               j["state"].replace("Start frame: ", ""), j["camera"].split(", ")[0] + ", 1x lens, level.",
@@ -232,20 +249,11 @@ def compacto_k(j):
     return " ".join(x.strip() for x in partes if x)
 
 
-def compacto_v(txt):
-    """V enxuto: troca a frase longa de lip sync por uma curta e corta repeticoes de tom. Falas intactas."""
-    txt = re.sub(r"\n\n[^\n]*diz todas as palavras corretamente[^\n]*\n", "\n\nDiz todas as palavras, lip sync perfeito.\n", txt)
-    txt = re.sub(r"fala (?:em )?ESPANHOL latino neutro, sem sotaque americano e sem falar inglês, ", "fala em espanhol latino neutro, ", txt)
-    txt = re.sub(r", em tom de gravação direta para a câmera, natural e confiante", "", txt)
-    txt = re.sub(r", em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo", "", txt)
-    return txt
-
-
-def gerar_curto(entrega, saida):
-    """Le um ENTREGA_*.md e grava a versao curta: K em paragrafo, V enxuto."""
+def gerar_minimo(entrega, saida, mudo=None):
+    """Le um ENTREGA_*.md e grava a versao minima: K em paragrafo, V minimalista."""
     t = Path(entrega).read_text(encoding="utf-8")
-    out = ["# " + Path(entrega).stem + " (versao CURTA)", "", MARCADOR, "",
-           "Mesmo conteudo da ENTREGA, em prompts curtos. K = character sheet + prompt, 4 variacoes 9:16. V = imagem escolhida + prompt, 1 variacao 9:16.", ""]
+    out = ["# " + Path(entrega).stem.replace("ENTREGA_", "MINIMO_") + " (K curto, V minimalista)", "", MARCADOR, "",
+           "K = character sheet + prompt, 4 variacoes 9:16. V = imagem escolhida + prompt, 1 variacao 9:16.", ""]
     for b in RE_BLOCO.findall(t):
         m = re.match(r"\s*(K\d+)\n(\{.*\})\s*$", b, re.S)
         if m:
@@ -256,7 +264,7 @@ def gerar_curto(entrega, saida):
             continue
         m = re.match(r"\s*(V\d+)\n(.*)$", b, re.S)
         if m:
-            out += ["```text", m.group(1), compacto_v(m.group(2)).strip(), "```", ""]
+            out += ["```text", m.group(1), minimo_v(m.group(2).strip(), mudo), "```", ""]
     Path(saida).write_text("\n".join(out), encoding="utf-8")
     return len("\n".join(out))
 

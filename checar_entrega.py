@@ -236,7 +236,7 @@ def fala_do_bloco(bloco):
     """Extrai a fala entre aspas do prompt de video. Segundo retorno diz se e take mudo."""
     if bloco is None:
         return None, False
-    if re.search(r"sem fala no take|voz-?over|voz off", bloco, re.I):
+    if re.search(r"sem fala no take|voz-?over|voz off|^\s*\(no speech\)", bloco, re.I | re.M):
         return None, True
     if re.search(r"^falas no take", bloco, re.M | re.I):
         # V de dialogo (2026-09-23): uma linha numerada por fala, na ordem do roteiro
@@ -771,6 +771,10 @@ def c_sem_produto(angulo, kfs):
         ok("sem-produto", "angulo %d sem produto em quadro" % angulo)
 
 
+# V minimalista (flow_seguro v1, 2026-10-09): so a fala e o idioma, sem os 5 blocos
+RE_V_MINIMO = re.compile(r"\s*(?:\(no speech\)|The person in the image)")
+
+
 def c_blocos_video(videos):
     ruim = False
     for v in videos:
@@ -781,6 +785,8 @@ def c_blocos_video(videos):
             continue
         b = v["bloco"]
         loc = (PROMPTS_FILE + ":%d") % v["linha"]
+        if RE_V_MINIMO.match(b):
+            continue
         if not re.search(r"^c[âa]mera:", b, re.M | re.I):
             falha("blocos-video", "%s sem o bloco 'camera:'" % v["id"], loc)
             ruim = True
@@ -915,7 +921,7 @@ def c_angulo3(angulo, arquivos, kfs, takes, pasta, roteiro):
 # texto cru e reprovou os 6 pacotes existentes lendo notas de producao que
 # descreviam o comportamento CERTO ("no lugar de 'Check out the surprise in my
 # Stories': THE FACE IS IN YOUR MESSAGES"). Nota que explica a regra nao e copy.
-STORY_PAT = r"my stories|my profile picture|check my stor|watch my stor|access(ing)? my stor"
+STORY_PAT = r"my stories|my profile picture|check my stor|watch my stor|access(ing)? my stor|mis historias|mi foto de perfil"
 # O CTA nomeia o objeto: "his face is in there", "find out who it is".
 DECLARADO_PAT = r"\bface\b|who (it|he|she) is|(his|her|their) name|the initial"
 # A copy entregou um pedaco da identidade antes do CTA, o que autoriza declarar.
@@ -1310,6 +1316,8 @@ def c_blocos_video_flow(videos, sub_nome):
             continue
         b = v["bloco"]
         loc = "%s/PROMPTS_VIDEO_FLOW.md:%d" % (sub_nome, v["linha"])
+        if RE_V_MINIMO.match(b):
+            continue
         if not re.search(r"^c[âa]mera:", b, re.M | re.I):
             falha("blocos-video", "%s/%s sem o bloco 'camera:'" % (sub_nome, v["id"]), loc)
             ruim = True

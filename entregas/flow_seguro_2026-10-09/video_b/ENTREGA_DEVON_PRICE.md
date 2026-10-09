@@ -81,210 +81,124 @@ K02
 
 ```text
 V01
-(sem fala no take: o clipe é mudo e a avatar Devon Price não fala; o texto de tela entra só na edição)
-
-a avatar fica em silêncio o tempo todo; os lábios fecham e não há voz nem sussurro.
-
-o que acontece no vídeo: Devon Price já começou a abrir a garrafa âmbar e sorri para a lente; corte para Devon Price inclinando a garrafa e vertendo o líquido âmbar sobre o sal grosso, as folhas de louro e os paus de canela na tábua; corte para um MACRO das mãos e da tábua no instante do payoff: uma pequena chama surge e se firma sobre o sal, o louro e a canela; corte de volta para o plano de corpo: as mãos de Devon Price se juntam em oração com a chama pequena e firme diante delas e a avatar olha para a lente.
-
-câmera: cortes internos ao clipe (plano de corpo, plano do derrame, macro das mãos e da tábua, plano de corpo), câmera de celular apoiada na mesa na altura da mesa, com leve tremor natural
-
-som ambiente: a sala em silêncio, líquido caindo, estalo suave, o som baixo da chama firme, sem música e sem voz
+(no speech) The person in the image smiles at the camera, opens the amber bottle and pours it over the salt on the board, then presses the hands together in prayer as a small flame rises on the board. Fixed camera, quick cuts, no voice, no music.
 ```
 
 ### V02 · T2 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V02
-a avatar Devon Price (mulher) fala em inglês com sotaque americano de Devon Price, voz feminina calma e direta, de uma mulher de cinquenta anos, em tom de gravação direta para a câmera, natural e confiante, grave, em tom de aviso, a seguinte frase: "Don't scroll past this fire yet. Whatever money lands in your hands this week, if it has no lid on it, it's gone again by Thursday."
+The person in the image speaks in American English, looking at the camera: "Don't scroll past this fire yet. Whatever money lands in your hands this week, if it has no lid on it, it's gone again by Thursday."
 
-a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Devon Price olha firme para a lente com as mãos juntas em oração e a chama firme entre elas, dá um leve aceno de cabeça no fim da última frase.
-
-câmera: fixa, apoiada na mesa na altura da mesa, com leve tremor natural de celular
-
-som ambiente: sala de casa em silêncio, leve crepitar baixo vindo da tábua, voz com leve eco natural, ruído suave de tecido, sem música
+Fixed camera. Natural lip sync, no music.
 ```
 
 ### V03 · T3 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V03
-a avatar Devon Price (mulher) fala em inglês com sotaque americano de Devon Price, voz feminina calma e direta, de uma mulher de cinquenta anos, em tom de gravação direta para a câmera, natural e confiante, firme e confessional, a seguinte frase: "No, it's not that you spend too much. I thought it was. I counted every bill, prayed over my statements, and still every payday slipped out of my hands."
+The person in the image speaks in American English, looking at the camera: "No, it's not that you spend too much. I thought it was. I counted every bill, prayed over my statements, and still every payday slipped out of my hands."
 
-a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Devon Price fala com o olhar firme na lente, as mãos juntas imóveis, e fecha os olhos por um instante ao lembrar da oração, voltando para a lente.
-
-câmera: fixa, apoiada na mesa na altura da mesa, com leve tremor natural de celular
-
-som ambiente: sala de casa em silêncio, leve crepitar baixo vindo da tábua, voz com leve eco natural, ruído suave de tecido, sem música
+Fixed camera. Natural lip sync, no music.
 ```
 
 ### V04 · T4 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V04
-a avatar Devon Price (mulher) fala em inglês com sotaque americano de Devon Price, voz feminina calma e direta, de uma mulher de cinquenta anos, em tom de gravação direta para a câmera, natural e confiante, calma, como quem lembra uma história, a seguinte frase: "My sister-in-law Wanda, fifty-eight, balanced her checkbook to the penny for twenty-six years, and every single Thursday her account was back at zero, like clockwork."
+The person in the image speaks in American English, looking at the camera: "My sister-in-law Wanda, fifty-eight, balanced her checkbook to the penny for twenty-six years, and every single Thursday her account was back at zero, like clockwork."
 
-a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Devon Price ergue as sobrancelhas de leve ao dizer o número de anos, a chama oscila de leve, as mãos continuam juntas.
-
-câmera: fixa, apoiada na mesa na altura da mesa, com leve tremor natural de celular
-
-som ambiente: sala de casa em silêncio, leve crepitar baixo vindo da tábua, voz com leve eco natural, ruído suave de tecido, sem música
+Fixed camera. Natural lip sync, no music.
 ```
 
 ### V05 · T5 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V05
-a avatar Devon Price (mulher) fala em inglês com sotaque americano de Devon Price, voz feminina calma e direta, de uma mulher de cinquenta anos, em tom de gravação direta para a câmera, natural e confiante, séria, com um tom de descoberta, a seguinte frase: "She asked me, 'If it's that simple, why hasn't it worked for me?' I stood there. Then it hit me: her money was boiling off the second it arrived."
+The person in the image speaks in American English, looking at the camera: "She asked me, 'If it's that simple, why hasn't it worked for me?' I stood there. Then it hit me: her money was boiling off the second it arrived."
 
-a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Devon Price inclina a cabeça para o lado ao repetir a pergunta e fica parado um instante olhando para a lente, depois o olhar clareia na palavra final.
-
-câmera: fixa, apoiada na mesa na altura da mesa, com leve tremor natural de celular
-
-som ambiente: sala de casa em silêncio, leve crepitar baixo vindo da tábua, voz com leve eco natural, ruído suave de tecido, sem música
+Fixed camera. Natural lip sync, no music.
 ```
 
 ### V06 · T6 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V06
-a avatar Devon Price (mulher) fala em inglês com sotaque americano de Devon Price, voz feminina calma e direta, de uma mulher de cinquenta anos, em tom de gravação direta para a câmera, natural e confiante, baixa e confidencial, como quem conta um segredo, a seguinte frase: "Here's what nobody tells you. Money that arrives with no seal on it stays about three days. It comes in, finds an open door, and leaves with the weekend."
+The person in the image speaks in American English, looking at the camera: "Here's what nobody tells you. Money that arrives with no seal on it stays about three days. It comes in, finds an open door, and leaves with the weekend."
 
-a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Devon Price fala baixo e confidencial, inclina o corpo um pouco para a lente, as mãos juntas com a chama no meio.
-
-câmera: fixa, apoiada na mesa na altura da mesa, com leve tremor natural de celular
-
-som ambiente: sala de casa em silêncio, leve crepitar baixo vindo da tábua, voz com leve eco natural, ruído suave de tecido, sem música
+Fixed camera. Natural lip sync, no music.
 ```
 
 ### V07 · T7 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V07
-a avatar Devon Price (mulher) fala em inglês com sotaque americano de Devon Price, voz feminina calma e direta, de uma mulher de cinquenta anos, em tom de gravação direta para a câmera, natural e confiante, calma e certa, a seguinte frase: "The problem isn't that money won't come. It's that nothing closes behind it. Picture a pot boiling with no lid: everything you put in rises as steam and disappears."
+The person in the image speaks in American English, looking at the camera: "The problem isn't that money won't come. It's that nothing closes behind it. Picture a pot boiling with no lid: everything you put in rises as steam and disappears."
 
-a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Devon Price olha para a tábua por um instante ao falar da panela e volta o olhar para a lente na última frase, as mãos juntas.
-
-câmera: fixa, apoiada na mesa na altura da mesa, com leve tremor natural de celular
-
-som ambiente: sala de casa em silêncio, leve crepitar baixo vindo da tábua, voz com leve eco natural, ruído suave de tecido, sem música
+Fixed camera. Natural lip sync, no music.
 ```
 
 ### V08 · T8 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V08
-a avatar Devon Price (mulher) fala em inglês com sotaque americano de Devon Price, voz feminina calma e direta, de uma mulher de cinquenta anos, em tom de gravação direta para a câmera, natural e confiante, reverente e firme, a seguinte frase: "Archangel Zadkiel is the one who turns what's heavy into what stays. He gave Wanda one act that takes under ten minutes: the Lid Seal."
+The person in the image speaks in American English, looking at the camera: "Archangel Zadkiel is the one who turns what's heavy into what stays. He gave Wanda one act that takes under ten minutes: the Lid Seal."
 
-a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Devon Price olha para cima por um instante ao citar o arcanjo e volta para a lente, um aceno de cabeça firme no fim.
-
-câmera: fixa, apoiada na mesa na altura da mesa, com leve tremor natural de celular
-
-som ambiente: sala de casa em silêncio, leve crepitar baixo vindo da tábua, voz com leve eco natural, ruído suave de tecido, sem música
+Fixed camera. Natural lip sync, no music.
 ```
 
 ### V09 · T9 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V09
-a avatar Devon Price (mulher) fala em inglês com sotaque americano de Devon Price, voz feminina calma e direta, de uma mulher de cinquenta anos, em tom de gravação direta para a câmera, natural e confiante, firme e convicta, a seguinte frase: "What I'm burning is the first half. Salt to hold it, bay leaf to mark it yours, cinnamon to pull it close. Not a vision board, not another budget."
+The person in the image speaks in American English, looking at the camera: "What I'm burning is the first half. Salt to hold it, bay leaf to mark it yours, cinnamon to pull it close. Not a vision board, not another budget."
 
-a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Devon Price olha para a tábua com a chama ao dizer o que está sobre a tábua e volta para a lente, as mãos juntas imóveis.
-
-câmera: fixa, apoiada na mesa na altura da mesa, com leve tremor natural de celular
-
-som ambiente: sala de casa em silêncio, leve crepitar baixo vindo da tábua, voz com leve eco natural, ruído suave de tecido, sem música
+Fixed camera. Natural lip sync, no music.
 ```
 
 ### V10 · T10 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V10
-a avatar Devon Price (mulher) fala em inglês com sotaque americano de Devon Price, voz feminina calma e direta, de uma mulher de cinquenta anos, em tom de gravação direta para a câmera, natural e confiante, firme e urgente, a seguinte frase: "Seal one: save this video, so the lid stays where you can find it. Seal two: tap follow below, so this stays open and keeps reaching you."
+The person in the image speaks in American English, looking at the camera: "Seal one: save this video, so the lid stays where you can find it. Seal two: tap follow below, so this stays open and keeps reaching you."
 
-a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Devon Price fala com firmeza, inclina a cabeça para baixo e à frente ao dizer "abaixo" e depois volta o olhar para a lente, as mãos juntas.
-
-câmera: fixa, apoiada na mesa na altura da mesa, com leve tremor natural de celular
-
-som ambiente: sala de casa em silêncio, leve crepitar baixo vindo da tábua, voz com leve eco natural, ruído suave de tecido, sem música
+Fixed camera. Natural lip sync, no music.
 ```
 
 ### V11 · T11 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V11
-a avatar Devon Price (mulher) fala em inglês com sotaque americano de Devon Price, voz feminina calma e direta, de uma mulher de cinquenta anos, em tom de gravação direta para a câmera, natural e confiante, grave e solene, em tom de aviso, a seguinte frase: "Seal three: type 222 and your first name below, and the lid is tied to you. Wanda skipped this one. Her money rose like steam and left before Thursday."
+The person in the image speaks in American English, looking at the camera: "Seal three: type 222 and your first name below, and the lid is tied to you. Wanda skipped this one. Her money rose like steam and left before Thursday."
 
-a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Devon Price fica solene e baixa a voz ao falar da pessoa que pulou o selo, sem sorrir, as mãos juntas, a chama baixa e firme.
-
-câmera: fixa, apoiada na mesa na altura da mesa, com leve tremor natural de celular
-
-som ambiente: sala de casa em silêncio, leve crepitar baixo vindo da tábua, voz com leve eco natural, ruído suave de tecido, sem música
+Fixed camera. Natural lip sync, no music.
 ```
 
 ### V12 · T12 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V12
-a avatar Devon Price (mulher) fala em inglês com sotaque americano de Devon Price, voz feminina calma e direta, de uma mulher de cinquenta anos, em tom de gravação direta para a câmera, natural e confiante, mais suave e aliviada, a seguinte frase: "The week Wanda closed all three, a Thursday came and went with money still in her account, the first time in twenty-six years. She cried in her kitchen."
+The person in the image speaks in American English, looking at the camera: "The week Wanda closed all three, a Thursday came and went with money still in her account, the first time in twenty-six years. She cried in her kitchen."
 
-a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Devon Price suaviza a expressão e dá um meio sorriso, os olhos úmidos, a chama cresce um pouco entre as mãos.
-
-câmera: fixa, apoiada na mesa na altura da mesa, com leve tremor natural de celular
-
-som ambiente: sala de casa em silêncio, leve crepitar baixo vindo da tábua, voz com leve eco natural, ruído suave de tecido, sem música
+Fixed camera. Natural lip sync, no music.
 ```
 
 ### V13 · T13 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V13
-a avatar Devon Price (mulher) fala em inglês com sotaque americano de Devon Price, voz feminina calma e direta, de uma mulher de cinquenta anos, em tom de gravação direta para a câmera, natural e confiante, próxima e firme, a seguinte frase: "If your money leaves before the month does, this is for you. A save, a follow, a comment, under ten minutes. I wish someone had told me years ago."
+The person in the image speaks in American English, looking at the camera: "If your money leaves before the month does, this is for you. A save, a follow, a comment, under ten minutes. I wish someone had told me years ago."
 
-a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Devon Price olha direto para a lente, inclina levemente a cabeça no convite e dá um leve aceno de cabeça no fim.
-
-câmera: fixa, apoiada na mesa na altura da mesa, com leve tremor natural de celular
-
-som ambiente: sala de casa em silêncio, leve crepitar baixo vindo da tábua, voz com leve eco natural, ruído suave de tecido, sem música
+Fixed camera. Natural lip sync, no music.
 ```
 
 ### V14 · T14 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V14
-a avatar Devon Price (mulher) fala em inglês com sotaque americano de Devon Price, voz feminina calma e direta, de uma mulher de cinquenta anos, em tom de gravação direta para a câmera, natural e confiante, calorosa e firme, em tom de convite, a seguinte frase: "Now press my profile picture, then check my stories before they expire. Everything that closes the lid is waiting there, and the flame is still warm."
+The person in the image speaks in American English, looking at the camera: "Now press my profile picture, then check my stories before they expire. Everything that closes the lid is waiting there, and the flame is still warm."
 
-a avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Devon Price inclina a cabeça levemente para baixo e para o lado em direção ao perfil e volta para a lente com leve sorriso de convite, as mãos juntas com a chama.
-
-câmera: fixa, apoiada na mesa na altura da mesa, com leve tremor natural de celular
-
-som ambiente: sala de casa em silêncio, leve crepitar baixo vindo da tábua, voz com leve eco natural, ruído suave de tecido, sem música
+Fixed camera. Natural lip sync, no music.
 ```
 
 ## 3. Montagem no CapCut

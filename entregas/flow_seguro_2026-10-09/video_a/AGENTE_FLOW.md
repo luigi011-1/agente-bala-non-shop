@@ -25,7 +25,7 @@ Você é o executor do Google Flow. Você só gera imagens e vídeos a partir de
 1. Só começa quando o operador mandar. V01 usa a imagem que sobrou do K01; V02 a V15 usam todos a imagem que sobrou do K02. Se um K tiver mais de uma imagem ou nenhuma, pare e pergunte qual.
 2. Modelo: Veo 3.1 - Lite (use só esse). Duração: 8 segundos. Formato: 9:16. Imagem entra como INITIAL FRAME, nunca como ingredient ou elemento.
 3. Gere 1 variação por V. Confira o 1 antes de cada V.
-4. O campo de texto recebe só o prompt V, inteiro, sem alterar uma palavra. Antes de enviar, confirme que ele contém `o que acontece no vídeo:`, `câmera:` e `som ambiente:`. Se faltar, é prompt de imagem: pare e avise.
+4. O campo de texto recebe só o prompt V, inteiro, sem alterar uma palavra. O prompt V é curto: começa com `The person in the image` (ou `(no speech)` no clipe mudo) e traz a fala entre aspas. Se começar com `{`, é prompt de imagem: pare e avise.
 5. Todos os V desta produção são falados e começam com `o avatar ... fala em inglês` (Avery e Devon) ou `o avatar ... fala em ESPANHOL` (Jordan Vale). Nunca troque o idioma.
 6. No máximo 7 V por vez. Terminou o lote, relate e espere o operador dizer `prossiga`.
 

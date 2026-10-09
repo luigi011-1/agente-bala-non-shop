@@ -108,6 +108,12 @@ browser automation sao historicos, salvo pedido explicito do usuario.
   - Pacote seguro carrega a linha `flow_seguro: v1` no cabecalho de PROMPTS_/FLOW_/ENTREGA_. `checar_entrega.py`
     (check `flow_seguro`) reprova gatilho nesses pacotes e so avisa nos antigos. Rodar tambem
     `python flow_seguro.py producao/<pacote>` antes de entregar.
+- **V minimalista (Luigi, 2026-10-09), regra para toda producao nova:** o prompt de video e so quem fala, o idioma e a
+  fala literal, mais camera e lip sync em uma linha: `The person in the image speaks in American English, looking at
+  the camera: "<fala>"` + `Fixed camera. Natural lip sync, no music.` (Jordan Vale em espanhol: `neutral Latin
+  American Spanish`). Clipe mudo: `(no speech) <acao curta em ingles>`. Sem descricao de cena, roupa, objeto, tom de
+  voz nem som ambiente: tudo isso ja esta na imagem anexada. Gerador: `flow_seguro.minimo_v`. O linter aceita esse
+  formato no lugar dos 5 blocos.
 - Se o Flow bloquear mesmo assim, o agente do Flow segue a regra de repetir o MESMO prompt, mas relata o codigo e o
   erro exato ("might violate our policies") ao operador; quem reescreve e sempre o operador/Claude, nunca o agente do Flow.
 

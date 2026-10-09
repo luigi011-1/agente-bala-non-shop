@@ -40,3 +40,12 @@ def test_v_troca_termos_mas_preserva_a_fala():
 def test_limite_de_negacoes():
     assert any(n == "FALHA" for n, _, _ in fs.varrer_k("no a, no b, never c"))
     assert not fs.varrer_k("A plain text-free frame, everything in sharp focus.")
+
+
+def test_v_minimo():
+    v = 'a avatar X (mulher) fala em inglês, a seguinte frase: "Comment \"222\" now."\n\no que acontece no vídeo: ela sorri'
+    out = fs.minimo_v(v)
+    assert out.startswith('The person in the image speaks in American English')
+    assert 'Comment \"222\" now.' in out and "sorri" not in out
+    assert fs.minimo_v('o avatar fala em ESPANHOL, frase: "Hola."').count("Latin American Spanish") == 1
+    assert fs.minimo_v("(sem fala no take: x)").startswith("(no speech)")

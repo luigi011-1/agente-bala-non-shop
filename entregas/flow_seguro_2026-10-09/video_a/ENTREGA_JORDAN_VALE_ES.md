@@ -81,225 +81,135 @@ K02
 
 ```text
 V01
-o avatar (homem) Jordan Vale fala em ESPANHOL (espanhol latino-americano neutro, não inglês) com sotaque latino-americano neutro, sem regionalismo marcado, de classe alta, voz masculina grave, baixa e lenta de um homem de sessenta e oito anos de dinheiro antigo, autoridade tranquila, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo, com espanto e entusiasmo, como quem acabou de descobrir algo, a seguinte frase: "Te va a llegar una llamada en una o dos semanas, y va a cambiar tu dinero. Este video te encontró a propósito, y es para ti."
+The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Te va a llegar una llamada en una o dos semanas, y va a cambiar tu dinero. Este video te encontró a propósito, y es para ti."
 
-o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Jordan Vale segura três cartas de tarô abertas em leque (Wheel of Fortune, The Star e The Sun) bem perto da lente, no terço inferior do quadro, e fala olhando para a lente; por volta do quarto segundo baixa as cartas para o peito e passa a gesticular com a mão livre.
-
-câmera: selfie na mão com leve tremor natural, mesmo enquadramento do primeiro quadro, sem cortes
-
-som ambiente: um salão de mansão silencioso, leve ar-condicionado ao fundo, sem música
+Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V02 · T2 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V02
-o avatar (homem) Jordan Vale fala em ESPANHOL (espanhol latino-americano neutro, não inglês) com sotaque latino-americano neutro, sem regionalismo marcado, de classe alta, voz masculina grave, baixa e lenta de um homem de sessenta e oito anos de dinheiro antigo, autoridade tranquila, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo, em tom direto e confidencial, a seguinte frase: "No, esto no depende de cuántas solicitudes mandaste. Sé que el mercado está horrible y nadie contesta. Es verdad. Aun así, no puede frenar lo que viene hacia ti."
+The person in the image speaks in neutral Latin American Spanish, looking at the camera: "No, esto no depende de cuántas solicitudes mandaste. Sé que el mercado está horrible y nadie contesta. Es verdad. Aun así, no puede frenar lo que viene hacia ti."
 
-o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Jordan Vale balança o dedo indicador em "No" e abre a mão em "nadie contesta"; no fim aponta o dedo para a lente em "hacia ti".
-
-câmera: selfie na mão com leve tremor natural, mesmo enquadramento do primeiro quadro, sem cortes
-
-som ambiente: um salão de mansão silencioso, leve ar-condicionado ao fundo, sem música
+Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V03 · T3 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V03
-o avatar (homem) Jordan Vale fala em ESPANHOL (espanhol latino-americano neutro, não inglês) com sotaque latino-americano neutro, sem regionalismo marcado, de classe alta, voz masculina grave, baixa e lenta de um homem de sessenta e oito anos de dinheiro antigo, autoridade tranquila, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo, em tom cansado e sincero, a seguinte frase: "Yo también lo hacía como todos. Mandaba currículums, revisaba el correo cada hora, pedía favores, tomaba todos los cursos. Y nada se movía."
+The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Yo también lo hacía como todos. Mandaba currículums, revisaba el correo cada hora, pedía favores, tomaba todos los cursos. Y nada se movía."
 
-o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Jordan Vale conta nos dedos de uma mão "currículums", "el correo", "favores" e "cursos" e balança a cabeça de leve em "nada se movía".
-
-câmera: selfie na mão com leve tremor natural, mesmo enquadramento do primeiro quadro, sem cortes
-
-som ambiente: um salão de mansão silencioso, leve ar-condicionado ao fundo, sem música
+Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V04 · T4 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V04
-o avatar (homem) Jordan Vale fala em ESPANHOL (espanhol latino-americano neutro, não inglês) com sotaque latino-americano neutro, sem regionalismo marcado, de classe alta, voz masculina grave, baixa e lenta de um homem de sessenta e oito anos de dinheiro antigo, autoridade tranquila, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo, em tom de quem conta a história de uma pessoa querida, a seguinte frase: "Mi prima Imelda, de cuarenta y seis años, mandó doscientas doce solicitudes en once meses. Pulió su currículum, hizo contactos, sonrió en cada entrevista, y nadie le respondió."
+The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Mi prima Imelda, de cuarenta y seis años, mandó doscientas doce solicitudes en once meses. Pulió su currículum, hizo contactos, sonrió en cada entrevista, y nadie le respondió."
 
-o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Jordan Vale fala olhando fixo para a lente, as duas mãos juntas diante do peito, com um pequeno aceno de cabeça em "doscientas doce".
-
-câmera: selfie na mão com leve tremor natural, mesmo enquadramento do primeiro quadro, sem cortes
-
-som ambiente: um salão de mansão silencioso, leve ar-condicionado ao fundo, sem música
+Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V05 · T5 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V05
-o avatar (homem) Jordan Vale fala em ESPANHOL (espanhol latino-americano neutro, não inglês) com sotaque latino-americano neutro, sem regionalismo marcado, de classe alta, voz masculina grave, baixa e lenta de um homem de sessenta e oito anos de dinheiro antigo, autoridade tranquila, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo, em tom sério, com a voz baixando no final, a seguinte frase: "Le pregunté qué más podía intentar. Me dijo: dime una sola cosa que no haya hecho. No pude decirle ni una. Ya se me habían acabado los consejos."
+The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Le pregunté qué más podía intentar. Me dijo: dime una sola cosa que no haya hecho. No pude decirle ni una. Ya se me habían acabado los consejos."
 
-o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Jordan Vale imita a pergunta inclinando a cabeça em "dime una sola cosa que no haya hecho" e abre as mãos vazias em "los consejos".
-
-câmera: selfie na mão com leve tremor natural, mesmo enquadramento do primeiro quadro, sem cortes
-
-som ambiente: um salão de mansão silencioso, leve ar-condicionado ao fundo, sem música
+Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V06 · T6 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V06
-o avatar (homem) Jordan Vale fala em ESPANHOL (espanhol latino-americano neutro, não inglês) com sotaque latino-americano neutro, sem regionalismo marcado, de classe alta, voz masculina grave, baixa e lenta de um homem de sessenta e oito anos de dinheiro antigo, autoridade tranquila, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo, em tom firme e convicto, a seguinte frase: "Todos dicen que toques más fuerte. Nadie te cuenta que esa llamada no responde a los golpes. El problema no es tu currículum. Es la luz de tu porche."
+The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Todos dicen que toques más fuerte. Nadie te cuenta que esa llamada no responde a los golpes. El problema no es tu currículum. Es la luz de tu porche."
 
-o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Jordan Vale bate a mão no ar em "toques más fuerte", balança o indicador em "no responde a los golpes" e leva a mão ao peito em "la luz de tu porche".
-
-câmera: selfie na mão com leve tremor natural, mesmo enquadramento do primeiro quadro, sem cortes
-
-som ambiente: um salão de mansão silencioso, leve ar-condicionado ao fundo, sem música
+Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V07 · T7 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V07
-o avatar (homem) Jordan Vale fala em ESPANHOL (espanhol latino-americano neutro, não inglês) com sotaque latino-americano neutro, sem regionalismo marcado, de classe alta, voz masculina grave, baixa e lenta de um homem de sessenta e oito anos de dinheiro antigo, autoridade tranquila, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo, em tom suave e certo, quase um segredo, a seguinte frase: "La oportunidad busca la casa con la luz del porche encendida. La tuya se fue apagando, un no a la vez. Así que la llamada suena en otro lado."
+The person in the image speaks in neutral Latin American Spanish, looking at the camera: "La oportunidad busca la casa con la luz del porche encendida. La tuya se fue apagando, un no a la vez. Así que la llamada suena en otro lado."
 
-o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Jordan Vale aponta a mão aberta para o lado em "la luz del porche encendida", fecha devagar os dedos em "apagando" e abre a mão em "otro lado".
-
-câmera: selfie na mão com leve tremor natural, mesmo enquadramento do primeiro quadro, sem cortes
-
-som ambiente: um salão de mansão silencioso, leve ar-condicionado ao fundo, sem música
+Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V08 · T8 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V08
-o avatar (homem) Jordan Vale fala em ESPANHOL (espanhol latino-americano neutro, não inglês) com sotaque latino-americano neutro, sem regionalismo marcado, de classe alta, voz masculina grave, baixa e lenta de um homem de sessenta e oito anos de dinheiro antigo, autoridade tranquila, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo, em tom caloroso e respeitoso, a seguinte frase: "Aprendí a prenderla otra vez con mi tía abuela Beatriz. Ella le decía el Sello de la Luz del Porche, y decía que lo responde el Arcángel Chamuel."
+The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Aprendí a prenderla otra vez con mi tía abuela Beatriz. Ella le decía el Sello de la Luz del Porche, y decía que lo responde el Arcángel Chamuel."
 
-o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Jordan Vale leva a mão ao peito em "mi tía abuela Beatriz" e ergue os olhos por um instante em "Arcángel Chamuel".
-
-câmera: selfie na mão com leve tremor natural, mesmo enquadramento do primeiro quadro, sem cortes
-
-som ambiente: um salão de mansão silencioso, leve ar-condicionado ao fundo, sem música
+Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V09 · T9 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V09
-o avatar (homem) Jordan Vale fala em ESPANHOL (espanhol latino-americano neutro, não inglês) com sotaque latino-americano neutro, sem regionalismo marcado, de classe alta, voz masculina grave, baixa e lenta de um homem de sessenta e oito anos de dinheiro antigo, autoridade tranquila, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo, em tom claro e objetivo, marcando os números, a seguinte frase: "Tres minutos esta noche, en el porche de tu casa, al atardecer. Sin currículum, sin favores, sin tocar más fuerte. Solo algo pequeño con tus llaves y tres frases."
+The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Tres minutos esta noche, en el porche de tu casa, al atardecer. Sin currículum, sin favores, sin tocar más fuerte. Solo algo pequeño con tus llaves y tres frases."
 
-o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Jordan Vale ergue três dedos em "Tres minutos", aponta para baixo em "en el porche de tu casa" e faz o gesto de segurar chaves em "tus llaves".
-
-câmera: selfie na mão com leve tremor natural, mesmo enquadramento do primeiro quadro, sem cortes
-
-som ambiente: um salão de mansão silencioso, leve ar-condicionado ao fundo, sem música
+Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V10 · T10 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V10
-o avatar (homem) Jordan Vale fala em ESPANHOL (espanhol latino-americano neutro, não inglês) com sotaque latino-americano neutro, sem regionalismo marcado, de classe alta, voz masculina grave, baixa e lenta de um homem de sessenta e oito anos de dinheiro antigo, autoridade tranquila, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo, em tom próximo e confiante, a seguinte frase: "Vuelve a encender la luz de tu porche, para que la llamada te encuentre. Las frases exactas, y cómo sostener tus llaves, te están esperando."
+The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Vuelve a encender la luz de tu porche, para que la llamada te encuentre. Las frases exactas, y cómo sostener tus llaves, te están esperando."
 
-o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Jordan Vale faz o gesto de acender um interruptor em "encender la luz de tu porche" e abre a mão em direção à lente em "te están esperando".
-
-câmera: selfie na mão com leve tremor natural, mesmo enquadramento do primeiro quadro, sem cortes
-
-som ambiente: um salão de mansão silencioso, leve ar-condicionado ao fundo, sem música
+Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V11 · T11 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V11
-o avatar (homem) Jordan Vale fala em ESPANHOL (espanhol latino-americano neutro, não inglês) com sotaque latino-americano neutro, sem regionalismo marcado, de classe alta, voz masculina grave, baixa e lenta de um homem de sessenta e oito anos de dinheiro antigo, autoridade tranquila, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo, em tom emocionado e aliviado, a seguinte frase: "Imelda lo hizo esa misma noche. Esa semana le sonó el teléfono: una gerente que guardó su currículum tres años. Lloró en la cocina, pero de alivio."
+The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Imelda lo hizo esa misma noche. Esa semana le sonó el teléfono: una gerente que guardó su currículum tres años. Lloró en la cocina, pero de alivio."
 
-o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Jordan Vale sorri de leve e suspira com alívio em "de alivio", uma mão aberta no peito.
-
-câmera: selfie na mão com leve tremor natural, mesmo enquadramento do primeiro quadro, sem cortes
-
-som ambiente: um salão de mansão silencioso, leve ar-condicionado ao fundo, sem música
+Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V12 · T12 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V12
-o avatar (homem) Jordan Vale fala em ESPANHOL (espanhol latino-americano neutro, não inglês) com sotaque latino-americano neutro, sem regionalismo marcado, de classe alta, voz masculina grave, baixa e lenta de um homem de sessenta e oito anos de dinheiro antigo, autoridade tranquila, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo, em tom firme e direto, marcando "222", a seguinte frase: "Si ya hiciste todo y el teléfono sigue callado, comenta 222 ahora mismo. Así el Sello de la Luz del Porche queda amarrado a tu nombre."
+The person in the image speaks in neutral Latin American Spanish, looking at the camera: "222", a seguinte frase: "Si ya hiciste todo y el teléfono sigue callado, comenta 222 ahora mismo. Así el Sello de la Luz del Porche queda amarrado a tu nombre."
 
-o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Jordan Vale aponta o dedo para a lente em "comenta 222" e toca o peito com a mão em "tu nombre".
-
-câmera: selfie na mão com leve tremor natural, mesmo enquadramento do primeiro quadro, sem cortes
-
-som ambiente: um salão de mansão silencioso, leve ar-condicionado ao fundo, sem música
+Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V13 · T13 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V13
-o avatar (homem) Jordan Vale fala em ESPANHOL (espanhol latino-americano neutro, não inglês) com sotaque latino-americano neutro, sem regionalismo marcado, de classe alta, voz masculina grave, baixa e lenta de um homem de sessenta e oito anos de dinheiro antigo, autoridade tranquila, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo, em tom caloroso e animado, a seguinte frase: "Dale like, para que la bendición que va hacia ti sea más fuerte. Guárdalo y mándaselo a alguien que espera una llamada. Y sígueme, para que esto siga abierto."
+The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Dale like, para que la bendición que va hacia ti sea más fuerte. Guárdalo y mándaselo a alguien que espera una llamada. Y sígueme, para que esto siga abierto."
 
-o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Jordan Vale ergue o polegar em "Dale like", faz o gesto de salvar com a mão em "Guárdalo" e leva a mão ao próprio peito em "sígueme".
-
-câmera: selfie na mão com leve tremor natural, mesmo enquadramento do primeiro quadro, sem cortes
-
-som ambiente: um salão de mansão silencioso, leve ar-condicionado ao fundo, sem música
+Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V14 · T14 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V14
-o avatar (homem) Jordan Vale fala em ESPANHOL (espanhol latino-americano neutro, não inglês) com sotaque latino-americano neutro, sem regionalismo marcado, de classe alta, voz masculina grave, baixa e lenta de um homem de sessenta e oito anos de dinheiro antigo, autoridade tranquila, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo, em tom sério e urgente, sem levantar a voz, a seguinte frase: "La vecina de Imelda lo escuchó y nunca lo hizo. Su porche siguió apagado, y la llamada sonó en la casa iluminada del vecino. Que no seas tú."
+The person in the image speaks in neutral Latin American Spanish, looking at the camera: "La vecina de Imelda lo escuchó y nunca lo hizo. Su porche siguió apagado, y la llamada sonó en la casa iluminada del vecino. Que no seas tú."
 
-o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Jordan Vale balança a cabeça devagar em "nunca lo hizo" e aponta o indicador para a lente em "Que no seas tú".
-
-câmera: selfie na mão com leve tremor natural, mesmo enquadramento do primeiro quadro, sem cortes
-
-som ambiente: um salão de mansão silencioso, leve ar-condicionado ao fundo, sem música
+Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ### V15 · T15 · anexar SÓ a imagem escolhida do K02
 
 ```text
 V15
-o avatar (homem) Jordan Vale fala em ESPANHOL (espanhol latino-americano neutro, não inglês) com sotaque latino-americano neutro, sem regionalismo marcado, de classe alta, voz masculina grave, baixa e lenta de um homem de sessenta e oito anos de dinheiro antigo, autoridade tranquila, em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo, em tom próximo e confiante, olhando direto na lente, a seguinte frase: "Ahora toca mi foto de perfil. Las tres frases te esperan en mis historias, y toman tres minutos esta noche. Ojalá lo hubiera sabido antes de la primera solicitud."
+The person in the image speaks in neutral Latin American Spanish, looking at the camera: "Ahora toca mi foto de perfil. Las tres frases te esperan en mis historias, y toman tres minutos esta noche. Ojalá lo hubiera sabido antes de la primera solicitud."
 
-o avatar diz todas as palavras corretamente, não pula nenhuma palavra, e diz a última palavra por inteiro sem cortar no final. Lip sync perfeito durante todo o vídeo.
-
-o que acontece no vídeo: Jordan Vale aponta o indicador para baixo em "toca mi foto de perfil" e abre as mãos em "primera solicitud".
-
-câmera: selfie na mão com leve tremor natural, mesmo enquadramento do primeiro quadro, sem cortes
-
-som ambiente: um salão de mansão silencioso, leve ar-condicionado ao fundo, sem música
+Handheld selfie camera, slight natural shake. Natural lip sync, no music.
 ```
 
 ## 4. Montagem no CapCut
