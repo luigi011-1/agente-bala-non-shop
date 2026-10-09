@@ -52,6 +52,24 @@ class Orchestration(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "histórico"):
             op.resolve_angle("Korella")
 
+    def test_niche_context_needs_no_offer_and_cannot_start_production(self):
+        for source in ('operacao/catalogo_nichos.json', '.agents/skills/minerar-referencias/SKILL.md'):
+            path = self.root / source
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text('Fixture source')
+        pack_path = op.prepare(None, 'minerar', niche='manifestação/tarot')
+        pack = json.loads(pack_path.read_text())
+        self.assertIsNone(pack['angle'])
+        self.assertEqual(pack['niche']['slug'], 'manifestacao-tarot')
+        self.assertEqual(pack['worker'], 'bala-pesquisador')
+        self.assertNotIn(str(self.root / 'operacao/angulos.json'), pack['reference_fingerprints'])
+        self.assertNotIn(str(self.root / 'WORKFLOW_AURALY.md'), pack['reference_fingerprints'])
+        self.assertIn('pesquisar candidatos do nicho', (pack_path.parent / 'DISPATCH.md').read_text())
+        for kwargs in ({'task': 'adaptar'}, {'task': 'watch'}, {'task': 'minerar', 'angle_value': 'auraly'}, {'task': 'minerar', 'production': str(self.production)}):
+            args = {'angle_value': None, 'task': 'minerar', 'niche': 'tarot'} | kwargs
+            with self.assertRaises(ValueError):
+                op.prepare(**args)
+
     def test_never_advances_waiting_checkpoint(self):
         cp = self.checkpoint()
         original = cp.read_bytes()

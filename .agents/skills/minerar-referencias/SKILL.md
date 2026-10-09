@@ -1,31 +1,36 @@
 ---
 name: minerar-referencias
-description: Pesquisa referências de vídeos dos EUA no Instagram e Facebook para Sea Moss, FitWell, Auraly ou Body Hacks, coleta evidências com Crawlee e entrega links diretos com filtros verificados.
+description: Minera os vídeos mais virais da semana em inglês por nicho livre, como saúde e beleza ou manifestação/tarot, no Instagram e Facebook, com evidências e links diretos.
 ---
 
-# Minerar referências
+# Minerar referências por nicho
 
 ## Contrato
 
-- **Entrada:** ângulo ou nicho explicitamente solicitado, filtros opcionais e quantidade desejada. URLs iniciais podem vir do pedido; quando não vierem, o pesquisador as encontra, sem pedir que Luigi prepare um arquivo.
-- **Entrega:** links diretos dos vídeos, perfil, plataforma, data, visualizações, evidências dos filtros e relevância para o ângulo; incluir os caminhos de `resultados.json` e `relatorio.md`.
-- **Limite:** pesquisa pública. Sessão, país, data de criação e uso exclusivo de avatares IA precisam de evidência; login, bloqueio ou informação oculta não autorizam contorno nem suposição.
+- **Entrada:** nicho solicitado, filtros opcionais e quantidade desejada. “Minere no nicho de saúde e beleza” e “minere manifestação/tarot” já definem a pesquisa; não exigir produto, ângulo, avatar nem seeds de Luigi.
+- **Entrega:** ranking por visualizações confirmadas dos vídeos encontrados, links diretos, perfil, plataforma, idioma, data, métricas e evidências; `resultados.json` e `relatorio.md`. Explicitar a cobertura da descoberta.
+- **Limite:** ranking entre candidatos encontrados, sem prometer os maiores vídeos de toda a plataforma. A mineração entrega referências do nicho; adaptação para um produto exige pedido posterior.
 
-Resolver a raiz real por este `SKILL.md`, ler `AGENTS.md` e o preset em `operacao/angulos.json`. Os defaults são Instagram/Facebook, EUA, vídeos de hoje e ontem, **mais de 800 mil** views, perfil criado há no máximo 30 dias e apenas avatares IA. “Hoje” usa `America/New_York` e aparece no relatório; respeitar outro fuso/filtro que Luigi solicitar. Não acrescentar um mínimo de seguidores de um exemplo antigo.
+Resolver a raiz real deste `SKILL.md`, ler `AGENTS.md` e resolver o nicho em `operacao/nichos.py`, preservando nichos livres. `operacao/angulos.json` identifica ofertas da etapa de adaptação, não termos obrigatórios de mineração. Não inserir Sea Moss, FitWell, Auraly nem Body Hacks nas consultas quando Luigi pediu apenas o nicho.
 
-## Pesquisar e coletar
+Default de “semana”: **últimos sete dias de calendário incluindo hoje**, no fuso `America/New_York`; mostrar as datas exatas no resultado. Pesquisar vídeos **em inglês**, exclusivamente no Instagram/Facebook e dos EUA. Permanecem os filtros anteriores: **mais de 800 mil** views, perfil criado há no máximo 30 dias e conteúdo exclusivamente de avatares IA, até Luigi ajustá-los. Não adicionar mínimo de seguidores. Idioma inglês não comprova localização nos EUA; cada filtro exige sua evidência.
 
-1. Usar a busca web disponível para descobrir URLs públicas de vídeos e perfis nos dois domínios oficiais. Fazer consultas em inglês adequadas ao preset. Auraly pode pesquisar tarot se solicitado; a oferta permanece Auraly. Não presumir que a pesquisa encontrou todos os vídeos existentes.
-2. Escrever `seeds.json` com `{"urls": ["URL", "URL"]}` no job. Snippets de buscador descobrem candidatos, mas não confirmam métricas ou filtros. Quando houver observações verificadas, seguir `operacao/schema_mineracao.json` (`$defs.seeds`); registrar fonte, data de observação e método. Não marcar IA exclusiva só pela bio ou aparência de um único vídeo. A primeira publicação visível não é a criação da conta.
-3. Executar coleta limitada; `--angle` recebe o slug do catálogo:
+## Pesquisa com agentes e coleta
+
+1. O orquestrador entrega o nicho ao `bala-pesquisador`. Usar busca web disponível para descobrir URLs de vídeos/perfis em `instagram.com` e `facebook.com`. Consultar em inglês com termos do nicho, variações e janela temporal; cobrir ambas as plataformas. Não confundir data do snippet/indexação com data do vídeo.
+2. O pesquisador escreve `seeds.json` com `{"urls": ["URL", "URL"]}`. Snippets descobrem candidatos, mas não confirmam filtros. Observações verificadas seguem `operacao/schema_mineracao.json` (`$defs.seeds`), com fonte, data e método ligados ao vídeo/perfil correto. Não deduzir criação pela primeira postagem, nem IA exclusiva pela bio ou por um único vídeo.
+3. Crawlee é ferramenta de coleta do pesquisador, sem agente extra. Executar com nicho e limites proporcionais:
 
 ```sh
-python3 "<raiz>/scripts/dispatch.py" minerar --angle sea-moss --seeds "<job>/seeds.json" --out "<job>/coleta"
+python3 "<raiz>/scripts/dispatch.py" minerar --niche "saúde e beleza" --seeds "<job>/seeds.json" --out "<job>/coleta"
+python3 "<raiz>/scripts/dispatch.py" minerar --niche "manifestação/tarot" --seeds "<job>/seeds.json" --out "<job>/coleta" --backend browser
 ```
 
-Opções reais: `--timezone`, `--today YYYY-MM-DD`, `--max-pages`, `--max-seconds`, `--concurrency`, `--min-views`, `--lookback-days` e `--max-profile-age-days`. Manter limites proporcionais à pesquisa; o default não inicia uma varredura ilimitada.
-4. Ler o resultado. `approved` reúne quem satisfaz os filtros com evidência; `candidates` reúne campos desconhecidos; `rejected` registra filtros incompatíveis. `BLOCKED`, `PARTIAL` ou `FAILED` são estados de coleta, sem virar uma pesquisa concluída por redação.
+Usar HTTP para evidências públicas e browser quando necessário e disponível. O browser não garante acesso; usar somente sessão realmente disponível e autorizada. Se houver bloqueio/login/2FA, registrar o estado real e aproveitar evidências públicas acessíveis. Não fabricar sessão, burlar bloqueio ou prometer autonomia de autenticação.
 
-## Entregar
+4. Ler `approved`, `candidates`, `rejected` e o estado de coleta. Ordenar o ranking por views confirmadas; não atribuir posição confiável a vídeo sem métrica. Evidência de inglês deve ser ligada ao vídeo (fala, transcrição ou texto do conteúdo); não usar apenas bio, perfil ou país.
+5. Preparar taskpack `--task revisar --niche "<nicho>" --artifact ...` e enviar resultados, fontes e seeds ao `bala-revisor` independente. Corrigir achados e registrar nova revisão da versão atual.
 
-Enviar primeiro os vídeos aprovados numa lista ou tabela curta com links clicáveis e a evidência essencial. Se só houver candidatos, declarar quais filtros ainda faltam e entregar os links como candidatos, sem relaxar silenciosamente os critérios. Quando nenhum vídeo puder ser aprovado, dizer isso e manter o relatório acessível. Não iniciar roteiro, downloads de vídeo, publicação ou produção a partir desta skill sem pedido correspondente.
+## Entregar no chat
+
+Apresentar os aprovados com links clicáveis e métrica/data essenciais. Separar candidatos com filtros desconhecidos, informando exatamente quais faltam. Se nenhum vídeo passar, dizer isso e entregar apenas candidatos identificados e o relatório. Cobrir inglês, janela semanal, views, EUA, criação e IA exclusiva separadamente. `COMPLETE`, `PARTIAL`, `BLOCKED` ou `FAILED` não provam aprovação de nenhum vídeo. Não iniciar roteiro, download de vídeos, publicação ou produção sem pedido correspondente.

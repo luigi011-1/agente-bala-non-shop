@@ -196,7 +196,8 @@ class RealCrawler(unittest.TestCase):
     def audits(self):
         common = {"subject_url": self.base + "/profile/", "source_url": self.base + "/profile/", "observed_at": self.now.isoformat(), "value": True, "verified": True}
         return [common | {"field": "profile_ai_only", "method": "visual_audit", "scope": "all_public_posts", "note": "Fixture: os três posts públicos têm avatar IA, auditados visualmente."},
-                common | {"field": "niche_match", "method": "content_audit", "scope": "profile_content", "angle": "sea-moss", "note": "Fixture: conteúdo de saúde e sea moss; nenhum ângulo misturado."}]
+                common | {"field": "niche_match", "method": "content_audit", "scope": "profile_content", "angle": "sea-moss", "note": "Fixture: conteúdo do nicho de saúde e beleza."},
+                {"subject_url": self.base + "/reel/good/", "source_url": self.base + "/reel/good/", "observed_at": self.now.isoformat(), "value": "en", "verified": True, "field": "language", "method": "content_audit", "scope": "video_content", "note": "Fixture: todas as falas são em inglês."}]
 
     def test_complete_verified_fixture_real_crawlee_and_report_schema(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -220,7 +221,7 @@ class RealCrawler(unittest.TestCase):
             result = asyncio.run(mine(self.options(directory, [self.base + "/reel/good/"])))
             self.assertEqual(result["status"], "PARTIAL")
             self.assertFalse(result["approved"])
-            self.assertEqual(result["candidates"][0]["missing"], ["profile_ai_only", "niche_match"])
+            self.assertEqual(result["candidates"][0]["missing"], ["profile_ai_only", "niche_match", "language"])
 
     def test_login_and_robots_disallow_do_not_become_empty_success(self):
         for path in ("/reel/login/", "/reel/denied/"):
@@ -249,7 +250,7 @@ class RealCrawler(unittest.TestCase):
     def test_cli_partial_exit_and_saved_proofs(self):
         with tempfile.TemporaryDirectory() as directory:
             args = self.options(directory, [self.base + "/reel/login/"])
-            exit_code = main(["--angle", "auraly", "--seeds", str(args.seeds), "--out", str(args.out), "--allow-local-fixtures", "--max-seconds", "15"])
+            exit_code = main(["--angle", "auraly", "--backend", "http", "--seeds", str(args.seeds), "--out", str(args.out), "--allow-local-fixtures", "--max-seconds", "15"])
             self.assertEqual(exit_code, 2)
             self.assertTrue((args.out / "resultados.json").exists())
             self.assertTrue((args.out / "relatorio.md").exists())

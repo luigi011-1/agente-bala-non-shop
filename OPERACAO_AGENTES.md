@@ -2,30 +2,32 @@
 
 Esta camada conecta as ferramentas e distribui o trabalho. `AGENTS.md` continua como entrada canônica; `WORKFLOW_AURALY.md`, `CLAUDE.md`, `GATE_VISUAL.md` e o checkpoint continuam governando produção e aprovações. Os taskpacks registram uma execução, sem criar outro workflow.
 
-## Ângulos
+## Nichos para mineração e ofertas para adaptação
 
-`operacao/angulos.json` é o catálogo consumido pelos comandos. Seus presets identificam o produto e apontam as doutrinas existentes.
+A mineração começa pelo nicho livre: “minere saúde e beleza”, “minere manifestação/tarot” ou outro tema solicitado. `operacao/nichos.py` resolve aliases, termos em inglês e defaults de pesquisa; o catálogo aceita nichos livres. Não adicionar nome de produto às consultas quando o pedido é apenas do nicho.
 
-| ID / slug | Oferta atual | Pesquisa padrão |
-| --- | --- | --- |
-| 1 / `sea-moss` | Natural Rems Sea Moss 16-in-1 Gummies, suplemento Amazon | Saúde, nutrição, bem-estar, sea moss e envelhecimento saudável |
-| 2 / `fitwell` | FitWell / FityWell APP, público 40+ | Saúde, fitness, perda de peso e hábitos 40+ |
-| 3 / `auraly` | Auraly APP | Manifestação, soulmate, sincronicidade, sinais e prosperidade; tarot quando solicitado |
-| 4 / `body-hacks` | Body Hacks For Men 40+, ebook FitWell | Saúde e hábitos de homens 40+ |
+`operacao/angulos.json` identifica a oferta comercial somente quando a tarefa envolver adaptação/produção:
 
-Korella Saffron é histórico e não resolve silenciosamente para uma oferta ativa. Não confundir o APP FitWell com o ebook Body Hacks.
+| ID / slug | Oferta atual |
+| --- | --- |
+| 1 / `sea-moss` | Natural Rems Sea Moss 16-in-1 Gummies, suplemento Amazon |
+| 2 / `fitwell` | FitWell / FityWell APP, público 40+ |
+| 3 / `auraly` | Auraly APP |
+| 4 / `body-hacks` | Body Hacks For Men 40+, ebook FitWell |
+
+Pesquisar tarot como nicho não cria um novo ângulo comercial. Korella Saffron é histórico. Não confundir FitWell APP com o ebook Body Hacks; escolher oferta somente quando necessário para adaptar.
 
 ## Skills e responsáveis
 
 | Skill | Entrada principal | Entrega / limite |
 | --- | --- | --- |
-| `$operacao-bala` | Pedido e ângulo, produção quando aplicável | Contexto mínimo, delegação e resultado revisado; mantém as aprovações do workflow |
-| `$minerar-referencias` | Ângulo ou nicho e filtros opcionais | Links IG/FB com evidências e relatório; pesquisa pública, sem fabricação de acesso |
+| `$operacao-bala` | Pedido e nicho para pesquisa; ângulo/produção quando aplicável | Contexto mínimo, delegação e resultado revisado; mantém as aprovações do workflow |
+| `$minerar-referencias` | Nicho livre e filtros opcionais | Links IG/FB com evidências e relatório; pesquisa pública, sem fabricação de acesso |
 | `$watch` | Arquivo de vídeo | Frames, transcrição e decomposição visual; não significa produção completa |
 | `$adaptar-conteudo` | Referência analisada, produto, objetivo e avatar | Próxima etapa canônica; roteiro completo aguarda aprovação de Luigi |
 | `$revisar-producao` | Taskpack e artefatos finais | Parecer independente em leitura; não edita nem aprova por Luigi |
 
-O Codex atua como orquestrador principal. Existem dois especialistas e um revisor em `.codex/agents/`: `bala-pesquisador`, `bala-produtor` e `bala-revisor`. Os perfis herdam o modelo; o revisor usa sandbox de leitura. Não criar um agente por ferramenta ou por avatar. Se a ferramenta de delegação só aceitar instruções, carregar o texto do perfil no subagente; se não houver subagentes disponíveis, informar que a revisão independente ficou pendente.
+O fluxo de mineração é Codex orquestrador → pesquisador (descoberta via web) → Crawlee como ferramenta → revisor independente → links neste chat. O produtor entra apenas após pedido de adaptação. O Codex atua como orquestrador principal. Existem dois especialistas e um revisor em `.codex/agents/`: `bala-pesquisador`, `bala-produtor` e `bala-revisor`. Os perfis herdam o modelo; o revisor usa sandbox de leitura. Não criar um agente por ferramenta ou por avatar. Se a ferramenta de delegação só aceitar instruções, carregar o texto do perfil no subagente; se não houver subagentes disponíveis, informar que a revisão independente ficou pendente.
 
 ## Preparar o ambiente
 
@@ -47,17 +49,17 @@ No macOS Apple Silicon com Python 3.12, o preparador usa `operacao/requirements-
 O CLI prepara contexto e valida registros; a chamada dos especialistas é feita pelas ferramentas de delegação do Codex, não por um processo oculto do CLI.
 
 ```sh
-python3 scripts/dispatch.py preparar --angle sea-moss --task minerar
+python3 scripts/dispatch.py preparar --niche "saúde e beleza" --task minerar
 python3 scripts/dispatch.py preparar --angle auraly --task adaptar --production producao/NOME
 ```
 
-Cada execução cria `TASK.json` e `DISPATCH.md`, com ângulo, estado e fingerprints das fontes. Para Auraly, uma produção ativa exige checkpoint válido. As tarefas são `minerar`, `watch`, `adaptar` e `revisar`. O contexto referencia as fontes da etapa em vez de despejar todas as memórias.
+Cada execução cria `TASK.json` e `DISPATCH.md`, com nicho ou ângulo/estado, conforme a tarefa, e fingerprints das fontes. Os filtros efetivos e o intervalo pesquisado ficam em `resultados.json`. Para Auraly, uma produção ativa exige checkpoint válido. As tarefas são `minerar`, `watch`, `adaptar` e `revisar`. O contexto referencia as fontes da etapa em vez de despejar todas as memórias.
 
 Depois da autoria, preparar uma nova tarefa de revisão para a versão final:
 
 ```sh
 python3 scripts/dispatch.py preparar --angle auraly --task revisar --production producao/NOME
-python3 scripts/dispatch.py preparar --angle sea-moss --task revisar --artifact CAMINHO/resultados.json --artifact CAMINHO/relatorio.md
+python3 scripts/dispatch.py preparar --niche "saúde e beleza" --task revisar --artifact CAMINHO/resultados.json --artifact CAMINHO/relatorio.md
 python3 scripts/dispatch.py registrar-revisao --taskpack CAMINHO/TASK.json --review CAMINHO/REVISAO.json
 ```
 
@@ -79,17 +81,22 @@ O idioma padrão é inglês; `--language auto` ou `--language pt` são explícit
 
 O pesquisador ainda precisa abrir overview e frames de momentos-chave. Alinhamento de palavras não comprova ação, realismo ou interpretação do hook.
 
-## Mineração com Crawlee
+## Mineração semanal por nicho com Crawlee
 
-O pesquisador descobre links públicos via busca web e escreve `seeds.json`; Luigi não precisa preparar seeds. O coletor visita as URLs dentro dos limites e normaliza as evidências. Não é um indexador de todo o Instagram/Facebook.
+Luigi informa o nicho. O pesquisador descobre links públicos nos dois domínios por busca web, usando termos em inglês do nicho e escreve `seeds.json`; não exige seeds nem ângulo comercial de Luigi. Crawlee visita essas URLs dentro dos limites e normaliza evidências; não é um indexador de todo o Instagram/Facebook.
 
 ```sh
-python3 scripts/dispatch.py minerar --angle sea-moss --seeds CAMINHO/seeds.json --out CAMINHO/coleta
+python3 scripts/dispatch.py minerar --niche "saúde e beleza" --seeds CAMINHO/seeds.json --out CAMINHO/coleta
+python3 scripts/dispatch.py minerar --niche "manifestação/tarot" --seeds CAMINHO/seeds.json --out CAMINHO/coleta --backend browser
 ```
 
-O formato de seeds e das observações está em `operacao/schema_mineracao.json`. Defaults: Instagram/Facebook, EUA, vídeos de hoje e ontem no fuso `America/New_York`, **mais de 800 mil** views, conta com até 30 dias de criação e conteúdo exclusivamente de avatares IA. Os filtros podem ser ajustados no pedido; 70 mil seguidores não é um requisito padrão.
+O formato de seeds e observações está em `operacao/schema_mineracao.json`. Defaults: Instagram/Facebook, vídeos em inglês dos EUA, **últimos sete dias de calendário incluindo hoje**, no fuso `America/New_York`, **mais de 800 mil** views, conta até 30 dias de criação e conteúdo exclusivamente de avatares IA. Mostrar intervalo e fuso no relatório. Os filtros podem mudar por pedido; 70 mil seguidores não é requisito padrão. Inglês é atributo do conteúdo e não comprova EUA.
 
-O relatório contém aprovados, candidatos com dados desconhecidos e rejeitados. Métricas, criação, país e IA exclusiva exigem provas; a primeira postagem não prova a criação da conta e uma bio “AI” não prova todos os vídeos. Se a plataforma ocultar dados ou bloquear a consulta, registrar essa condição e entregar candidatos claramente identificados. O estado de coleta `COMPLETE`, `PARTIAL`, `BLOCKED` ou `FAILED` não significa que algum vídeo necessariamente passou nos filtros.
+O ranking usa visualizações confirmadas entre os vídeos descobertos. O relatório separa aprovados, candidatos com evidência insuficiente e rejeitados. Identidade vídeo/perfil/URL, views, postagem, idioma, criação, país e IA exclusiva exigem fontes próprias. Primeira postagem não prova criação da conta; bio “AI” não prova todos os vídeos; snippet de busca não confirma métrica ou data de publicação. O revisor audita fonte/método e correspondência de cada campo antes da entrega.
+
+HTTP coleta páginas públicas. O backend browser usa Crawlee/Playwright quando disponível; uma sessão autorizada pode ser usada somente se realmente acessível. Não há garantia de acesso às plataformas, nem criação automática de login/2FA. Bloqueios são registrados e evidências públicas acessíveis podem complementar candidatos sem transformar desconhecidos em aprovados. `COMPLETE`, `PARTIAL`, `BLOCKED` e `FAILED` descrevem a coleta, não aprovação dos filtros.
+
+Entrega: links clicáveis e ranking verificado no chat, candidatos identificados com filtros faltantes e arquivos do relatório. Adaptação para Sea Moss, FitWell, Auraly ou Body Hacks é etapa posterior solicitada por Luigi, sem condicionar a descoberta do nicho à oferta.
 
 ## Lotes e fronteiras da operação
 

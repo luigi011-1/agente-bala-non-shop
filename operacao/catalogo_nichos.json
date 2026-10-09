@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "niches": [
+    {"slug": "saude-beleza", "label": "Saúde e beleza", "aliases": ["saúde e beleza", "saude e beleza", "saúde", "saude", "health and beauty", "health", "wellness"], "search_terms_en": ["health wellness beauty", "healthy habits skincare beauty", "wellness nutrition"], "legacy_angles": ["sea-moss", "fitwell"]},
+    {"slug": "manifestacao-tarot", "label": "Manifestação e tarot", "aliases": ["manifestação/tarot", "manifestacao/tarot", "manifestação e tarot", "manifestacao e tarot", "manifestação", "manifestacao", "tarot", "manifestation tarot", "manifestation"], "search_terms_en": ["manifestation tarot", "law of attraction spiritual signs", "tarot reading"], "legacy_angles": ["auraly"]},
+    {"slug": "saude-masculina", "label": "Saúde masculina", "aliases": ["saúde masculina", "saude masculina", "men health", "men's health", "male wellness"], "search_terms_en": ["men health healthy habits", "men over 40 wellness fitness"], "legacy_angles": ["body-hacks"]}
+  ],
+  "defaults": {"min_views": 800000, "lookback_days": 7, "max_profile_age_days": 30, "country": "US", "ai_avatar_only": true, "timezone": "America/New_York", "language": "en"}
+}

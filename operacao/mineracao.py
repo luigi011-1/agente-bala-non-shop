@@ -1,7 +1,9 @@
 """Mineração limitada de páginas públicas Meta, com provas e lacunas explícitas.
 
 Não autentica, não contorna bloqueios e não automatiza Google Flow. Seeds são
-descobertas pelo agente de pesquisa; Crawlee faz a coleta HTTP auditável.
+descobertas por nicho pelo agente de pesquisa; Crawlee coleta com navegador ou
+HTTP auditável. A janela padrão inclui hoje e os seis dias anteriores em Nova
+York; só inglês inspecionado e visualizações confirmadas entram como provas.
 """
 from __future__ import annotations
 
@@ -19,8 +21,10 @@ from urllib.parse import parse_qs, urlencode, urljoin, urlsplit, urlunsplit
 from uuid import uuid4
 from zoneinfo import ZoneInfo
 
+from operacao.nichos import mining_defaults, resolve_niche
+
 ANGLES = ("sea-moss", "fitwell", "auraly", "body-hacks")
-FIELDS = ("posted_at", "views", "profile_created_at", "profile_country", "profile_ai_only", "niche_match")
+FIELDS = ("posted_at", "views", "profile_created_at", "profile_country", "profile_ai_only", "niche_match", "language")
 META_HOSTS = {"instagram.com", "www.instagram.com", "m.instagram.com", "facebook.com", "www.facebook.com", "m.facebook.com", "web.facebook.com"}
 
 
@@ -232,13 +236,19 @@ def load_seeds(path: Path, *, allow_local_fixtures: bool = False) -> tuple[list[
             item[key] = normalize_url(item[key], allow_local_fixtures=allow_local_fixtures)
         if not isinstance(item.get("observed_at"), str) or not re.search(r"T.*(?:Z|[+-]\d\d:?\d\d)$", item["observed_at"]) or not timestamp(item["observed_at"]) or not isinstance(item.get("note"), str) or not item["note"].strip():
             raise ValueError("Observação exige horário e nota concreta")
-        expected = {"profile_ai_only": ("visual_audit", "all_public_posts"), "niche_match": ("content_audit", "profile_content")}
-        if item["field"] not in expected or (item.get("method"), item.get("scope")) != expected[item["field"]]:
+        expected = {"profile_ai_only": ("visual_audit", "all_public_posts"), "niche_match": ("content_audit", "profile_content"), "language": ("content_audit", "video_content")}
+        if item["field"] not in expected or ((item.get("method"), item.get("scope")) != expected[item["field"]] and not (item["field"] == "language" and (item.get("method"), item.get("scope")) == ("asr", "video_content"))):
             raise ValueError("Observações externas só complementam auditoria de conteúdo/nicho e avatar IA")
-        if not isinstance(item.get("value"), bool):
+        if item["field"] != "language" and not isinstance(item.get("value"), bool):
             raise ValueError("Valor da auditoria deve ser booleano")
-        if item["field"] == "niche_match" and item.get("angle") not in ANGLES:
-            raise ValueError("Auditoria de nicho exige angle explícito")
+        if item["field"] == "language":
+            if not isinstance(item.get("value"), str) or not re.fullmatch(r"[a-z]{2,3}(?:-[A-Za-z]{2})?", item["value"]) or not is_video_url(item["subject_url"]):
+                raise ValueError("Idioma exige código de idioma e auditoria do vídeo específico")
+        if item["field"] == "niche_match":
+            if item.get("niche"):
+                item["niche"] = resolve_niche(item["niche"])["slug"]
+            elif item.get("angle") not in ANGLES:
+                raise ValueError("Auditoria de nicho exige niche ou angle explícito")
         checked.append(item)
     return normalized, checked
 
@@ -268,14 +278,14 @@ def classify_video(video: dict, profiles: dict[str, dict], observations: list[di
     # independent reviewer can check the cited posts and the stated coverage.
     for item in observations:
         observed = timestamp(item["observed_at"])
-        if item["subject_url"] in {video["url"], profile_url} and observed and timedelta(0) <= now.astimezone(timezone.utc) - observed <= timedelta(days=2):
-            proof[item["field"]].append(evidence(item["value"], item["source_url"], item["observed_at"], item["method"], excerpt=item["note"]) | {"scope": item["scope"]})
+        if item["subject_url"] in ({video["url"]} if item["field"] == "language" else {video["url"], profile_url}) and observed and timedelta(0) <= now.astimezone(timezone.utc) - observed <= timedelta(days=2):
+            proof[item["field"]].append(evidence(item["value"], item["source_url"], item["observed_at"], item["method"], excerpt=item["note"]) | {"scope": item["scope"]} | ({"niche": item["niche"]} if item.get("niche") else {"angle": item["angle"]} if item.get("angle") else {}))
     tz = ZoneInfo(filters["timezone"])
     today = date.fromisoformat(filters["today"])
     earliest = today - timedelta(days=filters["lookback_days"] - 1)
 
     def post_stamp(value):
-        # A date without an explicit zone/time is insufficient for today/yesterday.
+        # A date without an explicit zone/time is insufficient for the weekly window.
         if isinstance(value, str) and not re.search(r"T.*(?:Z|[+-]\d\d:?\d\d)$", value):
             return None
         return timestamp(value)
@@ -287,6 +297,7 @@ def classify_video(video: dict, profiles: dict[str, dict], observations: list[di
         "profile_country": _criterion(proof["profile_country"], lambda v: str(v).upper() if v else None, lambda value: value in {"US", "USA", "UNITED STATES", "UNITED STATES OF AMERICA"}),
         "profile_ai_only": _criterion(proof["profile_ai_only"], lambda v: v if isinstance(v, bool) else None, lambda v: v),
         "niche_match": _criterion(proof["niche_match"], lambda v: v if isinstance(v, bool) else None, lambda v: v),
+        "language": _criterion(proof["language"], lambda v: v.split("-")[0].lower() if isinstance(v, str) else None, lambda v: v == filters.get("language", "en")),
     }
     media_evidence = list(video.get("evidence", {}).get("media_type", []))
     if re.match(r"^/(?:reel|reels|tv)/", urlsplit(video["url"]).path) or "/videos/" in urlsplit(video["url"]).path or urlsplit(video["url"]).path.rstrip("/") == "/watch":
@@ -381,10 +392,10 @@ def render_report(result: dict) -> str:
     def escape_label(value):
         return str(value).replace("\\", "\\\\").replace("[", "\\[").replace("]", "\\]").replace("<", "&lt;").replace(">", "&gt;").replace("\n", " ")
 
-    text = [f"# Mineração — {result['angle']}", "", f"Estado: **{result['status']}**. Coleta: {result['started_at']}.",
+    text = [f"# Mineração — {result.get('niche', {}).get('label') or result.get('angle')}", "", f"Estado: **{result['status']}**. Coleta: {result['started_at']}.",
             f"Páginas: {result['counts']['pages']}; aprovados: {len(result['approved'])}; candidatos: {len(result['candidates'])}; rejeitados: {len(result['rejected'])}.",
             "", "Filtros: " + json.dumps(result["filters"], ensure_ascii=False) + ".", "",
-            "EUA é a localização declarada do perfil, não uma inferência pelo idioma nem pela audiência. Avatar IA exige auditoria visual de todos os posts públicos; a bio sozinha não prova exclusividade."]
+            "Ranking por visualizações confirmadas entre os vídeos consultados; não representa os mais virais de toda a rede. Inglês exige inspeção do conteúdo do vídeo. EUA é a localização declarada do perfil, não uma inferência pelo idioma nem pela audiência. Avatar IA exige auditoria visual de todos os posts públicos; a bio sozinha não prova exclusividade."]
     for group, label in (("approved", "Aprovados com evidências"), ("candidates", "Candidatos com lacunas"), ("rejected", "Rejeitados pelos filtros")):
         text += ["", "## " + label, ""]
         if not result[group]:
@@ -406,53 +417,71 @@ def render_report(result: dict) -> str:
     return "\n".join(text) + "\n"
 
 
-def defaults_for_angle(angle: str) -> dict:
-    config = Path(__file__).with_name("angulos.json")
-    fallback = {"min_views": 800000, "lookback_days": 2, "max_profile_age_days": 30, "country": "US", "ai_avatar_only": True, "timezone": "America/New_York"}
-    if config.exists():
-        data = json.loads(config.read_text(encoding="utf-8"))
-        for item in data.get("angles", []):
-            if item.get("slug") == angle:
-                fallback.update(item.get("mining_defaults", {}))
-                break
-    return fallback
+def defaults_for_angle(angle: str | None) -> dict:
+    """Compatibility entrypoint: editorial defaults no longer depend on offer."""
+    return mining_defaults()
+
+
+def rank_videos(videos: list[dict]) -> list[dict]:
+    def key(video):
+        criterion = video['criteria']['views']
+        values = [exact_count(proof.get('value')) for proof in criterion['evidence']]
+        values = [value for value in values if value is not None]
+        # Conflicting or rejected views are never presented as confirmed rank.
+        confirmed = min(values) if values and criterion['status'] == 'confirmed' else None
+        video['confirmed_views'] = confirmed
+        return (confirmed is None, -(confirmed or 0), video['url'])
+    return sorted(videos, key=key)
 
 
 async def mine(args: argparse.Namespace) -> dict:
     urls, observations = load_seeds(args.seeds, allow_local_fixtures=args.allow_local_fixtures)
     now = datetime.now(timezone.utc)
-    filters = defaults_for_angle(args.angle)
+    angle = getattr(args, "angle", None)
+    niche = resolve_niche(getattr(args, "niche", None), angle=angle)
+    filters = defaults_for_angle(angle)
     for name in ("min_views", "lookback_days", "max_profile_age_days", "timezone"):
         if getattr(args, name) is not None:
             filters[name] = getattr(args, name)
     filters["today"] = args.today or now.astimezone(ZoneInfo(filters["timezone"])).date().isoformat()
-    date.fromisoformat(filters["today"])
-    observations = [item for item in observations if item["field"] != "niche_match" or item["angle"] == args.angle]
-    pages, errors, limits, scheduled = await crawl_pages(urls, max_pages=args.max_pages, max_seconds=args.max_seconds, concurrency=args.concurrency, allow_local_fixtures=args.allow_local_fixtures)
+    reference_day = date.fromisoformat(filters["today"])
+    filters["window_start"] = (reference_day - timedelta(days=filters["lookback_days"] - 1)).isoformat()
+    filters["window_end"] = reference_day.isoformat()
+    observations = [item for item in observations if item["field"] != "niche_match" or (item.get("niche") == niche["slug"] if item.get("niche") else bool(angle and item.get("angle") == angle and resolve_niche(angle=angle)["slug"] == niche["slug"]))]
+    backend = getattr(args, "backend", "http")
+    crawl_options = dict(max_pages=args.max_pages, max_seconds=args.max_seconds, concurrency=args.concurrency, allow_local_fixtures=args.allow_local_fixtures)
+    if backend == "browser":
+        from operacao.coleta_browser import crawl_browser
+        pages, errors, limits, scheduled = await crawl_browser(urls, browser_profile=getattr(args, "browser_profile", None), **crawl_options)
+    else:
+        pages, errors, limits, scheduled = await crawl_pages(urls, **crawl_options)
     profiles = {url: page for url, page in pages.items() if not is_video_url(url)}
     videos = [page for url, page in pages.items() if is_video_url(url)]
     # Direct video seeds still appear in the report when the endpoint is blocked.
     videos.extend({"url": url, "blocked": True} for url in scheduled if is_video_url(url) and url not in pages)
     classified = [classify_video(video, profiles, observations, filters, now) for video in videos]
-    approved = [v for v in classified if v["status"] == "approved"]
-    candidates = [v for v in classified if v["status"] == "candidate"]
+    approved = rank_videos([v for v in classified if v["status"] == "approved"])
+    candidates = rank_videos([v for v in classified if v["status"] == "candidate"])
     rejected = [v for v in classified if v["status"] == "rejected"]
     # COMPLETE describes coverage of scheduled URLs and proof, never claims an
     # exhaustive Instagram/Facebook search. Unknown filters keep it PARTIAL.
     blocked = not pages or all(page.get("blocked") for page in pages.values())
     fatal = any(error.get("url") is None and error["reason"] != "TIME_LIMIT" for error in errors)
     status = "FAILED" if fatal else "BLOCKED" if blocked else "PARTIAL" if errors or limits or candidates or any(page.get("insufficient_metadata") for page in pages.values()) else "COMPLETE"
-    return {"schema_version": 1, "angle": args.angle, "status": status, "started_at": now.isoformat(), "finished_at": datetime.now(timezone.utc).isoformat(),
+    return {"schema_version": 2, "angle": angle, "niche": niche, "ranking_scope": "among_collected_videos", "status": status, "started_at": now.isoformat(), "finished_at": datetime.now(timezone.utc).isoformat(),
             "filters": filters, "limits": {"max_pages": args.max_pages, "max_seconds": args.max_seconds, "concurrency": args.concurrency}, "limits_reached": limits,
             "counts": {"seeds": len(urls), "scheduled": len(scheduled), "pages": len(pages)}, "test_fixture_mode": args.allow_local_fixtures,
-            "crawler": {"name": "Crawlee BeautifulSoupCrawler", "version": importlib.metadata.version("crawlee")},
+            "crawler": {"name": "Crawlee PlaywrightCrawler" if backend == "browser" else "Crawlee BeautifulSoupCrawler", "backend": backend, "version": importlib.metadata.version("crawlee")},
             "approved": approved, "candidates": candidates, "rejected": rejected, "errors": errors}
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--angle", required=True, choices=ANGLES)
+    parser.add_argument("--angle", choices=ANGLES, help="Compatibilidade legada: resolve um nicho amplo, sem buscar produto")
+    parser.add_argument("--niche", help="Nicho editorial textual: saúde e beleza, manifestação/tarot, ou outro")
     parser.add_argument("--seeds", required=True, type=Path)
+    parser.add_argument("--backend", choices=("http", "browser"), default="browser", help="Browser renderiza JavaScript; HTTP é alternativa leve")
+    parser.add_argument("--browser-profile", type=Path, help="Perfil de navegador dedicado com sessão autorizada; não cria login")
     parser.add_argument("--out", required=True, type=Path, help="Pasta de resultados; não deve existir")
     parser.add_argument("--timezone")
     parser.add_argument("--today", help="Data de referência YYYY-MM-DD; não altera horário observado das provas")
@@ -464,6 +493,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--concurrency", type=int, default=2)
     parser.add_argument("--allow-local-fixtures", action="store_true", help="Somente testes: permite HTTP loopback; marcado no relatório")
     args = parser.parse_args(argv)
+    if not args.niche and not args.angle:
+        parser.error("Informe --niche ou --angle legado")
     if not 1 <= args.max_pages <= 100 or not 1 <= args.max_seconds <= 600 or not 1 <= args.concurrency <= 4:
         parser.error("Limites: páginas 1..100, segundos 1..600, concorrência 1..4")
     if args.min_views is not None and args.min_views < 0 or args.lookback_days is not None and not 1 <= args.lookback_days <= 30 or args.max_profile_age_days is not None and not 1 <= args.max_profile_age_days <= 365:

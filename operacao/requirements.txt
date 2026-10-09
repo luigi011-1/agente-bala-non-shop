@@ -9,5 +9,6 @@ torchvision==0.23.0
 Pillow==12.3.0
 # PyAV 19 remove metadata_errors usado por Faster-Whisper 1.2.1.
 av==18.0.0
-crawlee[beautifulsoup,httpx]==1.10.4
+crawlee[beautifulsoup,httpx,playwright]==1.10.4
+playwright==1.63.0
 PyYAML==6.0.3
