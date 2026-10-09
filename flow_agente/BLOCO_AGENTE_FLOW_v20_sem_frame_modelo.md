@@ -175,7 +175,7 @@ como UM objeto JSON em ingles: comeca com `{` na linha logo abaixo do codigo e t
 que fecha o objeto. Colar o objeto INTEIRO, de `{` ate `}`, literalmente no campo de prompt do
 Nano Banana 2, sem o codigo, sem resumir, sem converter para texto corrido e sem apagar campo.
 Cada campo e parte do prompt (formato, referencia, identidade, roupa, cena, prop, postura,
-composicao, camera, luz, estado, realismo, proporcao e negative), nao metadata. Se o JSON chegar
+composicao, camera, luz, estado, realismo, proporcao e negative ou, desde 2026-10-09, `clean_frame`), nao metadata. Se o JSON chegar
 quebrado ou incompleto (sem o `}` final, aspas abertas), PARAR e avisar o operador. Pacotes
 anteriores a v17, com o K em paragrafo unico, continuam validos como foram entregues.
 

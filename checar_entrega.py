@@ -236,7 +236,7 @@ def fala_do_bloco(bloco):
     """Extrai a fala entre aspas do prompt de video. Segundo retorno diz se e take mudo."""
     if bloco is None:
         return None, False
-    if re.search(r"sem fala no take|voz-?over|voz off", bloco, re.I):
+    if re.search(r"sem fala no take|voz-?over|voz off|^\s*\(no speech\)", bloco, re.I | re.M):
         return None, True
     if re.search(r"^falas no take", bloco, re.M | re.I):
         # V de dialogo (2026-09-23): uma linha numerada por fala, na ordem do roteiro
@@ -513,7 +513,7 @@ def c_realismo_visual(prompts_k):
     for kid, txt, loc in prompts_k:
         if kid.startswith("REF-") or not txt:
             continue
-        if not re.search(r"no warm|yellow tint", txt, re.I):
+        if not re.search(r"no warm|yellow tint|true neutral colors", txt, re.I):
             faltas["sem_quente"].append(kid)
         for m in RE_LUZ_QUENTE.finditer(txt):
             antes = txt[max(0, m.start() - 25):m.start()].lower()
@@ -528,7 +528,7 @@ def c_realismo_visual(prompts_k):
                 break
         if not RE_LUZ_NEUTRA.search(txt):
             faltas["luz_neutra"].append(kid)
-        if not re.search(r"no blur|no bokeh", txt, re.I):
+        if not re.search(r"no blur|no bokeh|everything in sharp focus", txt, re.I):
             faltas["blur"].append(kid)
     msgs = {
         "sem_quente": "sem 'no warm orange color cast, no yellow tint' no negative",
@@ -594,6 +594,12 @@ def c_negative(kfs):
             continue
         neg = str(d.get("negative", ""))
         loc = (PROMPTS_FILE + ":%d") % k["linha"]
+        if not neg and d.get("clean_frame"):
+            # Flow v21 (2026-10-09): sem negative prompt. O K traz `clean_frame` em positivo.
+            if "text-free" not in str(d["clean_frame"]).lower():
+                falha("negative", "%s tem clean_frame sem 'text-free'" % k["id"], loc)
+                ruim = True
+            continue
         if not neg:
             falha("negative", "%s nao tem campo 'negative'" % k["id"], loc)
             ruim = True
@@ -622,6 +628,63 @@ def c_negative(kfs):
                 ruim = True
     if not ruim and kfs:
         ok("negative", "negatives corretos, sem 'no text' seco e sem termo sensivel")
+
+
+def c_flow_seguro(pasta):
+    """Fraseado seguro do Flow (2026-10-09, flow_seguro.py). O Flow nao tem negative prompt e o classificador
+    le o TOKEN: lista de negacoes, 'real person', 'explicitly male', bebida, fogo e marca derrubaram os
+    packs Auraly video A e B. Pacote com a linha `flow_seguro: v1` reprova em FALHA; pacote antigo so avisa."""
+    import flow_seguro
+    achados_falha, achados_aviso, marcados = [], [], False
+    for p in sorted(Path(pasta).glob("*.md")):
+        if not re.match(r"(PROMPTS|FLOW|ENTREGA)_", p.name):
+            continue
+        try:
+            marcado = flow_seguro.MARCADOR in p.read_text(encoding="utf-8")
+            achados = flow_seguro.varrer_arquivo(p)
+        except Exception:
+            continue
+        marcados = marcados or marcado
+        for cod, nivel, termo, motivo in achados:
+            item = ("%s:%s '%s' (%s)" % (p.name, cod, termo, motivo), p.name)
+            (achados_falha if (marcado and nivel == "FALHA") else achados_aviso).append(item)
+    for msg, loc in sorted(set(achados_falha))[:12]:
+        falha("flow_seguro", msg, loc)
+    if achados_aviso and not achados_falha:
+        if marcados:
+            for msg, loc in sorted(set(achados_aviso))[:8]:
+                aviso("flow_seguro", msg, loc)
+        else:
+            aviso("flow_seguro", "%d gatilho(s) de censura do Flow em pacote sem `%s` (historico). "
+                  "Rodar: python flow_seguro.py %s" % (len(set(achados_aviso)), flow_seguro.MARCADOR, pasta))
+    # Padrao unico (Luigi, 2026-10-09): K entregue = paragrafo curto; V entregue = so fala e idioma.
+    if marcados:
+        formato = []
+        for p in sorted(Path(pasta).glob("*.md")):
+            if not re.match(r"(FLOW|ENTREGA)_", p.name):
+                continue
+            for b in blocos(p.read_text(encoding="utf-8")):
+                cod, txt = b["id"], re.sub(r"^\s*[KV]\d+\s*\n", "", b["bloco"])
+                if not txt.strip() or txt.startswith("Cena: "):
+                    continue
+                if cod.startswith("K") and (txt.lstrip().startswith("{") or len(txt) > 2600):
+                    formato.append("%s:%s K fora do padrao curto (JSON longo aposentado)" % (p.name, cod))
+                if cod.startswith("V") and len(cod) <= 3 and not RE_V_MINIMO.match(txt):
+                    formato.append("%s:%s V fora do padrao minimalista" % (p.name, cod))
+        # Cabecalho "Qual video e este" e uma linha `Cena:` por K/V no ENTREGA (Luigi, 2026-10-09), fora dos blocos
+        for p in sorted(Path(pasta).glob("ENTREGA_*.md")):
+            t = p.read_text(encoding="utf-8")
+            if "## Qual vídeo é este" not in t:
+                formato.append("%s: sem o cabecalho '## Qual vídeo é este' (nome, o que acontece, gancho)" % p.name)
+            n_heads = len(re.findall(r"^### [KV]\d+ ", t, re.M))
+            n_cena = len(re.findall(r"^Cena: ", t, re.M))
+            if n_cena < n_heads:
+                formato.append("%s: %d K/V sem linha 'Cena:' em portugues acima do bloco" % (p.name, n_heads - n_cena))
+        for msg in sorted(set(formato))[:12]:
+            falha("flow_seguro", msg, msg.split(":")[0])
+        achados_falha = achados_falha + formato
+    if marcados and not achados_falha and not achados_aviso:
+        ok("flow_seguro", "sem gatilho de censura nem lista de negacoes nos blocos do Flow")
 
 
 def c_nomenclatura(prompts, roteiro):
@@ -734,6 +797,10 @@ def c_sem_produto(angulo, kfs):
         ok("sem-produto", "angulo %d sem produto em quadro" % angulo)
 
 
+# V minimalista (flow_seguro v1, 2026-10-09): so a fala e o idioma, sem os 5 blocos
+RE_V_MINIMO = re.compile(r"\s*(?:\(no speech\)|The person in the image)")
+
+
 def c_blocos_video(videos):
     ruim = False
     for v in videos:
@@ -744,6 +811,8 @@ def c_blocos_video(videos):
             continue
         b = v["bloco"]
         loc = (PROMPTS_FILE + ":%d") % v["linha"]
+        if RE_V_MINIMO.match(b):
+            continue
         if not re.search(r"^c[âa]mera:", b, re.M | re.I):
             falha("blocos-video", "%s sem o bloco 'camera:'" % v["id"], loc)
             ruim = True
@@ -878,7 +947,7 @@ def c_angulo3(angulo, arquivos, kfs, takes, pasta, roteiro):
 # texto cru e reprovou os 6 pacotes existentes lendo notas de producao que
 # descreviam o comportamento CERTO ("no lugar de 'Check out the surprise in my
 # Stories': THE FACE IS IN YOUR MESSAGES"). Nota que explica a regra nao e copy.
-STORY_PAT = r"my stories|my profile picture|check my stor|watch my stor|access(ing)? my stor"
+STORY_PAT = r"my stories|my profile picture|check my stor|watch my stor|access(ing)? my stor|mis historias|mi foto de perfil"
 # O CTA nomeia o objeto: "his face is in there", "find out who it is".
 DECLARADO_PAT = r"\bface\b|who (it|he|she) is|(his|her|their) name|the initial"
 # A copy entregou um pedaco da identidade antes do CTA, o que autoriza declarar.
@@ -1273,6 +1342,8 @@ def c_blocos_video_flow(videos, sub_nome):
             continue
         b = v["bloco"]
         loc = "%s/PROMPTS_VIDEO_FLOW.md:%d" % (sub_nome, v["linha"])
+        if RE_V_MINIMO.match(b):
+            continue
         if not re.search(r"^c[âa]mera:", b, re.M | re.I):
             falha("blocos-video", "%s/%s sem o bloco 'camera:'" % (sub_nome, v["id"]), loc)
             ruim = True
@@ -1429,6 +1500,7 @@ def checar_auraly(pasta, roteiro):
         PROMPTS_FILE = "PROMPTS_PRODUCAO.md"
 
     c_ficha_frame(pasta)
+    c_flow_seguro(pasta)
 
     # Registro divino (mesmo check do classico)
     antes = len([f for f in FALHAS if f[0] == "angulo3"])
@@ -1564,6 +1636,7 @@ def checar(pasta):
     c_gancho_verbal(pasta)
     c_flow_quantidade(pasta)
     c_ficha_frame(pasta)
+    c_flow_seguro(pasta)
     c_angulo3(angulo, arquivos, kfs, takes, pasta, roteiro)
     c_angulo4(angulo, arquivos, takes, kfs)
     c_seamoss(angulo, arquivos, takes, kfs, roteiro or "")

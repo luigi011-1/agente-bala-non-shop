@@ -103,7 +103,10 @@ lente numa selfie sem objeto. Sinais de gente real em `PERFIL_ORGANICO.md` seç�
 ## PARTE 3 · TRECHOS PRONTOS (para os campos do JSON de imagem do Flow)
 
 Desde 2026-09-25 (contrato do Flow v17) o K entregue é JSON: cada trecho abaixo vai no campo
-correspondente (`lighting`, `composition`, `realism`, `negative`), com o mesmo texto.
+correspondente (`lighting`, `composition`, `realism`, `clean_frame`), com o mesmo texto. **Desde 2026-10-09 o K colado no Flow é um parágrafo curto**
+(padrão único, ver AGENTS.md); estes campos valem só no JSON interno do PROMPTS_. O K não tem `negative` nem
+`fiction_note` (o Flow não tem negative prompt e filtra o token): o que era negative vai em positivo no `clean_frame`,
+ver `flow_seguro.py`. Os trechos de "sem tom quente" e "sem blur" viram "true neutral colors" e "everything in sharp focus".
 
 Colar **dentro** de cada prompt, adaptando só o que está entre colchetes. Os blocos do Flow são
 autossuficientes, então isto se repete em todo `K__`, sem exceção.
@@ -289,7 +292,7 @@ Cenário do modelo: (SÓ AURALY, 2026-10-04) o ambiente atrás no frame, que o s
   roupa do character sheet e cenário e ângulo do vídeo modelo, que aí são CONTEÚDO e mandam).
 - **Proximidade do herói tem piso:** a distância final é a MAIS PERTO entre o modelo e o gate. Nunca
   mais longe que no modelo, e sempre mais perto que o rosto (Parte 2).
-- **Vocabulário seguro é só do negative.** No positivo a forma do herói vai descrita inteira, como se
+- **Vocabulário seguro vale no K inteiro desde 2026-10-09 (`flow_seguro.py`).** No positivo a forma do herói vai descrita inteira, como se
   vê no frame (Falha #6 e #8 de `erros-recorrentes`). Genericizar o herói troca o gancho.
 - **O texto nunca contradiz o frame anexado.** O anexo só ajuda; quando o texto diz outra coisa, o
   modelo de imagem segue o texto.

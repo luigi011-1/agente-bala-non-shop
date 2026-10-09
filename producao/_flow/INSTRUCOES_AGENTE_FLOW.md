@@ -170,12 +170,14 @@ Receber todos os K, contar codigos e conferir duplicatas. Cada codigo aparece so
 linha, seguido de um prompt completo e autossuficiente. Nao copiar titulos, notas, caminhos,
 configuracoes ou metadata para o campo do prompt.
 
+**ATUALIZACAO 2026-10-09: o JSON abaixo foi APOSENTADO.** O K colado no Flow e UM paragrafo curto em ingles e o V e so a fala e o idioma (AGENTS.md, "Padrao unico de prompt do Flow"). O texto da v17 fica como historico.
+
 **Prompt de imagem em JSON (v17, 2026-09-25).** Desde a v17 todo prompt K (e todo `REF-P`) chega
 como UM objeto JSON em ingles: comeca com `{` na linha logo abaixo do codigo e termina com o `}`
 que fecha o objeto. Colar o objeto INTEIRO, de `{` ate `}`, literalmente no campo de prompt do
 Nano Banana 2, sem o codigo, sem resumir, sem converter para texto corrido e sem apagar campo.
 Cada campo e parte do prompt (formato, referencia, identidade, roupa, cena, prop, postura,
-composicao, camera, luz, estado, realismo, proporcao e negative), nao metadata. Se o JSON chegar
+composicao, camera, luz, estado, realismo, proporcao e negative ou, desde 2026-10-09, `clean_frame`), nao metadata. Se o JSON chegar
 quebrado ou incompleto (sem o `}` final, aspas abertas), PARAR e avisar o operador. Pacotes
 anteriores a v17, com o K em paragrafo unico, continuam validos como foram entregues.
 
