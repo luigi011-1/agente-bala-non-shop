@@ -36,8 +36,8 @@ arquivo). Nenhum item aqui é opcional.
     sobre o rosto, nunca sobre o herói.
 15. Light leak laranja só na entrada de 2 takes. Cortes secos no resto.
 16. Voz em `loudnorm I=-14 TP=-1.2`.
-16b. **Música sempre a -10 dB da voz** (Luigi, 2026-10-09): a faixa é normalizada para -14 LUFS (o
-    nível da voz) e baixada 10 dB, sem ducking, com 0,3s de entrada e 0,8s de saída; silêncio de
+16b. **Música sempre a -25 dB da voz** (Luigi, 2026-10-09; -10 dB ficou alta e atrapalhou a fala): a faixa é normalizada para -14 LUFS (o
+    nível da voz) e baixada 25 dB, sem ducking, com 0,3s de entrada e 0,8s de saída; silêncio de
     abertura da faixa é pulado. Faixas do Luigi em `/mnt/project-files/edicao/musicas/` (fora do repo);
     a mesma produção sempre pega a mesma faixa, ou a que o Luigi pedir.
 
@@ -92,7 +92,7 @@ python3 .claude/skills/edicao/template/editar.py <pasta_dos_takes> [--producao <
    `producao/` e de `/mnt/project-files/entregas/`. Abaixo de 85% de semelhança, para e pede `--producao`.
 4. **Quadro fantasma automático**: em cada corte, um quadro parecido com os DOIS vizinhos de uma troca
    de cena reprova. Testado: acha o erro do caso 31 e passa a versão aprovada.
-5. **Música padrão** a -10 dB da voz (regra 16b).
+5. **Música padrão** a -25 dB da voz (regra 16b).
 
 Teste no v02 (2026-10-09): mesmo vídeo aprovado (24,7s, 3,64 palavras/s, mesmos cortes), agora com música, em ~6 min do comando ao arquivo (antes ~12 min mais conferência na mão). A base caiu de ~7 min para ~2,5 min; o render no HyperFrames (~2,5 min) é o que mais pesa agora.
 

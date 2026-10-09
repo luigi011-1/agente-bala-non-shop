@@ -8,7 +8,7 @@ Faz, em ordem, e para no primeiro problema:
   2. acha sozinho o roteiro da produção comparando a fala com os roteiros do repo e das entregas;
   3. confere se cada take falou a frase do roteiro;
   4. corta pelos silêncios reais e monta a base com os trechos EM PARALELO (minterpolate por trecho);
-  5. legenda (tempo do whisper no vídeo cortado, texto do roteiro), light leak, música a -10 dB da voz;
+  5. legenda (tempo do whisper no vídeo cortado, texto do roteiro), light leak, música a -25 dB da voz;
   6. lint e render no HyperFrames, recompressão para caber na pasta do Mac (< 30 MB);
   7. conferências automáticas (silêncio, quadro fantasma, contagem de palavras) + contact sheets,
      e escreve RELATORIO.md com passa/falha.
@@ -22,7 +22,7 @@ MUSICAS = os.environ.get("EDICAO_MUSICAS", "/mnt/project-files/edicao/musicas")
 ENTREGAS = "/mnt/project-files/entregas"
 
 SP, GAP, PAD_IN, PAD_OUT, MIN_ISLAND, JUNTA, W, H, FPS = 1.12, 0.15, 0.05, 0.11, 0.4, 0.05, 1080, 1920, 30
-MUSICA_DB = -10  # Luigi, 2026-10-09: música sempre 10 dB abaixo da voz
+MUSICA_DB = -25  # Luigi, 2026-10-09: música sempre 25 dB abaixo da voz (-10 atrapalhou a fala)
 
 
 def sh(cmd, **kw):
@@ -213,7 +213,7 @@ def mixar(voz, musica, total, saida):
     log_ = sh_err(f'ffmpeg -hide_banner -t 40 -i "{musica}" -af silencedetect=noise=-40dB:d=0.3 -f null -')
     m = re.search(r"silence_start: 0(?:\.0+)?\s.*?silence_end: ([\d.]+)", log_, re.S)
     ini = float(m.group(1)) if m else 0.0  # pula silêncio de abertura da faixa
-    # voz já em -14 LUFS; música normalizada em -14 LUFS e baixada 10 dB = 10 dB abaixo da voz, sempre
+    # voz já em -14 LUFS; música normalizada em -14 LUFS e baixada 25 dB = 25 dB abaixo da voz, sempre
     sh(["ffmpeg", "-y", "-loglevel", "error", "-i", voz, "-ss", f"{ini:.2f}", "-i", musica, "-filter_complex",
         f"[1:a]loudnorm=I=-14:TP=-2:LRA=11,volume={MUSICA_DB}dB,aformat=sample_rates=44100:channel_layouts=mono,"
         f"atrim=0:{total:.3f},afade=t=in:d=0.3,afade=t=out:st={total - 0.8:.2f}:d=0.8[m];"
