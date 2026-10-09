@@ -4,7 +4,7 @@ pipeline: classico
 tipo: crescimento
 Ângulo 2 · rodada de VALIDAÇÃO · origem do modelo: avatar IA de criador (espanhol, 84,1s, 25 cenas)
 Vídeo modelo: `input/modelo_watch` (`video1_modelo.mp4`, 84,1s; cortes em 3,5 · 4,8 · 6,6 · 7,8 · 10,2 · 11,8 · 12,7 · 15,9 · 17,3 · 18,7 · 25,3 · 27,8 · 30,1 · 35,9 · 39,2 · 42,0 · 47,1 · 50,2 · 53,4 · 58,8 · 61,6 · 63,7 · 69,7 · 76,1s)
-Avatar: holistic.brandon (COACH, mulher ~30), âncora `producao/_ancoras/holistic_brandon_ancora.jpg`
+Avatar: coach mulher ~30 (conta FitWell), âncora `producao/_ancoras/holistic_brandon_ancora.jpg`
 CTA original: "Comenta rutina e te mando mi rutina completa de la mañana, la que le doy a mi gente. Pero sígueme, si no no te puedo escribir."
 Funil: growth. Sem produto, sem quiz, sem preço, sem "free". CTA aponta para o link da legenda + follow (decisão do Luigi de 2026-10-05, vale para toda conta e todo post orgânico).
 Enquadramento: cada cena do modelo vira um take; a avatar sempre no cenário-base da conta (box de treino: parede de bloco branco, neon TRAIN PRAY REPEAT, bandeira dos EUA, mesa preta).
@@ -125,9 +125,9 @@ Um setup por take (um take por cena do modelo, sem juntar cenas; `K__` = `T__`).
 
 ### T11 · TALKING · Setup T11
 
-> "They'll tell you to sleep more and buy another cream, but none of that touches the cause."
+> "They'll tell you to sleep more and buy another cream, but none of that goes after the real problem."
 
-17 palavras, cena do modelo de 18.7 a 25.3s (6.6s).
+18 palavras, cena do modelo de 18.7 a 25.3s (6.6s).
 
 ### T12 · TALKING · Setup T12 · CENA CURTA
 
@@ -215,7 +215,7 @@ Um setup por take (um take por cena do modelo, sem juntar cenas; `K__` = `T__`).
 
 ## Roteiro só-fala
 
-If you wake up with eyes swollen like this, and want them like this, or a face swollen like this, and want it like this, or fingers so swollen your ring won't go on, and want them like this? Stay with me, because you won't hear this from the cream aisle. It's not your age, it's not bad sleep, They'll tell you to sleep more and buy another cream, but none of that touches the cause. Let me show you what works. Take a pot, two cups of water, add a handful of fresh parsley and a teaspoon of fennel seeds, squeeze in half a lemon, simmer it for ten minutes, and drink it warm, first thing, before you eat, every morning, no skipping. Eight hours lying down without one sip of water, so the water gets stuck right here in your face. This warm drink is the first thing your body gets, and once you stand up and move, it drains. Your face is going to look so rested, in a way that's going to surprise you. People will ask how many hours you slept, what cream you used, what your secret is. And you didn't do any of that. You just gave your body what it was missing, when it needed it. That's the part you never hear. My full morning routine, the one I give my clients, is in the link in the caption. Follow me so the next one finds you.
+If you wake up with eyes swollen like this, and want them like this, or a face swollen like this, and want it like this, or fingers so swollen your ring won't go on, and want them like this? Stay with me, because you won't hear this from the cream aisle. It's not your age, it's not bad sleep, They'll tell you to sleep more and buy another cream, but none of that goes after the real problem. Let me show you what works. Take a pot, two cups of water, add a handful of fresh parsley and a teaspoon of fennel seeds, squeeze in half a lemon, simmer it for ten minutes, and drink it warm, first thing, before you eat, every morning, no skipping. Eight hours lying down without one sip of water, so the water gets stuck right here in your face. This warm drink is the first thing your body gets, and once you stand up and move, it drains. Your face is going to look so rested, in a way that's going to surprise you. People will ask how many hours you slept, what cream you used, what your secret is. And you didn't do any of that. You just gave your body what it was missing, when it needed it. That's the part you never hear. My full morning routine, the one I give my clients, is in the link in the caption. Follow me so the next one finds you.
 
 ## Tabela bilíngue
 
@@ -231,7 +231,7 @@ If you wake up with eyes swollen like this, and want them like this, or a face s
 | T8 | you won't hear this from the cream aisle. | isso você não vai ouvir no corredor de cremes. |
 | T9 | It's not your age, | Não é a idade, |
 | T10 | it's not bad sleep, | não é dormir mal, |
-| T11 | They'll tell you to sleep more and buy another cream, but none of that touches the cause. | Vão te dizer para dormir mais e comprar outro creme, mas nada disso toca na causa. |
+| T11 | They'll tell you to sleep more and buy another cream, but none of that goes after the real problem. | Vão te dizer para dormir mais e comprar outro creme, mas nada disso ataca o problema de verdade. |
 | T12 | Let me show you what works. Take | Deixa eu te mostrar o que funciona. Pega |
 | T13 | a pot, two cups of water, | uma panela, duas xícaras de água, |
 | T14 | add a handful of fresh parsley and a teaspoon of fennel seeds, | coloca um punhado de salsinha fresca e uma colher de chá de sementes de erva-doce, |
@@ -261,7 +261,7 @@ If you wake up with eyes swollen like this, and want them like this, or a face s
 | T8 | 8 | CENA CURTA (3.2s no modelo) |
 | T9 | 4 | CENA CURTA (1.4s no modelo) |
 | T10 | 4 | CENA CURTA (1.4s no modelo) |
-| T11 | 17 | ok |
+| T11 | 18 | ok |
 | T12 | 7 | CENA CURTA (2.5s no modelo) |
 | T13 | 6 | CENA CURTA (2.3s no modelo) |
 | T14 | 12 | CENA CURTA (5.8s no modelo) |
@@ -282,7 +282,7 @@ If you wake up with eyes swollen like this, and want them like this, or a face s
 - **Duração:** ~84s, 25 clipes de 8s cortados no CapCut no tempo de cada cena do modelo. Nos takes curtos a fala sai no começo do clipe e o resto é cortado.
 - **Fala atravessando cortes:** o modelo corta a cena no meio da frase em T7→T8, T12→T13, T17→T18, T18→T19, T19→T20, T21→T22 e T23→T24. As frases ficam divididas exatamente nesses pontos.
 - **Herói do gancho:** o olho inchado da cliente colado na lente (T1/T2) e o dedo com aliança (T5/T6), com a avatar apontando. A cliente aparece sempre cortada pelo quadro, nunca de corpo inteiro.
-- **Claim mais arriscado:** "none of that touches the cause" (T11) e "the water gets stuck in your face" (T19). Growth de origem IA copia a força do original, então ficam. Dedos tão inchados que a aliança não passa (T5) pode soar como edema; a fala não promete cura nem trata doença.
+- **Claim mais arriscado:** "none of that goes after the real problem" (T11) e "the water gets stuck in your face" (T19). Growth de origem IA copia a força do original, então ficam. Dedos tão inchados que a aliança não passa (T5) pode soar como edema; a fala não promete cura nem trata doença.
 - **Sem produto em quadro e sem FitWell UI/logo.** A caneca, a panela e o tubo são lisos, sem rótulo.
 - **Aviso de volume:** são 25 K e 25 V (um por cena do modelo, regra de 2026-09-23). Se o Luigi preferir menos, dá para fundir os takes mais curtos (T2/T3/T4, T5/T6, T7/T8, T9/T10) em um único take cada, saindo com 18 takes.
 - **Frase queimada:** rodar `checar_frases.py` antes de fechar o pacote.
