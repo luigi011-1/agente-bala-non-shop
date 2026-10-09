@@ -94,3 +94,24 @@ trás num plano de costas.
 - v2 no estilo da referência do produtor (Holistic Brandon): 50s de takes → 24,4s, zero pausa, 1,12x,
   legenda serifada branca minúscula no centro, light leak em 2 trocas. Aprovada com travadas leves.
 - Lição-mãe: pedir a referência do estilo antes de editar.
+
+### Caso 31. FitWell growth v2, chá glow (avatar de tranças) · 2026-10-09 · skill `edicao`, 1º teste nosso
+- **Entrada:** 5 takes do Flow (Omni, 720x1280, 24fps, 10s cada) do `fitywell_growth_v2`. Todas as
+  falas saíram literais do roteiro (conferido por transcrição take a take).
+- **Saída:** 24,7s, 1080x1920, 3,6 palavras/s, estilo v2 aprovado (sem silêncio, 1,12x, legenda
+  serifada branca no centro, light leak na entrada do T2 e do T4). Sem música: a trilha não está no repo.
+- **Acertos:** cortar pelo `silencedetect` e descartar ilha de som sem palavra (ruído de fim de take);
+  legenda com o tempo do whisper no vídeo cortado e o TEXTO do roteiro (quando a contagem de palavras
+  bate, a escuta nunca entra na tela); trim dentro do filtro em vez de `-ss` antes do `-i`.
+- **Erro achado e corrigido antes da entrega:** `minterpolate` (24→30fps) aplicado no vídeo inteiro
+  interpola ATRAVÉS do corte e cria um quadro fantasma (dois takes misturados) na troca T3→T4.
+  Conserto: `minterpolate` por segmento, antes do `concat`. Conferir sempre com contact sheet a
+  ±0,1s de cada corte.
+- **Ajuste novo:** no take-herói (cabeça com espuma lavando), a pausa de 1,3s no meio da fala foi
+  ACELERADA 5x em vez de cortada: o reveal continua sem pulo e a pausa vira 0,27s.
+- **Do Flow, não da edição (próximas produções):** o bule ganha tampa de madeira no T4 e não tem no
+  T3; o T4 começa com o bule no réchaud e ela só levanta durante a pausa, então o corte pula a ação;
+  o T5 pedia a mão apontando para baixo e ela não aponta. Prompt de vídeo do T4 deveria abrir com o
+  bule já na mão (igual ao K04) e o K03/K04 descrever a mesma tampa.
+- **Custo:** ~7 min de `minterpolate` na nuvem + render HyperFrames. Script: `template/edit_ritmo_v3.mjs`.
+- **Resultado aprovado pelo Luigi.** Regras fixas que saíram daqui: `docs/pos-producao-edicao-regras.md`.

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Merriweather"; src: url("fonts/Merriweather900.woff2") format("woff2"); font-weight: 900; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+#root { position: relative; width: 100%; height: 100%; overflow: hidden; }
+.base { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cap { position: absolute; left: 0; right: 0; top: 880px; display: flex; justify-content: center; padding: 0 70px; z-index: 10; }
+.cap.up { top: 760px; }
+.capin { font-family: "Merriweather", serif; font-weight: 900; font-size: 64px; color: #fff; text-align: center; line-height: 1.15; letter-spacing: -0.01em;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.55), 0 0 2px rgba(0,0,0,0.6); }
+.leak { position: absolute; inset: 0; z-index: 8; mix-blend-mode: screen; opacity: 0;
+  background: radial-gradient(70% 55% at 20% 70%, rgba(255,110,40,0.95), rgba(255,60,20,0.5) 45%, rgba(255,40,0,0) 75%), linear-gradient(180deg, rgba(255,140,60,0.55), rgba(255,60,30,0.3)); }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="{{TOTAL}}">
+<video class="clip base" id="base" src="assets/base.mp4" muted playsinline data-start="0" data-duration="{{TOTAL}}" data-track-index="0"></video>
+{{CLIPS}}
+<audio id="mix" src="assets/mix.wav" data-start="0" data-duration="{{TOTAL}}" data-track-index="9" data-volume="1"></audio>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+{{JS}}
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

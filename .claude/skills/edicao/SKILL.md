@@ -5,6 +5,14 @@ description: Edição dopaminérgica de takes já gravados ou gerados (Veo/Flow)
 
 # Edição dopaminérgica
 
+> 🔴 **Vale para TODOS os ângulos** (Sea Moss, FitWell, Auraly, Body Hacks e os próximos; venda e growth;
+> Luigi, 2026-10-09). A ordem dos takes vem da fala, não do nome do arquivo.
+> **Antes de editar, ler `docs/pos-producao-edicao-regras.md`** (acertos e erros do 1º teste aprovado,
+> 2026-10-09). Os 22 itens são regra fixa, e as conferências 17 a 20 bloqueiam a entrega. Use o
+> comando único `python3 template/editar.py <pasta_dos_takes>` (estilo v3, paralelo, roteiro achado
+> sozinho, música a -25 dB, conferências automáticas e `RELATORIO.md`). Entregue só com tudo OK e
+> depois de olhar `cortes.png` e `legendas.png`. A v1 e a v2 abaixo ficam como histórico.
+
 Validado em 2026-10-09 (5 takes de 10s da holistic.brandon, bebida matinal). Motor em `template/`.
 Casos em `docs/pos-producao-casos.md`.
 
@@ -71,3 +79,15 @@ na próxima:
    (preciso, mais lento) ou `trim` no filtro.
 5. Confira o resultado com `silencedetect` (sem pausas) **e** com contact sheet a 10fps nos cortes
    para ver pulos antes de entregar.
+
+## v3 (2026-10-09) · `template/edit_ritmo_v3.mjs` + `template/palavras.py` · use esta
+Mesmo estilo da v2, com as travadas corrigidas (caso 31):
+1. `python3 palavras.py words_takes.json assets/t01.mp4 ...` e `roteiro.json` com a fala literal de cada take.
+2. Ajuste no topo: `RAMP` (take-herói: pausa acelerada em vez de cortada), `LEAKS`, `UP`.
+3. Copie `template/fonts/` para o projeto. `node edit_ritmo_v3.mjs` → `npx -y hyperframes@0.8.143 lint .` → `render . --quality high`.
+- Padding 0,05 (entrada) / 0,11 (saída); ilha de fala < 0,4s junta com a vizinha; ilha sem palavra cai.
+- 24→30fps por `minterpolate` **por segmento**: no vídeo inteiro ele mistura dois takes no corte.
+- Legenda: tempo do whisper no vídeo cortado, texto do roteiro. Se a contagem não bater, o script avisa.
+- Antes de entregar: `silencedetect` no resultado (só a rampa pode sobrar, ~0,3s) e contact sheet a
+  ±0,1s de cada corte procurando quadro fantasma ou pulo.
+- Sem trilha no repo: peça a música ao produtor ou entregue sem.
