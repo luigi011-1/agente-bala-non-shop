@@ -1,0 +1,227 @@
+[
+ {
+  "t": 1,
+  "ini": 0.0,
+  "fim": 3.5,
+  "modo": "TALKING",
+  "en": "If you wake up with eyes swollen like this,",
+  "pt": "Se você acorda com os olhos inchados assim,",
+  "cena": "Mão da avatar apontando para a lente; o olho inchado de uma cliente enche o lado esquerdo do quadro, cortado pelo quadro."
+ },
+ {
+  "t": 2,
+  "ini": 3.5,
+  "fim": 4.8,
+  "modo": "TALKING",
+  "en": "and want them like this,",
+  "pt": "e quer eles assim,",
+  "cena": "Close do olho da cliente colado na lente, a avatar de cócoras ao fundo, gesto de pinça com a mão."
+ },
+ {
+  "t": 3,
+  "ini": 4.8,
+  "fim": 6.6,
+  "modo": "TALKING",
+  "en": "or a face swollen like this,",
+  "pt": "ou o rosto inchado assim,",
+  "cena": "Perfil: a avatar segura o queixo da cliente com dois dedos e olha para ela; a cliente de perfil, cortada."
+ },
+ {
+  "t": 4,
+  "ini": 6.6,
+  "fim": 7.8,
+  "modo": "TALKING",
+  "en": "and want it like this,",
+  "pt": "e quer ele assim,",
+  "cena": "Mesma cena em outro corte: a avatar volta o rosto para a lente com o queixo da cliente na mão."
+ },
+ {
+  "t": 5,
+  "ini": 7.8,
+  "fim": 10.2,
+  "modo": "TALKING",
+  "en": "or fingers so swollen your ring won't go on,",
+  "pt": "ou os dedos tão inchados que a aliança não passa,",
+  "cena": "A avatar aponta o dedo de uma cliente com aliança que não desce; a manga da cliente corta o quadro."
+ },
+ {
+  "t": 6,
+  "ini": 10.2,
+  "fim": 11.8,
+  "modo": "TALKING",
+  "en": "and want them like this?",
+  "pt": "e quer eles assim?",
+  "cena": "A avatar sorri para a lente com a palma aberta e a mão da cliente com aliança ao lado."
+ },
+ {
+  "t": 7,
+  "ini": 11.8,
+  "fim": 12.7,
+  "modo": "TALKING",
+  "en": "Stay with me, because",
+  "pt": "Fica comigo, porque",
+  "cena": "Close do rosto da avatar colado na lente, olhar firme, sobrancelhas baixas."
+ },
+ {
+  "t": 8,
+  "ini": 12.7,
+  "fim": 15.9,
+  "modo": "TALKING",
+  "en": "you won't hear this from the cream aisle.",
+  "pt": "isso você não vai ouvir no corredor de cremes.",
+  "cena": "Ainda mais perto da lente, o dedo indicador apontado para a câmera."
+ },
+ {
+  "t": 9,
+  "ini": 15.9,
+  "fim": 17.3,
+  "modo": "TALKING",
+  "en": "It's not your age,",
+  "pt": "Não é a idade,",
+  "cena": "A avatar debruçada sobre a mesa baixa, olhando para a cabeça de manequim, copo d'água, saleiro e almofada."
+ },
+ {
+  "t": 10,
+  "ini": 17.3,
+  "fim": 18.7,
+  "modo": "TALKING",
+  "en": "it's not bad sleep,",
+  "pt": "não é dormir mal,",
+  "cena": "A avatar se inclina para a lente e encosta a mão na cabeça de manequim."
+ },
+ {
+  "t": 11,
+  "ini": 18.7,
+  "fim": 25.3,
+  "modo": "TALKING",
+  "en": "They'll tell you to sleep more and buy another cream, but none of that touches the cause.",
+  "pt": "Vão te dizer para dormir mais e comprar outro creme, mas nada disso toca na causa.",
+  "cena": "Mesmo enquadramento da mesa: a avatar de olhos baixos sobre o manequim, copo e saleiro."
+ },
+ {
+  "t": 12,
+  "ini": 25.3,
+  "fim": 27.8,
+  "modo": "TALKING",
+  "en": "Let me show you what works. Take",
+  "pt": "Deixa eu te mostrar o que funciona. Pega",
+  "cena": "Selfie de perto, a avatar aponta o dedo para a lente, sorriso de quem vai ensinar."
+ },
+ {
+  "t": 13,
+  "ini": 27.8,
+  "fim": 30.1,
+  "modo": "TALKING",
+  "en": "a pot, two cups of water,",
+  "pt": "uma panela, duas xícaras de água,",
+  "cena": "Bancada: a avatar sorri com uma colher de salsinha picada sobre a panela de vidro no fogareiro de indução."
+ },
+ {
+  "t": 14,
+  "ini": 30.1,
+  "fim": 35.9,
+  "modo": "B-ROLL VO",
+  "en": "add a handful of fresh parsley and a teaspoon of fennel seeds,",
+  "pt": "coloca um punhado de salsinha fresca e uma colher de chá de sementes de erva-doce,",
+  "cena": "Macro: a colher despeja salsinha picada na água da panela; ao lado, uma tigelinha de sementes de erva-doce. Sem rosto."
+ },
+ {
+  "t": 15,
+  "ini": 35.9,
+  "fim": 39.2,
+  "modo": "B-ROLL VO",
+  "en": "squeeze in half a lemon,",
+  "pt": "espreme meio limão,",
+  "cena": "Macro: a mão espreme meio limão sobre a panela com a salsinha e as sementes. Sem rosto."
+ },
+ {
+  "t": 16,
+  "ini": 39.2,
+  "fim": 42.0,
+  "modo": "B-ROLL VO",
+  "en": "simmer it for ten minutes,",
+  "pt": "deixa fervendo baixinho por dez minutos,",
+  "cena": "Macro: a panela de vidro fervendo, fatia de limão e salsinha girando. Sem rosto."
+ },
+ {
+  "t": 17,
+  "ini": 42.0,
+  "fim": 47.1,
+  "modo": "TALKING",
+  "en": "and drink it warm, first thing, before you eat, every morning, no skipping. Eight",
+  "pt": "e toma morno, assim que acorda, antes de comer, toda manhã, sem falhar. Oito",
+  "cena": "A avatar segura entre as duas mãos uma caneca de vidro fumegante e sorri para a lente."
+ },
+ {
+  "t": 18,
+  "ini": 47.1,
+  "fim": 50.2,
+  "modo": "TALKING",
+  "en": "hours lying down without one sip of water, so the",
+  "pt": "horas deitada sem um gole d'água, então a",
+  "cena": "A avatar aponta com o indicador para o tubo de vidro em S cheio de água azul sobre a bancada, olhando para a lente."
+ },
+ {
+  "t": 19,
+  "ini": 50.2,
+  "fim": 53.4,
+  "modo": "B-ROLL VO",
+  "en": "water gets stuck right here in your face. This",
+  "pt": "água fica presa bem aqui, no rosto. Esse",
+  "cena": "Macro: o dedo da avatar toca a curva do tubo em S onde a água azul está parada. Sem rosto."
+ },
+ {
+  "t": 20,
+  "ini": 53.4,
+  "fim": 58.8,
+  "modo": "B-ROLL VO",
+  "en": "warm drink is the first thing your body gets, and once you stand up and move, it drains.",
+  "pt": "líquido morno é a primeira coisa que o corpo recebe, e quando você levanta e se mexe, ele drena.",
+  "cena": "Macro: a mão inclina o tubo e a água azul escorre para uma bandeja de inox. Sem rosto."
+ },
+ {
+  "t": 21,
+  "ini": 58.8,
+  "fim": 61.6,
+  "modo": "TALKING",
+  "en": "Your face is going to look so rested, in a",
+  "pt": "Seu rosto vai parecer tão descansado, de um",
+  "cena": "Selfie sentada num banco alto, a avatar sorri largo e faz um gesto leve com a mão."
+ },
+ {
+  "t": 22,
+  "ini": 61.6,
+  "fim": 63.7,
+  "modo": "B-ROLL VO",
+  "en": "way that's going to surprise you.",
+  "pt": "jeito que vai te surpreender.",
+  "cena": "Macro do peito: as duas mãos da avatar juntas em prece diante do peito, rosto fora do quadro."
+ },
+ {
+  "t": 23,
+  "ini": 63.7,
+  "fim": 69.7,
+  "modo": "TALKING",
+  "en": "People will ask how many hours you slept, what cream you used, what your secret is. And you",
+  "pt": "As pessoas vão perguntar quantas horas você dormiu, que creme usou, qual é o seu segredo. E você",
+  "cena": "A avatar no banco alto aponta para si mesma, sorrindo, olhando para a lente."
+ },
+ {
+  "t": 24,
+  "ini": 69.7,
+  "fim": 76.1,
+  "modo": "TALKING",
+  "en": "didn't do any of that. You just gave your body what it was missing, when it needed it. Nobody tells you that.",
+  "pt": "não fez nada disso. Só deu ao corpo o que faltava, na hora em que ele precisava. Ninguém te conta isso.",
+  "cena": "Balcão: a avatar apoiada ao lado de uma cabeça de manequim com uma seta amarela de papelão e uma plaquinha THE CAUSE."
+ },
+ {
+  "t": 25,
+  "ini": 76.1,
+  "fim": 84.1,
+  "modo": "TALKING",
+  "en": "My full morning routine, the one I give my clients, is in the link in the caption. Follow me so the next one finds you.",
+  "pt": "A minha rotina completa da manhã, a que eu passo para as minhas clientes, está no link da legenda. Me segue para o próximo vídeo te achar.",
+  "cena": "Plano de CTA: a avatar apoiada na bancada, cotovelos sobre a pedra, fala direto para a lente."
+ }
+]
