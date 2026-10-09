@@ -38,7 +38,7 @@ Funil: nenhum. CTA de crescimento: link da legenda + seguir (decisão 2026-10-05
 - **Texto de tela (edição, não vai no K):** `Egg + Greek yogurt` e `Wait for the bedtime part`
 - Desvios obrigatórios do cenário: mesa de madeira ao ar livre vira a mesa preta acolchoada da academia (âncora fixa); galinhas e galpão viram o fundo da academia.
 
-## Roteiro final (tabela bilíngue)
+## Roteiro cena a cena (tabela bilíngue)
 
 | Take | English | Português |
 |---|---|---|
@@ -54,7 +54,9 @@ Funil: nenhum. CTA de crescimento: link da legenda + seguir (decisão 2026-10-05
 | T10 | It's not that you ate something wrong. There was just nothing down there to handle it. Get your numbers back up and your food gets processed, not parked. | Não é que você comeu algo errado. Só não tinha nada lá pra dar conta. Suba esses números de volta e a comida é processada, não estacionada. |
 | T11 | Tap the link in my caption for more gut-friendly recipes like this, and follow me so you don't miss a single one. | Toque no link da minha legenda pra ver mais receitas amigas do intestino como essa, e me siga pra não perder nenhuma. |
 
-Versão corrida só-fala (inglês, TTS): as 11 falas acima em sequência.
+## Roteiro só-fala (inglês, TTS)
+
+As 11 falas acima em sequência; a versão corrida está em `ENTREGA_AVATAR_FITWELL.md`, seção 5.
 
 ## Contagem de palavras (feita antes dos prompts)
 
