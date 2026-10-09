@@ -220,3 +220,50 @@ quando o assunto pedir.
   `ggml-small.en`/`ggml-small` em `~/.cache/whisper-cpp/models`). O plugin `hyperframes@hyperframes`
   fica ligado no `.claude/settings.json`. Serve para editar os takes do Flow que o Luigi mandar;
   nao muda copy, angulo, prompts nem o workflow de producao.
+
+## Regras do projeto Claude que faltavam aqui (sincronizacao 2026-10-09, ok do Luigi)
+
+Espelho das decisoes duraveis da memoria do projeto no claude.ai que ainda nao estavam neste arquivo.
+
+### Edicao dos takes sem pausa
+- Na edicao de takes do Flow, nao parar esperando resposta do Luigi ate entregar o video final: decidir
+  pelo que da o melhor resultado, registrar a decisao e seguir. Pedidos de ok (merge de PR, por exemplo)
+  so depois do video entregue. Um video = uma frente de edicao; varias podem rodar em paralelo.
+- Copia das 9 faixas de musica do Luigi tambem no repo, em `edicao/musicas/`, e os `RELATORIO.md` das
+  edicoes ja entregues em `edicao/<producao>/`. Os videos editados continuam fora do git.
+- Pasta do Mac: o Luigi pode mandar o caminho de uma pasta do Mac com os takes ou com o video modelo; o
+  projeto Claude le essa pasta pelo app desktop. No Codex, sem esse acesso, pedir o arquivo.
+
+### Auraly: avatares, Jordan em espanhol e repeticao
+- Todo video modelo Auraly e produzido para os TRES avatares ativos (Avery Knox, Jordan Vale e Devon
+  Price), mesmo que a mensagem do Luigi cite so alguns (Luigi, 2026-10-07). Nomes: Jordan Vale e Devon
+  Price, nunca "Gordon" nem "Celeste".
+- JORDAN VALE FALA ESPANHOL (Luigi, 2026-10-09, teste): a versao do Jordan de todo video Auraly sai em
+  espanhol latino-americano neutro, adaptada (nao traducao literal). Tabela do roteiro dele:
+  `take | Español | Português`; CTA em espanhol; prompt de video com `neutral Latin American Spanish`.
+  Avery e Devon seguem em ingles. Para o linter, o Jordan ES vive na pasta propria
+  `producao/<producao>_jordan_es/`.
+- Nao repetir arcanjo, pessoa nem selo/metafora ja usados em venda Auraly. Arcanjos usados: Michael,
+  Raphael, Uriel, Gabriel, Jophiel, Chamuel, Zadkiel (livres: Raguel, Metatron, Raziel, Haniel). Pessoas:
+  Marlene, Dolores, Loretta, Imelda, tia-avo Beatrix, cunhada Wanda. Selos: nascer do sol/tampa da
+  banheira, entrega/devolvido ao remetente, sete noites/caixa de correio enferrujada, luz da varanda/a
+  ligacao toca na casa iluminada do vizinho, tampa da panela/panela fervendo sem tampa.
+
+### Checklist de copy de venda: frases ja queimadas
+- O `CHECKLIST_COPY_VENDA.md` tende a empurrar videos da mesma conta para as MESMAS falas. Antes de
+  mandar um roteiro de venda, comparar com os irmaos do lote e os videos recentes da conta. Ja
+  queimadas: "my neighbor X... did everything right", "what could you possibly tell me...? I had no
+  answer", "two jobs", "played/followed every rule", "I manifested that only the luckiest/right people
+  see this, so yes, you", "nothing holds it/the blessing", "knocking on a door that never opens",
+  "money drives right past your house".
+
+### Como o Luigi trabalha (complemento)
+- Quando ele anuncia um teste ou ideia nova sem mandar o material (videos modelo, roteiros), nao escolher
+  conteudo por conta propria nem comecar a produzir: esperar o material dele.
+- Pacotes: cada avatar entregue tambem como arquivo `.md` anexado.
+- Pedro (GitHub pedrolimacavalcante-svg) e colaborador do Luigi e tambem sobe PRs no repo (skills de
+  pos-producao HyperFrames, PRs #52 e #53).
+- Mineracao de nichos pelo Codex (PR #34) foi deixada de lado pelo Luigi em 2026-10-09; nao retomar sem
+  pedido dele.
+- Fonte de verdade para o Codex: tudo que o projeto Claude produz entra no main (pacotes, analises,
+  instrucoes do agente Flow). Regra nova e duravel vai tambem para este arquivo.
