@@ -1,0 +1,15 @@
+{
+  "titulo": "Praia das Fontes",
+  "cta": "Consulte datas no WhatsApp",
+  "ficha": ["100% pé na areia", "2 quartos", "Condomínio fechado", "Churrasqueira privativa", "Área de lazer completa"],
+  "cenas": [
+    { "media": "v2.mp4", "dur": 4.6, "mediaStart": 0.1, "text": "Imagine acordar com essa *vista.*" },
+    { "media": "f04.jpg", "dur": 3.6, "kb": "in", "text": "Café da manhã de *frente pro mar.*" },
+    { "media": "v3.mp4", "dur": 4.8, "mediaStart": 0.6, "text": "*100% pé na areia.*" },
+    { "media": "f10.jpg", "dur": 3.8, "kb": "down", "text": "Condomínio fechado na *Praia das Fontes.*" },
+    { "montagem": [["f02.jpg", "Sala integrada"], ["f06.jpg", "Cozinha completa"], ["f05.jpg", "2 quartos"], ["f17.jpg", "Conforto pra família"]], "dur": 5.2 },
+    { "media": "f16.jpg", "dur": 3.4, "kb": "in", "text": "Churrasqueira privativa e *área de lazer completa.*" },
+    { "media": "v1.mp4", "dur": 5.0, "mediaStart": 0.3, "text": "E todo dia *termina assim.*" },
+    { "final": "f09.jpg", "dur": 5.6 }
+  ]
+}

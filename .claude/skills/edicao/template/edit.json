@@ -1,0 +1,16 @@
+{
+  "nota": "Segmentos [take, inicio, fim] no tempo do take. Pausas removidas = jump cut. zoom alterna por segmento.",
+  "segmentos": [
+    [1, 0.00, 2.95], [1, 3.80, 8.05],
+    [2, 0.00, 2.15], [2, 2.20, 4.62], [2, 5.22, 8.05],
+    [3, 0.00, 1.55], [3, 1.90, 3.75], [3, 4.05, 6.35],
+    [4, 0.00, 2.62], [4, 3.62, 5.18], [4, 5.20, 6.48], [4, 6.85, 8.95],
+    [5, 0.00, 4.65], [5, 4.92, 7.05]
+  ],
+  "destaques": ["puffy", "dull", "sugar", "wash", "away", "ginger", "turmeric", "cinnamon", "sticks", "simmer", "warm", "anything", "month", "puffiness", "glow", "fine", "lines", "soften", "link", "caption", "routine", "follow"],
+  "hook": "YOUR FACE AT 7AM?",
+  "ingredientes": [["ginger", "FRESH GINGER"], ["turmeric", "1 SPOON TURMERIC"], ["cinnamon", "2 CINNAMON STICKS"]],
+  "beneficios": [["puffiness", "LESS PUFFINESS"], ["glow", "BRIGHTER GLOW"], ["soften", "SOFTER FINE LINES"]],
+  "impacto": "away",
+  "cta": "FOLLOW"
+}
