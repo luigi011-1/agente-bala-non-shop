@@ -878,7 +878,7 @@ def c_angulo3(angulo, arquivos, kfs, takes, pasta, roteiro):
 # texto cru e reprovou os 6 pacotes existentes lendo notas de producao que
 # descreviam o comportamento CERTO ("no lugar de 'Check out the surprise in my
 # Stories': THE FACE IS IN YOUR MESSAGES"). Nota que explica a regra nao e copy.
-STORY_PAT = r"my stories|my profile picture|check my stor|watch my stor|access(ing)? my stor"
+STORY_PAT = r"my stories|my profile picture|check my stor|watch my stor|access(ing)? my stor|mis historias|mi foto de perfil"
 # O CTA nomeia o objeto: "his face is in there", "find out who it is".
 DECLARADO_PAT = r"\bface\b|who (it|he|she) is|(his|her|their) name|the initial"
 # A copy entregou um pedaco da identidade antes do CTA, o que autoriza declarar.

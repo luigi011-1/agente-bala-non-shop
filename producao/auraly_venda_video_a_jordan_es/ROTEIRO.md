@@ -4,9 +4,13 @@ origem: organico
 CTA original: "Go to Future You. It's my favorite app... Set up your profile, listen to some affirmations and visualizations... make sure you do it today... just drop a comment, comment future, I'll send you the information, tap into this energy and enjoy."
 idioma: es (espanhol latino neutro) · avatar: Jordan Vale
 
-# auraly_venda_video_a | Jordan Vale em ESPANHOL | Roteiro para aprovação
+# auraly_venda_video_a_jordan_es | Jordan Vale em ESPANHOL | Roteiro para aprovação
 
-Mesma estrutura de takes, setups e esqueleto do `ROTEIRO.md`, com as falas **reescritas em espanhol latino neutro** (fala natural de UGC, não tradução literal; sem regionalismo marcado). Teste do Luigi na conta do Jordan (2026-10-09). Selo = **Sello de la Luz del Porche**, Arcángel Chamuel, tía abuela Beatriz, prima Imelda. Cenário do Jordan: versão de luxo máximo do cenário do modelo (mansão), mesma ação e mesma câmera.
+Mesma estrutura de takes, setups e esqueleto de `../auraly_venda_video_a/ROTEIRO.md` (versão em inglês), com as falas **reescritas em espanhol latino neutro** (fala natural de UGC, não tradução literal; sem regionalismo marcado). Teste do Luigi na conta do Jordan (2026-10-09). Selo = **Sello de la Luz del Porche**, Arcángel Chamuel, tía abuela Beatriz, prima Imelda. Cenário do Jordan: versão de luxo máximo do cenário do modelo (mansão), mesma ação e mesma câmera.
+
+## 01 - ORIGINAL STRUCTURE
+
+Igual à tabela de `../auraly_venda_video_a/ROTEIRO.md` (9 beats do modelo: promessa com prazo, eleição, objeção antecipada, como chega, a roda vira, app trocado pelo selo, urgência, CTA, miolo novo). Só muda o idioma da fala.
 
 ## Roteiro cena a cena
 ### T1 · GANCHO (A1) · modelo, Setup A · TALKING · Setup A

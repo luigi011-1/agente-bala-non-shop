@@ -1,11 +1,11 @@
 # PRODUCTION CHECKPOINT
 
-Production: auraly_venda_video_a
+Production: auraly_venda_video_a_jordan_es
 Angle: 3 (Auraly)
 Objective: SALE
 Source: ORGANIC
 Round: VALIDATION
-Reference video: producao/auraly_venda_video_a/input/modelo.mp4 (videoA_snapinsta-1791507289901.mp4)
+Reference video: producao/auraly_venda_video_a/input/modelo.mp4 (mesma produção, versão em ESPANHOL do Jordan Vale; a fila inglesa está em producao/auraly_venda_video_a/) (videoA_snapinsta-1791507289901.mp4)
 Scenario: selfie colada na lente em casa, janela à esquerda com céu azul pálido, parede lisa cinza-bege à esquerda, encosto de sofá escuro atrás
 
 Current stage: PRODUCTION_COMPLETE
@@ -13,13 +13,11 @@ Current avatar: NONE
 Next action: quando o Luigi confirmar a postagem, registrar com python3 gerenciar_operacao.py registrar (controle/README.md)
 
 ## Avatar queue
-[DONE] Avery Knox (producao/_ancoras/character_sheets/avery_knox_character_sheet.jpg), inglês
-[DONE] Jordan Vale (producao/_ancoras/character_sheets/jordan_vale_character_sheet.jpg), ESPANHOL, versão luxo máximo do cenário (sala = mansão); pacote em producao/auraly_venda_video_a_jordan_es/
-[DONE] Devon Price (producao/_ancoras/character_sheets/devon_price_character_sheet.jpg), inglês
+[DONE] Jordan Vale (producao/_ancoras/character_sheets/jordan_vale_character_sheet.jpg), ESPANHOL, versão luxo máximo do cenário (sala = mansão); 
 
 ## Approved script
 status: APPROVED (Luigi, 2026-10-09, "manda o pack de todos os avatares")
-file: ROTEIRO.md (EN) + ../auraly_venda_video_a_jordan_es/ROTEIRO.md (ES)
+file: ROTEIRO.md (ES)
 
 ## Selected hooks
 status: APPROVED (hook fiel aprovado junto com o roteiro, 2026-10-09)
