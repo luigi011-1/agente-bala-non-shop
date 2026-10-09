@@ -221,6 +221,46 @@ def varrer_arquivo(caminho):
     return res
 
 
+# ---- Versao CURTA (2026-10-09): se o limite for o tamanho do prompt, nao a palavra ----
+def compacto_k(j):
+    """K em um paragrafo so (~600-900 caracteres): identidade, roupa, cena, prop, estado, camera e fecho fixo."""
+    j = seguro_k(j) if "clean_frame" not in j else j
+    partes = ["Match the attached character sheet exactly.", j["identity_main"], j["wardrobe"], j["scene"], j["prop"],
+              j["state"].replace("Start frame: ", ""), j["camera"].split(", ")[0] + ", 1x lens, level.",
+              "Neutral overcast daylight, true neutral colors, real skin texture, smartphone footage look, everything in "
+              "sharp focus, text-free frame, 9:16 vertical."]
+    return " ".join(x.strip() for x in partes if x)
+
+
+def compacto_v(txt):
+    """V enxuto: troca a frase longa de lip sync por uma curta e corta repeticoes de tom. Falas intactas."""
+    txt = re.sub(r"\n\n[^\n]*diz todas as palavras corretamente[^\n]*\n", "\n\nDiz todas as palavras, lip sync perfeito.\n", txt)
+    txt = re.sub(r"fala (?:em )?ESPANHOL latino neutro, sem sotaque americano e sem falar inglês, ", "fala em espanhol latino neutro, ", txt)
+    txt = re.sub(r", em tom de gravação direta para a câmera, natural e confiante", "", txt)
+    txt = re.sub(r", em tom de conversa de quem grava um vídeo no celular para os seguidores, natural, próximo e confiante, no mesmo ritmo do vídeo modelo", "", txt)
+    return txt
+
+
+def gerar_curto(entrega, saida):
+    """Le um ENTREGA_*.md e grava a versao curta: K em paragrafo, V enxuto."""
+    t = Path(entrega).read_text(encoding="utf-8")
+    out = ["# " + Path(entrega).stem + " (versao CURTA)", "", MARCADOR, "",
+           "Mesmo conteudo da ENTREGA, em prompts curtos. K = character sheet + prompt, 4 variacoes 9:16. V = imagem escolhida + prompt, 1 variacao 9:16.", ""]
+    for b in RE_BLOCO.findall(t):
+        m = re.match(r"\s*(K\d+)\n(\{.*\})\s*$", b, re.S)
+        if m:
+            d = json.loads(m.group(2))
+            d.pop("format", None)
+            d.setdefault("clean_frame", CLEAN_FRAME)
+            out += ["```text", m.group(1), compacto_k(d), "```", ""]
+            continue
+        m = re.match(r"\s*(V\d+)\n(.*)$", b, re.S)
+        if m:
+            out += ["```text", m.group(1), compacto_v(m.group(2)).strip(), "```", ""]
+    Path(saida).write_text("\n".join(out), encoding="utf-8")
+    return len("\n".join(out))
+
+
 def main(args):
     total = 0
     for a in args:
