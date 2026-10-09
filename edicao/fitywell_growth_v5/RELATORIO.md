@@ -1,0 +1,26 @@
+# Relatório de edição · v05
+
+- Ordem dos takes (pela fala): 1. Person_speaking_to_camera_20261009174725.mp4 → 2. Person_giving_recipe_instructions_20261009174739.mp4 → 3. Person_speaking_about_cheesecake_20261009174750.mp4 → 4. Person_speaking_about_gut_bacteria_20261009174804.mp4 → 5. Person_explaining_sleep_aid_recipe_20261009174817.mp4 → 6. Person_talking_about_bedtime_snacks_20261009174831.mp4 → 7. Person_speaking_about_diet_20261009174844.mp4 → 8. Person_speaking_about_gut_bacteria_20261009174857.mp4 → 9. Person_speaking_to_camera_20261009174909.mp4 → 10. Person_speaking_to_camera_20261009174922.mp4 → 11. Person_speaking_to_camera_20261009174932.mp4
+  - aviso: Person_speaking_to_camera_20261009174725.mp4 foi para a posição 1 pela fala (o nome dizia 20261009174725)
+  - aviso: Person_giving_recipe_instructions_20261009174739.mp4 foi para a posição 2 pela fala (o nome dizia 20261009174739)
+  - aviso: Person_speaking_about_cheesecake_20261009174750.mp4 foi para a posição 3 pela fala (o nome dizia 20261009174750)
+  - aviso: Person_speaking_about_gut_bacteria_20261009174804.mp4 foi para a posição 4 pela fala (o nome dizia 20261009174804)
+  - aviso: Person_explaining_sleep_aid_recipe_20261009174817.mp4 foi para a posição 5 pela fala (o nome dizia 20261009174817)
+  - aviso: Person_talking_about_bedtime_snacks_20261009174831.mp4 foi para a posição 6 pela fala (o nome dizia 20261009174831)
+  - aviso: Person_speaking_about_diet_20261009174844.mp4 foi para a posição 7 pela fala (o nome dizia 20261009174844)
+  - aviso: Person_speaking_about_gut_bacteria_20261009174857.mp4 foi para a posição 8 pela fala (o nome dizia 20261009174857)
+  - aviso: Person_speaking_to_camera_20261009174909.mp4 foi para a posição 9 pela fala (o nome dizia 20261009174909)
+  - aviso: Person_speaking_to_camera_20261009174922.mp4 foi para a posição 10 pela fala (o nome dizia 20261009174922)
+  - aviso: Person_speaking_to_camera_20261009174932.mp4 foi para a posição 11 pela fala (o nome dizia 20261009174932)
+- Produção: `fitywell_growth_v5` (`entregas/fitywell_growth_v5/ENTREGA_AVATAR_FITWELL.md`), semelhança 100%
+- Fala dos takes contra o roteiro: OK
+- Lint sem erro: OK
+- Sem silêncio fora da rampa: OK
+- Sem quadro fantasma nos cortes: OK
+- Legenda com o texto do roteiro (contagem bateu): OK
+- Arquivo abaixo de 30 MB: OK
+- Duração 71.1s · 3.80 palavras/s · 34 trechos (2 rampas) · 98 legendas
+- Música: musica 2.mp3 (a partir de 0.0s, -25 dB da voz)
+- Light leak na entrada dos takes [2, 7]; rampa nos takes [1]; legenda alta nos takes [1]
+- Arquivo: `/tmp/claude-0/v05/trabalho/v05_editado.mp4` (26.7 MB) · tempo total 1036s
+- Olhar antes de entregar: `cortes.png` (pulo) e `legendas.png` (nada sobre rosto ou herói)
