@@ -361,8 +361,21 @@ def auditar_pacote(pasta, takes, estrito=False):
     mudo = any(t['mudo'] for t in takes)
     obrigatorias = {texto_fala(t['fala']) for t in takes if t['fala'] and not t['mudo']}
     nvideo = 0
+    # Pacote em outro idioma (ex.: Jordan Vale em espanhol): a fala vem da tabela "Español" do ROTEIRO.md,
+    # e o arquivo declara `Idioma da fala: ESPANHOL`. Os demais avatares seguem o roteiro principal.
+    falas_es = set()
+    rot = pasta / 'ROTEIRO.md'
+    if rot.exists():
+        sec = re.split(r'^## Tradu[cç][aã]o completa: Jordan[^\n]*\n', rot.read_text(), flags=re.M)
+        if len(sec) > 1:
+            for m in re.finditer(r'^\| T\d+ \| (.+?) \| .+ \|$', sec[1].split('\n## ')[0], re.M):
+                if not m.group(1).startswith('('):
+                    falas_es.add(texto_fala(m.group(1)))
     for p, bs in parsed.items():
         loc = str(p.relative_to(pasta))
+        falas_p, obrig_p = falas, obrigatorias
+        if falas_es and re.search(r'Idioma da fala:\s*ESPANHOL', p.read_text(), re.I):
+            falas_p, obrig_p = falas_es, falas_es
         vistos = set()
         reconhecidas = set()
         videos = [b for b in bs if b['id'].startswith('V')]
@@ -381,7 +394,7 @@ def auditar_pacote(pasta, takes, estrito=False):
             if silent:
                 if not mudo:
                     issues.append(('FALHA', 'fala-literal', code + ' mudo sem take mudo correspondente.', at))
-            elif not fala or texto_fala(fala) not in falas:
+            elif not fala or texto_fala(fala) not in falas_p:
                 issues.append(('FALHA', 'fala-literal', code + ' sem correspondencia literal no roteiro aprovado.', at))
             else:
                 reconhecidas.add(texto_fala(fala))
@@ -391,8 +404,8 @@ def auditar_pacote(pasta, takes, estrito=False):
                 issues.append(('FALHA', 'blocos-video', code + ' sem indicacao de lip sync.', at))
         # Lotes parciais sao documentados como tais; nao afirmar cobertura de roteiro inteiro.
         parcial = bool(re.search(r'lote|ciclo', p.stem, re.I))
-        if videos and not parcial and obrigatorias - reconhecidas:
-            issues.append(('FALHA', 'cobertura', '%s: %d fala(s) do roteiro nao cobertas.' % (p.name, len(obrigatorias - reconhecidas)), loc))
+        if videos and not parcial and obrig_p - reconhecidas:
+            issues.append(('FALHA', 'cobertura', '%s: %d fala(s) do roteiro nao cobertas.' % (p.name, len(obrig_p - reconhecidas)), loc))
         if videos and checkpoint:
             imagens = imagens_por_pasta.get(p.parent, set())
             if not imagens:

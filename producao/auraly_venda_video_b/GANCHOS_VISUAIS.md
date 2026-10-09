@@ -15,9 +15,9 @@ Padrao do modelo:
 B · DOR DIRETA
 
 Banco verbal:
-- "if it has no lid on it, it's gone again by Thursday"
+- "if it has no lid on it"
 - "nothing closes behind it"
-- "her money was coming. Nothing was holding it"
+- "her money was boiling off the second it arrived"
 - "a pot boiling with no lid"
 - "the first half"
 - "the lid is tied to you"
@@ -32,7 +32,7 @@ HOOK 1 - FIEL - O fogo entre as mãos
 Cena:
 UM clipe mudo de 8s, cortes internos (clipe do modelo: 4 planos em 4,7s). Plano 1, câmera fixa na altura da mesa, ligeiramente baixa: a avatar do peito para cima, sorrindo para a lente, segura uma garrafa de uísque âmbar (sem marca legível) com as duas mãos, a tábua de madeira com sal grosso, louro e canela na base do quadro, colada à lente. Corte para plano de corpo da cena do derrame: a garrafa inclinada, o uísque cai sobre a tábua, a avatar olha o que derrama. Corte para MACRO das mãos e da tábua no instante do payoff: o isqueiro acende e a chama toma o sal, o louro e a canela. Corte de volta ao plano de corpo: as mãos se juntam em oração com a chama alta entre elas, a avatar olha a lente. Cenário do modelo (sala com teto claro, guirlanda de estrelas, persiana com luz de dia), acabamento do GATE_VISUAL (luz neutra, sem tom quente). Jordan: mesma ação em sala de jantar de mansão com mesa de mármore.
 Screen text:
-"It works so fast it scares me..." (Jordan: "Funciona tan rápido que asusta...")
+"It works so fast it scares me..." e logo abaixo "If it has no lid on it..." (Jordan: "Funciona tan rápido que asusta..." e "Si no lleva tapa...")
 Desvios obrigatorios:
 - Texto de tela adaptado (o do modelo está em espanhol; a copy é própria). Motivo: idioma e originalidade.
 - Garrafa sem rótulo legível (o modelo mostra uma marca de uísque). Motivo: trava de marca no negative.
