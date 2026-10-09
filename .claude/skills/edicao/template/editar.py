@@ -387,10 +387,10 @@ def main():
     nerr = re.search(r"(\d+) error", lint)
     sh(f"npx -y hyperframes@0.8.143 render . -o renders/final.mp4 --quality high --quiet", cwd=tmp)
     saida = f"{tmp}/{nome}_editado.mp4"
-    for crf in (19, 22, 24, 26, 28):  # sobe o crf só até caber na pasta do Mac (< 30 MB)
+    for crf in (19, 22, 24, 25, 26, 28):  # sobe o crf até caber na cópia para o Mac (limite de 25 MB)
         sh(["ffmpeg", "-loglevel", "error", "-y", "-i", f"{tmp}/renders/final.mp4", "-c:v", "libx264", "-crf", str(crf), "-preset", "slow",
             "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-c:a", "aac", "-b:a", "192k", saida])
-        if os.path.getsize(saida) < 29.5e6: break
+        if os.path.getsize(saida) < 24.5e6: break
 
     log("7/7 conferências")
     cortes = [s["o"] for s in segs[1:]]
@@ -404,7 +404,7 @@ def main():
         "Sem silêncio fora da rampa": not sil,
         "Sem quadro fantasma nos cortes": not fant,
         "Legenda com o texto do roteiro (contagem bateu)": usa_rot,
-        "Arquivo abaixo de 30 MB": mb < 30,
+        "Arquivo abaixo de 25 MB": mb < 25,
     }
     rel += [f"- {k}: {'OK' if v else 'FALHA'}" for k, v in ok.items()]
     if sil: rel.append(f"  - silêncios: {sil}")
