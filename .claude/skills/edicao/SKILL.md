@@ -7,7 +7,9 @@ description: Edição dopaminérgica de takes já gravados ou gerados (Veo/Flow)
 
 > 🔴 **Antes de editar, ler `docs/pos-producao-edicao-regras.md`** (acertos e erros do 1º teste aprovado,
 > 2026-10-09). Os 22 itens são regra fixa, e as conferências 17 a 20 bloqueiam a entrega. Use o
-> script v3 (`template/edit_ritmo_v3.mjs`); a v1 e a v2 abaixo ficam como histórico.
+> comando único `python3 template/editar.py <pasta_dos_takes>` (estilo v3, paralelo, roteiro achado
+> sozinho, música a -10 dB, conferências automáticas e `RELATORIO.md`). Entregue só com tudo OK e
+> depois de olhar `cortes.png` e `legendas.png`. A v1 e a v2 abaixo ficam como histórico.
 
 Validado em 2026-10-09 (5 takes de 10s da holistic.brandon, bebida matinal). Motor em `template/`.
 Casos em `docs/pos-producao-casos.md`.

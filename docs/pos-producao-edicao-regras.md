@@ -2,7 +2,9 @@
 
 Fonte: 1º teste nosso, FitWell growth v2 chá glow, 2026-10-09 (caso 31 em `pos-producao-casos.md`),
 aprovado pelo Luigi ("o resultado me agradou muito"). Vale para TODA edição com a skill `edicao`.
-O estilo aprovado é o v3: `template/edit_ritmo_v3.mjs`. Nenhum item aqui é opcional.
+O estilo aprovado é o v3. **Desde 2026-10-09 ele roda num comando só**, que cumpre e confere estes
+itens sozinho: `python3 .claude/skills/edicao/template/editar.py <pasta_dos_takes>` (ver o fim deste
+arquivo). Nenhum item aqui é opcional.
 
 ## Acertos que viram regra (garantir sempre)
 
@@ -34,6 +36,10 @@ O estilo aprovado é o v3: `template/edit_ritmo_v3.mjs`. Nenhum item aqui é opc
     sobre o rosto, nunca sobre o herói.
 15. Light leak laranja só na entrada de 2 takes. Cortes secos no resto.
 16. Voz em `loudnorm I=-14 TP=-1.2`.
+16b. **Música sempre a -10 dB da voz** (Luigi, 2026-10-09): a faixa é normalizada para -14 LUFS (o
+    nível da voz) e baixada 10 dB, sem ducking, com 0,3s de entrada e 0,8s de saída; silêncio de
+    abertura da faixa é pulado. Faixas do Luigi em `/mnt/project-files/edicao/musicas/` (fora do repo);
+    a mesma produção sempre pega a mesma faixa, ou a que o Luigi pedir.
 
 ### Conferência antes de entregar (bloqueante)
 17. `silencedetect` no vídeo final: só pode sobrar a pausa da rampa (~0,3s).
@@ -57,7 +63,7 @@ O estilo aprovado é o v3: `template/edit_ritmo_v3.mjs`. Nenhum item aqui é opc
 | 3 | Script v2 não rodava na nuvem | dependia de `../words`, `../sfx/lofi.mp3` e de um caminho de modelo whisper do Mac do Pedro | v3 usa `palavras.py` (faster-whisper, já instalado) e não depende de nada fora da pasta |
 | 4 | Fonte da legenda não estava no repo | baixada do Google Fonts na hora | `template/fonts/Merriweather900.woff2` agora no repo (licença OFL) |
 | 5 | Cortes de 0,01s entre trechos quase colados | folgas de dois trechos se encostando | Regra 6 |
-| 6 | Vídeo sem música | não há trilha no repo | Pedir a faixa ao Luigi ou deixar uma trilha padrão no repo (ver sugestão 5) |
+| 6 | Vídeo sem música | não havia trilha | 9 faixas do Luigi em `/mnt/project-files/edicao/musicas/`, regra 16b |
 | 7 | Primeira base jogada fora (7 min perdidos) | o erro 1 só apareceu na conferência | Regra 11 já no script; conferência 18 continua obrigatória |
 
 ### Erros que vêm do Flow (corrigir no prompt, não na edição)
@@ -68,24 +74,26 @@ O estilo aprovado é o v3: `template/edit_ritmo_v3.mjs`. Nenhum item aqui é opc
 - **Gesto pedido não veio:** o T5 pedia a mão apontando para baixo e ela não aponta. Gesto de CTA vai
   na linha de ação do V, curto ("points down at the caption").
 
-## Sugestões para ficar mais rápido com o mesmo resultado (propostas, aguardam o ok do Luigi)
+## Comando único (sugestões 1 a 5, aprovadas pelo Luigi em 2026-10-09)
 
-Tempo deste teste: ~7 min de base (minterpolate) + ~2 min de render + conferência. Sem o retrabalho,
-~12 min do envio dos takes até a entrega.
+```
+python3 .claude/skills/edicao/template/editar.py <pasta_dos_takes> [--producao <slug>] [--musica <nome>] [--ramp 1] [--leaks 2,4] [--up 1]
+```
 
-1. **Um comando só** (`edicao.sh <pasta>`): copia os takes, transcreve, confere a fala contra o
-   roteiro, monta a base, roda lint, render, as 4 conferências e a recompressão, e devolve um
-   relatório passa/falha. Mesmo resultado, sem passo esquecido.
-2. **Interpolação em paralelo**: cada trecho num processo separado ao mesmo tempo, em vez de um
-   ffmpeg só. Mesmo resultado quadro a quadro; a base cai de ~7 min para ~1-2 min.
-3. **Achar o roteiro sozinho**: comparar a transcrição dos takes com todos os roteiros do repo e
-   escolher a produção. O Luigi só manda a pasta, sem dizer qual vídeo é.
-4. **Conferência automática do quadro fantasma**: medir a semelhança dos quadros em cada corte e
-   reprovar sozinho se aparecer quadro misturado. Tira a dependência de olhar contact sheet.
-5. **Trilha padrão no repo** (música livre de direitos, bem baixa, com ducking como na v2): o vídeo
-   sai com música sem precisar pedir.
-6. **Pasta nomeada pela produção** (ex.: `fitywell_growth_v2/`) em vez de `v02/`: identifica o vídeo
-   na hora, mesmo sem a sugestão 3.
-7. **(Mais rápido, muda um pouco o resultado)** Fala a 1,25x em vez de 1,12x: 24fps × 1,25 = 30fps
-   exatos, sem interpolação nenhuma (base em segundos). A fala fica ~4 palavras/s, mais rápida que a
-   referência aprovada. Só com teste e ok do Luigi.
+1. **Um comando só** com relatório: transcreve, acha o roteiro, confere a fala, corta, monta, legenda,
+   mixa, roda lint e render, recomprime e escreve `RELATORIO.md` com passa/falha das conferências
+   17, 18 (automática) e 20, mais `cortes.png` e `legendas.png` para a conferência 19 (olho humano).
+   Sai com erro se qualquer conferência falhar; vídeo com FALHA não é entregue.
+2. **Trechos em paralelo**: cada trecho é interpolado num processo próprio (um por núcleo) e os
+   trechos são juntados sem recodificar. Mesmo filtro do v3, trecho a trecho. O minterpolate engole
+   os últimos quadros de cada trecho: o script completa clonando o último quadro e numera os quadros
+   de novo, e o áudio do trecho fica com a duração exata do vídeo (sem deriva de lábio).
+3. **Roteiro achado sozinho**: compara a fala dos takes com todas as falas entre aspas dos `.md` de
+   `producao/` e de `/mnt/project-files/entregas/`. Abaixo de 85% de semelhança, para e pede `--producao`.
+4. **Quadro fantasma automático**: em cada corte, um quadro parecido com os DOIS vizinhos de uma troca
+   de cena reprova. Testado: acha o erro do caso 31 e passa a versão aprovada.
+5. **Música padrão** a -10 dB da voz (regra 16b).
+
+Teste no v02 (2026-10-09): mesmo vídeo aprovado (24,7s, 3,64 palavras/s, mesmos cortes), agora com música, em ~6 min do comando ao arquivo (antes ~12 min mais conferência na mão). A base caiu de ~7 min para ~2,5 min; o render no HyperFrames (~2,5 min) é o que mais pesa agora.
+
+Sugestões que ficaram de fora: pasta com o nome da produção (a 3 resolve) e fala a 1,25x (muda a entrega).
