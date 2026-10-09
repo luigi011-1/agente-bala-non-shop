@@ -5,6 +5,10 @@ description: Edição dopaminérgica de takes já gravados ou gerados (Veo/Flow)
 
 # Edição dopaminérgica
 
+> 🔴 **Antes de editar, ler `docs/pos-producao-edicao-regras.md`** (acertos e erros do 1º teste aprovado,
+> 2026-10-09). Os 22 itens são regra fixa, e as conferências 17 a 20 bloqueiam a entrega. Use o
+> script v3 (`template/edit_ritmo_v3.mjs`); a v1 e a v2 abaixo ficam como histórico.
+
 Validado em 2026-10-09 (5 takes de 10s da holistic.brandon, bebida matinal). Motor em `template/`.
 Casos em `docs/pos-producao-casos.md`.
 
@@ -76,7 +80,7 @@ na próxima:
 Mesmo estilo da v2, com as travadas corrigidas (caso 31):
 1. `python3 palavras.py words_takes.json assets/t01.mp4 ...` e `roteiro.json` com a fala literal de cada take.
 2. Ajuste no topo: `RAMP` (take-herói: pausa acelerada em vez de cortada), `LEAKS`, `UP`.
-3. `node edit_ritmo_v3.mjs` → `npx -y hyperframes@0.8.143 lint .` → `render . --quality high`.
+3. Copie `template/fonts/` para o projeto. `node edit_ritmo_v3.mjs` → `npx -y hyperframes@0.8.143 lint .` → `render . --quality high`.
 - Padding 0,05 (entrada) / 0,11 (saída); ilha de fala < 0,4s junta com a vizinha; ilha sem palavra cai.
 - 24→30fps por `minterpolate` **por segmento**: no vídeo inteiro ele mistura dois takes no corte.
 - Legenda: tempo do whisper no vídeo cortado, texto do roteiro. Se a contagem não bater, o script avisa.

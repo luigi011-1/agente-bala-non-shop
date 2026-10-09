@@ -3,7 +3,7 @@
 // 0,05/0,11, ilha de fala < 0,4s junta com a vizinha, ruído sem palavra fora, 30fps por minterpolate
 // POR SEGMENTO (no vídeo inteiro ele interpola através do corte e cria um quadro fantasma)
 // e, no take-herói, a pausa é ACELERADA (rampa) em vez de cortada, para o reveal não pular.
-// Entrada: assets/tNN.mp4, roteiro.json (lista com a fala literal de cada take) e fonts/Merriweather900.woff2.
+// Entrada: assets/tNN.mp4 e roteiro.json (lista com a fala literal de cada take). Copie template/fonts/ para o projeto.
 // Antes: python3 palavras.py words_takes.json assets/t01.mp4 ... (tempo por palavra de cada take).
 // Ajuste TAKES, RAMP (take-herói), LEAKS e UP para o vídeo. Leva ~7 min (minterpolate) para 50s de takes.
 import fs from "node:fs";
@@ -39,7 +39,8 @@ for (const k of TAKES) {
     const last = merged.at(-1);
     if (last && (i[1] - i[0] < MIN_ISLAND || last[1] - last[0] < MIN_ISLAND)) last[1] = i[1]; else merged.push([...i]);
   }
-  const sp = merged.map(([a, b]) => [Math.max(0, a - PAD_IN), Math.min(dur, b + PAD_OUT)]);
+  const sp = merged.map(([a, b]) => [Math.max(0, a - PAD_IN), Math.min(dur, b + PAD_OUT)])
+    .reduce((acc, x) => { const l = acc.at(-1); if (l && x[0] - l[1] < 0.05) l[1] = x[1]; else acc.push(x); return acc; }, []); // sem corte de 0,01s
   sp.forEach(([a, b], j) => {
     segs.push({ k, a, b, sp: SP });
     const nx = sp[j + 1];

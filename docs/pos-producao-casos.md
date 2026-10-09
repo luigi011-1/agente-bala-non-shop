@@ -114,3 +114,4 @@ trás num plano de costas.
   o T5 pedia a mão apontando para baixo e ela não aponta. Prompt de vídeo do T4 deveria abrir com o
   bule já na mão (igual ao K04) e o K03/K04 descrever a mesma tampa.
 - **Custo:** ~7 min de `minterpolate` na nuvem + render HyperFrames. Script: `template/edit_ritmo_v3.mjs`.
+- **Resultado aprovado pelo Luigi.** Regras fixas que saíram daqui: `docs/pos-producao-edicao-regras.md`.
