@@ -71,3 +71,15 @@ na próxima:
    (preciso, mais lento) ou `trim` no filtro.
 5. Confira o resultado com `silencedetect` (sem pausas) **e** com contact sheet a 10fps nos cortes
    para ver pulos antes de entregar.
+
+## v3 (2026-10-09) · `template/edit_ritmo_v3.mjs` + `template/palavras.py` · use esta
+Mesmo estilo da v2, com as travadas corrigidas (caso 31):
+1. `python3 palavras.py words_takes.json assets/t01.mp4 ...` e `roteiro.json` com a fala literal de cada take.
+2. Ajuste no topo: `RAMP` (take-herói: pausa acelerada em vez de cortada), `LEAKS`, `UP`.
+3. `node edit_ritmo_v3.mjs` → `npx -y hyperframes@0.8.143 lint .` → `render . --quality high`.
+- Padding 0,05 (entrada) / 0,11 (saída); ilha de fala < 0,4s junta com a vizinha; ilha sem palavra cai.
+- 24→30fps por `minterpolate` **por segmento**: no vídeo inteiro ele mistura dois takes no corte.
+- Legenda: tempo do whisper no vídeo cortado, texto do roteiro. Se a contagem não bater, o script avisa.
+- Antes de entregar: `silencedetect` no resultado (só a rampa pode sobrar, ~0,3s) e contact sheet a
+  ±0,1s de cada corte procurando quadro fantasma ou pulo.
+- Sem trilha no repo: peça a música ao produtor ou entregue sem.
