@@ -30,3 +30,7 @@ producao/*/_watch/overview/
 
 # videos modelo grandes ja cobertos por *.mp4; anexos crus do projeto Claude (sem extensao) tambem ficam fora
 uploads/
+
+# frames e grades do /watch (evidencia local, regeneravel); ficam so manifest e transcricao
+producao/*/input/modelo_watch/frames/
+producao/*/input/modelo_watch/overview/
