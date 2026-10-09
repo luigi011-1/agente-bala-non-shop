@@ -87,6 +87,11 @@ browser automation sao historicos, salvo pedido explicito do usuario.
   `GATE_VISUAL.md` Parte 6, Luigi 2026-09-25), em FitWell e Auraly. O linter reprova sem ela.
 - Nenhum gancho, K, V, pacote ou prompt avulso e enviado sem o checklist de envio 100% aprovado
   (`GATE_VISUAL.md` Parte 5, memoria `checklist-envio-prompt`). Item reprovado impede o envio.
+- Todo roteiro de VENDA, em qualquer angulo (Sea Moss, FitWell, Auraly, Body Hacks), passa por
+  `CHECKLIST_COPY_VENDA.md` antes de ir para aprovacao do Luigi (decisao 2026-10-08, origem em
+  `analises/ANALISE_COPY_ritual_matinal_figado.md`). A entrega leva "Checklist de copy de venda: X/Y".
+  Growth nao muda. Origem organica (`PERFIL_ORGANICO.md`) continua copia literal, so o CTA muda. Nao
+  altera CTA (organico = link da legenda, pago = botao), limites de tom da Auraly nem as travas de marca.
 
 ## Skills, especialistas e ferramentas da operacao (2026-10-06)
 
