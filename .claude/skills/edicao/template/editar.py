@@ -37,8 +37,12 @@ def dur(f):
     return float(sh(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f]))
 
 
+NUMEROS = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty".split()
+
 def norm(t):
-    return re.sub(r"[^a-z0-9' ]", " ", t.lower().replace("’", "'")).split()
+    # o whisper escreve "2 cups" onde o roteiro diz "two cups": número vira palavra antes de comparar
+    ws = re.sub(r"[^a-z0-9' ]", " ", t.lower().replace("’", "'")).split()
+    return [NUMEROS[int(w)] if w.isdigit() and int(w) <= 20 else w for w in ws]
 
 
 def log(msg):
@@ -258,27 +262,27 @@ def mixar(voz, musica, total, saida):
 
 
 # ---------- 7. conferências ----------
-def quadros(video, tempos, larg=64):
+def quadros(video, ini, n, larg=64):
+    """n quadros a partir do quadro ini. Busca com -ss antes do -i (preciso ao decodificar) para não varrer o vídeo inteiro a cada corte."""
     import numpy as np
     alt = int(larg * H / W)
-    expr = "+".join(f"eq(n\\,{n})" for n in tempos)
-    raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", video, "-vf", f"select='{expr}',scale={larg}:{alt},format=gray",
-                          "-fps_mode", "passthrough", "-f", "rawvideo", "-"], capture_output=True, check=True).stdout
+    raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", f"{ini / FPS:.4f}", "-i", video, "-frames:v", str(n),
+                          "-vf", f"scale={larg}:{alt},format=gray", "-f", "rawvideo", "-"], capture_output=True, check=True).stdout
     return np.frombuffer(raw, np.uint8).reshape(-1, alt, larg).astype(np.float32)
 
 def fantasmas(video, cortes_q):
     """Quadro misturado: parecido com os DOIS vizinhos de um corte de cena. Corte limpo tem um lado ~igual."""
     achados = []
     for c in cortes_q:
-        ns = list(range(max(0, c - 3), c + 4))
+        ini = max(0, c - 3)
         try:
-            f = quadros(video, ns)
+            f = quadros(video, ini, 7)
         except Exception:
             continue
         for j in range(1, len(f) - 1):
             ac = abs(f[j - 1] - f[j + 1]).mean(); ab = abs(f[j - 1] - f[j]).mean(); bc = abs(f[j] - f[j + 1]).mean()
             if ac > 12 and ab > 0.25 * ac and bc > 0.25 * ac:
-                achados.append(round((ns[j]) / FPS, 2))
+                achados.append(round((ini + j) / FPS, 2))
     return sorted(set(achados))
 
 def silencios(video, d=0.25):
