@@ -102,6 +102,18 @@ O `setup_mac.sh` instala `ffmpeg` e `python@3.12` pelo Homebrew se faltarem (o `
 no macOS é o 3.9, velho demais para as versões fixadas) e cria o `.venv` com os pacotes de
 `.claude/skills/watch/requirements.txt`. O `run_watch.sh` é o equivalente do `run_watch.ps1`.
 
+## Passo 4b · Pós-produção em HyperFrames (opcional)
+
+Para editar takes do Flow com as skills de pós-produção: Node 22+, FFmpeg e cmake
+(`brew install node ffmpeg cmake` no Mac) e depois
+
+```
+WHISPER_BIN_DIR=/opt/homebrew/bin bash scripts/preparar_hyperframes.sh
+```
+
+O plugin `hyperframes@hyperframes` liga sozinho pelo `.claude/settings.json` do repo; o Claude Code
+pede para confiar no marketplace na primeira vez. Log em `$TMPDIR/preparar_hyperframes.log`.
+
 ## Passo 5 · Dependências Python
 
 ```

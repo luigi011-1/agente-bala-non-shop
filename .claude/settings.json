@@ -37,12 +37,23 @@
         "hooks": [
           {
             "type": "command",
-            "command": "[ \"$CLAUDE_CODE_REMOTE\" = \"true\" ] || exit 0; cd \"$CLAUDE_PROJECT_DIR\" && bash restaurar_memoria.sh --force >/dev/null 2>&1; SO_DEPS=1 bash .claude/skills/watch/scripts/preparar_nuvem.sh; (setsid nohup bash .claude/skills/watch/scripts/preparar_nuvem.sh >/dev/null 2>&1 &); exit 0",
+            "command": "[ \"$CLAUDE_CODE_REMOTE\" = \"true\" ] || exit 0; cd \"$CLAUDE_PROJECT_DIR\" && bash restaurar_memoria.sh --force >/dev/null 2>&1; SO_DEPS=1 bash .claude/skills/watch/scripts/preparar_nuvem.sh; (setsid nohup bash .claude/skills/watch/scripts/preparar_nuvem.sh >/dev/null 2>&1 &); (setsid nohup bash scripts/preparar_hyperframes.sh >/dev/null 2>&1 &); exit 0",
             "timeout": 120,
             "statusMessage": "Nuvem: restaurando memoria e dependencias (Whisper em segundo plano)..."
           }
         ]
       }
     ]
+  },
+  "extraKnownMarketplaces": {
+    "hyperframes": {
+      "source": {
+        "source": "github",
+        "repo": "heygen-com/hyperframes"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "hyperframes@hyperframes": true
   }
 }

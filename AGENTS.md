@@ -198,3 +198,8 @@ quando o assunto pedir.
 ### Ambiente
 - Cloud: ambiente "Operacao bala", rede liberada; hook SessionStart instala faster-whisper, Pillow, av
   e Whisper small.en. Videos modelo (`*.mp4`) ficam fora do git (`.gitignore`).
+- Pos-producao em HyperFrames (Luigi, 2026-10-09): o mesmo hook roda `scripts/preparar_hyperframes.sh`
+  em segundo plano (CLI `hyperframes` 0.8.143, Chrome de render, `whisper-cli` e modelos
+  `ggml-small.en`/`ggml-small` em `~/.cache/whisper-cpp/models`). O plugin `hyperframes@hyperframes`
+  fica ligado no `.claude/settings.json`. Serve para editar os takes do Flow que o Luigi mandar;
+  nao muda copy, angulo, prompts nem o workflow de producao.
