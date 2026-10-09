@@ -513,7 +513,7 @@ def c_realismo_visual(prompts_k):
     for kid, txt, loc in prompts_k:
         if kid.startswith("REF-") or not txt:
             continue
-        if not re.search(r"no warm|yellow tint", txt, re.I):
+        if not re.search(r"no warm|yellow tint|true neutral colors", txt, re.I):
             faltas["sem_quente"].append(kid)
         for m in RE_LUZ_QUENTE.finditer(txt):
             antes = txt[max(0, m.start() - 25):m.start()].lower()
@@ -528,7 +528,7 @@ def c_realismo_visual(prompts_k):
                 break
         if not RE_LUZ_NEUTRA.search(txt):
             faltas["luz_neutra"].append(kid)
-        if not re.search(r"no blur|no bokeh", txt, re.I):
+        if not re.search(r"no blur|no bokeh|everything in sharp focus", txt, re.I):
             faltas["blur"].append(kid)
     msgs = {
         "sem_quente": "sem 'no warm orange color cast, no yellow tint' no negative",
@@ -594,6 +594,12 @@ def c_negative(kfs):
             continue
         neg = str(d.get("negative", ""))
         loc = (PROMPTS_FILE + ":%d") % k["linha"]
+        if not neg and d.get("clean_frame"):
+            # Flow v21 (2026-10-09): sem negative prompt. O K traz `clean_frame` em positivo.
+            if "text-free" not in str(d["clean_frame"]).lower():
+                falha("negative", "%s tem clean_frame sem 'text-free'" % k["id"], loc)
+                ruim = True
+            continue
         if not neg:
             falha("negative", "%s nao tem campo 'negative'" % k["id"], loc)
             ruim = True
@@ -622,6 +628,37 @@ def c_negative(kfs):
                 ruim = True
     if not ruim and kfs:
         ok("negative", "negatives corretos, sem 'no text' seco e sem termo sensivel")
+
+
+def c_flow_seguro(pasta):
+    """Fraseado seguro do Flow (2026-10-09, flow_seguro.py). O Flow nao tem negative prompt e o classificador
+    le o TOKEN: lista de negacoes, 'real person', 'explicitly male', bebida, fogo e marca derrubaram os
+    packs Auraly video A e B. Pacote com a linha `flow_seguro: v1` reprova em FALHA; pacote antigo so avisa."""
+    import flow_seguro
+    achados_falha, achados_aviso, marcados = [], [], False
+    for p in sorted(Path(pasta).glob("*.md")):
+        if not re.match(r"(PROMPTS|FLOW|ENTREGA)_", p.name):
+            continue
+        try:
+            marcado = flow_seguro.MARCADOR in p.read_text(encoding="utf-8")
+            achados = flow_seguro.varrer_arquivo(p)
+        except Exception:
+            continue
+        marcados = marcados or marcado
+        for cod, nivel, termo, motivo in achados:
+            item = ("%s:%s '%s' (%s)" % (p.name, cod, termo, motivo), p.name)
+            (achados_falha if (marcado and nivel == "FALHA") else achados_aviso).append(item)
+    for msg, loc in sorted(set(achados_falha))[:12]:
+        falha("flow_seguro", msg, loc)
+    if achados_aviso and not achados_falha:
+        if marcados:
+            for msg, loc in sorted(set(achados_aviso))[:8]:
+                aviso("flow_seguro", msg, loc)
+        else:
+            aviso("flow_seguro", "%d gatilho(s) de censura do Flow em pacote sem `%s` (historico). "
+                  "Rodar: python flow_seguro.py %s" % (len(set(achados_aviso)), flow_seguro.MARCADOR, pasta))
+    if marcados and not achados_falha and not achados_aviso:
+        ok("flow_seguro", "sem gatilho de censura nem lista de negacoes nos blocos do Flow")
 
 
 def c_nomenclatura(prompts, roteiro):
@@ -1429,6 +1466,7 @@ def checar_auraly(pasta, roteiro):
         PROMPTS_FILE = "PROMPTS_PRODUCAO.md"
 
     c_ficha_frame(pasta)
+    c_flow_seguro(pasta)
 
     # Registro divino (mesmo check do classico)
     antes = len([f for f in FALHAS if f[0] == "angulo3"])
@@ -1564,6 +1602,7 @@ def checar(pasta):
     c_gancho_verbal(pasta)
     c_flow_quantidade(pasta)
     c_ficha_frame(pasta)
+    c_flow_seguro(pasta)
     c_angulo3(angulo, arquivos, kfs, takes, pasta, roteiro)
     c_angulo4(angulo, arquivos, takes, kfs)
     c_seamoss(angulo, arquivos, takes, kfs, roteiro or "")

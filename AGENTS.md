@@ -93,6 +93,24 @@ browser automation sao historicos, salvo pedido explicito do usuario.
   Growth nao muda. Origem organica (`PERFIL_ORGANICO.md`) continua copia literal, so o CTA muda. Nao
   altera CTA (organico = link da legenda, pago = botao), limites de tom da Auraly nem as travas de marca.
 
+## Fraseado seguro do Flow (Luigi, 2026-10-09)
+- O Flow devolveu "This generation might violate our policies" em todo prompt dos packs Auraly video A e B. O Flow
+  NAO tem campo de negative prompt: a lista `negative` e lida como pedido, e o classificador le o TOKEN, nao a negacao.
+- Todo K e V sai em fraseado positivo e neutro. Regras e codigo em `flow_seguro.py` (fonte unica; os `gerar_pacote.py`
+  chamam `seguro_k`, `seguro_v` e `texto_flow`):
+  - K sem `fiction_note` ("no real person", "fictional AI character") e sem `negative`. No lugar vai `clean_frame`,
+    UMA frase positiva ("plain text-free photographic frame ... true neutral colors ... everything in sharp focus").
+  - Sem "explicitly male/female", sem "very rich", sem marca (iPhone vira smartphone), no maximo 2 negacoes
+    (`no`, `never`, `without`, `not`) no K inteiro: escrever o que ha, nao o que nao ha.
+  - Nunca nudez, corpo, violencia, arma, sangue, menor de idade, ocultismo, mesmo em negativa.
+  - Bebida alcoolica vira "amber glass bottle" / "amber drink"; fogo vira "small steady flame" (sem lighter, burn,
+    fire); sem marca, celebridade ou monumento no texto do prompt. Falas entre aspas nao se tocam.
+  - Pacote seguro carrega a linha `flow_seguro: v1` no cabecalho de PROMPTS_/FLOW_/ENTREGA_. `checar_entrega.py`
+    (check `flow_seguro`) reprova gatilho nesses pacotes e so avisa nos antigos. Rodar tambem
+    `python flow_seguro.py producao/<pacote>` antes de entregar.
+- Se o Flow bloquear mesmo assim, o agente do Flow segue a regra de repetir o MESMO prompt, mas relata o codigo e o
+  erro exato ("might violate our policies") ao operador; quem reescreve e sempre o operador/Claude, nunca o agente do Flow.
+
 ## Skills, especialistas e ferramentas da operacao (2026-10-06)
 
 `OPERACAO_AGENTES.md` descreve as interfaces de execucao, sem substituir os roteadores acima.
