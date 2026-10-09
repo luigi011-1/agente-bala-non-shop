@@ -103,7 +103,8 @@ lente numa selfie sem objeto. Sinais de gente real em `PERFIL_ORGANICO.md` seç�
 ## PARTE 3 · TRECHOS PRONTOS (para os campos do JSON de imagem do Flow)
 
 Desde 2026-09-25 (contrato do Flow v17) o K entregue é JSON: cada trecho abaixo vai no campo
-correspondente (`lighting`, `composition`, `realism`, `clean_frame`), com o mesmo texto. Desde 2026-10-09 o K não tem `negative` nem
+correspondente (`lighting`, `composition`, `realism`, `clean_frame`), com o mesmo texto. **Desde 2026-10-09 o K colado no Flow é um parágrafo curto**
+(padrão único, ver AGENTS.md); estes campos valem só no JSON interno do PROMPTS_. O K não tem `negative` nem
 `fiction_note` (o Flow não tem negative prompt e filtra o token): o que era negative vai em positivo no `clean_frame`,
 ver `flow_seguro.py`. Os trechos de "sem tom quente" e "sem blur" viram "true neutral colors" e "everything in sharp focus".
 

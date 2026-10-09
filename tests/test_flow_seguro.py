@@ -26,7 +26,7 @@ def test_k_antigo_e_pego_e_k_novo_passa():
     assert "text-free" in novo["clean_frame"]
     texto = fs.texto_flow(novo)
     assert fs.varrer_k(texto) == [], fs.varrer_k(texto)
-    assert "SMARTPHONE" in texto and "iPhone" not in texto
+    assert "smartphone" in texto and "iPhone" not in texto and not texto.lstrip().startswith("{")
 
 
 def test_v_troca_termos_mas_preserva_a_fala():

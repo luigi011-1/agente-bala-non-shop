@@ -93,29 +93,30 @@ browser automation sao historicos, salvo pedido explicito do usuario.
   Growth nao muda. Origem organica (`PERFIL_ORGANICO.md`) continua copia literal, so o CTA muda. Nao
   altera CTA (organico = link da legenda, pago = botao), limites de tom da Auraly nem as travas de marca.
 
-## Fraseado seguro do Flow (Luigi, 2026-10-09)
-- O Flow devolveu "This generation might violate our policies" em todo prompt dos packs Auraly video A e B. O Flow
-  NAO tem campo de negative prompt: a lista `negative` e lida como pedido, e o classificador le o TOKEN, nao a negacao.
-- Todo K e V sai em fraseado positivo e neutro. Regras e codigo em `flow_seguro.py` (fonte unica; os `gerar_pacote.py`
-  chamam `seguro_k`, `seguro_v` e `texto_flow`):
-  - K sem `fiction_note` ("no real person", "fictional AI character") e sem `negative`. No lugar vai `clean_frame`,
-    UMA frase positiva ("plain text-free photographic frame ... true neutral colors ... everything in sharp focus").
-  - Sem "explicitly male/female", sem "very rich", sem marca (iPhone vira smartphone), no maximo 2 negacoes
-    (`no`, `never`, `without`, `not`) no K inteiro: escrever o que ha, nao o que nao ha.
-  - Nunca nudez, corpo, violencia, arma, sangue, menor de idade, ocultismo, mesmo em negativa.
-  - Bebida alcoolica vira "amber glass bottle" / "amber drink"; fogo vira "small steady flame" (sem lighter, burn,
-    fire); sem marca, celebridade ou monumento no texto do prompt. Falas entre aspas nao se tocam.
-  - Pacote seguro carrega a linha `flow_seguro: v1` no cabecalho de PROMPTS_/FLOW_/ENTREGA_. `checar_entrega.py`
-    (check `flow_seguro`) reprova gatilho nesses pacotes e so avisa nos antigos. Rodar tambem
-    `python flow_seguro.py producao/<pacote>` antes de entregar.
-- **V minimalista (Luigi, 2026-10-09), regra para toda producao nova:** o prompt de video e so quem fala, o idioma e a
-  fala literal, mais camera e lip sync em uma linha: `The person in the image speaks in American English, looking at
-  the camera: "<fala>"` + `Fixed camera. Natural lip sync, no music.` (Jordan Vale em espanhol: `neutral Latin
-  American Spanish`). Clipe mudo: `(no speech) <acao curta em ingles>`. Sem descricao de cena, roupa, objeto, tom de
-  voz nem som ambiente: tudo isso ja esta na imagem anexada. Gerador: `flow_seguro.minimo_v`. O linter aceita esse
-  formato no lugar dos 5 blocos.
-- Se o Flow bloquear mesmo assim, o agente do Flow segue a regra de repetir o MESMO prompt, mas relata o codigo e o
-  erro exato ("might violate our policies") ao operador; quem reescreve e sempre o operador/Claude, nunca o agente do Flow.
+## Padrao unico de prompt do Flow (Luigi, 2026-10-09, confirmado: resolveu as falhas de censura)
+- O Flow devolvia "This generation might violate our policies" em todo prompt. Sem campo de negative prompt, a lista
+  `negative`, a `fiction_note` e a descricao longa viravam pedido, e o classificador le o TOKEN, nao a negacao.
+  Funcionou: K em um paragrafo curto e V so com a fala. **Esse e o UNICO formato de prompt de imagem e de video,
+  em todo angulo e toda producao. O JSON longo e o V de 5 blocos estao APOSENTADOS.**
+- **K entregue (colado no Flow):** UM paragrafo em ingles, ~1800 caracteres: `Match the attached character sheet
+  exactly.` + identidade + roupa + cenario + objeto + estado inicial + camera + fecho fixo (luz neutra, pele real,
+  foco, quadro sem texto, 9:16). Anexo: so o character sheet. 4 variacoes, 9:16.
+- **V entregue:** `The person in the image speaks in American English, looking at the camera: "<fala literal>"` +
+  `Fixed camera. Natural lip sync, no music.` (selfie: `Handheld selfie camera, slight natural shake.`). Jordan Vale
+  em espanhol: `neutral Latin American Spanish`. Clipe mudo: `(no speech) <acao curta em ingles>`. Sem cena, roupa,
+  objeto, tom de voz nem som ambiente (ja estao na imagem anexada). Anexo: so a imagem escolhida. 1 variacao, 9:16.
+- **Codigo:** `flow_seguro.py` e a fonte unica (`seguro_k`, `texto_flow`, `minimo_v`, varredura de gatilhos); os
+  `gerar_pacote.py` chamam esse modulo. O `PROMPTS_<AVATAR>.md` continua com o K em JSON como fonte INTERNA
+  (linter e ficha do frame leem dele) e **nunca e colado no Flow**; `FLOW_` e `ENTREGA_` carregam so o padrao curto.
+- **Palavras:** nunca nudez, corpo, violencia, arma, sangue, menor de idade, ocultismo; sem `fiction_note`, "no real
+  person", "explicitly male/female", marca (iPhone vira smartphone), celebridade ou monumento; bebida alcoolica vira
+  "amber glass bottle"/"amber drink"; fogo vira "small steady flame" (sem lighter, burn, fire); no maximo 2 negacoes
+  (`no`, `never`, `without`, `not`) no K inteiro. Falas entre aspas nunca se tocam.
+- **Linter:** pacote seguro carrega a linha `flow_seguro: v1` no cabecalho de PROMPTS_/FLOW_/ENTREGA_. O check
+  `flow_seguro` de `checar_entrega.py` reprova gatilho, K em JSON/longo e V fora do padrao nesses pacotes, e so avisa nos
+  antigos. Rodar tambem `python flow_seguro.py producao/<pacote>` antes de entregar.
+- Se o Flow bloquear mesmo assim, o agente do Flow repete o MESMO prompt, mas relata o codigo e o erro exato; quem
+  reescreve e sempre o operador/Claude, nunca o agente do Flow.
 
 ## Skills, especialistas e ferramentas da operacao (2026-10-06)
 

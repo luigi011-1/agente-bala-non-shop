@@ -657,6 +657,23 @@ def c_flow_seguro(pasta):
         else:
             aviso("flow_seguro", "%d gatilho(s) de censura do Flow em pacote sem `%s` (historico). "
                   "Rodar: python flow_seguro.py %s" % (len(set(achados_aviso)), flow_seguro.MARCADOR, pasta))
+    # Padrao unico (Luigi, 2026-10-09): K entregue = paragrafo curto; V entregue = so fala e idioma.
+    if marcados:
+        formato = []
+        for p in sorted(Path(pasta).glob("*.md")):
+            if not re.match(r"(FLOW|ENTREGA)_", p.name):
+                continue
+            for b in blocos(p.read_text(encoding="utf-8")):
+                cod, txt = b["id"], re.sub(r"^\s*[KV]\d+\s*\n", "", b["bloco"])
+                if not txt.strip():
+                    continue
+                if cod.startswith("K") and (txt.lstrip().startswith("{") or len(txt) > 2600):
+                    formato.append("%s:%s K fora do padrao curto (JSON longo aposentado)" % (p.name, cod))
+                if cod.startswith("V") and len(cod) <= 3 and not RE_V_MINIMO.match(txt):
+                    formato.append("%s:%s V fora do padrao minimalista" % (p.name, cod))
+        for msg in sorted(set(formato))[:12]:
+            falha("flow_seguro", msg, msg.split(":")[0])
+        achados_falha = achados_falha + formato
     if marcados and not achados_falha and not achados_aviso:
         ok("flow_seguro", "sem gatilho de censura nem lista de negacoes nos blocos do Flow")
 

@@ -7,7 +7,8 @@ nao a negacao. Este modulo e a fonte unica das regras:
 
   * `seguro_k(j)`      reescreve um K (dict JSON) em fraseado positivo e neutro
   * `seguro_v(txt)`    reescreve um V (texto) trocando termos de gatilho por descricao neutra
-  * `texto_flow(j)`    serializa o K no formato do bloco do Flow (v21, sem fiction_note nem negative)
+  * `texto_flow(j)`    K entregue ao Flow: UM paragrafo curto (padrao unico; JSON longo aposentado)
+  * `minimo_v(txt)`    V entregue ao Flow: so a fala e o idioma
   * `varrer_k/varrer_v` listam termos de gatilho; usado por checar_entrega.py (check `flow_seguro`)
 
 Marcador de pacote seguro: a linha `flow_seguro: v1` no cabecalho de PROMPTS_/FLOW_/ENTREGA_. Pacote com o marcador
@@ -161,11 +162,10 @@ def seguro_v(txt):
 
 
 def texto_flow(j):
-    """Bloco do Flow: JSON em ingles, so os campos de ORDEM_K mais `format`. `j` ja passou por seguro_k."""
-    assert set(ORDEM_K) == set(j) - {"shot_id"}, set(ORDEM_K) ^ (set(j) - {"shot_id"})
-    d = {"format": "IMPORTANT: THIS IS SMARTPHONE FOOTAGE. Vertical 9:16."}
-    d.update({k: j[k] for k in ORDEM_K})
-    return json.dumps(d, ensure_ascii=False, indent=2)
+    """Bloco do Flow = o que o Luigi cola: UM paragrafo curto em ingles (padrao unico desde 2026-10-09; o JSON longo
+    foi aposentado). O dict `j` (ja passado por seguro_k) continua sendo a fonte interna do PROMPTS_*.md, que o
+    linter e a ficha leem, mas nunca e colado no Flow."""
+    return compacto_k(j)
 
 
 def sem_falas(txt):
