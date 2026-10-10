@@ -60,3 +60,5 @@ funciona como crescimento puro quebra a fidelidade do método Puzzle sem necessi
 trabalho e risco de compliance que o vídeo original nunca teve.
 
 Relacionado: [[metodo-puzzle]], [[feedback-copy-lapida-estrutura]], [[angulo2-copy-fitywell]]
+
+Exemplo de growth com registro de outra oferta reescrito (canela, 2026-10-10) em [[producao-licoes-lote-1010]].

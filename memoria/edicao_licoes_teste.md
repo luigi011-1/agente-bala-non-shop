@@ -61,3 +61,5 @@ NÃO FAZER
 - Não seguir sem música calado, nem com caminho da nuvem no Mac: o editor agora para.
 
 Ambiente e armadilhas do Mac em [[ambiente-mac-luigi]]. Leitura de hook continua em [[erros-recorrentes]].
+
+Lições do processo de produção (roteiro, pacote, Flow) em [[producao-licoes-lote-1010]].

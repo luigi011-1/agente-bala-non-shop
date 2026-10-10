@@ -168,6 +168,17 @@ Os blocos limpos valem aqui também, mesmo o formato tendo nascido no Ângulo 3.
 
 ---
 
+### Gerador e formato (2026-10-10, primeiro lote completo no Mac)
+
+- **Pacote pelo gerador comum** `producao/_flow/pacote_minimo.py`: cada produção tem um `gerar_pacote.py` só
+  com os dados (takes, K, ficha) e o gerador escreve `ENTREGA_AVATAR_FITWELL.md`, `AGENTE_FLOW.md` (com o mapa
+  K/V por extenso), `FICHA_FRAMES.md` e `PROMPTS_PRODUCAO.md`. Exemplos: `fitywell_growth_temperos_falsos`,
+  `fitywell_growth_chips_azeite`, `fitywell_growth_canela_saude`.
+- **ROTEIRO.md** com `### T1 · BEAT · TALKING · Setup A` + `> "fala"` (o linter e o `checar_frases.py` só leem
+  isso), "Ângulo 2" no cabeçalho e a seção `## Notas de produção`.
+- **Plano único no modelo** = 1 K para o plano e vários V da mesma imagem.
+- Lições completas na memória `producao-licoes-lote-1010`.
+
 ## 7. Censura do Flow: o que trava e o que passa
 
 Protocolo completo em `restricoes-protocolo`. O que esta marca já queimou:
