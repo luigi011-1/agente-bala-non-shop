@@ -104,8 +104,10 @@ arquivo). Nenhum item aqui é opcional.
 | 20 | Primeira produção real (V01 temperos): o "Why?" falado devagar perdeu o fim | o teste de "som sem palavra" usava a duração ESPERADA da palavra; o fim real virou "fala escondida" e foi cortado | som sem palavra usa o tempo real; palavra longa demais só vai para o teste de palavra esticada (transcreve a palavra inteira e só corta se ouvir outra palavra) |
 | 21 | O "why" do T3 ficou na tela por cima do T5 | página de legenda com duração ZERO (duas palavras no mesmo instante); o HyperFrames não esconde clipe de duração zero | página com menos de 0,15s junta com a seguinte (`juntar_curtas`) e a conferência reprova legenda < 0,1s |
 | 22 | O "one." final, dito baixinho (-40 dB), sumia | o corte de silêncio pela média tratou a palavra fraca do fim como silêncio | palavra das PONTAS do take que o corte perdeu é protegida pelo tempo dela; no meio do take não (o whisper começa palavra cedo e a proteção engoliria a pausa) |
+| 23 | V02 chips: a montagem quebrou ("N/A" no ffprobe) | pausa de 0,13s do take-herói acelerada 5x virou trecho sem nenhum quadro | trecho com menos de 2 quadros cai; juntar a pausa à fala trouxe a pausa de volta e foi desfeito |
+| 24 | V02 chips: silêncio de abertura do T5 ficou | a proteção da palavra da ponta valia também no INÍCIO, e o whisper sempre começa a 1ª palavra em 0,0s | proteção só na ponta FINAL do take |
 
-Erros 8 a 22: teste no Mac com os takes do v04 (FitWell growth, gengibre e limão), 2026-10-09.
+Erros 8 a 24: teste no Mac com os takes do v04 (FitWell growth, gengibre e limão), 2026-10-09.
 O 8, o 9, o 11 e o 15 passaram em todas as conferências automáticas e só apareceram no `cortes.png` ou no
 olho: **a conferência 19 (olhar `cortes.png` e `legendas.png`) continua obrigatória**.
 

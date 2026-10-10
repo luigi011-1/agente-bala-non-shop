@@ -14,7 +14,7 @@ description: Edição dopaminérgica de takes já gravados ou gerados (Veo/Flow)
 > **Antes de editar, ler `docs/pos-producao-edicao-regras.md`** (acertos e erros do 1º teste aprovado,
 > 2026-10-09). Os 22 itens são regra fixa, e as conferências 17 a 20 bloqueiam a entrega.
 > **Take mudo (insert) se renomeia com o número do take antes de rodar** (`t07_pimenta.mp4`): o Flow
-> põe o horário no nome e o script para. Erros 8 a 22 e o tempo no Mac estão no mesmo arquivo. Use o
+> põe o horário no nome e o script para. Erros 8 a 24 e o tempo no Mac estão no mesmo arquivo. Use o
 > comando único `python3 template/editar.py <pasta_dos_takes>` (estilo v3, paralelo, roteiro achado
 > sozinho, música a -25 dB, conferências automáticas e `RELATORIO.md`). Entregue só com tudo OK e
 > depois de olhar `cortes.png` e `legendas.png`. A v1 e a v2 abaixo ficam como histórico.

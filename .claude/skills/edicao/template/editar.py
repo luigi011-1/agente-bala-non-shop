@@ -322,13 +322,13 @@ def ilhas(f, ws):
     # palavra ouvida nunca vira silêncio: o trecho dela (até a duração plausível, para não proteger pausa
     # esticada pelo whisper) entra nas ilhas mesmo com volume baixo (V01 temperos: o "one." final sumia)
     teto = lambda w: 0.45 + 0.09 * len(re.sub(r"[^a-z0-9]", "", w.lower()))
-    # só nas PONTAS do take: a voz do Flow cai no fim (o "one." baixinho). No meio, o whisper às vezes começa
+    # só no FIM do take: a voz do Flow cai no fim (o "one." baixinho). No meio, o whisper às vezes começa
     # a palavra cedo demais ("because" 0,5s antes do som) e a proteção engolia a pausa.
     ini0 = isl[0][0] if isl else 0.0
     fim0 = isl[-1][1] if isl else d
     for w, wa, wb in ws:
-        if not (wa >= fim0 - 0.1 or wb <= ini0 + 0.1):
-            continue
+        if wa < fim0 - 0.1:  # só a ponta FINAL: o whisper sempre começa a 1ª palavra em 0,0s e a proteção no
+            continue          # início trazia o silêncio de abertura do take (V02 chips, 2026-10-10)
         a2, b2 = wa, min(wb, wa + teto(w))
         dentro = sum(max(0.0, min(b2, i[1]) - max(a2, i[0])) for i in isl)
         if dentro < 0.5 * (b2 - a2):  # só a palavra que o corte perdeu; esticada pelo whisper já está coberta
@@ -378,6 +378,9 @@ def segmentos(takes, words, ramp):
                 segs.append(dict(k=k, a=b, b=sp[j + 1][0], sp=ramp[k], mute=True))
         if not words[k]:
             segs[-1]["mute"] = True
+    # trecho de menos de 2 quadros cai: a pausa curta do take-herói acelerada 5x virava trecho sem nenhum quadro
+    # e a montagem quebrava (V02 chips, 2026-10-10); juntar a pausa à fala trazia a pausa de volta
+    segs = [s for s in segs if (s["b"] - s["a"]) / s["sp"] >= 2.0 / FPS]
     o = 0.0
     for s in segs:
         s["o"] = o; s["d"] = (s["b"] - s["a"]) / s["sp"]; o += s["d"]
