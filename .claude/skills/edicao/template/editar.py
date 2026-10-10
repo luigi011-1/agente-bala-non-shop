@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Edição automática de takes do Flow, num comando só (estilo v3 aprovado pelo Luigi em 2026-10-09).
 
-    python3 editar.py <pasta_dos_takes> [--producao <pasta>] [--musica <nome>] [--ramp 1] [--leaks 2,4] [--up 1]
+    python3 editar.py <pasta_dos_takes> [--producao <nome ou pasta>] [--musica <nome>] [--insert 2.5] [--ramp 1] [--leaks 2,4] [--up 1]
 
 Faz, em ordem, e para no primeiro problema:
   1. transcreve cada take (faster-whisper, modelo carregado uma vez);
   2. acha sozinho o roteiro da produção comparando a fala com os roteiros do repo e das entregas;
-  3. confere se cada take falou a frase do roteiro;
-  4. corta pelos silêncios reais e monta a base com os trechos EM PARALELO (minterpolate por trecho);
+  3. confere cada take PALAVRA POR PALAVRA (faltou, inventou, repetiu, trocou); sobra só na ponta é cortada sozinha;
+  4. ordena pelo número do take (T__) do pacote; insert mudo entra só com a janela da ação;
+     corta pelos silêncios reais e monta a base com os trechos EM PARALELO (minterpolate por trecho);
   5. legenda (tempo do whisper no vídeo cortado, texto do roteiro), light leak, música a -25 dB da voz;
   6. lint e render no HyperFrames, recompressão para caber na pasta do Mac (< 30 MB);
   7. conferências automáticas (silêncio, quadro fantasma, contagem de palavras) + contact sheets,
@@ -18,10 +19,14 @@ import argparse, concurrent.futures as cf, difflib, glob, hashlib, json, os, re,
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(AQUI, "../../../.."))
-MUSICAS = os.environ.get("EDICAO_MUSICAS", "/mnt/project-files/edicao/musicas")
+# nuvem: /mnt/project-files; Mac: edicao/musicas do repo (teste no Mac, 2026-10-09: ficava sem achar a faixa)
+MUSICAS = os.environ.get("EDICAO_MUSICAS") or next(
+    (p for p in ("/mnt/project-files/edicao/musicas", os.path.join(REPO, "edicao/musicas")) if glob.glob(f"{p}/*.mp3")),
+    os.path.join(REPO, "edicao/musicas"))
 ENTREGAS = "/mnt/project-files/entregas"
 
 SP, GAP, PAD_IN, PAD_OUT, MIN_ISLAND, JUNTA, W, H, FPS = 1.12, 0.15, 0.05, 0.11, 0.4, 0.05, 1080, 1920, 30
+INSERT = 2.5  # segundos do insert mudo (antes da aceleração); --insert 0 = inteiro
 MUSICA_DB = -25  # Luigi, 2026-10-09: música sempre 25 dB abaixo da voz (-10 atrapalhou a fala)
 
 
@@ -80,12 +85,23 @@ def falas_por_producao():
             prod.setdefault(os.path.dirname(f), {}).setdefault(f, linhas)
     return prod
 
+def numeros_take(arq):
+    """{fala: número do take} pelos blocos V__ do pacote. Sem isso o take falado é numerado entre as FALAS
+    e o mudo pelo TAKE, e o insert cai no lugar errado (teste v04 no Mac, 2026-10-09: limão depois do Boil)."""
+    txt = open(arq, encoding="utf8", errors="ignore").read()
+    tn = {}
+    for m in re.finditer(r"^V(\d+)[ \t]*\n(.*?)^```", txt, re.M | re.S):
+        f = FALA.search(m.group(2))
+        if f: tn.setdefault(f.group(1).strip(), int(m.group(1)))
+    return tn
+
 def parecido(a, b):
     return difflib.SequenceMatcher(None, norm(a), norm(b)).ratio()
 
 def achar_roteiro(ditos, forcada=None):
     """ditos: {take: texto ouvido} (só takes com fala). Devolve (pasta, arquivo, {take: fala}, nota, linhas)."""
     melhor = None
+    forcada = os.path.basename(os.path.normpath(forcada)) if forcada else None  # nome ou caminho
     for pasta, arqs in falas_por_producao().items():
         if forcada and os.path.basename(pasta.rstrip("/")) != forcada and pasta != forcada:
             continue
@@ -95,6 +111,55 @@ def achar_roteiro(ditos, forcada=None):
             if not melhor or nota > melhor[3]:
                 melhor = (pasta, arq, esc, nota, list(dict.fromkeys(linhas)))
     return melhor
+
+
+CONTRACOES = {"it's": "it is", "don't": "do not", "doesn't": "does not", "isn't": "is not", "you're": "you are",
+              "i'm": "i am", "that's": "that is", "can't": "cannot", "won't": "will not", "we're": "we are",
+              "they're": "they are", "i'll": "i will", "you'll": "you will", "here's": "here is", "what's": "what is"}
+
+def conferir_fala(ws, fala):
+    """Confere o take PALAVRA POR PALAVRA contra a fala do roteiro (Luigi, 2026-10-09: o Flow inventa, remove e
+    repete falas no mesmo take; nota de semelhança deixava passar). Devolve (problemas, escutas).
+    problemas = faltou / inventou / repetiu / trocou: bloqueiam. escutas = palavra quase igual (erro do whisper,
+    "kimchee" por "kimchi", "it's" por "it is"): só avisam, porque a legenda usa o texto do roteiro."""
+    hw = [t for w, _, _ in ws for t in norm(w)]
+    rt = norm(fala)
+    probs, escutas = [], []
+    for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, hw, rt, autojunk=False).get_opcodes():
+        h, r = " ".join(hw[i1:i2]), " ".join(rt[j1:j2])
+        if op == "equal": continue
+        if op == "replace":
+            exp = lambda x: " ".join(CONTRACOES.get(t, t) for t in x.split())
+            if exp(h) == exp(r) or (i2 - i1 == j2 - j1 and all(
+                    difflib.SequenceMatcher(None, a, b).ratio() >= 0.6 for a, b in zip(hw[i1:i2], rt[j1:j2]))) \
+                    or difflib.SequenceMatcher(None, h.replace(" ", ""), r.replace(" ", "")).ratio() >= 0.85:
+                escutas.append(f'"{h}" no lugar de "{r}"')
+            else:
+                probs.append(f'trocou "{r}" por "{h}"')
+        elif op == "delete":
+            e = hw[i1:i2]; n = len(e)
+            rep = e == hw[i2:i2 + n] or e == hw[max(0, i1 - n):i1]
+            probs.append(f'{"repetiu" if rep else "inventou"} "{h}"')
+        else:
+            probs.append(f'faltou "{r}"')
+    return probs, escutas
+
+def aparar(f, ws, fala, tmp, k):
+    """Sobra do Flow só no começo ou no fim do take (improviso como \"If you're tired of struggling\" ou a frase
+    dita duas vezes): se existe um trecho contíguo que bate palavra por palavra com o roteiro, corta o resto e
+    devolve (arquivo, o que saiu). Sobra no MEIO da fala ou palavra faltando não se corta: o take volta para o Flow."""
+    oks = [(len(conferir_fala(ws[i:j + 1], fala)[1]), i, j) for i in range(len(ws)) for j in range(i, len(ws))
+           if not conferir_fala(ws[i:j + 1], fala)[0]]
+    if not oks: return None
+    _, i, j = min(oks)  # menos escutas; empate fica com a primeira vez que a frase foi dita
+    if (i, j) == (0, len(ws) - 1): return None
+    a = max(ws[i - 1][2], ws[i][1] - 0.05) if i else 0.0
+    b = min(ws[j + 1][1], ws[j][2] + 0.15) if j + 1 < len(ws) else dur(f)
+    saida = f"{tmp}/aparado_t{k:02d}.mp4"
+    sh(["ffmpeg", "-loglevel", "error", "-y", "-i", f, "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-c:v", "libx264",
+        "-crf", "16", "-preset", "fast", "-c:a", "aac", "-b:a", "192k", saida])
+    fora = " / ".join(x for x in (" ".join(w for w, _, _ in ws[:i]), " ".join(w for w, _, _ in ws[j + 1:])) if x)
+    return saida, fora
 
 
 # ---------- 4. cortes ----------
@@ -123,10 +188,24 @@ def ilhas(f, ws):
         else: sp.append(x)
     return sp
 
+def janela_insert(f, maximo):
+    """Insert mudo entra só com a janela de `maximo` s de mais movimento (a ação). Inteiro, ele alongava o vídeo
+    em ~7s por insert (teste v04 no Mac, 2026-10-09; no v04 aprovado foram encurtados à mão para 2,5s)."""
+    d = dur(f)
+    if not maximo or d <= maximo: return [[0.0, d]]
+    t = sh_err(f'ffmpeg -hide_banner -i "{f}" -vf "scale=96:-2,tblend=all_mode=difference,signalstats,'
+               f'metadata=print:key=lavfi.signalstats.YAVG" -an -f null -')
+    ts = [float(x) for x in re.findall(r"pts_time:([\d.]+)", t)]
+    ys = [float(x) for x in re.findall(r"YAVG=([\d.]+)", t)]
+    if not ts or len(ts) != len(ys): return [[0.0, maximo]]
+    ini = max((x for x in ts if x + maximo <= d), default=0.0,
+              key=lambda x: sum(y for u, y in zip(ts, ys) if x <= u < x + maximo))
+    return [[ini, ini + maximo]]
+
 def segmentos(takes, words, ramp):
     segs = []
     for k, f in takes:
-        sp = ilhas(f, words[k]) if words[k] else [[0.0, dur(f)]]  # take mudo (insert) entra inteiro
+        sp = ilhas(f, words[k]) if words[k] else janela_insert(f, INSERT)  # take mudo: só a ação
         for j, (a, b) in enumerate(sp):
             segs.append(dict(k=k, a=a, b=b, sp=SP))
             if k in ramp and j + 1 < len(sp) and sp[j + 1][0] > b:
@@ -221,8 +300,12 @@ def legenda_html(segs, heard, roteiro_palavras, total, leaks, up):
                 or nx["k"] != w["k"]):
             pages.append(cur); cur = []
     html, js = [], []
+    # insert mudo = take sem nenhum trecho falado; a legenda some quando ele entra (teste v04 no Mac,
+    # 2026-10-09: "of ginger" ficou em cima da mão espremendo o limão nos dois inserts)
+    inserts = {s["k"] for s in segs} - {s["k"] for s in segs if not s.get("mute")}
     for n, p in enumerate(pages):
         st = 0 if n == 0 else p[0]["t"]; en = pages[n + 1][0]["t"] if n < len(pages) - 1 else total
+        en = min([en] + [s["o"] for s in segs if s["k"] in inserts and s["o"] > st + 0.01])
         txt = " ".join(re.sub(r"[.,!?]$", "", w["w"]) for w in p).lower()
         cls = " up" if p[0]["k"] in up else ""
         html.append(f'<div class="clip cap{cls}" id="cp{n}" data-start="{st:.3f}" data-duration="{en - st:.3f}" '
@@ -239,7 +322,7 @@ PAGINA = open(os.path.join(AQUI, "pagina_v3.html"), encoding="utf8").read()
 
 def escolher_musica(nome, chave):
     faixas = sorted(glob.glob(f"{MUSICAS}/*.mp3"))
-    if not faixas: return None
+    if not faixas: sys.exit(f"Nenhuma música em {MUSICAS}. Aponte EDICAO_MUSICAS ou rode com --sem-musica.")
     if nome:
         c = [f for f in faixas if nome.lower() in os.path.basename(f).lower()]
         if not c: sys.exit(f"Música '{nome}' não encontrada em {MUSICAS}")
@@ -305,7 +388,9 @@ def main():
     ap.add_argument("--up", default="1", help="takes com legenda mais alta")
     ap.add_argument("--nome", default=None); ap.add_argument("--trabalho", default=None)
     ap.add_argument("--nota-minima", type=float, default=0.85)
+    ap.add_argument("--insert", type=float, default=INSERT, help="segundos de cada insert mudo, na ação (0 = inteiro)")
     a = ap.parse_args()
+    globals()["INSERT"] = a.insert
     t0 = time.time(); rel = []
     # qualquer nome de arquivo serve: a ORDEM vem da fala comparada com o roteiro (passo 2)
     arquivos = sorted(os.path.abspath(f) for f in glob.glob(f"{a.pasta}/*.mp4") if "_editado" not in os.path.basename(f))
@@ -327,9 +412,21 @@ def main():
     achado = achar_roteiro(falantes, a.producao)
     if not achado: sys.exit("Nenhum roteiro encontrado")
     pasta, arq, falas_arq, nota, linhas = achado
-    # posição de cada take = posição da frase dele no roteiro; mudo usa o número do nome do arquivo
-    pos = {f: linhas.index(falas_arq[f]) + 1 for f in falantes}
+    # posição de cada take = número do take (T__) da frase dele no pacote; mudo usa o número do nome do arquivo.
+    # Os dois na MESMA numeração: sem os blocos V__, a frase só tem a posição entre as falas.
+    tn = numeros_take(arq)
+    pos = {f: tn.get(falas_arq[f], linhas.index(falas_arq[f]) + 1) for f in falantes}
     avisos = []
+    mudos = [f for f in arquivos if f not in falantes]
+    if mudos and not tn:
+        avisos.append("Pacote sem blocos V__: a posição dos takes mudos não é confiável, conferir no cortes.png")
+    teto = max(tn.values()) if tn else len(arquivos)
+    for f in mudos:
+        if numero(f) is not None and not 1 <= numero(f) <= teto:
+            sys.exit(f"Take mudo {os.path.basename(f)}: o número no nome ({numero(f)}) não é um take do roteiro "
+                     f"(1 a {teto}); provavelmente é o horário do Flow. Renomeie com o número do take (ex.: t07_pimenta.mp4).")
+        if numero(f) in pos.values():
+            avisos.append(f"{os.path.basename(f)} é mudo mas o T{numero(f)} do roteiro tem fala: conferir no cortes.png")
     repetidas = {p for p in pos.values() if list(pos.values()).count(p) > 1}
     if repetidas:
         avisos.append("Dois takes com a mesma frase do roteiro: " + ", ".join(
@@ -342,23 +439,41 @@ def main():
             avisos.append(f"{os.path.basename(f)} é mudo: posição pelo nome ({numero(f)}), conferir no cortes.png")
     ordem = sorted(arquivos, key=lambda f: (pos[f], numero(f) or 0, f))
     for i, f in enumerate(ordem, 1):
-        if f in falantes and numero(f) is not None and numero(f) != i:
+        if f in falantes and numero(f) is not None and numero(f) <= teto and numero(f) != i:  # horário no nome não é aviso
             avisos.append(f"{os.path.basename(f)} foi para a posição {i} pela fala (o nome dizia {numero(f)})")
     takes = [(i, f) for i, f in enumerate(ordem, 1)]
-    words = {i: w_arq[f] for i, f in takes}
+    # take mudo nunca passa pelo corte de fala: ruído que o whisper "ouve" no insert virava um trecho de 0,6s
+    # (teste v04 no Mac, 2026-10-09: a pimenta sumiu e a legenda anterior ficou em cima dela)
+    words = {i: (w_arq[f] if f in falantes else []) for i, f in takes}
     ditos = {i: d_arq[f] for i, f in takes}
     falas = {i: falas_arq[f] for i, f in takes if f in falantes}
-    rel.append("- Ordem dos takes (pela fala): " + " → ".join(f"{i}. {os.path.basename(f)}" for i, f in takes))
+    rel.append("- Ordem dos takes (pela fala): " + " → ".join(
+        f"{i}. {os.path.basename(f)} (T{int(pos[f] + 0.5)})" for i, f in takes))
     rel += [f"  - aviso: {x}" for x in avisos]
     rel.append(f"- Produção: `{os.path.basename(pasta)}` (`{arq.replace(REPO + '/', '').replace('/mnt/project-files/', '')}`), semelhança {nota:.0%}")
     if nota < a.nota_minima: sys.exit(f"Roteiro incerto ({nota:.0%} < {a.nota_minima:.0%}): {arq}. Rode com --producao.")
 
-    log("3/7 conferindo a fala de cada take")
-    erros_fala = []
+    log("3/7 conferindo a fala de cada take, palavra por palavra")
+    erros_fala, aparados, avisos_escuta = [], [], []
     for k in sorted(falas):
-        r = parecido(ditos[k], falas[k])
-        if r < 0.9: erros_fala.append(f"T{k}: ouvi \"{ditos[k]}\" | roteiro \"{falas[k]}\" ({r:.0%})")
-    rel.append(f"- Fala dos takes contra o roteiro: {'OK' if not erros_fala else 'FALHA'}")
+        f = dict(takes)[k]
+        probs, esc = conferir_fala(words[k], falas[k])
+        if probs:
+            ap = aparar(f, words[k], falas[k], tmp, k)
+            if ap:
+                novo, fora = ap
+                words[k] = palavras(novo); ditos[k] = " ".join(w for w, _, _ in words[k])
+                probs2, esc = conferir_fala(words[k], falas[k])
+                if not probs2:
+                    takes = [(i, novo if i == k else g) for i, g in takes]
+                    aparados.append(f"{k}. {os.path.basename(f)}: cortado o que o Flow pôs a mais na ponta: \"{fora}\"; ouvir a emenda")
+                    probs = []
+        if probs:
+            erros_fala.append(f"{k}. {os.path.basename(f)}: " + "; ".join(probs) + f' | ouvi "{ditos[k]}" | roteiro "{falas[k]}"')
+        avisos_escuta += [f"{k}. escuta do whisper, conferir no vídeo: {e}" for e in esc]
+    rel.append(f"- Fala dos takes contra o roteiro, palavra por palavra: {'OK' if not erros_fala else 'FALHA'}")
+    rel += [f"  - aparado: {x}" for x in aparados]
+    rel += [f"  - aviso: {x}" for x in avisos_escuta]
     rel += [f"  - {e}" for e in erros_fala]
     if erros_fala: open(f"{tmp}/RELATORIO.md", "w").write("\n".join(rel)); sys.exit("Take com fala diferente do roteiro; ver RELATORIO.md")
 
