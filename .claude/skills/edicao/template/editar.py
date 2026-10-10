@@ -38,6 +38,41 @@ def sh_err(cmd):
     return subprocess.run(cmd, shell=True, capture_output=True, text=True).stderr
 
 
+_rms = {}
+def rms_janelas(f):
+    """Volume médio (dB) de cada janela de 50 ms do áudio do take."""
+    if f not in _rms:
+        e = sh_err(f'ffmpeg -hide_banner -i "{f}" -vn -af "aresample=16000,asetnsamples=800,astats=metadata=1:reset=1,'
+                   f'ametadata=print:key=lavfi.astats.Overall.RMS_level" -f null -')
+        _rms[f] = [float(x) if x != "-inf" else -120.0 for x in re.findall(r"RMS_level=(-?[\d.]+|-inf)", e)]
+    return _rms[f]
+
+_limiar = {}
+def limiar(f):
+    """Volume abaixo do qual o take está "em silêncio", medido no próprio take (Luigi, 2026-10-10: o Flow às vezes
+    gera intervalo longo entre duas falas do mesmo take, e todo silêncio no meio do take sai). Com -35 dB fixo, a
+    pausa com som de ambiente ou chiado do Flow não era cortada. Agora: fundo do take (5% mais baixo) + 6 dB,
+    nunca acima da fala - 12 dB, nunca abaixo de -35 dB."""
+    if f not in _limiar:
+        v = sorted(rms_janelas(f))
+        if len(v) < 20: _limiar[f] = -35.0
+        else:
+            fundo, fala = v[len(v) // 20], v[len(v) * 7 // 10]
+            _limiar[f] = round(max(-35.0, min(fundo + 6, fala - 12)), 1)
+    return _limiar[f]
+
+def silencio_rms(f, minimo):
+    """Trechos [início, fim] com volume médio abaixo do limiar do take por pelo menos `minimo` s. Mede pela média
+    de cada janela, como o limiar: o silencedetect olha o pico, e com chiado nenhum trecho virava silêncio."""
+    thr, v, out, st = limiar(f), rms_janelas(f), [], None
+    for i, x in enumerate(v + [0.0]):
+        if x < thr and i < len(v):
+            if st is None: st = i
+        elif st is not None:
+            if (i - st) * 0.05 >= minimo: out.append([st * 0.05, min(i * 0.05, dur(f))])
+            st = None
+    return out
+
 def dur(f):
     return float(sh(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f]))
 
@@ -170,12 +205,7 @@ def fala_sem_texto(f, ws, tmp, minimo=0.35):
     cima dela ("store" durando 2,1s). Cada suspeito é transcrito sozinho; só vira corte se tiver palavra.
     Devolve [[início, fim, texto]]."""
     d = dur(f)
-    log_ = sh_err(f'ffmpeg -hide_banner -i "{f}" -af silencedetect=noise=-35dB:d={GAP} -f null -')
-    sil, st = [], None
-    for m in re.finditer(r"silence_(start|end): ([\d.]+)", log_):
-        if m.group(1) == "start": st = float(m.group(2))
-        else: sil.append([st, float(m.group(2))]); st = None
-    if st is not None: sil.append([st, d])
+    sil = silencio_rms(f, GAP)
     som, pos = [], 0.0
     for a, b in sil:
         if a > pos: som.append([pos, a])
@@ -256,22 +286,21 @@ def limpar(f, ws, fala, tmp, k):
 # ---------- 4. cortes ----------
 def ilhas(f, ws):
     d = dur(f)
-    log_ = sh_err(f'ffmpeg -hide_banner -i "{f}" -af silencedetect=noise=-35dB:d={GAP} -f null -')
-    sil, st = [], None
-    for m in re.finditer(r"silence_(start|end): ([\d.]+)", log_):
-        if m.group(1) == "start": st = float(m.group(2))
-        else: sil.append([st, float(m.group(2))]); st = None
-    if st is not None: sil.append([st, d])
+    sil = silencio_rms(f, GAP)
     isl, pos = [], 0.0
     for a, b in sil:
         if a - pos > 0.02: isl.append([pos, a])
         pos = b
     if d - pos > 0.02: isl.append([pos, d])
     isl = [i for i in isl if any(wb > i[0] + 0.03 and wa < i[1] - 0.03 for _, wa, wb in ws)]  # ruído cai
+    # ilha curta (< 0,4s) junta com a vizinha só se estiverem COLADAS (até 0,25s): sem essa trava, um estalo depois
+    # de uma pausa longa "juntava" e a pausa inteira ficava no vídeo (teste 2026-10-10: 1,5s de pausa mantida)
     merged = []
     for i in isl:
-        if merged and (i[1] - i[0] < MIN_ISLAND or merged[-1][1] - merged[-1][0] < MIN_ISLAND): merged[-1][1] = i[1]
+        if merged and i[0] - merged[-1][1] <= 0.25 and (i[1] - i[0] < MIN_ISLAND or merged[-1][1] - merged[-1][0] < MIN_ISLAND):
+            merged[-1][1] = i[1]
         else: merged.append(list(i))
+    merged = [m for m in merged if m[1] - m[0] >= 0.12]  # estalo isolado cai
     sp = []
     for a, b in merged:
         x = [max(0, a - PAD_IN), min(d, b + PAD_OUT)]
@@ -460,10 +489,7 @@ def fantasmas(video, cortes_q):
     return sorted(set(achados))
 
 def silencios(video, d=0.25):
-    log_ = sh_err(f'ffmpeg -hide_banner -i "{video}" -af silencedetect=noise=-35dB:d={d} -f null -')
-    ini = [float(x) for x in re.findall(r"silence_start: ([\d.]+)", log_)]
-    fim = [float(x) for x in re.findall(r"silence_end: ([\d.]+)", log_)]
-    return list(zip(ini, fim))
+    return [tuple(x) for x in silencio_rms(video, d)]
 
 def sheet(video, tempos, saida, cols=12, larg=120):
     expr = "+".join(f"between(t,{t - 0.1:.2f},{t + 0.1:.2f})" for t in tempos)

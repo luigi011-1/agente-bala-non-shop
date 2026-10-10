@@ -30,10 +30,15 @@ arquivo). Nenhum item aqui é opcional.
      porque a legenda usa o texto do roteiro.
 
 ### Cortes e ritmo
-3. **Cortar pelos silêncios reais** do áudio (`silencedetect=noise=-35dB:d=0.15`), nunca pelo tempo
-   do whisper (ele estica a palavra até a seguinte e esconde a pausa).
+3. **Cortar TODO silêncio, inclusive no MEIO do take** (Luigi, 2026-10-10: o Flow às vezes deixa um
+   intervalo longo entre duas falas do mesmo take; é o que deixa a edição dopaminérgica). Pelo volume
+   real do áudio, nunca pelo tempo do whisper (ele estica a palavra até a seguinte e esconde a pausa).
+   O limiar é medido em cada take (fundo + 6 dB, no mínimo -35 dB) em janelas de 50 ms pela média: com
+   -35 dB fixo e `silencedetect` (que olha o pico), pausa com chiado de ambiente não era cortada.
 4. **Ilha de som sem nenhuma palavra cai** (ruído de fim de take, respiração).
-5. **Ilha de fala menor que 0,4s junta com a vizinha**: senão vira um piscar.
+5. **Ilha de fala menor que 0,4s junta com a vizinha, só se estiverem coladas (até 0,25s)**: senão vira
+   um piscar. Estalo isolado (< 0,12s) cai. Sem a trava de 0,25s, um estalo depois de uma pausa longa
+   juntava e a pausa inteira ficava (erro 19).
 6. **Segmentos a menos de 0,05s um do outro viram um só**: corte invisível só cria risco.
 7. **Folga de 0,05s antes e 0,11s depois** de cada trecho de fala: a sílaba final não some.
 8. **Fala a 1,12x** (alvo 3,5 a 3,7 palavras por segundo; o teste deu 3,64).
@@ -92,8 +97,9 @@ arquivo). Nenhum item aqui é opcional.
 | 16 | Take do queixo com "like this" repetido no fim passou na conferência | nota de semelhança de 90% não vê repetição curta nem palavra faltando | conferência palavra por palavra (regra 2); a sobra da ponta é cortada |
 | 17 | Repetição no meio do take passaria sem aviso | o whisper suprime fala repetida da transcrição | cruzar áudio e palavras (`fala_sem_texto`) e transcrever o suspeito sozinho |
 | 18 | Pimenta e limão do v04 sem a fala do roteiro | takes mudos marcados "voz-over" sem fala gravada em lugar nenhum | take mudo só sem fala por cima (memória `take-mudo-so-sem-voz`); o editor avisa quando um mudo tem fala no roteiro |
+| 19 | Pausa de 1,5s com chiado no meio do take ficava no vídeo | limiar fixo -35 dB pelo pico, e um estalo depois da pausa "juntava" a ilha por cima dela | limiar medido no take pela média (regra 3) e junção só de ilhas coladas (regra 5) |
 
-Erros 8 a 18: teste no Mac com os takes do v04 (FitWell growth, gengibre e limão), 2026-10-09.
+Erros 8 a 19: teste no Mac com os takes do v04 (FitWell growth, gengibre e limão), 2026-10-09.
 O 8, o 9, o 11 e o 15 passaram em todas as conferências automáticas e só apareceram no `cortes.png` ou no
 olho: **a conferência 19 (olhar `cortes.png` e `legendas.png`) continua obrigatória**.
 
