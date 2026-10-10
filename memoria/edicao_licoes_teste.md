@@ -10,7 +10,7 @@ metadata:
 
 Testes de 2026-10-09 e 10 no Mac do Luigi, antes da primeira produção real com edição automática:
 takes crus do v04 (FitWell growth, gengibre e limão), takes fabricados a partir de vídeos modelo e das
-edições de referência dele. Detalhe técnico de cada erro (8 a 19) em `docs/pos-producao-edicao-regras.md`;
+edições de referência dele. Detalhe técnico de cada erro (8 a 22) em `docs/pos-producao-edicao-regras.md`;
 padrão de gosto dele em `docs/pos-producao-referencias-luigi.md`. Pedido do Luigi: *"saber o que você NÃO
 deve fazer é tão importante quanto saber o que você DEVE fazer"*.
 
@@ -38,7 +38,12 @@ NÃO FAZER
 - Não confiar que a transcrição do whisper mostra repetição: ele SUPRIME fala repetida e estica a palavra
   anterior por cima dela. Cruzar com o áudio (`fala_sem_texto`) e transcrever o trecho suspeito sozinho.
 - Não achar pausa pelo tempo das palavras do whisper (ele estica a palavra até a seguinte).
+- Não tratar o fim de uma palavra falada devagar como "fala escondida": só cortar quando o trecho, transcrito
+  sozinho, tiver OUTRA palavra (V01 temperos, 2026-10-10: o "Why?" perdeu o fim e o take travou).
 - Não usar limiar de silêncio fixo nem pelo pico (`silencedetect -35dB`): pausa com chiado do Flow ficava.
+  E não baixar o piso do limiar para salvar palavra fraca (as pausas voltam): proteger a palavra das pontas
+  do take pelo tempo dela (o "one." final do V01 temperos sumia).
+- Não deixar página de legenda com duração zero: o HyperFrames deixa ela na tela (o "why" do T3 apareceu no T5).
 - Não juntar trecho curto com vizinho que está longe: um estalo depois de 1,5s de pausa trazia a pausa junto.
 - Não numerar take falado e take mudo em sistemas diferentes (falas x takes): o limão caiu depois do Boil.
 - Não deixar insert mudo entrar inteiro, nem passar pelo corte de fala, nem com a legenda anterior por cima.

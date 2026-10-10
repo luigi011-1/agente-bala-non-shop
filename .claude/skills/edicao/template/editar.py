@@ -58,6 +58,8 @@ def limiar(f):
         if len(v) < 20: _limiar[f] = -35.0
         else:
             fundo, fala = v[len(v) // 20], v[len(v) * 7 // 10]
+            # piso -35: mais baixo, o ruído de sala das pausas virava "som" e as pausas ficavam (2026-10-10).
+            # Palavra dita baixinho é protegida em `ilhas`, pelo tempo da palavra, não pelo limiar.
             _limiar[f] = round(max(-35.0, min(fundo + 6, fala - 12)), 1)
     return _limiar[f]
 
@@ -234,7 +236,9 @@ def fala_sem_texto(f, ws, tmp, minimo=0.35):
         pos = b
     if d > pos: som.append([pos, d])
     teto = lambda w: 0.45 + 0.09 * len(re.sub(r"[^a-z0-9]", "", w.lower()))  # duração plausível da palavra
-    cobre = sorted([max(0, a - 0.08), min(b, a + teto(w)) + 0.08] for w, a, b in ws)
+    # som sem palavra usa o tempo REAL de cada palavra: com o teto aqui, o fim de um "Why?" falado devagar virava
+    # "fala escondida" e o corte comia a palavra (V01 temperos, 2026-10-10). Palavra longa demais é o caso 2.
+    cobre = sorted([max(0, a - 0.08), b + 0.08] for w, a, b in ws)
     achados = []
     for a, b in som:  # 1) som sem palavra
         x = a
@@ -315,6 +319,26 @@ def ilhas(f, ws):
         pos = b
     if d - pos > 0.02: isl.append([pos, d])
     isl = [i for i in isl if any(wb > i[0] + 0.03 and wa < i[1] - 0.03 for _, wa, wb in ws)]  # ruído cai
+    # palavra ouvida nunca vira silêncio: o trecho dela (até a duração plausível, para não proteger pausa
+    # esticada pelo whisper) entra nas ilhas mesmo com volume baixo (V01 temperos: o "one." final sumia)
+    teto = lambda w: 0.45 + 0.09 * len(re.sub(r"[^a-z0-9]", "", w.lower()))
+    # só nas PONTAS do take: a voz do Flow cai no fim (o "one." baixinho). No meio, o whisper às vezes começa
+    # a palavra cedo demais ("because" 0,5s antes do som) e a proteção engolia a pausa.
+    ini0 = isl[0][0] if isl else 0.0
+    fim0 = isl[-1][1] if isl else d
+    for w, wa, wb in ws:
+        if not (wa >= fim0 - 0.1 or wb <= ini0 + 0.1):
+            continue
+        a2, b2 = wa, min(wb, wa + teto(w))
+        dentro = sum(max(0.0, min(b2, i[1]) - max(a2, i[0])) for i in isl)
+        if dentro < 0.5 * (b2 - a2):  # só a palavra que o corte perdeu; esticada pelo whisper já está coberta
+            isl.append([a2, b2])
+    isl.sort()
+    junto = []
+    for i in isl:
+        if junto and i[0] <= junto[-1][1] + 0.02: junto[-1][1] = max(junto[-1][1], i[1])
+        else: junto.append(list(i))
+    isl = junto
     # ilha curta (< 0,4s) junta com a vizinha só se estiverem COLADAS (até 0,25s): sem essa trava, um estalo depois
     # de uma pausa longa "juntava" e a pausa inteira ficava no vídeo (teste 2026-10-10: 1,5s de pausa mantida)
     merged = []
@@ -443,6 +467,18 @@ def palavra_chave(p, n):
     cand = [(len(w), i) for i, w in enumerate(limpa) if w not in VAZIAS and len(w) >= 5]
     return max(cand)[1] if cand and n % 2 == 0 else None
 
+def juntar_curtas(pages, minimo=0.15):
+    """Página que dura menos de `minimo` s se junta à seguinte. Duas palavras no mesmo instante ("Why?" e
+    "Papaya") geravam página de duração ZERO, e o HyperFrames deixa clipe de duração zero na tela muito
+    depois (V01 temperos, 2026-10-10: o "why" do T3 apareceu em cima do T5)."""
+    out = []
+    for i, p in enumerate(pages):
+        if out and out[-1] is not None and i < len(pages) and p[0]["t"] - out[-1][0]["t"] < minimo:
+            out[-1] = out[-1] + p
+        else:
+            out.append(list(p))
+    return out
+
 def legenda_auraly(ws, segs, total, inserts):
     """Estilo Auraly da referência do Luigi (2026-10-09): a página se monta palavra por palavra no tempo da fala,
     empilha até 3 linhas curtas, uma palavra-chave bem maior; troca no ponto, na vírgula e na troca de take."""
@@ -452,6 +488,7 @@ def legenda_auraly(ws, segs, total, inserts):
         if (not nx or len(cur) >= 4 or re.search(r"[.!?]$", w["w"]) or (re.search(r",$", w["w"]) and len(cur) >= 2)
                 or nx["k"] != w["k"]):
             pages.append(cur); cur = []
+    pages = juntar_curtas(pages)
     html, js = [], []
     for n, p in enumerate(pages):
         st = 0 if n == 0 else p[0]["t"]; en = pages[n + 1][0]["t"] if n < len(pages) - 1 else total
@@ -491,6 +528,7 @@ def legenda_html(segs, heard, roteiro_palavras, total, leaks, up, estilo="fitwel
         if (not nx or len(cur) >= 3 or re.search(r"[.!?]$", w["w"]) or (re.search(r",$", w["w"]) and len(cur) >= 2)
                 or nx["k"] != w["k"]):
             pages.append(cur); cur = []
+    pages = juntar_curtas(pages)
     html, js = [], []
     # insert mudo = take sem nenhum trecho falado; a legenda some quando ele entra (teste v04 no Mac,
     # 2026-10-09: "of ginger" ficou em cima da mão espremendo o limão nos dois inserts)
@@ -746,6 +784,7 @@ def main():
         "Sem silêncio fora da rampa": not sil,
         "Sem quadro fantasma nos cortes": not fant,
         "Legenda com o texto do roteiro (contagem bateu)": usa_rot,
+        "Nenhuma legenda com menos de 0,1s": not re.search(r'data-duration="0\.0\d\d"', "\n".join(h for h in html if "cap" in h)),
         "Arquivo abaixo de 25 MB": mb < 25,
     }
     rel += [f"- {k}: {'OK' if v else 'FALHA'}" for k, v in ok.items()]

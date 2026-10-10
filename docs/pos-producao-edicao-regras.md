@@ -101,8 +101,11 @@ arquivo). Nenhum item aqui é opcional.
 | 17 | Repetição no meio do take passaria sem aviso | o whisper suprime fala repetida da transcrição | cruzar áudio e palavras (`fala_sem_texto`) e transcrever o suspeito sozinho |
 | 18 | Pimenta e limão do v04 sem a fala do roteiro | takes mudos marcados "voz-over" sem fala gravada em lugar nenhum | take mudo só sem fala por cima (memória `take-mudo-so-sem-voz`); o editor avisa quando um mudo tem fala no roteiro |
 | 19 | Pausa de 1,5s com chiado no meio do take ficava no vídeo | limiar fixo -35 dB pelo pico, e um estalo depois da pausa "juntava" a ilha por cima dela | limiar medido no take pela média (regra 3) e junção só de ilhas coladas (regra 5) |
+| 20 | Primeira produção real (V01 temperos): o "Why?" falado devagar perdeu o fim | o teste de "som sem palavra" usava a duração ESPERADA da palavra; o fim real virou "fala escondida" e foi cortado | som sem palavra usa o tempo real; palavra longa demais só vai para o teste de palavra esticada (transcreve a palavra inteira e só corta se ouvir outra palavra) |
+| 21 | O "why" do T3 ficou na tela por cima do T5 | página de legenda com duração ZERO (duas palavras no mesmo instante); o HyperFrames não esconde clipe de duração zero | página com menos de 0,15s junta com a seguinte (`juntar_curtas`) e a conferência reprova legenda < 0,1s |
+| 22 | O "one." final, dito baixinho (-40 dB), sumia | o corte de silêncio pela média tratou a palavra fraca do fim como silêncio | palavra das PONTAS do take que o corte perdeu é protegida pelo tempo dela; no meio do take não (o whisper começa palavra cedo e a proteção engoliria a pausa) |
 
-Erros 8 a 19: teste no Mac com os takes do v04 (FitWell growth, gengibre e limão), 2026-10-09.
+Erros 8 a 22: teste no Mac com os takes do v04 (FitWell growth, gengibre e limão), 2026-10-09.
 O 8, o 9, o 11 e o 15 passaram em todas as conferências automáticas e só apareceram no `cortes.png` ou no
 olho: **a conferência 19 (olhar `cortes.png` e `legendas.png`) continua obrigatória**.
 
