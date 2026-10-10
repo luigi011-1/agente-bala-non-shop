@@ -41,7 +41,8 @@ arquivo). Nenhum item aqui é opcional.
    juntava e a pausa inteira ficava (erro 19).
 6. **Segmentos a menos de 0,05s um do outro viram um só**: corte invisível só cria risco.
 7. **Folga de 0,05s antes e 0,11s depois** de cada trecho de fala: a sílaba final não some.
-8. **Fala a 1,12x** (alvo 3,5 a 3,7 palavras por segundo; o teste deu 3,64).
+8. **Ritmo por vídeo, não velocidade fixa** (Luigi, 2026-10-10, referências dele): acelerar até **3,8
+   palavras/s** (FitWell e outros) ou **4,0** (Auraly), entre 1,0x e 1,25x. Antes era 1,12x fixo (~3,1).
 9. **No take-herói visual (o reveal), a pausa é ACELERADA 5x, não cortada**: a transformação
    continua sem pulo e a pausa vira ~0,3s. Marcar o take em `RAMP`.
 10. **Corte dentro do filtro** (`trim`/`atrim`), nunca `-ss` antes do `-i`.
@@ -54,7 +55,9 @@ arquivo). Nenhum item aqui é opcional.
     quebra no ponto final, na vírgula (com 2+ palavras) e na troca de take.
 14. Legenda no centro (top 880px); no take-herói sobe para 760px, entre o rosto e o objeto. Nunca
     sobre o rosto, nunca sobre o herói.
-15. Light leak laranja só na entrada de 2 takes. Cortes secos no resto.
+15. **Sem light leak** (Luigi, 2026-10-10). Cortes secos. No Auraly, um flash claro só na saída do gancho.
+15b. **Legenda do Auraly tem estilo próprio** (`docs/pos-producao-referencias-luigi.md`): monta palavra
+    por palavra, palavra-chave grande, selos 777/222 em todo vídeo Auraly.
 16. Voz em `loudnorm I=-14 TP=-1.2`.
 16b. **Música sempre a -25 dB da voz** (Luigi, 2026-10-09; -10 dB ficou alta e atrapalhou a fala): a faixa é normalizada para -14 LUFS (o
     nível da voz) e baixada 25 dB, sem ducking, com 0,3s de entrada e 0,8s de saída; silêncio de

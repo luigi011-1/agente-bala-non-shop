@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Edição automática de takes do Flow, num comando só (estilo v3 aprovado pelo Luigi em 2026-10-09).
 
-    python3 editar.py <pasta_dos_takes> [--producao <nome ou pasta>] [--musica <nome>] [--insert 2.5] [--ramp 1] [--leaks 2,4] [--up 1]
+    python3 editar.py <pasta_dos_takes> [--producao <nome ou pasta>] [--musica <nome>] [--insert 2.5] [--estilo auraly] [--ritmo 3.8] [--ramp 1] [--leaks 2,4] [--up 1]
 
 Faz, em ordem, e para no primeiro problema:
   1. transcreve cada take (faster-whisper, modelo carregado uma vez);
@@ -158,7 +158,13 @@ CONTRACOES = {"it's": "it is", "don't": "do not", "doesn't": "does not", "isn't"
               "they're": "they are", "i'll": "i will", "you'll": "you will", "here's": "here is", "what's": "what is"}
 
 # palavra curta trocada por outra curta é escuta do whisper ("drop the spoonful" por "drop a spoonful")
-PEQUENAS = {"a", "an", "the", "and", "in", "on", "of", "to", "at", "for", "is", "it", "this", "that", "your", "you"}
+PEQUENAS = {"a", "an", "the", "and", "in", "on", "of", "to", "at", "for", "is", "it", "this", "that", "your", "you",
+            "oh", "no", "so", "now"}
+
+def escuta_ok(h, r):
+    """Tokens ouvidos `h` contra os do roteiro `r` (mesmo tamanho): iguais ou erro de escuta do whisper."""
+    return len(h) == len(r) and all(a == b or (a in PEQUENAS and b in PEQUENAS)
+                                    or difflib.SequenceMatcher(None, a, b).ratio() >= 0.6 for a, b in zip(h, r))
 
 def conferir_fala(ws, fala, sobra=None):
     """Confere o take PALAVRA POR PALAVRA contra a fala do roteiro (Luigi, 2026-10-09: o Flow inventa, remove e
@@ -174,6 +180,22 @@ def conferir_fala(ws, fala, sobra=None):
     for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, hw, rt, autojunk=False).get_opcodes():
         h, r = " ".join(hw[i1:i2]), " ".join(rt[j1:j2])
         if op == "equal": continue
+        if op == "replace" and (i2 - i1) > (j2 - j1):
+            # sobra colada numa escuta ("meant for you oh" no lugar de "no"): a ponta que casa com o roteiro é
+            # escuta, o resto é sobra que se corta (teste 2026-10-10: sem isso virava "trocou" e travava)
+            n = j2 - j1
+            for ini, fim in ((i2 - n, i2), (i1, i1 + n)):
+                if escuta_ok(hw[ini:fim], rt[j1:j2]):
+                    extra = list(range(i1, ini)) + list(range(fim, i2))
+                    e = [hw[x] for x in extra]
+                    rep = e == hw[i2:i2 + len(e)] or e == hw[max(0, i1 - len(e)):i1]
+                    probs.append(f'{"repetiu" if rep else "inventou"} "{" ".join(e)}"')
+                    if sobra is not None: sobra.update(dono[x] for x in extra)
+                    if hw[ini:fim] != rt[j1:j2]: escutas.append(f'"{" ".join(hw[ini:fim])}" no lugar de "{r}"')
+                    break
+            else:
+                probs.append(f'trocou "{r}" por "{h}"')
+            continue
         if op == "replace":
             exp = lambda x: " ".join(CONTRACOES.get(t, t) for t in x.split())
             if exp(h) == exp(r) or (h in PEQUENAS and r in PEQUENAS) or (i2 - i1 == j2 - j1 and all(
@@ -404,7 +426,57 @@ def alinhar(heard, roteiro_palavras, max_dif=0.08):
     return t
 
 
-def legenda_html(segs, heard, roteiro_palavras, total, leaks, up):
+# palavra que pesa na frase (Auraly): número, dinheiro, tempo, ação forte
+FORTES = {"money", "cash", "rich", "call", "found", "never", "always", "everything", "nothing", "today", "tonight",
+          "now", "next", "week", "blessing", "seal", "stories", "soulmate", "face", "name", "love", "isn't", "can't",
+          "won't", "don't", "stop", "change", "changes", "dark", "light", "open", "closed", "warning", "chosen", "you"}
+VAZIAS = {"the", "a", "an", "and", "or", "but", "of", "to", "in", "on", "at", "for", "with", "that", "this", "it", "is",
+          "was", "be", "are", "your", "my", "i", "me", "so", "if", "just", "what", "when", "they", "she", "he", "we"}
+
+def palavra_chave(p, n):
+    """Índice da palavra que fica grande na página, ou None (referência do Luigi: ~metade das páginas)."""
+    limpa = [re.sub(r"[^a-z0-9']", "", w["w"].lower()) for w in p]
+    for i, w in enumerate(limpa):
+        if re.search(r"\d", w): return i
+    for i, w in enumerate(limpa):
+        if w in FORTES and len(p) > 1: return i
+    cand = [(len(w), i) for i, w in enumerate(limpa) if w not in VAZIAS and len(w) >= 5]
+    return max(cand)[1] if cand and n % 2 == 0 else None
+
+def legenda_auraly(ws, segs, total, inserts):
+    """Estilo Auraly da referência do Luigi (2026-10-09): a página se monta palavra por palavra no tempo da fala,
+    empilha até 3 linhas curtas, uma palavra-chave bem maior; troca no ponto, na vírgula e na troca de take."""
+    pages, cur = [], []
+    for i, w in enumerate(ws):
+        cur.append(w); nx = ws[i + 1] if i + 1 < len(ws) else None
+        if (not nx or len(cur) >= 4 or re.search(r"[.!?]$", w["w"]) or (re.search(r",$", w["w"]) and len(cur) >= 2)
+                or nx["k"] != w["k"]):
+            pages.append(cur); cur = []
+    html, js = [], []
+    for n, p in enumerate(pages):
+        st = 0 if n == 0 else p[0]["t"]; en = pages[n + 1][0]["t"] if n < len(pages) - 1 else total
+        en = min([en] + [s["o"] for s in segs if s["k"] in inserts and s["o"] > st + 0.01])
+        big = palavra_chave(p, n)
+        spans = []
+        for j, w in enumerate(p):
+            txt = re.sub(r"[.,!?;:]$", "", w["w"]).lower()
+            spans.append(f'<span class="w{" big" if j == big else ""}" id="w{n}_{j}">{txt}</span>')
+            t = max(st, w["t"] - 0.03)
+            js.append(f'tl.fromTo("#w{n}_{j}", {{ opacity: 0, scale: {0.7 if j == big else 0.9} }}, '
+                      f'{{ opacity: 1, scale: 1, duration: {0.12 if j == big else 0.06}, ease: "back.out(2)" }}, {t:.3f});')
+        html.append(f'<div class="clip capa" id="cp{n}" data-start="{st:.3f}" data-duration="{en - st:.3f}" '
+                    f'data-track-index="{2 + n % 2}"><div class="linhas">{"".join(spans)}</div></div>')
+    return html, js, len(pages)
+
+def selos_auraly(total):
+    """Selos fixos do canal em TODO vídeo Auraly (Luigi, 2026-10-10): 777 à direita na altura do rosto, 222 à
+    esquerda na altura do peito."""
+    return [f'<div class="clip selo" id="selo777" style="top: 420px; right: 56px;" data-start="0" data-duration="{total:.3f}" '
+            f'data-track-index="6">🇺🇸777🇺🇸</div>',
+            f'<div class="clip selo" id="selo222" style="top: 1310px; left: 56px;" data-start="0" data-duration="{total:.3f}" '
+            f'data-track-index="7">🔮222🔮</div>']
+
+def legenda_html(segs, heard, roteiro_palavras, total, leaks, up, estilo="fitwell"):
     def seg_at(t):
         return next((s for s in segs if s["o"] <= t < s["o"] + s["d"]), segs[-1])
     tempos = alinhar(heard, roteiro_palavras)
@@ -423,17 +495,22 @@ def legenda_html(segs, heard, roteiro_palavras, total, leaks, up):
     # insert mudo = take sem nenhum trecho falado; a legenda some quando ele entra (teste v04 no Mac,
     # 2026-10-09: "of ginger" ficou em cima da mão espremendo o limão nos dois inserts)
     inserts = {s["k"] for s in segs} - {s["k"] for s in segs if not s.get("mute")}
-    for n, p in enumerate(pages):
+    if estilo == "auraly":
+        html, js, npag = legenda_auraly(ws, segs, total, inserts)
+        html += selos_auraly(total)
+        pages = [None] * npag
+    for n, p in enumerate(pages if estilo != "auraly" else []):
         st = 0 if n == 0 else p[0]["t"]; en = pages[n + 1][0]["t"] if n < len(pages) - 1 else total
         en = min([en] + [s["o"] for s in segs if s["k"] in inserts and s["o"] > st + 0.01])
         txt = " ".join(re.sub(r"[.,!?]$", "", w["w"]) for w in p).lower()
         cls = " up" if p[0]["k"] in up else ""
         html.append(f'<div class="clip cap{cls}" id="cp{n}" data-start="{st:.3f}" data-duration="{en - st:.3f}" '
                     f'data-track-index="{2 + n % 2}"><div class="capin">{txt}</div></div>')
+    efeito = "flash" if estilo == "auraly" else "leak"  # Auraly: flash claro; FitWell: sem efeito por padrão
     for i, s in enumerate(segs):
         if i > 0 and segs[i - 1]["k"] != s["k"] and s["k"] in leaks:
             t = max(0, s["o"] - 0.12)
-            html.append(f'<div class="clip leak" id="lk{i}" data-start="{t:.3f}" data-duration="0.5" data-track-index="5"></div>')
+            html.append(f'<div class="clip {efeito}" id="lk{i}" data-start="{t:.3f}" data-duration="0.5" data-track-index="5"></div>')
             js.append(f'tl.fromTo("#lk{i}", {{ opacity: 0 }}, {{ opacity: 0.85, duration: 0.14, ease: "power2.out" }}, {t:.3f});')
             js.append(f'tl.to("#lk{i}", {{ opacity: 0, duration: 0.34, ease: "power2.in" }}, {t + 0.16:.3f});')
     return html, js, usa_roteiro, len(pages)
@@ -501,7 +578,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("pasta"); ap.add_argument("--producao"); ap.add_argument("--musica"); ap.add_argument("--sem-musica", action="store_true")
     ap.add_argument("--ramp", default="1", help="takes-herói (pausa acelerada 5x em vez de cortada)")
-    ap.add_argument("--leaks", default=None, help="takes com light leak na entrada (padrão: 2 e o do meio)")
+    ap.add_argument("--leaks", default=None, help="takes com efeito na entrada (padrão: FitWell nenhum; Auraly o 2, saída do gancho)")
+    ap.add_argument("--estilo", choices=["fitwell", "auraly"], default=None, help="padrão: auraly se a produção for Auraly")
+    ap.add_argument("--ritmo", type=float, default=None, help="palavras/s alvo (padrão: 3,8 FitWell, 4,0 Auraly)")
     ap.add_argument("--up", default="1", help="takes com legenda mais alta")
     ap.add_argument("--nome", default=None); ap.add_argument("--trabalho", default=None)
     ap.add_argument("--nota-minima", type=float, default=0.85)
@@ -606,13 +685,29 @@ def main():
     if erros_fala: open(f"{tmp}/RELATORIO.md", "w").write("\n".join(rel)); sys.exit("Take com fala diferente do roteiro; ver RELATORIO.md")
 
     n = len(takes)
+    # estilo pela produção: Auraly tem legenda e efeitos próprios (referências do Luigi, docs/pos-producao-referencias-luigi.md)
+    auraly = "auraly" in pasta.lower() or any("pipeline: auraly" in open(x, encoding="utf8", errors="ignore").read()
+                                              for x in glob.glob(f"{pasta}/*.md"))
+    estilo = a.estilo or ("auraly" if auraly else "fitwell")
+    alvo = a.ritmo or (4.0 if estilo == "auraly" else 3.8)
     ramp = {int(x): 5 for x in a.ramp.split(",") if x}
-    leaks = [int(x) for x in a.leaks.split(",")] if a.leaks else sorted({2, n // 2 + 2} & set(range(2, n + 1)))
+    # sem light leak no FitWell (Luigi, 2026-10-10); no Auraly um flash só na saída do gancho
+    leaks = [int(x) for x in a.leaks.split(",")] if a.leaks else ([2] if estilo == "auraly" and n >= 2 else [])
     up = [int(x) for x in a.up.split(",") if x]
     src = dict(takes)
 
     log("4/7 cortando e montando a base em paralelo")
     segs = segmentos(takes, words, ramp)
+    # ritmo dopaminérgico (Luigi, 2026-10-10): velocidade calculada por vídeo para chegar ao alvo de palavras/s das
+    # referências dele (3,8 FitWell, 4,0 Auraly), entre 1,0x e 1,25x; a rampa do take-herói não muda
+    nw = sum(len(norm(falas[k])) for k in falas)
+    vel = [s for s in segs if s["sp"] == SP]
+    fixo = sum((s["b"] - s["a"]) / s["sp"] for s in segs if s["sp"] != SP)
+    sp = min(1.25, max(1.0, sum(s["b"] - s["a"] for s in vel) / max(0.1, nw / alvo - fixo)))
+    o = 0.0
+    for s in segs:
+        if s in vel: s["sp"] = round(sp, 3)
+        s["o"] = o; s["d"] = (s["b"] - s["a"]) / s["sp"]; o += s["d"]
     total = montar_base(segs, src, tmp)
     sh(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{tmp}/junto.mkv", "-an", "-c:v", "copy", f"{tmp}/assets/base.mp4"])
     sh(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{tmp}/junto.mkv", "-vn", "-af", "loudnorm=I=-14:TP=-1.2,aresample=44100",
@@ -623,7 +718,7 @@ def main():
     sh(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{tmp}/voz.wav", "-ar", "16000", "-ac", "1", f"{tmp}/voz16.wav"])
     heard = palavras(f"{tmp}/voz16.wav")
     rot_pal = " ".join(falas[k] for k in sorted(falas)).split()
-    html, js, usa_rot, npag = legenda_html(segs, heard, rot_pal, total, leaks, up)
+    html, js, usa_rot, npag = legenda_html(segs, heard, rot_pal, total, leaks, up, estilo)
     musica = None if a.sem_musica else escolher_musica(a.musica, os.path.basename(pasta))
     ini = mixar(f"{tmp}/voz.wav", musica, total, f"{tmp}/assets/mix.wav")
     open(f"{tmp}/index.html", "w", encoding="utf8").write(
@@ -658,7 +753,7 @@ def main():
     if fant: rel.append(f"  - quadro fantasma em: {fant}s")
     rel += [f"- Duração {total:.1f}s · {len(heard) / total:.2f} palavras/s · {len(segs)} trechos ({sum(1 for s in segs if s.get('mute'))} rampas) · {npag} legendas",
             f"- Música: {os.path.basename(musica) + f' (a partir de {ini:.1f}s, {MUSICA_DB} dB da voz)' if musica else 'sem música'}",
-            f"- Light leak na entrada dos takes {leaks}; rampa nos takes {sorted(ramp)}; legenda alta nos takes {up}",
+            f"- Estilo {estilo} · fala a {sp:.2f}x (alvo {alvo} palavras/s) · {'flash' if estilo == 'auraly' else 'light leak'} na entrada dos takes {leaks or 'nenhum'}; rampa nos takes {sorted(ramp)}" + (f"; legenda alta nos takes {up}" if estilo != "auraly" else "; selos 777/222"),
             f"- Arquivo: `{saida}` ({mb:.1f} MB) · tempo total {time.time() - t0:.0f}s",
             "- Olhar antes de entregar: `cortes.png` (pulo) e `legendas.png` (nada sobre rosto ou herói)"]
     open(f"{tmp}/RELATORIO.md", "w").write(f"# Relatório de edição · {nome}\n\n" + "\n".join(rel) + "\n")

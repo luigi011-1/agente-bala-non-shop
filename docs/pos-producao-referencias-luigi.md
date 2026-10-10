@@ -31,11 +31,17 @@ tigela) fica no meio do quadro, acima do ingrediente.
   `🔮222🔮` pequeno à esquerda na altura do peito (marca d'água do número, como manda o CLAUDE.md).
   **Valem para TODOS os avatares do Auraly** (Avery, Jordan, Devon e os próximos; Luigi, 2026-10-10).
 
-## O que muda no editor
+## No editor (aprovado e implementado, Luigi, 2026-10-10)
 
-1. **Ritmo:** o editor fica em ~3,1 a 3,6 palavras/s (1,12x fixo). As referências estão em 3,8 a 4,0.
-   Alvo novo: acelerar cada vídeo até ~3,8 palavras/s (FitWell) e ~4,0 (Auraly), com teto de 1,25x.
-2. **Light leak:** sai do FitWell (a referência não tem). No Auraly, um flash claro só na saída do gancho.
-3. **Legenda do Auraly:** modo próprio (montagem palavra por palavra, palavra-chave grande, selos 777/222).
-4. **Música:** continua a -25 dB da voz (decisão do Luigi). A medição não separa música de fala nessas
-   referências, então ela não muda esse número.
+1. **Ritmo dopaminérgico:** a velocidade é calculada em cada vídeo para chegar a **3,8 palavras/s**
+   (FitWell e os outros ângulos) ou **4,0** (Auraly), entre 1,0x e 1,25x. Vídeo que já fala nesse ritmo
+   fica em 1,0x. `--ritmo` muda o alvo.
+2. **Sem light leak no FitWell.** No Auraly, um flash claro só na saída do gancho (entrada do take 2).
+3. **Legenda do Auraly no estilo da referência:** monta palavra por palavra, empilha até 4 palavras,
+   palavra-chave grande (número, palavra forte ou a mais longa), selos `🇺🇸777🇺🇸` e `🔮222🔮`.
+   O estilo é escolhido sozinho pela produção (pasta com `auraly` ou `pipeline: auraly`); `--estilo` força.
+4. **Música:** continua a -25 dB da voz.
+5. Os selos usam a fonte de emoji do sistema: no Mac sai certo; numa máquina sem fonte de emoji colorido
+   (nuvem Linux sem Noto Color Emoji) as bandeiras e a bola de cristal podem sair sem desenho.
+
+Mais referências dos dois nichos vão chegar (Luigi, 2026-10-10): medir e ajustar estes números.

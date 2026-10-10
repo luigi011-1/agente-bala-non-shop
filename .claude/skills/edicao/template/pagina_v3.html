@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=1080, height=1920" />
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 <style>
+@font-face { font-family: "Apple Color Emoji"; src: local("Apple Color Emoji"); }
+@font-face { font-family: "Noto Color Emoji"; src: local("Noto Color Emoji"); }
 @font-face { font-family: "Merriweather"; src: url("fonts/Merriweather900.woff2") format("woff2"); font-weight: 900; }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
@@ -14,6 +16,15 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; 
 .cap.up { top: 760px; }
 .capin { font-family: "Merriweather", serif; font-weight: 900; font-size: 64px; color: #fff; text-align: center; line-height: 1.15; letter-spacing: -0.01em;
   text-shadow: 0 3px 10px rgba(0,0,0,0.55), 0 0 2px rgba(0,0,0,0.6); }
+.capa { position: absolute; left: 0; right: 0; top: 960px; display: flex; justify-content: center; z-index: 10; }
+.capa .linhas { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; max-width: 600px; column-gap: 20px; row-gap: 0; }
+.capa .w { font-family: "Merriweather", serif; font-weight: 900; font-size: 66px; line-height: 1.05; color: #fff; opacity: 0;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.55), 0 0 18px rgba(255,255,255,0.25); }
+.capa .w.big { font-size: 160px; line-height: 0.95; flex-basis: 100%; text-align: center; }
+.selo { position: absolute; z-index: 11; font-family: -apple-system, "Helvetica Neue", Arial, "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  font-weight: 800; font-size: 48px; color: #fff; letter-spacing: 0.02em; text-shadow: 0 2px 6px rgba(0,0,0,0.6); }
+.flash { position: absolute; inset: 0; z-index: 9; mix-blend-mode: screen; opacity: 0;
+  background: radial-gradient(80% 60% at 50% 40%, rgba(255,250,215,1), rgba(255,236,150,0.85) 55%, rgba(255,225,120,0.6)); }
 .leak { position: absolute; inset: 0; z-index: 8; mix-blend-mode: screen; opacity: 0;
   background: radial-gradient(70% 55% at 20% 70%, rgba(255,110,40,0.95), rgba(255,60,20,0.5) 45%, rgba(255,40,0,0) 75%), linear-gradient(180deg, rgba(255,140,60,0.55), rgba(255,60,30,0.3)); }
 </style>
