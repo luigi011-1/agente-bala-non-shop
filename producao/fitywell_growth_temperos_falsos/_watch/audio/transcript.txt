@@ -1,0 +1,11 @@
+[  0.000 ->   4.240] If you bought black pepper from the store, drop a spoonful into cold water.
+[  4.880 ->  10.680] Real peppercorns sink. If some float, those are dried papaya seeds mixed in to fill the jar.
+[ 10.960 ->  15.380] Why? Papaya seeds are cheap filler. Sold at pepper prices.
+[ 15.840 ->  20.340] Turmeric. Stir a spoonful into warm water. Real turmeric slowly settles.
+[ 20.700 ->  23.600] If the water turns bright yellow right away, it has been dyed.
+[ 23.600 ->  27.480] Why? Dye hides old, weak powder. Cinnamon sticks.
+[ 28.260 ->  31.260] Real cinnamon has thin paper layers. Like a cigar.
+[ 32.160 ->  36.660] One thick, hard curl is cassia. The cheaper kind. Why?
+[ 37.680 ->  41.160] Cassia is high in coumarin, which constrain the liver.
+[ 41.660 ->  47.080] In Japan, we study our food closely. Because what we eat becomes us.
+[ 47.600 ->  50.160] Comment yes for more and follow for the next one.
