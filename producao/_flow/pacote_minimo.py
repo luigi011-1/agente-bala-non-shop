@@ -73,7 +73,12 @@ def gerar(pasta, titulo, qual, mapa, takes, ks, ficha_cam, notas_capcut):
     open(os.path.join(pasta, "ENTREGA_AVATAR_FITWELL.md"), "w", encoding="utf8").write("\n".join(ent))
 
     nk, nv = len(ks), len(takes)
-    regra_v = ("Cada V usa a imagem que sobrou do K indicado no MAPA K/V da entrega." if any(
+    grupos = {}
+    for t in takes:
+        grupos.setdefault(t[5], []).append(f"V{int(t[0][1:]):02d}")
+    mapa_ag = "; ".join((f"{g[0]} usa K{k:02d}" if len(g) == 1 else f"{g[0]} a {g[-1]} usam todos a mesma imagem escolhida do K{k:02d}")
+                        for k, g in grupos.items())
+    regra_v = (f"Mapa: {mapa_ag}." if any(
         int(t[0][1:]) != t[5] for t in takes) else "Cada V usa a imagem que sobrou do K de mesmo número (V01 usa K01).")
     ag = f"""# Agente do Flow, produção atual: {titulo}
 
