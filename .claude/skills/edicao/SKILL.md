@@ -5,6 +5,31 @@ description: Edição dopaminérgica de takes já gravados ou gerados (Veo/Flow)
 
 # Edição dopaminérgica
 
+> 🔴 **HyperFrames tem prioridade em TUDO (Luigi, 2026-10-10):** assets, catálogo, estilos e regras de edição do
+> repositório HyperFrames (`~/ferramentas/hyperframes`, skills `hyperframes*`, `embedded-captions`, `media-use`)
+> vêm antes dos nossos; os nossos ficam como alternativa. O que a HyperFrames não cobre (conferência palavra
+> por palavra, corte de silêncio, ritmo) continua no `editar.py`.
+>
+> **Acabamento HyperFrames, ligado por padrão no `editar.py`** (`template/acabamento.py`; `--sem-acabamento` desliga):
+> - **palavra de pico atrás do avatar**: recorte do avatar (`hyperframes remove-background`, CPU, só nas janelas
+>   dos picos), palavra em Anton animada letra por letra num render transparente, ~20% escondida atrás da cabeça.
+>   Um pico por bloco, a cada 5s no máximo, nunca no CTA, nunca repetido (regras do `embedded-captions`).
+>   `--picos chip,cloudy` força; `--fonte-pico anton|serifada|montserrat`.
+> - **zoom de pico** (8%, centrado na cabeça; `--sem-zoom`).
+> - **SFX da biblioteca HyperFrames** (`sfx_hf/`, Pixabay, uso comercial): `--sfx sutil|cinema|pop|brilho|glitch|nenhum`.
+> - **grão** (`grain-overlay` do catálogo) só com `--grao`: a HyperFrames não gradua a filmagem por padrão.
+>   Auraly usa o `editorial-flash-overlay` do catálogo no lugar do flash do ffmpeg.
+> - **legenda**: `--legenda padrao` (a serifada aprovada) ou um dos 14 estilos `caption-*` do catálogo, em
+>   `legendas_hf/` (`template/legendas_hf.py` troca a fala de exemplo, vira para 9:16 e põe no peito).
+> - **Rodízio entre vídeos (padrão `auto`)**: as variações existem para os vídeos não saírem iguais, NÃO para
+>   testar todas em cada vídeo. `acabamento.CARDAPIO` (legenda: padrao, caption-highlight, caption-pill-karaoke;
+>   SFX: sutil, cinema, pop, brilho; fonte do pico: anton, montserrat). Cada vídeo novo pega a próxima combinação
+>   e o mesmo vídeo reeditado mantém a sua (`rotacao.json`). A combinação sai no `RELATORIO.md`.
+> - Cada legenda fica ≥ 0,5s na tela (regra do `embedded-captions`).
+> - Rodar só o acabamento numa pasta já editada: `python3 template/acabamento.py /tmp/edicao/<nome>-<tag> --legenda caption-highlight --sfx cinema`.
+> - Música: a biblioteca de trilhas da HyperFrames (`media-use resolve --type bgm`) exige o CLI `heygen` logado;
+>   sem ele, seguem as trilhas de `edicao/musicas/`.
+
 > 🔴 **Vale para TODOS os ângulos** (Sea Moss, FitWell, Auraly, Body Hacks e os próximos; venda e growth;
 > Luigi, 2026-10-09). A ordem dos takes vem da fala, não do nome do arquivo.
 > **Cada take é conferido PALAVRA POR PALAVRA com o roteiro**: o Flow inventa, remove e repete falas no
@@ -16,7 +41,7 @@ description: Edição dopaminérgica de takes já gravados ou gerados (Veo/Flow)
 > **Take mudo (insert) se renomeia com o número do take antes de rodar** (`t07_pimenta.mp4`): o Flow
 > põe o horário no nome e o script para. Erros 8 a 26 e o tempo no Mac estão no mesmo arquivo. Use o
 > comando único `python3 template/editar.py <pasta_dos_takes>` (estilo v3, paralelo, roteiro achado
-> sozinho, música a -25 dB, conferências automáticas e `RELATORIO.md`). Entregue só com tudo OK e
+> sozinho, música a -18 dB, conferências automáticas e `RELATORIO.md`). Entregue só com tudo OK e
 > depois de olhar `cortes.png` e `legendas.png`. A v1 e a v2 abaixo ficam como histórico.
 
 Validado em 2026-10-09 (5 takes de 10s da holistic.brandon, bebida matinal). Motor em `template/`.

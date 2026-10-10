@@ -9,7 +9,7 @@ Faz, em ordem, e para no primeiro problema:
   3. confere cada take PALAVRA POR PALAVRA; o que o Flow inventou ou repetiu é cortado em qualquer ponto;\n     palavra que faltou ou foi trocada para a edição (o take volta para o Flow);
   4. ordena pelo número do take (T__) do pacote; insert mudo entra só com a janela da ação;
      corta pelos silêncios reais e monta a base com os trechos EM PARALELO (minterpolate por trecho);
-  5. legenda (tempo do whisper no vídeo cortado, texto do roteiro), light leak, música a -25 dB da voz;
+  5. legenda (tempo do whisper no vídeo cortado, texto do roteiro), light leak, música a -18 dB da voz;
   6. lint e render no HyperFrames, recompressão para caber na pasta do Mac (< 30 MB);
   7. conferências automáticas (silêncio, quadro fantasma, contagem de palavras) + contact sheets,
      e escreve RELATORIO.md com passa/falha.
@@ -18,6 +18,15 @@ Regras e porquês: docs/pos-producao-edicao-regras.md. Nada aqui muda o estilo a
 import argparse, concurrent.futures as cf, difflib, glob, hashlib, json, os, re, shutil, subprocess, sys, time
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
+# motor v4 precisa de WhisperX e Pillow, que estão no .venv-operacao: se este Python não tem, roda de novo nele
+_VENV = os.path.abspath(os.path.join(AQUI, "../../../..", ".venv-operacao", "bin", "python"))
+try:
+    import PIL, whisperx  # noqa: F401
+except ImportError:
+    if os.path.exists(_VENV) and os.path.realpath(sys.executable) != os.path.realpath(_VENV):
+        os.execv(_VENV, [_VENV, os.path.abspath(__file__)] + sys.argv[1:])
+sys.path.insert(0, AQUI)
+import motor  # noqa: E402
 REPO = os.path.abspath(os.path.join(AQUI, "../../../.."))
 # nuvem: /mnt/project-files; Mac: edicao/musicas do repo (teste no Mac, 2026-10-09: ficava sem achar a faixa)
 MUSICAS = os.environ.get("EDICAO_MUSICAS") or next(
@@ -27,7 +36,7 @@ ENTREGAS = "/mnt/project-files/entregas"
 
 SP, GAP, PAD_IN, PAD_OUT, MIN_ISLAND, JUNTA, W, H, FPS = 1.12, 0.15, 0.05, 0.11, 0.4, 0.05, 1080, 1920, 30
 INSERT = 2.5  # segundos do insert mudo (antes da aceleração); --insert 0 = inteiro
-MUSICA_DB = -25  # Luigi, 2026-10-09: música sempre 25 dB abaixo da voz (-10 atrapalhou a fala)
+MUSICA_DB = -18  # Luigi, 2026-10-10: -18 dB (cama do media-use da HyperFrames, 0,12) aprovado; -25 sumia, -10 atrapalhou a fala
 
 
 def sh(cmd, **kw):
@@ -375,10 +384,16 @@ def janela_insert(f, maximo):
               key=lambda x: sum(y for u, y in zip(ts, ys) if x <= u < x + maximo))
     return [[ini, ini + maximo]]
 
-def segmentos(takes, words, ramp):
+def segmentos(takes, words, ramp, alinhado=None):
     segs = []
+    alinhado = alinhado or {}
     for k, f in takes:
-        sp = ilhas(f, words[k]) if words[k] else janela_insert(f, INSERT)  # take mudo: só a ação
+        if not words[k]:
+            sp = janela_insert(f, INSERT)  # take mudo: só a ação
+        elif alinhado.get(k):
+            sp = motor.ilhas_v4(f, alinhado[k])  # motor v4: bordas reais das palavras
+        else:
+            sp = ilhas(f, words[k])
         for j, (a, b) in enumerate(sp):
             segs.append(dict(k=k, a=a, b=b, sp=SP))
             if k in ramp and j + 1 < len(sp) and sp[j + 1][0] > b:
@@ -397,16 +412,13 @@ def um_trecho(arg):
     i, s, src, tmp = arg
     out = f"{tmp}/seg{i:03d}.mkv"
     fixo = f"{tmp}/segf{i:03d}.mkv"
-    chave = json.dumps([s.get("a"), s.get("b"), s.get("sp"), s.get("mute"), src, FPS, W, H])
+    chave = json.dumps([s.get("a"), s.get("b"), s.get("sp"), s.get("mute"), src, FPS, W, H, "v4"])
     if os.path.exists(fixo) and os.path.exists(f"{fixo}.key") and open(f"{fixo}.key").read() == chave:
         # rodada repetida na mesma pasta de trabalho: reaproveita o trecho já montado
         return fixo, int(sh(["ffprobe", "-v", "error", "-count_packets", "-select_streams", "v:0", "-show_entries",
                              "stream=nb_read_packets", "-of", "csv=p=0", fixo]).strip())
-    v = (f"[0:v]trim=start={s['a']:.3f}:end={s['b']:.3f},setpts=(PTS-STARTPTS)/{s['sp']},"
-         f"minterpolate=fps={FPS}:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1:scd=none,"
-         f"scale={W}:{H}:flags=lanczos,setsar=1,"
-         # o minterpolate engole os últimos quadros do trecho: completa clonando o último (como a v3 aprovada)
-         f"tpad=stop_mode=clone:stop_duration=0.3,trim=end_frame={max(1, round(s['d'] * FPS))},setpts=N/({FPS}*TB)[v]")
+    # motor v4: sem minterpolate (deformava as mãos e custava minutos); fps simples + lanczos + nitidez leve
+    v = motor.filtro_trecho(s["a"], s["b"], s["sp"], s["d"])
     if s.get("mute"):
         a = f"aevalsrc=0:d={s['d']:.4f}:s=44100,aformat=sample_rates=44100:channel_layouts=mono[a0]"
     else:
@@ -414,7 +426,7 @@ def um_trecho(arg):
              f"aformat=sample_rates=44100:channel_layouts=mono,afade=t=in:d=0.012,"
              f"afade=t=out:st={max(0, s['d'] - 0.02):.3f}:d=0.02[a0]")
     sh(["ffmpeg", "-y", "-loglevel", "error", "-threads", "1", "-i", src, "-filter_complex", f"{v};{a}",
-        "-map", "[v]", "-map", "[a0]", "-c:v", "libx264", "-crf", "16", "-preset", "medium", "-pix_fmt", "yuv420p",
+        "-map", "[v]", "-map", "[a0]", "-c:v", "libx264", "-crf", "12", "-preset", "veryfast", "-pix_fmt", "yuv420p",
         "-g", "15", "-r", str(FPS), "-c:a", "pcm_s16le", out])
     # áudio do trecho com a duração exata do vídeo do trecho (quadros inteiros): sem deriva de lábio ao juntar
     n = int(sh(["ffprobe", "-v", "error", "-count_packets", "-select_streams", "v:0", "-show_entries",
@@ -477,8 +489,9 @@ def palavra_chave(p, n):
     cand = [(len(w), i) for i, w in enumerate(limpa) if w not in VAZIAS and len(w) >= 5]
     return max(cand)[1] if cand and n % 2 == 0 else None
 
-def juntar_curtas(pages, minimo=0.15):
-    """Página que dura menos de `minimo` s se junta à seguinte. Duas palavras no mesmo instante ("Why?" e
+def juntar_curtas(pages, minimo=0.5):
+    """Página que dura menos de `minimo` s se junta à seguinte (0,5s = regra do embedded-captions da HyperFrames,
+    Luigi 2026-10-10: regras da HyperFrames têm prioridade; antes era 0,15s). Duas palavras no mesmo instante ("Why?" e
     "Papaya") geravam página de duração ZERO, e o HyperFrames deixa clipe de duração zero na tela muito
     depois (V01 temperos, 2026-10-10: o "why" do T3 apareceu em cima do T5)."""
     out = []
@@ -586,7 +599,7 @@ def mixar(voz, musica, total, saida):
     log_ = sh_err(f'ffmpeg -hide_banner -t 40 -i "{musica}" -af silencedetect=noise=-40dB:d=0.3 -f null -')
     m = re.search(r"silence_start: 0(?:\.0+)?\s.*?silence_end: ([\d.]+)", log_, re.S)
     ini = float(m.group(1)) if m else 0.0  # pula silêncio de abertura da faixa
-    # voz já em -14 LUFS; música normalizada em -14 LUFS e baixada 25 dB = 25 dB abaixo da voz, sempre
+    # voz já em -14 LUFS; música normalizada em -14 LUFS e baixada 18 dB = 18 dB abaixo da voz, sempre
     sh(["ffmpeg", "-y", "-loglevel", "error", "-i", voz, "-ss", f"{ini:.2f}", "-i", musica, "-filter_complex",
         f"[1:a]loudnorm=I=-14:TP=-2:LRA=11,volume={MUSICA_DB}dB,aformat=sample_rates=44100:channel_layouts=mono,"
         f"atrim=0:{total:.3f},afade=t=in:d=0.3,afade=t=out:st={total - 0.8:.2f}:d=0.8[m];"
@@ -639,6 +652,14 @@ def main():
     ap.add_argument("--nome", default=None); ap.add_argument("--trabalho", default=None)
     ap.add_argument("--nota-minima", type=float, default=0.85)
     ap.add_argument("--insert", type=float, default=INSERT, help="segundos de cada insert mudo, na ação (0 = inteiro)")
+    # acabamento HyperFrames (Luigi, 2026-10-10: priorizar o que o repositório HyperFrames oferece), ver acabamento.py
+    ap.add_argument("--sem-acabamento", action="store_true", help="sem palavra atrás do avatar, zoom e SFX")
+    # "auto" = rodízio entre vídeos (acabamento.CARDAPIO): cada vídeo novo sai diferente do anterior
+    ap.add_argument("--legenda", default="auto", help="auto, padrao (a aprovada) ou estilo do catálogo HyperFrames (caption-highlight...)")
+    ap.add_argument("--sfx", default="auto", help="auto ou pacote de SFX HyperFrames: sutil, cinema, pop, brilho, glitch, nenhum")
+    ap.add_argument("--picos", default=None, help="palavras de pico (padrão: automático)")
+    ap.add_argument("--fonte-pico", default="auto", help="auto, anton, serifada ou montserrat")
+    ap.add_argument("--sem-zoom", action="store_true"); ap.add_argument("--grao", action="store_true")
     a = ap.parse_args()
     globals()["INSERT"] = a.insert
     t0 = time.time(); rel = []
@@ -748,10 +769,14 @@ def main():
     # sem light leak no FitWell (Luigi, 2026-10-10); no Auraly um flash só na saída do gancho
     leaks = [int(x) for x in a.leaks.split(",")] if a.leaks else ([2] if estilo == "auraly" and n >= 2 else [])
     up = [int(x) for x in a.up.split(",") if x]
-    src = dict(takes)
 
-    log("4/7 cortando e montando a base em paralelo")
-    segs = segmentos(takes, words, ramp)
+    log("4/7 alinhando as palavras do roteiro, cortando e montando a base em paralelo")
+    src = dict(takes)
+    alinhado = {k: motor.alinhar_forcado(src[k], falas[k], words[k]) for k in falas}
+    sem_al = [k for k, v in alinhado.items() if not v]
+    if sem_al:
+        rel.append(f"  - aviso: takes sem alinhamento forçado (corte pelo método antigo): {sem_al}")
+    segs = segmentos(takes, words, ramp, alinhado)
     # ritmo dopaminérgico (Luigi, 2026-10-10): velocidade calculada por vídeo para chegar ao alvo de palavras/s das
     # referências dele (3,8 FitWell, 4,0 Auraly), entre 1,0x e 1,25x; a rampa do take-herói não muda
     nw = sum(len(norm(falas[k])) for k in falas)
@@ -768,25 +793,95 @@ def main():
         "-ar", "44100", "-ac", "1", f"{tmp}/voz.wav"])
     json.dump(segs, open(f"{tmp}/segs.json", "w"), indent=1)
 
-    log("5/7 legenda, leak e música")
-    sh(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{tmp}/voz.wav", "-ar", "16000", "-ac", "1", f"{tmp}/voz16.wav"])
-    heard = palavras(f"{tmp}/voz16.wav")
-    rot_pal = " ".join(falas[k] for k in sorted(falas)).split()
-    html, js, usa_rot, npag = legenda_html(segs, heard, rot_pal, total, leaks, up, estilo)
+    log("5/7 legenda e música")
+    def saida_de(k, t):
+        cand = [x for x in segs if x["k"] == k and not x.get("mute")]
+        for x in cand:
+            if x["a"] - 0.08 <= t <= x["b"] + 0.08:
+                return x["o"] + min(max(0.0, t - x["a"]), x["b"] - x["a"]) / x["sp"]
+        prox = min(cand, key=lambda x: abs(x["a"] - t)) if cand else None
+        return prox["o"] if prox else 0.0
+    ws = []
+    for k in sorted(falas):
+        fonte = alinhado.get(k) or words[k]
+        ws += [dict(w=w, t=saida_de(k, a2), k=k) for w, a2, _ in fonte]
+    usa_rot = all(alinhado.get(k) for k in falas)
+    inserts = {x["k"] for x in segs} - {x["k"] for x in segs if not x.get("mute")}
+    eventos, duracoes = [], []
+    if estilo == "auraly":
+        pages, cur = [], []
+        for i, w in enumerate(ws):
+            cur.append(w); nx = ws[i + 1] if i + 1 < len(ws) else None
+            if (not nx or len(cur) >= 4 or re.search(r"[.!?]$", w["w"]) or (re.search(r",$", w["w"]) and len(cur) >= 2)
+                    or nx["k"] != w["k"]):
+                pages.append(cur); cur = []
+        pages = juntar_curtas(pages)
+        for n, p in enumerate(pages):
+            st = 0 if n == 0 else p[0]["t"]; en = pages[n + 1][0]["t"] if n < len(pages) - 1 else total
+            en = min([en] + [x["o"] for x in segs if x["k"] in inserts and x["o"] > st + 0.01])
+            big = palavra_chave(p, n)
+            pos = motor.layout_auraly([re.sub(r"[.,!?;:]$", "", w["w"]).lower() for w in p], big)
+            for j in range(len(p)):
+                a2 = st if j == 0 else max(st, p[j]["t"] - 0.03)
+                b2 = en if j == len(p) - 1 else max(a2, p[j + 1]["t"] - 0.03)
+                png = f"{tmp}/leg_{n:03d}_{j}.png"
+                motor.png_auraly(pos, j + 1, png)
+                eventos.append((a2, b2, png))
+            duracoes.append(en - st)
+    else:
+        pages, cur = [], []
+        for i, w in enumerate(ws):
+            cur.append(w); nx = ws[i + 1] if i + 1 < len(ws) else None
+            if (not nx or len(cur) >= 3 or re.search(r"[.!?]$", w["w"]) or (re.search(r",$", w["w"]) and len(cur) >= 2)
+                    or nx["k"] != w["k"]):
+                pages.append(cur); cur = []
+        pages = juntar_curtas(pages)
+        for n, p in enumerate(pages):
+            st = 0 if n == 0 else p[0]["t"]; en = pages[n + 1][0]["t"] if n < len(pages) - 1 else total
+            en = min([en] + [x["o"] for x in segs if x["k"] in inserts and x["o"] > st + 0.01])
+            txt = " ".join(re.sub(r"[.,!?]$", "", w["w"]) for w in p).lower()
+            png = f"{tmp}/leg_{n:03d}.png"
+            motor.png_fitwell(txt, 760 if p[0]["k"] in up else 880, png)
+            eventos.append((st, en, png))
+            duracoes.append(en - st)
+    npag = len(pages)
+    lista_leg = motor.faixa_legendas(eventos, total, tmp)
+    flashes = [max(0, x["o"] - 0.12) for i, x in enumerate(segs) if i > 0 and segs[i - 1]["k"] != x["k"] and x["k"] in leaks]
+    selos = None
+    if estilo == "auraly":
+        selos = f"{tmp}/selos.png"; motor.png_selos(selos)
     musica = None if a.sem_musica else escolher_musica(a.musica, os.path.basename(pasta))
     ini = mixar(f"{tmp}/voz.wav", musica, total, f"{tmp}/assets/mix.wav")
-    open(f"{tmp}/index.html", "w", encoding="utf8").write(
-        PAGINA.replace("{{TOTAL}}", f"{total:.3f}").replace("{{CLIPS}}", "\n".join(html)).replace("{{JS}}", "\n".join(js)))
 
-    log("6/7 lint e render")
-    lint = subprocess.run("npx -y hyperframes@0.8.143 lint .", shell=True, cwd=tmp, capture_output=True, text=True).stdout
-    nerr = re.search(r"(\d+) error", lint)
-    sh(f"npx -y hyperframes@0.8.143 render . -o renders/final.mp4 --quality high --quiet", cwd=tmp)
+    json.dump(ws, open(f"{tmp}/palavras_saida.json", "w"))  # para rodar acabamento.py sozinho depois
+    base_final, mix_final, camadas = f"{tmp}/assets/base.mp4", f"{tmp}/assets/mix.wav", []
+    if not a.sem_acabamento:
+        log("5b/7 acabamento HyperFrames (palavra atrás do avatar, zoom de pico, SFX)")
+        import acabamento
+        var = acabamento.variacao(f"{os.path.basename(pasta)}/{nome}")
+        a.legenda = var["legenda"] if a.legenda == "auto" else a.legenda
+        a.sfx = var["sfx"] if a.sfx == "auto" else a.sfx
+        a.fonte_pico = var["fonte_pico"] if a.fonte_pico == "auto" else a.fonte_pico
+        rel.append(f"- Variação deste vídeo (rodízio): legenda {a.legenda} · SFX {a.sfx} · fonte do pico {a.fonte_pico}")
+        forc = [re.sub(r"[^a-z0-9']", "", x.lower()) for x in a.picos.split(",")] if a.picos else None
+        base_final, frente, mix_final, rel_ac = acabamento.aplicar(
+            tmp, ws, segs, total, estilo, flashes, forc, not a.sem_zoom, a.grao, a.sfx, a.fonte_pico, log)
+        rel += rel_ac
+        if frente:
+            camadas.append((frente, 0))
+            flashes = []  # o flash do catálogo (editorial-flash-overlay) substitui o do ffmpeg
+        if a.legenda != "padrao":
+            import legendas_hf
+            picos = json.load(open(f"{tmp}/picos.json"))
+            idx = [i for i, w in enumerate(ws) for p in picos if abs(w["t"] - p["t"]) < 0.01]
+            camadas.append(legendas_hf.camada(a.legenda, ws, total, tmp, idx, log))
+            lista_leg = None
+            rel.append(f"- Legenda do catálogo HyperFrames: {a.legenda}")
+
+    log("6/7 render final (1080x1920, um passe)")
     saida = f"{tmp}/{nome}_editado.mp4"
-    for crf in (19, 22, 24, 25, 26, 28):  # sobe o crf até caber na cópia para o Mac (limite de 25 MB)
-        sh(["ffmpeg", "-loglevel", "error", "-y", "-i", f"{tmp}/renders/final.mp4", "-c:v", "libx264", "-crf", str(crf), "-preset", "slow",
-            "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-c:a", "aac", "-b:a", "192k", saida])
-        if os.path.getsize(saida) < 24.5e6: break
+    motor.render_final(base_final, lista_leg, mix_final, total, saida, flashes, selos, camadas)
+    heard = ws
 
     log("7/7 conferências")
     cortes = [s["o"] for s in segs[1:]]
@@ -796,12 +891,12 @@ def main():
     sheet(f"{tmp}/assets/base.mp4", cortes, f"{tmp}/cortes.png")
     sh(["ffmpeg", "-loglevel", "error", "-y", "-i", saida, "-vf", "fps=0.7,scale=216:-1,tile=6x3", "-frames:v", "1", f"{tmp}/legendas.png"])
     ok = {
-        "Lint sem erro": bool(nerr) and nerr.group(1) == "0",
         "Sem silêncio fora da rampa": not sil,
         "Sem quadro fantasma nos cortes": not fant,
         "Legenda com o texto do roteiro (contagem bateu)": usa_rot,
-        "Nenhuma legenda com menos de 0,1s": not re.search(r'data-duration="0\.0\d\d"', "\n".join(h for h in html if "cap" in h)),
-        "Arquivo abaixo de 25 MB": mb < 25,
+        "Nenhuma legenda com menos de 0,1s": min(duracoes or [1]) >= 0.1,
+        "Vídeo em 1080x1920": sh(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
+                                  "stream=width,height", "-of", "csv=p=0", saida]).strip() == "1080,1920",
     }
     rel += [f"- {k}: {'OK' if v else 'FALHA'}" for k, v in ok.items()]
     if sil: rel.append(f"  - silêncios: {sil}")

@@ -63,3 +63,5 @@ NÃO FAZER
 Ambiente e armadilhas do Mac em [[ambiente-mac-luigi]]. Leitura de hook continua em [[erros-recorrentes]].
 
 Lições do processo de produção (roteiro, pacote, Flow) em [[producao-licoes-lote-1010]].
+
+- Desde 2026-10-10 a HyperFrames tem prioridade em assets e regras da edição (acabamento, legendas do catálogo, SFX, música a -18 dB): ver [[edicao-prioridade-hyperframes]].

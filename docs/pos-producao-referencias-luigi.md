@@ -40,7 +40,7 @@ tigela) fica no meio do quadro, acima do ingrediente.
 3. **Legenda do Auraly no estilo da referência:** monta palavra por palavra, empilha até 4 palavras,
    palavra-chave grande (número, palavra forte ou a mais longa), selos `🇺🇸777🇺🇸` e `🔮222🔮`.
    O estilo é escolhido sozinho pela produção (pasta com `auraly` ou `pipeline: auraly`); `--estilo` força.
-4. **Música:** continua a -25 dB da voz.
+4. **Música:** -18 dB da voz (era -25; Luigi aprovou -18 em 2026-10-10, padrão da HyperFrames).
 5. Os selos usam a fonte de emoji do sistema: no Mac sai certo; numa máquina sem fonte de emoji colorido
    (nuvem Linux sem Noto Color Emoji) as bandeiras e a bola de cristal podem sair sem desenho.
 
