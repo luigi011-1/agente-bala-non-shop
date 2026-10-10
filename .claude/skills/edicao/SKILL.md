@@ -10,6 +10,7 @@ description: Edição dopaminérgica de takes já gravados ou gerados (Veo/Flow)
 > **Cada take é conferido PALAVRA POR PALAVRA com o roteiro**: o Flow inventa, remove e repete falas no
 > mesmo take. O que ele inventou, repetiu ou deixou em silêncio se corta em qualquer ponto; palavra que
 > faltou ou foi trocada para aquele vídeo (take volta para o Flow) e a fila segue para o próximo.
+> **Padrão de gosto do Luigi: `docs/pos-producao-referencias-luigi.md`** (uma edição FitWell e uma Auraly feitas por ele).
 > **Antes de editar, ler `docs/pos-producao-edicao-regras.md`** (acertos e erros do 1º teste aprovado,
 > 2026-10-09). Os 22 itens são regra fixa, e as conferências 17 a 20 bloqueiam a entrega.
 > **Take mudo (insert) se renomeia com o número do take antes de rodar** (`t07_pimenta.mp4`): o Flow
