@@ -10,7 +10,8 @@ description: Edição dopaminérgica de takes já gravados ou gerados (Veo/Flow)
 > vêm antes dos nossos; os nossos ficam como alternativa. O que a HyperFrames não cobre (conferência palavra
 > por palavra, corte de silêncio, ritmo) continua no `editar.py`.
 >
-> **Acabamento HyperFrames, ligado por padrão no `editar.py`** (`template/acabamento.py`; `--sem-acabamento` desliga):
+> **Acabamento HyperFrames, ligado por padrão no `editar.py`, em TODOS os ângulos, Auraly incluído** (no Auraly,
+> `padrao` = a legenda de referência dele; selos 777/222 por cima; pico nunca no gancho mudo nem no CTA) (`template/acabamento.py`; `--sem-acabamento` desliga):
 > - **palavra de pico atrás do avatar**: recorte do avatar (`hyperframes remove-background`, CPU, só nas janelas
 >   dos picos), palavra em Anton animada letra por letra num render transparente, ~20% escondida atrás da cabeça.
 >   Um pico por bloco, a cada 5s no máximo, nunca no CTA, nunca repetido (regras do `embedded-captions`).

@@ -27,4 +27,8 @@ não cobre). Ele também quer **variações disponíveis** (música, SFX, estilo
 um vídeo para o outro** (rodízio `auto` do `acabamento.CARDAPIO`), nunca para testar todas em cada vídeo.
 Primeiro teste (V02, 2026-10-10): palavra atrás do avatar + legenda `caption-highlight` + cortes = "ficou irado".
 **Música a -18 dB da voz** (cama do media-use, 0,12) aprovada no mesmo dia: -25 quase não se ouvia.
+**Vale também para o AURALY** (Luigi, 2026-10-10: "quero esse mesmo estilo de edição automática para os vídeos de
+Auraly também"): mesmo acabamento e rodízio; no Auraly a opção `padrao` do rodízio é a legenda de referência dele
+(palavra por palavra empilhada), os selos 777/222 ficam por cima, o flash da saída do gancho vem do catálogo e o
+pico nunca cai no take mudo do gancho nem no CTA de `222`/Stories.
 Ver [[edicao-licoes-teste]].
