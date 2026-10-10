@@ -101,6 +101,10 @@ olho: **a conferência 19 (olhar `cortes.png` e `legendas.png`) continua obrigat
   O repo do HyperFrames usa Git LFS (`brew install git-lfs`).
 - Tempo: ~12 min por vídeo de 75-80s (render ~8 min), usando ~6 dos 8 núcleos. **No máximo 2 edições
   ao mesmo tempo neste Mac**; para lote grande, uma sessão da nuvem por vídeo.
+- **Uma sessão por vídeo, em paralelo:** a pasta de trabalho padrão é `/tmp/edicao/<pasta>-<código do
+  caminho>`, então pastas de takes com o mesmo nome não se misturam. Cada sessão do Claude Code no Mac
+  trabalha num **worktree próprio** do repositório (`claude --worktree <nome>`): sessões no mesmo
+  checkout trocam de branch umas das outras e misturam commits.
 
 ### Erros que vêm do Flow (corrigir no prompt, não na edição)
 - **Improviso na fala:** o Flow inventa frase antes ou depois da fala ("then definitely stay tuned",

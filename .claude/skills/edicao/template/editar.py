@@ -399,7 +399,10 @@ def main():
         m = re.search(r"(\d+)", os.path.splitext(os.path.basename(f))[0])
         return int(m.group(1)) if m else None
     nome = a.nome or os.path.basename(os.path.abspath(a.pasta).rstrip("/"))
-    tmp = a.trabalho or f"/tmp/edicao/{nome}"
+    # pasta de trabalho única por pasta de takes: duas sessões editando pastas de mesmo nome em paralelo
+    # escreveriam no mesmo lugar (2026-10-09); a mesma pasta de takes continua reaproveitando os trechos
+    tag = hashlib.md5(os.path.abspath(a.pasta).encode()).hexdigest()[:8]
+    tmp = a.trabalho or f"/tmp/edicao/{nome}-{tag}"
     os.makedirs(f"{tmp}/assets", exist_ok=True); shutil.copytree(os.path.join(AQUI, "fonts"), f"{tmp}/fonts", dirs_exist_ok=True)
 
     log(f"1/7 transcrevendo {len(arquivos)} takes")
