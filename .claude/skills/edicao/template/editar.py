@@ -330,6 +330,13 @@ def ilhas(f, ws):
         if wa < fim0 - 0.1:  # só a ponta FINAL: o whisper sempre começa a 1ª palavra em 0,0s e a proteção no
             continue          # início trazia o silêncio de abertura do take (V02 chips, 2026-10-10)
         a2, b2 = wa, min(wb, wa + teto(w))
+        # e só até onde ainda há voz fraca (limiar - 10 dB): o whisper estica a última palavra e o silêncio
+        # depois do "it." final ficava (V03 canela, 2026-10-10)
+        rms, fraco = rms_janelas(f), limiar(f) - 10
+        vivos = [n * 0.05 + 0.05 for n in range(int(a2 / 0.05), min(len(rms), int(b2 / 0.05) + 1)) if rms[n] >= fraco]
+        if not vivos:
+            continue
+        b2 = min(b2, max(vivos))
         dentro = sum(max(0.0, min(b2, i[1]) - max(a2, i[0])) for i in isl)
         if dentro < 0.5 * (b2 - a2):  # só a palavra que o corte perdeu; esticada pelo whisper já está coberta
             isl.append([a2, b2])
@@ -475,9 +482,15 @@ def juntar_curtas(pages, minimo=0.15):
     "Papaya") geravam página de duração ZERO, e o HyperFrames deixa clipe de duração zero na tela muito
     depois (V01 temperos, 2026-10-10: o "why" do T3 apareceu em cima do T5)."""
     out = []
-    for i, p in enumerate(pages):
-        if out and out[-1] is not None and i < len(pages) and p[0]["t"] - out[-1][0]["t"] < minimo:
-            out[-1] = out[-1] + p
+    for p in pages:
+        if out and p[0]["t"] - out[-1][0]["t"] < minimo:
+            curta = out.pop()
+            # página curta que FECHA frase vai para a anterior; senão "stay. / I have" virava "stay i" (V03, 2026-10-10)
+            if re.search(r"[.!?,]$", curta[-1]["w"]) and out and out[-1][-1]["k"] == curta[0]["k"]:
+                out[-1] = out[-1] + curta
+                out.append(list(p))
+            else:
+                out.append(curta + list(p))
         else:
             out.append(list(p))
     return out

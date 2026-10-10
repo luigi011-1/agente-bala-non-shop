@@ -22,6 +22,8 @@ arquivo). Nenhum item aqui é opcional.
      e sai no relatório como `aparado`; ouvir a emenda.
    - Palavra que **faltou** ou foi **trocada** não tem conserto na edição: o take volta para o Flow e a
      fila segue para o próximo vídeo.
+   - Trecho escondido transcrito como "If you have any questions, please feel free to post them in the comments" é
+     ALUCINAÇÃO do whisper em cima de ruído: o corte está certo (não era fala), só o texto do relatório é falso.
    - **O whisper ESCONDE fala repetida** (teste 2026-10-09, em todas as configurações): some com ela do
      texto ou estica a palavra anterior por cima dela ("store" durando 2,1s). Por isso o editor também
      cruza o áudio com as palavras: som de fala sem palavra e palavra longa demais são transcritos
@@ -106,8 +108,10 @@ arquivo). Nenhum item aqui é opcional.
 | 22 | O "one." final, dito baixinho (-40 dB), sumia | o corte de silêncio pela média tratou a palavra fraca do fim como silêncio | palavra das PONTAS do take que o corte perdeu é protegida pelo tempo dela; no meio do take não (o whisper começa palavra cedo e a proteção engoliria a pausa) |
 | 23 | V02 chips: a montagem quebrou ("N/A" no ffprobe) | pausa de 0,13s do take-herói acelerada 5x virou trecho sem nenhum quadro | trecho com menos de 2 quadros cai; juntar a pausa à fala trouxe a pausa de volta e foi desfeito |
 | 24 | V02 chips: silêncio de abertura do T5 ficou | a proteção da palavra da ponta valia também no INÍCIO, e o whisper sempre começa a 1ª palavra em 0,0s | proteção só na ponta FINAL do take |
+| 25 | V03 canela: 0,37s de silêncio no fim do vídeo | a proteção da última palavra seguia o fim ESTICADO pelo whisper ("it." até 8,18s, som até 7,95s) | a proteção vai só até o último instante com voz fraca (limiar - 10 dB) |
+| 26 | V02/V03: legenda "stay i" e "it comment yes if" atravessando a frase | a página curta era sempre juntada à seguinte | página curta que fecha frase junta com a ANTERIOR |
 
-Erros 8 a 24: teste no Mac com os takes do v04 (FitWell growth, gengibre e limão), 2026-10-09.
+Erros 8 a 26: teste no Mac com os takes do v04 (FitWell growth, gengibre e limão), 2026-10-09.
 O 8, o 9, o 11 e o 15 passaram em todas as conferências automáticas e só apareceram no `cortes.png` ou no
 olho: **a conferência 19 (olhar `cortes.png` e `legendas.png`) continua obrigatória**.
 

@@ -10,7 +10,7 @@ metadata:
 
 Testes de 2026-10-09 e 10 no Mac do Luigi, antes da primeira produção real com edição automática:
 takes crus do v04 (FitWell growth, gengibre e limão), takes fabricados a partir de vídeos modelo e das
-edições de referência dele. Detalhe técnico de cada erro (8 a 24) em `docs/pos-producao-edicao-regras.md`;
+edições de referência dele. Detalhe técnico de cada erro (8 a 26) em `docs/pos-producao-edicao-regras.md`;
 padrão de gosto dele em `docs/pos-producao-referencias-luigi.md`. Pedido do Luigi: *"saber o que você NÃO
 deve fazer é tão importante quanto saber o que você DEVE fazer"*.
 
@@ -43,6 +43,9 @@ NÃO FAZER
 - Não usar limiar de silêncio fixo nem pelo pico (`silencedetect -35dB`): pausa com chiado do Flow ficava.
   E não baixar o piso do limiar para salvar palavra fraca (as pausas voltam): proteger a palavra das pontas
   do take pelo tempo dela (o "one." final do V01 temperos sumia).
+- Não proteger a última palavra pelo tempo do whisper (ele estica): só até onde ainda há voz no áudio.
+- Não juntar página curta de legenda que fecha frase à página seguinte ("stay i"): vai para a anterior.
+- "If you have any questions, please feel free..." num trecho escondido é alucinação do whisper em ruído.
 - Não proteger palavra no INÍCIO do take (o whisper começa a 1ª palavra em 0,0s): só na ponta final.
 - Não gerar trecho com menos de 2 quadros (pausa curta do take-herói acelerada 5x quebrava a montagem).
 - Não deixar página de legenda com duração zero: o HyperFrames deixa ela na tela (o "why" do T3 apareceu no T5).
