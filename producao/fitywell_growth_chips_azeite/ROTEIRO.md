@@ -1,7 +1,7 @@
 # FitWell Growth | Real ou falso (chips, azeite, baunilha, maple syrup)
 
 pipeline: classico
-tipo: crescimento · FitWell · rodada de VALIDAÇÃO (clone fiel do modelo)
+tipo: crescimento · FitWell (Ângulo 2) · rodada de VALIDAÇÃO (clone fiel do modelo)
 Vídeo modelo: `input/modelo.mp4` (38,2s, 720x1280, avatar IA: homem asiático de quimono vermelho numa sala com estante)
 Avatar: holistic.brandon (COACH), âncora `producao/_ancoras/holistic_brandon_ancora.jpg`
 Trocas obrigatórias: identidade e cenário (sala → box de treino dela, mesa preta); "In Japan, we trust food..." vira a frase de coach dela.
@@ -83,7 +83,7 @@ PT: Com as mulheres que eu acompanho, a gente confia na comida que se comporta d
 
 Hold a flame to a potato chip. If it burns like a candle, it is loaded with oil, and your gut cannot break it down. Number two, olive oil. Chill it overnight. Real extra virgin turns cloudy. If it stays clear, it was cut with seed oils. Number three, vanilla. Light some on a spoon. Real vanilla burns blue. If it smokes yellow, it is imitation. Number four, maple syrup. Pour some on a cold plate. Real syrup falls in a thick amber ribbon. If it spreads like water, it is colored sugar syrup. With the women I coach, we trust food that behaves the way nature made it. Comment yes if you want more, and follow so you never miss one.
 
-## Notas
+## Notas de produção
 
 - Growth: clone literal; só a frase do Japão mudou (congruência).
 - Todos os takes são FALADOS, nenhum mudo.

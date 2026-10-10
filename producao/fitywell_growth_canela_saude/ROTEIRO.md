@@ -1,7 +1,7 @@
 # FitWell Growth | Canela e o aviso ("keep your mouth shut")
 
 pipeline: classico
-tipo: crescimento · FitWell · rodada de VALIDAÇÃO (clone fiel do modelo)
+tipo: crescimento · FitWell (Ângulo 2) · rodada de VALIDAÇÃO (clone fiel do modelo)
 Vídeo modelo: `input/modelo.mp4` (91,8s, 1080x1920, avatar IA: ancião indígena de colete de camurça numa cozinha)
 Avatar: holistic.brandon (COACH), âncora `producao/_ancoras/holistic_brandon_ancora.jpg`
 Trocas obrigatórias: identidade e cenário (cozinha → box de treino dela, mesa preta); **registro de manifestação vira registro de coach** (universo, portal, energia que "quebra", selos e Stories são da oferta Auraly e não entram na FitWell, regra do `AGENTS.md`); "type health" vira `yes`; Stories vira follow (growth sempre fecha com follow).
@@ -157,7 +157,7 @@ PT: Então me segue agora, porque a segunda parte disso vem a seguir, e você n�
 
 Mix alcohol with cinnamon powder. I know it sounds ridiculous, but you will thank me for the rest of your life. Keep your mouth shut after you watch this. Do not tell anyone. Not everyone is going to understand why this simple remedy works. Keep your mouth shut after you watch. I do not know your name, but do not scroll. Because if this reached you today, it reached you as a final warning. A powerful wave of stamina, vitality, and full body wellness is heading your way. Do not tell anyone, but this is where it turns. The constant fatigue and strain do not have to stay. I have watched energy and deep recovery walk back into the lives of the women I coach. Before you scroll, close your right hand and listen until the end. This video is not for everyone. It found you for a reason. If you skip right now, you lose it. Something very unusual is about to happen to your health. The inflammation keeping you trapped in daily fatigue starts breaking. The physical strain on your body starts going out. In the next seven minutes, the low energy that was following you is going to start lifting. So send this video to yourself right now, because in seven minutes you are going to come back to confirm the shift for yourself. Now open your hand and save this video, so you have it. Double tap quickly on your screen, so it stays in your feed. Comment yes so I can see you did everything. But pay close attention. This is fragile, and poor habits can completely undo it. So follow me right now, because the second part of this is coming next, and you do not want to miss it.
 
-## Notas
+## Notas de produção
 
 - Growth. É o único dos três que não sai literal: o original é manifestação de saúde (universo, portal, selos, Stories), linguagem da oferta Auraly. Estrutura, ritmo, os comandos de retenção (boca fechada, mão fechada, volte em sete minutos) e a ordem do engajamento ficaram; o registro místico virou o de coach.
 - O vídeo modelo nunca ensina a receita: o gancho promete e o resto é retenção. Mantido assim; a "segunda parte" do T14 é a promessa de continuidade do follow.

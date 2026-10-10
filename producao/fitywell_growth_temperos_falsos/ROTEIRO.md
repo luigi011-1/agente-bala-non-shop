@@ -1,7 +1,7 @@
 # FitWell Growth | Temperos falsos (pimenta, cúrcuma, canela)
 
 pipeline: classico
-tipo: crescimento · FitWell · rodada de VALIDAÇÃO (clone fiel do modelo)
+tipo: crescimento · FitWell (Ângulo 2) · rodada de VALIDAÇÃO (clone fiel do modelo)
 Vídeo modelo: `input/modelo.mp4` (50,4s, 720x1280, avatar IA: homem asiático de camisa rosa num pátio)
 Avatar: holistic.brandon (COACH), âncora `producao/_ancoras/holistic_brandon_ancora.jpg`
 Trocas obrigatórias: identidade e cenário (pátio → box de treino dela, mesa preta); "In Japan, we study our food" vira a frase de coach dela (ela é americana).
@@ -118,7 +118,7 @@ PT: Eu e as minhas clientes estudamos a nossa comida de perto, porque o que a ge
 
 If you bought black pepper from the store, drop a spoonful into cold water. Real peppercorns sink. If some float, those are dried papaya seeds mixed in to fill the jar. Why? Papaya seeds are cheap filler, sold at pepper prices. Turmeric. Stir a spoonful into warm water. Real turmeric slowly settles. If the water turns bright yellow right away, it has been dyed. Why? Dye hides old, weak powder. Cinnamon sticks. Real cinnamon has thin paper layers, like a cigar. One thick, hard curl is cassia, the cheaper kind. Why? Cassia is high in coumarin, which can strain the liver. My clients and I study our food closely, because what we eat becomes us. Comment yes for more, and follow for the next one.
 
-## Notas
+## Notas de produção
 
 - Growth: sem checklist de venda, sem ponte, sem álibi. Clone literal; só a frase do Japão mudou (congruência).
 - Todos os takes são FALADOS. Nenhum take mudo (regra de 2026-10-09): os planos de detalhe (grãos afundando, cúrcuma assentando) levam a fala junto.
