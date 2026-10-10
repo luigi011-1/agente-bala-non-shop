@@ -26,3 +26,4 @@ a fala sai na mesma geração.
 - Take mudo no pacote já leva o nome de arquivo com o número do take (`t07_pimenta.mp4`) para a edição.
 - O editor avisa no relatório quando um take mudo tem fala no roteiro. Ver [[take-segue-cena-do-modelo]]
   e [[prompts-video-fase7]].
+- Lições gerais da edição automática em [[edicao-licoes-teste]].

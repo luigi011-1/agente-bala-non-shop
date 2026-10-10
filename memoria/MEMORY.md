@@ -53,6 +53,8 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 ## ✍️ AO ESCREVER O HOOK E O CORPO
 - [🔴 Take segue a CENA do modelo](take_segue_cena_do_modelo.md) — **antes de dividir qualquer roteiro em takes (Luigi, 2026-09-23):** cada cena do modelo é um take; nunca juntar cenas nem cortar frase para caber em 13 a 29. Cena curta vira take curto marcado `CENA CURTA`
 - [🔴 Take mudo só sem voz por cima](take_mudo_so_sem_voz.md) — **ao dividir o roteiro em takes (Luigi, 2026-10-09):** fala em cima de ação = take FALADO com a ação; mudo só sem nenhuma fala por cima (ganchos mudos Auraly incluídos); nunca "voz-over" em take mudo
+- [🔴 Edição automática: FAZER e NÃO FAZER](edicao_licoes_teste.md) — **antes de toda edição dos takes e antes de mexer no editar.py:** conferência palavra por palavra, whisper esconde repetição, olhar cortes.png/legendas.png, limiar de silêncio por take, inserts
+- [Ambiente do Mac do Luigi](ambiente_mac_luigi.md) — o que já está instalado (watch, HyperFrames, whisper); disco quase cheio (df antes de testar), não criar worktree, não sincronizar memória vazia, PR #58 pendente
 - [Copy lapida a estrutura](feedback_copy_lapida_estrutura.md) — **rodar o CRIVO DE COPY.** Puzzle é base inegociável, copy é camada por cima
 - [Frameworks de copy](referencia_frameworks_copy.md) — régua germânica, 3 relevâncias, loop aberto, os 4 vazamentos de venda
 - [Enquadramento sempre mais perto](feedback_enquadramento_mais_proximo.md) — fidelidade é de estrutura, não de câmera
