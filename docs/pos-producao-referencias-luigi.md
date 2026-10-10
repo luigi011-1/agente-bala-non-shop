@@ -29,6 +29,7 @@ tigela) fica no meio do quadro, acima do ingrediente.
 - Mesma fonte serifada branca, minúscula, com sombra/brilho suave; no centro do peito, sobre o colar.
 - **Selos fixos do canal** o vídeo inteiro: `🇺🇸777🇺🇸` pequeno à direita na altura do rosto e
   `🔮222🔮` pequeno à esquerda na altura do peito (marca d'água do número, como manda o CLAUDE.md).
+  **Valem para TODOS os avatares do Auraly** (Avery, Jordan, Devon e os próximos; Luigi, 2026-10-10).
 
 ## O que muda no editor
 
