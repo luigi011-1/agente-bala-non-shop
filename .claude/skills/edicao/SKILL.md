@@ -7,8 +7,12 @@ description: Edição dopaminérgica de takes já gravados ou gerados (Veo/Flow)
 
 > 🔴 **Vale para TODOS os ângulos** (Sea Moss, FitWell, Auraly, Body Hacks e os próximos; venda e growth;
 > Luigi, 2026-10-09). A ordem dos takes vem da fala, não do nome do arquivo.
+> **Cada take é conferido PALAVRA POR PALAVRA com o roteiro**: o Flow inventa, remove e repete falas no
+> mesmo take. Sobra na ponta (fala inventada, repetida ou som sem fala) se corta; no meio ou faltando, para.
 > **Antes de editar, ler `docs/pos-producao-edicao-regras.md`** (acertos e erros do 1º teste aprovado,
-> 2026-10-09). Os 22 itens são regra fixa, e as conferências 17 a 20 bloqueiam a entrega. Use o
+> 2026-10-09). Os 22 itens são regra fixa, e as conferências 17 a 20 bloqueiam a entrega.
+> **Take mudo (insert) se renomeia com o número do take antes de rodar** (`t07_pimenta.mp4`): o Flow
+> põe o horário no nome e o script para. Erros 8 a 16 e o tempo no Mac estão no mesmo arquivo. Use o
 > comando único `python3 template/editar.py <pasta_dos_takes>` (estilo v3, paralelo, roteiro achado
 > sozinho, música a -25 dB, conferências automáticas e `RELATORIO.md`). Entregue só com tudo OK e
 > depois de olhar `cortes.png` e `legendas.png`. A v1 e a v2 abaixo ficam como histórico.
