@@ -23,3 +23,4 @@ ritmo e de corte, que é o que a rodada de validação testa ([[validar-antes-de
 - A frase só atravessa dois takes quando o próprio modelo corta a cena no meio dela.
 - Teto de 29 palavras vale sempre. Nunca filler. Ver [[faixa-palavras-take]].
 - O `checar_entrega.py` só aceita take abaixo de 13 com a marca `CENA CURTA`.
+- Linha com fala por cima de uma ação nunca vira take mudo com voz-over: ver [[take-mudo-so-sem-voz]].

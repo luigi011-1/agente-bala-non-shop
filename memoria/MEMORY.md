@@ -52,6 +52,7 @@ O **processo** vive em `CLAUDE.md` (carrega sozinho). Aqui fica **copy e estrat�
 
 ## ✍️ AO ESCREVER O HOOK E O CORPO
 - [🔴 Take segue a CENA do modelo](take_segue_cena_do_modelo.md) — **antes de dividir qualquer roteiro em takes (Luigi, 2026-09-23):** cada cena do modelo é um take; nunca juntar cenas nem cortar frase para caber em 13 a 29. Cena curta vira take curto marcado `CENA CURTA`
+- [🔴 Take mudo só sem voz por cima](take_mudo_so_sem_voz.md) — **ao dividir o roteiro em takes (Luigi, 2026-10-09):** fala em cima de ação = take FALADO com a ação; mudo só sem nenhuma fala por cima (ganchos mudos Auraly incluídos); nunca "voz-over" em take mudo
 - [Copy lapida a estrutura](feedback_copy_lapida_estrutura.md) — **rodar o CRIVO DE COPY.** Puzzle é base inegociável, copy é camada por cima
 - [Frameworks de copy](referencia_frameworks_copy.md) — régua germânica, 3 relevâncias, loop aberto, os 4 vazamentos de venda
 - [Enquadramento sempre mais perto](feedback_enquadramento_mais_proximo.md) — fidelidade é de estrutura, não de câmera

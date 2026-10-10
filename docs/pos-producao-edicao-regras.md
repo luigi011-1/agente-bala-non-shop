@@ -17,9 +17,15 @@ arquivo). Nenhum item aqui é opcional.
    vídeo bate 100% com o roteiro). Nunca por nota de semelhança: com 90% passava palavra faltando e
    repetição curta (o "like this" repetido no fim do take do queixo do v04 passou assim).
    - **faltou / inventou / repetiu / trocou** bloqueiam, com o trecho exato no relatório.
-   - **Sobra só na ponta** (começo ou fim do take), seja fala inventada, frase repetida ou som sem
-     fala, **se corta** e sai no relatório como `aparado`; ouvir a emenda.
-   - Sobra no MEIO da fala ou palavra faltando **não se corta**: o take volta para o Flow.
+   - **O que o Flow inventou, repetiu ou deixou em silêncio se corta em QUALQUER ponto do take**
+     (começo, meio ou fim; Luigi: *"é só cortar a parte que ele inventou, repetiu ou ficou em silêncio"*)
+     e sai no relatório como `aparado`; ouvir a emenda.
+   - Palavra que **faltou** ou foi **trocada** não tem conserto na edição: o take volta para o Flow e a
+     fila segue para o próximo vídeo.
+   - **O whisper ESCONDE fala repetida** (teste 2026-10-09, em todas as configurações): some com ela do
+     texto ou estica a palavra anterior por cima dela ("store" durando 2,1s). Por isso o editor também
+     cruza o áudio com as palavras: som de fala sem palavra e palavra longa demais são transcritos
+     sozinhos, e só viram corte se tiver fala ali.
    - Única tolerância: escuta do whisper (palavra quase igual, `it's` por `it is`), que só avisa,
      porque a legenda usa o texto do roteiro.
 
@@ -84,8 +90,10 @@ arquivo). Nenhum item aqui é opcional.
 | 14 | No Mac, o script não achava as músicas | caminho fixo da nuvem (`/mnt/project-files/...`); sem faixa ele seguia SEM música calado | procura em `/mnt/project-files/edicao/musicas` e depois em `edicao/musicas` do repo; sem faixa nenhuma, para (ou `--sem-musica`) |
 | 15 | Insert da pimenta virou um trecho de 0,6s e a legenda anterior ficou em cima dele | o whisper "ouviu" ruído no insert; o take era mudo para a ordem mas foi cortado como take com fala | take mudo nunca passa pelo corte de fala, entra sempre pela janela da ação |
 | 16 | Take do queixo com "like this" repetido no fim passou na conferência | nota de semelhança de 90% não vê repetição curta nem palavra faltando | conferência palavra por palavra (regra 2); a sobra da ponta é cortada |
+| 17 | Repetição no meio do take passaria sem aviso | o whisper suprime fala repetida da transcrição | cruzar áudio e palavras (`fala_sem_texto`) e transcrever o suspeito sozinho |
+| 18 | Pimenta e limão do v04 sem a fala do roteiro | takes mudos marcados "voz-over" sem fala gravada em lugar nenhum | take mudo só sem fala por cima (memória `take-mudo-so-sem-voz`); o editor avisa quando um mudo tem fala no roteiro |
 
-Erros 8 a 16: teste no Mac com os takes do v04 (FitWell growth, gengibre e limão), 2026-10-09.
+Erros 8 a 18: teste no Mac com os takes do v04 (FitWell growth, gengibre e limão), 2026-10-09.
 O 8, o 9, o 11 e o 15 passaram em todas as conferências automáticas e só apareceram no `cortes.png` ou no
 olho: **a conferência 19 (olhar `cortes.png` e `legendas.png`) continua obrigatória**.
 

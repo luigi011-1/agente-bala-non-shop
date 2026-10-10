@@ -6,7 +6,7 @@
 Faz, em ordem, e para no primeiro problema:
   1. transcreve cada take (faster-whisper, modelo carregado uma vez);
   2. acha sozinho o roteiro da produção comparando a fala com os roteiros do repo e das entregas;
-  3. confere cada take PALAVRA POR PALAVRA (faltou, inventou, repetiu, trocou); sobra só na ponta é cortada sozinha;
+  3. confere cada take PALAVRA POR PALAVRA; o que o Flow inventou ou repetiu é cortado em qualquer ponto;\n     palavra que faltou ou foi trocada para a edição (o take volta para o Flow);
   4. ordena pelo número do take (T__) do pacote; insert mudo entra só com a janela da ação;
      corta pelos silêncios reais e monta a base com os trechos EM PARALELO (minterpolate por trecho);
   5. legenda (tempo do whisper no vídeo cortado, texto do roteiro), light leak, música a -25 dB da voz;
@@ -95,6 +95,11 @@ def numeros_take(arq):
         if f: tn.setdefault(f.group(1).strip(), int(m.group(1)))
     return tn
 
+def falas_tabela(arq):
+    """{número do take: texto} da tabela do roteiro (| T7 | and a pinch of black pepper, | ... |)."""
+    txt = open(arq, encoding="utf8", errors="ignore").read()
+    return {int(m.group(1)): m.group(2).strip() for m in re.finditer(r"^\|\s*T(\d+)\s*\|\s*([^|]*?)\s*\|", txt, re.M)}
+
 def parecido(a, b):
     return difflib.SequenceMatcher(None, norm(a), norm(b)).ratio()
 
@@ -117,12 +122,18 @@ CONTRACOES = {"it's": "it is", "don't": "do not", "doesn't": "does not", "isn't"
               "i'm": "i am", "that's": "that is", "can't": "cannot", "won't": "will not", "we're": "we are",
               "they're": "they are", "i'll": "i will", "you'll": "you will", "here's": "here is", "what's": "what is"}
 
-def conferir_fala(ws, fala):
+# palavra curta trocada por outra curta é escuta do whisper ("drop the spoonful" por "drop a spoonful")
+PEQUENAS = {"a", "an", "the", "and", "in", "on", "of", "to", "at", "for", "is", "it", "this", "that", "your", "you"}
+
+def conferir_fala(ws, fala, sobra=None):
     """Confere o take PALAVRA POR PALAVRA contra a fala do roteiro (Luigi, 2026-10-09: o Flow inventa, remove e
     repete falas no mesmo take; nota de semelhança deixava passar). Devolve (problemas, escutas).
-    problemas = faltou / inventou / repetiu / trocou: bloqueiam. escutas = palavra quase igual (erro do whisper,
-    "kimchee" por "kimchi", "it's" por "it is"): só avisam, porque a legenda usa o texto do roteiro."""
-    hw = [t for w, _, _ in ws for t in norm(w)]
+    problemas = faltou / inventou / repetiu / trocou. escutas = palavra quase igual (erro do whisper,
+    "kimchee" por "kimchi", "it's" por "it is"): só avisam, porque a legenda usa o texto do roteiro.
+    `sobra` (set), se passado, recebe o índice em `ws` de cada palavra inventada ou repetida."""
+    hw, dono = [], []
+    for n, (w, _, _) in enumerate(ws):
+        for t in norm(w): hw.append(t); dono.append(n)
     rt = norm(fala)
     probs, escutas = [], []
     for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, hw, rt, autojunk=False).get_opcodes():
@@ -130,7 +141,7 @@ def conferir_fala(ws, fala):
         if op == "equal": continue
         if op == "replace":
             exp = lambda x: " ".join(CONTRACOES.get(t, t) for t in x.split())
-            if exp(h) == exp(r) or (i2 - i1 == j2 - j1 and all(
+            if exp(h) == exp(r) or (h in PEQUENAS and r in PEQUENAS) or (i2 - i1 == j2 - j1 and all(
                     difflib.SequenceMatcher(None, a, b).ratio() >= 0.6 for a, b in zip(hw[i1:i2], rt[j1:j2]))) \
                     or difflib.SequenceMatcher(None, h.replace(" ", ""), r.replace(" ", "")).ratio() >= 0.85:
                 escutas.append(f'"{h}" no lugar de "{r}"')
@@ -140,26 +151,106 @@ def conferir_fala(ws, fala):
             e = hw[i1:i2]; n = len(e)
             rep = e == hw[i2:i2 + n] or e == hw[max(0, i1 - n):i1]
             probs.append(f'{"repetiu" if rep else "inventou"} "{h}"')
+            if sobra is not None: sobra.update(dono[i1:i2])
         else:
             probs.append(f'faltou "{r}"')
     return probs, escutas
 
-def aparar(f, ws, fala, tmp, k):
-    """Sobra do Flow só no começo ou no fim do take (improviso como \"If you're tired of struggling\" ou a frase
-    dita duas vezes): se existe um trecho contíguo que bate palavra por palavra com o roteiro, corta o resto e
-    devolve (arquivo, o que saiu). Sobra no MEIO da fala ou palavra faltando não se corta: o take volta para o Flow."""
-    oks = [(len(conferir_fala(ws[i:j + 1], fala)[1]), i, j) for i in range(len(ws)) for j in range(i, len(ws))
-           if not conferir_fala(ws[i:j + 1], fala)[0]]
-    if not oks: return None
-    _, i, j = min(oks)  # menos escutas; empate fica com a primeira vez que a frase foi dita
-    if (i, j) == (0, len(ws) - 1): return None
-    a = max(ws[i - 1][2], ws[i][1] - 0.05) if i else 0.0
-    b = min(ws[j + 1][1], ws[j][2] + 0.15) if j + 1 < len(ws) else dur(f)
-    saida = f"{tmp}/aparado_t{k:02d}.mp4"
-    sh(["ffmpeg", "-loglevel", "error", "-y", "-i", f, "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-c:v", "libx264",
-        "-crf", "16", "-preset", "fast", "-c:a", "aac", "-b:a", "192k", saida])
-    fora = " / ".join(x for x in (" ".join(w for w, _, _ in ws[:i]), " ".join(w for w, _, _ in ws[j + 1:])) if x)
-    return saida, fora
+def ouvir_trecho(f, a, b, tmp):
+    """Transcreve um trecho sozinho e devolve as palavras com tempo absoluto: isolado, o whisper escreve o que
+    foi dito (no take inteiro ele suprime a fala repetida)."""
+    t = f"{tmp}/trecho_{hashlib.md5(f'{f}{a}{b}'.encode()).hexdigest()[:8]}.wav"
+    sh(["ffmpeg", "-loglevel", "error", "-y", "-i", f, "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-vn", "-ar", "16000", "-ac", "1", t])
+    return [[w, x + a, y + a] for w, x, y in palavras(t)]
+
+def fala_sem_texto(f, ws, tmp, minimo=0.35):
+    """Fala que está no áudio e não está na transcrição. O whisper SUPRIME fala repetida (teste 2026-10-09:
+    "...from the store, bought black pepper from the store, drop..." saiu sem a repetição em todas as
+    configurações) e esconde ela de dois jeitos: um trecho com som e sem palavra, ou uma palavra ESTICADA por
+    cima dela ("store" durando 2,1s). Cada suspeito é transcrito sozinho; só vira corte se tiver palavra.
+    Devolve [[início, fim, texto]]."""
+    d = dur(f)
+    log_ = sh_err(f'ffmpeg -hide_banner -i "{f}" -af silencedetect=noise=-35dB:d={GAP} -f null -')
+    sil, st = [], None
+    for m in re.finditer(r"silence_(start|end): ([\d.]+)", log_):
+        if m.group(1) == "start": st = float(m.group(2))
+        else: sil.append([st, float(m.group(2))]); st = None
+    if st is not None: sil.append([st, d])
+    som, pos = [], 0.0
+    for a, b in sil:
+        if a > pos: som.append([pos, a])
+        pos = b
+    if d > pos: som.append([pos, d])
+    teto = lambda w: 0.45 + 0.09 * len(re.sub(r"[^a-z0-9]", "", w.lower()))  # duração plausível da palavra
+    cobre = sorted([max(0, a - 0.08), min(b, a + teto(w)) + 0.08] for w, a, b in ws)
+    achados = []
+    for a, b in som:  # 1) som sem palavra
+        x = a
+        for c0, c1 in cobre:
+            if c1 <= x or c0 >= b: continue
+            if c0 > x and c0 - x >= minimo: achados.append([x, c0])
+            x = max(x, c1)
+        if b - x >= minimo: achados.append([x, b])
+    for w, a, b in ws:  # 2) palavra esticada por cima de outra fala
+        if b - a > teto(w) + minimo:
+            achados.append([a, b, w])
+    cortes = []
+    for ach in achados:
+        a, b = ach[0], ach[1]
+        ouvido = ouvir_trecho(f, max(0, a - 0.02), min(d, b + 0.02), tmp)
+        if len(ach) == 3:  # esticada: a primeira palavra ouvida é a própria; o resto é sobra
+            resto = [o for o in ouvido if norm(o[0]) != norm(ach[2])][1:] if ouvido and norm(ouvido[0][0]) != norm(ach[2]) else ouvido[1:]
+            if resto: cortes.append([max(a, resto[0][1] - 0.05), b, " ".join(o[0] for o in resto)])
+        elif ouvido:
+            cortes.append([a, b, " ".join(o[0] for o in ouvido)])
+    junto = []  # o mesmo trecho achado pelos dois jeitos vira um corte só, com o texto mais longo
+    for a, b, t in sorted((float(a), float(b), t) for a, b, t in cortes):
+        if junto and a <= junto[-1][1]:
+            junto[-1][1] = max(junto[-1][1], b)
+            if len(t) > len(junto[-1][2]): junto[-1][2] = t
+        else: junto.append([a, b, t])
+    return junto
+
+def limpar(f, ws, fala, tmp, k):
+    """Corta do take o que o Flow inventou ou repetiu, em QUALQUER ponto (começo, meio ou fim; Luigi, 2026-10-09:
+    "é só cortar a parte que ele inventou, repetiu ou ficou em silêncio"). Os silêncios saem depois, no corte normal.
+    Palavra que FALTOU ou foi TROCADA não tem conserto na edição: devolve None e o take volta para o Flow.
+    Devolve (arquivo, [trechos tirados])."""
+    sobra = set()
+    probs, _ = conferir_fala(ws, fala, sobra)
+    if any(not p.startswith(("inventou", "repetiu")) for p in probs): return None
+    if any(len(norm(ws[n][0])) > 1 for n in sobra): return None  # palavra só em parte sobra: não corta ao meio
+    mudos = [m for m in fala_sem_texto(f, ws, tmp) if not any(ws[n][1] - 0.1 <= m[0] and m[1] <= ws[n][2] + 0.1 for n in sobra)]
+    if not sobra and not mudos: return None
+    d, faixas, i = dur(f), [], 0
+    while i < len(ws):
+        if i in sobra: i += 1; continue
+        j = i
+        while j + 1 < len(ws) and j + 1 not in sobra: j += 1
+        a = 0.0 if i == 0 else max(ws[i - 1][2], ws[i][1] - 0.05)
+        b = d if j + 1 == len(ws) else min(ws[j + 1][1], ws[j][2] + 0.15)
+        faixas.append([a, b]); i = j + 1
+    for m0, m1, _ in mudos:  # tira de dentro das faixas a fala que o whisper não escreveu
+        nova = []
+        for a, b in faixas:
+            if m1 <= a or m0 >= b: nova.append([a, b]); continue
+            if m0 > a: nova.append([a, m0])
+            if m1 < b: nova.append([m1, b])
+        faixas = [x for x in nova if x[1] - x[0] > 0.04]
+    if not faixas: return None
+    filt = "".join(f"[0:v]trim=start={a:.3f}:end={b:.3f},setpts=PTS-STARTPTS[v{n}];"
+                   f"[0:a]atrim=start={a:.3f}:end={b:.3f},asetpts=PTS-STARTPTS[a{n}];" for n, (a, b) in enumerate(faixas))
+    filt += "".join(f"[v{n}][a{n}]" for n in range(len(faixas))) + f"concat=n={len(faixas)}:v=1:a=1[v][a]"
+    saida = f"{tmp}/limpo_t{k:02d}.mp4"
+    sh(["ffmpeg", "-loglevel", "error", "-y", "-i", f, "-filter_complex", filt, "-map", "[v]", "-map", "[a]",
+        "-c:v", "libx264", "-crf", "16", "-preset", "fast", "-c:a", "aac", "-b:a", "192k", saida])
+    tirados, atual = [], []
+    for n, (w, _, _) in enumerate(ws):
+        if n in sobra: atual.append(w)
+        elif atual: tirados.append(" ".join(atual)); atual = []
+    if atual: tirados.append(" ".join(atual))
+    tirados += [f"{txt} ({a:.1f}-{b:.1f}s, fala que o whisper tinha escondido)" for a, b, txt in mudos]
+    return saida, tirados
 
 
 # ---------- 4. cortes ----------
@@ -428,6 +519,10 @@ def main():
         if numero(f) is not None and not 1 <= numero(f) <= teto:
             sys.exit(f"Take mudo {os.path.basename(f)}: o número no nome ({numero(f)}) não é um take do roteiro "
                      f"(1 a {teto}); provavelmente é o horário do Flow. Renomeie com o número do take (ex.: t07_pimenta.mp4).")
+        voz = falas_tabela(arq).get(numero(f), "")
+        if re.search(r"[A-Za-z]{3}", voz) and not re.search(r"mudo|no speech|sem fala", voz, re.I):
+            avisos.append(f"{os.path.basename(f)} é mudo mas o T{numero(f)} do roteiro tem fala (\"{voz}\"): essa fala NÃO "
+                          "entra no vídeo. Regra desde 2026-10-09: take com fala é sempre falado, mudo só sem voz-over")
         if numero(f) in pos.values():
             avisos.append(f"{os.path.basename(f)} é mudo mas o T{numero(f)} do roteiro tem fala: conferir no cortes.png")
     repetidas = {p for p in pos.values() if list(pos.values()).count(p) > 1}
@@ -461,15 +556,19 @@ def main():
     for k in sorted(falas):
         f = dict(takes)[k]
         probs, esc = conferir_fala(words[k], falas[k])
-        if probs:
-            ap = aparar(f, words[k], falas[k], tmp, k)
+        if probs or fala_sem_texto(f, words[k], tmp):
+            ap = limpar(f, words[k], falas[k], tmp, k)
             if ap:
-                novo, fora = ap
-                words[k] = palavras(novo); ditos[k] = " ".join(w for w, _, _ in words[k])
-                probs2, esc = conferir_fala(words[k], falas[k])
-                if not probs2:
+                novo, tirados = ap
+                fora = " / ".join(tirados)
+                w2 = palavras(novo)
+                probs2, esc2 = conferir_fala(w2, falas[k])
+                if probs2:
+                    probs += [f"depois do corte ainda: {p}" for p in probs2]
+                else:
+                    words[k], ditos[k], esc = w2, " ".join(w for w, _, _ in w2), esc2
                     takes = [(i, novo if i == k else g) for i, g in takes]
-                    aparados.append(f"{k}. {os.path.basename(f)}: cortado o que o Flow pôs a mais na ponta: \"{fora}\"; ouvir a emenda")
+                    aparados.append(f"{k}. {os.path.basename(f)}: cortado o que o Flow inventou ou repetiu: \"{fora}\"; ouvir a emenda")
                     probs = []
         if probs:
             erros_fala.append(f"{k}. {os.path.basename(f)}: " + "; ".join(probs) + f' | ouvi "{ditos[k]}" | roteiro "{falas[k]}"')
