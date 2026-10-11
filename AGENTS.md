@@ -151,6 +151,14 @@ ou growth. Quando o Luigi manda a pasta com os takes do Flow, rodar o comando un
   `docs/pos-producao-casos.md`). Skill: `.claude/skills/edicao/SKILL.md`.
 - A ORDEM dos takes vem da fala de cada um comparada com o roteiro da producao, nao do nome do
   arquivo. Take mudo (sem fala) precisa do numero no nome. Frase repetida em dois takes gera aviso.
+- Cada take e conferido PALAVRA POR PALAVRA com o roteiro (Luigi, 2026-10-09: o Flow inventa, remove e
+  repete falas). O que ele inventou, repetiu ou deixou em silencio e cortado em qualquer ponto do take;
+  palavra que faltou ou foi trocada para a edicao daquele video e o take volta para o Flow.
+- **Take mudo so quando NAO ha fala por cima** (Luigi, 2026-10-09), em todo angulo: linha de roteiro com
+  fala em cima de uma acao vira take FALADO com a acao junto. Ganchos mudos do Auraly e takes realmente
+  sem voz continuam. Nunca "voz-over" em take mudo. Memoria `take-mudo-so-sem-voz`.
+- Lote: os videos sao editados um em seguida do outro, sem parar para perguntar, avisando o Luigi a
+  cada video concluido (Luigi, 2026-10-09). No Mac, uma edicao por vez.
 - Estilo v3: sem silencio, fala 1,12x, legenda serifada branca no centro com o texto do roteiro,
   light leak em 2 trocas, take-heroi com pausa acelerada em vez de cortada.
 - Musica SEMPRE 25 dB abaixo da voz (Luigi; -10 dB atrapalhou a fala). Faixas dele em

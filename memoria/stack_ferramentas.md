@@ -63,3 +63,5 @@ Como quem decompõe não ouve áudio, e o Facebook bloqueia acesso automatizado 
 - FB raramente exibe a tag (diferente de TikTok/IG).
 
 Sempre "sem música" nos prompts de vídeo — trilha só na edição, para controle + evitar strike.
+
+No Mac do Luigi (2026-10-10): instalação e armadilhas em [[ambiente-mac-luigi]].

@@ -12,17 +12,37 @@ arquivo). Nenhum item aqui é opcional.
 ### Antes de editar
 1. **Confirmar qual vídeo é** pelo conteúdo dos takes (contact sheet) e pelo roteiro da produção,
    antes de qualquer corte. Se não bater com o esperado, avisar o Luigi.
-2. **Transcrever cada take** e comparar com a fala literal do roteiro. Fala faltando ou trocada é
-   problema do take, avisa antes de editar.
+2. **Conferir cada take PALAVRA POR PALAVRA contra a fala do roteiro** (Luigi, 2026-10-09: *"o Flow
+   pode inventar falas, remover falas e repetir falas no mesmo take"*; é a única forma de saber que o
+   vídeo bate 100% com o roteiro). Nunca por nota de semelhança: com 90% passava palavra faltando e
+   repetição curta (o "like this" repetido no fim do take do queixo do v04 passou assim).
+   - **faltou / inventou / repetiu / trocou** bloqueiam, com o trecho exato no relatório.
+   - **O que o Flow inventou, repetiu ou deixou em silêncio se corta em QUALQUER ponto do take**
+     (começo, meio ou fim; Luigi: *"é só cortar a parte que ele inventou, repetiu ou ficou em silêncio"*)
+     e sai no relatório como `aparado`; ouvir a emenda.
+   - Palavra que **faltou** ou foi **trocada** não tem conserto na edição: o take volta para o Flow e a
+     fila segue para o próximo vídeo.
+   - **O whisper ESCONDE fala repetida** (teste 2026-10-09, em todas as configurações): some com ela do
+     texto ou estica a palavra anterior por cima dela ("store" durando 2,1s). Por isso o editor também
+     cruza o áudio com as palavras: som de fala sem palavra e palavra longa demais são transcritos
+     sozinhos, e só viram corte se tiver fala ali.
+   - Única tolerância: escuta do whisper (palavra quase igual, `it's` por `it is`), que só avisa,
+     porque a legenda usa o texto do roteiro.
 
 ### Cortes e ritmo
-3. **Cortar pelos silêncios reais** do áudio (`silencedetect=noise=-35dB:d=0.15`), nunca pelo tempo
-   do whisper (ele estica a palavra até a seguinte e esconde a pausa).
+3. **Cortar TODO silêncio, inclusive no MEIO do take** (Luigi, 2026-10-10: o Flow às vezes deixa um
+   intervalo longo entre duas falas do mesmo take; é o que deixa a edição dopaminérgica). Pelo volume
+   real do áudio, nunca pelo tempo do whisper (ele estica a palavra até a seguinte e esconde a pausa).
+   O limiar é medido em cada take (fundo + 6 dB, no mínimo -35 dB) em janelas de 50 ms pela média: com
+   -35 dB fixo e `silencedetect` (que olha o pico), pausa com chiado de ambiente não era cortada.
 4. **Ilha de som sem nenhuma palavra cai** (ruído de fim de take, respiração).
-5. **Ilha de fala menor que 0,4s junta com a vizinha**: senão vira um piscar.
+5. **Ilha de fala menor que 0,4s junta com a vizinha, só se estiverem coladas (até 0,25s)**: senão vira
+   um piscar. Estalo isolado (< 0,12s) cai. Sem a trava de 0,25s, um estalo depois de uma pausa longa
+   juntava e a pausa inteira ficava (erro 19).
 6. **Segmentos a menos de 0,05s um do outro viram um só**: corte invisível só cria risco.
 7. **Folga de 0,05s antes e 0,11s depois** de cada trecho de fala: a sílaba final não some.
-8. **Fala a 1,12x** (alvo 3,5 a 3,7 palavras por segundo; o teste deu 3,64).
+8. **Ritmo por vídeo, não velocidade fixa** (Luigi, 2026-10-10, referências dele): acelerar até **3,8
+   palavras/s** (FitWell e outros) ou **4,0** (Auraly), entre 1,0x e 1,25x. Antes era 1,12x fixo (~3,1).
 9. **No take-herói visual (o reveal), a pausa é ACELERADA 5x, não cortada**: a transformação
    continua sem pulo e a pausa vira ~0,3s. Marcar o take em `RAMP`.
 10. **Corte dentro do filtro** (`trim`/`atrim`), nunca `-ss` antes do `-i`.
@@ -35,7 +55,9 @@ arquivo). Nenhum item aqui é opcional.
     quebra no ponto final, na vírgula (com 2+ palavras) e na troca de take.
 14. Legenda no centro (top 880px); no take-herói sobe para 760px, entre o rosto e o objeto. Nunca
     sobre o rosto, nunca sobre o herói.
-15. Light leak laranja só na entrada de 2 takes. Cortes secos no resto.
+15. **Sem light leak** (Luigi, 2026-10-10). Cortes secos. No Auraly, um flash claro só na saída do gancho.
+15b. **Legenda do Auraly tem estilo próprio** (`docs/pos-producao-referencias-luigi.md`): monta palavra
+    por palavra, palavra-chave grande, selos 777/222 em todo vídeo Auraly.
 16. Voz em `loudnorm I=-14 TP=-1.2`.
 16b. **Música sempre a -25 dB da voz** (Luigi, 2026-10-09; -10 dB ficou alta e atrapalhou a fala): a faixa é normalizada para -14 LUFS (o
     nível da voz) e baixada 25 dB, sem ducking, com 0,3s de entrada e 0,8s de saída; silêncio de
@@ -67,7 +89,46 @@ arquivo). Nenhum item aqui é opcional.
 | 6 | Vídeo sem música | não havia trilha | 9 faixas do Luigi em `/mnt/project-files/edicao/musicas/`, regra 16b |
 | 7 | Primeira base jogada fora (7 min perdidos) | o erro 1 só apareceu na conferência | Regra 11 já no script; conferência 18 continua obrigatória |
 
+| 8 | Inserts mudos de pimenta e limão foram para o fim do vídeo (posições 14 e 15) | o número no nome do arquivo era o horário do Flow (`..._20261009173849`) e o script só avisava | o script **para** se o número do mudo não é um take do roteiro; renomear com o número do take (`t07_pimenta.mp4`) |
+| 9 | Limão caiu depois do "Boil" (T9) | o take falado era numerado entre as FALAS (Boil = 7ª fala) e o mudo pelo TAKE (limão = T8) | posição do falado = número do bloco `V__` da fala no pacote; os dois na mesma numeração (`numeros_take`) |
+| 10 | Insert mudo entrou inteiro (~7s cada) e o vídeo ficou 7s mais longo | `[[0, dur]]` para take sem fala | insert entra só com a janela de 2,5s de mais movimento (`--insert`, 0 = inteiro) |
+| 11 | Legenda "of ginger" ficou em cima da mão espremendo o limão | a página de legenda durava até a próxima palavra falada e atravessava o insert | a legenda some quando um insert mudo começa |
+| 12 | Edição parada por improviso do Flow ("If you're tired of struggling…", "Stay ready and stay disciplined…") e corte feito à mão | o take tinha a fala do roteiro inteira mais frases inventadas no começo ou no fim | se a fala do roteiro está inteira e contígua (≥ 90%), o script corta o resto sozinho e lista no relatório como `aparado` (ouvir no vídeo). Improviso no MEIO da fala continua parando a edição |
+| 13 | No Mac, `--producao producao/fitywell_growth_v4` dava "Nenhum roteiro encontrado" | só o nome da pasta era aceito | aceita nome ou caminho |
+| 14 | No Mac, o script não achava as músicas | caminho fixo da nuvem (`/mnt/project-files/...`); sem faixa ele seguia SEM música calado | procura em `/mnt/project-files/edicao/musicas` e depois em `edicao/musicas` do repo; sem faixa nenhuma, para (ou `--sem-musica`) |
+| 15 | Insert da pimenta virou um trecho de 0,6s e a legenda anterior ficou em cima dele | o whisper "ouviu" ruído no insert; o take era mudo para a ordem mas foi cortado como take com fala | take mudo nunca passa pelo corte de fala, entra sempre pela janela da ação |
+| 16 | Take do queixo com "like this" repetido no fim passou na conferência | nota de semelhança de 90% não vê repetição curta nem palavra faltando | conferência palavra por palavra (regra 2); a sobra da ponta é cortada |
+| 17 | Repetição no meio do take passaria sem aviso | o whisper suprime fala repetida da transcrição | cruzar áudio e palavras (`fala_sem_texto`) e transcrever o suspeito sozinho |
+| 18 | Pimenta e limão do v04 sem a fala do roteiro | takes mudos marcados "voz-over" sem fala gravada em lugar nenhum | take mudo só sem fala por cima (memória `take-mudo-so-sem-voz`); o editor avisa quando um mudo tem fala no roteiro |
+| 19 | Pausa de 1,5s com chiado no meio do take ficava no vídeo | limiar fixo -35 dB pelo pico, e um estalo depois da pausa "juntava" a ilha por cima dela | limiar medido no take pela média (regra 3) e junção só de ilhas coladas (regra 5) |
+
+Erros 8 a 19: teste no Mac com os takes do v04 (FitWell growth, gengibre e limão), 2026-10-09.
+O 8, o 9, o 11 e o 15 passaram em todas as conferências automáticas e só apareceram no `cortes.png` ou no
+olho: **a conferência 19 (olhar `cortes.png` e `legendas.png`) continua obrigatória**.
+
+### Acertos do teste no Mac (garantir sempre)
+- A trava de fala (90%) segurou as falas improvisadas do Flow em vez de deixar passar.
+- O roteiro certo foi achado sozinho entre todas as produções (92%), e a ordem dos takes falados saiu da fala, com nomes de arquivo sem número.
+- Com os takes crus (sem nenhum corte manual) o resultado bateu com o v04 aprovado: 76,4s contra 75,9s, 22,5 MB, música a -25 dB, zero silêncio, zero quadro fantasma, legenda com o texto do roteiro.
+
+### Rodar no Mac (MacBook Air M2, 8 núcleos, 16 GB)
+- Precisa: Node 22 (`brew install node@22`, no PATH pelo `~/.zprofile`), FFmpeg, `faster-whisper`
+  (`pip3 install --user faster-whisper`), `whisper-cpp` pelo Homebrew (o `preparar_hyperframes.sh`
+  compila com `cmake`, que o Mac não tem) e o HyperFrames pelo `scripts/preparar_hyperframes.sh`.
+  O repo do HyperFrames usa Git LFS (`brew install git-lfs`).
+- Tempo: ~12 min por vídeo de 75-80s (render ~8 min), usando ~6 dos 8 núcleos. **No máximo 2 edições
+  ao mesmo tempo neste Mac**; para lote grande, uma sessão da nuvem por vídeo.
+- **Uma sessão por vídeo, em paralelo:** a pasta de trabalho padrão é `/tmp/edicao/<pasta>-<código do
+  caminho>`, então pastas de takes com o mesmo nome não se misturam. Cada sessão do Claude Code no Mac
+  trabalha num **worktree próprio** do repositório (`claude --worktree <nome>`): sessões no mesmo
+  checkout trocam de branch umas das outras e misturam commits.
+
 ### Erros que vêm do Flow (corrigir no prompt, não na edição)
+- **Improviso na fala:** o Flow inventa frase antes ou depois da fala ("then definitely stay tuned",
+  "Never skip a step"). O editor corta quando está nas pontas, mas o certo é o V pedir só a fala.
+- **Insert sem voz-over:** o pacote do v04 marca T7 e T8 como "voz-over", mas nenhum take fala "and a
+  pinch of black pepper" nem "then squeeze in the juice of half a lemon", então essas falas não existem
+  no vídeo. Se o insert é voz-over, a fala precisa estar gravada em algum take.
 - **Continuidade de objeto:** o bule ganhou tampa de madeira no T4 e não tinha no T3. Todo K e V do
   mesmo objeto descreve o objeto igual (com ou sem tampa).
 - **Ação que acontece na pausa:** o T4 começa com o bule no réchaud e ela só levanta na pausa, então
@@ -78,7 +139,7 @@ arquivo). Nenhum item aqui é opcional.
 ## Comando único (sugestões 1 a 5, aprovadas pelo Luigi em 2026-10-09)
 
 ```
-python3 .claude/skills/edicao/template/editar.py <pasta_dos_takes> [--producao <slug>] [--musica <nome>] [--ramp 1] [--leaks 2,4] [--up 1]
+python3 .claude/skills/edicao/template/editar.py <pasta_dos_takes> [--producao <nome ou pasta>] [--musica <nome>] [--insert 2.5] [--ramp 1] [--leaks 2,4] [--up 1]
 ```
 
 1. **Um comando só** com relatório: transcreve, acha o roteiro, confere a fala, corta, monta, legenda,
@@ -91,7 +152,7 @@ python3 .claude/skills/edicao/template/editar.py <pasta_dos_takes> [--producao <
    de novo, e o áudio do trecho fica com a duração exata do vídeo (sem deriva de lábio).
 3. **Roteiro e ORDEM achados pela fala**: a ordem dos takes é a ordem das frases no roteiro, não o
    nome do arquivo (qualquer nome serve; o relatório avisa quando o nome discorda). Take mudo precisa
-   do número no nome; frase repetida em dois takes gera aviso. O roteiro sai da comparação da fala
+   do número DO TAKE no nome (`t07_pimenta.mp4`), nunca o horário do Flow; frase repetida em dois takes gera aviso. O roteiro sai da comparação da fala
    dos takes com todas as falas entre aspas dos `.md` de
    `producao/` e de `/mnt/project-files/entregas/`. Abaixo de 85% de semelhança, para e pede `--producao`.
 4. **Quadro fantasma automático**: em cada corte, um quadro parecido com os DOIS vizinhos de uma troca
