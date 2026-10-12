@@ -1,0 +1,1839 @@
+{
+  "schema_version": 2,
+  "pipeline": "watch",
+  "run_id": "5ef5d525-7fc7-445a-93d5-a16596390357",
+  "status": "COMPLETE",
+  "analysis_status": "PENDING_VISUAL_REVIEW",
+  "video": "/Users/macbookairm2/Downloads/snapinsta-1791763841045.mp4",
+  "outdir": "/private/tmp/bala-edicao-2026-10-11/v01",
+  "info": {
+    "duration": 43.466349,
+    "fps": 30.0,
+    "width": 720,
+    "height": 1280,
+    "has_audio": true
+  },
+  "scenes": [
+    {
+      "file": "scene_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "scene_t00005.4333_000002.png",
+      "t": 5.433333
+    },
+    {
+      "file": "scene_t00025.8000_000003.png",
+      "t": 25.8
+    },
+    {
+      "file": "scene_t00030.5333_000004.png",
+      "t": 30.533333
+    },
+    {
+      "file": "scene_t00032.7333_000005.png",
+      "t": 32.733333
+    },
+    {
+      "file": "scene_t00037.9000_000006.png",
+      "t": 37.9
+    }
+  ],
+  "timeline": [
+    {
+      "file": "tl_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "tl_t00000.2000_000002.png",
+      "t": 0.2
+    },
+    {
+      "file": "tl_t00000.4000_000003.png",
+      "t": 0.4
+    },
+    {
+      "file": "tl_t00000.6000_000004.png",
+      "t": 0.6
+    },
+    {
+      "file": "tl_t00000.8000_000005.png",
+      "t": 0.8
+    },
+    {
+      "file": "tl_t00001.0000_000006.png",
+      "t": 1.0
+    },
+    {
+      "file": "tl_t00001.2000_000007.png",
+      "t": 1.2
+    },
+    {
+      "file": "tl_t00001.4000_000008.png",
+      "t": 1.4
+    },
+    {
+      "file": "tl_t00001.6000_000009.png",
+      "t": 1.6
+    },
+    {
+      "file": "tl_t00001.8000_000010.png",
+      "t": 1.8
+    },
+    {
+      "file": "tl_t00002.0000_000011.png",
+      "t": 2.0
+    },
+    {
+      "file": "tl_t00002.2000_000012.png",
+      "t": 2.2
+    },
+    {
+      "file": "tl_t00002.4000_000013.png",
+      "t": 2.4
+    },
+    {
+      "file": "tl_t00002.6000_000014.png",
+      "t": 2.6
+    },
+    {
+      "file": "tl_t00002.8000_000015.png",
+      "t": 2.8
+    },
+    {
+      "file": "tl_t00003.0000_000016.png",
+      "t": 3.0
+    },
+    {
+      "file": "tl_t00003.2000_000017.png",
+      "t": 3.2
+    },
+    {
+      "file": "tl_t00003.4000_000018.png",
+      "t": 3.4
+    },
+    {
+      "file": "tl_t00003.6000_000019.png",
+      "t": 3.6
+    },
+    {
+      "file": "tl_t00003.8000_000020.png",
+      "t": 3.8
+    },
+    {
+      "file": "tl_t00004.0000_000021.png",
+      "t": 4.0
+    },
+    {
+      "file": "tl_t00004.2000_000022.png",
+      "t": 4.2
+    },
+    {
+      "file": "tl_t00004.4000_000023.png",
+      "t": 4.4
+    },
+    {
+      "file": "tl_t00004.6000_000024.png",
+      "t": 4.6
+    },
+    {
+      "file": "tl_t00004.8000_000025.png",
+      "t": 4.8
+    },
+    {
+      "file": "tl_t00005.0000_000026.png",
+      "t": 5.0
+    },
+    {
+      "file": "tl_t00005.2000_000027.png",
+      "t": 5.2
+    },
+    {
+      "file": "tl_t00005.4000_000028.png",
+      "t": 5.4
+    },
+    {
+      "file": "tl_t00005.6000_000029.png",
+      "t": 5.6
+    },
+    {
+      "file": "tl_t00005.8000_000030.png",
+      "t": 5.8
+    },
+    {
+      "file": "tl_t00006.0000_000031.png",
+      "t": 6.0
+    },
+    {
+      "file": "tl_t00006.2000_000032.png",
+      "t": 6.2
+    },
+    {
+      "file": "tl_t00006.4000_000033.png",
+      "t": 6.4
+    },
+    {
+      "file": "tl_t00006.6000_000034.png",
+      "t": 6.6
+    },
+    {
+      "file": "tl_t00006.8000_000035.png",
+      "t": 6.8
+    },
+    {
+      "file": "tl_t00007.0000_000036.png",
+      "t": 7.0
+    },
+    {
+      "file": "tl_t00007.2000_000037.png",
+      "t": 7.2
+    },
+    {
+      "file": "tl_t00007.4000_000038.png",
+      "t": 7.4
+    },
+    {
+      "file": "tl_t00007.6000_000039.png",
+      "t": 7.6
+    },
+    {
+      "file": "tl_t00007.8000_000040.png",
+      "t": 7.8
+    },
+    {
+      "file": "tl_t00008.0000_000041.png",
+      "t": 8.0
+    },
+    {
+      "file": "tl_t00008.2000_000042.png",
+      "t": 8.2
+    },
+    {
+      "file": "tl_t00008.4000_000043.png",
+      "t": 8.4
+    },
+    {
+      "file": "tl_t00008.6000_000044.png",
+      "t": 8.6
+    },
+    {
+      "file": "tl_t00008.8000_000045.png",
+      "t": 8.8
+    },
+    {
+      "file": "tl_t00009.0000_000046.png",
+      "t": 9.0
+    },
+    {
+      "file": "tl_t00009.2000_000047.png",
+      "t": 9.2
+    },
+    {
+      "file": "tl_t00009.4000_000048.png",
+      "t": 9.4
+    },
+    {
+      "file": "tl_t00009.6000_000049.png",
+      "t": 9.6
+    },
+    {
+      "file": "tl_t00009.8000_000050.png",
+      "t": 9.8
+    },
+    {
+      "file": "tl_t00010.0000_000051.png",
+      "t": 10.0
+    },
+    {
+      "file": "tl_t00010.2000_000052.png",
+      "t": 10.2
+    },
+    {
+      "file": "tl_t00010.4000_000053.png",
+      "t": 10.4
+    },
+    {
+      "file": "tl_t00010.6000_000054.png",
+      "t": 10.6
+    },
+    {
+      "file": "tl_t00010.8000_000055.png",
+      "t": 10.8
+    },
+    {
+      "file": "tl_t00011.0000_000056.png",
+      "t": 11.0
+    },
+    {
+      "file": "tl_t00011.2000_000057.png",
+      "t": 11.2
+    },
+    {
+      "file": "tl_t00011.4000_000058.png",
+      "t": 11.4
+    },
+    {
+      "file": "tl_t00011.6000_000059.png",
+      "t": 11.6
+    },
+    {
+      "file": "tl_t00011.8000_000060.png",
+      "t": 11.8
+    },
+    {
+      "file": "tl_t00012.0000_000061.png",
+      "t": 12.0
+    },
+    {
+      "file": "tl_t00012.2000_000062.png",
+      "t": 12.2
+    },
+    {
+      "file": "tl_t00012.4000_000063.png",
+      "t": 12.4
+    },
+    {
+      "file": "tl_t00012.6000_000064.png",
+      "t": 12.6
+    },
+    {
+      "file": "tl_t00012.8000_000065.png",
+      "t": 12.8
+    },
+    {
+      "file": "tl_t00013.0000_000066.png",
+      "t": 13.0
+    },
+    {
+      "file": "tl_t00013.2000_000067.png",
+      "t": 13.2
+    },
+    {
+      "file": "tl_t00013.4000_000068.png",
+      "t": 13.4
+    },
+    {
+      "file": "tl_t00013.6000_000069.png",
+      "t": 13.6
+    },
+    {
+      "file": "tl_t00013.8000_000070.png",
+      "t": 13.8
+    },
+    {
+      "file": "tl_t00014.0000_000071.png",
+      "t": 14.0
+    },
+    {
+      "file": "tl_t00014.2000_000072.png",
+      "t": 14.2
+    },
+    {
+      "file": "tl_t00014.4000_000073.png",
+      "t": 14.4
+    },
+    {
+      "file": "tl_t00014.6000_000074.png",
+      "t": 14.6
+    },
+    {
+      "file": "tl_t00014.8000_000075.png",
+      "t": 14.8
+    },
+    {
+      "file": "tl_t00015.0000_000076.png",
+      "t": 15.0
+    },
+    {
+      "file": "tl_t00015.2000_000077.png",
+      "t": 15.2
+    },
+    {
+      "file": "tl_t00015.4000_000078.png",
+      "t": 15.4
+    },
+    {
+      "file": "tl_t00015.6000_000079.png",
+      "t": 15.6
+    },
+    {
+      "file": "tl_t00015.8000_000080.png",
+      "t": 15.8
+    },
+    {
+      "file": "tl_t00016.0000_000081.png",
+      "t": 16.0
+    },
+    {
+      "file": "tl_t00016.2000_000082.png",
+      "t": 16.2
+    },
+    {
+      "file": "tl_t00016.4000_000083.png",
+      "t": 16.4
+    },
+    {
+      "file": "tl_t00016.6000_000084.png",
+      "t": 16.6
+    },
+    {
+      "file": "tl_t00016.8000_000085.png",
+      "t": 16.8
+    },
+    {
+      "file": "tl_t00017.0000_000086.png",
+      "t": 17.0
+    },
+    {
+      "file": "tl_t00017.2000_000087.png",
+      "t": 17.2
+    },
+    {
+      "file": "tl_t00017.4000_000088.png",
+      "t": 17.4
+    },
+    {
+      "file": "tl_t00017.6000_000089.png",
+      "t": 17.6
+    },
+    {
+      "file": "tl_t00017.8000_000090.png",
+      "t": 17.8
+    },
+    {
+      "file": "tl_t00018.0000_000091.png",
+      "t": 18.0
+    },
+    {
+      "file": "tl_t00018.2000_000092.png",
+      "t": 18.2
+    },
+    {
+      "file": "tl_t00018.4000_000093.png",
+      "t": 18.4
+    },
+    {
+      "file": "tl_t00018.6000_000094.png",
+      "t": 18.6
+    },
+    {
+      "file": "tl_t00018.8000_000095.png",
+      "t": 18.8
+    },
+    {
+      "file": "tl_t00019.0000_000096.png",
+      "t": 19.0
+    },
+    {
+      "file": "tl_t00019.2000_000097.png",
+      "t": 19.2
+    },
+    {
+      "file": "tl_t00019.4000_000098.png",
+      "t": 19.4
+    },
+    {
+      "file": "tl_t00019.6000_000099.png",
+      "t": 19.6
+    },
+    {
+      "file": "tl_t00019.8000_000100.png",
+      "t": 19.8
+    },
+    {
+      "file": "tl_t00020.0000_000101.png",
+      "t": 20.0
+    },
+    {
+      "file": "tl_t00020.2000_000102.png",
+      "t": 20.2
+    },
+    {
+      "file": "tl_t00020.4000_000103.png",
+      "t": 20.4
+    },
+    {
+      "file": "tl_t00020.6000_000104.png",
+      "t": 20.6
+    },
+    {
+      "file": "tl_t00020.8000_000105.png",
+      "t": 20.8
+    },
+    {
+      "file": "tl_t00021.0000_000106.png",
+      "t": 21.0
+    },
+    {
+      "file": "tl_t00021.2000_000107.png",
+      "t": 21.2
+    },
+    {
+      "file": "tl_t00021.4000_000108.png",
+      "t": 21.4
+    },
+    {
+      "file": "tl_t00021.6000_000109.png",
+      "t": 21.6
+    },
+    {
+      "file": "tl_t00021.8000_000110.png",
+      "t": 21.8
+    },
+    {
+      "file": "tl_t00022.0000_000111.png",
+      "t": 22.0
+    },
+    {
+      "file": "tl_t00022.2000_000112.png",
+      "t": 22.2
+    },
+    {
+      "file": "tl_t00022.4000_000113.png",
+      "t": 22.4
+    },
+    {
+      "file": "tl_t00022.6000_000114.png",
+      "t": 22.6
+    },
+    {
+      "file": "tl_t00022.8000_000115.png",
+      "t": 22.8
+    },
+    {
+      "file": "tl_t00023.0000_000116.png",
+      "t": 23.0
+    },
+    {
+      "file": "tl_t00023.2000_000117.png",
+      "t": 23.2
+    },
+    {
+      "file": "tl_t00023.4000_000118.png",
+      "t": 23.4
+    },
+    {
+      "file": "tl_t00023.6000_000119.png",
+      "t": 23.6
+    },
+    {
+      "file": "tl_t00023.8000_000120.png",
+      "t": 23.8
+    },
+    {
+      "file": "tl_t00024.0000_000121.png",
+      "t": 24.0
+    },
+    {
+      "file": "tl_t00024.2000_000122.png",
+      "t": 24.2
+    },
+    {
+      "file": "tl_t00024.4000_000123.png",
+      "t": 24.4
+    },
+    {
+      "file": "tl_t00024.6000_000124.png",
+      "t": 24.6
+    },
+    {
+      "file": "tl_t00024.8000_000125.png",
+      "t": 24.8
+    },
+    {
+      "file": "tl_t00025.0000_000126.png",
+      "t": 25.0
+    },
+    {
+      "file": "tl_t00025.2000_000127.png",
+      "t": 25.2
+    },
+    {
+      "file": "tl_t00025.4000_000128.png",
+      "t": 25.4
+    },
+    {
+      "file": "tl_t00025.6000_000129.png",
+      "t": 25.6
+    },
+    {
+      "file": "tl_t00025.8000_000130.png",
+      "t": 25.8
+    },
+    {
+      "file": "tl_t00026.0000_000131.png",
+      "t": 26.0
+    },
+    {
+      "file": "tl_t00026.2000_000132.png",
+      "t": 26.2
+    },
+    {
+      "file": "tl_t00026.4000_000133.png",
+      "t": 26.4
+    },
+    {
+      "file": "tl_t00026.6000_000134.png",
+      "t": 26.6
+    },
+    {
+      "file": "tl_t00026.8000_000135.png",
+      "t": 26.8
+    },
+    {
+      "file": "tl_t00027.0000_000136.png",
+      "t": 27.0
+    },
+    {
+      "file": "tl_t00027.2000_000137.png",
+      "t": 27.2
+    },
+    {
+      "file": "tl_t00027.4000_000138.png",
+      "t": 27.4
+    },
+    {
+      "file": "tl_t00027.6000_000139.png",
+      "t": 27.6
+    },
+    {
+      "file": "tl_t00027.8000_000140.png",
+      "t": 27.8
+    },
+    {
+      "file": "tl_t00028.0000_000141.png",
+      "t": 28.0
+    },
+    {
+      "file": "tl_t00028.2000_000142.png",
+      "t": 28.2
+    },
+    {
+      "file": "tl_t00028.4000_000143.png",
+      "t": 28.4
+    },
+    {
+      "file": "tl_t00028.6000_000144.png",
+      "t": 28.6
+    },
+    {
+      "file": "tl_t00028.8000_000145.png",
+      "t": 28.8
+    },
+    {
+      "file": "tl_t00029.0000_000146.png",
+      "t": 29.0
+    },
+    {
+      "file": "tl_t00029.2000_000147.png",
+      "t": 29.2
+    },
+    {
+      "file": "tl_t00029.4000_000148.png",
+      "t": 29.4
+    },
+    {
+      "file": "tl_t00029.6000_000149.png",
+      "t": 29.6
+    },
+    {
+      "file": "tl_t00029.8000_000150.png",
+      "t": 29.8
+    },
+    {
+      "file": "tl_t00030.0000_000151.png",
+      "t": 30.0
+    },
+    {
+      "file": "tl_t00030.2000_000152.png",
+      "t": 30.2
+    },
+    {
+      "file": "tl_t00030.4000_000153.png",
+      "t": 30.4
+    },
+    {
+      "file": "tl_t00030.6000_000154.png",
+      "t": 30.6
+    },
+    {
+      "file": "tl_t00030.8000_000155.png",
+      "t": 30.8
+    },
+    {
+      "file": "tl_t00031.0000_000156.png",
+      "t": 31.0
+    },
+    {
+      "file": "tl_t00031.2000_000157.png",
+      "t": 31.2
+    },
+    {
+      "file": "tl_t00031.4000_000158.png",
+      "t": 31.4
+    },
+    {
+      "file": "tl_t00031.6000_000159.png",
+      "t": 31.6
+    },
+    {
+      "file": "tl_t00031.8000_000160.png",
+      "t": 31.8
+    },
+    {
+      "file": "tl_t00032.0000_000161.png",
+      "t": 32.0
+    },
+    {
+      "file": "tl_t00032.2000_000162.png",
+      "t": 32.2
+    },
+    {
+      "file": "tl_t00032.4000_000163.png",
+      "t": 32.4
+    },
+    {
+      "file": "tl_t00032.6000_000164.png",
+      "t": 32.6
+    },
+    {
+      "file": "tl_t00032.8000_000165.png",
+      "t": 32.8
+    },
+    {
+      "file": "tl_t00033.0000_000166.png",
+      "t": 33.0
+    },
+    {
+      "file": "tl_t00033.2000_000167.png",
+      "t": 33.2
+    },
+    {
+      "file": "tl_t00033.4000_000168.png",
+      "t": 33.4
+    },
+    {
+      "file": "tl_t00033.6000_000169.png",
+      "t": 33.6
+    },
+    {
+      "file": "tl_t00033.8000_000170.png",
+      "t": 33.8
+    },
+    {
+      "file": "tl_t00034.0000_000171.png",
+      "t": 34.0
+    },
+    {
+      "file": "tl_t00034.2000_000172.png",
+      "t": 34.2
+    },
+    {
+      "file": "tl_t00034.4000_000173.png",
+      "t": 34.4
+    },
+    {
+      "file": "tl_t00034.6000_000174.png",
+      "t": 34.6
+    },
+    {
+      "file": "tl_t00034.8000_000175.png",
+      "t": 34.8
+    },
+    {
+      "file": "tl_t00035.0000_000176.png",
+      "t": 35.0
+    },
+    {
+      "file": "tl_t00035.2000_000177.png",
+      "t": 35.2
+    },
+    {
+      "file": "tl_t00035.4000_000178.png",
+      "t": 35.4
+    },
+    {
+      "file": "tl_t00035.6000_000179.png",
+      "t": 35.6
+    },
+    {
+      "file": "tl_t00035.8000_000180.png",
+      "t": 35.8
+    },
+    {
+      "file": "tl_t00036.0000_000181.png",
+      "t": 36.0
+    },
+    {
+      "file": "tl_t00036.2000_000182.png",
+      "t": 36.2
+    },
+    {
+      "file": "tl_t00036.4000_000183.png",
+      "t": 36.4
+    },
+    {
+      "file": "tl_t00036.6000_000184.png",
+      "t": 36.6
+    },
+    {
+      "file": "tl_t00036.8000_000185.png",
+      "t": 36.8
+    },
+    {
+      "file": "tl_t00037.0000_000186.png",
+      "t": 37.0
+    },
+    {
+      "file": "tl_t00037.2000_000187.png",
+      "t": 37.2
+    },
+    {
+      "file": "tl_t00037.4000_000188.png",
+      "t": 37.4
+    },
+    {
+      "file": "tl_t00037.6000_000189.png",
+      "t": 37.6
+    },
+    {
+      "file": "tl_t00037.8000_000190.png",
+      "t": 37.8
+    },
+    {
+      "file": "tl_t00038.0000_000191.png",
+      "t": 38.0
+    },
+    {
+      "file": "tl_t00038.2000_000192.png",
+      "t": 38.2
+    },
+    {
+      "file": "tl_t00038.4000_000193.png",
+      "t": 38.4
+    },
+    {
+      "file": "tl_t00038.6000_000194.png",
+      "t": 38.6
+    },
+    {
+      "file": "tl_t00038.8000_000195.png",
+      "t": 38.8
+    },
+    {
+      "file": "tl_t00039.0000_000196.png",
+      "t": 39.0
+    },
+    {
+      "file": "tl_t00039.2000_000197.png",
+      "t": 39.2
+    },
+    {
+      "file": "tl_t00039.4000_000198.png",
+      "t": 39.4
+    },
+    {
+      "file": "tl_t00039.6000_000199.png",
+      "t": 39.6
+    },
+    {
+      "file": "tl_t00039.8000_000200.png",
+      "t": 39.8
+    },
+    {
+      "file": "tl_t00040.0000_000201.png",
+      "t": 40.0
+    },
+    {
+      "file": "tl_t00040.2000_000202.png",
+      "t": 40.2
+    },
+    {
+      "file": "tl_t00040.4000_000203.png",
+      "t": 40.4
+    },
+    {
+      "file": "tl_t00040.6000_000204.png",
+      "t": 40.6
+    },
+    {
+      "file": "tl_t00040.8000_000205.png",
+      "t": 40.8
+    },
+    {
+      "file": "tl_t00041.0000_000206.png",
+      "t": 41.0
+    },
+    {
+      "file": "tl_t00041.2000_000207.png",
+      "t": 41.2
+    },
+    {
+      "file": "tl_t00041.4000_000208.png",
+      "t": 41.4
+    },
+    {
+      "file": "tl_t00041.6000_000209.png",
+      "t": 41.6
+    },
+    {
+      "file": "tl_t00041.8000_000210.png",
+      "t": 41.8
+    },
+    {
+      "file": "tl_t00042.0000_000211.png",
+      "t": 42.0
+    },
+    {
+      "file": "tl_t00042.2000_000212.png",
+      "t": 42.2
+    },
+    {
+      "file": "tl_t00042.4000_000213.png",
+      "t": 42.4
+    },
+    {
+      "file": "tl_t00042.6000_000214.png",
+      "t": 42.6
+    },
+    {
+      "file": "tl_t00042.8000_000215.png",
+      "t": 42.8
+    },
+    {
+      "file": "tl_t00043.0000_000216.png",
+      "t": 43.0
+    },
+    {
+      "file": "tl_t00043.2000_000217.png",
+      "t": 43.2
+    }
+  ],
+  "overview": {
+    "scenes": [
+      "overview_scenes_01.png"
+    ],
+    "timeline": [
+      "overview_timeline_01.png",
+      "overview_timeline_02.png",
+      "overview_timeline_03.png",
+      "overview_timeline_04.png",
+      "overview_timeline_05.png",
+      "overview_timeline_06.png",
+      "overview_timeline_07.png",
+      "overview_timeline_08.png",
+      "overview_timeline_09.png",
+      "overview_timeline_10.png",
+      "overview_timeline_11.png"
+    ]
+  },
+  "transcript": true,
+  "audio": {
+    "status": "SUCCEEDED",
+    "backend": "faster-whisper",
+    "language": "en",
+    "segments": [
+      {
+        "start": 2.26,
+        "end": 8.26,
+        "text": "Y'all arteries fighting for that right now watch this get a pot with a liter of water going toss in two",
+        "words": [
+          {
+            "word": " Y",
+            "start": 2.26,
+            "end": 2.76,
+            "probability": 0.4171343147754669
+          },
+          {
+            "word": "'all",
+            "start": 2.76,
+            "end": 2.84,
+            "probability": 0.9769264757633209
+          },
+          {
+            "word": " arteries",
+            "start": 2.84,
+            "end": 3.16,
+            "probability": 0.8827622532844543
+          },
+          {
+            "word": " fighting",
+            "start": 3.16,
+            "end": 3.5,
+            "probability": 0.8241279721260071
+          },
+          {
+            "word": " for",
+            "start": 3.5,
+            "end": 3.74,
+            "probability": 0.9934934973716736
+          },
+          {
+            "word": " that",
+            "start": 3.74,
+            "end": 3.9,
+            "probability": 0.9976043105125427
+          },
+          {
+            "word": " right",
+            "start": 3.9,
+            "end": 4.06,
+            "probability": 0.9891751408576965
+          },
+          {
+            "word": " now",
+            "start": 4.06,
+            "end": 4.48,
+            "probability": 0.9885765910148621
+          },
+          {
+            "word": " watch",
+            "start": 4.48,
+            "end": 4.86,
+            "probability": 0.13696329295635223
+          },
+          {
+            "word": " this",
+            "start": 4.86,
+            "end": 5.26,
+            "probability": 0.9753363132476807
+          },
+          {
+            "word": " get",
+            "start": 5.26,
+            "end": 5.58,
+            "probability": 0.8225308656692505
+          },
+          {
+            "word": " a",
+            "start": 5.58,
+            "end": 5.72,
+            "probability": 0.9984365105628967
+          },
+          {
+            "word": " pot",
+            "start": 5.72,
+            "end": 5.94,
+            "probability": 0.9862669706344604
+          },
+          {
+            "word": " with",
+            "start": 5.94,
+            "end": 6.12,
+            "probability": 0.9926619529724121
+          },
+          {
+            "word": " a",
+            "start": 6.12,
+            "end": 6.24,
+            "probability": 0.9968681931495667
+          },
+          {
+            "word": " liter",
+            "start": 6.24,
+            "end": 6.42,
+            "probability": 0.9799362421035767
+          },
+          {
+            "word": " of",
+            "start": 6.42,
+            "end": 6.62,
+            "probability": 0.9905812740325928
+          },
+          {
+            "word": " water",
+            "start": 6.62,
+            "end": 6.82,
+            "probability": 0.9958218336105347
+          },
+          {
+            "word": " going",
+            "start": 6.82,
+            "end": 7.24,
+            "probability": 0.919378399848938
+          },
+          {
+            "word": " toss",
+            "start": 7.24,
+            "end": 7.68,
+            "probability": 0.7025052905082703
+          },
+          {
+            "word": " in",
+            "start": 7.68,
+            "end": 7.92,
+            "probability": 0.9403406977653503
+          },
+          {
+            "word": " two",
+            "start": 7.92,
+            "end": 8.26,
+            "probability": 0.869220495223999
+          }
+        ]
+      },
+      {
+        "start": 8.26,
+        "end": 14.34,
+        "text": "Unpeeled garlic cloves this thins your blood and lowers blood pressure right behind that two cinnamon sticks",
+        "words": [
+          {
+            "word": " Unpeeled",
+            "start": 8.26,
+            "end": 8.88,
+            "probability": 0.6016683181126913
+          },
+          {
+            "word": " garlic",
+            "start": 8.88,
+            "end": 9.22,
+            "probability": 0.9445076584815979
+          },
+          {
+            "word": " cloves",
+            "start": 9.22,
+            "end": 9.58,
+            "probability": 0.9944095015525818
+          },
+          {
+            "word": " this",
+            "start": 9.58,
+            "end": 9.98,
+            "probability": 0.7817274928092957
+          },
+          {
+            "word": " thins",
+            "start": 9.98,
+            "end": 10.3,
+            "probability": 0.8356954753398895
+          },
+          {
+            "word": " your",
+            "start": 10.3,
+            "end": 10.48,
+            "probability": 0.9850252270698547
+          },
+          {
+            "word": " blood",
+            "start": 10.48,
+            "end": 10.82,
+            "probability": 0.9996034502983093
+          },
+          {
+            "word": " and",
+            "start": 10.82,
+            "end": 11.1,
+            "probability": 0.9954245686531067
+          },
+          {
+            "word": " lowers",
+            "start": 11.1,
+            "end": 11.36,
+            "probability": 0.9940353631973267
+          },
+          {
+            "word": " blood",
+            "start": 11.36,
+            "end": 11.7,
+            "probability": 0.9990707635879517
+          },
+          {
+            "word": " pressure",
+            "start": 11.7,
+            "end": 12.1,
+            "probability": 0.9964536428451538
+          },
+          {
+            "word": " right",
+            "start": 12.1,
+            "end": 12.38,
+            "probability": 0.9672123789787292
+          },
+          {
+            "word": " behind",
+            "start": 12.38,
+            "end": 12.76,
+            "probability": 0.998801589012146
+          },
+          {
+            "word": " that",
+            "start": 12.76,
+            "end": 13.04,
+            "probability": 0.98655766248703
+          },
+          {
+            "word": " two",
+            "start": 13.04,
+            "end": 13.5,
+            "probability": 0.9447469115257263
+          },
+          {
+            "word": " cinnamon",
+            "start": 13.5,
+            "end": 13.88,
+            "probability": 0.9857542514801025
+          },
+          {
+            "word": " sticks",
+            "start": 13.88,
+            "end": 14.34,
+            "probability": 0.9968926906585693
+          }
+        ]
+      },
+      {
+        "start": 14.34,
+        "end": 18.12,
+        "text": "They gonna flush out bad cholesterol can't forget that oregano",
+        "words": [
+          {
+            "word": " They",
+            "start": 14.34,
+            "end": 14.74,
+            "probability": 0.6975296139717102
+          },
+          {
+            "word": " gonna",
+            "start": 14.74,
+            "end": 14.9,
+            "probability": 0.4928450286388397
+          },
+          {
+            "word": " flush",
+            "start": 14.9,
+            "end": 15.2,
+            "probability": 0.9915786981582642
+          },
+          {
+            "word": " out",
+            "start": 15.2,
+            "end": 15.46,
+            "probability": 0.9973644614219666
+          },
+          {
+            "word": " bad",
+            "start": 15.46,
+            "end": 15.78,
+            "probability": 0.9717817902565002
+          },
+          {
+            "word": " cholesterol",
+            "start": 15.78,
+            "end": 16.42,
+            "probability": 0.989463210105896
+          },
+          {
+            "word": " can't",
+            "start": 16.42,
+            "end": 17.0,
+            "probability": 0.8124092519283295
+          },
+          {
+            "word": " forget",
+            "start": 17.0,
+            "end": 17.16,
+            "probability": 0.9982128143310547
+          },
+          {
+            "word": " that",
+            "start": 17.16,
+            "end": 17.38,
+            "probability": 0.9971567392349243
+          },
+          {
+            "word": " oregano",
+            "start": 17.38,
+            "end": 18.12,
+            "probability": 0.9743916591008505
+          }
+        ]
+      },
+      {
+        "start": 18.12,
+        "end": 26.16,
+        "text": "Nature's antibiotic and antioxidant this shit would really stops the bloating and kills off parasites and bacteria hiding in your gut together",
+        "words": [
+          {
+            "word": " Nature's",
+            "start": 18.12,
+            "end": 18.92,
+            "probability": 0.704104095697403
+          },
+          {
+            "word": " antibiotic",
+            "start": 18.92,
+            "end": 19.56,
+            "probability": 0.9624089002609253
+          },
+          {
+            "word": " and",
+            "start": 19.56,
+            "end": 19.94,
+            "probability": 0.9817250370979309
+          },
+          {
+            "word": " antioxidant",
+            "start": 19.94,
+            "end": 20.7,
+            "probability": 0.9546499252319336
+          },
+          {
+            "word": " this",
+            "start": 20.7,
+            "end": 21.08,
+            "probability": 0.7737411856651306
+          },
+          {
+            "word": " shit",
+            "start": 21.08,
+            "end": 21.26,
+            "probability": 0.977257490158081
+          },
+          {
+            "word": " would",
+            "start": 21.26,
+            "end": 21.42,
+            "probability": 0.4821736812591553
+          },
+          {
+            "word": " really",
+            "start": 21.42,
+            "end": 21.68,
+            "probability": 0.9989601373672485
+          },
+          {
+            "word": " stops",
+            "start": 21.68,
+            "end": 22.0,
+            "probability": 0.9429786801338196
+          },
+          {
+            "word": " the",
+            "start": 22.0,
+            "end": 22.18,
+            "probability": 0.9709153771400452
+          },
+          {
+            "word": " bloating",
+            "start": 22.18,
+            "end": 22.6,
+            "probability": 0.9972544312477112
+          },
+          {
+            "word": " and",
+            "start": 22.6,
+            "end": 22.78,
+            "probability": 0.9904146194458008
+          },
+          {
+            "word": " kills",
+            "start": 22.78,
+            "end": 23.08,
+            "probability": 0.9943600296974182
+          },
+          {
+            "word": " off",
+            "start": 23.08,
+            "end": 23.34,
+            "probability": 0.9955488443374634
+          },
+          {
+            "word": " parasites",
+            "start": 23.34,
+            "end": 23.9,
+            "probability": 0.9622718691825867
+          },
+          {
+            "word": " and",
+            "start": 23.9,
+            "end": 24.28,
+            "probability": 0.9264870285987854
+          },
+          {
+            "word": " bacteria",
+            "start": 24.28,
+            "end": 24.74,
+            "probability": 0.8872701525688171
+          },
+          {
+            "word": " hiding",
+            "start": 24.74,
+            "end": 25.14,
+            "probability": 0.5484927296638489
+          },
+          {
+            "word": " in",
+            "start": 25.14,
+            "end": 25.32,
+            "probability": 0.9613734483718872
+          },
+          {
+            "word": " your",
+            "start": 25.32,
+            "end": 25.46,
+            "probability": 0.9810299873352051
+          },
+          {
+            "word": " gut",
+            "start": 25.46,
+            "end": 25.72,
+            "probability": 0.9906242489814758
+          },
+          {
+            "word": " together",
+            "start": 25.72,
+            "end": 26.16,
+            "probability": 0.8659923672676086
+          }
+        ]
+      },
+      {
+        "start": 26.16,
+        "end": 30.26,
+        "text": "This protects your heart cleans out your arteries and resets your whole digestion",
+        "words": [
+          {
+            "word": " This",
+            "start": 26.16,
+            "end": 26.42,
+            "probability": 0.699971616268158
+          },
+          {
+            "word": " protects",
+            "start": 26.42,
+            "end": 26.78,
+            "probability": 0.9910468459129333
+          },
+          {
+            "word": " your",
+            "start": 26.78,
+            "end": 26.98,
+            "probability": 0.9957882761955261
+          },
+          {
+            "word": " heart",
+            "start": 26.98,
+            "end": 27.26,
+            "probability": 0.9994131326675415
+          },
+          {
+            "word": " cleans",
+            "start": 27.26,
+            "end": 27.72,
+            "probability": 0.9539834260940552
+          },
+          {
+            "word": " out",
+            "start": 27.72,
+            "end": 27.92,
+            "probability": 0.9985777139663696
+          },
+          {
+            "word": " your",
+            "start": 27.92,
+            "end": 28.06,
+            "probability": 0.9945306181907654
+          },
+          {
+            "word": " arteries",
+            "start": 28.06,
+            "end": 28.54,
+            "probability": 0.9990715980529785
+          },
+          {
+            "word": " and",
+            "start": 28.54,
+            "end": 28.98,
+            "probability": 0.992112398147583
+          },
+          {
+            "word": " resets",
+            "start": 28.98,
+            "end": 29.36,
+            "probability": 0.9928351044654846
+          },
+          {
+            "word": " your",
+            "start": 29.36,
+            "end": 29.52,
+            "probability": 0.9936989545822144
+          },
+          {
+            "word": " whole",
+            "start": 29.52,
+            "end": 29.74,
+            "probability": 0.9851304888725281
+          },
+          {
+            "word": " digestion",
+            "start": 29.74,
+            "end": 30.26,
+            "probability": 0.9812597632408142
+          }
+        ]
+      },
+      {
+        "start": 30.26,
+        "end": 34.68,
+        "text": "Run this every night 30 minutes before bed or first thing in the morning on an empty stomach",
+        "words": [
+          {
+            "word": " Run",
+            "start": 30.26,
+            "end": 30.74,
+            "probability": 0.7371193766593933
+          },
+          {
+            "word": " this",
+            "start": 30.74,
+            "end": 30.92,
+            "probability": 0.9897326827049255
+          },
+          {
+            "word": " every",
+            "start": 30.92,
+            "end": 31.18,
+            "probability": 0.9958230257034302
+          },
+          {
+            "word": " night",
+            "start": 31.18,
+            "end": 31.4,
+            "probability": 0.9937042593955994
+          },
+          {
+            "word": " 30",
+            "start": 31.4,
+            "end": 31.7,
+            "probability": 0.730464518070221
+          },
+          {
+            "word": " minutes",
+            "start": 31.7,
+            "end": 31.96,
+            "probability": 0.9925192594528198
+          },
+          {
+            "word": " before",
+            "start": 31.96,
+            "end": 32.28,
+            "probability": 0.9971711039543152
+          },
+          {
+            "word": " bed",
+            "start": 32.28,
+            "end": 32.62,
+            "probability": 0.9980660080909729
+          },
+          {
+            "word": " or",
+            "start": 32.62,
+            "end": 32.88,
+            "probability": 0.8204924464225769
+          },
+          {
+            "word": " first",
+            "start": 32.88,
+            "end": 33.16,
+            "probability": 0.9869176745414734
+          },
+          {
+            "word": " thing",
+            "start": 33.16,
+            "end": 33.34,
+            "probability": 0.9984186887741089
+          },
+          {
+            "word": " in",
+            "start": 33.34,
+            "end": 33.44,
+            "probability": 0.9974091649055481
+          },
+          {
+            "word": " the",
+            "start": 33.44,
+            "end": 33.56,
+            "probability": 0.9993280172348022
+          },
+          {
+            "word": " morning",
+            "start": 33.56,
+            "end": 33.76,
+            "probability": 0.9991227984428406
+          },
+          {
+            "word": " on",
+            "start": 33.76,
+            "end": 33.96,
+            "probability": 0.9975645542144775
+          },
+          {
+            "word": " an",
+            "start": 33.96,
+            "end": 34.08,
+            "probability": 0.7519346475601196
+          },
+          {
+            "word": " empty",
+            "start": 34.08,
+            "end": 34.36,
+            "probability": 0.9991785883903503
+          },
+          {
+            "word": " stomach",
+            "start": 34.36,
+            "end": 34.68,
+            "probability": 0.9992431402206421
+          }
+        ]
+      },
+      {
+        "start": 34.68,
+        "end": 41.3,
+        "text": "Give it a month your arteries gonna feel completely different comment real if you want more remedies like this follow your boy",
+        "words": [
+          {
+            "word": " Give",
+            "start": 34.68,
+            "end": 35.12,
+            "probability": 0.4431905448436737
+          },
+          {
+            "word": " it",
+            "start": 35.12,
+            "end": 35.22,
+            "probability": 0.9988706707954407
+          },
+          {
+            "word": " a",
+            "start": 35.22,
+            "end": 35.32,
+            "probability": 0.9992138147354126
+          },
+          {
+            "word": " month",
+            "start": 35.32,
+            "end": 35.62,
+            "probability": 0.9991945624351501
+          },
+          {
+            "word": " your",
+            "start": 35.62,
+            "end": 35.88,
+            "probability": 0.2943538427352905
+          },
+          {
+            "word": " arteries",
+            "start": 35.88,
+            "end": 36.26,
+            "probability": 0.9355210661888123
+          },
+          {
+            "word": " gonna",
+            "start": 36.26,
+            "end": 36.48,
+            "probability": 0.8176286220550537
+          },
+          {
+            "word": " feel",
+            "start": 36.48,
+            "end": 36.74,
+            "probability": 0.9870845675468445
+          },
+          {
+            "word": " completely",
+            "start": 36.74,
+            "end": 37.36,
+            "probability": 0.8330576419830322
+          },
+          {
+            "word": " different",
+            "start": 37.36,
+            "end": 37.86,
+            "probability": 0.643705427646637
+          },
+          {
+            "word": " comment",
+            "start": 37.86,
+            "end": 38.22,
+            "probability": 0.6601033806800842
+          },
+          {
+            "word": " real",
+            "start": 38.22,
+            "end": 38.62,
+            "probability": 0.8000649809837341
+          },
+          {
+            "word": " if",
+            "start": 38.62,
+            "end": 39.02,
+            "probability": 0.8911099433898926
+          },
+          {
+            "word": " you",
+            "start": 39.02,
+            "end": 39.14,
+            "probability": 0.9985781908035278
+          },
+          {
+            "word": " want",
+            "start": 39.14,
+            "end": 39.32,
+            "probability": 0.9983909130096436
+          },
+          {
+            "word": " more",
+            "start": 39.32,
+            "end": 39.5,
+            "probability": 0.998970627784729
+          },
+          {
+            "word": " remedies",
+            "start": 39.5,
+            "end": 39.82,
+            "probability": 0.9984116554260254
+          },
+          {
+            "word": " like",
+            "start": 39.82,
+            "end": 40.08,
+            "probability": 0.9956176280975342
+          },
+          {
+            "word": " this",
+            "start": 40.08,
+            "end": 40.42,
+            "probability": 0.9956075549125671
+          },
+          {
+            "word": " follow",
+            "start": 40.42,
+            "end": 40.82,
+            "probability": 0.7220118045806885
+          },
+          {
+            "word": " your",
+            "start": 40.82,
+            "end": 41.04,
+            "probability": 0.9234707355499268
+          },
+          {
+            "word": " boy",
+            "start": 41.04,
+            "end": 41.3,
+            "probability": 0.9927700161933899
+          }
+        ]
+      },
+      {
+        "start": 41.3,
+        "end": 43.14,
+        "text": "I might be the fix you've been waiting on",
+        "words": [
+          {
+            "word": " I",
+            "start": 41.3,
+            "end": 41.5,
+            "probability": 0.8975619673728943
+          },
+          {
+            "word": " might",
+            "start": 41.5,
+            "end": 41.68,
+            "probability": 0.9835013747215271
+          },
+          {
+            "word": " be",
+            "start": 41.68,
+            "end": 41.88,
+            "probability": 0.979150652885437
+          },
+          {
+            "word": " the",
+            "start": 41.88,
+            "end": 42.0,
+            "probability": 0.6036238074302673
+          },
+          {
+            "word": " fix",
+            "start": 42.0,
+            "end": 42.28,
+            "probability": 0.9760870337486267
+          },
+          {
+            "word": " you've",
+            "start": 42.28,
+            "end": 42.54,
+            "probability": 0.8909321427345276
+          },
+          {
+            "word": " been",
+            "start": 42.54,
+            "end": 42.64,
+            "probability": 0.9997419714927673
+          },
+          {
+            "word": " waiting",
+            "start": 42.64,
+            "end": 42.88,
+            "probability": 0.9897596836090088
+          },
+          {
+            "word": " on",
+            "start": 42.88,
+            "end": 43.14,
+            "probability": 0.994281530380249
+          }
+        ]
+      }
+    ],
+    "text": "Y'all arteries fighting for that right now watch this get a pot with a liter of water going toss in two Unpeeled garlic cloves this thins your blood and lowers blood pressure right behind that two cinnamon sticks They gonna flush out bad cholesterol can't forget that oregano Nature's antibiotic and antioxidant this shit would really stops the bloating and kills off parasites and bacteria hiding in your gut together This protects your heart cleans out your arteries and resets your whole digestion Run this every night 30 minutes before bed or first thing in the morning on an empty stomach Give it a month your arteries gonna feel completely different comment real if you want more remedies like this follow your boy I might be the fix you've been waiting on"
+  },
+  "alignment": {
+    "status": "NOT_REQUESTED",
+    "backend": null
+  },
+  "params": {
+    "timeline_fps": 5,
+    "scene_threshold": 0.2,
+    "model": "small.en",
+    "language": "en",
+    "device": "cpu",
+    "compute_type": "int8",
+    "cpu_threads": 2,
+    "jobs": 2,
+    "alignment": "none",
+    "align_model": null,
+    "word_timestamps": true,
+    "no_audio": false,
+    "allow_no_audio": false,
+    "max_frames": 20000,
+    "command_timeout": 300
+  },
+  "environment": {
+    "os": "macOS-27.0.1-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.15",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "whisperx": "3.8.6",
+      "ctranslate2": "4.8.2",
+      "Pillow": "12.3.0",
+      "av": "18.0.0",
+      "torch": "2.8.0",
+      "torchaudio": "2.8.0"
+    },
+    "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+    "ffprobe": "/opt/homebrew/bin/ffprobe"
+  },
+  "errors": [],
+  "coverage": {
+    "source_duration_s": 43.466349,
+    "sample_interval_s": 0.2,
+    "timeline_count": 217,
+    "timestamp_basis": "fps_filter_sampling_grid",
+    "visual_review_performed": false
+  },
+  "elapsed_seconds": 13.543
+}

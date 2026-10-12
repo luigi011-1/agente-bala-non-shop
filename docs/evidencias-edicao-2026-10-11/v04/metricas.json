@@ -1,0 +1,373 @@
+{
+  "source": "/Users/macbookairm2/Downloads/snapinsta-1791763902279.mp4",
+  "source_sha256": "3ccad9ed4967719d7b17180c383a0dad43b7c9fe6c9f2c8cd80b96a4d67b85c9",
+  "duration_seconds": 57.026803,
+  "width": 720,
+  "height": 1280,
+  "fps": "30/1",
+  "word_count_asr_regex": 193,
+  "asr_word_units": 196,
+  "words_per_second_full_clip": 3.384,
+  "first_asr_word_seconds": 0.0,
+  "last_asr_word_seconds": 56.32,
+  "scene_detector_candidates": [
+    0.0,
+    2.9,
+    4.033333,
+    5.533333,
+    9.2,
+    12.533333,
+    24.333333,
+    29.5
+  ],
+  "asr_gaps_not_proven_silence": [
+    {
+      "start": 1.7,
+      "end": 4.66
+    },
+    {
+      "start": 5.14,
+      "end": 5.56
+    },
+    {
+      "start": 6.76,
+      "end": 7.18
+    },
+    {
+      "start": 9.14,
+      "end": 9.42
+    },
+    {
+      "start": 10.12,
+      "end": 10.48
+    },
+    {
+      "start": 12.42,
+      "end": 12.64
+    },
+    {
+      "start": 13.78,
+      "end": 14.28
+    },
+    {
+      "start": 17.74,
+      "end": 17.96
+    },
+    {
+      "start": 20.54,
+      "end": 20.92
+    },
+    {
+      "start": 24.18,
+      "end": 24.44
+    },
+    {
+      "start": 25.18,
+      "end": 25.4
+    },
+    {
+      "start": 26.04,
+      "end": 26.22
+    },
+    {
+      "start": 30.42,
+      "end": 30.64
+    },
+    {
+      "start": 32.0,
+      "end": 32.22
+    },
+    {
+      "start": 33.28,
+      "end": 33.56
+    },
+    {
+      "start": 36.24,
+      "end": 36.44
+    },
+    {
+      "start": 37.58,
+      "end": 38.0
+    },
+    {
+      "start": 39.74,
+      "end": 39.9
+    },
+    {
+      "start": 45.36,
+      "end": 45.64
+    },
+    {
+      "start": 47.66,
+      "end": 47.98
+    },
+    {
+      "start": 49.26,
+      "end": 49.5
+    },
+    {
+      "start": 52.12,
+      "end": 52.5
+    },
+    {
+      "start": 53.06,
+      "end": 53.54
+    },
+    {
+      "start": 55.4,
+      "end": 55.76
+    },
+    {
+      "start": 56.32,
+      "end": 57.027
+    }
+  ],
+  "mixed_audio_rms_1s": [
+    {
+      "start": 0.0,
+      "rms_dbfs": -14.72
+    },
+    {
+      "start": 1.0,
+      "rms_dbfs": -15.07
+    },
+    {
+      "start": 2.0,
+      "rms_dbfs": -15.99
+    },
+    {
+      "start": 3.0,
+      "rms_dbfs": -10.34
+    },
+    {
+      "start": 4.0,
+      "rms_dbfs": -10.52
+    },
+    {
+      "start": 5.0,
+      "rms_dbfs": -9.2
+    },
+    {
+      "start": 6.0,
+      "rms_dbfs": -13.63
+    },
+    {
+      "start": 7.0,
+      "rms_dbfs": -16.52
+    },
+    {
+      "start": 8.0,
+      "rms_dbfs": -14.5
+    },
+    {
+      "start": 9.0,
+      "rms_dbfs": -14.56
+    },
+    {
+      "start": 10.0,
+      "rms_dbfs": -15.09
+    },
+    {
+      "start": 11.0,
+      "rms_dbfs": -15.57
+    },
+    {
+      "start": 12.0,
+      "rms_dbfs": -14.91
+    },
+    {
+      "start": 13.0,
+      "rms_dbfs": -12.91
+    },
+    {
+      "start": 14.0,
+      "rms_dbfs": -12.16
+    },
+    {
+      "start": 15.0,
+      "rms_dbfs": -14.74
+    },
+    {
+      "start": 16.0,
+      "rms_dbfs": -16.35
+    },
+    {
+      "start": 17.0,
+      "rms_dbfs": -14.4
+    },
+    {
+      "start": 18.0,
+      "rms_dbfs": -12.44
+    },
+    {
+      "start": 19.0,
+      "rms_dbfs": -12.84
+    },
+    {
+      "start": 20.0,
+      "rms_dbfs": -13.49
+    },
+    {
+      "start": 21.0,
+      "rms_dbfs": -10.33
+    },
+    {
+      "start": 22.0,
+      "rms_dbfs": -15.29
+    },
+    {
+      "start": 23.0,
+      "rms_dbfs": -15.27
+    },
+    {
+      "start": 24.0,
+      "rms_dbfs": -15.9
+    },
+    {
+      "start": 25.0,
+      "rms_dbfs": -14.76
+    },
+    {
+      "start": 26.0,
+      "rms_dbfs": -16.33
+    },
+    {
+      "start": 27.0,
+      "rms_dbfs": -15.31
+    },
+    {
+      "start": 28.0,
+      "rms_dbfs": -16.8
+    },
+    {
+      "start": 29.0,
+      "rms_dbfs": -15.82
+    },
+    {
+      "start": 30.0,
+      "rms_dbfs": -15.07
+    },
+    {
+      "start": 31.0,
+      "rms_dbfs": -15.16
+    },
+    {
+      "start": 32.0,
+      "rms_dbfs": -15.18
+    },
+    {
+      "start": 33.0,
+      "rms_dbfs": -14.84
+    },
+    {
+      "start": 34.0,
+      "rms_dbfs": -12.32
+    },
+    {
+      "start": 35.0,
+      "rms_dbfs": -16.0
+    },
+    {
+      "start": 36.0,
+      "rms_dbfs": -17.01
+    },
+    {
+      "start": 37.0,
+      "rms_dbfs": -16.59
+    },
+    {
+      "start": 38.0,
+      "rms_dbfs": -14.41
+    },
+    {
+      "start": 39.0,
+      "rms_dbfs": -13.76
+    },
+    {
+      "start": 40.0,
+      "rms_dbfs": -15.15
+    },
+    {
+      "start": 41.0,
+      "rms_dbfs": -14.96
+    },
+    {
+      "start": 42.0,
+      "rms_dbfs": -16.96
+    },
+    {
+      "start": 43.0,
+      "rms_dbfs": -15.71
+    },
+    {
+      "start": 44.0,
+      "rms_dbfs": -14.83
+    },
+    {
+      "start": 45.0,
+      "rms_dbfs": -17.36
+    },
+    {
+      "start": 46.0,
+      "rms_dbfs": -16.2
+    },
+    {
+      "start": 47.0,
+      "rms_dbfs": -16.17
+    },
+    {
+      "start": 48.0,
+      "rms_dbfs": -16.09
+    },
+    {
+      "start": 49.0,
+      "rms_dbfs": -14.49
+    },
+    {
+      "start": 50.0,
+      "rms_dbfs": -16.97
+    },
+    {
+      "start": 51.0,
+      "rms_dbfs": -16.38
+    },
+    {
+      "start": 52.0,
+      "rms_dbfs": -14.75
+    },
+    {
+      "start": 53.0,
+      "rms_dbfs": -17.49
+    },
+    {
+      "start": 54.0,
+      "rms_dbfs": -17.66
+    },
+    {
+      "start": 55.0,
+      "rms_dbfs": -20.79
+    },
+    {
+      "start": 56.0,
+      "rms_dbfs": -21.41
+    }
+  ],
+  "mixed_audio_loudnorm_measurement": {
+    "input_i": "-15.03",
+    "input_tp": "-0.72",
+    "input_lra": "4.40",
+    "input_thresh": "-25.09",
+    "output_i": "-15.02",
+    "output_tp": "-1.20",
+    "output_lra": "3.50",
+    "output_thresh": "-25.06",
+    "normalization_type": "dynamic",
+    "target_offset": "1.02"
+  },
+  "limitations": [
+    "ASR tem erros e pode esticar tempos de palavras.",
+    "Detector de cenas pode perder jump cuts e disparar com legendas.",
+    "RMS e LUFS são do mix; não medem relação música/voz nem gênero, emoção ou BPM.",
+    "Sem escuta perceptiva e sem stems separados; emoção da trilha não certificada."
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "source_sha256": "6cd8a2c4885abd7474b88d7704d65aae90baf3d2bea41e4535b8332cb9eb8d6f",
+  "duration": 71.794694,
+  "asr_word_count": 253,
+  "words_per_full_video_second": 3.524,
+  "first_word": 0.0,
+  "last_word_end": 71.4,
+  "asr_word_duration_sum": 60.02,
+  "word_gap_candidates_over_250ms": [
+    {
+      "start": 5.0,
+      "end": 6.76,
+      "duration": 1.76
+    },
+    {
+      "start": 18.42,
+      "end": 19.06,
+      "duration": 0.64
+    },
+    {
+      "start": 22.58,
+      "end": 22.88,
+      "duration": 0.3
+    },
+    {
+      "start": 23.22,
+      "end": 23.72,
+      "duration": 0.5
+    },
+    {
+      "start": 23.84,
+      "end": 24.82,
+      "duration": 0.98
+    },
+    {
+      "start": 31.74,
+      "end": 32.04,
+      "duration": 0.3
+    },
+    {
+      "start": 32.66,
+      "end": 33.18,
+      "duration": 0.52
+    },
+    {
+      "start": 33.2,
+      "end": 33.46,
+      "duration": 0.26
+    },
+    {
+      "start": 38.14,
+      "end": 38.48,
+      "duration": 0.34
+    },
+    {
+      "start": 41.02,
+      "end": 41.38,
+      "duration": 0.36
+    },
+    {
+      "start": 41.6,
+      "end": 42.14,
+      "duration": 0.54
+    },
+    {
+      "start": 42.22,
+      "end": 42.6,
+      "duration": 0.38
+    },
+    {
+      "start": 45.96,
+      "end": 46.36,
+      "duration": 0.4
+    },
+    {
+      "start": 53.22,
+      "end": 53.54,
+      "duration": 0.32
+    },
+    {
+      "start": 55.96,
+      "end": 56.36,
+      "duration": 0.4
+    },
+    {
+      "start": 60.6,
+      "end": 61.0,
+      "duration": 0.4
+    },
+    {
+      "start": 61.72,
+      "end": 62.12,
+      "duration": 0.4
+    },
+    {
+      "start": 67.3,
+      "end": 67.7,
+      "duration": 0.4
+    },
+    {
+      "start": 70.4,
+      "end": 70.7,
+      "duration": 0.3
+    }
+  ],
+  "warning": "ASR timestamps approximate; gaps are not proven silence, source speed multiplier unknown; cut detector includes overlays and misses match cuts."
+}

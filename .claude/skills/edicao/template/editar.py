@@ -27,6 +27,8 @@ except ImportError:
         os.execv(_VENV, [_VENV, os.path.abspath(__file__)] + sys.argv[1:])
 sys.path.insert(0, AQUI)
 import motor  # noqa: E402
+import plano_editorial  # noqa: E402
+PLANO_EDITORIAL = None  # opt-in por produção, nunca herdado pela Auraly
 REPO = os.path.abspath(os.path.join(AQUI, "../../../.."))
 # nuvem: /mnt/project-files; Mac: edicao/musicas do repo (teste no Mac, 2026-10-09: ficava sem achar a faixa)
 MUSICAS = os.environ.get("EDICAO_MUSICAS") or next(
@@ -394,12 +396,18 @@ def segmentos(takes, words, ramp, alinhado=None):
             sp = motor.ilhas_v4(f, alinhado[k])  # motor v4: bordas reais das palavras
         else:
             sp = ilhas(f, words[k])
+        if PLANO_EDITORIAL:
+            if any(p["take"] == k and p["end"] - p["start"] < 2 / FPS for p in PLANO_EDITORIAL.get("protected_intervals", [])):
+                raise ValueError("Proteção menor que dois frames; revisar intervalo")
+            sp = plano_editorial.proteger_intervalos(sp, k, PLANO_EDITORIAL, dur(f))
         for j, (a, b) in enumerate(sp):
             segs.append(dict(k=k, a=a, b=b, sp=SP))
             if k in ramp and j + 1 < len(sp) and sp[j + 1][0] > b:
                 segs.append(dict(k=k, a=b, b=sp[j + 1][0], sp=ramp[k], mute=True))
         if not words[k]:
-            segs[-1]["mute"] = True
+            for trecho in segs:
+                if trecho["k"] == k:
+                    trecho["mute"] = True
     # trecho de menos de 2 quadros cai: a pausa curta do take-herói acelerada 5x virava trecho sem nenhum quadro
     # e a montagem quebrava (V02 chips, 2026-10-10); juntar a pausa à fala trazia a pausa de volta
     segs = [s for s in segs if (s["b"] - s["a"]) / s["sp"] >= 2.0 / FPS]
@@ -496,6 +504,8 @@ def juntar_curtas(pages, minimo=0.5):
     depois (V01 temperos, 2026-10-10: o "why" do T3 apareceu em cima do T5)."""
     out = []
     for p in pages:
+        if PLANO_EDITORIAL and out and p[0]["k"] != out[-1][0]["k"]:
+            out.append(list(p)); continue  # não atravessar mudança de take para prolongar legenda
         if out and p[0]["t"] - out[-1][0]["t"] < minimo:
             curta = out.pop()
             # página curta que FECHA frase vai para a anterior; senão "stay. / I have" virava "stay i" (V03, 2026-10-10)
@@ -554,7 +564,7 @@ def legenda_html(segs, heard, roteiro_palavras, total, leaks, up, estilo="fitwel
     pages, cur = [], []
     for i, w in enumerate(ws):
         cur.append(w); nx = ws[i + 1] if i + 1 < len(ws) else None
-        if (not nx or len(cur) >= 3 or re.search(r"[.!?]$", w["w"]) or (re.search(r",$", w["w"]) and len(cur) >= 2)
+        if (not nx or len(cur) >= (PLANO_EDITORIAL.get("captions", {}).get("max_words", 3) if PLANO_EDITORIAL else 3) or re.search(r"[.!?]$", w["w"]) or (re.search(r",$", w["w"]) and len(cur) >= 2)
                 or nx["k"] != w["k"]):
             pages.append(cur); cur = []
     pages = juntar_curtas(pages)
@@ -594,6 +604,20 @@ def escolher_musica(nome, chave):
     return faixas[int(hashlib.md5(chave.encode()).hexdigest(), 16) % len(faixas)]  # fixa por produção
 
 def mixar(voz, musica, total, saida):
+    if PLANO_EDITORIAL and musica and "music" in PLANO_EDITORIAL:
+        ini = plano_editorial.music_start_seconds(PLANO_EDITORIAL)
+        if ini >= dur(musica):
+            raise ValueError("Ponto de entrada musical fora da faixa")
+        envelope = plano_editorial.filtro_musica(total, PLANO_EDITORIAL, base_db=MUSICA_DB)
+        # Só a cama é repetida; atrim limita a entrada antes da normalização.
+        filtro = (f"[1:a]atrim=duration={total:.6f},asetpts=PTS-STARTPTS,"
+                  f"loudnorm=I=-14:TP=-2:LRA=11,{envelope},"
+                  "aformat=sample_rates=44100:channel_layouts=mono[m];"
+                  f"[0:a][m]amix=inputs=2:normalize=0,atrim=0:{total:.6f},alimiter=limit=0.95[o]")
+        sh(["ffmpeg", "-y", "-loglevel", "error", "-i", voz,
+            "-stream_loop", "-1", "-ss", str(ini), "-i", musica, "-filter_complex", filtro,
+            "-map", "[o]", "-ar", "44100", "-ac", "1", saida])
+        return ini
     if not musica:
         shutil.copy(voz, saida); return 0.0
     log_ = sh_err(f'ffmpeg -hide_banner -t 40 -i "{musica}" -af silencedetect=noise=-40dB:d=0.3 -f null -')
@@ -643,6 +667,7 @@ def sheet(video, tempos, saida, cols=12, larg=120):
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--plano-editorial", help="JSON por produção: ações protegidas, ritmo e envelope musical")
     ap.add_argument("pasta"); ap.add_argument("--producao"); ap.add_argument("--musica"); ap.add_argument("--sem-musica", action="store_true")
     ap.add_argument("--ramp", default="1", help="takes-herói (pausa acelerada 5x em vez de cortada)")
     ap.add_argument("--leaks", default=None, help="takes com efeito na entrada (padrão: FitWell nenhum; Auraly o 2, saída do gancho)")
@@ -661,6 +686,7 @@ def main():
     ap.add_argument("--fonte-pico", default="auto", help="auto, anton, serifada ou montserrat")
     ap.add_argument("--sem-zoom", action="store_true"); ap.add_argument("--grao", action="store_true")
     a = ap.parse_args()
+    globals()["PLANO_EDITORIAL"] = plano_editorial.carregar_plano(a.plano_editorial) if a.plano_editorial else None
     globals()["INSERT"] = a.insert
     t0 = time.time(); rel = []
     # qualquer nome de arquivo serve: a ORDEM vem da fala comparada com o roteiro (passo 2)
@@ -764,6 +790,12 @@ def main():
     auraly = "auraly" in pasta.lower() or any("pipeline: auraly" in open(x, encoding="utf8", errors="ignore").read()
                                               for x in glob.glob(f"{pasta}/*.md"))
     estilo = a.estilo or ("auraly" if auraly else "fitwell")
+    if PLANO_EDITORIAL:
+        plano_editorial.validar_contexto(PLANO_EDITORIAL, auraly, estilo)
+        protegidos = {p["take"] for p in PLANO_EDITORIAL.get("protected_intervals", [])}
+        if any(int(x.split(".", 1)[0]) in protegidos for x in aparados):
+            sys.exit("Take aparado mudou os tempos fonte; revisar intervalos protegidos do plano")
+        rel.append("- Plano editorial aplicado: " + json.dumps(PLANO_EDITORIAL, ensure_ascii=False))
     alvo = a.ritmo or (4.0 if estilo == "auraly" else 3.8)
     ramp = {int(x): 5 for x in a.ramp.split(",") if x}
     # sem light leak no FitWell (Luigi, 2026-10-10); no Auraly um flash só na saída do gancho
@@ -787,7 +819,13 @@ def main():
     for s in segs:
         if s in vel: s["sp"] = round(sp, 3)
         s["o"] = o; s["d"] = (s["b"] - s["a"]) / s["sp"]; o += s["d"]
+    if PLANO_EDITORIAL:
+        segs = plano_editorial.aplicar_ritmo(segs, PLANO_EDITORIAL)
+        if any((s["b"] - s["a"]) / s["sp"] < 2 / FPS for s in segs):
+            raise ValueError("Plano editorial criou trecho menor que dois frames; revisar limites da proteção")
     total = montar_base(segs, src, tmp)
+    if PLANO_EDITORIAL:
+        json.dump(PLANO_EDITORIAL, open(f"{tmp}/plano_editorial_aplicado.json", "w"), ensure_ascii=False, indent=2)
     sh(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{tmp}/junto.mkv", "-an", "-c:v", "copy", f"{tmp}/assets/base.mp4"])
     sh(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{tmp}/junto.mkv", "-vn", "-af", "loudnorm=I=-14:TP=-1.2,aresample=44100",
         "-ar", "44100", "-ac", "1", f"{tmp}/voz.wav"])
@@ -817,8 +855,10 @@ def main():
                 pages.append(cur); cur = []
         pages = juntar_curtas(pages)
         for n, p in enumerate(pages):
-            st = 0 if n == 0 else p[0]["t"]; en = pages[n + 1][0]["t"] if n < len(pages) - 1 else total
+            st = p[0]["t"] if PLANO_EDITORIAL else (0 if n == 0 else p[0]["t"]); en = pages[n + 1][0]["t"] if n < len(pages) - 1 else total
             en = min([en] + [x["o"] for x in segs if x["k"] in inserts and x["o"] > st + 0.01])
+            if PLANO_EDITORIAL:
+                en = min([en] + [x["o"] for x in segs if x["k"] != p[0]["k"] and x["o"] > st + 0.01])
             big = palavra_chave(p, n)
             pos = motor.layout_auraly([re.sub(r"[.,!?;:]$", "", w["w"]).lower() for w in p], big)
             for j in range(len(p)):
@@ -832,16 +872,19 @@ def main():
         pages, cur = [], []
         for i, w in enumerate(ws):
             cur.append(w); nx = ws[i + 1] if i + 1 < len(ws) else None
-            if (not nx or len(cur) >= 3 or re.search(r"[.!?]$", w["w"]) or (re.search(r",$", w["w"]) and len(cur) >= 2)
+            if (not nx or len(cur) >= (PLANO_EDITORIAL.get("captions", {}).get("max_words", 3) if PLANO_EDITORIAL else 3) or re.search(r"[.!?]$", w["w"]) or (re.search(r",$", w["w"]) and len(cur) >= 2)
                     or nx["k"] != w["k"]):
                 pages.append(cur); cur = []
         pages = juntar_curtas(pages)
         for n, p in enumerate(pages):
-            st = 0 if n == 0 else p[0]["t"]; en = pages[n + 1][0]["t"] if n < len(pages) - 1 else total
+            st = p[0]["t"] if PLANO_EDITORIAL else (0 if n == 0 else p[0]["t"]); en = pages[n + 1][0]["t"] if n < len(pages) - 1 else total
             en = min([en] + [x["o"] for x in segs if x["k"] in inserts and x["o"] > st + 0.01])
+            if PLANO_EDITORIAL:
+                en = min([en] + [x["o"] for x in segs if x["k"] != p[0]["k"] and x["o"] > st + 0.01])
             txt = " ".join(re.sub(r"[.,!?]$", "", w["w"]) for w in p).lower()
             png = f"{tmp}/leg_{n:03d}.png"
-            motor.png_fitwell(txt, 760 if p[0]["k"] in up else 880, png)
+            pos_legenda = PLANO_EDITORIAL.get("captions", {}) if PLANO_EDITORIAL else {}
+            motor.png_fitwell(txt, pos_legenda.get("hero_top", 760) if p[0]["k"] in up else pos_legenda.get("top", 880), png)
             eventos.append((st, en, png))
             duracoes.append(en - st)
     npag = len(pages)
@@ -887,11 +930,16 @@ def main():
     cortes = [s["o"] for s in segs[1:]]
     fant = fantasmas(f"{tmp}/assets/base.mp4", [round(c * FPS) for c in cortes])
     sil = [x for x in silencios(f"{tmp}/voz.wav") if not any(s.get("mute") and s["o"] - 0.2 <= x[0] <= s["o"] + s["d"] for s in segs)]
+    if PLANO_EDITORIAL:
+        janelas = plano_editorial.protected_output_windows(segs, PLANO_EDITORIAL)
+        # Só liberar silêncio totalmente contido na proteção; overlap parcial não basta.
+        sil = plano_editorial.silencios_nao_autorizados(silencios(f"{tmp}/voz.wav"), segs, PLANO_EDITORIAL, tolerance=1 / FPS)
+        rel.append(f"- Ações/pausas protegidas na saída (s): {janelas}; demais silêncios continuam bloqueantes")
     mb = os.path.getsize(saida) / 1e6
     sheet(f"{tmp}/assets/base.mp4", cortes, f"{tmp}/cortes.png")
     sh(["ffmpeg", "-loglevel", "error", "-y", "-i", saida, "-vf", "fps=0.7,scale=216:-1,tile=6x3", "-frames:v", "1", f"{tmp}/legendas.png"])
     ok = {
-        "Sem silêncio fora da rampa": not sil,
+        "Sem silêncio fora da rampa/proteção editorial" if PLANO_EDITORIAL else "Sem silêncio fora da rampa": not sil,
         "Sem quadro fantasma nos cortes": not fant,
         "Legenda com o texto do roteiro (contagem bateu)": usa_rot,
         "Nenhuma legenda com menos de 0,1s": min(duracoes or [1]) >= 0.1,
@@ -902,7 +950,7 @@ def main():
     if sil: rel.append(f"  - silêncios: {sil}")
     if fant: rel.append(f"  - quadro fantasma em: {fant}s")
     rel += [f"- Duração {total:.1f}s · {len(heard) / total:.2f} palavras/s · {len(segs)} trechos ({sum(1 for s in segs if s.get('mute'))} rampas) · {npag} legendas",
-            f"- Música: {os.path.basename(musica) + f' (a partir de {ini:.1f}s, {MUSICA_DB} dB da voz)' if musica else 'sem música'}",
+            f"- Música: {os.path.basename(musica) + f' (a partir de {ini:.1f}s, cama base {MUSICA_DB} dB)' if musica else 'sem música'}" + ("; envelope editorial registrado acima" if PLANO_EDITORIAL and musica and "music" in PLANO_EDITORIAL else ""),
             f"- Estilo {estilo} · fala a {sp:.2f}x (alvo {alvo} palavras/s) · {'flash' if estilo == 'auraly' else 'light leak'} na entrada dos takes {leaks or 'nenhum'}; rampa nos takes {sorted(ramp)}" + (f"; legenda alta nos takes {up}" if estilo != "auraly" else "; selos 777/222"),
             f"- Arquivo: `{saida}` ({mb:.1f} MB) · tempo total {time.time() - t0:.0f}s",
             "- Olhar antes de entregar: `cortes.png` (pulo) e `legendas.png` (nada sobre rosto ou herói)"]

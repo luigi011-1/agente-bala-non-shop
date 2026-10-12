@@ -1,0 +1,1275 @@
+[
+  {
+    "start": 0.0,
+    "end": 1.56,
+    "text": "This the eviction notice for that poop",
+    "words": [
+      {
+        "word": " This",
+        "start": 0.0,
+        "end": 0.16,
+        "probability": 0.8290911316871643
+      },
+      {
+        "word": " the",
+        "start": 0.16,
+        "end": 0.32,
+        "probability": 0.9005705714225769
+      },
+      {
+        "word": " eviction",
+        "start": 0.32,
+        "end": 0.68,
+        "probability": 0.9857562184333801
+      },
+      {
+        "word": " notice",
+        "start": 0.68,
+        "end": 1.0,
+        "probability": 0.964979887008667
+      },
+      {
+        "word": " for",
+        "start": 1.0,
+        "end": 1.22,
+        "probability": 0.9764501452445984
+      },
+      {
+        "word": " that",
+        "start": 1.22,
+        "end": 1.36,
+        "probability": 0.9804713726043701
+      },
+      {
+        "word": " poop",
+        "start": 1.36,
+        "end": 1.56,
+        "probability": 0.9326307773590088
+      }
+    ]
+  },
+  {
+    "start": 1.56,
+    "end": 2.44,
+    "text": "that ain't comin' out.",
+    "words": [
+      {
+        "word": " that",
+        "start": 1.56,
+        "end": 1.78,
+        "probability": 0.989965558052063
+      },
+      {
+        "word": " ain't",
+        "start": 1.78,
+        "end": 1.94,
+        "probability": 0.9764512479305267
+      },
+      {
+        "word": " comin'",
+        "start": 1.94,
+        "end": 2.2,
+        "probability": 0.6195630058646202
+      },
+      {
+        "word": " out.",
+        "start": 2.3,
+        "end": 2.44,
+        "probability": 0.9966827034950256
+      }
+    ]
+  },
+  {
+    "start": 3.82,
+    "end": 6.32,
+    "text": "To get a pot of water goin', chop up a fresh lemon",
+    "words": [
+      {
+        "word": " To",
+        "start": 3.82,
+        "end": 3.92,
+        "probability": 0.4255251884460449
+      },
+      {
+        "word": " get",
+        "start": 3.92,
+        "end": 4.04,
+        "probability": 0.9984911680221558
+      },
+      {
+        "word": " a",
+        "start": 4.04,
+        "end": 4.16,
+        "probability": 0.9932510256767273
+      },
+      {
+        "word": " pot",
+        "start": 4.16,
+        "end": 4.3,
+        "probability": 0.9706647396087646
+      },
+      {
+        "word": " of",
+        "start": 4.3,
+        "end": 4.42,
+        "probability": 0.9746131896972656
+      },
+      {
+        "word": " water",
+        "start": 4.42,
+        "end": 4.64,
+        "probability": 0.9992570281028748
+      },
+      {
+        "word": " goin',",
+        "start": 4.64,
+        "end": 5.24,
+        "probability": 0.7883210778236389
+      },
+      {
+        "word": " chop",
+        "start": 5.24,
+        "end": 5.42,
+        "probability": 0.9938514232635498
+      },
+      {
+        "word": " up",
+        "start": 5.42,
+        "end": 5.58,
+        "probability": 0.9972829818725586
+      },
+      {
+        "word": " a",
+        "start": 5.58,
+        "end": 5.74,
+        "probability": 0.9890700578689575
+      },
+      {
+        "word": " fresh",
+        "start": 5.74,
+        "end": 5.96,
+        "probability": 0.9989932179450989
+      },
+      {
+        "word": " lemon",
+        "start": 5.96,
+        "end": 6.32,
+        "probability": 0.9802785515785217
+      }
+    ]
+  },
+  {
+    "start": 6.32,
+    "end": 7.3,
+    "text": "and drop it in.",
+    "words": [
+      {
+        "word": " and",
+        "start": 6.32,
+        "end": 6.7,
+        "probability": 0.800260066986084
+      },
+      {
+        "word": " drop",
+        "start": 6.7,
+        "end": 6.92,
+        "probability": 0.9987791180610657
+      },
+      {
+        "word": " it",
+        "start": 6.92,
+        "end": 7.1,
+        "probability": 0.9946492314338684
+      },
+      {
+        "word": " in.",
+        "start": 7.1,
+        "end": 7.3,
+        "probability": 0.9977184534072876
+      }
+    ]
+  },
+  {
+    "start": 7.58,
+    "end": 9.28,
+    "text": "Teaspoon of chia seed, in there.",
+    "words": [
+      {
+        "word": " Teaspoon",
+        "start": 7.58,
+        "end": 7.88,
+        "probability": 0.9461221496264139
+      },
+      {
+        "word": " of",
+        "start": 7.88,
+        "end": 8.02,
+        "probability": 0.9882869124412537
+      },
+      {
+        "word": " chia",
+        "start": 8.02,
+        "end": 8.3,
+        "probability": 0.9209503829479218
+      },
+      {
+        "word": " seed,",
+        "start": 8.3,
+        "end": 8.6,
+        "probability": 0.9940440058708191
+      },
+      {
+        "word": " in",
+        "start": 8.92,
+        "end": 9.02,
+        "probability": 0.9841330051422119
+      },
+      {
+        "word": " there.",
+        "start": 9.02,
+        "end": 9.28,
+        "probability": 0.9960519671440125
+      }
+    ]
+  },
+  {
+    "start": 9.66,
+    "end": 11.3,
+    "text": "Teaspoon of flax seed, need that.",
+    "words": [
+      {
+        "word": " Teaspoon",
+        "start": 9.66,
+        "end": 9.98,
+        "probability": 0.991508960723877
+      },
+      {
+        "word": " of",
+        "start": 9.98,
+        "end": 10.1,
+        "probability": 0.9949733018875122
+      },
+      {
+        "word": " flax",
+        "start": 10.1,
+        "end": 10.4,
+        "probability": 0.9775923490524292
+      },
+      {
+        "word": " seed,",
+        "start": 10.4,
+        "end": 10.66,
+        "probability": 0.6273283958435059
+      },
+      {
+        "word": " need",
+        "start": 10.92,
+        "end": 11.06,
+        "probability": 0.8977726697921753
+      },
+      {
+        "word": " that.",
+        "start": 11.06,
+        "end": 11.3,
+        "probability": 0.9923034906387329
+      }
+    ]
+  },
+  {
+    "start": 11.44,
+    "end": 14.12,
+    "text": "Splash of soursop bitters like it's hot sauce.",
+    "words": [
+      {
+        "word": " Splash",
+        "start": 11.44,
+        "end": 11.76,
+        "probability": 0.9443866610527039
+      },
+      {
+        "word": " of",
+        "start": 11.76,
+        "end": 12.02,
+        "probability": 0.9967656135559082
+      },
+      {
+        "word": " soursop",
+        "start": 12.02,
+        "end": 12.6,
+        "probability": 0.7446904182434082
+      },
+      {
+        "word": " bitters",
+        "start": 12.6,
+        "end": 12.9,
+        "probability": 0.9594318270683289
+      },
+      {
+        "word": " like",
+        "start": 12.9,
+        "end": 13.38,
+        "probability": 0.6514383554458618
+      },
+      {
+        "word": " it's",
+        "start": 13.38,
+        "end": 13.64,
+        "probability": 0.9707000553607941
+      },
+      {
+        "word": " hot",
+        "start": 13.64,
+        "end": 13.78,
+        "probability": 0.9907501339912415
+      },
+      {
+        "word": " sauce.",
+        "start": 13.78,
+        "end": 14.12,
+        "probability": 0.9978570342063904
+      }
+    ]
+  },
+  {
+    "start": 14.5,
+    "end": 16.16,
+    "text": "Teaspoon of turmeric and finish",
+    "words": [
+      {
+        "word": " Teaspoon",
+        "start": 14.5,
+        "end": 14.94,
+        "probability": 0.9944584767023722
+      },
+      {
+        "word": " of",
+        "start": 14.94,
+        "end": 15.12,
+        "probability": 0.9931153655052185
+      },
+      {
+        "word": " turmeric",
+        "start": 15.12,
+        "end": 15.54,
+        "probability": 0.9972991347312927
+      },
+      {
+        "word": " and",
+        "start": 15.54,
+        "end": 15.9,
+        "probability": 0.840579628944397
+      },
+      {
+        "word": " finish",
+        "start": 15.9,
+        "end": 16.16,
+        "probability": 0.9367562532424927
+      }
+    ]
+  },
+  {
+    "start": 16.16,
+    "end": 17.92,
+    "text": "with a teaspoon of black pepper.",
+    "words": [
+      {
+        "word": " with",
+        "start": 16.16,
+        "end": 16.4,
+        "probability": 0.9963006973266602
+      },
+      {
+        "word": " a",
+        "start": 16.4,
+        "end": 16.58,
+        "probability": 0.9953501224517822
+      },
+      {
+        "word": " teaspoon",
+        "start": 16.58,
+        "end": 16.9,
+        "probability": 0.9825857877731323
+      },
+      {
+        "word": " of",
+        "start": 16.9,
+        "end": 17.26,
+        "probability": 0.9970466494560242
+      },
+      {
+        "word": " black",
+        "start": 17.26,
+        "end": 17.56,
+        "probability": 0.9986473917961121
+      },
+      {
+        "word": " pepper.",
+        "start": 17.56,
+        "end": 17.92,
+        "probability": 0.8927959203720093
+      }
+    ]
+  },
+  {
+    "start": 18.14,
+    "end": 20.5,
+    "text": "Let it boil for 10 minutes, then strain it out.",
+    "words": [
+      {
+        "word": " Let",
+        "start": 18.14,
+        "end": 18.3,
+        "probability": 0.9963529109954834
+      },
+      {
+        "word": " it",
+        "start": 18.3,
+        "end": 18.44,
+        "probability": 0.9986305236816406
+      },
+      {
+        "word": " boil",
+        "start": 18.44,
+        "end": 18.62,
+        "probability": 0.9991366267204285
+      },
+      {
+        "word": " for",
+        "start": 18.62,
+        "end": 18.9,
+        "probability": 0.9986164569854736
+      },
+      {
+        "word": " 10",
+        "start": 18.9,
+        "end": 19.1,
+        "probability": 0.8896738886833191
+      },
+      {
+        "word": " minutes,",
+        "start": 19.1,
+        "end": 19.48,
+        "probability": 0.9971727132797241
+      },
+      {
+        "word": " then",
+        "start": 19.6,
+        "end": 19.82,
+        "probability": 0.9937716126441956
+      },
+      {
+        "word": " strain",
+        "start": 19.82,
+        "end": 20.16,
+        "probability": 0.9952503442764282
+      },
+      {
+        "word": " it",
+        "start": 20.16,
+        "end": 20.32,
+        "probability": 0.9989470839500427
+      },
+      {
+        "word": " out.",
+        "start": 20.32,
+        "end": 20.5,
+        "probability": 0.9991708993911743
+      }
+    ]
+  },
+  {
+    "start": 20.64,
+    "end": 22.0,
+    "text": "This wakes your whole system up.",
+    "words": [
+      {
+        "word": " This",
+        "start": 20.64,
+        "end": 20.74,
+        "probability": 0.9961238503456116
+      },
+      {
+        "word": " wakes",
+        "start": 20.74,
+        "end": 20.96,
+        "probability": 0.9745844602584839
+      },
+      {
+        "word": " your",
+        "start": 20.96,
+        "end": 21.14,
+        "probability": 0.9850753545761108
+      },
+      {
+        "word": " whole",
+        "start": 21.14,
+        "end": 21.38,
+        "probability": 0.9995842576026917
+      },
+      {
+        "word": " system",
+        "start": 21.38,
+        "end": 21.72,
+        "probability": 0.9971478581428528
+      },
+      {
+        "word": " up.",
+        "start": 21.72,
+        "end": 22.0,
+        "probability": 0.9955230951309204
+      }
+    ]
+  },
+  {
+    "start": 22.22,
+    "end": 24.58,
+    "text": "Bloat's gone, guts clean, and trust me,",
+    "words": [
+      {
+        "word": " Bloat's",
+        "start": 22.22,
+        "end": 22.52,
+        "probability": 0.8820518056551615
+      },
+      {
+        "word": " gone,",
+        "start": 22.52,
+        "end": 22.78,
+        "probability": 0.9973600506782532
+      },
+      {
+        "word": " guts",
+        "start": 23.12,
+        "end": 23.34,
+        "probability": 0.6580639481544495
+      },
+      {
+        "word": " clean,",
+        "start": 23.34,
+        "end": 23.74,
+        "probability": 0.9611344933509827
+      },
+      {
+        "word": " and",
+        "start": 24.02,
+        "end": 24.16,
+        "probability": 0.9913815855979919
+      },
+      {
+        "word": " trust",
+        "start": 24.16,
+        "end": 24.34,
+        "probability": 0.9888908863067627
+      },
+      {
+        "word": " me,",
+        "start": 24.34,
+        "end": 24.58,
+        "probability": 0.9994474053382874
+      }
+    ]
+  },
+  {
+    "start": 24.62,
+    "end": 26.48,
+    "text": "it ain't giving you a warning when it's time to go.",
+    "words": [
+      {
+        "word": " it",
+        "start": 24.62,
+        "end": 24.7,
+        "probability": 0.9851486682891846
+      },
+      {
+        "word": " ain't",
+        "start": 24.7,
+        "end": 24.88,
+        "probability": 0.9926675856113434
+      },
+      {
+        "word": " giving",
+        "start": 24.88,
+        "end": 25.02,
+        "probability": 0.5708299279212952
+      },
+      {
+        "word": " you",
+        "start": 25.02,
+        "end": 25.22,
+        "probability": 0.9957550764083862
+      },
+      {
+        "word": " a",
+        "start": 25.22,
+        "end": 25.36,
+        "probability": 0.9979277849197388
+      },
+      {
+        "word": " warning",
+        "start": 25.36,
+        "end": 25.62,
+        "probability": 0.9989176988601685
+      },
+      {
+        "word": " when",
+        "start": 25.62,
+        "end": 25.84,
+        "probability": 0.9926989674568176
+      },
+      {
+        "word": " it's",
+        "start": 25.84,
+        "end": 26.02,
+        "probability": 0.9974299967288971
+      },
+      {
+        "word": " time",
+        "start": 26.02,
+        "end": 26.14,
+        "probability": 0.9989738464355469
+      },
+      {
+        "word": " to",
+        "start": 26.14,
+        "end": 26.3,
+        "probability": 0.9982720613479614
+      },
+      {
+        "word": " go.",
+        "start": 26.3,
+        "end": 26.48,
+        "probability": 0.9994224309921265
+      }
+    ]
+  },
+  {
+    "start": 26.62,
+    "end": 27.96,
+    "text": "If y'all want those bitters I used,",
+    "words": [
+      {
+        "word": " If",
+        "start": 26.62,
+        "end": 26.76,
+        "probability": 0.9920439720153809
+      },
+      {
+        "word": " y",
+        "start": 26.76,
+        "end": 26.84,
+        "probability": 0.902917742729187
+      },
+      {
+        "word": "'all",
+        "start": 26.84,
+        "end": 26.86,
+        "probability": 0.9993666410446167
+      },
+      {
+        "word": " want",
+        "start": 26.86,
+        "end": 27.04,
+        "probability": 0.9968067407608032
+      },
+      {
+        "word": " those",
+        "start": 27.04,
+        "end": 27.22,
+        "probability": 0.9975637197494507
+      },
+      {
+        "word": " bitters",
+        "start": 27.22,
+        "end": 27.46,
+        "probability": 0.9819960594177246
+      },
+      {
+        "word": " I",
+        "start": 27.46,
+        "end": 27.7,
+        "probability": 0.9943379759788513
+      },
+      {
+        "word": " used,",
+        "start": 27.7,
+        "end": 27.96,
+        "probability": 0.6018195152282715
+      }
+    ]
+  },
+  {
+    "start": 27.98,
+    "end": 29.6,
+    "text": "it's a blend of rare African herbs",
+    "words": [
+      {
+        "word": " it's",
+        "start": 27.98,
+        "end": 28.2,
+        "probability": 0.9931236207485199
+      },
+      {
+        "word": " a",
+        "start": 28.2,
+        "end": 28.32,
+        "probability": 0.9939388036727905
+      },
+      {
+        "word": " blend",
+        "start": 28.32,
+        "end": 28.48,
+        "probability": 0.9985237717628479
+      },
+      {
+        "word": " of",
+        "start": 28.48,
+        "end": 28.64,
+        "probability": 0.9945074915885925
+      },
+      {
+        "word": " rare",
+        "start": 28.64,
+        "end": 28.82,
+        "probability": 0.9892140030860901
+      },
+      {
+        "word": " African",
+        "start": 28.82,
+        "end": 29.18,
+        "probability": 0.9836748838424683
+      },
+      {
+        "word": " herbs",
+        "start": 29.18,
+        "end": 29.6,
+        "probability": 0.9785395860671997
+      }
+    ]
+  },
+  {
+    "start": 29.6,
+    "end": 31.84,
+    "text": "that went viral for makin' people poop like crazy",
+    "words": [
+      {
+        "word": " that",
+        "start": 29.6,
+        "end": 29.94,
+        "probability": 0.460624098777771
+      },
+      {
+        "word": " went",
+        "start": 29.94,
+        "end": 30.1,
+        "probability": 0.9740784764289856
+      },
+      {
+        "word": " viral",
+        "start": 30.1,
+        "end": 30.44,
+        "probability": 0.9992411136627197
+      },
+      {
+        "word": " for",
+        "start": 30.44,
+        "end": 30.62,
+        "probability": 0.8359248042106628
+      },
+      {
+        "word": " makin'",
+        "start": 30.62,
+        "end": 30.82,
+        "probability": 0.4953025230206549
+      },
+      {
+        "word": " people",
+        "start": 31.08,
+        "end": 31.08,
+        "probability": 0.9941281080245972
+      },
+      {
+        "word": " poop",
+        "start": 31.08,
+        "end": 31.3,
+        "probability": 0.985133171081543
+      },
+      {
+        "word": " like",
+        "start": 31.3,
+        "end": 31.52,
+        "probability": 0.995797872543335
+      },
+      {
+        "word": " crazy",
+        "start": 31.52,
+        "end": 31.84,
+        "probability": 0.9935118556022644
+      }
+    ]
+  },
+  {
+    "start": 31.84,
+    "end": 32.74,
+    "text": "and fixin' digestion.",
+    "words": [
+      {
+        "word": " and",
+        "start": 31.84,
+        "end": 32.1,
+        "probability": 0.8884374499320984
+      },
+      {
+        "word": " fixin'",
+        "start": 32.1,
+        "end": 32.38,
+        "probability": 0.9651011526584625
+      },
+      {
+        "word": " digestion.",
+        "start": 32.74,
+        "end": 32.74,
+        "probability": 0.9683799743652344
+      }
+    ]
+  },
+  {
+    "start": 33.04,
+    "end": 35.68,
+    "text": "They on Amazon called Serene Herb Soursop Bitters.",
+    "words": [
+      {
+        "word": " They",
+        "start": 33.04,
+        "end": 33.2,
+        "probability": 0.9830633997917175
+      },
+      {
+        "word": " on",
+        "start": 33.2,
+        "end": 33.34,
+        "probability": 0.8913627862930298
+      },
+      {
+        "word": " Amazon",
+        "start": 33.34,
+        "end": 33.74,
+        "probability": 0.9551532864570618
+      },
+      {
+        "word": " called",
+        "start": 33.74,
+        "end": 34.06,
+        "probability": 0.5112554430961609
+      },
+      {
+        "word": " Serene",
+        "start": 34.06,
+        "end": 34.56,
+        "probability": 0.8008238077163696
+      },
+      {
+        "word": " Herb",
+        "start": 34.56,
+        "end": 34.76,
+        "probability": 0.7153754234313965
+      },
+      {
+        "word": " Soursop",
+        "start": 34.76,
+        "end": 35.38,
+        "probability": 0.6938222100337347
+      },
+      {
+        "word": " Bitters.",
+        "start": 35.38,
+        "end": 35.68,
+        "probability": 0.807486355304718
+      }
+    ]
+  },
+  {
+    "start": 36.04,
+    "end": 38.02,
+    "text": "Just click my name at the bottom of this video,",
+    "words": [
+      {
+        "word": " Just",
+        "start": 36.04,
+        "end": 36.16,
+        "probability": 0.993591845035553
+      },
+      {
+        "word": " click",
+        "start": 36.16,
+        "end": 36.36,
+        "probability": 0.9970057606697083
+      },
+      {
+        "word": " my",
+        "start": 36.36,
+        "end": 36.58,
+        "probability": 0.9947688579559326
+      },
+      {
+        "word": " name",
+        "start": 36.58,
+        "end": 36.78,
+        "probability": 0.9985539317131042
+      },
+      {
+        "word": " at",
+        "start": 36.78,
+        "end": 36.96,
+        "probability": 0.997312068939209
+      },
+      {
+        "word": " the",
+        "start": 36.96,
+        "end": 37.1,
+        "probability": 0.9984513521194458
+      },
+      {
+        "word": " bottom",
+        "start": 37.1,
+        "end": 37.32,
+        "probability": 0.9993144273757935
+      },
+      {
+        "word": " of",
+        "start": 37.32,
+        "end": 37.5,
+        "probability": 0.9976623058319092
+      },
+      {
+        "word": " this",
+        "start": 37.5,
+        "end": 37.64,
+        "probability": 0.9948738217353821
+      },
+      {
+        "word": " video,",
+        "start": 37.64,
+        "end": 38.02,
+        "probability": 0.9992386102676392
+      }
+    ]
+  },
+  {
+    "start": 38.22,
+    "end": 40.04,
+    "text": "then tap the link at the top of my profile.",
+    "words": [
+      {
+        "word": " then",
+        "start": 38.22,
+        "end": 38.34,
+        "probability": 0.9872393012046814
+      },
+      {
+        "word": " tap",
+        "start": 38.34,
+        "end": 38.56,
+        "probability": 0.9956824779510498
+      },
+      {
+        "word": " the",
+        "start": 38.56,
+        "end": 38.74,
+        "probability": 0.9971842169761658
+      },
+      {
+        "word": " link",
+        "start": 38.74,
+        "end": 38.94,
+        "probability": 0.9992921352386475
+      },
+      {
+        "word": " at",
+        "start": 38.94,
+        "end": 39.1,
+        "probability": 0.9931964874267578
+      },
+      {
+        "word": " the",
+        "start": 39.1,
+        "end": 39.24,
+        "probability": 0.9973146319389343
+      },
+      {
+        "word": " top",
+        "start": 39.24,
+        "end": 39.38,
+        "probability": 0.9993699193000793
+      },
+      {
+        "word": " of",
+        "start": 39.38,
+        "end": 39.52,
+        "probability": 0.9948108196258545
+      },
+      {
+        "word": " my",
+        "start": 39.52,
+        "end": 39.62,
+        "probability": 0.997990608215332
+      },
+      {
+        "word": " profile.",
+        "start": 39.62,
+        "end": 40.04,
+        "probability": 0.9994671940803528
+      }
+    ]
+  },
+  {
+    "start": 40.22,
+    "end": 42.3,
+    "text": "It'll open the Amazon app and take you straight there.",
+    "words": [
+      {
+        "word": " It'll",
+        "start": 40.22,
+        "end": 40.36,
+        "probability": 0.9772301018238068
+      },
+      {
+        "word": " open",
+        "start": 40.36,
+        "end": 40.56,
+        "probability": 0.9983282685279846
+      },
+      {
+        "word": " the",
+        "start": 40.56,
+        "end": 40.7,
+        "probability": 0.9372818470001221
+      },
+      {
+        "word": " Amazon",
+        "start": 40.7,
+        "end": 41.06,
+        "probability": 0.9897052645683289
+      },
+      {
+        "word": " app",
+        "start": 41.06,
+        "end": 41.34,
+        "probability": 0.9403983354568481
+      },
+      {
+        "word": " and",
+        "start": 41.34,
+        "end": 41.52,
+        "probability": 0.9083000421524048
+      },
+      {
+        "word": " take",
+        "start": 41.52,
+        "end": 41.64,
+        "probability": 0.9961178302764893
+      },
+      {
+        "word": " you",
+        "start": 41.64,
+        "end": 41.78,
+        "probability": 0.9939534068107605
+      },
+      {
+        "word": " straight",
+        "start": 41.78,
+        "end": 42.02,
+        "probability": 0.9985911250114441
+      },
+      {
+        "word": " there.",
+        "start": 42.02,
+        "end": 42.3,
+        "probability": 0.9982681274414062
+      }
+    ]
+  },
+  {
+    "start": 42.5,
+    "end": 44.88,
+    "text": "Comment yes, and I'll DM you the full recipe.",
+    "words": [
+      {
+        "word": " Comment",
+        "start": 42.5,
+        "end": 42.7,
+        "probability": 0.9954286813735962
+      },
+      {
+        "word": " yes,",
+        "start": 42.7,
+        "end": 43.02,
+        "probability": 0.29872289299964905
+      },
+      {
+        "word": " and",
+        "start": 43.4,
+        "end": 43.44,
+        "probability": 0.994269609451294
+      },
+      {
+        "word": " I'll",
+        "start": 43.44,
+        "end": 43.64,
+        "probability": 0.9883525669574738
+      },
+      {
+        "word": " DM",
+        "start": 43.64,
+        "end": 43.88,
+        "probability": 0.991265594959259
+      },
+      {
+        "word": " you",
+        "start": 43.88,
+        "end": 44.1,
+        "probability": 0.9866549968719482
+      },
+      {
+        "word": " the",
+        "start": 44.1,
+        "end": 44.24,
+        "probability": 0.9949339032173157
+      },
+      {
+        "word": " full",
+        "start": 44.24,
+        "end": 44.48,
+        "probability": 0.9943214654922485
+      },
+      {
+        "word": " recipe.",
+        "start": 44.48,
+        "end": 44.88,
+        "probability": 0.9996805191040039
+      }
+    ]
+  },
+  {
+    "start": 45.28,
+    "end": 46.6,
+    "text": "And make sure y'all give thanks to God",
+    "words": [
+      {
+        "word": " And",
+        "start": 45.28,
+        "end": 45.32,
+        "probability": 0.7577074766159058
+      },
+      {
+        "word": " make",
+        "start": 45.32,
+        "end": 45.44,
+        "probability": 0.9902623295783997
+      },
+      {
+        "word": " sure",
+        "start": 45.44,
+        "end": 45.6,
+        "probability": 0.9992589354515076
+      },
+      {
+        "word": " y",
+        "start": 45.6,
+        "end": 45.7,
+        "probability": 0.8831831812858582
+      },
+      {
+        "word": "'all",
+        "start": 45.7,
+        "end": 45.74,
+        "probability": 0.9987595975399017
+      },
+      {
+        "word": " give",
+        "start": 45.74,
+        "end": 45.94,
+        "probability": 0.9921087622642517
+      },
+      {
+        "word": " thanks",
+        "start": 45.94,
+        "end": 46.2,
+        "probability": 0.9965793490409851
+      },
+      {
+        "word": " to",
+        "start": 46.2,
+        "end": 46.38,
+        "probability": 0.9971676468849182
+      },
+      {
+        "word": " God",
+        "start": 46.38,
+        "end": 46.6,
+        "probability": 0.9402772188186646
+      }
+    ]
+  },
+  {
+    "start": 46.6,
+    "end": 47.58,
+    "text": "for another day today.",
+    "words": [
+      {
+        "word": " for",
+        "start": 46.6,
+        "end": 46.82,
+        "probability": 0.9961793422698975
+      },
+      {
+        "word": " another",
+        "start": 46.82,
+        "end": 47.04,
+        "probability": 0.9973106384277344
+      },
+      {
+        "word": " day",
+        "start": 47.04,
+        "end": 47.32,
+        "probability": 0.8968958854675293
+      },
+      {
+        "word": " today.",
+        "start": 47.32,
+        "end": 47.58,
+        "probability": 0.9380351305007935
+      }
+    ]
+  },
+  {
+    "start": 47.86,
+    "end": 48.42,
+    "text": "Y'all be easy.",
+    "words": [
+      {
+        "word": " Y",
+        "start": 47.86,
+        "end": 47.94,
+        "probability": 0.9771873354911804
+      },
+      {
+        "word": "'all",
+        "start": 47.94,
+        "end": 47.96,
+        "probability": 0.9989596009254456
+      },
+      {
+        "word": " be",
+        "start": 47.96,
+        "end": 48.14,
+        "probability": 0.9958555102348328
+      },
+      {
+        "word": " easy.",
+        "start": 48.14,
+        "end": 48.42,
+        "probability": 0.9975390434265137
+      }
+    ]
+  }
+]

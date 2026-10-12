@@ -171,3 +171,7 @@ python3 .claude/skills/edicao/template/editar.py <pasta_dos_takes> [--producao <
 Teste no v02 (2026-10-09): mesmo vídeo aprovado (24,7s, 3,64 palavras/s, mesmos cortes), agora com música, em ~6 min do comando ao arquivo (antes ~12 min mais conferência na mão). A base caiu de ~7 min para ~2,5 min; o render no HyperFrames (~2,5 min) é o que mais pesa agora.
 
 Sugestões que ficaram de fora: pasta com o nome da produção (a 3 resolve) e fala a 1,25x (muda a entrega).
+
+## Complemento editorial por produção (2026-10-11)
+
+Para FitWell e Sea Moss, consultar `pos-producao-aprendizado-2026-10-11.md` e usar `--plano-editorial` quando a referência/takes justificarem ação protegida, ritmo por take ou curva musical. Exceção ao corte de silêncio somente em janela explícita, observada e registrada; demais gates continuam bloqueantes. Auraly exige adaptação própria. Este complemento não altera defaults ou autoriza herança entre ofertas.

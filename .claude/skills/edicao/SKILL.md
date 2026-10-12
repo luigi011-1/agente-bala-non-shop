@@ -123,3 +123,7 @@ Mesmo estilo da v2, com as travadas corrigidas (caso 31):
 - Antes de entregar: `silencedetect` no resultado (só a rampa pode sobrar, ~0,3s) e contact sheet a
   ±0,1s de cada corte procurando quadro fantasma ou pulo.
 - Sem trilha no repo: peça a música ao produtor ou entregue sem.
+
+## Referências de edição 2026-10-11 — FitWell e Sea Moss
+
+Antes de editar essas ofertas, consultar `docs/pos-producao-aprendizado-2026-10-11.md`. Preparar `plano_editorial.json` por produção quando necessário e passar `--plano-editorial`; ele protege ações úteis sem fala, permite ritmo por take, grupos/posição de legenda padrão e envelope musical. Tempos de proteção são da fonte conferida; curva musical usa a saída. Conferências e revisão visual continuam obrigatórias. Auraly exige adaptação própria e mantém legenda do workflow. Medidas musicais das referências são do mix; não houve escuta perceptiva.

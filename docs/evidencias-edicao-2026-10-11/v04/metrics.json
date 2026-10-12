@@ -1,0 +1,87 @@
+{
+  "source_sha256": "3ccad9ed4967719d7b17180c383a0dad43b7c9fe6c9f2c8cd80b96a4d67b85c9",
+  "duration": 57.026803,
+  "asr_word_count": 196,
+  "words_per_full_video_second": 3.437,
+  "first_word": 0.0,
+  "last_word_end": 56.32,
+  "asr_word_duration_sum": 46.14,
+  "word_gap_candidates_over_250ms": [
+    {
+      "start": 1.7,
+      "end": 4.66,
+      "duration": 2.96
+    },
+    {
+      "start": 5.14,
+      "end": 5.56,
+      "duration": 0.42
+    },
+    {
+      "start": 6.76,
+      "end": 7.18,
+      "duration": 0.42
+    },
+    {
+      "start": 9.14,
+      "end": 9.42,
+      "duration": 0.28
+    },
+    {
+      "start": 10.12,
+      "end": 10.48,
+      "duration": 0.36
+    },
+    {
+      "start": 13.78,
+      "end": 14.28,
+      "duration": 0.5
+    },
+    {
+      "start": 20.54,
+      "end": 20.92,
+      "duration": 0.38
+    },
+    {
+      "start": 24.18,
+      "end": 24.44,
+      "duration": 0.26
+    },
+    {
+      "start": 33.28,
+      "end": 33.56,
+      "duration": 0.28
+    },
+    {
+      "start": 37.58,
+      "end": 38.0,
+      "duration": 0.42
+    },
+    {
+      "start": 45.36,
+      "end": 45.64,
+      "duration": 0.28
+    },
+    {
+      "start": 47.66,
+      "end": 47.98,
+      "duration": 0.32
+    },
+    {
+      "start": 52.12,
+      "end": 52.5,
+      "duration": 0.38
+    },
+    {
+      "start": 53.06,
+      "end": 53.54,
+      "duration": 0.48
+    },
+    {
+      "start": 55.4,
+      "end": 55.76,
+      "duration": 0.36
+    }
+  ],
+  "warning": "ASR timestamps approximate; gaps are not proven silence, source speed multiplier unknown; cut detector includes overlays and misses match cuts."
+}

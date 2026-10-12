@@ -1,0 +1,44 @@
+{
+  "reviewer": "bala-pesquisador / referencias_v03_v05",
+  "review_date": "2026-10-11",
+  "visual_review_performed": true,
+  "all_scene_grids_opened": [
+    "overview_scenes_01.png"
+  ],
+  "all_timeline_grids_opened": [
+    "overview_timeline_01.png",
+    "overview_timeline_02.png",
+    "overview_timeline_03.png",
+    "overview_timeline_04.png",
+    "overview_timeline_05.png",
+    "overview_timeline_06.png",
+    "overview_timeline_07.png",
+    "overview_timeline_08.png",
+    "overview_timeline_09.png",
+    "overview_timeline_10.png",
+    "overview_timeline_11.png",
+    "overview_timeline_12.png",
+    "overview_timeline_13.png",
+    "overview_timeline_14.png",
+    "overview_timeline_15.png",
+    "overview_timeline_16.png",
+    "overview_timeline_17.png",
+    "overview_timeline_18.png"
+  ],
+  "critical_frames_opened": [
+    "frames/timeline/tl_t00000.0000_000001.png",
+    "frames/timeline/tl_t00005.6000_000029.png",
+    "frames/timeline/tl_t00036.4000_000183.png",
+    "frames/timeline/tl_t00062.4000_000313.png"
+  ],
+  "transcript_read": true,
+  "audio_listened": false,
+  "audio_limitation": "No perceptive audio tool; ASR not listening",
+  "report": "docs/analises-edicao-2026-10-11-v03-v05.md",
+  "critical_frames_committable": [
+    "frames_criticos/tl_t00000.0000_000001.jpg",
+    "frames_criticos/tl_t00005.6000_000029.jpg",
+    "frames_criticos/tl_t00036.4000_000183.jpg",
+    "frames_criticos/tl_t00062.4000_000313.jpg"
+  ]
+}

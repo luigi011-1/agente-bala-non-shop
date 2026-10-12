@@ -316,3 +316,10 @@ Espelho das decisoes duraveis da memoria do projeto no claude.ai que ainda nao e
   pedido dele.
 - Fonte de verdade para o Codex: tudo que o projeto Claude produz entra no main (pacotes, analises,
   instrucoes do agente Flow). Regra nova e duravel vai tambem para este arquivo.
+
+## Aprendizado editorial FitWell e Sea Moss (Luigi, 2026-10-11)
+
+- Referências de edição fornecidas em 2026-10-11: `docs/pos-producao-aprendizado-2026-10-11.md`.
+- Aplicação principal: FitWell e Sea Moss; Auraly exige adaptação específica, sem herança automática.
+- Na edição, consultar esse aprendizado e preparar plano editorial por produção quando ação, ritmo, legenda ou música exigirem marcação. `editar.py --plano-editorial` complementa o comando único; não substitui conferência de fala nem QA.
+- Proteger ações/payoffs úteis sem fala só com intervalo e razão observados. A escuta emocional da música das referências não foi confirmada; não tratar medidas do mix como prova de trilha isolada.
