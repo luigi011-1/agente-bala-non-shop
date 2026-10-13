@@ -40,6 +40,8 @@ precisamos vender nada nesse estilo de vídeo."*
    - follow gate com motivo ("ou não vou conseguir te alcançar")
    O CTA final é o mesmo do original (save/comment/follow), só traduzido e com o pronome/registro
    ajustado.
+   ♻️ **2026-10-10: o follow é a ÚLTIMA frase do vídeo, como lembrete do botão** (*"And don't forget to
+   hit that follow button."*), growth ou venda, ver [[cta-follow-no-fim]].
    🔴 **Growth SEMPRE fecha com FOLLOW depois do CTA de comentário/save** (Luigi, 2026-09-26, em
    `fitywell_growth_cravo_limao`: *"faltou o CTA de follow depois do CTA de comentário, lembre-se que
    é um video de growth"*). Se o original não pede follow, acrescentar uma frase curta logo depois do

@@ -1,0 +1,28 @@
+{
+  "user_authorization": "Luigi: quero que aceite os dois takes dos videos e nao deixe pendente dessa vez",
+  "scope": "Duas divergências de pronúncia Jordan V01/V06 e V03/V03 nesta rodada; sem alterar roteiro/prompt.",
+  "date": "2026-10-11",
+  "items": [
+    {
+      "file": "/Users/macbookairm2/Desktop/V01 - Véio ricasso/Person_speaking_to_camera_20261011143011_2.mp4",
+      "sha256": "67a8442a880a431da67e49b3b132dbafef29be2669a6d902b73f08f5dfe08b93",
+      "model": "V01",
+      "take": "V06",
+      "approved_script": "Toca mi foto de perfil para ver la lectura de abundancia en mis historias. También puedes entrar desde el enlace de mi biografía.",
+      "allowed_problems": [
+        "trocou \"lectura\" por \"leitura\""
+      ]
+    },
+    {
+      "file": "/Users/macbookairm2/Desktop/V03 - véio ricasso/Person_speaking_to_camera_20261011172525_3.mp4",
+      "sha256": "b395d3be17cf67349cefdb8b5e58fc28f1925678c506046fd26674a31b7b8e51",
+      "model": "V03",
+      "take": "V03",
+      "approved_script": "Le doy la bienvenida a la prosperidad hoy. Muéstrame las oportunidades que he pasado por alto. Quiero reconocerlas cuando lleguen.",
+      "allowed_problems": [
+        "trocou \"muestrame\" por \"moestrame\""
+      ]
+    }
+  ],
+  "scope_confirmation": "Luigi: Aceitar somente os dois de pronúncia"
+}

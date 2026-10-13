@@ -1,0 +1,55 @@
+{
+  "task_id": "84ee3287-7c67-4abc-bd4a-177da581441e",
+  "reviewer": "bala-revisor",
+  "independent": true,
+  "status": "APPROVED",
+  "checks": [
+    {
+      "name": "Integridade",
+      "result": "PASS",
+      "evidence": "Revisor conferiu oito fingerprints atuais TASK."
+    },
+    {
+      "name": "Cobertura",
+      "result": "PASS",
+      "evidence": "9combinações:4DELIVERED,2BLOCKED_TAKE(V02AveryOkay/Jordan¿sí?),3DevonPENDING/NOT_RECEIVED; fila/statusconcordam."
+    },
+    {
+      "name": "Cópias finais",
+      "result": "PASS",
+      "evidence": "Hashes quatroMP4Downloads byte-idênticos aos taskpacks QAanteriores; tamanhos26491817,26767148,26314448,26103069 todos<30MB."
+    },
+    {
+      "name": "Prompts correção",
+      "result": "PASS",
+      "evidence": "Exatamente2prompts corrigir V02AveryV01/V02JordanV02 idênticos literalmente aos FLOW aprovados."
+    },
+    {
+      "name": "Exceções",
+      "result": "PASS",
+      "evidence": "SomentepronúnciasJordanV01V06/JordanV03V03 aceitas e DELIVERED; ausências palavrasV02nãoaceitas."
+    },
+    {
+      "name": "Fontes ausentes",
+      "result": "PASS",
+      "evidence": "Doisoriginaisaceitos ausentescaminhosatuais; STATUSfalse/null disponibilidade/hashcorrente, verificaçãohashhistóricaexplicitada; causanãocomprovada."
+    },
+    {
+      "name": "RepetirQAvisual",
+      "result": "NOT_APPLICABLE",
+      "evidence": "Inventário/integridade; hashesvinculamQAanterior sem repetir."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "WARNING",
+      "message": "Fontes das duas exceções atualmente ausentes nos caminhos registrados.",
+      "evidence": "FinaisDownloads presentes e hashesconferem; causaausêncianãocomprovada."
+    },
+    {
+      "severity": "WARNING",
+      "message": "Lote incompleto:4de9entregues.",
+      "evidence": "2V02correçõespendentes,3Devontakesnão recebidos."
+    }
+  ]
+}

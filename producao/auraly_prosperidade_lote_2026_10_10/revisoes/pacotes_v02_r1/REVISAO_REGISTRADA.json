@@ -1,0 +1,69 @@
+{
+  "task_id": "a296fd9e-24a6-4c89-a10b-3512b5698a98",
+  "reviewer": "bala-revisor",
+  "independent": true,
+  "status": "APPROVED",
+  "checks": [
+    {
+      "name": "estado_aprovacao_integridade",
+      "result": "PASS",
+      "evidence": "AGENTS/workflow/checkpoint/snapshot verificados. Aprovação10/10 e exceção explícita,fingerprints sem drift."
+    },
+    {
+      "name": "cobertura_e_fala_literal",
+      "result": "PASS",
+      "evidence": "10falas cadaavatar emPROMPTS/FLOW/ENTREGA exatamente iguais ao snapshot,ordemEN/ES preservadas,30takes únicos."
+    },
+    {
+      "name": "fontes_visuais_ficha",
+      "result": "PASS",
+      "evidence": "QuatroframesK pessoalmenteabertos; verso/Imperatriz/pose recostada/CTA.4K/14itens,fichaestimaalvos;patches/carta/câmerabaixa preservados. Dedo juntoqueixo parafala declarado."
+    },
+    {
+      "name": "identidade_Jordan_luxo",
+      "result": "PASS",
+      "evidence": "3anchors pessoalmentevistos;Jordan mansão,luxo,equivalenteação/câmera. Não transfere UI/Aya para Auraly."
+    },
+    {
+      "name": "K_V_mapa_entrega",
+      "result": "PASS",
+      "evidence": "4K/10V cada:V01K01,V02-06K02,V07K03,V08-10K04. JSON interno,K curto,V mínimo;ENTREGA Qualvídeo e14CenaPT."
+    },
+    {
+      "name": "validadores_checklist",
+      "result": "PASS",
+      "evidence": "Strictbase/ES0falhas,ESavisoinglêsfollow. Flow_seguro0achados. Checklist29/29aplicáveis13NA de42; razões compatíveis."
+    },
+    {
+      "name": "contrato_Flow_CTA",
+      "result": "PASS",
+      "evidence": "Currentcombinação,sheet4K9:16/manual/1V9:16;closedbatchesV01-07 e08-10;erroexato,destinos04/05/06foragit,CTAaprovadointacto."
+    },
+    {
+      "name": "midia_e_resultados",
+      "result": "NOT_APPLICABLE",
+      "evidence": "Nenhuma mídia gerada ou editada certificada."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "WARNING",
+      "message": "Carta,mãos,patches e movimento precisam de conferência na mídia futura.",
+      "evidence": "Framesfonte vistos; nenhuma candidata gerada fornecida."
+    },
+    {
+      "severity": "WARNING",
+      "message": "Follow-fimES é falso positivo de idioma.",
+      "evidence": "JordanT10 fechoespanhol aprovado."
+    },
+    {
+      "severity": "WARNING",
+      "message": "Limpar linha histórica de aprovação pendente na atualização do checkpoint.",
+      "evidence": "Pendingcontradiz statusAPPROVED_BY_LUIGI,porém aprovaçãoautoridade válida."
+    }
+  ],
+  "registered_at": "2026-10-11T17:03:14.579288+00:00",
+  "taskpack_sha256": "a5eeaf5c8dc1c038d0f01a95c723a8e830dc4c7433ba9af741407c5bea7b7fed",
+  "artifacts_unchanged": true,
+  "user_script_approval_granted": false
+}

@@ -1,0 +1,2658 @@
+{
+  "schema_version": 2,
+  "pipeline": "watch",
+  "run_id": "08330daf-d23e-4114-b990-7feeb325408c",
+  "status": "COMPLETE",
+  "analysis_status": "PENDING_VISUAL_REVIEW",
+  "video": "/Users/macbookairm2/Downloads/snapinsta-1791658702840.mp4",
+  "outdir": "/private/tmp/claude-501/-Users-macbookairm2-agente-bala-non-shop-agente-bala-non-shop/d6f73abb-f8ba-4ee9-ac63-61676e6456e2/scratchpad/watch_1791658702840",
+  "info": {
+    "duration": 39.680045,
+    "fps": 30.0,
+    "width": 720,
+    "height": 1280,
+    "has_audio": true
+  },
+  "scenes": [
+    {
+      "file": "scene_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "scene_t00000.0333_000002.png",
+      "t": 0.033333
+    },
+    {
+      "file": "scene_t00001.9333_000003.png",
+      "t": 1.933333
+    },
+    {
+      "file": "scene_t00004.5000_000004.png",
+      "t": 4.5
+    },
+    {
+      "file": "scene_t00005.9667_000005.png",
+      "t": 5.966667
+    },
+    {
+      "file": "scene_t00007.1000_000006.png",
+      "t": 7.1
+    },
+    {
+      "file": "scene_t00008.4667_000007.png",
+      "t": 8.466667
+    },
+    {
+      "file": "scene_t00009.7000_000008.png",
+      "t": 9.7
+    },
+    {
+      "file": "scene_t00011.3333_000009.png",
+      "t": 11.333333
+    },
+    {
+      "file": "scene_t00014.1667_000010.png",
+      "t": 14.166667
+    },
+    {
+      "file": "scene_t00024.0333_000011.png",
+      "t": 24.033333
+    },
+    {
+      "file": "scene_t00031.6333_000012.png",
+      "t": 31.633333
+    }
+  ],
+  "timeline": [
+    {
+      "file": "tl_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "tl_t00000.2000_000002.png",
+      "t": 0.2
+    },
+    {
+      "file": "tl_t00000.4000_000003.png",
+      "t": 0.4
+    },
+    {
+      "file": "tl_t00000.6000_000004.png",
+      "t": 0.6
+    },
+    {
+      "file": "tl_t00000.8000_000005.png",
+      "t": 0.8
+    },
+    {
+      "file": "tl_t00001.0000_000006.png",
+      "t": 1.0
+    },
+    {
+      "file": "tl_t00001.2000_000007.png",
+      "t": 1.2
+    },
+    {
+      "file": "tl_t00001.4000_000008.png",
+      "t": 1.4
+    },
+    {
+      "file": "tl_t00001.6000_000009.png",
+      "t": 1.6
+    },
+    {
+      "file": "tl_t00001.8000_000010.png",
+      "t": 1.8
+    },
+    {
+      "file": "tl_t00002.0000_000011.png",
+      "t": 2.0
+    },
+    {
+      "file": "tl_t00002.2000_000012.png",
+      "t": 2.2
+    },
+    {
+      "file": "tl_t00002.4000_000013.png",
+      "t": 2.4
+    },
+    {
+      "file": "tl_t00002.6000_000014.png",
+      "t": 2.6
+    },
+    {
+      "file": "tl_t00002.8000_000015.png",
+      "t": 2.8
+    },
+    {
+      "file": "tl_t00003.0000_000016.png",
+      "t": 3.0
+    },
+    {
+      "file": "tl_t00003.2000_000017.png",
+      "t": 3.2
+    },
+    {
+      "file": "tl_t00003.4000_000018.png",
+      "t": 3.4
+    },
+    {
+      "file": "tl_t00003.6000_000019.png",
+      "t": 3.6
+    },
+    {
+      "file": "tl_t00003.8000_000020.png",
+      "t": 3.8
+    },
+    {
+      "file": "tl_t00004.0000_000021.png",
+      "t": 4.0
+    },
+    {
+      "file": "tl_t00004.2000_000022.png",
+      "t": 4.2
+    },
+    {
+      "file": "tl_t00004.4000_000023.png",
+      "t": 4.4
+    },
+    {
+      "file": "tl_t00004.6000_000024.png",
+      "t": 4.6
+    },
+    {
+      "file": "tl_t00004.8000_000025.png",
+      "t": 4.8
+    },
+    {
+      "file": "tl_t00005.0000_000026.png",
+      "t": 5.0
+    },
+    {
+      "file": "tl_t00005.2000_000027.png",
+      "t": 5.2
+    },
+    {
+      "file": "tl_t00005.4000_000028.png",
+      "t": 5.4
+    },
+    {
+      "file": "tl_t00005.6000_000029.png",
+      "t": 5.6
+    },
+    {
+      "file": "tl_t00005.8000_000030.png",
+      "t": 5.8
+    },
+    {
+      "file": "tl_t00006.0000_000031.png",
+      "t": 6.0
+    },
+    {
+      "file": "tl_t00006.2000_000032.png",
+      "t": 6.2
+    },
+    {
+      "file": "tl_t00006.4000_000033.png",
+      "t": 6.4
+    },
+    {
+      "file": "tl_t00006.6000_000034.png",
+      "t": 6.6
+    },
+    {
+      "file": "tl_t00006.8000_000035.png",
+      "t": 6.8
+    },
+    {
+      "file": "tl_t00007.0000_000036.png",
+      "t": 7.0
+    },
+    {
+      "file": "tl_t00007.2000_000037.png",
+      "t": 7.2
+    },
+    {
+      "file": "tl_t00007.4000_000038.png",
+      "t": 7.4
+    },
+    {
+      "file": "tl_t00007.6000_000039.png",
+      "t": 7.6
+    },
+    {
+      "file": "tl_t00007.8000_000040.png",
+      "t": 7.8
+    },
+    {
+      "file": "tl_t00008.0000_000041.png",
+      "t": 8.0
+    },
+    {
+      "file": "tl_t00008.2000_000042.png",
+      "t": 8.2
+    },
+    {
+      "file": "tl_t00008.4000_000043.png",
+      "t": 8.4
+    },
+    {
+      "file": "tl_t00008.6000_000044.png",
+      "t": 8.6
+    },
+    {
+      "file": "tl_t00008.8000_000045.png",
+      "t": 8.8
+    },
+    {
+      "file": "tl_t00009.0000_000046.png",
+      "t": 9.0
+    },
+    {
+      "file": "tl_t00009.2000_000047.png",
+      "t": 9.2
+    },
+    {
+      "file": "tl_t00009.4000_000048.png",
+      "t": 9.4
+    },
+    {
+      "file": "tl_t00009.6000_000049.png",
+      "t": 9.6
+    },
+    {
+      "file": "tl_t00009.8000_000050.png",
+      "t": 9.8
+    },
+    {
+      "file": "tl_t00010.0000_000051.png",
+      "t": 10.0
+    },
+    {
+      "file": "tl_t00010.2000_000052.png",
+      "t": 10.2
+    },
+    {
+      "file": "tl_t00010.4000_000053.png",
+      "t": 10.4
+    },
+    {
+      "file": "tl_t00010.6000_000054.png",
+      "t": 10.6
+    },
+    {
+      "file": "tl_t00010.8000_000055.png",
+      "t": 10.8
+    },
+    {
+      "file": "tl_t00011.0000_000056.png",
+      "t": 11.0
+    },
+    {
+      "file": "tl_t00011.2000_000057.png",
+      "t": 11.2
+    },
+    {
+      "file": "tl_t00011.4000_000058.png",
+      "t": 11.4
+    },
+    {
+      "file": "tl_t00011.6000_000059.png",
+      "t": 11.6
+    },
+    {
+      "file": "tl_t00011.8000_000060.png",
+      "t": 11.8
+    },
+    {
+      "file": "tl_t00012.0000_000061.png",
+      "t": 12.0
+    },
+    {
+      "file": "tl_t00012.2000_000062.png",
+      "t": 12.2
+    },
+    {
+      "file": "tl_t00012.4000_000063.png",
+      "t": 12.4
+    },
+    {
+      "file": "tl_t00012.6000_000064.png",
+      "t": 12.6
+    },
+    {
+      "file": "tl_t00012.8000_000065.png",
+      "t": 12.8
+    },
+    {
+      "file": "tl_t00013.0000_000066.png",
+      "t": 13.0
+    },
+    {
+      "file": "tl_t00013.2000_000067.png",
+      "t": 13.2
+    },
+    {
+      "file": "tl_t00013.4000_000068.png",
+      "t": 13.4
+    },
+    {
+      "file": "tl_t00013.6000_000069.png",
+      "t": 13.6
+    },
+    {
+      "file": "tl_t00013.8000_000070.png",
+      "t": 13.8
+    },
+    {
+      "file": "tl_t00014.0000_000071.png",
+      "t": 14.0
+    },
+    {
+      "file": "tl_t00014.2000_000072.png",
+      "t": 14.2
+    },
+    {
+      "file": "tl_t00014.4000_000073.png",
+      "t": 14.4
+    },
+    {
+      "file": "tl_t00014.6000_000074.png",
+      "t": 14.6
+    },
+    {
+      "file": "tl_t00014.8000_000075.png",
+      "t": 14.8
+    },
+    {
+      "file": "tl_t00015.0000_000076.png",
+      "t": 15.0
+    },
+    {
+      "file": "tl_t00015.2000_000077.png",
+      "t": 15.2
+    },
+    {
+      "file": "tl_t00015.4000_000078.png",
+      "t": 15.4
+    },
+    {
+      "file": "tl_t00015.6000_000079.png",
+      "t": 15.6
+    },
+    {
+      "file": "tl_t00015.8000_000080.png",
+      "t": 15.8
+    },
+    {
+      "file": "tl_t00016.0000_000081.png",
+      "t": 16.0
+    },
+    {
+      "file": "tl_t00016.2000_000082.png",
+      "t": 16.2
+    },
+    {
+      "file": "tl_t00016.4000_000083.png",
+      "t": 16.4
+    },
+    {
+      "file": "tl_t00016.6000_000084.png",
+      "t": 16.6
+    },
+    {
+      "file": "tl_t00016.8000_000085.png",
+      "t": 16.8
+    },
+    {
+      "file": "tl_t00017.0000_000086.png",
+      "t": 17.0
+    },
+    {
+      "file": "tl_t00017.2000_000087.png",
+      "t": 17.2
+    },
+    {
+      "file": "tl_t00017.4000_000088.png",
+      "t": 17.4
+    },
+    {
+      "file": "tl_t00017.6000_000089.png",
+      "t": 17.6
+    },
+    {
+      "file": "tl_t00017.8000_000090.png",
+      "t": 17.8
+    },
+    {
+      "file": "tl_t00018.0000_000091.png",
+      "t": 18.0
+    },
+    {
+      "file": "tl_t00018.2000_000092.png",
+      "t": 18.2
+    },
+    {
+      "file": "tl_t00018.4000_000093.png",
+      "t": 18.4
+    },
+    {
+      "file": "tl_t00018.6000_000094.png",
+      "t": 18.6
+    },
+    {
+      "file": "tl_t00018.8000_000095.png",
+      "t": 18.8
+    },
+    {
+      "file": "tl_t00019.0000_000096.png",
+      "t": 19.0
+    },
+    {
+      "file": "tl_t00019.2000_000097.png",
+      "t": 19.2
+    },
+    {
+      "file": "tl_t00019.4000_000098.png",
+      "t": 19.4
+    },
+    {
+      "file": "tl_t00019.6000_000099.png",
+      "t": 19.6
+    },
+    {
+      "file": "tl_t00019.8000_000100.png",
+      "t": 19.8
+    },
+    {
+      "file": "tl_t00020.0000_000101.png",
+      "t": 20.0
+    },
+    {
+      "file": "tl_t00020.2000_000102.png",
+      "t": 20.2
+    },
+    {
+      "file": "tl_t00020.4000_000103.png",
+      "t": 20.4
+    },
+    {
+      "file": "tl_t00020.6000_000104.png",
+      "t": 20.6
+    },
+    {
+      "file": "tl_t00020.8000_000105.png",
+      "t": 20.8
+    },
+    {
+      "file": "tl_t00021.0000_000106.png",
+      "t": 21.0
+    },
+    {
+      "file": "tl_t00021.2000_000107.png",
+      "t": 21.2
+    },
+    {
+      "file": "tl_t00021.4000_000108.png",
+      "t": 21.4
+    },
+    {
+      "file": "tl_t00021.6000_000109.png",
+      "t": 21.6
+    },
+    {
+      "file": "tl_t00021.8000_000110.png",
+      "t": 21.8
+    },
+    {
+      "file": "tl_t00022.0000_000111.png",
+      "t": 22.0
+    },
+    {
+      "file": "tl_t00022.2000_000112.png",
+      "t": 22.2
+    },
+    {
+      "file": "tl_t00022.4000_000113.png",
+      "t": 22.4
+    },
+    {
+      "file": "tl_t00022.6000_000114.png",
+      "t": 22.6
+    },
+    {
+      "file": "tl_t00022.8000_000115.png",
+      "t": 22.8
+    },
+    {
+      "file": "tl_t00023.0000_000116.png",
+      "t": 23.0
+    },
+    {
+      "file": "tl_t00023.2000_000117.png",
+      "t": 23.2
+    },
+    {
+      "file": "tl_t00023.4000_000118.png",
+      "t": 23.4
+    },
+    {
+      "file": "tl_t00023.6000_000119.png",
+      "t": 23.6
+    },
+    {
+      "file": "tl_t00023.8000_000120.png",
+      "t": 23.8
+    },
+    {
+      "file": "tl_t00024.0000_000121.png",
+      "t": 24.0
+    },
+    {
+      "file": "tl_t00024.2000_000122.png",
+      "t": 24.2
+    },
+    {
+      "file": "tl_t00024.4000_000123.png",
+      "t": 24.4
+    },
+    {
+      "file": "tl_t00024.6000_000124.png",
+      "t": 24.6
+    },
+    {
+      "file": "tl_t00024.8000_000125.png",
+      "t": 24.8
+    },
+    {
+      "file": "tl_t00025.0000_000126.png",
+      "t": 25.0
+    },
+    {
+      "file": "tl_t00025.2000_000127.png",
+      "t": 25.2
+    },
+    {
+      "file": "tl_t00025.4000_000128.png",
+      "t": 25.4
+    },
+    {
+      "file": "tl_t00025.6000_000129.png",
+      "t": 25.6
+    },
+    {
+      "file": "tl_t00025.8000_000130.png",
+      "t": 25.8
+    },
+    {
+      "file": "tl_t00026.0000_000131.png",
+      "t": 26.0
+    },
+    {
+      "file": "tl_t00026.2000_000132.png",
+      "t": 26.2
+    },
+    {
+      "file": "tl_t00026.4000_000133.png",
+      "t": 26.4
+    },
+    {
+      "file": "tl_t00026.6000_000134.png",
+      "t": 26.6
+    },
+    {
+      "file": "tl_t00026.8000_000135.png",
+      "t": 26.8
+    },
+    {
+      "file": "tl_t00027.0000_000136.png",
+      "t": 27.0
+    },
+    {
+      "file": "tl_t00027.2000_000137.png",
+      "t": 27.2
+    },
+    {
+      "file": "tl_t00027.4000_000138.png",
+      "t": 27.4
+    },
+    {
+      "file": "tl_t00027.6000_000139.png",
+      "t": 27.6
+    },
+    {
+      "file": "tl_t00027.8000_000140.png",
+      "t": 27.8
+    },
+    {
+      "file": "tl_t00028.0000_000141.png",
+      "t": 28.0
+    },
+    {
+      "file": "tl_t00028.2000_000142.png",
+      "t": 28.2
+    },
+    {
+      "file": "tl_t00028.4000_000143.png",
+      "t": 28.4
+    },
+    {
+      "file": "tl_t00028.6000_000144.png",
+      "t": 28.6
+    },
+    {
+      "file": "tl_t00028.8000_000145.png",
+      "t": 28.8
+    },
+    {
+      "file": "tl_t00029.0000_000146.png",
+      "t": 29.0
+    },
+    {
+      "file": "tl_t00029.2000_000147.png",
+      "t": 29.2
+    },
+    {
+      "file": "tl_t00029.4000_000148.png",
+      "t": 29.4
+    },
+    {
+      "file": "tl_t00029.6000_000149.png",
+      "t": 29.6
+    },
+    {
+      "file": "tl_t00029.8000_000150.png",
+      "t": 29.8
+    },
+    {
+      "file": "tl_t00030.0000_000151.png",
+      "t": 30.0
+    },
+    {
+      "file": "tl_t00030.2000_000152.png",
+      "t": 30.2
+    },
+    {
+      "file": "tl_t00030.4000_000153.png",
+      "t": 30.4
+    },
+    {
+      "file": "tl_t00030.6000_000154.png",
+      "t": 30.6
+    },
+    {
+      "file": "tl_t00030.8000_000155.png",
+      "t": 30.8
+    },
+    {
+      "file": "tl_t00031.0000_000156.png",
+      "t": 31.0
+    },
+    {
+      "file": "tl_t00031.2000_000157.png",
+      "t": 31.2
+    },
+    {
+      "file": "tl_t00031.4000_000158.png",
+      "t": 31.4
+    },
+    {
+      "file": "tl_t00031.6000_000159.png",
+      "t": 31.6
+    },
+    {
+      "file": "tl_t00031.8000_000160.png",
+      "t": 31.8
+    },
+    {
+      "file": "tl_t00032.0000_000161.png",
+      "t": 32.0
+    },
+    {
+      "file": "tl_t00032.2000_000162.png",
+      "t": 32.2
+    },
+    {
+      "file": "tl_t00032.4000_000163.png",
+      "t": 32.4
+    },
+    {
+      "file": "tl_t00032.6000_000164.png",
+      "t": 32.6
+    },
+    {
+      "file": "tl_t00032.8000_000165.png",
+      "t": 32.8
+    },
+    {
+      "file": "tl_t00033.0000_000166.png",
+      "t": 33.0
+    },
+    {
+      "file": "tl_t00033.2000_000167.png",
+      "t": 33.2
+    },
+    {
+      "file": "tl_t00033.4000_000168.png",
+      "t": 33.4
+    },
+    {
+      "file": "tl_t00033.6000_000169.png",
+      "t": 33.6
+    },
+    {
+      "file": "tl_t00033.8000_000170.png",
+      "t": 33.8
+    },
+    {
+      "file": "tl_t00034.0000_000171.png",
+      "t": 34.0
+    },
+    {
+      "file": "tl_t00034.2000_000172.png",
+      "t": 34.2
+    },
+    {
+      "file": "tl_t00034.4000_000173.png",
+      "t": 34.4
+    },
+    {
+      "file": "tl_t00034.6000_000174.png",
+      "t": 34.6
+    },
+    {
+      "file": "tl_t00034.8000_000175.png",
+      "t": 34.8
+    },
+    {
+      "file": "tl_t00035.0000_000176.png",
+      "t": 35.0
+    },
+    {
+      "file": "tl_t00035.2000_000177.png",
+      "t": 35.2
+    },
+    {
+      "file": "tl_t00035.4000_000178.png",
+      "t": 35.4
+    },
+    {
+      "file": "tl_t00035.6000_000179.png",
+      "t": 35.6
+    },
+    {
+      "file": "tl_t00035.8000_000180.png",
+      "t": 35.8
+    },
+    {
+      "file": "tl_t00036.0000_000181.png",
+      "t": 36.0
+    },
+    {
+      "file": "tl_t00036.2000_000182.png",
+      "t": 36.2
+    },
+    {
+      "file": "tl_t00036.4000_000183.png",
+      "t": 36.4
+    },
+    {
+      "file": "tl_t00036.6000_000184.png",
+      "t": 36.6
+    },
+    {
+      "file": "tl_t00036.8000_000185.png",
+      "t": 36.8
+    },
+    {
+      "file": "tl_t00037.0000_000186.png",
+      "t": 37.0
+    },
+    {
+      "file": "tl_t00037.2000_000187.png",
+      "t": 37.2
+    },
+    {
+      "file": "tl_t00037.4000_000188.png",
+      "t": 37.4
+    },
+    {
+      "file": "tl_t00037.6000_000189.png",
+      "t": 37.6
+    },
+    {
+      "file": "tl_t00037.8000_000190.png",
+      "t": 37.8
+    },
+    {
+      "file": "tl_t00038.0000_000191.png",
+      "t": 38.0
+    },
+    {
+      "file": "tl_t00038.2000_000192.png",
+      "t": 38.2
+    },
+    {
+      "file": "tl_t00038.4000_000193.png",
+      "t": 38.4
+    },
+    {
+      "file": "tl_t00038.6000_000194.png",
+      "t": 38.6
+    },
+    {
+      "file": "tl_t00038.8000_000195.png",
+      "t": 38.8
+    },
+    {
+      "file": "tl_t00039.0000_000196.png",
+      "t": 39.0
+    },
+    {
+      "file": "tl_t00039.2000_000197.png",
+      "t": 39.2
+    },
+    {
+      "file": "tl_t00039.4000_000198.png",
+      "t": 39.4
+    }
+  ],
+  "overview": {
+    "scenes": [
+      "overview_scenes_01.png"
+    ],
+    "timeline": [
+      "overview_timeline_01.png",
+      "overview_timeline_02.png",
+      "overview_timeline_03.png",
+      "overview_timeline_04.png",
+      "overview_timeline_05.png",
+      "overview_timeline_06.png",
+      "overview_timeline_07.png",
+      "overview_timeline_08.png",
+      "overview_timeline_09.png",
+      "overview_timeline_10.png"
+    ]
+  },
+  "transcript": true,
+  "audio": {
+    "status": "SUCCEEDED",
+    "backend": "faster-whisper",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 4.48,
+        "text": "How old were you when you found out that if you mixed three eggs into Greek yogurt,"
+      },
+      {
+        "start": 6.0,
+        "end": 11.28,
+        "text": "whisk it together with shredded coconut and a little vanilla, then pour it into a mold,"
+      },
+      {
+        "start": 11.28,
+        "end": 16.8,
+        "text": "bake it for 30 minutes, and let it chill. You end up with a fluffy coconut cake. It not only"
+      },
+      {
+        "start": 16.8,
+        "end": 22.32,
+        "text": "tastes amazing, but it is light on the stomach, loaded with healthy fats, and will not send your"
+      },
+      {
+        "start": 22.32,
+        "end": 27.36,
+        "text": "blood sugar through the roof, baby. And the best part? The eggs and yogurt carry a massive dose of"
+      },
+      {
+        "start": 27.36,
+        "end": 34.32,
+        "text": "protein. No refined sugar, no flour, high protein. I got recipes like this for every sweet treat you"
+      },
+      {
+        "start": 34.32,
+        "end": 39.2,
+        "text": "can think of. Comment yes if you want more recipes like this and follow me so you do not miss a single"
+      },
+      {
+        "start": 39.2,
+        "end": 43.2,
+        "text": "one."
+      }
+    ],
+    "text": "How old were you when you found out that if you mixed three eggs into Greek yogurt, whisk it together with shredded coconut and a little vanilla, then pour it into a mold, bake it for 30 minutes, and let it chill. You end up with a fluffy coconut cake. It not only tastes amazing, but it is light on the stomach, loaded with healthy fats, and will not send your blood sugar through the roof, baby. And the best part? The eggs and yogurt carry a massive dose of protein. No refined sugar, no flour, high protein. I got recipes like this for every sweet treat you can think of. Comment yes if you want more recipes like this and follow me so you do not miss a single one."
+  },
+  "alignment": {
+    "status": "SUCCEEDED",
+    "backend": "whisperx",
+    "language": "en",
+    "word_count": 131,
+    "expected_word_count": 131,
+    "timed_word_count": 131,
+    "unaligned_word_count": 0,
+    "segments": [
+      {
+        "start": 0.141,
+        "end": 4.48,
+        "text": "How old were you when you found out that if you mixed three eggs into Greek yogurt,",
+        "words": [
+          {
+            "word": "How",
+            "start": 0.141,
+            "end": 0.281,
+            "score": 0.85
+          },
+          {
+            "word": "old",
+            "start": 0.382,
+            "end": 0.502,
+            "score": 0.522
+          },
+          {
+            "word": "were",
+            "start": 0.542,
+            "end": 0.663,
+            "score": 0.834
+          },
+          {
+            "word": "you",
+            "start": 0.683,
+            "end": 0.783,
+            "score": 0.993
+          },
+          {
+            "word": "when",
+            "start": 0.824,
+            "end": 0.944,
+            "score": 0.875
+          },
+          {
+            "word": "you",
+            "start": 0.964,
+            "end": 1.125,
+            "score": 0.913
+          },
+          {
+            "word": "found",
+            "start": 1.165,
+            "end": 1.426,
+            "score": 0.845
+          },
+          {
+            "word": "out",
+            "start": 1.567,
+            "end": 1.688,
+            "score": 0.767
+          },
+          {
+            "word": "that",
+            "start": 1.969,
+            "end": 2.109,
+            "score": 0.878
+          },
+          {
+            "word": "if",
+            "start": 2.15,
+            "end": 2.21,
+            "score": 0.797
+          },
+          {
+            "word": "you",
+            "start": 2.23,
+            "end": 2.371,
+            "score": 0.75
+          },
+          {
+            "word": "mixed",
+            "start": 2.431,
+            "end": 2.692,
+            "score": 0.796
+          },
+          {
+            "word": "three",
+            "start": 2.772,
+            "end": 3.054,
+            "score": 0.845
+          },
+          {
+            "word": "eggs",
+            "start": 3.234,
+            "end": 3.496,
+            "score": 0.708
+          },
+          {
+            "word": "into",
+            "start": 3.656,
+            "end": 3.857,
+            "score": 0.877
+          },
+          {
+            "word": "Greek",
+            "start": 3.897,
+            "end": 4.159,
+            "score": 0.95
+          },
+          {
+            "word": "yogurt,",
+            "start": 4.199,
+            "end": 4.48,
+            "score": 0.519
+          }
+        ]
+      },
+      {
+        "start": 6.12,
+        "end": 11.22,
+        "text": "whisk it together with shredded coconut and a little vanilla, then pour it into a mold,",
+        "words": [
+          {
+            "word": "whisk",
+            "start": 6.12,
+            "end": 6.402,
+            "score": 0.815
+          },
+          {
+            "word": "it",
+            "start": 6.422,
+            "end": 6.502,
+            "score": 0.526
+          },
+          {
+            "word": "together",
+            "start": 6.542,
+            "end": 6.944,
+            "score": 0.899
+          },
+          {
+            "word": "with",
+            "start": 6.984,
+            "end": 7.124,
+            "score": 0.798
+          },
+          {
+            "word": "shredded",
+            "start": 7.205,
+            "end": 7.546,
+            "score": 0.888
+          },
+          {
+            "word": "coconut",
+            "start": 7.586,
+            "end": 8.108,
+            "score": 0.774
+          },
+          {
+            "word": "and",
+            "start": 8.65,
+            "end": 8.75,
+            "score": 0.844
+          },
+          {
+            "word": "a",
+            "start": 8.791,
+            "end": 8.811,
+            "score": 0.995
+          },
+          {
+            "word": "little",
+            "start": 8.851,
+            "end": 9.031,
+            "score": 0.917
+          },
+          {
+            "word": "vanilla,",
+            "start": 9.072,
+            "end": 9.533,
+            "score": 0.905
+          },
+          {
+            "word": "then",
+            "start": 9.814,
+            "end": 9.995,
+            "score": 0.789
+          },
+          {
+            "word": "pour",
+            "start": 10.055,
+            "end": 10.316,
+            "score": 0.737
+          },
+          {
+            "word": "it",
+            "start": 10.357,
+            "end": 10.417,
+            "score": 0.748
+          },
+          {
+            "word": "into",
+            "start": 10.497,
+            "end": 10.758,
+            "score": 0.862
+          },
+          {
+            "word": "a",
+            "start": 10.798,
+            "end": 10.818,
+            "score": 0.997
+          },
+          {
+            "word": "mold,",
+            "start": 10.899,
+            "end": 11.22,
+            "score": 0.809
+          }
+        ]
+      },
+      {
+        "start": 11.441,
+        "end": 13.869,
+        "text": "bake it for 30 minutes, and let it chill.",
+        "words": [
+          {
+            "word": "bake",
+            "start": 11.441,
+            "end": 11.661,
+            "score": 0.885
+          },
+          {
+            "word": "it",
+            "start": 11.681,
+            "end": 11.742,
+            "score": 0.746
+          },
+          {
+            "word": "for",
+            "start": 11.782,
+            "end": 11.902,
+            "score": 0.834
+          },
+          {
+            "word": "30",
+            "start": 11.983,
+            "end": 12.284,
+            "score": 0.542
+          },
+          {
+            "word": "minutes,",
+            "start": 12.324,
+            "end": 12.685,
+            "score": 0.848
+          },
+          {
+            "word": "and",
+            "start": 13.107,
+            "end": 13.207,
+            "score": 0.717
+          },
+          {
+            "word": "let",
+            "start": 13.247,
+            "end": 13.388,
+            "score": 0.842
+          },
+          {
+            "word": "it",
+            "start": 13.428,
+            "end": 13.488,
+            "score": 0.749
+          },
+          {
+            "word": "chill.",
+            "start": 13.568,
+            "end": 13.869,
+            "score": 0.876
+          }
+        ]
+      },
+      {
+        "start": 14.17,
+        "end": 16.037,
+        "text": "You end up with a fluffy coconut cake.",
+        "words": [
+          {
+            "word": "You",
+            "start": 14.17,
+            "end": 14.291,
+            "score": 0.848
+          },
+          {
+            "word": "end",
+            "start": 14.351,
+            "end": 14.472,
+            "score": 0.829
+          },
+          {
+            "word": "up",
+            "start": 14.532,
+            "end": 14.592,
+            "score": 0.654
+          },
+          {
+            "word": "with",
+            "start": 14.632,
+            "end": 14.773,
+            "score": 0.781
+          },
+          {
+            "word": "a",
+            "start": 14.813,
+            "end": 14.833,
+            "score": 0.976
+          },
+          {
+            "word": "fluffy",
+            "start": 14.933,
+            "end": 15.295,
+            "score": 0.939
+          },
+          {
+            "word": "coconut",
+            "start": 15.335,
+            "end": 15.736,
+            "score": 0.817
+          },
+          {
+            "word": "cake.",
+            "start": 15.756,
+            "end": 16.037,
+            "score": 0.964
+          }
+        ]
+      },
+      {
+        "start": 16.378,
+        "end": 16.8,
+        "text": "It not only",
+        "words": [
+          {
+            "word": "It",
+            "start": 16.378,
+            "end": 16.459,
+            "score": 0.633
+          },
+          {
+            "word": "not",
+            "start": 16.519,
+            "end": 16.659,
+            "score": 0.866
+          },
+          {
+            "word": "only",
+            "start": 16.72,
+            "end": 16.8,
+            "score": 0.498
+          }
+        ]
+      },
+      {
+        "start": 16.941,
+        "end": 22.32,
+        "text": "tastes amazing, but it is light on the stomach, loaded with healthy fats, and will not send your",
+        "words": [
+          {
+            "word": "tastes",
+            "start": 16.941,
+            "end": 17.181,
+            "score": 0.848
+          },
+          {
+            "word": "amazing,",
+            "start": 17.262,
+            "end": 17.784,
+            "score": 0.97
+          },
+          {
+            "word": "but",
+            "start": 18.085,
+            "end": 18.205,
+            "score": 0.672
+          },
+          {
+            "word": "it",
+            "start": 18.265,
+            "end": 18.305,
+            "score": 0.978
+          },
+          {
+            "word": "is",
+            "start": 18.386,
+            "end": 18.466,
+            "score": 0.667
+          },
+          {
+            "word": "light",
+            "start": 18.607,
+            "end": 18.847,
+            "score": 0.887
+          },
+          {
+            "word": "on",
+            "start": 18.948,
+            "end": 19.008,
+            "score": 0.99
+          },
+          {
+            "word": "the",
+            "start": 19.048,
+            "end": 19.149,
+            "score": 0.718
+          },
+          {
+            "word": "stomach,",
+            "start": 19.189,
+            "end": 19.57,
+            "score": 0.873
+          },
+          {
+            "word": "loaded",
+            "start": 20.072,
+            "end": 20.393,
+            "score": 0.47
+          },
+          {
+            "word": "with",
+            "start": 20.433,
+            "end": 20.574,
+            "score": 0.816
+          },
+          {
+            "word": "healthy",
+            "start": 20.614,
+            "end": 20.915,
+            "score": 0.836
+          },
+          {
+            "word": "fats,",
+            "start": 20.975,
+            "end": 21.296,
+            "score": 0.937
+          },
+          {
+            "word": "and",
+            "start": 21.577,
+            "end": 21.658,
+            "score": 0.926
+          },
+          {
+            "word": "will",
+            "start": 21.678,
+            "end": 21.858,
+            "score": 0.972
+          },
+          {
+            "word": "not",
+            "start": 21.919,
+            "end": 22.079,
+            "score": 0.81
+          },
+          {
+            "word": "send",
+            "start": 22.139,
+            "end": 22.22,
+            "score": 0.249
+          },
+          {
+            "word": "your",
+            "start": 22.24,
+            "end": 22.32,
+            "score": 0.0
+          }
+        ]
+      },
+      {
+        "start": 22.481,
+        "end": 23.806,
+        "text": "blood sugar through the roof, baby.",
+        "words": [
+          {
+            "word": "blood",
+            "start": 22.481,
+            "end": 22.681,
+            "score": 0.971
+          },
+          {
+            "word": "sugar",
+            "start": 22.722,
+            "end": 22.922,
+            "score": 0.994
+          },
+          {
+            "word": "through",
+            "start": 22.963,
+            "end": 23.123,
+            "score": 0.931
+          },
+          {
+            "word": "the",
+            "start": 23.143,
+            "end": 23.224,
+            "score": 0.833
+          },
+          {
+            "word": "roof,",
+            "start": 23.264,
+            "end": 23.485,
+            "score": 0.991
+          },
+          {
+            "word": "baby.",
+            "start": 23.525,
+            "end": 23.806,
+            "score": 0.978
+          }
+        ]
+      },
+      {
+        "start": 24.167,
+        "end": 24.87,
+        "text": "And the best part?",
+        "words": [
+          {
+            "word": "And",
+            "start": 24.167,
+            "end": 24.248,
+            "score": 0.917
+          },
+          {
+            "word": "the",
+            "start": 24.268,
+            "end": 24.348,
+            "score": 0.838
+          },
+          {
+            "word": "best",
+            "start": 24.368,
+            "end": 24.569,
+            "score": 0.728
+          },
+          {
+            "word": "part?",
+            "start": 24.609,
+            "end": 24.87,
+            "score": 0.916
+          }
+        ]
+      },
+      {
+        "start": 25.211,
+        "end": 27.36,
+        "text": "The eggs and yogurt carry a massive dose of",
+        "words": [
+          {
+            "word": "The",
+            "start": 25.211,
+            "end": 25.332,
+            "score": 0.877
+          },
+          {
+            "word": "eggs",
+            "start": 25.432,
+            "end": 25.613,
+            "score": 0.905
+          },
+          {
+            "word": "and",
+            "start": 25.673,
+            "end": 25.754,
+            "score": 0.823
+          },
+          {
+            "word": "yogurt",
+            "start": 25.774,
+            "end": 26.135,
+            "score": 0.765
+          },
+          {
+            "word": "carry",
+            "start": 26.175,
+            "end": 26.476,
+            "score": 0.877
+          },
+          {
+            "word": "a",
+            "start": 26.537,
+            "end": 26.557,
+            "score": 0.999
+          },
+          {
+            "word": "massive",
+            "start": 26.697,
+            "end": 27.079,
+            "score": 0.932
+          },
+          {
+            "word": "dose",
+            "start": 27.119,
+            "end": 27.3,
+            "score": 0.966
+          },
+          {
+            "word": "of",
+            "start": 27.32,
+            "end": 27.36,
+            "score": 0.0
+          }
+        ]
+      },
+      {
+        "start": 27.42,
+        "end": 27.922,
+        "text": "protein.",
+        "words": [
+          {
+            "word": "protein.",
+            "start": 27.42,
+            "end": 27.922,
+            "score": 0.798
+          }
+        ]
+      },
+      {
+        "start": 28.303,
+        "end": 31.432,
+        "text": "No refined sugar, no flour, high protein.",
+        "words": [
+          {
+            "word": "No",
+            "start": 28.303,
+            "end": 28.443,
+            "score": 0.987
+          },
+          {
+            "word": "refined",
+            "start": 28.503,
+            "end": 28.864,
+            "score": 0.851
+          },
+          {
+            "word": "sugar,",
+            "start": 28.924,
+            "end": 29.225,
+            "score": 0.844
+          },
+          {
+            "word": "no",
+            "start": 29.606,
+            "end": 29.767,
+            "score": 0.88
+          },
+          {
+            "word": "flour,",
+            "start": 29.847,
+            "end": 30.268,
+            "score": 0.918
+          },
+          {
+            "word": "high",
+            "start": 30.69,
+            "end": 30.89,
+            "score": 0.523
+          },
+          {
+            "word": "protein.",
+            "start": 30.91,
+            "end": 31.432,
+            "score": 0.804
+          }
+        ]
+      },
+      {
+        "start": 31.753,
+        "end": 34.32,
+        "text": "I got recipes like this for every sweet treat you",
+        "words": [
+          {
+            "word": "I",
+            "start": 31.753,
+            "end": 31.833,
+            "score": 0.968
+          },
+          {
+            "word": "got",
+            "start": 31.853,
+            "end": 31.993,
+            "score": 0.679
+          },
+          {
+            "word": "recipes",
+            "start": 32.033,
+            "end": 32.455,
+            "score": 0.781
+          },
+          {
+            "word": "like",
+            "start": 32.495,
+            "end": 32.655,
+            "score": 0.93
+          },
+          {
+            "word": "this",
+            "start": 32.695,
+            "end": 32.916,
+            "score": 0.866
+          },
+          {
+            "word": "for",
+            "start": 32.996,
+            "end": 33.137,
+            "score": 0.859
+          },
+          {
+            "word": "every",
+            "start": 33.397,
+            "end": 33.678,
+            "score": 0.638
+          },
+          {
+            "word": "sweet",
+            "start": 33.738,
+            "end": 33.999,
+            "score": 0.706
+          },
+          {
+            "word": "treat",
+            "start": 34.039,
+            "end": 34.24,
+            "score": 0.824
+          },
+          {
+            "word": "you",
+            "start": 34.26,
+            "end": 34.32,
+            "score": 0.0
+          }
+        ]
+      },
+      {
+        "start": 34.38,
+        "end": 34.963,
+        "text": "can think of.",
+        "words": [
+          {
+            "word": "can",
+            "start": 34.38,
+            "end": 34.521,
+            "score": 0.962
+          },
+          {
+            "word": "think",
+            "start": 34.561,
+            "end": 34.742,
+            "score": 0.998
+          },
+          {
+            "word": "of.",
+            "start": 34.882,
+            "end": 34.963,
+            "score": 0.96
+          }
+        ]
+      },
+      {
+        "start": 35.344,
+        "end": 39.2,
+        "text": "Comment yes if you want more recipes like this and follow me so you do not miss a single",
+        "words": [
+          {
+            "word": "Comment",
+            "start": 35.344,
+            "end": 35.686,
+            "score": 0.869
+          },
+          {
+            "word": "yes",
+            "start": 35.726,
+            "end": 35.967,
+            "score": 0.728
+          },
+          {
+            "word": "if",
+            "start": 36.047,
+            "end": 36.107,
+            "score": 0.917
+          },
+          {
+            "word": "you",
+            "start": 36.127,
+            "end": 36.228,
+            "score": 0.834
+          },
+          {
+            "word": "want",
+            "start": 36.268,
+            "end": 36.388,
+            "score": 0.827
+          },
+          {
+            "word": "more",
+            "start": 36.429,
+            "end": 36.569,
+            "score": 0.754
+          },
+          {
+            "word": "recipes",
+            "start": 36.609,
+            "end": 37.011,
+            "score": 0.757
+          },
+          {
+            "word": "like",
+            "start": 37.031,
+            "end": 37.192,
+            "score": 0.692
+          },
+          {
+            "word": "this",
+            "start": 37.232,
+            "end": 37.413,
+            "score": 0.853
+          },
+          {
+            "word": "and",
+            "start": 37.513,
+            "end": 37.593,
+            "score": 0.834
+          },
+          {
+            "word": "follow",
+            "start": 37.674,
+            "end": 37.975,
+            "score": 0.866
+          },
+          {
+            "word": "me",
+            "start": 38.015,
+            "end": 38.116,
+            "score": 0.833
+          },
+          {
+            "word": "so",
+            "start": 38.156,
+            "end": 38.276,
+            "score": 0.783
+          },
+          {
+            "word": "you",
+            "start": 38.296,
+            "end": 38.397,
+            "score": 0.843
+          },
+          {
+            "word": "do",
+            "start": 38.437,
+            "end": 38.537,
+            "score": 0.842
+          },
+          {
+            "word": "not",
+            "start": 38.577,
+            "end": 38.718,
+            "score": 0.906
+          },
+          {
+            "word": "miss",
+            "start": 38.758,
+            "end": 38.919,
+            "score": 0.837
+          },
+          {
+            "word": "a",
+            "start": 38.959,
+            "end": 38.999,
+            "score": 0.512
+          },
+          {
+            "word": "single",
+            "start": 39.019,
+            "end": 39.2,
+            "score": 0.661
+          }
+        ]
+      },
+      {
+        "start": 41.422,
+        "end": 42.533,
+        "text": "one.",
+        "words": [
+          {
+            "word": "one.",
+            "start": 41.422,
+            "end": 42.533,
+            "score": 0.674
+          }
+        ]
+      }
+    ],
+    "words": [
+      {
+        "word": "How",
+        "start": 0.141,
+        "end": 0.281,
+        "score": 0.85
+      },
+      {
+        "word": "old",
+        "start": 0.382,
+        "end": 0.502,
+        "score": 0.522
+      },
+      {
+        "word": "were",
+        "start": 0.542,
+        "end": 0.663,
+        "score": 0.834
+      },
+      {
+        "word": "you",
+        "start": 0.683,
+        "end": 0.783,
+        "score": 0.993
+      },
+      {
+        "word": "when",
+        "start": 0.824,
+        "end": 0.944,
+        "score": 0.875
+      },
+      {
+        "word": "you",
+        "start": 0.964,
+        "end": 1.125,
+        "score": 0.913
+      },
+      {
+        "word": "found",
+        "start": 1.165,
+        "end": 1.426,
+        "score": 0.845
+      },
+      {
+        "word": "out",
+        "start": 1.567,
+        "end": 1.688,
+        "score": 0.767
+      },
+      {
+        "word": "that",
+        "start": 1.969,
+        "end": 2.109,
+        "score": 0.878
+      },
+      {
+        "word": "if",
+        "start": 2.15,
+        "end": 2.21,
+        "score": 0.797
+      },
+      {
+        "word": "you",
+        "start": 2.23,
+        "end": 2.371,
+        "score": 0.75
+      },
+      {
+        "word": "mixed",
+        "start": 2.431,
+        "end": 2.692,
+        "score": 0.796
+      },
+      {
+        "word": "three",
+        "start": 2.772,
+        "end": 3.054,
+        "score": 0.845
+      },
+      {
+        "word": "eggs",
+        "start": 3.234,
+        "end": 3.496,
+        "score": 0.708
+      },
+      {
+        "word": "into",
+        "start": 3.656,
+        "end": 3.857,
+        "score": 0.877
+      },
+      {
+        "word": "Greek",
+        "start": 3.897,
+        "end": 4.159,
+        "score": 0.95
+      },
+      {
+        "word": "yogurt,",
+        "start": 4.199,
+        "end": 4.48,
+        "score": 0.519
+      },
+      {
+        "word": "whisk",
+        "start": 6.12,
+        "end": 6.402,
+        "score": 0.815
+      },
+      {
+        "word": "it",
+        "start": 6.422,
+        "end": 6.502,
+        "score": 0.526
+      },
+      {
+        "word": "together",
+        "start": 6.542,
+        "end": 6.944,
+        "score": 0.899
+      },
+      {
+        "word": "with",
+        "start": 6.984,
+        "end": 7.124,
+        "score": 0.798
+      },
+      {
+        "word": "shredded",
+        "start": 7.205,
+        "end": 7.546,
+        "score": 0.888
+      },
+      {
+        "word": "coconut",
+        "start": 7.586,
+        "end": 8.108,
+        "score": 0.774
+      },
+      {
+        "word": "and",
+        "start": 8.65,
+        "end": 8.75,
+        "score": 0.844
+      },
+      {
+        "word": "a",
+        "start": 8.791,
+        "end": 8.811,
+        "score": 0.995
+      },
+      {
+        "word": "little",
+        "start": 8.851,
+        "end": 9.031,
+        "score": 0.917
+      },
+      {
+        "word": "vanilla,",
+        "start": 9.072,
+        "end": 9.533,
+        "score": 0.905
+      },
+      {
+        "word": "then",
+        "start": 9.814,
+        "end": 9.995,
+        "score": 0.789
+      },
+      {
+        "word": "pour",
+        "start": 10.055,
+        "end": 10.316,
+        "score": 0.737
+      },
+      {
+        "word": "it",
+        "start": 10.357,
+        "end": 10.417,
+        "score": 0.748
+      },
+      {
+        "word": "into",
+        "start": 10.497,
+        "end": 10.758,
+        "score": 0.862
+      },
+      {
+        "word": "a",
+        "start": 10.798,
+        "end": 10.818,
+        "score": 0.997
+      },
+      {
+        "word": "mold,",
+        "start": 10.899,
+        "end": 11.22,
+        "score": 0.809
+      },
+      {
+        "word": "bake",
+        "start": 11.441,
+        "end": 11.661,
+        "score": 0.885
+      },
+      {
+        "word": "it",
+        "start": 11.681,
+        "end": 11.742,
+        "score": 0.746
+      },
+      {
+        "word": "for",
+        "start": 11.782,
+        "end": 11.902,
+        "score": 0.834
+      },
+      {
+        "word": "30",
+        "start": 11.983,
+        "end": 12.284,
+        "score": 0.542
+      },
+      {
+        "word": "minutes,",
+        "start": 12.324,
+        "end": 12.685,
+        "score": 0.848
+      },
+      {
+        "word": "and",
+        "start": 13.107,
+        "end": 13.207,
+        "score": 0.717
+      },
+      {
+        "word": "let",
+        "start": 13.247,
+        "end": 13.388,
+        "score": 0.842
+      },
+      {
+        "word": "it",
+        "start": 13.428,
+        "end": 13.488,
+        "score": 0.749
+      },
+      {
+        "word": "chill.",
+        "start": 13.568,
+        "end": 13.869,
+        "score": 0.876
+      },
+      {
+        "word": "You",
+        "start": 14.17,
+        "end": 14.291,
+        "score": 0.848
+      },
+      {
+        "word": "end",
+        "start": 14.351,
+        "end": 14.472,
+        "score": 0.829
+      },
+      {
+        "word": "up",
+        "start": 14.532,
+        "end": 14.592,
+        "score": 0.654
+      },
+      {
+        "word": "with",
+        "start": 14.632,
+        "end": 14.773,
+        "score": 0.781
+      },
+      {
+        "word": "a",
+        "start": 14.813,
+        "end": 14.833,
+        "score": 0.976
+      },
+      {
+        "word": "fluffy",
+        "start": 14.933,
+        "end": 15.295,
+        "score": 0.939
+      },
+      {
+        "word": "coconut",
+        "start": 15.335,
+        "end": 15.736,
+        "score": 0.817
+      },
+      {
+        "word": "cake.",
+        "start": 15.756,
+        "end": 16.037,
+        "score": 0.964
+      },
+      {
+        "word": "It",
+        "start": 16.378,
+        "end": 16.459,
+        "score": 0.633
+      },
+      {
+        "word": "not",
+        "start": 16.519,
+        "end": 16.659,
+        "score": 0.866
+      },
+      {
+        "word": "only",
+        "start": 16.72,
+        "end": 16.8,
+        "score": 0.498
+      },
+      {
+        "word": "tastes",
+        "start": 16.941,
+        "end": 17.181,
+        "score": 0.848
+      },
+      {
+        "word": "amazing,",
+        "start": 17.262,
+        "end": 17.784,
+        "score": 0.97
+      },
+      {
+        "word": "but",
+        "start": 18.085,
+        "end": 18.205,
+        "score": 0.672
+      },
+      {
+        "word": "it",
+        "start": 18.265,
+        "end": 18.305,
+        "score": 0.978
+      },
+      {
+        "word": "is",
+        "start": 18.386,
+        "end": 18.466,
+        "score": 0.667
+      },
+      {
+        "word": "light",
+        "start": 18.607,
+        "end": 18.847,
+        "score": 0.887
+      },
+      {
+        "word": "on",
+        "start": 18.948,
+        "end": 19.008,
+        "score": 0.99
+      },
+      {
+        "word": "the",
+        "start": 19.048,
+        "end": 19.149,
+        "score": 0.718
+      },
+      {
+        "word": "stomach,",
+        "start": 19.189,
+        "end": 19.57,
+        "score": 0.873
+      },
+      {
+        "word": "loaded",
+        "start": 20.072,
+        "end": 20.393,
+        "score": 0.47
+      },
+      {
+        "word": "with",
+        "start": 20.433,
+        "end": 20.574,
+        "score": 0.816
+      },
+      {
+        "word": "healthy",
+        "start": 20.614,
+        "end": 20.915,
+        "score": 0.836
+      },
+      {
+        "word": "fats,",
+        "start": 20.975,
+        "end": 21.296,
+        "score": 0.937
+      },
+      {
+        "word": "and",
+        "start": 21.577,
+        "end": 21.658,
+        "score": 0.926
+      },
+      {
+        "word": "will",
+        "start": 21.678,
+        "end": 21.858,
+        "score": 0.972
+      },
+      {
+        "word": "not",
+        "start": 21.919,
+        "end": 22.079,
+        "score": 0.81
+      },
+      {
+        "word": "send",
+        "start": 22.139,
+        "end": 22.22,
+        "score": 0.249
+      },
+      {
+        "word": "your",
+        "start": 22.24,
+        "end": 22.32,
+        "score": 0.0
+      },
+      {
+        "word": "blood",
+        "start": 22.481,
+        "end": 22.681,
+        "score": 0.971
+      },
+      {
+        "word": "sugar",
+        "start": 22.722,
+        "end": 22.922,
+        "score": 0.994
+      },
+      {
+        "word": "through",
+        "start": 22.963,
+        "end": 23.123,
+        "score": 0.931
+      },
+      {
+        "word": "the",
+        "start": 23.143,
+        "end": 23.224,
+        "score": 0.833
+      },
+      {
+        "word": "roof,",
+        "start": 23.264,
+        "end": 23.485,
+        "score": 0.991
+      },
+      {
+        "word": "baby.",
+        "start": 23.525,
+        "end": 23.806,
+        "score": 0.978
+      },
+      {
+        "word": "And",
+        "start": 24.167,
+        "end": 24.248,
+        "score": 0.917
+      },
+      {
+        "word": "the",
+        "start": 24.268,
+        "end": 24.348,
+        "score": 0.838
+      },
+      {
+        "word": "best",
+        "start": 24.368,
+        "end": 24.569,
+        "score": 0.728
+      },
+      {
+        "word": "part?",
+        "start": 24.609,
+        "end": 24.87,
+        "score": 0.916
+      },
+      {
+        "word": "The",
+        "start": 25.211,
+        "end": 25.332,
+        "score": 0.877
+      },
+      {
+        "word": "eggs",
+        "start": 25.432,
+        "end": 25.613,
+        "score": 0.905
+      },
+      {
+        "word": "and",
+        "start": 25.673,
+        "end": 25.754,
+        "score": 0.823
+      },
+      {
+        "word": "yogurt",
+        "start": 25.774,
+        "end": 26.135,
+        "score": 0.765
+      },
+      {
+        "word": "carry",
+        "start": 26.175,
+        "end": 26.476,
+        "score": 0.877
+      },
+      {
+        "word": "a",
+        "start": 26.537,
+        "end": 26.557,
+        "score": 0.999
+      },
+      {
+        "word": "massive",
+        "start": 26.697,
+        "end": 27.079,
+        "score": 0.932
+      },
+      {
+        "word": "dose",
+        "start": 27.119,
+        "end": 27.3,
+        "score": 0.966
+      },
+      {
+        "word": "of",
+        "start": 27.32,
+        "end": 27.36,
+        "score": 0.0
+      },
+      {
+        "word": "protein.",
+        "start": 27.42,
+        "end": 27.922,
+        "score": 0.798
+      },
+      {
+        "word": "No",
+        "start": 28.303,
+        "end": 28.443,
+        "score": 0.987
+      },
+      {
+        "word": "refined",
+        "start": 28.503,
+        "end": 28.864,
+        "score": 0.851
+      },
+      {
+        "word": "sugar,",
+        "start": 28.924,
+        "end": 29.225,
+        "score": 0.844
+      },
+      {
+        "word": "no",
+        "start": 29.606,
+        "end": 29.767,
+        "score": 0.88
+      },
+      {
+        "word": "flour,",
+        "start": 29.847,
+        "end": 30.268,
+        "score": 0.918
+      },
+      {
+        "word": "high",
+        "start": 30.69,
+        "end": 30.89,
+        "score": 0.523
+      },
+      {
+        "word": "protein.",
+        "start": 30.91,
+        "end": 31.432,
+        "score": 0.804
+      },
+      {
+        "word": "I",
+        "start": 31.753,
+        "end": 31.833,
+        "score": 0.968
+      },
+      {
+        "word": "got",
+        "start": 31.853,
+        "end": 31.993,
+        "score": 0.679
+      },
+      {
+        "word": "recipes",
+        "start": 32.033,
+        "end": 32.455,
+        "score": 0.781
+      },
+      {
+        "word": "like",
+        "start": 32.495,
+        "end": 32.655,
+        "score": 0.93
+      },
+      {
+        "word": "this",
+        "start": 32.695,
+        "end": 32.916,
+        "score": 0.866
+      },
+      {
+        "word": "for",
+        "start": 32.996,
+        "end": 33.137,
+        "score": 0.859
+      },
+      {
+        "word": "every",
+        "start": 33.397,
+        "end": 33.678,
+        "score": 0.638
+      },
+      {
+        "word": "sweet",
+        "start": 33.738,
+        "end": 33.999,
+        "score": 0.706
+      },
+      {
+        "word": "treat",
+        "start": 34.039,
+        "end": 34.24,
+        "score": 0.824
+      },
+      {
+        "word": "you",
+        "start": 34.26,
+        "end": 34.32,
+        "score": 0.0
+      },
+      {
+        "word": "can",
+        "start": 34.38,
+        "end": 34.521,
+        "score": 0.962
+      },
+      {
+        "word": "think",
+        "start": 34.561,
+        "end": 34.742,
+        "score": 0.998
+      },
+      {
+        "word": "of.",
+        "start": 34.882,
+        "end": 34.963,
+        "score": 0.96
+      },
+      {
+        "word": "Comment",
+        "start": 35.344,
+        "end": 35.686,
+        "score": 0.869
+      },
+      {
+        "word": "yes",
+        "start": 35.726,
+        "end": 35.967,
+        "score": 0.728
+      },
+      {
+        "word": "if",
+        "start": 36.047,
+        "end": 36.107,
+        "score": 0.917
+      },
+      {
+        "word": "you",
+        "start": 36.127,
+        "end": 36.228,
+        "score": 0.834
+      },
+      {
+        "word": "want",
+        "start": 36.268,
+        "end": 36.388,
+        "score": 0.827
+      },
+      {
+        "word": "more",
+        "start": 36.429,
+        "end": 36.569,
+        "score": 0.754
+      },
+      {
+        "word": "recipes",
+        "start": 36.609,
+        "end": 37.011,
+        "score": 0.757
+      },
+      {
+        "word": "like",
+        "start": 37.031,
+        "end": 37.192,
+        "score": 0.692
+      },
+      {
+        "word": "this",
+        "start": 37.232,
+        "end": 37.413,
+        "score": 0.853
+      },
+      {
+        "word": "and",
+        "start": 37.513,
+        "end": 37.593,
+        "score": 0.834
+      },
+      {
+        "word": "follow",
+        "start": 37.674,
+        "end": 37.975,
+        "score": 0.866
+      },
+      {
+        "word": "me",
+        "start": 38.015,
+        "end": 38.116,
+        "score": 0.833
+      },
+      {
+        "word": "so",
+        "start": 38.156,
+        "end": 38.276,
+        "score": 0.783
+      },
+      {
+        "word": "you",
+        "start": 38.296,
+        "end": 38.397,
+        "score": 0.843
+      },
+      {
+        "word": "do",
+        "start": 38.437,
+        "end": 38.537,
+        "score": 0.842
+      },
+      {
+        "word": "not",
+        "start": 38.577,
+        "end": 38.718,
+        "score": 0.906
+      },
+      {
+        "word": "miss",
+        "start": 38.758,
+        "end": 38.919,
+        "score": 0.837
+      },
+      {
+        "word": "a",
+        "start": 38.959,
+        "end": 38.999,
+        "score": 0.512
+      },
+      {
+        "word": "single",
+        "start": 39.019,
+        "end": 39.2,
+        "score": 0.661
+      },
+      {
+        "word": "one.",
+        "start": 41.422,
+        "end": 42.533,
+        "score": 0.674
+      }
+    ]
+  },
+  "params": {
+    "timeline_fps": 5,
+    "scene_threshold": 0.2,
+    "model": "small.en",
+    "language": "en",
+    "device": "cpu",
+    "compute_type": "int8",
+    "cpu_threads": 4,
+    "jobs": 4,
+    "alignment": "whisperx",
+    "align_model": null,
+    "word_timestamps": false,
+    "no_audio": false,
+    "allow_no_audio": false,
+    "max_frames": 20000,
+    "command_timeout": 300
+  },
+  "environment": {
+    "os": "macOS-27.0.1-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.15",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "whisperx": "3.8.6",
+      "ctranslate2": "4.8.2",
+      "Pillow": "12.3.0",
+      "av": "18.0.0",
+      "torch": "2.8.0",
+      "torchaudio": "2.8.0"
+    },
+    "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+    "ffprobe": "/opt/homebrew/bin/ffprobe"
+  },
+  "errors": [],
+  "coverage": {
+    "source_duration_s": 39.680045,
+    "sample_interval_s": 0.2,
+    "timeline_count": 198,
+    "timestamp_basis": "fps_filter_sampling_grid",
+    "visual_review_performed": false
+  },
+  "elapsed_seconds": 44.853
+}

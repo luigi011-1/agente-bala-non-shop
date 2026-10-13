@@ -1,0 +1,55 @@
+{
+  "task_id": "d783597c-485e-4db9-9f97-9c0eea9a7bf0",
+  "reviewer": "bala-revisor",
+  "independent": true,
+  "status": "APPROVED",
+  "checks": [
+    {
+      "name": "Identidade e integridade da entrega revisada",
+      "result": "PASS",
+      "evidence": "TASK.json aberto; os cinco deliverable_fingerprints conferem com SHA256. Copia Desktop byte-identica ao MP4 fingerprinted."
+    },
+    {
+      "name": "Produto, producao e autorizacao",
+      "result": "PASS",
+      "evidence": "AGENTS, WORKFLOW_AURALY e CHECKPOINT V01 consultados; Auraly SALE organico Avery, roteiro aprovado por Luigi e excecao de adaptacao registrada."
+    },
+    {
+      "name": "Formato e tamanho do video final",
+      "result": "PASS",
+      "evidence": "ffprobe independente H264 AAC,1080x1920,30fps,37.733333s,26491817 bytes (<30MB)."
+    },
+    {
+      "name": "Relatorio final",
+      "result": "PASS",
+      "evidence": "RELATORIO atual todos gates OK; relatorio anterior com falhas preservado e nao aprovado."
+    },
+    {
+      "name": "Legibilidade e posicao das legendas",
+      "result": "PASS",
+      "evidence": "Revisor abriu legendas.png atual pessoalmente: topo1300 libera rosto/labios nas amostras; texto legivel, Stories/bio/follow e selos777/222/bandeiras visiveis."
+    },
+    {
+      "name": "Cortes e alertas de mistura",
+      "result": "PASS",
+      "evidence": "cortes.png visto pessoalmente sem mistura evidente; ghostchecker readonly independente retornou[]. Alerta11.73 corresponde ao take3 frame0.133333, MAE0.250/255; falso positivo de fronteira anterior."
+    },
+    {
+      "name": "Cobertura de escuta direta",
+      "result": "NOT_APPLICABLE",
+      "evidence": "Parecer QA visual e integridade. Fala Avery documentada pelo editor100%; revisor nao realizou escuta direta integral."
+    },
+    {
+      "name": "Jordan e demais combinacoes",
+      "result": "NOT_APPLICABLE",
+      "evidence": "Apenas V01/Avery. Jordan V01 tem leitura/lectura confirmado por dois transcritores; nenhuma extensao desta aprovacao ao lote."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "WARNING",
+      "message": "Inspecao visual por contact sheets e verificacoes nos cortes nao equivale a observar cada quadro ou certificar todo audio diretamente.",
+      "evidence": "cortes.png e legendas.png abertos pessoalmente; ghostchecker reproduzido independentemente; sem alegacao de publicacao/performance/aprovacao do lote."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# Relatório de edição · v03_jordan_prosperidade
+
+- Ordem dos takes (pela fala): 1. Person_speaking_to_camera_20261011172525_7.mp4 (T1) → 2. Person_speaking_to_camera_20261011172525_6.mp4 (T2) → 3. Person_speaking_to_camera_20261011172525_3.mp4 (T3) → 4. Person_speaking_to_camera_20261011172525_5.mp4 (T4) → 5. Person_speaking_to_camera_20261011172525_2.mp4 (T5) → 6. Person_speaking_to_camera_20261011172525_4.mp4 (T6) → 7. Person_speaking_to_camera_20261011172525.mp4 (T7) → 8. Person_speaking_to_camera_20261011172525_9.mp4 (T8) → 9. Person_speaking_to_camera_20261011172525_8.mp4 (T9)
+- Produção: `auraly_prosperidade_2026_10_10_v03_1791675120440_jordan_es` (`producao/auraly_prosperidade_2026_10_10_v03_1791675120440_jordan_es/FLOW_JORDAN_VALE.md`), semelhança 99%
+- Exceção autorizada por Luigi, take 3: trocou "muestrame" por "moestrame"; áudio original mantido, legenda do roteiro aprovado.
+- Fala dos takes contra o roteiro: OK com exceção de pronúncia expressamente aceita; não significa identidade literal de 100%.
+  - T8: alerta Amara.org era alucinação do ASR na cauda 7,6–8,0 s. Conferência independente whisper.cpp do original e limpo_t08 preservou a mesma fala completa até “cómo continúa tu lectura”, encerrada em 7,400/7,380 s. Nenhuma fala inventada foi confirmada.
+  - T4: “y te la enseña” confirmado no original por whisper.cpp; a falta de y era erro do primeiro ASR.
+- Variação deste vídeo (rodízio): legenda padrao · SFX pop · fonte do pico anton
+- Acabamento HyperFrames: deslizando 2.7s (26% atrás do corpo), alto 15.2s (37% atrás do corpo), menciona 20.6s (27% atrás do corpo), abundancia 30.2s (25% atrás do corpo) · zoom sim · grão não · SFX pop
+- Sem silêncio fora da rampa: OK
+- Sem quadro fantasma nos cortes: OK
+- Legenda com o texto do roteiro (contagem bateu): OK
+- Nenhuma legenda com menos de 0,1s: OK
+- Vídeo em 1080x1920: OK
+- Duração 51.2s · 4.00 palavras/s · 26 trechos (0 rampas) · 56 legendas
+- Música: muscica feliz tiktok .mp3 (a partir de 0.5s, -18 dB da voz)
+- Estilo auraly · fala a 1.20x (alvo 4.0 palavras/s) · flash na entrada dos takes [2]; rampa nos takes [1]; selos 777/222
+- Arquivo final: v03_jordan_prosperidade_entrega.mp4, 26.103.069 bytes: OK, abaixo de 30 MB.
+- Inspeção visual final: OK em cortes.png, legendas.png e frame_follow_fim.png, extraídos da cópia final. Rosto/boca livres, selos 777/222 preservados, legenda final “al botón de seguir” completa no quadro.
+- QA por amostragem visual, conferência técnica e ASR independente dos takes críticos; não houve escuta humana integral.
+- Resultado final: OK para entrega com exceção explícita de pronúncia.

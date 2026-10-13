@@ -1,0 +1,45 @@
+{
+  "task_id": "a230dd1b-af9e-4c5b-a529-365754bbd7a4",
+  "reviewer": "bala-revisor",
+  "independent": true,
+  "status": "APPROVED",
+  "checks": [
+    {
+      "name": "Artefatos atuais e escopo",
+      "result": "PASS",
+      "evidence": "Reabri TASKv01_r2 e ROTEIRO base atualizado; nota agora diferencia extensão estrutural CTA de duração idiomática do corpo. Falas EN/ES e demais artefatos permanecem os examinados emR1. Checkpoint NOT_APPROVED, esperaLuigi intacta."
+    },
+    {
+      "name": "Fonte e fidelidade autorizada",
+      "result": "PASS",
+      "evidence": "Revisão pessoal de overview01-06 e frames0/19.6,manifest/transcript,ANALISE e Puzzle: nove pares medo/desarme, exortação/reassurance; roteiro mantém ordem/gancho selfie. Fonte visual probabilística e recuperação pela legenda claramente limitadas, sem certificado de áudio por ouvido."
+    },
+    {
+      "name": "Oferta, CTA e idiomas",
+      "result": "PASS",
+      "evidence": "Roteiros completos7takes EN/PT Avery/Devon eES/PT Jordan; 222→like/save→Stories/bio→followúltimo. Sem renda garantida/testemunho/nome/preço/funcionalidade alheia; Jordan luxo e roster atual confirmados nas anchors."
+    },
+    {
+      "name": "Checklists e ritmo",
+      "result": "PASS",
+      "evidence": "15/15 aplicáveis12N/A por fidelidade;13/13 envio aplicáveis. Palavras15-26/take; checar_frases V01 exit0. Duração47-55s exposta ao aprovador."
+    },
+    {
+      "name": "Pacotes, mídia e publicação",
+      "result": "NOT_APPLICABLE",
+      "evidence": "Não exigidos nesta etapa; revisão técnica não aprova porLuigi nem certifica áudio ouvido, mídia gerada, realismo, vendas ou publicação."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "WARNING",
+      "message": "A versão de venda tem47-55s versus23.43s original; oCTA representa parcela grande e precisa ficar visível na aprovação.",
+      "evidence": "ROTEIRO duração: corpo27-31,CTA20-24; estimativa textual declarada."
+    },
+    {
+      "severity": "WARNING",
+      "message": "Tempos iniciais da análise são aproximados; edição precisa usar palavras/alinhamento dos takes.",
+      "evidence": "ANALISE Death~1.6 versusmanifest2.31;Bankruptcy~3.1 versus3.91. Não afeta sequência autoral."
+    }
+  ]
+}

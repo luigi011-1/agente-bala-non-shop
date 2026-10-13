@@ -1,0 +1,55 @@
+{
+  "task_id": "e9be6eb5-3de5-4b0f-b1b1-b6b17cf7945a",
+  "reviewer": "bala-revisor",
+  "independent": true,
+  "status": "APPROVED",
+  "checks": [
+    {
+      "name": "Integridade",
+      "result": "PASS",
+      "evidence": "Revisor conferiu os nove fingerprints atuais do TASK."
+    },
+    {
+      "name": "Autorização",
+      "result": "PASS",
+      "evidence": "Aceitar somente dois de pronúncia: Jordan V01/V06 e V03/V03. Okay e ¿sí? V02 continuam bloqueados."
+    },
+    {
+      "name": "Formato",
+      "result": "PASS",
+      "evidence": "ffprobe independente H264/AAC 1080x1920 30fps 1165 quadros 38.833333s 26767148 bytes."
+    },
+    {
+      "name": "Fala e emendas",
+      "result": "PASS",
+      "evidence": "Exceção lectura/leitura explícita; ASR independente antes/depois preserva Quedarte sin nada e Dejar atrás a ciertas personas."
+    },
+    {
+      "name": "Visual",
+      "result": "PASS",
+      "evidence": "Revisor observou cortes.png, legendas.png, frame_correcao_visual.png e frame_follow.png. Rosto/boca livres, painel cobre gibberish com roteiro; selos777/222 preservados, follow completo."
+    },
+    {
+      "name": "Áudio na correção visual",
+      "result": "PASS",
+      "evidence": "SHA pacotes AAC independente igual: 80df0e817b07d7f0a570a97e11251a5de1bace44e2378ff7194fda1f5fe53fb7."
+    },
+    {
+      "name": "Escuta humana integral",
+      "result": "NOT_APPLICABLE",
+      "evidence": "Sem escuta direta integral; QA visual amostrado e ASR crítico."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "WARNING",
+      "message": "Pronúncia divergente aceita não é fala literal100%.",
+      "evidence": "V06 leitura áudio, lectura legenda."
+    },
+    {
+      "severity": "WARNING",
+      "message": "QA por amostragem.",
+      "evidence": "Parecer técnico não certifica cada quadro ou escuta humana integral."
+    }
+  ]
+}

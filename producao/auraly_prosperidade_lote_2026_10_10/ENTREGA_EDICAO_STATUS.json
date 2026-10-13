@@ -1,0 +1,70 @@
+{
+  "expected": 9,
+  "delivered": 4,
+  "blocked_missing_word": 2,
+  "devon_not_received": 3,
+  "accepted_pronunciations": 2,
+  "accepted_source_current_check": [
+    {
+      "file": "/Users/macbookairm2/Desktop/V01 - Véio ricasso/Person_speaking_to_camera_20261011143011_2.mp4",
+      "currently_present": false,
+      "current_hash_matches": null,
+      "previous_hash_verified_before_delivery": true
+    },
+    {
+      "file": "/Users/macbookairm2/Desktop/V03 - véio ricasso/Person_speaking_to_camera_20261011172525_3.mp4",
+      "currently_present": false,
+      "current_hash_matches": null,
+      "previous_hash_verified_before_delivery": true
+    }
+  ],
+  "delivered_files": [
+    {
+      "model": "V01",
+      "avatar": "avery_knox",
+      "final_file": "/Users/macbookairm2/Downloads/Videos_editados_Auraly_2026_10_11/V01_avery_knox/v01_avery_prosperidade_editado.mp4",
+      "sha256": "68209d43fc88608ba2e58bd535666caf4394436cb9451e233464a0f39f9e15e8",
+      "size_bytes": 26491817,
+      "duration_seconds": 37.733333
+    },
+    {
+      "model": "V01",
+      "avatar": "jordan_vale",
+      "final_file": "/Users/macbookairm2/Downloads/Videos_editados_Auraly_2026_10_11/V01_jordan_vale/v01_jordan_prosperidade_editado.mp4",
+      "sha256": "8f3dcc36181e52fb26ccfb704d32c360b91b9d9c26046a1699ad0380feaedce8",
+      "size_bytes": 26767148,
+      "duration_seconds": 38.833333
+    },
+    {
+      "model": "V03",
+      "avatar": "avery_knox",
+      "final_file": "/Users/macbookairm2/Downloads/Videos_editados_Auraly_2026_10_11/V03_avery_knox/v03_avery_prosperidade_editado.mp4",
+      "sha256": "83fc724d44e7f47f492b2d63668d58097bda023d3e453f38cf9dbbe3f58a09e2",
+      "size_bytes": 26314448,
+      "duration_seconds": 50.8
+    },
+    {
+      "model": "V03",
+      "avatar": "jordan_vale",
+      "final_file": "/Users/macbookairm2/Downloads/Videos_editados_Auraly_2026_10_11/V03_jordan_vale/v03_jordan_prosperidade_editado.mp4",
+      "sha256": "24094cff1395fd1999d63f9310a5d5000171603843a142cf1439e04de378c37a",
+      "size_bytes": 26103069,
+      "duration_seconds": 51.2
+    }
+  ],
+  "blocking_items": [
+    {
+      "model": "V02",
+      "avatar": "avery_knox",
+      "reason": "V01: falta Okay na abertura; confirmado por FasterWhisper e whisper.cpp."
+    },
+    {
+      "model": "V02",
+      "avatar": "jordan_vale",
+      "reason": "V02: falta si apos merecerlo; confirmado por FasterWhisper e whisper.cpp."
+    }
+  ],
+  "approval_scope": "Luigi: Aceitar somente os dois de pronúncia",
+  "delivery_folder": "/Users/macbookairm2/Downloads/Videos_editados_Auraly_2026_10_11",
+  "note": "Algumas cópias e originais não estavam mais nos caminhos anteriores do Desktop na conferência final. Entregas revisadas copiadas do runtime e SHA conferido; não recriamos pasta removida nem originais."
+}

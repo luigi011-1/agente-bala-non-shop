@@ -1,0 +1,1089 @@
+{
+  "status": "SUCCEEDED",
+  "backend": "whisperx",
+  "language": "en",
+  "word_count": 85,
+  "expected_word_count": 85,
+  "timed_word_count": 85,
+  "unaligned_word_count": 0,
+  "segments": [
+    {
+      "start": 0.18,
+      "end": 7.52,
+      "text": "Did you know that if you mash one boiled potato with avocado, add eggs, Greek yogurt,",
+      "words": [
+        {
+          "word": "Did",
+          "start": 0.18,
+          "end": 0.321,
+          "score": 0.788
+        },
+        {
+          "word": "you",
+          "start": 0.341,
+          "end": 0.441,
+          "score": 0.836
+        },
+        {
+          "word": "know",
+          "start": 0.481,
+          "end": 0.702,
+          "score": 0.6
+        },
+        {
+          "word": "that",
+          "start": 0.802,
+          "end": 0.943,
+          "score": 0.84
+        },
+        {
+          "word": "if",
+          "start": 1.003,
+          "end": 1.083,
+          "score": 0.926
+        },
+        {
+          "word": "you",
+          "start": 1.123,
+          "end": 1.283,
+          "score": 0.869
+        },
+        {
+          "word": "mash",
+          "start": 1.344,
+          "end": 1.745,
+          "score": 0.725
+        },
+        {
+          "word": "one",
+          "start": 2.146,
+          "end": 2.286,
+          "score": 0.699
+        },
+        {
+          "word": "boiled",
+          "start": 2.386,
+          "end": 2.707,
+          "score": 0.809
+        },
+        {
+          "word": "potato",
+          "start": 2.747,
+          "end": 3.249,
+          "score": 0.836
+        },
+        {
+          "word": "with",
+          "start": 3.529,
+          "end": 3.71,
+          "score": 0.771
+        },
+        {
+          "word": "avocado,",
+          "start": 3.81,
+          "end": 4.392,
+          "score": 0.934
+        },
+        {
+          "word": "add",
+          "start": 4.412,
+          "end": 5.094,
+          "score": 0.806
+        },
+        {
+          "word": "eggs,",
+          "start": 5.254,
+          "end": 5.495,
+          "score": 0.878
+        },
+        {
+          "word": "Greek",
+          "start": 6.858,
+          "end": 7.119,
+          "score": 0.933
+        },
+        {
+          "word": "yogurt,",
+          "start": 7.179,
+          "end": 7.52,
+          "score": 0.65
+        }
+      ]
+    },
+    {
+      "start": 8.24,
+      "end": 13.055,
+      "text": "baking powder, and salt, and mix the whole lot together until smooth.",
+      "words": [
+        {
+          "word": "baking",
+          "start": 8.24,
+          "end": 8.561,
+          "score": 0.931
+        },
+        {
+          "word": "powder,",
+          "start": 8.602,
+          "end": 8.963,
+          "score": 0.911
+        },
+        {
+          "word": "and",
+          "start": 8.983,
+          "end": 9.645,
+          "score": 0.796
+        },
+        {
+          "word": "salt,",
+          "start": 9.765,
+          "end": 10.166,
+          "score": 0.815
+        },
+        {
+          "word": "and",
+          "start": 10.688,
+          "end": 10.768,
+          "score": 0.837
+        },
+        {
+          "word": "mix",
+          "start": 10.828,
+          "end": 11.049,
+          "score": 0.943
+        },
+        {
+          "word": "the",
+          "start": 11.069,
+          "end": 11.169,
+          "score": 0.695
+        },
+        {
+          "word": "whole",
+          "start": 11.209,
+          "end": 11.41,
+          "score": 0.691
+        },
+        {
+          "word": "lot",
+          "start": 11.45,
+          "end": 11.651,
+          "score": 0.831
+        },
+        {
+          "word": "together",
+          "start": 11.691,
+          "end": 12.072,
+          "score": 0.894
+        },
+        {
+          "word": "until",
+          "start": 12.292,
+          "end": 12.573,
+          "score": 0.788
+        },
+        {
+          "word": "smooth.",
+          "start": 12.653,
+          "end": 13.055,
+          "score": 0.769
+        }
+      ]
+    },
+    {
+      "start": 13.416,
+      "end": 14.86,
+      "text": "Then shape it into buns,",
+      "words": [
+        {
+          "word": "Then",
+          "start": 13.416,
+          "end": 13.636,
+          "score": 0.893
+        },
+        {
+          "word": "shape",
+          "start": 13.837,
+          "end": 14.118,
+          "score": 0.887
+        },
+        {
+          "word": "it",
+          "start": 14.158,
+          "end": 14.198,
+          "score": 0.982
+        },
+        {
+          "word": "into",
+          "start": 14.278,
+          "end": 14.499,
+          "score": 0.872
+        },
+        {
+          "word": "buns,",
+          "start": 14.539,
+          "end": 14.86,
+          "score": 0.73
+        }
+      ]
+    },
+    {
+      "start": 15.54,
+      "end": 20.997,
+      "text": "brush the tops with egg yolk, chuck sesame seeds over, and bake until golden.",
+      "words": [
+        {
+          "word": "brush",
+          "start": 15.54,
+          "end": 15.861,
+          "score": 0.717
+        },
+        {
+          "word": "the",
+          "start": 15.901,
+          "end": 15.982,
+          "score": 0.853
+        },
+        {
+          "word": "tops",
+          "start": 16.022,
+          "end": 16.363,
+          "score": 0.894
+        },
+        {
+          "word": "with",
+          "start": 16.423,
+          "end": 16.583,
+          "score": 0.716
+        },
+        {
+          "word": "egg",
+          "start": 16.704,
+          "end": 16.864,
+          "score": 0.996
+        },
+        {
+          "word": "yolk,",
+          "start": 16.904,
+          "end": 17.225,
+          "score": 0.843
+        },
+        {
+          "word": "chuck",
+          "start": 17.526,
+          "end": 17.807,
+          "score": 0.893
+        },
+        {
+          "word": "sesame",
+          "start": 17.847,
+          "end": 18.288,
+          "score": 0.901
+        },
+        {
+          "word": "seeds",
+          "start": 18.329,
+          "end": 18.629,
+          "score": 0.901
+        },
+        {
+          "word": "over,",
+          "start": 18.77,
+          "end": 19.071,
+          "score": 0.866
+        },
+        {
+          "word": "and",
+          "start": 19.632,
+          "end": 19.733,
+          "score": 0.887
+        },
+        {
+          "word": "bake",
+          "start": 19.813,
+          "end": 20.114,
+          "score": 0.922
+        },
+        {
+          "word": "until",
+          "start": 20.214,
+          "end": 20.515,
+          "score": 0.79
+        },
+        {
+          "word": "golden.",
+          "start": 20.575,
+          "end": 20.997,
+          "score": 0.899
+        }
+      ]
+    },
+    {
+      "start": 21.358,
+      "end": 22.12,
+      "text": "What you get are",
+      "words": [
+        {
+          "word": "What",
+          "start": 21.358,
+          "end": 21.498,
+          "score": 0.858
+        },
+        {
+          "word": "you",
+          "start": 21.518,
+          "end": 21.638,
+          "score": 0.869
+        },
+        {
+          "word": "get",
+          "start": 21.679,
+          "end": 21.879,
+          "score": 0.696
+        },
+        {
+          "word": "are",
+          "start": 22.04,
+          "end": 22.12,
+          "score": 0.923
+        }
+      ]
+    },
+    {
+      "start": 22.22,
+      "end": 28.717,
+      "text": "incredibly soft fluffy avocado potato buns with zero flour anywhere near them.",
+      "words": [
+        {
+          "word": "incredibly",
+          "start": 22.22,
+          "end": 22.962,
+          "score": 0.846
+        },
+        {
+          "word": "soft",
+          "start": 23.163,
+          "end": 23.644,
+          "score": 0.823
+        },
+        {
+          "word": "fluffy",
+          "start": 23.945,
+          "end": 24.446,
+          "score": 0.899
+        },
+        {
+          "word": "avocado",
+          "start": 24.867,
+          "end": 25.369,
+          "score": 0.818
+        },
+        {
+          "word": "potato",
+          "start": 25.429,
+          "end": 25.81,
+          "score": 0.966
+        },
+        {
+          "word": "buns",
+          "start": 25.85,
+          "end": 26.191,
+          "score": 0.813
+        },
+        {
+          "word": "with",
+          "start": 26.592,
+          "end": 26.752,
+          "score": 0.822
+        },
+        {
+          "word": "zero",
+          "start": 26.913,
+          "end": 27.294,
+          "score": 0.908
+        },
+        {
+          "word": "flour",
+          "start": 27.374,
+          "end": 27.775,
+          "score": 0.745
+        },
+        {
+          "word": "anywhere",
+          "start": 27.935,
+          "end": 28.256,
+          "score": 0.862
+        },
+        {
+          "word": "near",
+          "start": 28.316,
+          "end": 28.497,
+          "score": 0.723
+        },
+        {
+          "word": "them.",
+          "start": 28.557,
+          "end": 28.717,
+          "score": 0.997
+        }
+      ]
+    },
+    {
+      "start": 29.119,
+      "end": 29.68,
+      "text": "Click the link in",
+      "words": [
+        {
+          "word": "Click",
+          "start": 29.119,
+          "end": 29.319,
+          "score": 0.977
+        },
+        {
+          "word": "the",
+          "start": 29.359,
+          "end": 29.439,
+          "score": 0.858
+        },
+        {
+          "word": "link",
+          "start": 29.459,
+          "end": 29.62,
+          "score": 0.814
+        },
+        {
+          "word": "in",
+          "start": 29.64,
+          "end": 29.68,
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "start": 29.8,
+      "end": 35.699,
+      "text": "my bio to get my book full of healthy recipes, and don't forget to follow me for more.",
+      "words": [
+        {
+          "word": "my",
+          "start": 29.8,
+          "end": 29.921,
+          "score": 0.966
+        },
+        {
+          "word": "bio",
+          "start": 29.961,
+          "end": 30.382,
+          "score": 0.938
+        },
+        {
+          "word": "to",
+          "start": 30.483,
+          "end": 30.563,
+          "score": 1.0
+        },
+        {
+          "word": "get",
+          "start": 30.623,
+          "end": 30.783,
+          "score": 0.889
+        },
+        {
+          "word": "my",
+          "start": 30.844,
+          "end": 30.984,
+          "score": 0.779
+        },
+        {
+          "word": "book",
+          "start": 31.064,
+          "end": 31.285,
+          "score": 0.879
+        },
+        {
+          "word": "full",
+          "start": 31.446,
+          "end": 31.726,
+          "score": 0.885
+        },
+        {
+          "word": "of",
+          "start": 31.787,
+          "end": 31.847,
+          "score": 0.75
+        },
+        {
+          "word": "healthy",
+          "start": 31.927,
+          "end": 32.228,
+          "score": 0.869
+        },
+        {
+          "word": "recipes,",
+          "start": 32.288,
+          "end": 32.85,
+          "score": 0.855
+        },
+        {
+          "word": "and",
+          "start": 33.432,
+          "end": 33.612,
+          "score": 0.478
+        },
+        {
+          "word": "don't",
+          "start": 33.833,
+          "end": 34.054,
+          "score": 0.85
+        },
+        {
+          "word": "forget",
+          "start": 34.134,
+          "end": 34.475,
+          "score": 0.853
+        },
+        {
+          "word": "to",
+          "start": 34.575,
+          "end": 34.676,
+          "score": 0.997
+        },
+        {
+          "word": "follow",
+          "start": 34.756,
+          "end": 35.077,
+          "score": 0.926
+        },
+        {
+          "word": "me",
+          "start": 35.097,
+          "end": 35.218,
+          "score": 0.832
+        },
+        {
+          "word": "for",
+          "start": 35.298,
+          "end": 35.438,
+          "score": 0.716
+        },
+        {
+          "word": "more.",
+          "start": 35.478,
+          "end": 35.699,
+          "score": 0.847
+        }
+      ]
+    }
+  ],
+  "words": [
+    {
+      "word": "Did",
+      "start": 0.18,
+      "end": 0.321,
+      "score": 0.788
+    },
+    {
+      "word": "you",
+      "start": 0.341,
+      "end": 0.441,
+      "score": 0.836
+    },
+    {
+      "word": "know",
+      "start": 0.481,
+      "end": 0.702,
+      "score": 0.6
+    },
+    {
+      "word": "that",
+      "start": 0.802,
+      "end": 0.943,
+      "score": 0.84
+    },
+    {
+      "word": "if",
+      "start": 1.003,
+      "end": 1.083,
+      "score": 0.926
+    },
+    {
+      "word": "you",
+      "start": 1.123,
+      "end": 1.283,
+      "score": 0.869
+    },
+    {
+      "word": "mash",
+      "start": 1.344,
+      "end": 1.745,
+      "score": 0.725
+    },
+    {
+      "word": "one",
+      "start": 2.146,
+      "end": 2.286,
+      "score": 0.699
+    },
+    {
+      "word": "boiled",
+      "start": 2.386,
+      "end": 2.707,
+      "score": 0.809
+    },
+    {
+      "word": "potato",
+      "start": 2.747,
+      "end": 3.249,
+      "score": 0.836
+    },
+    {
+      "word": "with",
+      "start": 3.529,
+      "end": 3.71,
+      "score": 0.771
+    },
+    {
+      "word": "avocado,",
+      "start": 3.81,
+      "end": 4.392,
+      "score": 0.934
+    },
+    {
+      "word": "add",
+      "start": 4.412,
+      "end": 5.094,
+      "score": 0.806
+    },
+    {
+      "word": "eggs,",
+      "start": 5.254,
+      "end": 5.495,
+      "score": 0.878
+    },
+    {
+      "word": "Greek",
+      "start": 6.858,
+      "end": 7.119,
+      "score": 0.933
+    },
+    {
+      "word": "yogurt,",
+      "start": 7.179,
+      "end": 7.52,
+      "score": 0.65
+    },
+    {
+      "word": "baking",
+      "start": 8.24,
+      "end": 8.561,
+      "score": 0.931
+    },
+    {
+      "word": "powder,",
+      "start": 8.602,
+      "end": 8.963,
+      "score": 0.911
+    },
+    {
+      "word": "and",
+      "start": 8.983,
+      "end": 9.645,
+      "score": 0.796
+    },
+    {
+      "word": "salt,",
+      "start": 9.765,
+      "end": 10.166,
+      "score": 0.815
+    },
+    {
+      "word": "and",
+      "start": 10.688,
+      "end": 10.768,
+      "score": 0.837
+    },
+    {
+      "word": "mix",
+      "start": 10.828,
+      "end": 11.049,
+      "score": 0.943
+    },
+    {
+      "word": "the",
+      "start": 11.069,
+      "end": 11.169,
+      "score": 0.695
+    },
+    {
+      "word": "whole",
+      "start": 11.209,
+      "end": 11.41,
+      "score": 0.691
+    },
+    {
+      "word": "lot",
+      "start": 11.45,
+      "end": 11.651,
+      "score": 0.831
+    },
+    {
+      "word": "together",
+      "start": 11.691,
+      "end": 12.072,
+      "score": 0.894
+    },
+    {
+      "word": "until",
+      "start": 12.292,
+      "end": 12.573,
+      "score": 0.788
+    },
+    {
+      "word": "smooth.",
+      "start": 12.653,
+      "end": 13.055,
+      "score": 0.769
+    },
+    {
+      "word": "Then",
+      "start": 13.416,
+      "end": 13.636,
+      "score": 0.893
+    },
+    {
+      "word": "shape",
+      "start": 13.837,
+      "end": 14.118,
+      "score": 0.887
+    },
+    {
+      "word": "it",
+      "start": 14.158,
+      "end": 14.198,
+      "score": 0.982
+    },
+    {
+      "word": "into",
+      "start": 14.278,
+      "end": 14.499,
+      "score": 0.872
+    },
+    {
+      "word": "buns,",
+      "start": 14.539,
+      "end": 14.86,
+      "score": 0.73
+    },
+    {
+      "word": "brush",
+      "start": 15.54,
+      "end": 15.861,
+      "score": 0.717
+    },
+    {
+      "word": "the",
+      "start": 15.901,
+      "end": 15.982,
+      "score": 0.853
+    },
+    {
+      "word": "tops",
+      "start": 16.022,
+      "end": 16.363,
+      "score": 0.894
+    },
+    {
+      "word": "with",
+      "start": 16.423,
+      "end": 16.583,
+      "score": 0.716
+    },
+    {
+      "word": "egg",
+      "start": 16.704,
+      "end": 16.864,
+      "score": 0.996
+    },
+    {
+      "word": "yolk,",
+      "start": 16.904,
+      "end": 17.225,
+      "score": 0.843
+    },
+    {
+      "word": "chuck",
+      "start": 17.526,
+      "end": 17.807,
+      "score": 0.893
+    },
+    {
+      "word": "sesame",
+      "start": 17.847,
+      "end": 18.288,
+      "score": 0.901
+    },
+    {
+      "word": "seeds",
+      "start": 18.329,
+      "end": 18.629,
+      "score": 0.901
+    },
+    {
+      "word": "over,",
+      "start": 18.77,
+      "end": 19.071,
+      "score": 0.866
+    },
+    {
+      "word": "and",
+      "start": 19.632,
+      "end": 19.733,
+      "score": 0.887
+    },
+    {
+      "word": "bake",
+      "start": 19.813,
+      "end": 20.114,
+      "score": 0.922
+    },
+    {
+      "word": "until",
+      "start": 20.214,
+      "end": 20.515,
+      "score": 0.79
+    },
+    {
+      "word": "golden.",
+      "start": 20.575,
+      "end": 20.997,
+      "score": 0.899
+    },
+    {
+      "word": "What",
+      "start": 21.358,
+      "end": 21.498,
+      "score": 0.858
+    },
+    {
+      "word": "you",
+      "start": 21.518,
+      "end": 21.638,
+      "score": 0.869
+    },
+    {
+      "word": "get",
+      "start": 21.679,
+      "end": 21.879,
+      "score": 0.696
+    },
+    {
+      "word": "are",
+      "start": 22.04,
+      "end": 22.12,
+      "score": 0.923
+    },
+    {
+      "word": "incredibly",
+      "start": 22.22,
+      "end": 22.962,
+      "score": 0.846
+    },
+    {
+      "word": "soft",
+      "start": 23.163,
+      "end": 23.644,
+      "score": 0.823
+    },
+    {
+      "word": "fluffy",
+      "start": 23.945,
+      "end": 24.446,
+      "score": 0.899
+    },
+    {
+      "word": "avocado",
+      "start": 24.867,
+      "end": 25.369,
+      "score": 0.818
+    },
+    {
+      "word": "potato",
+      "start": 25.429,
+      "end": 25.81,
+      "score": 0.966
+    },
+    {
+      "word": "buns",
+      "start": 25.85,
+      "end": 26.191,
+      "score": 0.813
+    },
+    {
+      "word": "with",
+      "start": 26.592,
+      "end": 26.752,
+      "score": 0.822
+    },
+    {
+      "word": "zero",
+      "start": 26.913,
+      "end": 27.294,
+      "score": 0.908
+    },
+    {
+      "word": "flour",
+      "start": 27.374,
+      "end": 27.775,
+      "score": 0.745
+    },
+    {
+      "word": "anywhere",
+      "start": 27.935,
+      "end": 28.256,
+      "score": 0.862
+    },
+    {
+      "word": "near",
+      "start": 28.316,
+      "end": 28.497,
+      "score": 0.723
+    },
+    {
+      "word": "them.",
+      "start": 28.557,
+      "end": 28.717,
+      "score": 0.997
+    },
+    {
+      "word": "Click",
+      "start": 29.119,
+      "end": 29.319,
+      "score": 0.977
+    },
+    {
+      "word": "the",
+      "start": 29.359,
+      "end": 29.439,
+      "score": 0.858
+    },
+    {
+      "word": "link",
+      "start": 29.459,
+      "end": 29.62,
+      "score": 0.814
+    },
+    {
+      "word": "in",
+      "start": 29.64,
+      "end": 29.68,
+      "score": 0.0
+    },
+    {
+      "word": "my",
+      "start": 29.8,
+      "end": 29.921,
+      "score": 0.966
+    },
+    {
+      "word": "bio",
+      "start": 29.961,
+      "end": 30.382,
+      "score": 0.938
+    },
+    {
+      "word": "to",
+      "start": 30.483,
+      "end": 30.563,
+      "score": 1.0
+    },
+    {
+      "word": "get",
+      "start": 30.623,
+      "end": 30.783,
+      "score": 0.889
+    },
+    {
+      "word": "my",
+      "start": 30.844,
+      "end": 30.984,
+      "score": 0.779
+    },
+    {
+      "word": "book",
+      "start": 31.064,
+      "end": 31.285,
+      "score": 0.879
+    },
+    {
+      "word": "full",
+      "start": 31.446,
+      "end": 31.726,
+      "score": 0.885
+    },
+    {
+      "word": "of",
+      "start": 31.787,
+      "end": 31.847,
+      "score": 0.75
+    },
+    {
+      "word": "healthy",
+      "start": 31.927,
+      "end": 32.228,
+      "score": 0.869
+    },
+    {
+      "word": "recipes,",
+      "start": 32.288,
+      "end": 32.85,
+      "score": 0.855
+    },
+    {
+      "word": "and",
+      "start": 33.432,
+      "end": 33.612,
+      "score": 0.478
+    },
+    {
+      "word": "don't",
+      "start": 33.833,
+      "end": 34.054,
+      "score": 0.85
+    },
+    {
+      "word": "forget",
+      "start": 34.134,
+      "end": 34.475,
+      "score": 0.853
+    },
+    {
+      "word": "to",
+      "start": 34.575,
+      "end": 34.676,
+      "score": 0.997
+    },
+    {
+      "word": "follow",
+      "start": 34.756,
+      "end": 35.077,
+      "score": 0.926
+    },
+    {
+      "word": "me",
+      "start": 35.097,
+      "end": 35.218,
+      "score": 0.832
+    },
+    {
+      "word": "for",
+      "start": 35.298,
+      "end": 35.438,
+      "score": 0.716
+    },
+    {
+      "word": "more.",
+      "start": 35.478,
+      "end": 35.699,
+      "score": 0.847
+    }
+  ]
+}

@@ -19,8 +19,9 @@ manutencao nao e uma ordem para executar a proxima etapa de producao.
 historico. Doutrina, CTA obrigatorio da marca e compliance na memoria `angulo1-copy-seamoss`. Onde
 este arquivo diz "Korella", ler "Sea Moss" para processo e formato; copy, claim, vocabulario e avatar
 da Korella nao passam. Tres travas que cortam o pagamento: (1) CTA de venda abre com **"Search Natural
-Rems Sea Moss on Amazon" com o frasco em quadro**, link da LEGENDA do post depois e fim (4 passos do PDF em `producao/_seamoss/`, com o passo 3 trocado pela
-legenda por decisao do Luigi em 2026-10-02: o link do comentario fixado nao fica clicavel), comentario opcional com `yes`, sem DM;
+Rems Sea Moss on Amazon" com o frasco em quadro**, depois **Stories e bio** na mesma frase (opcao B do Luigi em 2026-10-10,
+risco com o "no alternatives" do PDF em `producao/_seamoss/` registrado) e o **lembrete do botao de follow como ultima frase**
+(todos os angulos e videos, memoria `cta-follow-no-fim`); link fora da legenda (2026-10-10); comment `yes` antes da Amazon, sem DM;
 (2) legenda com `#ad #syntheticperformer #naturalrems` no topo e chave de IA ligada, growth incluso;
 (3) sem antes/depois, sem medico/jaleco/clinica, sem cura ou resultado garantido, sem remedio nem
 concorrente. O linter cobra as tres quando a producao cita Natural Rems ou Sea Moss.
@@ -253,6 +254,14 @@ Nesta ordem, sem pular seção:
 
 ## MULTI-AVATAR PRODUCTION RULE (Luigi, 2026-09-09)
 
+**Lote com vários modelos:** aplicar a regra modelos x avatares do `AGENTS.md`. Um conjunto comum de
+N modelos e M anchors gera N produções, cada uma com a fila dos M avatares, total N x M vídeos.
+Ordem de entrega: V01/avatar 1, V01/avatar 2, V01/avatar 3; depois V02/avatar 1, V02/avatar 2,
+V02/avatar 3, e assim por diante, conforme `AGENTS.md`.
+Nunca distribuir um modelo por avatar pela ordem dos anexos. Registrar todas as combinações e o
+total esperado no intake; conferir entregues e pendentes antes de encerrar o lote. Pareamento
+exclusivo só por instrução explícita do Luigi, preservando escopos de conta e ângulo.
+
 Quando uma produção começa com um MP4 e N anchors, registrar imediatamente todos os avatares em uma
 fila persistente dentro da pasta da produção, com nome, caminho exato da anchor e estado `PENDING`,
 `ACTIVE` ou `DONE`. Essa fila é estado obrigatório e não pode depender do histórico da conversa.
@@ -347,6 +356,11 @@ B-ROLL: trocar a primeira linha por `(sem fala no take: a fala N entra como voz-
   pessoa liberada. ♻️ **2026-10-02: a holistic.brandon roda os Ângulos 1 (Sea Moss), 2 e 4, sempre
   COACH** (no 4 com a moldura dela de 2026-08-27, seção 7 de `angulo4-copy-bodyhacks`), âncora
   `producao/_ancoras/holistic_brandon_ancora.jpg`. Âncoras em `producao/_ancoras/`.
+  ♻️ **2026-10-10 (Luigi): Meredith Callahan, Marshall Beckett (MULHER) e Cassidy Hargrove rodam os
+  Ângulos 1 (Sea Moss) e 2 (FityWell)**, cada uma na sua conta: mulheres 60+ com autoridade de ofício
+  com alga marinha, nada médico, **cada uma na própria conta**. **1ª pessoa liberada nas duas ofertas**
+  (USUÁRIA / PAR, exceção ao COACH do Ângulo 2 só para elas). Fichas
+  em `avatares-fichas`, âncoras `producao/_ancoras/<nome>_ancora.*`.
 - **[ÂNGULO 4] LIMITE HONESTO É PROIBIDO.** Nenhuma ressalva, nenhum "isso não faz X". A dor prometida
   e o mecanismo do produto são a mesma linha, então toda ressalva encosta na promessa. O take vai pra
   autoridade, prova social, urgência ou escassez. No Ângulo 3 o objeto de desejo do CTA é

@@ -38,6 +38,7 @@ ENTREGAS = "/mnt/project-files/entregas"
 
 SP, GAP, PAD_IN, PAD_OUT, MIN_ISLAND, JUNTA, W, H, FPS = 1.12, 0.15, 0.05, 0.11, 0.4, 0.05, 1080, 1920, 30
 INSERT = 2.5  # segundos do insert mudo (antes da aceleração); --insert 0 = inteiro
+IDIOMA = "en"
 MUSICA_DB = -18  # Luigi, 2026-10-10: -18 dB (cama do media-use da HyperFrames, 0,12) aprovado; -25 sumia, -10 atrapalhou a fala
 
 
@@ -92,10 +93,30 @@ def dur(f):
 
 NUMEROS = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty".split()
 
+DEZENAS = "_ _ twenty thirty forty fifty sixty seventy eighty ninety".split()
+
+def por_extenso(n):
+    """Número como se fala na receita: 30 = thirty, 25 = twenty five, 325 = three twenty five (temperatura,
+    como o roteiro escreve), 300 = three hundred. Meredith T3 e Marshall T3, 2026-10-10: o whisper escreveu
+    "30" e "325" e o take certo travava como "trocou"."""
+    if n <= 20: return [NUMEROS[n]]
+    if n < 100: return [DEZENAS[n // 10]] + ([NUMEROS[n % 10]] if n % 10 else [])
+    if n < 1000: return [NUMEROS[n // 100]] + (por_extenso(n % 100) if n % 100 else ["hundred"])
+    return [str(n)]
+
 def norm(t):
     # o whisper escreve "2 cups" onde o roteiro diz "two cups": número vira palavra antes de comparar
-    ws = re.sub(r"[^a-z0-9' ]", " ", t.lower().replace("’", "'")).split()
-    return [NUMEROS[int(w)] if w.isdigit() and int(w) <= 20 else w for w in ws]
+    texto = t.lower().replace("’", "'")
+    # O CTA Auraly soletra o selo; os dois transcritores escrevem 222 em algarismos.
+    texto = re.sub(r"\b222\b", "dos dos dos" if IDIOMA == "es" else "two two two", texto)
+    if IDIOMA == "es":
+        import unicodedata
+        texto = "".join(c for c in unicodedata.normalize("NFD", texto) if not unicodedata.combining(c))
+        digitos = "cero uno dos tres cuatro cinco seis siete ocho nueve".split()
+        return [digitos[int(w)] if w.isdigit() and len(w) == 1 else w
+                for w in re.sub(r"[^a-z0-9' ]", " ", texto).split()]
+    ws = re.sub(r"[^a-z0-9' ]", " ", texto).split()
+    return [x for w in ws for x in (por_extenso(int(w)) if w.isdigit() else [w])]
 
 
 def log(msg):
@@ -110,8 +131,8 @@ def palavras(f):
         return []  # sem trilha de áudio: take mudo
     if _modelo is None:
         from faster_whisper import WhisperModel
-        _modelo = WhisperModel("small.en", device="cpu", compute_type="int8")
-    segs, _ = _modelo.transcribe(f, language="en", word_timestamps=True)
+        _modelo = WhisperModel("small.en" if IDIOMA == "en" else "small", device="cpu", compute_type="int8")
+    segs, _ = _modelo.transcribe(f, language=IDIOMA, word_timestamps=True)
     return [[w.word.strip(), round(w.start, 3), round(w.end, 3)] for s in segs for w in s.words]
 
 
@@ -180,43 +201,22 @@ def escuta_ok(h, r):
                                     or difflib.SequenceMatcher(None, a, b).ratio() >= 0.6 for a, b in zip(h, r))
 
 def conferir_fala(ws, fala, sobra=None):
-    """Confere o take PALAVRA POR PALAVRA contra a fala do roteiro (Luigi, 2026-10-09: o Flow inventa, remove e
-    repete falas no mesmo take; nota de semelhança deixava passar). Devolve (problemas, escutas).
-    problemas = faltou / inventou / repetiu / trocou. escutas = palavra quase igual (erro do whisper,
-    "kimchee" por "kimchi", "it's" por "it is"): só avisam, porque a legenda usa o texto do roteiro.
-    `sobra` (set), se passado, recebe o índice em `ws` de cada palavra inventada ou repetida."""
+    """Comparação lexical estrita. Só números e contrações equivalentes são normalizados.
+    Similaridade de grafia não prova que uma palavra foi falada; divergência exige auditoria ASR.
+    `sobra`, se passado, recebe índices das palavras extras na transcrição."""
+    def tokens(texto):
+        return [x for t in norm(texto) for x in
+                (CONTRACOES.get(t, t).split() if IDIOMA == "en" else [t])]
     hw, dono = [], []
     for n, (w, _, _) in enumerate(ws):
-        for t in norm(w): hw.append(t); dono.append(n)
-    rt = norm(fala)
-    probs, escutas = [], []
+        for t in tokens(w): hw.append(t); dono.append(n)
+    rt = tokens(fala)
+    probs = []
     for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, hw, rt, autojunk=False).get_opcodes():
         h, r = " ".join(hw[i1:i2]), " ".join(rt[j1:j2])
         if op == "equal": continue
-        if op == "replace" and (i2 - i1) > (j2 - j1):
-            # sobra colada numa escuta ("meant for you oh" no lugar de "no"): a ponta que casa com o roteiro é
-            # escuta, o resto é sobra que se corta (teste 2026-10-10: sem isso virava "trocou" e travava)
-            n = j2 - j1
-            for ini, fim in ((i2 - n, i2), (i1, i1 + n)):
-                if escuta_ok(hw[ini:fim], rt[j1:j2]):
-                    extra = list(range(i1, ini)) + list(range(fim, i2))
-                    e = [hw[x] for x in extra]
-                    rep = e == hw[i2:i2 + len(e)] or e == hw[max(0, i1 - len(e)):i1]
-                    probs.append(f'{"repetiu" if rep else "inventou"} "{" ".join(e)}"')
-                    if sobra is not None: sobra.update(dono[x] for x in extra)
-                    if hw[ini:fim] != rt[j1:j2]: escutas.append(f'"{" ".join(hw[ini:fim])}" no lugar de "{r}"')
-                    break
-            else:
-                probs.append(f'trocou "{r}" por "{h}"')
-            continue
         if op == "replace":
-            exp = lambda x: " ".join(CONTRACOES.get(t, t) for t in x.split())
-            if exp(h) == exp(r) or (h in PEQUENAS and r in PEQUENAS) or (i2 - i1 == j2 - j1 and all(
-                    difflib.SequenceMatcher(None, a, b).ratio() >= 0.6 for a, b in zip(hw[i1:i2], rt[j1:j2]))) \
-                    or difflib.SequenceMatcher(None, h.replace(" ", ""), r.replace(" ", "")).ratio() >= 0.85:
-                escutas.append(f'"{h}" no lugar de "{r}"')
-            else:
-                probs.append(f'trocou "{r}" por "{h}"')
+            probs.append(f'trocou "{r}" por "{h}"')
         elif op == "delete":
             e = hw[i1:i2]; n = len(e)
             rep = e == hw[i2:i2 + n] or e == hw[max(0, i1 - n):i1]
@@ -224,7 +224,23 @@ def conferir_fala(ws, fala, sobra=None):
             if sobra is not None: sobra.update(dono[i1:i2])
         else:
             probs.append(f'faltou "{r}"')
-    return probs, escutas
+    return probs, []
+
+def aplicar_excecoes_fala(f, problemas, fala, registro):
+    """Exceções pontuais autorizadas: arquivo, hash, roteiro e divergência devem coincidir.
+    Nunca enfraquece a comparação lexical geral nem permite novas divergências."""
+    item = registro.get(os.path.realpath(f))
+    if not item or norm(item.get("approved_script", "")) != norm(fala):
+        return problemas, []
+    digest = hashlib.sha256()
+    with open(f, "rb") as fonte:
+        for bloco in iter(lambda: fonte.read(1024 * 1024), b""):
+            digest.update(bloco)
+    if digest.hexdigest() != item.get("sha256"):
+        return problemas, []
+    permitidos = set(item.get("allowed_problems", []))
+    aceitos = [p for p in problemas if p in permitidos]
+    return [p for p in problemas if p not in permitidos], aceitos
 
 def ouvir_trecho(f, a, b, tmp):
     """Transcreve um trecho sozinho e devolve as palavras com tempo absoluto: isolado, o whisper escreve o que
@@ -232,6 +248,21 @@ def ouvir_trecho(f, a, b, tmp):
     t = f"{tmp}/trecho_{hashlib.md5(f'{f}{a}{b}'.encode()).hexdigest()[:8]}.wav"
     sh(["ffmpeg", "-loglevel", "error", "-y", "-i", f, "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-vn", "-ar", "16000", "-ac", "1", t])
     return [[w, x + a, y + a] for w, x, y in palavras(t)]
+
+def palavras_por_trechos(f, tmp, pausa=0.3):
+    """Transcreve o take em pedaços de voz (separados por pausas de `pausa` s) e junta com tempo absoluto. No take
+    inteiro o whisper às vezes come a palavra da ponta (Cassidy T2, 2026-10-10: "baking powder" no começo e
+    "then shape it into buns" no fim sumiam; ouvidos em trechos, estavam lá). Só serve de segunda escuta."""
+    d = dur(f)
+    som, pos = [], 0.0
+    for a, b in silencio_rms(f, pausa):
+        if a - pos > 0.12: som.append([max(0.0, pos - 0.05), min(d, a + 0.05)])
+        pos = b
+    if d - pos > 0.12: som.append([max(0.0, pos - 0.05), d])
+    out = []
+    for a, b in som:
+        out += ouvir_trecho(f, a, b, tmp)
+    return out
 
 def fala_sem_texto(f, ws, tmp, minimo=0.35):
     """Fala que está no áudio e não está na transcrição. O whisper SUPRIME fala repetida (teste 2026-10-09:
@@ -641,7 +672,7 @@ def quadros(video, ini, n, larg=64):
                           "-vf", f"scale={larg}:{alt},format=gray", "-f", "rawvideo", "-"], capture_output=True, check=True).stdout
     return np.frombuffer(raw, np.uint8).reshape(-1, alt, larg).astype(np.float32)
 
-def fantasmas(video, cortes_q):
+def fantasmas(video, cortes_q, segs=None, src=None):
     """Quadro misturado: parecido com os DOIS vizinhos de um corte de cena. Corte limpo tem um lado ~igual."""
     achados = []
     for c in cortes_q:
@@ -653,6 +684,24 @@ def fantasmas(video, cortes_q):
         for j in range(1, len(f) - 1):
             ac = abs(f[j - 1] - f[j + 1]).mean(); ab = abs(f[j - 1] - f[j]).mean(); bc = abs(f[j] - f[j + 1]).mean()
             if ac > 12 and ab > 0.25 * ac and bc > 0.25 * ac:
+                # v4 não interpola: movimento natural também aciona o teste antigo.
+                # Só dispensar se o quadro suspeito existir no take original (erro médio <=3/255).
+                t = (ini + j) / FPS
+                if segs and src:
+                    frame_n = ini + j
+                    candidatos = [s for s in segs if round(s["o"] * FPS) - 2 <= frame_n < round((s["o"] + s["d"]) * FPS) + 2]
+                    corresponde = False
+                    for s in candidatos:
+                        origem_t = s["a"] + min(max(0, t - s["o"]), s["d"]) * s["sp"]
+                        try:
+                            orig = quadros(src[s["k"]], max(0, round(origem_t * FPS) - 10), 24)
+                            if len(orig) and min(abs(q - f[j]).mean() for q in orig) <= 3:
+                                corresponde = True
+                                break
+                        except Exception:
+                            pass
+                    if corresponde:
+                        continue
                 achados.append(round((ini + j) / FPS, 2))
     return sorted(set(achados))
 
@@ -668,13 +717,16 @@ def sheet(video, tempos, saida, cols=12, larg=120):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--plano-editorial", help="JSON por produção: ações protegidas, ritmo e envelope musical")
+    ap.add_argument("--idioma", choices=["en", "es"], default="en", help="idioma da fala e do alinhamento (Jordan: es)")
     ap.add_argument("pasta"); ap.add_argument("--producao"); ap.add_argument("--musica"); ap.add_argument("--sem-musica", action="store_true")
     ap.add_argument("--ramp", default="1", help="takes-herói (pausa acelerada 5x em vez de cortada)")
     ap.add_argument("--leaks", default=None, help="takes com efeito na entrada (padrão: FitWell nenhum; Auraly o 2, saída do gancho)")
     ap.add_argument("--estilo", choices=["fitwell", "auraly"], default=None, help="padrão: auraly se a produção for Auraly")
     ap.add_argument("--ritmo", type=float, default=None, help="palavras/s alvo (padrão: 3,8 FitWell, 4,0 Auraly)")
     ap.add_argument("--up", default="1", help="takes com legenda mais alta")
+    ap.add_argument("--legenda-topo", type=int, default=960, help="topo da legenda Auraly em pixels; ajustar após conferir rosto")
     ap.add_argument("--nome", default=None); ap.add_argument("--trabalho", default=None)
+    ap.add_argument("--excecoes-fala", help="JSON de exceções explícitas por arquivo/hash/roteiro; sem alterar prompts")
     ap.add_argument("--nota-minima", type=float, default=0.85)
     ap.add_argument("--insert", type=float, default=INSERT, help="segundos de cada insert mudo, na ação (0 = inteiro)")
     # acabamento HyperFrames (Luigi, 2026-10-10: priorizar o que o repositório HyperFrames oferece), ver acabamento.py
@@ -687,8 +739,16 @@ def main():
     ap.add_argument("--sem-zoom", action="store_true"); ap.add_argument("--grao", action="store_true")
     a = ap.parse_args()
     globals()["PLANO_EDITORIAL"] = plano_editorial.carregar_plano(a.plano_editorial) if a.plano_editorial else None
+    globals()["IDIOMA"] = a.idioma
+    motor.IDIOMA = a.idioma
     globals()["INSERT"] = a.insert
     t0 = time.time(); rel = []
+    excecoes = {}
+    if a.excecoes_fala:
+        registro = json.load(open(a.excecoes_fala, encoding="utf8"))
+        if not registro.get("user_authorization"):
+            sys.exit("Exceções sem autorização registrada")
+        excecoes = {os.path.realpath(i["file"]): i for i in registro["items"]}
     # qualquer nome de arquivo serve: a ORDEM vem da fala comparada com o roteiro (passo 2)
     arquivos = sorted(os.path.abspath(f) for f in glob.glob(f"{a.pasta}/*.mp4") if "_editado" not in os.path.basename(f))
     if not arquivos: sys.exit("Nenhum .mp4 na pasta")
@@ -762,7 +822,19 @@ def main():
     for k in sorted(falas):
         f = dict(takes)[k]
         probs, esc = conferir_fala(words[k], falas[k])
-        if probs or fala_sem_texto(f, words[k], tmp):
+        if any(p.startswith(("faltou", "trocou")) for p in probs):
+            # segunda escuta, por trechos: palavra "faltando" pode ser só o whisper comendo a ponta do take
+            w2 = palavras_por_trechos(f, tmp)
+            probs2, esc2 = conferir_fala(w2, falas[k])
+            if len(probs2) < len(probs):
+                avisos_escuta.append(f"{k}. transcrição refeita por trechos (no take inteiro o whisper perdeu: "
+                                     f"{'; '.join(p for p in probs if p not in probs2)})")
+                words[k], ditos[k], probs, esc = w2, " ".join(w for w, _, _ in w2), probs2, esc2
+        probs, aceitos = aplicar_excecoes_fala(f, probs, falas[k], excecoes)
+        if aceitos:
+            rel.append(f"- Exceção autorizada por Luigi, take {k}: {'; '.join(aceitos)}; áudio original mantido, legenda do roteiro aprovado.")
+        # Não cortar para tentar resolver palavra faltante ou substituída: o original deve ser auditado.
+        if not aceitos and not any(p.startswith(("faltou", "trocou")) for p in probs) and (probs or fala_sem_texto(f, words[k], tmp)):
             ap = limpar(f, words[k], falas[k], tmp, k)
             if ap:
                 novo, tirados = ap
@@ -860,7 +932,7 @@ def main():
             if PLANO_EDITORIAL:
                 en = min([en] + [x["o"] for x in segs if x["k"] != p[0]["k"] and x["o"] > st + 0.01])
             big = palavra_chave(p, n)
-            pos = motor.layout_auraly([re.sub(r"[.,!?;:]$", "", w["w"]).lower() for w in p], big)
+            pos = motor.layout_auraly([re.sub(r"[.,!?;:]$", "", w["w"]).lower() for w in p], big, topo=a.legenda_topo)
             for j in range(len(p)):
                 a2 = st if j == 0 else max(st, p[j]["t"] - 0.03)
                 b2 = en if j == len(p) - 1 else max(a2, p[j + 1]["t"] - 0.03)
@@ -917,7 +989,7 @@ def main():
             import legendas_hf
             picos = json.load(open(f"{tmp}/picos.json"))
             idx = [i for i, w in enumerate(ws) for p in picos if abs(w["t"] - p["t"]) < 0.01]
-            camadas.append(legendas_hf.camada(a.legenda, ws, total, tmp, idx, log))
+            camadas.append(legendas_hf.camada(a.legenda, ws, total, tmp, idx, log, centro=a.legenda_topo + 160))
             lista_leg = None
             rel.append(f"- Legenda do catálogo HyperFrames: {a.legenda}")
 
@@ -928,7 +1000,7 @@ def main():
 
     log("7/7 conferências")
     cortes = [s["o"] for s in segs[1:]]
-    fant = fantasmas(f"{tmp}/assets/base.mp4", [round(c * FPS) for c in cortes])
+    fant = fantasmas(f"{tmp}/assets/base.mp4", [round(c * FPS) for c in cortes], segs, src)
     sil = [x for x in silencios(f"{tmp}/voz.wav") if not any(s.get("mute") and s["o"] - 0.2 <= x[0] <= s["o"] + s["d"] for s in segs)]
     if PLANO_EDITORIAL:
         janelas = plano_editorial.protected_output_windows(segs, PLANO_EDITORIAL)

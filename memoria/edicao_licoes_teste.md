@@ -59,6 +59,11 @@ NÃO FAZER
 - Não presumir que takes ou pastas do Luigi continuam no lugar: ele apaga e move (o `~/Desktop/v04` sumiu
   no meio do teste). Conferir antes de usar.
 - Não seguir sem música calado, nem com caminho da nuvem no Mac: o editor agora para.
+- Não tratar "faltou" ou "trocou" como erro do take sem a segunda escuta por trechos: o whisper come as pontas
+  do take inteiro e lê "30" onde o roteiro diz "thirty" (regras 27 e 28, lote Sea Moss de 2026-10-10).
+- Não confiar que estilo de legenda do catálogo cabe no 9:16: a pill-karaoke era 16:9 e cortava a frase nas bordas
+  com TODAS as conferências OK; só o `legendas.png` mostrou (regra 29). Olhar a folha a cada estilo novo do rodízio.
+- Não rodar o `acabamento.py` sozinho com o `python3` do sistema (sem PIL): usar `.venv-operacao/bin/python`.
 
 Ambiente e armadilhas do Mac em [[ambiente-mac-luigi]]. Leitura de hook continua em [[erros-recorrentes]].
 

@@ -1,0 +1,39 @@
+{
+ "videos": {
+  "cassidy_paes_batata_abacate/cassidy_paes_batata_abacate": {
+   "legenda": "padrao",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "meredith_bolo_coco/meredith_bolo_coco": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "marshall_cheesecake_chocolate/marshall_cheesecake_chocolate": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "auraly_prosperidade_2026_10_10_v01_1791676095556/v01_avery_prosperidade": {
+   "legenda": "padrao",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "auraly_prosperidade_2026_10_10_v03_1791675120440/v03_avery_prosperidade": {
+   "legenda": "caption-highlight",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "auraly_prosperidade_2026_10_10_v01_1791676095556_jordan_es/v01_jordan_prosperidade": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "auraly_prosperidade_2026_10_10_v03_1791675120440_jordan_es/v03_jordan_prosperidade": {
+   "legenda": "padrao",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  }
+ }
+}

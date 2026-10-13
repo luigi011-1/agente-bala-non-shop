@@ -99,6 +99,10 @@ def adaptar(src, ws, total, picos=()):
     src = src.replace("1920px", "@@W").replace("1080px", "@@H").replace("@@W", f"{W}px").replace("@@H", f"{H}px")
     src = src.replace('data-width="1920"', f'data-width="{W}"').replace('data-height="1080"', f'data-height="{H}"')
     src = src.replace('content="width=1920, height=1080"', f'content="width={W}, height={H}"')
+    # caixas de texto feitas para 16:9 (1400 a 1600px) saíam do quadro de 1080px: a pill-karaoke cortava a frase
+    # nas bordas ("hen whisk completely smoot", Marshall, 2026-10-10). Toda largura fixa > 940px vira 940px.
+    src = re.sub(r"((?:max-)?width:\s*)(1[1-9]\d\d)px", lambda m: f"{m.group(1)}940px", src)
+    src = re.sub(r"(var [A-Z_]*MAX_WIDTH\s*=\s*)(\d{4})", lambda m: f"{m.group(1)}{min(int(m.group(2)), 900)}", src)
     src = re.sub(r"(fitFontSize\([^;]*?,\s*)(\d{3,4})(\s*\))",
                  lambda m: f"{m.group(1)}{int(int(m.group(2)) * 940 / 1920)}{m.group(3)}", src)
     return src
@@ -121,7 +125,7 @@ def _faixa_texto(webm, total):
     return float(np.median(centros)) if centros else LEG_CENTRO
 
 
-def camada(estilo, ws, total, tmp, picos=(), log=print):
+def camada(estilo, ws, total, tmp, picos=(), log=print, centro=LEG_CENTRO):
     if estilo not in estilos():
         raise SystemExit(f"Estilo de legenda '{estilo}' não existe. Disponíveis: {', '.join(estilos())}")
     pasta = f"{tmp}/hf_legenda_{estilo}"
@@ -133,9 +137,9 @@ def camada(estilo, ws, total, tmp, picos=(), log=print):
     src = adaptar(open(f"{PASTA}/{estilo}.html", encoding="utf8").read(), ws, total, picos)
     open(f"{pasta}/index.html", "w", encoding="utf8").write(src)
     saida = f"{tmp}/hf_legenda_{estilo}.webm"
-    r = subprocess.run(HF + ["render", ".", "--format", "webm", "-o", saida], cwd=pasta, capture_output=True, text=True)
+    r = subprocess.run(HF + ["render", ".", "--format", "webm", "--workers", "1", "--low-memory-mode", "-o", saida], cwd=pasta, capture_output=True, text=True)
     if r.returncode or not os.path.exists(saida):
         raise RuntimeError(f"render da legenda {estilo} falhou:\n{(r.stdout + r.stderr)[-2000:]}")
-    dy = int(round(LEG_CENTRO - _faixa_texto(saida, total)))
+    dy = int(round(centro - _faixa_texto(saida, total)))
     log(f"   legenda {estilo}: render ok, deslocada {dy:+d}px até o peito")
     return saida, dy

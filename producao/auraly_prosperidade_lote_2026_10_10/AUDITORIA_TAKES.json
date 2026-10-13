@@ -1,0 +1,104 @@
+{
+  "reviewer": "bala-revisor",
+  "tool": "whisper-cli",
+  "models": "small / small.en",
+  "options": "-l es/en -t 2 -ng; no prompt",
+  "source": "tool stdout reported by independent reviewer; temporary WAV removed; no direct audio listening",
+  "normalization": "222 = two two two / dos dos dos",
+  "items": [
+    {
+      "file": "/Users/macbookairm2/Desktop/V01 - Véio ricasso/Person_speaking_to_camera_20261011143011_2.mp4",
+      "sha256": "67a8442a880a431da67e49b3b132dbafef29be2669a6d902b73f08f5dfe08b93",
+      "take": "V06",
+      "language": "es",
+      "decision": "USER_ACCEPTED_DIFFERENCE",
+      "independent_asr": "Toca mi foto de perfil para ver la leitura de abundancia en mis historias. También puedes entrar desde el enlace de mi biografía.",
+      "window": "whole_original",
+      "original_asr_assessment": "BLOCKED_TAKE",
+      "exception_registry": "EXCECOES_FALA_LUIGI.json"
+    },
+    {
+      "file": "/Users/macbookairm2/Desktop/V02 - avery cristy/Person_speaking_to_camera_20261011154046_5.mp4",
+      "sha256": "2fe310780dafe35ae9a6b525b94d1629601196176844dfa08b64023351bdafb4",
+      "take": "V01",
+      "language": "en",
+      "decision": "BLOCKED_TAKE",
+      "independent_asr": "do not move. That prosperous future you want",
+      "window": "0-3s"
+    },
+    {
+      "file": "/Users/macbookairm2/Desktop/V02 - avery cristy/Person_speaking_about_abundance_20261011154046.mp4",
+      "sha256": "ac54fd963e392439a80d3abf4f55bb6e665a4b2228f2bf50324707c8c6f5bbaf",
+      "take": "V03",
+      "language": "en",
+      "decision": "PRESERVE_ORIGINAL",
+      "independent_asr": "this is the Empress, okay? Abundance, security, opportunity, comfort, generosity. Look at how much space there is here for a life beyond just getting by.",
+      "window": "whole_original"
+    },
+    {
+      "file": "/Users/macbookairm2/Desktop/V02 - avery cristy/Person_speaking_to_camera_20261011154046_3.mp4",
+      "sha256": "69dea147e0d20f3105437a2a11931681344d491eba513c9917b84d140d58a996",
+      "take": "V04",
+      "language": "en",
+      "decision": "PRESERVE_ORIGINAL",
+      "independent_asr": "Progress, growth, choice, confidence, action. You want to pay your bills without dread. You want a home of your own. You want to help your family.",
+      "window": "whole_original"
+    },
+    {
+      "file": "/Users/macbookairm2/Desktop/V02 - véio ricasso/Person_speaking_to_camera_20261011154924_4.mp4",
+      "sha256": "826ef9a33eefd760b90f5e88a18fbed41a9900bc90949de77fdcd82bddb9c46a",
+      "take": "V02",
+      "language": "es",
+      "decision": "BLOCKED_TAKE",
+      "independent_asr": "le estás haciendo espacio ahora mismo y no tienes que agotarte para merecerlo, esa vida más tranquila con espacio para respirar y disfrutar.",
+      "window": "whole_original"
+    },
+    {
+      "file": "/Users/macbookairm2/Desktop/V02 - véio ricasso/Person_speaking_to_camera_20261011154924_3.mp4",
+      "sha256": "f08fce0e58767362ab009858009b25bb83abba0d85d69a124c197c82fe5fbd2a",
+      "take": "V06",
+      "language": "es",
+      "decision": "PRESERVE_ORIGINAL",
+      "independent_asr": "Así que envíate esto ahora mismo, ¿sí? Escucha estas palabras dos veces. Repite esto en lugar de vivir esperando que algo salga mal.",
+      "window": "whole_original"
+    },
+    {
+      "file": "/Users/macbookairm2/Desktop/V02 - véio ricasso/Person_speaking_to_camera_20261011154924_7.mp4",
+      "sha256": "240aa2316c530af46c63ad1751811bf9bc386903e9aa4aa096b0abbdb5f17e6c",
+      "take": "V08",
+      "language": "es",
+      "decision": "PRESERVE_ORIGINAL",
+      "independent_asr": "Comenta 222. Así unes tu intención de abundancia a tu nombre. Dale me gusta y guárdalo para llevar esa intención contigo.",
+      "window": "whole_original"
+    },
+    {
+      "file": "/Users/macbookairm2/Desktop/V03 - véio ricasso/Person_speaking_to_camera_20261011172525_3.mp4",
+      "sha256": "b395d3be17cf67349cefdb8b5e58fc28f1925678c506046fd26674a31b7b8e51",
+      "take": "V03",
+      "language": "es",
+      "decision": "USER_ACCEPTED_DIFFERENCE",
+      "independent_asr": "Le doy la bienvenida a la prosperidad hoy. Móestrame las oportunidades que he pasado por alto. Quiero reconocerlas cuando lleguen.",
+      "window": "whole_original",
+      "original_asr_assessment": "BLOCKED_TAKE",
+      "exception_registry": "EXCECOES_FALA_LUIGI.json"
+    },
+    {
+      "file": "/Users/macbookairm2/Desktop/V03 - véio ricasso/Person_speaking_to_camera_20261011172525_5.mp4",
+      "sha256": "9f27fa252799c01fbc999fcdf34f68435d143ce59ba78d449785aa345c15ac56",
+      "take": "V04",
+      "language": "es",
+      "decision": "PRESERVE_ORIGINAL",
+      "independent_asr": "Como recordatorio busca una mariposa hoy, puede aparecer de distintas maneras, alguien la menciona, alguien dibuja una para ti y te la enseña.",
+      "window": "whole_original"
+    },
+    {
+      "file": "/Users/macbookairm2/Desktop/V03 - véio ricasso/Person_speaking_to_camera_20261011172525_9.mp4",
+      "sha256": "35fd6944f61d604ece1e04edabeef21fb2ed1630514f77d79e97c2630c173876",
+      "take": "V08",
+      "language": "es",
+      "decision": "PRESERVE_ORIGINAL",
+      "independent_asr": "dale me gusta y guárdalo para mantener esta intención cerca, luego toca mi foto de perfil y mira en mis historias cómo continúa tu lectura.",
+      "window": "whole_original"
+    }
+  ]
+}

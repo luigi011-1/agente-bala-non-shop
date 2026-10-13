@@ -38,6 +38,21 @@ INPUT
 -> quando o Luigi confirmar a postagem: `python3 gerenciar_operacao.py registrar` (controle/README.md)
 ```
 
+### Intake de lote: modelos x avatares
+
+Aplicar a regra de lote do `AGENTS.md`: cada video modelo recebe a fila completa de avatares
+aplicaveis, nunca um avatar escolhido pela posicao do anexo. Tres modelos para Avery, Jordan e
+Devon geram tres producoes com tres avatares cada: nove videos previstos. Jordan continua na
+versao ES e pasta propria exigida pelo `AGENTS.md`. A ordem de entrega segue modelo primeiro:
+V01/Avery, V01/Jordan, V01/Devon; depois V02/Avery, V02/Jordan, V02/Devon, respeitando a ordem
+registrada no intake e as esperas de aprovacao do roteiro.
+
+Criar um CHECKPOINT por producao/modelo e registrar nele a fila completa antes da analise.
+Registrar o total esperado e as combinacoes no intake do lote, como vista derivada dos checkpoints;
+nao criar uma segunda fonte de estado. Analise e aprovacao de roteiro sao por modelo. Encerrar
+uma producao exige todos os avatares dela DONE; encerrar o lote exige todas as combinacoes de
+todos os modelos entregues. Pacote textual, geracao de takes e edicao continuam marcos separados.
+
 ### Validar antes de variar (Luigi, 2026-09-23)
 
 Toda producao nova a partir de video modelo e `Round: VALIDATION`: **um gancho so, o do video
@@ -88,6 +103,10 @@ Registrar `Objective: SALE` ou `Objective: GROWTH` no checkpoint. A oferta perma
 dois casos. SALE usa o destino Stories; GROWTH, quando explicitamente aprovado para a producao,
 usa save, 222 e follow, sem exigir Stories ou DM. Nao inferir GROWTH porque o video modelo era
 de crescimento. Uma decisao de GROWTH vale so para a producao cujo checkpoint a registra.
+
+**Follow no fim, SALE e GROWTH (Luigi, 2026-10-10, todos os angulos):** a ultima frase falada do video e
+o lembrete do botao de follow ("And don't forget to hit that follow button."), depois do Stories na venda.
+A ordem do selo nao muda. Memoria `cta-follow-no-fim`.
 
 Registrar tambem `Source: ORGANIC` quando o video modelo for de **pessoa real** (Luigi, 2026-09-25).
 Nesse caso `PERFIL_ORGANICO.md` governa a copy e o visual: copia literal do gancho visual, da copy e

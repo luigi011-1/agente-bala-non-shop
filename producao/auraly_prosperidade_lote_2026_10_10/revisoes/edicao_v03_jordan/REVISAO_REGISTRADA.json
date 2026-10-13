@@ -1,0 +1,64 @@
+{
+  "task_id": "bfe91675-7b0e-4d8b-9b33-1c56c50c80db",
+  "reviewer": "bala-revisor",
+  "independent": true,
+  "status": "APPROVED",
+  "checks": [
+    {
+      "name": "Integridade",
+      "result": "PASS",
+      "evidence": "Revisor conferiu os nove fingerprints dos artefatos atuais."
+    },
+    {
+      "name": "Formato",
+      "result": "PASS",
+      "evidence": "ffprobe independente H264/AAC 1080x1920 30fps1536quadros51.2s26103069bytes."
+    },
+    {
+      "name": "Pronúncia aceita",
+      "result": "PASS",
+      "evidence": "Autorização limitada às duas pronúncias. Móestrame áudio, Muéstrame legenda; relatório não declara100%literal."
+    },
+    {
+      "name": "Fala auditada",
+      "result": "PASS",
+      "evidence": "whisper.cpp confirmou y te la enseña T4 e CTA completo original/limpoT8 até cómo continúa tu lectura7.400/7.380s. Amara.org não confirmado."
+    },
+    {
+      "name": "Relatório",
+      "result": "PASS",
+      "evidence": "Silêncio/ghost/legendas/resoluçãoOK, exceção e limitações explícitas."
+    },
+    {
+      "name": "Visual",
+      "result": "PASS",
+      "evidence": "Revisor pessoalmente observou cortes.png, legendas.png e frame_follow_fim.png; sem mistura evidente, face/boca livres, selos777/222 e follow completo."
+    },
+    {
+      "name": "Picos foraCTA",
+      "result": "PASS",
+      "evidence": "picos.json/segs.json: T1/T3/T4/T6; nenhum noCTAT7–T9."
+    },
+    {
+      "name": "Escuta integral e outros vídeos",
+      "result": "NOT_APPLICABLE",
+      "evidence": "Sem escuta humana integral. V02ausênciasOkay e ¿sí? continuam não aceitas."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "WARNING",
+      "message": "Pronúncia divergente aceita.",
+      "evidence": "Móestrame áudio/Muéstrame legenda, não fala literal100%."
+    },
+    {
+      "severity": "WARNING",
+      "message": "QA visual por amostragem e ASR crítico.",
+      "evidence": "Sem certificação cada quadro/escuta humana integral."
+    }
+  ],
+  "registered_at": "2026-10-11T21:45:52.310428+00:00",
+  "taskpack_sha256": "d922daa6f23e9be699c4aeb729bd4e4900f637ad21dd3f5b446d00e70e7b8d04",
+  "artifacts_unchanged": true,
+  "user_script_approval_granted": false
+}

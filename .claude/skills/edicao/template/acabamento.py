@@ -41,14 +41,23 @@ VAZIAS = {"the", "a", "an", "and", "or", "but", "of", "to", "in", "on", "at", "f
           "we", "you", "it's", "its", "down", "some", "like", "more", "one", "want", "never", "miss", "made", "way",
           "there", "their", "these", "those", "about", "which", "would", "could", "should", "every", "right", "here"}
 CTA = {"comment", "follow", "yes", "link", "caption", "below", "save", "share", "subscribe", "222", "stories", "profile"}
+CTA.update({"comenta", "escribe", "toca", "sigueme", "seguir", "guardalo", "historias", "perfil", "biografia", "enlace"})
+VAZIAS.update({"el", "la", "los", "las", "un", "una", "y", "o", "de", "del", "en", "a", "al", "por", "para",
+               "con", "que", "te", "tu", "tus", "mi", "mis", "yo", "es", "no", "si", "se", "lo", "le", "les"})
 
 
 def _sh(cmd, **kw):
-    return subprocess.run(cmd, check=True, capture_output=True, text=True, **kw).stdout
+    try:
+        return subprocess.run(cmd, check=True, capture_output=True, text=True, **kw).stdout
+    except subprocess.CalledProcessError as erro:
+        print((erro.stdout or "")[-4000:] + (erro.stderr or "")[-4000:], flush=True)
+        raise
 
 
 def _limpa(w):
-    return re.sub(r"[^a-z0-9']", "", w.lower())
+    import unicodedata
+    texto = "".join(c for c in unicodedata.normalize("NFD", w.lower()) if not unicodedata.combining(c))
+    return re.sub(r"[^a-z0-9']", "", texto)
 
 
 # ---------- 1. picos ----------
@@ -57,8 +66,9 @@ def escolher_picos(ws, total, mudos=(), forcados=None, espaco=5.0):
     espaçados (aqui 5s), nunca dois iguais. Pico = palavra que fecha a frase (o payoff: candle, cloudy,
     imitation); vírgula vale menos; o CTA não leva pico. `forcados` (lista de palavras) manda."""
     cand = []
+    takes_cta = {w["k"] for w in ws if _limpa(w["w"]) in CTA}
     for i, w in enumerate(ws):
-        if w["k"] in mudos or w["t"] < 0.3 or w["t"] > total - 1.2:
+        if w["k"] in mudos or w["k"] in takes_cta or w["t"] < 0.3 or w["t"] > total - 1.2:
             continue
         lw = _limpa(w["w"])
         if forcados is not None:
@@ -224,7 +234,8 @@ def _render(pasta, html, saida, log):
     erros = re.search(r"(\d+) error\(s\)", out.stdout + out.stderr)
     if erros and int(erros.group(1)):
         raise RuntimeError(f"lint HyperFrames com erro em {pasta}:\n{out.stdout[-2000:]}")
-    _sh(HF + ["render", ".", "--format", "webm", "-o", saida], cwd=pasta)
+    # Streaming com um worker evita milhares de PNGs temporários no disco do Mac.
+    _sh(HF + ["render", ".", "--format", "webm", "--workers", "1", "--low-memory-mode", "-o", saida], cwd=pasta)
     log(f"   render HyperFrames: {os.path.basename(saida)}")
 
 

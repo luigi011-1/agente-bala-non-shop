@@ -18,7 +18,7 @@ Aberto em 2026-09-10, a partir da produção `producao/fitywell_pernas/`, que é
 |---|---|---|
 | Produto | app FityWell, funil de quiz | playbook digital de 42 hacks, $9.90 |
 | Público | mulheres 40+ | homens 40+ |
-| Avatares | Dana Morrison, Jamie Anderson, Lynn Parker + Eva Dall, Ivy Carl, Jamie Voss, Lais Collins, Lia Carlla, Robert Alves e Roberta Carvalho + holistic.brandon (de volta em 2026-09-29) | Dana Morrison, Jamie Anderson e Lynn Parker |
+| Avatares | Dana Morrison, Jamie Anderson, Lynn Parker + Eva Dall, Ivy Carl, Jamie Voss, Lais Collins, Lia Carlla, Robert Alves e Roberta Carvalho + holistic.brandon (de volta em 2026-09-29) + Meredith Callahan, Marshall Beckett e Cassidy Hargrove (2026-10-10, também no Sea Moss) | Dana Morrison, Jamie Anderson e Lynn Parker |
 | Posição do avatar | **COACH**, sempre | **PAR**, 1ª pessoa liberada |
 | Keyword | `yes` | `yes` |
 | Produto em quadro | **não** | **sim**, livro físico |

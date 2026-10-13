@@ -1,0 +1,16 @@
+{
+  "task_id": "84c68f46-65bf-4c9c-9e58-9c4f7b9a766c",
+  "reviewer": "bala-revisor",
+  "independent": true,
+  "status": "APPROVED",
+  "checks": [
+    {"name":"Artefatos, estado e escopo","result":"PASS","evidence":"Fingerprints íntegros; CHECKPOINT WAITING_SCRIPT_APPROVAL NOT_APPROVED. Análise, Puzzle, roteiros EN/ES, hooks e checklist lidos; três avatares e autorização temática explícita."},
+    {"name":"Evidências visual/transcrição","result":"PASS","evidence":"Revisor abriu timeline01-15 (297 amostras), frames2.6/48.6/53.4, manifest/transcript. Quatro textos do player vistos; ASR omite2/4, recuperação visual declarada. Origem orgânica probabilística."},
+    {"name":"Fidelidade e modelagem","result":"PASS","evidence":"T01-07 preservam viradaEmpress, promessa repetida, esforço/softlife, dez atributos, três desejos, casa, duas escutas e quatro afirmações. UI/Aya retirados; Jordan ES/mansão conserva ações. Duração68-80s versus59.44s declarada."},
+    {"name":"Oferta, claims e CTA","result":"PASS","evidence":"222 liga intenção ao nome, like/save, Stories/fotoPerfil/bio e followfinal EN/ES. Sem garantia financeira, testemunho fabricado ou funcionalidades customAudio atribuídas à Auraly."},
+    {"name":"Idiomas e cobertura","result":"PASS","evidence":"Dez takes EN/PT Avery/Devon e ES/PT Jordan, correspondência às falas canônicas. ES idiomático. Sem take mudo com voz."},
+    {"name":"Ritmo e checklists","result":"PASS","evidence":"Todos os takes<=29palavras. Checklist14/14aplicáveis13N/A; envio13/13. Hook único VALIDATION, banco5 e screen5 literal. Detector de frases exit0,24anteriores sem repetição."},
+    {"name":"Pacote, mídia e resultado","result":"NOT_APPLICABLE","evidence":"Sem K/V, mídia gerada ou aprovação Luigi nesta etapa."}
+  ],
+  "findings": [{"severity":"WARNING","message":"A demonstração visual do app original vira fala do avatar, preservando quatro afirmações e evitando funcionalidade não comprovada; comunicar ao aprovador.","evidence":"Fonte46.2-55s player; roteiroT07 TALKING sem UI. Estimativa68-80s contra59.44s."}]
+}

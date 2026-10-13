@@ -72,6 +72,12 @@ Faltando qualquer um, parar e pedir. Roteiro nao aprovado torna todo prompt retr
 Os avatares sao exatamente os que o Luigi anexou nesta producao: nunca inventar, nunca puxar de
 producao antiga. Faltou avatar, perguntar.
 
+**Lote com varios modelos:** seguir `AGENTS.md`, regra modelos x avatares. N modelos com M ancoras
+comuns = N producoes, cada uma com M avatares, total N x M videos (3 x 3 = 9). Nao parear pela
+ordem dos anexos. Registrar todas as combinacoes e o total esperado no intake e conferir pendencias
+antes de encerrar o lote. Pareamento exclusivo so quando declarado pelo Luigi; respeitar angulo,
+conta e roster Auraly obrigatorio. Analisar cada modelo uma vez, com aprovacao de roteiro por modelo.
+
 **Fila persistente (MULTI-AVATAR PRODUCTION RULE, 2026-09-09):** com N ancoras, registrar logo todos
 os avatares num arquivo de fila dentro da pasta da producao, com nome, caminho exato da ancora e
 estado `PENDING`, `ACTIVE` ou `DONE`. Roteiro, ganchos escolhidos e ordem de K/V sao aprovados uma

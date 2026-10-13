@@ -1,0 +1,45 @@
+{
+  "batch": "auraly_prosperidade_lote_2026_10_10",
+  "expected_total": 9,
+  "model_first": true,
+  "avatar_order": [
+    "avery_knox",
+    "devon_price",
+    "jordan_vale"
+  ],
+  "productions": [
+    {
+      "model": "V01",
+      "production": "auraly_prosperidade_2026_10_10_v01_1791676095556",
+      "reference_video": "/Users/macbookairm2/Downloads/snapinsta-1791676095556.mp4",
+      "avatars": [
+        "avery_knox",
+        "devon_price",
+        "jordan_vale"
+      ]
+    },
+    {
+      "model": "V02",
+      "production": "auraly_prosperidade_2026_10_10_v02_1791675249855",
+      "reference_video": "/Users/macbookairm2/Downloads/snapinsta-1791675249855.mp4",
+      "avatars": [
+        "avery_knox",
+        "devon_price",
+        "jordan_vale"
+      ]
+    },
+    {
+      "model": "V03",
+      "production": "auraly_prosperidade_2026_10_10_v03_1791675120440",
+      "reference_video": "/Users/macbookairm2/Downloads/snapinsta-1791675120440.mp4",
+      "avatars": [
+        "avery_knox",
+        "devon_price",
+        "jordan_vale"
+      ]
+    }
+  ],
+  "state_authority": "CHECKPOINT.md de cada producao; matriz derivada",
+  "editing": "one_video_at_a_time",
+  "user_authorized_exception": "Adaptar falas para dinheiro e prosperidade, preservando gancho visual/estrutura, inclusive pessoa real ORGANIC; aprovado explicitamente 2026-10-10"
+}

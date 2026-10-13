@@ -20,12 +20,19 @@ SET = ("She is in her gym behind a black table: white painted cinder-block wall,
        "sign reading TRAIN PRAY REPEAT on the left and a small American flag high on the wall at the right, both in "
        "sharp focus.")
 CAM = "Vertical smartphone shot, 26mm lens, camera at chest height about one meter from the table, level, front facing."
+BRANDON = dict(
+    anexo=ANEXO, id=ID, set=SET, nome="holistic.brandon", ancora="producao/_ancoras/holistic_brandon_ancora.jpg",
+    entrega="ENTREGA_AVATAR_FITWELL.md", angulo="Ângulo 2 FitWell", conta="FitWell",
+    descr="a mulher de tranças com contas", cenario="do box de treino", g3="'red neon sign reading TRAIN PRAY REPEAT' + 'small American flag'",
+    trava="Mesma roupa, mesma corrente com cruz de ouro, mesmo neon e bandeira em todo K.")
+
 END = ("Soft neutral even daylight, true neutral colors, real skin texture with visible pores, smartphone footage look, "
        "everything in sharp focus, 9:16 vertical.")
 
 
-def k_texto(hero):
-    return f"{ID} {SET} {hero} {CAM} {END}"
+def k_texto(hero, av=None):
+    av = av or BRANDON
+    return f"{av['id']} {av['set']} {hero} {CAM} {END}"
 
 
 def v_texto(fala):
@@ -33,13 +40,15 @@ def v_texto(fala):
             "Fixed camera. Natural lip sync, no music.")
 
 
-def gerar(pasta, titulo, qual, mapa, takes, ks, ficha_cam, notas_capcut):
+def gerar(pasta, titulo, qual, mapa, takes, ks, ficha_cam, notas_capcut, avatar=None, tipo="GROWTH"):
     """takes: [(T, beat, cena_pt, fala_en, fala_pt, k_num)]; ks: {k_num: (cena_pt, hero_en, ficha)}.
     ficha = (frame do modelo, forma do herói, % do quadro, distância da lente, pose)."""
     nome = os.path.basename(pasta.rstrip("/"))
+    av = avatar or BRANDON
+    ANEXO = av["anexo"]
     checks, falhas = [], []
     for n, (cena, hero, _f) in ks.items():
-        k = k_texto(hero)
+        k = k_texto(hero, av)
         neg = len(FS.RE_NEGACAO.findall(k))
         gat = [a for a in FS.varrer_k(k)]
         checks.append((f"K{n:02d}", len(k), neg, "American flag" in k, "9:16" in k, gat))
@@ -50,8 +59,8 @@ def gerar(pasta, titulo, qual, mapa, takes, ks, ficha_cam, notas_capcut):
             falhas.append(t[0])
 
     mapa_txt = "\n".join(f"V{int(t[0][1:]):02d}: K{t[5]:02d}" for t in takes)
-    ent = [f"# ENTREGA | holistic.brandon | {titulo}\n", "flow_seguro: v1\n",
-           f"Produção `{nome}` · Ângulo 2 FitWell · GROWTH · rodada de VALIDAÇÃO (clone fiel) · formato mínimo de prompt do Flow\n",
+    ent = [f"# ENTREGA | {av['nome']} | {titulo}\n", "flow_seguro: v1\n",
+           f"Produção `{nome}` · {av['angulo']} · {tipo} · rodada de VALIDAÇÃO (clone fiel) · formato mínimo de prompt do Flow\n",
            "## Qual vídeo é este\n", qual + "\n",
            "## 1. Anexos e mapa\n",
            f"- **Imagem (K):** anexar SÓ a imagem da avatar (`{ANEXO}`) e colar o prompt. 4 variações, 9:16. Nada de frame do modelo.",
@@ -60,7 +69,7 @@ def gerar(pasta, titulo, qual, mapa, takes, ks, ficha_cam, notas_capcut):
            mapa + "\n", "```text\nMAPA K/V\n" + mapa_txt + "\n```\n",
            "## 2. PROMPTS DE IMAGEM (um bloco por K)\n"]
     for n, (cena, hero, _f) in ks.items():
-        ent.append(f"### K{n:02d} · anexar SÓ a imagem da avatar\n\nCena: {cena}\n\n```text\nK{n:02d}\n{k_texto(hero)}\n```\n")
+        ent.append(f"### K{n:02d} · anexar SÓ a imagem da avatar\n\nCena: {cena}\n\n```text\nK{n:02d}\n{k_texto(hero, av)}\n```\n")
     ent.append("## 3. PROMPTS DE VÍDEO (um bloco por V)\n")
     for t in takes:
         v = int(t[0][1:])
@@ -70,7 +79,7 @@ def gerar(pasta, titulo, qual, mapa, takes, ks, ficha_cam, notas_capcut):
     ent += [f"| {t[0]} | {t[3]} | {t[4]} |" for t in takes]
     ent.append("\n**EN corrido:** " + " ".join(t[3] for t in takes))
     ent.append("\n**PT corrido:** " + " ".join(t[4] for t in takes) + "\n")
-    open(os.path.join(pasta, "ENTREGA_AVATAR_FITWELL.md"), "w", encoding="utf8").write("\n".join(ent))
+    open(os.path.join(pasta, av["entrega"]), "w", encoding="utf8").write("\n".join(ent))
 
     nk, nv = len(ks), len(takes)
     grupos = {}
@@ -85,8 +94,8 @@ def gerar(pasta, titulo, qual, mapa, takes, ks, ficha_cam, notas_capcut):
 Você é o executor do Google Flow. Você só gera imagens e vídeos a partir de prompts prontos. Você não cria, não edita e não melhora prompt.
 
 ## Produção atual
-- Conta: FitWell, vídeo de crescimento (growth). {titulo}.
-- Um avatar só: a mulher de tranças com contas (arquivo `{ANEXO}`). Imagens K01 a K{nk:02d}; vídeos V01 a V{nv:02d}.
+- Conta: {av['conta']}, vídeo de crescimento (growth). {titulo}.
+- Um avatar só: {av['descr']} (arquivo `{ANEXO}`). Imagens K01 a K{nk:02d}; vídeos V01 a V{nv:02d}.
 
 ## O que é anexado (só isto, nada mais)
 - IMAGEM (K): anexe só a imagem da avatar e cole o prompt.
@@ -138,7 +147,7 @@ Depois de cada K ou V, diga: código, resultado (pronto, tentando de novo, pende
               "F3 distância = 'closer to the camera than her face'; F4 câmera = '26mm lens, camera at chest height'; "
               "F5 pose = descrita no K; F6 lista fechada = só os objetos da coluna 'Herói'. "
               "G1 luz = 'Soft neutral even daylight'; G2 sem tom quente = 'true neutral colors'; G3 âncoras de fundo = "
-              "'red neon sign reading TRAIN PRAY REPEAT' + 'small American flag'; G4 foco = 'everything in sharp focus'; "
+              f"{av['g3']}; G4 foco = 'everything in sharp focus'; "
               "G5 realismo = 'real skin texture with visible pores, smartphone footage look'; G6 avatar fixo = 'Match the attached image exactly'; "
               "G7 boca de fala = 'mid-sentence'; G8 formato = '9:16 vertical'.\n")
     fi.append("Verificado por script (tamanho, negações, gatilhos do Flow seguro, bandeira e 9:16):\n")
@@ -146,14 +155,14 @@ Depois de cada K ou V, diga: código, resultado (pronto, tentando de novo, pende
     open(os.path.join(pasta, "FICHA_FRAMES.md"), "w", encoding="utf8").write("\n".join(fi) + "\n")
 
     pp = [f"# PROMPTS | {titulo}\n", "flow_seguro: v1\n",
-          f"Vídeo modelo: `input/modelo.mp4`. Âncora: `producao/_ancoras/holistic_brandon_ancora.jpg` (no Flow: `{ANEXO}`). Funil: growth.\n",
-          "Os blocos copiáveis (K em parágrafo, V só com a fala) estão em `ENTREGA_AVATAR_FITWELL.md`. Este arquivo guarda o índice e as regras.\n",
+          f"Vídeo modelo: `input/modelo.mp4`. Âncora: `{av['ancora']}` (no Flow: `{ANEXO}`). Funil: growth.\n",
+          f"Os blocos copiáveis (K em parágrafo, V só com a fala) estão em `{av['entrega']}`. Este arquivo guarda o índice e as regras.\n",
           "## Índice de geração\n", "| Take | Keyframe | Ação de geração |", "|---|---|---|"]
     pp += [f"| {t[0]} | K{t[5]:02d} | {'gerar K' if all(x[5] != t[5] for x in takes[:i]) else 'reaproveita a imagem do K'} + V{int(t[0][1:]):02d} |"
            for i, t in enumerate(takes)]
     pp += ["\n## Trava de identidade e continuidade\n",
-           "Todo K abre com a mesma descrição da avatar e do box de treino (avatar fixo da conta) e anexa só a imagem dela. "
-           "Mesma roupa, mesma corrente com cruz de ouro, mesmo neon e bandeira em todo K.\n",
+           f"Todo K abre com a mesma descrição da avatar e {av['cenario']} (avatar fixo da conta) e anexa só a imagem dela. "
+           f"{av['trava']}\n",
            "## Bloco global de vídeo\n",
            "Todo V: `The person in the image speaks in American English, looking at the camera: \"<fala literal>\"` + "
            "`Fixed camera. Natural lip sync, no music.` Padrão único do Flow (AGENTS.md, 2026-10-09): sem cena, roupa, objeto nem tom de voz no V.\n",

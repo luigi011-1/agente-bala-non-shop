@@ -13,6 +13,7 @@ import subprocess
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 W, H, FPS = 1080, 1920, 30
+IDIOMA = "en"
 FONTE = os.path.join(AQUI, "fonts", "Merriweather900.ttf")
 
 
@@ -45,7 +46,7 @@ def alinhar_forcado(f, fala, ws_asr):
     try:
         import whisperx
         if _al is None:
-            _al = whisperx.load_align_model(language_code="en", device="cpu")
+            _al = whisperx.load_align_model(language_code=IDIOMA, device="cpu")
         modelo, meta = _al
         audio = whisperx.load_audio(f)
         d = len(audio) / 16000
@@ -206,6 +207,26 @@ def png_selos(caminho):
                 continue
             if f is ft:
                 d.text((x, 10), t, font=f, fill=(255, 255, 255, 255), stroke_width=4, stroke_fill=(0, 0, 0, 120))
+            elif t == "🇺🇸":
+                # Pillow/Apple Color Emoji pode medir a bandeira e não desenhá-la.
+                # Desenho raster do mesmo símbolo, na mesma caixa, mantém posição e tamanho do selo.
+                fw = max(1, int(f.getlength(t)))
+                fh = max(13, round(fw / 1.9))
+                flag = Image.new("RGBA", (fw, fh), "white")
+                fd = ImageDraw.Draw(flag)
+                for row in range(13):
+                    if row % 2 == 0:
+                        fd.rectangle((0, round(row * fh / 13), fw, round((row + 1) * fh / 13) - 1), fill="#b22234")
+                cw, ch = round(fw * .4), round(fh * 7 / 13)
+                fd.rectangle((0, 0, cw, ch), fill="#3c3b6e")
+                for row in range(9):
+                    cols = 6 if row % 2 == 0 else 5
+                    for col in range(cols):
+                        sx = (col + (.5 if cols == 6 else 1)) * cw / 6
+                        sy = (row + .5) * ch / 9
+                        rr = max(1, fh / 50)
+                        fd.ellipse((sx-rr, sy-rr, sx+rr, sy+rr), fill="white")
+                tela.alpha_composite(flag, (x, 20))
             else:
                 d.text((x, 0), t, font=f, embedded_color=True)
             x += int(f.getlength(t)) + 10

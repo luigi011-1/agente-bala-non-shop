@@ -1154,14 +1154,19 @@ SEAMOSS_BUSCA_PAT = r"search\s+(for\s+)?natural rems sea moss on amazon"
 # 2026-10-02 (Luigi): o link do Sea Moss vai na LEGENDA do post ("caption"); o do comentario fixado
 # nao fica clicavel. 2026-10-05: so a legenda, ate ordem nova. As outras formas continuam
 # reconhecidas para cobrar a ordem Amazon -> link.
+# 2026-10-10 (Luigi, opcao B): o destino falado e o STORIES e depois a BIO, na mesma frase, e o
+# lembrete do botao de follow fecha o video (memoria cta-follow-no-fim).
 SEAMOSS_LINK_PAT = (r"pinned\s+comment|link\s+in\s+(my\s+)?bio|link\s+(is\s+)?(right\s+)?below"
-                    r"|in my profile|\bcaption\b")
+                    r"|in my profile|\bcaption\b|my profile picture|my stories")
+SEAMOSS_DESTINO_EXTRA_PAT = (r"(,|\bor\b)[^.?!]{0,40}?\b(stories|bio)\b|my profile picture"
+                             r"|[^.?!]*\bfollow\b[^.?!]*[.?!]?")
 SEAMOSS_FALA_PROIBIDA = (
     (r"\bday\s*(one|1)\b.{0,40}\bday\s*(thirty|30)\b|before\s+and\s+after|before\s*/\s*after",
      "conteudo de transformacao (antes/depois, day 1 vs day 30) e proibido pela marca"),
     (r"\b(doctors?|physicians?|nurses?|clinics?|scrubs|white coat)\b",
      "nada medico na fala (medico, clinica, jaleco), regra da marca"),
-    (r"\b(cures?|cured|curing|treats?|treated|treating|treatment|guarantee[ds]?)\b",
+    # "sweet treat(s)" e doce, nao tratamento (falso positivo de 2026-10-10, receitas de growth).
+    (r"\b(cures?|cured|curing|(?<!sweet )treats?|treated|treating|treatment|guarantee[ds]?)\b",
      "claim de cura, tratamento ou resultado garantido e proibido"),
     (r"\b(ozempic|wegovy|mounjaro|zepbound|semaglutide|tirzepatide|metformin|glp-?1)\b",
      "nome de remedio e proibido pela marca"),
@@ -1171,6 +1176,21 @@ SEAMOSS_VISUAL_PROIBIDO = (r"\b(doctors?|physicians?|nurses?|white coat|lab coat
 SEAMOSS_HASHTAGS = ("#ad", "#syntheticperformer", "#naturalrems")
 SEAMOSS_COMMENT_PAT = r"comment\s+[\"'`]?yes[\"'`]?\s+and\s+i.?ll\s+send\s+you\s+the\s+link\.?"
 SEAMOSS_NOME_CURTO_PAT = r"search\s+(for\s+)?sea moss\b|\bthis brand\b"
+
+
+def c_follow_no_fim(angulo, takes):
+    """Todos os angulos (Luigi, 2026-10-10): a ultima frase falada lembra do botao de follow,
+    growth ou venda. Aviso, nao falha, para nao reprovar pacote publicado antes da regra."""
+    falas = [t for t in takes if t["fala"]]
+    if not falas:
+        return
+    ultima = re.split(r"(?<=[.?!])\s+", falas[-1]["fala"].strip())[-1]
+    if re.search(r"\bfollow", ultima, re.I):
+        ok("follow-fim", "ultima frase lembra do follow")
+    else:
+        aviso("follow-fim", "%s: a ultima frase do video nao lembra do botao de follow ('And don't forget "
+                            "to hit that follow button.'), regra de 2026-10-10" % falas[-1]["id"],
+              "ROTEIRO.md:%d" % falas[-1]["linha"])
 
 
 def c_seamoss(angulo, arquivos, takes, kfs, roteiro_txt=""):
@@ -1203,14 +1223,16 @@ def c_seamoss(angulo, arquivos, takes, kfs, roteiro_txt=""):
             elif link:
                 # Passo 4: a sequencia fecha no link. So o 'Comment yes' opcional vem depois.
                 resto = re.sub(SEAMOSS_COMMENT_PAT, " ", corrida[link.end():], flags=re.I)
+                # Stories + bio na mesma frase e o follow final sao a decisao de 2026-10-10.
+                resto = re.sub(SEAMOSS_DESTINO_EXTRA_PAT, " ", resto, flags=re.I)
                 m = re.search(SEAMOSS_LINK_PAT + r"|amazon|if you can.?t find|\bbio\b|\bprofile\b|\bbelow\b",
                               resto, re.I)
                 if m:
                     falha("seamoss", "depois do link aparece '%s'. Passo 4 da marca: o CTA fecha no "
                                      "link, sem voltar, sem repetir, sem alternativa" % m.group(0))
             else:
-                aviso("seamoss", "o CTA nao cita o link (passo 3, decisao do Luigi: 'Or you can "
-                                 "just tap the link I left right down below, in the caption of this video.')")
+                aviso("seamoss", "o CTA nao cita o destino (passo 3, decisao do Luigi em 2026-10-10: 'Or tap "
+                                 "my profile picture, the link is waiting in my stories, or right there in my bio.')")
         m = re.search(SEAMOSS_NOME_CURTO_PAT, corrida, re.I)
         if m:
             falha("seamoss", "'%s': a marca exige o nome inteiro, 'Natural Rems Sea Moss'" % m.group(0))
@@ -1479,6 +1501,7 @@ def checar_auraly(pasta, roteiro):
         c_angulo3_stories(takes)
     c_angulo3_selo(takes)
     c_follow_gate_auraly(takes)
+    c_follow_no_fim(3, takes)
     c_preco_auraly(arquivos)
     c_patch(arquivos)
     if roteiro:
@@ -1640,6 +1663,7 @@ def checar(pasta):
     c_angulo3(angulo, arquivos, kfs, takes, pasta, roteiro)
     c_angulo4(angulo, arquivos, takes, kfs)
     c_seamoss(angulo, arquivos, takes, kfs, roteiro or "")
+    c_follow_no_fim(angulo, takes)
 
     return imprimir(pasta, "  %s   (angulo %s | %d takes | %d keyframes | %d clipes)"
                     % (pasta, angulo if angulo else "?", len(takes), len(kfs), len(videos)))

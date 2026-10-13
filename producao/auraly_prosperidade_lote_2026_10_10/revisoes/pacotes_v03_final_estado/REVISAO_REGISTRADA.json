@@ -1,0 +1,33 @@
+{
+  "task_id": "bac8d833-519a-4c7d-ad70-a41ced10b5bd",
+  "reviewer": "bala-revisor",
+  "independent": true,
+  "status": "APPROVED",
+  "checks": [
+    {
+      "name": "integridade_delta",
+      "result": "PASS",
+      "evidence": "Todos fingerprints atuais incluindo deliverables e ZIP conferidos. Apenas CHECKPOINT mudou nos artefatos previamente revisados; K/V idênticos."
+    },
+    {
+      "name": "estado_filas",
+      "result": "PASS",
+      "evidence": "PRODUCTION_COMPLETE textual,três avataresDONE,mídia explicitamente pendente;Pendinghistórico limpo. FILA_LOTE/FILA_EDICAO/INDEX cobrem nove combinações na ordemmodelo/Avery/Devon/Jordan,takesNOT_RECEIVED/ediçãoPENDING."
+    },
+    {
+      "name": "executor_modelo_zip",
+      "result": "PASS",
+      "evidence": "AGENTE_FLOW_V03 restringe este modelo,umavatarporvez,restartcodes/manual/4imagens1vídeo9:16; três K/nove V; mapa correto, lotes1-7/8-9. ZIP CRC íntegro19.464.119bytes,conteúdo byte-a-byte igual aos9ENTREGA/9agents/9ROTEIRO/3sheets/3agentsmodelo atuais,semMP4."
+    },
+    {
+      "name": "midia_final",
+      "result": "NOT_APPLICABLE",
+      "evidence": "Nenhuma mídia gerada,editada ou publicada certificada."
+    }
+  ],
+  "findings": [],
+  "registered_at": "2026-10-11T17:10:35.717345+00:00",
+  "taskpack_sha256": "b77cb73374b99bc097487cd65aa2148aa010768e5c7bd03b7f7405d3c186fa31",
+  "artifacts_unchanged": true,
+  "user_script_approval_granted": false
+}

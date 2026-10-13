@@ -1,0 +1,14 @@
+{
+ "task_id":"63341f8e-8692-4d79-9a50-b8c1ccaa3176","reviewer":"bala-revisor","independent":true,"status":"CHANGES_REQUIRED",
+ "checks":[
+  {"name":"fidelidade_visual_e_estrutura","result":"PASS","evidence":"Revisor abriu timeline01-13,253amostras, frames6.8/41.6, transcript, ANALISE e Puzzle. Estrutura e selfie preservadas com adaptação financeira autorizada."},
+  {"name":"copy_cta_e_idioma","result":"PASS","evidence":"Nove takes EN/PT e ES/PT, até26palavras; sem renda garantida ou testemunho fabricado; CTA222/like/save/Stories/bio/followfinal."},
+  {"name":"gate_envio_A12","result":"FAIL","evidence":"Versão R1 screen12palavrasEN/11ES; máximo9total, não por linha. Primeira linhaEN fora do banco."},
+  {"name":"integridade_taskpack_R1","result":"FAIL","evidence":"Hooks/checklist corrigidos após apontamento não correspondem ao R1; exige nova revisão."},
+  {"name":"pacote_midia_e_aprovacao_luigi","result":"NOT_APPLICABLE","evidence":"SemK/V ou mídia; aprovaçãoLuigi pendente."}
+ ],
+ "findings":[
+  {"severity":"BLOCKER","message":"Corrigir screen text e A12: máximo9palavras total e literalidade no banco, depois revisar taskpack novo.","evidence":"GANCHOS_VISUAIS EN/ES e CHECKLIST_COPY R1."},
+  {"severity":"WARNING","message":"Duração67-77s excede50.663s original; não houve certificação de áudio por ouvido ou realismo de mídia.","evidence":"ROTEIRO e manifest; parecer restrito a roteiro/hooks/evidência visual."}
+ ]
+}
