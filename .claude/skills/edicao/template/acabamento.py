@@ -28,7 +28,7 @@ import numpy as np
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 W, H, FPS = 1080, 1920, 30
-HF = ["npx", "-y", "hyperframes@0.8.144"]
+HF = ["npx", "-y", "hyperframes@0.8.153"]
 # fonte da palavra de pico: a do DNA "loud" do embedded-captions (Anton, caixa-alta condensada); serifada = a nossa
 FONTES_PICO = {"anton": ("Anton400.woff2", "Anton", 400), "serifada": ("Merriweather900.woff2", "Merri", 900),
                "montserrat": ("Montserrat900.woff2", "Montserrat", 900)}
@@ -354,6 +354,7 @@ PACOTES_SFX = {
 
 
 def sfx(mix, total, trocas, picos, saida, pacote="sutil"):
+    pacote = "nenhum" if SEM_SFX else pacote  # Luigi, 2026-10-13: sem efeito sonoro, só música
     """Som na troca de take e em cada pico, por cima do mix (voz + música). Pacotes em PACOTES_SFX."""
     troca, pico = PACOTES_SFX[pacote]
     ev = ([(max(0, t - 0.2), troca) for t in trocas] if troca else []) + \
@@ -395,6 +396,11 @@ def variacao(nome):
     return reg["videos"][nome]
 
 
+# Luigi, 2026-10-13 (velocidade): sem palavra atrás do avatar; o zoom nos picos continua.
+PALAVRA_ATRAS = False
+SEM_SFX = True  # Luigi, 2026-10-13: efeitos sonoros repetitivos; fica só a música de fundo
+
+
 # ---------- tudo junto ----------
 def aplicar(tmp, ws, segs, total, estilo, flashes=(), forcados=None, zoom=True, grao=False, pacote="sutil",
             fonte="anton", log=print):
@@ -408,9 +414,13 @@ def aplicar(tmp, ws, segs, total, estilo, flashes=(), forcados=None, zoom=True, 
     pw = None
     if picos:
         log(f"   {len(picos)} picos: " + ", ".join(f"{p['w']} ({p['t']:.1f}s)" for p in picos))
-        recortar(base, picos, tmp, log)
-        medir(picos, base, fonte)
-        pw = camada_picos(picos, total, tmp, log)
+        if PALAVRA_ATRAS:
+            recortar(base, picos, tmp, log)
+            medir(picos, base, fonte)
+            pw = camada_picos(picos, total, tmp, log)
+        else:  # só o zoom no pico, centrado na cabeça (sem recorte por IA nem render HyperFrames)
+            for p in picos:
+                p.update(f0=round(p["a"] * FPS), f1=round(p["b"] * FPS), cx=W / 2, cy=H * 0.35, occ=0, escuro=False)
     frente = camada_frente(total, list(flashes) if estilo == "auraly" else [], tmp, grao, log)
     nova = f"{tmp}/assets/base_hf.mp4"
     log("   compondo palavra atrás do avatar e zoom")
@@ -419,7 +429,8 @@ def aplicar(tmp, ws, segs, total, estilo, flashes=(), forcados=None, zoom=True, 
     sfx(f"{tmp}/assets/mix.wav", total, trocas, picos, mix, pacote)
     json.dump([{k: v for k, v in p.items() if k != "fg"} for p in picos], open(f"{tmp}/picos.json", "w"), indent=1)
     rel.append("- Acabamento HyperFrames: " + (", ".join(
-        f"{p['w']} {p['t']:.1f}s ({int(p['occ'] * 100)}% atrás do corpo{', texto escuro' if p['escuro'] else ''})"
+        (f"{p['w']} {p['t']:.1f}s ({int(p['occ'] * 100)}% atrás do corpo{', texto escuro' if p['escuro'] else ''})"
+         if PALAVRA_ATRAS else f"zoom em {p['w']} {p['t']:.1f}s")
         for p in picos) or "nenhum pico") +
         f" · zoom {'sim' if zoom else 'não'} · grão {'sim' if grao else 'não'} · "
         f"SFX {pacote}")

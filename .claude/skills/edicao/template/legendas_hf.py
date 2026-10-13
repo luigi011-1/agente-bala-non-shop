@@ -16,7 +16,7 @@ import subprocess
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 PASTA = os.path.normpath(os.path.join(AQUI, "..", "legendas_hf"))
-HF = ["npx", "-y", "hyperframes@0.8.144"]
+HF = ["npx", "-y", "hyperframes@0.8.153"]
 W, H, FPS = 1080, 1920, 30
 LEG_CENTRO = 960  # centro da legenda: peito, abaixo do rosto e acima do herói da mesa
 # os que leem a fala de WORDS/TRANSCRIPT com grupos; editorial-emphasis e parallax-layers montam BLOCKS à mão e

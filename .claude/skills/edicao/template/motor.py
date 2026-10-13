@@ -287,3 +287,46 @@ def render_final(base, lista_leg, mix, total, saida, flashes=(), selos=None, cam
     _sh(["ffmpeg", "-y", "-loglevel", "error", *ins, "-filter_complex", ";".join(fil), "-map", f"[{ult}]", "-map", "1:a",
          "-t", f"{total:.3f}", "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-profile:v", "high",
          "-pix_fmt", "yuv420p", "-r", str(FPS), "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", saida])
+
+
+# ---------- legenda dinâmica (Luigi, 2026-10-13: "mais dinâmica, que chame atenção", sem render HyperFrames) ----------
+FONTE_DIN = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts", "Montserrat900.woff2")
+AMARELO = (255, 214, 10, 255)
+
+
+def png_dinamica(palavras, ativa, topo, caminho, tam=86, largura=960):
+    """Caixa alta Montserrat 900, branca com contorno preto grosso; a palavra falada agora fica amarela e 15% maior.
+    Uma imagem por palavra da página: troca no tempo da fala (efeito karaokê)."""
+    from PIL import Image, ImageDraw, ImageFilter, ImageFont
+    fn = lambda t: ImageFont.truetype(FONTE_DIN, t)
+    ws = [p.upper() for p in palavras]
+    tams = [int(tam * 1.15) if i == ativa else tam for i in range(len(ws))]
+    esp = int(tam * 0.28)
+    linhas, cur, larg = [], [], 0
+    for i, w in enumerate(ws):
+        lw = fn(tams[i]).getlength(w)
+        if cur and larg + esp + lw > largura:
+            linhas.append(cur); cur, larg = [], 0
+        cur.append((i, w, lw)); larg += (esp if len(cur) > 1 else 0) + lw
+    if cur:
+        linhas.append(cur)
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    sombra = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ds, y = ImageDraw.Draw(sombra), topo
+    pos = []
+    for ln in linhas:
+        tot = sum(x[2] for x in ln) + esp * (len(ln) - 1)
+        x = (W - tot) / 2
+        alt = max(tams[i] for i, _, _ in ln)
+        for i, w, lw in ln:
+            yy = y + (alt - tams[i]) * 0.75
+            pos.append((i, w, x, yy))
+            ds.text((x, yy + 6), w, font=fn(tams[i]), fill=(0, 0, 0, 170))
+            x += lw + esp
+        y += int(alt * 1.12)
+    img.alpha_composite(sombra.filter(ImageFilter.GaussianBlur(8)))
+    dr = ImageDraw.Draw(img)
+    for i, w, x, yy in pos:
+        dr.text((x, yy), w, font=fn(tams[i]), fill=AMARELO if i == ativa else (255, 255, 255, 255),
+                stroke_width=9, stroke_fill=(0, 0, 0, 255))
+    img.save(caminho)

@@ -30,9 +30,20 @@ END = ("Soft neutral even daylight, true neutral colors, real skin texture with 
        "everything in sharp focus, 9:16 vertical.")
 
 
-def k_texto(hero, av=None):
+def k_texto(hero, av=None, opt=None):
     av = av or BRANDON
+    if opt and opt.get("raw"):
+        return opt["raw"]
     return f"{av['id']} {av['set']} {hero} {CAM} {END}"
+
+
+def fmt_anexos(lst):
+    return "nenhuma imagem (só o texto)" if lst == ["-"] else " + ".join(f"`{a}`" for a in lst)
+
+
+def k_anexos(av, opt=None):
+    """Lista dos anexos do K: a avatar por padrão; opt['anexos'] substitui (K sem avatar ou com foto do produto)."""
+    return (opt or {}).get("anexos") or [av["anexo"]]
 
 
 def v_texto(fala):
@@ -47,8 +58,10 @@ def gerar(pasta, titulo, qual, mapa, takes, ks, ficha_cam, notas_capcut, avatar=
     av = avatar or BRANDON
     ANEXO = av["anexo"]
     checks, falhas = [], []
-    for n, (cena, hero, _f) in ks.items():
-        k = k_texto(hero, av)
+    def _opt(v):
+        return v[3] if len(v) > 3 else None
+    for n, v in ks.items():
+        k = k_texto(v[1], av, _opt(v))
         neg = len(FS.RE_NEGACAO.findall(k))
         gat = [a for a in FS.varrer_k(k)]
         checks.append((f"K{n:02d}", len(k), neg, "American flag" in k, "9:16" in k, gat))
@@ -60,16 +73,17 @@ def gerar(pasta, titulo, qual, mapa, takes, ks, ficha_cam, notas_capcut, avatar=
 
     mapa_txt = "\n".join(f"V{int(t[0][1:]):02d}: K{t[5]:02d}" for t in takes)
     ent = [f"# ENTREGA | {av['nome']} | {titulo}\n", "flow_seguro: v1\n",
-           f"Produção `{nome}` · {av['angulo']} · {tipo} · rodada de VALIDAÇÃO (clone fiel) · formato mínimo de prompt do Flow\n",
+           f"Produção `{nome}` · {av['angulo']} · {tipo} · rodada de VALIDAÇÃO · formato mínimo de prompt do Flow\n",
            "## Qual vídeo é este\n", qual + "\n",
            "## 1. Anexos e mapa\n",
-           f"- **Imagem (K):** anexar SÓ a imagem da avatar (`{ANEXO}`) e colar o prompt. 4 variações, 9:16. Nada de frame do modelo.",
+           f"- **Imagem (K):** anexar SÓ o que o título de cada K indica (padrão: a imagem da avatar, `{ANEXO}`) e colar o prompt. 4 variações, 9:16. Nada de frame do modelo.",
            "- **Vídeo (V):** anexar SÓ a imagem escolhida do K indicado no mapa e colar o prompt de vídeo. 1 variação, 9:16.",
            "- Bloco do agente Flow desta produção: `AGENTE_FLOW.md`.\n",
            mapa + "\n", "```text\nMAPA K/V\n" + mapa_txt + "\n```\n",
            "## 2. PROMPTS DE IMAGEM (um bloco por K)\n"]
-    for n, (cena, hero, _f) in ks.items():
-        ent.append(f"### K{n:02d} · anexar SÓ a imagem da avatar\n\nCena: {cena}\n\n```text\nK{n:02d}\n{k_texto(hero, av)}\n```\n")
+    for n, v in ks.items():
+        anx = fmt_anexos(k_anexos(av, _opt(v)))
+        ent.append(f"### K{n:02d} · anexar SÓ {anx}\n\nCena: {v[0]}\n\n```text\nK{n:02d}\n{k_texto(v[1], av, _opt(v))}\n```\n")
     ent.append("## 3. PROMPTS DE VÍDEO (um bloco por V)\n")
     for t in takes:
         v = int(t[0][1:])
@@ -89,18 +103,20 @@ def gerar(pasta, titulo, qual, mapa, takes, ks, ficha_cam, notas_capcut, avatar=
                         for k, g in grupos.items())
     regra_v = (f"Mapa: {mapa_ag}." if any(
         int(t[0][1:]) != t[5] for t in takes) else "Cada V usa a imagem que sobrou do K de mesmo número (V01 usa K01).")
+    especiais = [(n, k_anexos(av, _opt(v))) for n, v in ks.items() if _opt(v) and _opt(v).get("anexos")]
+    extra_anexos = "".join((f"\n- EXCEÇÃO K{n:02d}: NÃO anexe nenhuma imagem, só cole o prompt." if anx == ["-"] else f"\n- EXCEÇÃO K{n:02d}: anexe " + " e ".join(f"`{a}`" for a in anx) + " (nesta ordem).") for n, anx in especiais)
     ag = f"""# Agente do Flow, produção atual: {titulo}
 
 Você é o executor do Google Flow. Você só gera imagens e vídeos a partir de prompts prontos. Você não cria, não edita e não melhora prompt.
 
 ## Produção atual
-- Conta: {av['conta']}, vídeo de crescimento (growth). {titulo}.
+- Conta: {av['conta']}, vídeo de {'crescimento (growth)' if tipo == 'GROWTH' else 'venda'}. {titulo}.
 - Um avatar só: {av['descr']} (arquivo `{ANEXO}`). Imagens K01 a K{nk:02d}; vídeos V01 a V{nv:02d}.
 
 ## O que é anexado (só isto, nada mais)
-- IMAGEM (K): anexe só a imagem da avatar e cole o prompt.
+- IMAGEM (K): anexe só a imagem da avatar e cole o prompt.{extra_anexos}
 - VÍDEO (V): anexe só a imagem que o operador escolheu do K indicado e cole o prompt de vídeo.
-- Não existe frame modelo nem segunda imagem. Cenário, pose, câmera e objeto já estão escritos em cada prompt. Pare só se faltar a imagem da avatar (K) ou a imagem escolhida (V).
+- Não existe frame modelo. Segunda imagem só quando uma EXCEÇÃO acima pedir. Cenário, pose, câmera e objeto já estão escritos em cada prompt. Pare só se faltar a imagem da avatar (K que pede a avatar) ou a imagem escolhida (V).
 
 ## Imagens (K01 a K{nk:02d})
 1. Modelo: Nano Banana 2.1. Formato: 9:16 vertical.
@@ -140,7 +156,8 @@ Depois de cada K ou V, diga: código, resultado (pronto, tentando de novo, pende
           f"Frames do modelo em `_watch/frames/` (cenas e linha do tempo). {ficha_cam}\n",
           "| K | Frame do modelo | Herói e forma | % do quadro | Distância da lente | Câmera | Pose |",
           "|---|---|---|---|---|---|---|"]
-    for n, (_c, hero, f) in ks.items():
+    for n, v in ks.items():
+        f = v[2]
         fi.append(f"| K{n:02d} | {f[0]} | {f[1]} | {f[2]} | {f[3]} | 26mm, altura do peito, ~1 m, frontal | {f[4]} |")
     fi.append("\nPlacar (F1-F6 e G1-G8 do `GATE_VISUAL.md` Parte 6), com evidência literal comum a todo K: "
               "F1 forma do herói = coluna 'Herói e forma' escrita no K; F2 medida = 'very close to the lens' / 'large in frame'; "
@@ -155,7 +172,7 @@ Depois de cada K ou V, diga: código, resultado (pronto, tentando de novo, pende
     open(os.path.join(pasta, "FICHA_FRAMES.md"), "w", encoding="utf8").write("\n".join(fi) + "\n")
 
     pp = [f"# PROMPTS | {titulo}\n", "flow_seguro: v1\n",
-          f"Vídeo modelo: `input/modelo.mp4`. Âncora: `{av['ancora']}` (no Flow: `{ANEXO}`). Funil: growth.\n",
+          f"Vídeo modelo: `input/modelo.mp4`. Âncora: `{av['ancora']}` (no Flow: `{ANEXO}`). Funil: {tipo.lower()}.\n",
           f"Os blocos copiáveis (K em parágrafo, V só com a fala) estão em `{av['entrega']}`. Este arquivo guarda o índice e as regras.\n",
           "## Índice de geração\n", "| Take | Keyframe | Ação de geração |", "|---|---|---|"]
     pp += [f"| {t[0]} | K{t[5]:02d} | {'gerar K' if all(x[5] != t[5] for x in takes[:i]) else 'reaproveita a imagem do K'} + V{int(t[0][1:]):02d} |"
@@ -167,7 +184,7 @@ Depois de cada K ou V, diga: código, resultado (pronto, tentando de novo, pende
            "Todo V: `The person in the image speaks in American English, looking at the camera: \"<fala literal>\"` + "
            "`Fixed camera. Natural lip sync, no music.` Padrão único do Flow (AGENTS.md, 2026-10-09): sem cena, roupa, objeto nem tom de voz no V.\n",
            "## Mapa de âncoras\n", "| Keyframe | Referências a anexar | Modelo |", "|---|---|---|"]
-    pp += [f"| K{n:02d} | só `{ANEXO}` | Nano Banana 2.1, 4 variações, 9:16 |" for n in ks]
+    pp += [f"| K{n:02d} | " + fmt_anexos(k_anexos(av, _opt(v))) + " | Nano Banana 2.1, 4 variações, 9:16 |" for n, v in ks.items()]
     pp += ["\n## Montagem no CapCut\n", notas_capcut + "\n",
            "## Gates de qualidade\n",
            "1. `python3 checar_entrega.py` e `python3 flow_seguro.py` sem falha.",

@@ -34,6 +34,31 @@
    "legenda": "padrao",
    "sfx": "pop",
    "fonte_pico": "anton"
+  },
+  "marshall_seamoss_seios_noticia/Marshall - V02": {
+   "legenda": "caption-highlight",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "meredith_seamoss_rins_noticia/Meredith - V01": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "marshall_seamoss_rins_noticia/Marshall - V01": {
+   "legenda": "padrao",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "meredith_seamoss_seios_noticia/Meredith - V02": {
+   "legenda": "caption-highlight",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "cassidy_seamoss_seios_noticia/Cassidy - V02": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
   }
  }
 }

@@ -39,6 +39,7 @@ ENTREGAS = "/mnt/project-files/entregas"
 SP, GAP, PAD_IN, PAD_OUT, MIN_ISLAND, JUNTA, W, H, FPS = 1.12, 0.15, 0.05, 0.11, 0.4, 0.05, 1080, 1920, 30
 INSERT = 2.5  # segundos do insert mudo (antes da aceleração); --insert 0 = inteiro
 IDIOMA = "en"
+LEGENDA_DINAMICA = True  # Luigi, 2026-10-13: legenda mais dinâmica (Montserrat caixa alta, palavra ativa amarela)
 MUSICA_DB = -18  # Luigi, 2026-10-10: -18 dB (cama do media-use da HyperFrames, 0,12) aprovado; -25 sumia, -10 atrapalhou a fala
 
 
@@ -956,8 +957,18 @@ def main():
             txt = " ".join(re.sub(r"[.,!?]$", "", w["w"]) for w in p).lower()
             png = f"{tmp}/leg_{n:03d}.png"
             pos_legenda = PLANO_EDITORIAL.get("captions", {}) if PLANO_EDITORIAL else {}
-            motor.png_fitwell(txt, pos_legenda.get("hero_top", 760) if p[0]["k"] in up else pos_legenda.get("top", 880), png)
-            eventos.append((st, en, png))
+            topo_leg = pos_legenda.get("hero_top", 760) if p[0]["k"] in up else pos_legenda.get("top", 880)
+            if LEGENDA_DINAMICA:  # palavra falada em amarelo, troca no tempo da fala
+                pal = [re.sub(r"[.,!?;:]$", "", w["w"]) for w in p]
+                for j in range(len(p)):
+                    a2 = st if j == 0 else max(st, p[j]["t"] - 0.03)
+                    b2 = en if j == len(p) - 1 else max(a2, p[j + 1]["t"] - 0.03)
+                    pj = f"{tmp}/leg_{n:03d}_{j}.png"
+                    motor.png_dinamica(pal, j, topo_leg, pj)
+                    eventos.append((a2, b2, pj))
+            else:
+                motor.png_fitwell(txt, topo_leg, png)
+                eventos.append((st, en, png))
             duracoes.append(en - st)
     npag = len(pages)
     lista_leg = motor.faixa_legendas(eventos, total, tmp)
@@ -974,8 +985,9 @@ def main():
         log("5b/7 acabamento HyperFrames (palavra atrás do avatar, zoom de pico, SFX)")
         import acabamento
         var = acabamento.variacao(f"{os.path.basename(pasta)}/{nome}")
-        a.legenda = var["legenda"] if a.legenda == "auto" else a.legenda
-        a.sfx = var["sfx"] if a.sfx == "auto" else a.sfx
+        # Luigi, 2026-10-13 (velocidade): legenda padrão (Pillow, sem render HyperFrames) no lugar do rodízio
+        a.legenda = "padrao" if a.legenda == "auto" else a.legenda
+        a.sfx = "nenhum" if a.sfx == "auto" else a.sfx  # Luigi, 2026-10-13: só música de fundo
         a.fonte_pico = var["fonte_pico"] if a.fonte_pico == "auto" else a.fonte_pico
         rel.append(f"- Variação deste vídeo (rodízio): legenda {a.legenda} · SFX {a.sfx} · fonte do pico {a.fonte_pico}")
         forc = [re.sub(r"[^a-z0-9']", "", x.lower()) for x in a.picos.split(",")] if a.picos else None
