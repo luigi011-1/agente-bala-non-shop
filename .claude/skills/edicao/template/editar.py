@@ -23,7 +23,8 @@ _VENV = os.path.abspath(os.path.join(AQUI, "../../../..", ".venv-operacao", "bin
 try:
     import PIL, whisperx  # noqa: F401
 except ImportError:
-    if os.path.exists(_VENV) and os.path.realpath(sys.executable) != os.path.realpath(_VENV):
+    # compara o prefixo, não o binário: o python do venv é link para o do sistema e o realpath dava igual (nuvem, 2026-10-15)
+    if os.path.exists(_VENV) and os.path.realpath(sys.prefix) != os.path.realpath(os.path.dirname(os.path.dirname(_VENV))):
         os.execv(_VENV, [_VENV, os.path.abspath(__file__)] + sys.argv[1:])
 sys.path.insert(0, AQUI)
 import motor  # noqa: E402

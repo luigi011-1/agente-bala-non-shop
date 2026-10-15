@@ -285,7 +285,10 @@ def render_final(base, lista_leg, mix, total, saida, flashes=(), selos=None, cam
     if not fil:
         fil = ["[0:v]null[vn]"]; ult = "vn"
     _sh(["ffmpeg", "-y", "-loglevel", "error", *ins, "-filter_complex", ";".join(fil), "-map", f"[{ult}]", "-map", "1:a",
-         "-t", f"{total:.3f}", "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-profile:v", "high",
+         # teto de 3 Mb/s (2026-10-15): sai já abaixo de 30 MB para a pasta do Mac num encode só, sem a recompressão
+         # crf 20 depois (um passe a menos, ~1 min); 2,6 Mb/s era a taxa do v05 aprovado
+         "-t", f"{total:.3f}", "-c:v", "libx264", "-crf", "17", "-maxrate", "3000k", "-bufsize", "6000k",
+         "-preset", "medium", "-profile:v", "high",
          "-pix_fmt", "yuv420p", "-r", str(FPS), "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", saida])
 
 
