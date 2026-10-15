@@ -84,6 +84,13 @@ estado `PENDING`, `ACTIVE` ou `DONE`. Roteiro, ganchos escolhidos e ordem de K/V
 vez so. Fechar um avatar nunca fecha a producao: marcar `DONE`, avancar o proximo `PENDING` e
 entregar o pacote dele. `PRODUCTION COMPLETE` so sem `PENDING` nem `ACTIVE`.
 
+**Fila de EDICAO nasce aqui (Luigi, 2026-10-15):** a cada pacote de avatar entregue (`DONE`), acrescentar o
+video na fila de edicao do lote, na mesma ordem da entrega (= ordem aprovada na conversa):
+`.venv-operacao/bin/python .claude/skills/edicao-lote/fila_edicao.py producao/<lote>/FILA_EDICAO.json --adicionar --producao <pasta_da_producao> --avatar <avatar> --modelo V01 --take-count <numero de V__> --nome <vNN_tema_avatar>`
+Ele cria a pasta `~/Desktop/<lote>/<NN>_<modelo>_<avatar>/` onde o Luigi solta os takes; avisar o caminho
+na entrega. A edicao depois segue a skill `edicao-lote` (3 por vez). NAO: criar a fila so na hora de editar,
+reordenar a fila, ou adicionar o mesmo video duas vezes (o comando ja ignora repeticao).
+
 **Rodar o mesmo modelo no proximo avatar depois**, com:
 - **AJUSTES DE COPY para congruencia**, nunca copia palavra por palavra. Idade, genero e registro
   mudam o que soa crivel na boca de cada avatar. Abrir `congruencia-matriz` antes de portar.
@@ -425,6 +432,7 @@ morre em uma semana.
 [ ] PORTAO P10 executado ou agendado (log de rotacao + biblioteca)
 [ ] Os DOIS arquivos escritos em producao/<avatar>_<slug>/
 [ ] Fila de avatares no disco, avatar atual DONE e proximo PENDING avancado
+[ ] Video acrescentado no FILA_EDICAO.json do lote (fila_edicao.py --adicionar) e pasta dos takes avisada
 [ ] Tabela de esqueleto preservado presente
 [ ] Indice de geracao presente
 [ ] Travas globais escritas uma vez, nao repetidas em cada JSON

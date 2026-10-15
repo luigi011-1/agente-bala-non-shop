@@ -466,7 +466,9 @@ def main():
     if a.legenda != "padrao":
         picos = json.load(open(f"{tmp}/picos.json"))
         idx = [i for i, w in enumerate(ws) for p in picos if abs(w["t"] - p["t"]) < 0.01]
-        camadas.append(legendas_hf.camada(a.legenda, ws, total, tmp, idx))
+        # Auraly: mesma altura do editar.py (topo 1300 + 160 = centro); 960 caía na boca (teste de 5, 2026-10-15)
+        centro = 1460 if a.estilo == "auraly" else legendas_hf.LEG_CENTRO
+        camadas.append(legendas_hf.camada(a.legenda, ws, total, tmp, idx, centro=centro))
     elif os.path.exists(f"{tmp}/legendas.txt"):
         lista = f"{tmp}/legendas.txt"
     else:  # pasta antiga: legenda aprovada refeita a partir das palavras
@@ -483,7 +485,10 @@ def main():
         lista = motor.faixa_legendas(eventos, total, tmp)
     nome = os.path.basename(tmp).split("-")[0]
     saida = a.saida or f"{tmp}/{nome}_acabamento_{a.legenda}_{a.sfx}.mp4"
-    motor.render_final(nova, lista, mix, total, saida, (), None, camadas)
+    selos = None
+    if a.estilo == "auraly":  # o editar.py põe os selos; rodado sozinho, o acabamento esquecia (2026-10-15)
+        selos = f"{tmp}/selos.png"; motor.png_selos(selos)
+    motor.render_final(nova, lista, mix, total, saida, (), selos, camadas)
     print("\n".join(rel + [f"- Legenda: {a.legenda}"])); print(saida)
 
 

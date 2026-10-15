@@ -10,7 +10,7 @@ Faz, em ordem, e para no primeiro problema:
   4. ordena pelo número do take (T__) do pacote; insert mudo entra só com a janela da ação;
      corta pelos silêncios reais e monta a base com os trechos EM PARALELO (minterpolate por trecho);
   5. legenda (tempo do whisper no vídeo cortado, texto do roteiro), light leak, música a -18 dB da voz;
-  6. lint e render no HyperFrames, recompressão para caber na pasta do Mac (< 30 MB);
+  6. lint e render no HyperFrames, sem recompressão (teto de entrega 100 MB, Luigi 2026-10-15);
   7. conferências automáticas (silêncio, quadro fantasma, contagem de palavras) + contact sheets,
      e escreve RELATORIO.md com passa/falha.
 Regras e porquês: docs/pos-producao-edicao-regras.md. Nada aqui muda o estilo aprovado.
@@ -164,6 +164,22 @@ def numeros_take(arq):
         f = FALA.search(m.group(2))
         if f: tn.setdefault(f.group(1).strip(), int(m.group(1)))
     return tn
+
+PRODUTO_TOPO = 1300  # legenda abaixo do produto: o pote na mão fica de ~840 a ~1180 px (teste de 5 vídeos, 2026-10-15)
+
+
+def takes_com_produto(pasta):
+    """Números de take (T__) em que o produto está em quadro, lidos do pacote: o K__ cuja âncora é a imagem do
+    produto (Mapa de âncoras) e os T__ que usam esse K__ (Índice de geração). Na venda com o pote no peito, a
+    legenda do centro cobria o rótulo (Cassidy, Marshall, 2026-10-15)."""
+    arq = os.path.join(pasta, "PROMPTS_PRODUCAO.md")
+    if not os.path.exists(arq):
+        return set()
+    txt = open(arq, encoding="utf8", errors="ignore").read()
+    ks = {int(m.group(1)) for m in re.finditer(r"^\|\s*K(\d+)\s*\|([^|\n]*)\|", txt, re.M)
+          if re.search(r"produto|product|REF-LIVRO|frasco|bottle|jar", m.group(2), re.I)}
+    return {int(m.group(1)) for m in re.finditer(r"^\|\s*T(\d+)\s*\|\s*K(\d+)\s*\|", txt, re.M) if int(m.group(2)) in ks}
+
 
 def falas_tabela(arq):
     """{número do take: texto} da tabela do roteiro (| T7 | and a pinch of black pepper, | ... |)."""
@@ -478,7 +494,8 @@ def um_trecho(arg):
 
 def montar_base(segs, src, tmp):
     trabalhos = [(i, s, src[s["k"]], tmp) for i, s in enumerate(segs)]
-    with cf.ThreadPoolExecutor(max_workers=os.cpu_count() or 4) as ex:
+    # EDICAO_WORKERS: o fila_edicao.py roda 3 vídeos juntos e limita cada um a 3 trechos (Luigi, 2026-10-15)
+    with cf.ThreadPoolExecutor(max_workers=int(os.environ.get("EDICAO_WORKERS") or os.cpu_count() or 4)) as ex:
         res = list(ex.map(um_trecho, trabalhos))
     with open(f"{tmp}/lista.txt", "w") as fh:
         fh.writelines(f"file '{f}'\n" for f, _ in res)
@@ -725,7 +742,8 @@ def main():
     ap.add_argument("--estilo", choices=["fitwell", "auraly"], default=None, help="padrão: auraly se a produção for Auraly")
     ap.add_argument("--ritmo", type=float, default=None, help="palavras/s alvo (padrão: 3,8 FitWell, 4,0 Auraly)")
     ap.add_argument("--up", default="1", help="takes com legenda mais alta")
-    ap.add_argument("--legenda-topo", type=int, default=960, help="topo da legenda Auraly em pixels; ajustar após conferir rosto")
+    # 1300 (Luigi, 2026-10-15): nas duas entregas Avery aprovadas a legenda foi descida à mão de 960 para 1300 (lábios livres)
+    ap.add_argument("--legenda-topo", type=int, default=1300, help="topo da legenda Auraly em pixels; ajustar após conferir rosto")
     ap.add_argument("--nome", default=None); ap.add_argument("--trabalho", default=None)
     ap.add_argument("--excecoes-fala", help="JSON de exceções explícitas por arquivo/hash/roteiro; sem alterar prompts")
     ap.add_argument("--nota-minima", type=float, default=0.85)
@@ -817,6 +835,10 @@ def main():
     rel += [f"  - aviso: {x}" for x in avisos]
     rel.append(f"- Produção: `{os.path.basename(pasta)}` (`{arq.replace(REPO + '/', '').replace('/mnt/project-files/', '')}`), semelhança {nota:.0%}")
     if nota < a.nota_minima: sys.exit(f"Roteiro incerto ({nota:.0%} < {a.nota_minima:.0%}): {arq}. Rode com --producao.")
+    t_produto = takes_com_produto(pasta)
+    produto = {i for i, f in takes if (int(pos[f] + 0.5) if f in pos else numero(f)) in t_produto}
+    if produto:
+        rel.append(f"- Produto em quadro nos takes {sorted(t_produto)}: legenda abaixo dele (topo {PRODUTO_TOPO} px)")
 
     log("3/7 conferindo a fala de cada take, palavra por palavra")
     erros_fala, aparados, avisos_escuta = [], [], []
@@ -958,6 +980,8 @@ def main():
             png = f"{tmp}/leg_{n:03d}.png"
             pos_legenda = PLANO_EDITORIAL.get("captions", {}) if PLANO_EDITORIAL else {}
             topo_leg = pos_legenda.get("hero_top", 760) if p[0]["k"] in up else pos_legenda.get("top", 880)
+            if p[0]["k"] in produto:
+                topo_leg = PRODUTO_TOPO
             if LEGENDA_DINAMICA:  # palavra falada em amarelo, troca no tempo da fala
                 pal = [re.sub(r"[.,!?;:]$", "", w["w"]) for w in p]
                 for j in range(len(p)):
@@ -997,6 +1021,10 @@ def main():
         if frente:
             camadas.append((frente, 0))
             flashes = []  # o flash do catálogo (editorial-flash-overlay) substitui o do ffmpeg
+        if a.legenda != "padrao" and produto:
+            # a camada do catálogo tem uma altura só para o vídeo inteiro: cobriria o produto
+            rel.append(f"- Legenda {a.legenda} trocada pela padrão: o catálogo não desce abaixo do produto por take")
+            a.legenda = "padrao"
         if a.legenda != "padrao":
             import legendas_hf
             picos = json.load(open(f"{tmp}/picos.json"))
@@ -1029,6 +1057,7 @@ def main():
         "Nenhuma legenda com menos de 0,1s": min(duracoes or [1]) >= 0.1,
         "Vídeo em 1080x1920": sh(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
                                   "stream=width,height", "-of", "csv=p=0", saida]).strip() == "1080,1920",
+        "Arquivo até 100 MB": mb <= 100,
     }
     rel += [f"- {k}: {'OK' if v else 'FALHA'}" for k, v in ok.items()]
     if sil: rel.append(f"  - silêncios: {sil}")

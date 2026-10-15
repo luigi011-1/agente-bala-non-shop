@@ -56,7 +56,9 @@ arquivo). Nenhum item aqui é opcional.
 13. Merriweather 900, 64px, branca, minúscula, sem animação, sombra suave, 1 a 3 palavras por página,
     quebra no ponto final, na vírgula (com 2+ palavras) e na troca de take.
 14. Legenda no centro (top 880px); no take-herói sobe para 760px, entre o rosto e o objeto. Nunca
-    sobre o rosto, nunca sobre o herói.
+    sobre o rosto, nunca sobre o herói. **Take com o produto em quadro desce para 1300px** (lido do pacote:
+    K__ com a imagem do produto no Mapa de âncoras; Luigi, 2026-10-15). **Auraly: topo 1300px** (era 960 e
+    caía nos lábios). Legenda do catálogo em vídeo com produto vira a padrão (o catálogo tem altura única).
 15. **Sem light leak** (Luigi, 2026-10-10). Cortes secos. No Auraly, um flash claro só na saída do gancho.
 15b. **Legenda do Auraly tem estilo próprio** (`docs/pos-producao-referencias-luigi.md`): monta palavra
     por palavra, palavra-chave grande, selos 777/222 em todo vídeo Auraly.
@@ -74,8 +76,9 @@ arquivo). Nenhum item aqui é opcional.
     inofensivos).
 
 ### Entrega
-21. Recomprimir o render (`libx264 -crf 19 -preset slow`, AAC 192k, `+faststart`): o render `high`
-    deu 49 MB para 25s e o limite de cópia para o Mac é 30 MB. Saiu com 20 MB, sem perda visível.
+21. Teto de entrega: **100 MB** (Luigi, 2026-10-15: "o tamanho não faz diferença, até 100 MB está válido").
+    Não recomprimir para caber em 30 MB; o render CRF 17 sai direto. Acima de 100 MB, recomprimir
+    (`libx264 -crf 19 -preset slow`, AAC 192k, `+faststart`).
 22. Entregar **anexado na thread** e **gravado na pasta dos takes** do Luigi, nome
     `vNN_<tema>_editado.mp4`. Cópia em `/mnt/project-files/edicao/<produção>/`. Nunca no repo.
 
@@ -113,6 +116,9 @@ arquivo). Nenhum item aqui é opcional.
 | 27 | Cassidy T2 (pães de batata, 2026-10-10): take completo reprovado por "faltou baking powder" e "faltou then shape it into buns" | no take inteiro o whisper comeu a primeira e a última frase; ouvidas em trechos, estavam lá | quando a conferência acusa palavra faltando ou trocada, o take é transcrito de novo em trechos de voz (`palavras_por_trechos`) e vale a escuta com menos problemas; o relatório avisa. Palavra que falta de verdade continua travando |
 | 28 | Meredith T3 (bolo de coco, 2026-10-10): take certo reprovado por "trocou thirty por 30" | o whisper escreve número em algarismo e o normalizador só convertia até 20 | número até 999 vira palavra como se fala na receita (`por_extenso`: 30 = thirty, 325 = three twenty five, 300 = three hundred); take sem o número continua travando |
 | 29 | Marshall (cheesecake, 2026-10-10): legenda `caption-pill-karaoke` cortada nas bordas ("hen whisk completely smoot") com todas as conferências OK | o estilo do catálogo é 16:9 (caixa de 1400 a 1600px) e o `legendas_hf.py` só trocava 1920x1080 pelo quadro vertical | toda largura fixa acima de 940px e todo `*_MAX_WIDTH` viram 940/900px no adaptador. Só apareceu no `legendas.png`: a conferência 19 segue obrigatória. Rodar o `acabamento.py` sozinho com o Python do `.venv-operacao` (o `python3` do sistema não tem PIL) |
+| 30 | Teste de 5 vídeos (2026-10-15): legenda cobrindo o pote em toda a parte de venda (Cassidy, Marshall), também na edição original | legenda fixa em 880px, onde a avatar segura o pote | `takes_com_produto` lê o pacote e desce a legenda para 1300px nesses takes |
+| 31 | Auraly com legenda do catálogo na boca | `acabamento.py` sozinho usava centro 960; a entrega original tinha sido corrigida à mão para 1300 | Auraly com topo 1300 no `editar.py` e centro 1460 no `acabamento.py` |
+| 32 | Auraly sem selos 777/222 quando o acabamento roda sozinho | só o `editar.py` passava os selos ao render | `acabamento.py` põe os selos quando `--estilo auraly` |
 
 Erros 8 a 26: teste no Mac com os takes do v04 (FitWell growth, gengibre e limão), 2026-10-09.
 O 8, o 9, o 11 e o 15 passaram em todas as conferências automáticas e só apareceram no `cortes.png` ou no

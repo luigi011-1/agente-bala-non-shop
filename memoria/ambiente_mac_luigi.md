@@ -25,13 +25,21 @@ vezes no meio do trabalho.
 - **Disco:** rodar `df -h /` antes de teste ou lote. Cada edição usa ~600 MB de trabalho e o `/watch` a 5 fps
   ~500 MB por vídeo: apagar as pastas de trabalho e os quadros depois de usar. Em 2026-10-09 o disco chegou a
   1,2 GB livres e a escrita falhou (`ENOSPC`) no meio de uma alteração do editor, que não foi gravada.
+- **Desktop no iCloud (2026-10-14):** `~/Desktop` é sincronizado (Mobile Documents) e, com o disco cheio, o
+  macOS deixa takes e vídeos editados `dataless` (`ls -lO` mostra `compressed,dataless`); ler um arquivo assim
+  pode falhar no meio da edição. Antes de editar: `brctl download <arquivo>` + leitura completa + `ffmpeg -f null`.
+  Vídeo entregue que virou dataless abre normal pelo Finder (baixa na hora).
+- **`/tmp/edicao` (2026-10-14):** ~2 GB por vídeo editado com acabamento HyperFrames; 12 vídeos não cabem. Apagar a
+  pasta de trabalho depois de copiar o editado + RELATORIO/cortes/legendas para `producao/<prod>/edicao/`.
 - **Não criar worktree por iniciativa:** cada um custa 3,3 GB. Criei três vazios, ocupando 9,9 GB, e tive que apagar.
 - **VS Code:** as janelas abertas por mim ficam no MESMO processo desta sessão; não dá para fechar uma janela
   específica (sem permissão de acessibilidade) e matar o processo derruba a sessão. Pedir para o Luigi fechar.
 - **Memória:** a memória viva deste checkout nasceu vazia; `restaurar_memoria.sh` resolve sem apagar nada.
   NUNCA rodar `sync_memoria.sh` com a memória viva vazia: o espelho do repo seria apagado.
 - **rm com variável:** usar `"${VAR:?}"/...`; a checagem de segurança bloqueia `rm -rf $VAR/*`.
-- **Paralelo:** no Mac, uma edição por vez; duas só ganham ~30%. Lote grande = uma sessão da nuvem por vídeo.
+- **Paralelo (♻️ 2026-10-15, revoga "uma edição por vez"):** no Mac, **3 edições por vez**, lote a lote na ordem da
+  fila (skill `edicao-lote`). Medido: 3 juntos ~4 min; 5 juntos 13 min com cada render 3-7x mais lento. Cada editar.py
+  limitado a 3 trechos (`EDICAO_WORKERS=3`). Ver [[edicao-fila-lotes-de-3]].
 - **Pendente em 2026-10-10:** PR #58 (editor + regras) esperando o merge do Luigi; o checkout está no branch
   `claude/editor-conferencia-palavra`.
 

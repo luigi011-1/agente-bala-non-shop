@@ -5,6 +5,9 @@ description: Edição dopaminérgica de takes já gravados ou gerados (Veo/Flow)
 
 # Edição dopaminérgica
 
+> 🔴 **Fila / lote de vídeos (Luigi, 2026-10-15): 3 em paralelo, na ordem da fila aprovada, próximo lote só quando
+> os 3 terminam.** Isso é a skill `edicao-lote` (`fila_edicao.py`); esta skill define o estilo que cada edição segue.
+
 > 🔴 **HyperFrames tem prioridade em TUDO (Luigi, 2026-10-10):** assets, catálogo, estilos e regras de edição do
 > repositório HyperFrames (`~/ferramentas/hyperframes`, skills `hyperframes*`, `embedded-captions`, `media-use`)
 > vêm antes dos nossos; os nossos ficam como alternativa. O que a HyperFrames não cobre (conferência palavra

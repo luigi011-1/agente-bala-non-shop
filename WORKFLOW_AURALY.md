@@ -52,6 +52,9 @@ Registrar o total esperado e as combinacoes no intake do lote, como vista deriva
 nao criar uma segunda fonte de estado. Analise e aprovacao de roteiro sao por modelo. Encerrar
 uma producao exige todos os avatares dela DONE; encerrar o lote exige todas as combinacoes de
 todos os modelos entregues. Pacote textual, geracao de takes e edicao continuam marcos separados.
+Ao marcar um avatar `DONE`, acrescentar o video em `producao/<lote>/FILA_EDICAO.json` na mesma ordem
+(`.claude/skills/edicao-lote/fila_edicao.py ... --adicionar`, ver skill `produzir`); a edicao segue a
+skill `edicao-lote`, 3 videos por vez (Luigi, 2026-10-15). Jordan ES entra com a producao `_jordan_es`.
 
 ### Validar antes de variar (Luigi, 2026-09-23)
 

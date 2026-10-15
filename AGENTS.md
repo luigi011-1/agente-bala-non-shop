@@ -307,9 +307,11 @@ Espelho das decisoes duraveis da memoria do projeto no claude.ai que ainda nao e
 ### Edicao dos takes sem pausa
 - Na edicao de takes do Flow, nao parar esperando resposta do Luigi ate entregar o video final: decidir
   pelo que da o melhor resultado, registrar a decisao e seguir. Pedidos de ok (merge de PR, por exemplo)
-  so depois do video entregue. Um video = uma frente de edicao. Neste Mac, editar um video por vez,
-  na ordem modelos x avatares acima; o editor pode processar trechos do mesmo video em paralelo.
-  Frentes de videos distintos em paralelo so em ambiente com recursos verificados para isso.
+  so depois do video entregue. Um video = uma frente de edicao. ♻️ **Neste Mac, 3 videos por vez
+  (Luigi, 2026-10-15)**, na ordem da fila aprovada na conversa (modelos x avatares acima): terminou o
+  lote de 3, entram os proximos 3, ate zerar a fila. Skill `edicao-lote` (`fila_edicao.py`); revisao
+  visual e resolucao de fala rodam em paralelo ao lote seguinte, render nunca passa de 3. Revoga o
+  "um video por vez" de 2026-10-09 (teste: 3 juntos ~4 min; 5 juntos 13 min, sem ganho).
 - Copia das 9 faixas de musica do Luigi tambem no repo, em `edicao/musicas/`, e os `RELATORIO.md` das
   edicoes ja entregues em `edicao/<producao>/`. Os videos editados continuam fora do git.
 - Pasta do Mac: o Luigi pode mandar o caminho de uma pasta do Mac com os takes ou com o video modelo; o
