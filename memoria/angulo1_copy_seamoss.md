@@ -1,6 +1,6 @@
 ---
 name: angulo1-copy-seamoss
-description: "Doutrina do ÂNGULO 1 desde 2026-10-02: Natural Rems Sea Moss 16-in-1 Gummies (Amazon, ASIN B0DXHCJCC5) SUBSTITUI a Korella Saffron. Produto, ingredientes, prova da página, ângulo principal (perda de peso pelo mecanismo estresse/cortisol, nunca culpa dela), banco de ângulos secundários, CTA OBRIGATÓRIO da marca ('Search Natural Rems Sea Moss on Amazon' PRIMEIRO com o frasco em quadro, link na LEGENDA depois (2026-10-02, e só a legenda desde 2026-10-05: o link do comentário fixado não fica clicável), comment yes + follow SEMPRE, antes da busca na Amazon (2026-10-03); desvalorizar o sea moss genérico item por item só com diferencial verificado (seção 5.1)) e compliance que corta pagamento (#ad #syntheticperformer #naturalrems, toggle de IA, sem antes/depois, sem médico/jaleco/clínica, sem cura, sem nome de remédio ou concorrente). Avatar: holistic.brandon (COACH), em paralelo com FityWell e Body Hacks (Ângulo 4 reativado para ela em 2026-10-02). Foto do frasco em producao/_ancoras/natural_rems_seamoss_produto.jpg; PDF do CTA em producao/_seamoss/."
+description: "Doutrina do ÂNGULO 1 desde 2026-10-02: Natural Rems Sea Moss 16-in-1 Gummies (Amazon, ASIN B0DXHCJCC5) SUBSTITUI a Korella Saffron. Produto, ingredientes, prova da página, ângulo principal (perda de peso pelo mecanismo estresse/cortisol, nunca culpa dela), banco de ângulos secundários, CTA OBRIGATÓRIO da marca ('Search Natural Rems Sea Moss on Amazon' PRIMEIRO com o frasco em quadro, depois o destino falado STORIES e então BIO (opção B do Luigi em 2026-10-10, risco com a marca registrado; antes era o link da legenda), comment yes antes da busca na Amazon e o lembrete do botão de follow como ÚLTIMA frase (2026-10-10); desvalorizar o sea moss genérico item por item só com diferencial verificado (seção 5.1)) e compliance que corta pagamento (#ad #syntheticperformer #naturalrems, toggle de IA, sem antes/depois, sem médico/jaleco/clínica, sem cura, sem nome de remédio ou concorrente). Avatar: holistic.brandon (COACH), mais Meredith Callahan, Marshall Beckett e Cassidy Hargrove (roster aprovado em 2026-10-10, também na FityWell), em paralelo com FityWell e Body Hacks (Ângulo 4 reativado para ela em 2026-10-02). Foto do frasco em producao/_ancoras/natural_rems_seamoss_produto.jpg; PDF do CTA em producao/_seamoss/."
 metadata:
   node_type: memory
   type: project
@@ -82,8 +82,20 @@ compliance do item 5 vale em todos.
    depois do link como passo 4 quebrado).
    ♻️ **2026-10-05 (Luigi): "vamos manter somente link na legenda por enquanto".** A opção de
    comentário fixado aberta em 2026-10-03 (`brandon_seamoss_vizinha`) fica suspensa até ele avisar.
-4. **FECHA O CTA.** Sem voltar, sem repetir o link, sem oferecer alternativa. A sequência acaba
-   aqui; qualquer coisa a mais quebra a ordem.
+   🔴 ♻️ **2026-10-10 (Luigi, opção B, escolhida sabendo do risco): o passo 3 passa a ser STORIES e
+   depois BIO, ditos na mesma frase**, igual ao destino do Auraly mais a bio como segunda opção:
+   *"Or tap my profile picture, the link is waiting in my stories, or right there in my bio."*
+   Revoga o link da legenda como frase falada. ⚠️ **Risco registrado:** o PDF da marca diz *"no
+   offering alternatives"*; Stories + bio são dois destinos e o follow depois do link é fala extra
+   (passo 4). O Luigi foi avisado em 2026-10-10 e decidiu assim. **Não reabrir**; se a marca
+   reprovar um vídeo por isso, ele avisa. Precisa sempre ter um Story no ar com o sticker de link da
+   Amazon (Story some em 24h); sem Story ativo, o toque na foto cai no perfil, onde está a bio.
+   A legenda continua com `#ad #syntheticperformer #naturalrems` no topo (compliance, não muda).
+   ♻️ **2026-10-10 (Luigi): o link SAI da legenda.** Fica só o obrigatório da Amazon + link nos Stories
+   + link na bio. A legenda leva só as hashtags e o texto do post.
+4. **FECHA O CTA.** Sem voltar para a Amazon, sem repetir o link. ♻️ **Única fala depois do link
+   (Luigi, 2026-10-10): o lembrete do botão de follow**, sempre a última frase do vídeo, growth ou
+   venda: *"And don't forget to hit that follow button."* ([[cta-follow-no-fim]]).
 
 **Opcional:** *"Comment yes and I'll send you the link."* ♻️ **Decisão do Luigi, 2026-10-02: a keyword
 é `yes`, igual aos outros ângulos clássicos**, no lugar do `MOSS` sugerido pelo PDF. Se usar, é a
@@ -92,12 +104,15 @@ compliance do item 5 vale em todos.
 ♻️ **COMENTÁRIO + FOLLOW SEMPRE (Luigi, 2026-10-03, `brandon_seamoss_vizinha`):** todo vídeo de venda
 do Sea Moss leva comment `yes` + follow. Como o passo 4 fecha o CTA no link, os dois entram **ANTES**
 do "Search Natural Rems Sea Moss on Amazon", com o frasco já em quadro, num take próprio e com motivo
+(♻️ 2026-10-10: o follow saiu daqui e foi para o FIM do vídeo, depois do link; antes da Amazon fica só
+o comment `yes` com motivo)
 (*"Comment yes if your body has been stuck in alarm mode, and follow me so you do not lose these
 three."*). Depois do link, nada. Isso substitui o `Comment yes and I'll send you the link` opcional,
 que prometia mandar link por mensagem (sem DM).
 
-**Modelo pronto:** *"Search Natural Rems Sea Moss on Amazon. Or you can just tap the link I left right
-down below, in the caption of this video."*
+**Modelo pronto (2026-10-10):** *"Search Natural Rems Sea Moss on Amazon. Or tap my profile picture, the link
+is waiting in my stories, or right there in my bio. And don't forget to hit that follow button."*
+(Até 2026-10-09: *"...Or you can just tap the link I left right down below, in the caption of this video."*)
 
 **O que mata o vídeo (lista da marca):** link antes da Amazon · produto escondido ou corte no meio do
 CTA · nome da marca incompleto ou corrido · passo trocado de ordem ou pulado · claim de cura,
@@ -179,5 +194,23 @@ Por enquanto só ela roda o Sea Moss, em paralelo com FityWell e Body Hacks na m
   Luigi em 2026-10-02). Os ângulos são os do item 2 e 3, e bastam para modelar qualquer vídeo.
 - O vocabulário proibido da Korella no checklist (mood, serotonin...) era do rótulo dela. O do Sea
   Moss é a lista do item 5.
+- **Roster novo APROVADO em 2026-10-10 (Luigi):** **Meredith Callahan** (avó jamaicana do Brooklyn),
+  **Marshall Beckett** (ex-mergulhadora ama no Havaí, mulher) e **Cassidy Hargrove** (coletora de Irish
+  moss no Maine). Rodam Sea Moss E FityWell, cada uma na sua conta. Sea Moss: USUÁRIA / PAR (60+).
+  Fichas e âncoras em [[avatares-fichas]]; os nomes não seguem os conceitos sugeridos, casar pela imagem.
 - Avatares Melody Carter e holistic.trevor eram da Korella. O Sea Moss roda com a holistic.brandon
   (item 6.1); outro avatar só se o Luigi anexar ([[avatar-so-o-que-o-luigi-mandar]]).
+
+## 8. Linhas de autoridade já usadas por conta (não repetir na mesma conta)
+
+- **Meredith:** "Forty years I have been making sea moss for this whole neighborhood" (rins); "Forty years making
+  sea moss for every woman on this block" (seios); "I have made sea moss my whole life, baby" (canela); "what my
+  grandmother gave me back in Kingston" (bolinho); "what every auntie in my building swears by" (wrap); "blending
+  in my kitchen since the eighties" (sorvete).
+- **Marshall:** "For fifty years I have dived for seaweed in this ocean" (rins); "gathered seaweed from this ocean
+  my whole life" (canela); "what the ocean has given me for fifty years" (bolinho); "the divers of my village have
+  trusted for generations" (wrap); "the plant I have dived for since I was a girl" (sorvete).
+- **Cassidy:** "Thirty years I have been pulling Irish moss off these rocks" (rins); "raking Irish moss off these
+  rocks since I was a kid" (canela); "what I rake off these rocks every summer" (bolinho); "what my family has
+  hauled out of the Atlantic for generations" (wrap); "the same stuff my dad taught me to rake off these rocks" (sorvete).
+- Formato de receita com ponte em [[formato-receita-ponte-venda]].

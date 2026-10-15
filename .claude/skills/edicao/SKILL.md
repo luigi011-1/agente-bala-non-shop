@@ -5,12 +5,44 @@ description: Edição dopaminérgica de takes já gravados ou gerados (Veo/Flow)
 
 # Edição dopaminérgica
 
+> 🔴 **HyperFrames tem prioridade em TUDO (Luigi, 2026-10-10):** assets, catálogo, estilos e regras de edição do
+> repositório HyperFrames (`~/ferramentas/hyperframes`, skills `hyperframes*`, `embedded-captions`, `media-use`)
+> vêm antes dos nossos; os nossos ficam como alternativa. O que a HyperFrames não cobre (conferência palavra
+> por palavra, corte de silêncio, ritmo) continua no `editar.py`.
+>
+> **Acabamento HyperFrames, ligado por padrão no `editar.py`, em TODOS os ângulos, Auraly incluído** (no Auraly,
+> `padrao` = a legenda de referência dele; selos 777/222 por cima; pico nunca no gancho mudo nem no CTA) (`template/acabamento.py`; `--sem-acabamento` desliga):
+> - **palavra de pico atrás do avatar**: recorte do avatar (`hyperframes remove-background`, CPU, só nas janelas
+>   dos picos), palavra em Anton animada letra por letra num render transparente, ~20% escondida atrás da cabeça.
+>   Um pico por bloco, a cada 5s no máximo, nunca no CTA, nunca repetido (regras do `embedded-captions`).
+>   `--picos chip,cloudy` força; `--fonte-pico anton|serifada|montserrat`.
+> - **zoom de pico** (8%, centrado na cabeça; `--sem-zoom`).
+> - **SFX da biblioteca HyperFrames** (`sfx_hf/`, Pixabay, uso comercial): `--sfx sutil|cinema|pop|brilho|glitch|nenhum`.
+> - **grão** (`grain-overlay` do catálogo) só com `--grao`: a HyperFrames não gradua a filmagem por padrão.
+>   Auraly usa o `editorial-flash-overlay` do catálogo no lugar do flash do ffmpeg.
+> - **legenda**: `--legenda padrao` (a serifada aprovada) ou um dos 14 estilos `caption-*` do catálogo, em
+>   `legendas_hf/` (`template/legendas_hf.py` troca a fala de exemplo, vira para 9:16 e põe no peito).
+> - **Rodízio entre vídeos (padrão `auto`)**: as variações existem para os vídeos não saírem iguais, NÃO para
+>   testar todas em cada vídeo. `acabamento.CARDAPIO` (legenda: padrao, caption-highlight, caption-pill-karaoke;
+>   SFX: sutil, cinema, pop, brilho; fonte do pico: anton, montserrat). Cada vídeo novo pega a próxima combinação
+>   e o mesmo vídeo reeditado mantém a sua (`rotacao.json`). A combinação sai no `RELATORIO.md`.
+> - Cada legenda fica ≥ 0,5s na tela (regra do `embedded-captions`).
+> - Rodar só o acabamento numa pasta já editada: `python3 template/acabamento.py /tmp/edicao/<nome>-<tag> --legenda caption-highlight --sfx cinema`.
+> - Música: a biblioteca de trilhas da HyperFrames (`media-use resolve --type bgm`) exige o CLI `heygen` logado;
+>   sem ele, seguem as trilhas de `edicao/musicas/`.
+
 > 🔴 **Vale para TODOS os ângulos** (Sea Moss, FitWell, Auraly, Body Hacks e os próximos; venda e growth;
 > Luigi, 2026-10-09). A ordem dos takes vem da fala, não do nome do arquivo.
+> **Cada take é conferido PALAVRA POR PALAVRA com o roteiro**: o Flow inventa, remove e repete falas no
+> mesmo take. O que ele inventou, repetiu ou deixou em silêncio se corta em qualquer ponto; palavra que
+> faltou ou foi trocada para aquele vídeo (take volta para o Flow) e a fila segue para o próximo.
+> **Padrão de gosto do Luigi: `docs/pos-producao-referencias-luigi.md`** (uma edição FitWell e uma Auraly feitas por ele).
 > **Antes de editar, ler `docs/pos-producao-edicao-regras.md`** (acertos e erros do 1º teste aprovado,
-> 2026-10-09). Os 22 itens são regra fixa, e as conferências 17 a 20 bloqueiam a entrega. Use o
+> 2026-10-09). Os 22 itens são regra fixa, e as conferências 17 a 20 bloqueiam a entrega.
+> **Take mudo (insert) se renomeia com o número do take antes de rodar** (`t07_pimenta.mp4`): o Flow
+> põe o horário no nome e o script para. Erros 8 a 26 e o tempo no Mac estão no mesmo arquivo. Use o
 > comando único `python3 template/editar.py <pasta_dos_takes>` (estilo v3, paralelo, roteiro achado
-> sozinho, música a -25 dB, conferências automáticas e `RELATORIO.md`). Entregue só com tudo OK e
+> sozinho, música a -18 dB, conferências automáticas e `RELATORIO.md`). Entregue só com tudo OK e
 > depois de olhar `cortes.png` e `legendas.png`. A v1 e a v2 abaixo ficam como histórico.
 
 Validado em 2026-10-09 (5 takes de 10s da holistic.brandon, bebida matinal). Motor em `template/`.
@@ -91,3 +123,7 @@ Mesmo estilo da v2, com as travadas corrigidas (caso 31):
 - Antes de entregar: `silencedetect` no resultado (só a rampa pode sobrar, ~0,3s) e contact sheet a
   ±0,1s de cada corte procurando quadro fantasma ou pulo.
 - Sem trilha no repo: peça a música ao produtor ou entregue sem.
+
+## Referências de edição 2026-10-11 — FitWell e Sea Moss
+
+Antes de editar essas ofertas, consultar `docs/pos-producao-aprendizado-2026-10-11.md`. Preparar `plano_editorial.json` por produção quando necessário e passar `--plano-editorial`; ele protege ações úteis sem fala, permite ritmo por take, grupos/posição de legenda padrão e envelope musical. Tempos de proteção são da fonte conferida; curva musical usa a saída. Conferências e revisão visual continuam obrigatórias. Auraly exige adaptação própria e mantém legenda do workflow. Medidas musicais das referências são do mix; não houve escuta perceptiva.

@@ -1,0 +1,227 @@
+{
+  "source": "/Users/macbookairm2/Downloads/snapinsta-1791763841045.mp4",
+  "source_sha256": "bcf1e6b48a8e47743b785607dc3f8cfc30bfbf60b40f22ad40e998b3bafd55dd",
+  "duration_seconds": 43.466349,
+  "width": 720,
+  "height": 1280,
+  "fps": "30/1",
+  "word_count_asr_regex": 132,
+  "asr_word_units": 133,
+  "words_per_second_full_clip": 3.037,
+  "first_asr_word_seconds": 2.26,
+  "last_asr_word_seconds": 43.14,
+  "scene_detector_candidates": [
+    0.0,
+    5.433333,
+    25.8,
+    30.533333,
+    32.733333,
+    37.9
+  ],
+  "asr_gaps_not_proven_silence": [
+    {
+      "start": 0.0,
+      "end": 2.26
+    },
+    {
+      "start": 43.14,
+      "end": 43.466
+    }
+  ],
+  "mixed_audio_rms_1s": [
+    {
+      "start": 0.0,
+      "rms_dbfs": -23.92
+    },
+    {
+      "start": 1.0,
+      "rms_dbfs": -22.32
+    },
+    {
+      "start": 2.0,
+      "rms_dbfs": -14.57
+    },
+    {
+      "start": 3.0,
+      "rms_dbfs": -13.19
+    },
+    {
+      "start": 4.0,
+      "rms_dbfs": -16.51
+    },
+    {
+      "start": 5.0,
+      "rms_dbfs": -13.88
+    },
+    {
+      "start": 6.0,
+      "rms_dbfs": -12.98
+    },
+    {
+      "start": 7.0,
+      "rms_dbfs": -15.43
+    },
+    {
+      "start": 8.0,
+      "rms_dbfs": -13.03
+    },
+    {
+      "start": 9.0,
+      "rms_dbfs": -15.07
+    },
+    {
+      "start": 10.0,
+      "rms_dbfs": -12.52
+    },
+    {
+      "start": 11.0,
+      "rms_dbfs": -15.02
+    },
+    {
+      "start": 12.0,
+      "rms_dbfs": -14.19
+    },
+    {
+      "start": 13.0,
+      "rms_dbfs": -13.99
+    },
+    {
+      "start": 14.0,
+      "rms_dbfs": -16.49
+    },
+    {
+      "start": 15.0,
+      "rms_dbfs": -13.49
+    },
+    {
+      "start": 16.0,
+      "rms_dbfs": -17.77
+    },
+    {
+      "start": 17.0,
+      "rms_dbfs": -11.65
+    },
+    {
+      "start": 18.0,
+      "rms_dbfs": -16.59
+    },
+    {
+      "start": 19.0,
+      "rms_dbfs": -13.24
+    },
+    {
+      "start": 20.0,
+      "rms_dbfs": -14.86
+    },
+    {
+      "start": 21.0,
+      "rms_dbfs": -13.05
+    },
+    {
+      "start": 22.0,
+      "rms_dbfs": -14.22
+    },
+    {
+      "start": 23.0,
+      "rms_dbfs": -15.28
+    },
+    {
+      "start": 24.0,
+      "rms_dbfs": -15.02
+    },
+    {
+      "start": 25.0,
+      "rms_dbfs": -16.4
+    },
+    {
+      "start": 26.0,
+      "rms_dbfs": -10.88
+    },
+    {
+      "start": 27.0,
+      "rms_dbfs": -12.63
+    },
+    {
+      "start": 28.0,
+      "rms_dbfs": -14.13
+    },
+    {
+      "start": 29.0,
+      "rms_dbfs": -12.49
+    },
+    {
+      "start": 30.0,
+      "rms_dbfs": -12.89
+    },
+    {
+      "start": 31.0,
+      "rms_dbfs": -11.4
+    },
+    {
+      "start": 32.0,
+      "rms_dbfs": -11.36
+    },
+    {
+      "start": 33.0,
+      "rms_dbfs": -12.62
+    },
+    {
+      "start": 34.0,
+      "rms_dbfs": -17.48
+    },
+    {
+      "start": 35.0,
+      "rms_dbfs": -11.73
+    },
+    {
+      "start": 36.0,
+      "rms_dbfs": -14.15
+    },
+    {
+      "start": 37.0,
+      "rms_dbfs": -14.01
+    },
+    {
+      "start": 38.0,
+      "rms_dbfs": -13.98
+    },
+    {
+      "start": 39.0,
+      "rms_dbfs": -16.58
+    },
+    {
+      "start": 40.0,
+      "rms_dbfs": -15.65
+    },
+    {
+      "start": 41.0,
+      "rms_dbfs": -14.38
+    },
+    {
+      "start": 42.0,
+      "rms_dbfs": -18.04
+    },
+    {
+      "start": 43.0,
+      "rms_dbfs": -25.8
+    }
+  ],
+  "mixed_audio_loudnorm_measurement": {
+    "input_i": "-14.39",
+    "input_tp": "-0.81",
+    "input_lra": "3.60",
+    "input_thresh": "-24.48",
+    "output_i": "-13.77",
+    "output_tp": "-1.20",
+    "output_lra": "2.70",
+    "output_thresh": "-23.78",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.23"
+  },
+  "limitations": [
+    "ASR tem erros e pode esticar tempos de palavras.",
+    "Detector de cenas pode perder jump cuts e disparar com legendas.",
+    "RMS e LUFS são do mix; não medem relação música/voz nem gênero, emoção ou BPM.",
+    "Sem escuta perceptiva e sem stems separados; emoção da trilha não certificada."
+  ]
+}

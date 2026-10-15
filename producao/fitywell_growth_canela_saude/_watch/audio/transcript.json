@@ -1,0 +1,2057 @@
+[
+  {
+    "start": 0.0,
+    "end": 2.16,
+    "text": "Mix alcohol with cinnamon powder.",
+    "words": [
+      {
+        "word": " Mix",
+        "start": 0.0,
+        "end": 0.32,
+        "probability": 0.6415513157844543
+      },
+      {
+        "word": " alcohol",
+        "start": 0.32,
+        "end": 0.98,
+        "probability": 0.9887831807136536
+      },
+      {
+        "word": " with",
+        "start": 0.98,
+        "end": 1.28,
+        "probability": 0.9970049262046814
+      },
+      {
+        "word": " cinnamon",
+        "start": 1.28,
+        "end": 1.64,
+        "probability": 0.9908218383789062
+      },
+      {
+        "word": " powder.",
+        "start": 1.64,
+        "end": 2.16,
+        "probability": 0.9987357258796692
+      }
+    ]
+  },
+  {
+    "start": 2.54,
+    "end": 6.12,
+    "text": "I know it sounds ridiculous, but you'll thank me for the rest of your life.",
+    "words": [
+      {
+        "word": " I",
+        "start": 2.54,
+        "end": 2.56,
+        "probability": 0.9933248162269592
+      },
+      {
+        "word": " know",
+        "start": 2.56,
+        "end": 2.74,
+        "probability": 0.9992437362670898
+      },
+      {
+        "word": " it",
+        "start": 2.74,
+        "end": 2.92,
+        "probability": 0.9899499416351318
+      },
+      {
+        "word": " sounds",
+        "start": 2.92,
+        "end": 3.22,
+        "probability": 0.9968580007553101
+      },
+      {
+        "word": " ridiculous,",
+        "start": 3.22,
+        "end": 3.76,
+        "probability": 0.9982798099517822
+      },
+      {
+        "word": " but",
+        "start": 4.02,
+        "end": 4.2,
+        "probability": 0.9974302649497986
+      },
+      {
+        "word": " you'll",
+        "start": 4.2,
+        "end": 4.48,
+        "probability": 0.9923335313796997
+      },
+      {
+        "word": " thank",
+        "start": 4.48,
+        "end": 4.68,
+        "probability": 0.9952239394187927
+      },
+      {
+        "word": " me",
+        "start": 4.68,
+        "end": 4.94,
+        "probability": 0.9990772008895874
+      },
+      {
+        "word": " for",
+        "start": 4.94,
+        "end": 5.1,
+        "probability": 0.9968098998069763
+      },
+      {
+        "word": " the",
+        "start": 5.1,
+        "end": 5.26,
+        "probability": 0.9991414546966553
+      },
+      {
+        "word": " rest",
+        "start": 5.26,
+        "end": 5.44,
+        "probability": 0.9994903802871704
+      },
+      {
+        "word": " of",
+        "start": 5.44,
+        "end": 5.64,
+        "probability": 0.99922776222229
+      },
+      {
+        "word": " your",
+        "start": 5.64,
+        "end": 5.78,
+        "probability": 0.9987001419067383
+      },
+      {
+        "word": " life.",
+        "start": 5.78,
+        "end": 6.12,
+        "probability": 0.9976258873939514
+      }
+    ]
+  },
+  {
+    "start": 6.5,
+    "end": 8.02,
+    "text": "Keep your mouth shut after you watch this.",
+    "words": [
+      {
+        "word": " Keep",
+        "start": 6.5,
+        "end": 6.5,
+        "probability": 0.8617894649505615
+      },
+      {
+        "word": " your",
+        "start": 6.5,
+        "end": 6.64,
+        "probability": 0.9934160709381104
+      },
+      {
+        "word": " mouth",
+        "start": 6.64,
+        "end": 6.84,
+        "probability": 0.9651021361351013
+      },
+      {
+        "word": " shut",
+        "start": 6.84,
+        "end": 7.12,
+        "probability": 0.9995017051696777
+      },
+      {
+        "word": " after",
+        "start": 7.12,
+        "end": 7.36,
+        "probability": 0.9565576910972595
+      },
+      {
+        "word": " you",
+        "start": 7.36,
+        "end": 7.52,
+        "probability": 0.9972898960113525
+      },
+      {
+        "word": " watch",
+        "start": 7.52,
+        "end": 7.72,
+        "probability": 0.9907814860343933
+      },
+      {
+        "word": " this.",
+        "start": 7.72,
+        "end": 8.02,
+        "probability": 0.9974817633628845
+      }
+    ]
+  },
+  {
+    "start": 8.16,
+    "end": 9.1,
+    "text": "Do not tell anyone.",
+    "words": [
+      {
+        "word": " Do",
+        "start": 8.16,
+        "end": 8.22,
+        "probability": 0.98821622133255
+      },
+      {
+        "word": " not",
+        "start": 8.22,
+        "end": 8.44,
+        "probability": 0.9988042116165161
+      },
+      {
+        "word": " tell",
+        "start": 8.44,
+        "end": 8.64,
+        "probability": 0.9993355870246887
+      },
+      {
+        "word": " anyone.",
+        "start": 8.64,
+        "end": 9.1,
+        "probability": 0.9991863369941711
+      }
+    ]
+  },
+  {
+    "start": 9.64,
+    "end": 12.88,
+    "text": "Not everyone is going to understand why this powerful health remedy works.",
+    "words": [
+      {
+        "word": " Not",
+        "start": 9.64,
+        "end": 9.76,
+        "probability": 0.9972353577613831
+      },
+      {
+        "word": " everyone",
+        "start": 9.76,
+        "end": 10.12,
+        "probability": 0.9958497285842896
+      },
+      {
+        "word": " is",
+        "start": 10.12,
+        "end": 10.36,
+        "probability": 0.9982367753982544
+      },
+      {
+        "word": " going",
+        "start": 10.36,
+        "end": 10.48,
+        "probability": 0.9986081719398499
+      },
+      {
+        "word": " to",
+        "start": 10.48,
+        "end": 10.64,
+        "probability": 0.999506950378418
+      },
+      {
+        "word": " understand",
+        "start": 10.64,
+        "end": 11.06,
+        "probability": 0.9993358254432678
+      },
+      {
+        "word": " why",
+        "start": 11.06,
+        "end": 11.34,
+        "probability": 0.9971259236335754
+      },
+      {
+        "word": " this",
+        "start": 11.34,
+        "end": 11.54,
+        "probability": 0.9987872242927551
+      },
+      {
+        "word": " powerful",
+        "start": 11.54,
+        "end": 11.92,
+        "probability": 0.9990819692611694
+      },
+      {
+        "word": " health",
+        "start": 11.92,
+        "end": 12.22,
+        "probability": 0.9862944483757019
+      },
+      {
+        "word": " remedy",
+        "start": 12.22,
+        "end": 12.54,
+        "probability": 0.9970257878303528
+      },
+      {
+        "word": " works.",
+        "start": 12.54,
+        "end": 12.88,
+        "probability": 0.9981701374053955
+      }
+    ]
+  },
+  {
+    "start": 13.22,
+    "end": 14.52,
+    "text": "Keep your mouth shut after you watch.",
+    "words": [
+      {
+        "word": " Keep",
+        "start": 13.22,
+        "end": 13.24,
+        "probability": 0.9943089485168457
+      },
+      {
+        "word": " your",
+        "start": 13.24,
+        "end": 13.4,
+        "probability": 0.9987367987632751
+      },
+      {
+        "word": " mouth",
+        "start": 13.4,
+        "end": 13.64,
+        "probability": 0.9962295889854431
+      },
+      {
+        "word": " shut",
+        "start": 13.64,
+        "end": 13.9,
+        "probability": 0.9985530972480774
+      },
+      {
+        "word": " after",
+        "start": 13.9,
+        "end": 14.16,
+        "probability": 0.9473997354507446
+      },
+      {
+        "word": " you",
+        "start": 14.16,
+        "end": 14.34,
+        "probability": 0.9847235679626465
+      },
+      {
+        "word": " watch.",
+        "start": 14.34,
+        "end": 14.52,
+        "probability": 0.6917374730110168
+      }
+    ]
+  },
+  {
+    "start": 14.64,
+    "end": 16.84,
+    "text": "I do not know your name, but do not scroll.",
+    "words": [
+      {
+        "word": " I",
+        "start": 14.64,
+        "end": 14.68,
+        "probability": 0.98503577709198
+      },
+      {
+        "word": " do",
+        "start": 14.68,
+        "end": 14.82,
+        "probability": 0.9958834052085876
+      },
+      {
+        "word": " not",
+        "start": 14.82,
+        "end": 15.02,
+        "probability": 0.9993952512741089
+      },
+      {
+        "word": " know",
+        "start": 15.02,
+        "end": 15.2,
+        "probability": 0.9991208910942078
+      },
+      {
+        "word": " your",
+        "start": 15.2,
+        "end": 15.38,
+        "probability": 0.9982574582099915
+      },
+      {
+        "word": " name,",
+        "start": 15.38,
+        "end": 15.66,
+        "probability": 0.9996823072433472
+      },
+      {
+        "word": " but",
+        "start": 15.86,
+        "end": 16.08,
+        "probability": 0.9962230920791626
+      },
+      {
+        "word": " do",
+        "start": 16.08,
+        "end": 16.24,
+        "probability": 0.9969103932380676
+      },
+      {
+        "word": " not",
+        "start": 16.24,
+        "end": 16.46,
+        "probability": 0.9990505576133728
+      },
+      {
+        "word": " scroll.",
+        "start": 16.46,
+        "end": 16.84,
+        "probability": 0.9838172197341919
+      }
+    ]
+  },
+  {
+    "start": 17.04,
+    "end": 20.1,
+    "text": "Because if this reached you today, it reached you as a final warning.",
+    "words": [
+      {
+        "word": " Because",
+        "start": 17.04,
+        "end": 17.22,
+        "probability": 0.9923059344291687
+      },
+      {
+        "word": " if",
+        "start": 17.22,
+        "end": 17.4,
+        "probability": 0.9903601408004761
+      },
+      {
+        "word": " this",
+        "start": 17.4,
+        "end": 17.6,
+        "probability": 0.9992069602012634
+      },
+      {
+        "word": " reached",
+        "start": 17.6,
+        "end": 17.88,
+        "probability": 0.9965066313743591
+      },
+      {
+        "word": " you",
+        "start": 17.88,
+        "end": 18.08,
+        "probability": 0.9981541037559509
+      },
+      {
+        "word": " today,",
+        "start": 18.08,
+        "end": 18.4,
+        "probability": 0.9942013621330261
+      },
+      {
+        "word": " it",
+        "start": 18.64,
+        "end": 18.74,
+        "probability": 0.9943193197250366
+      },
+      {
+        "word": " reached",
+        "start": 18.74,
+        "end": 18.96,
+        "probability": 0.9943286776542664
+      },
+      {
+        "word": " you",
+        "start": 18.96,
+        "end": 19.16,
+        "probability": 0.9992244243621826
+      },
+      {
+        "word": " as",
+        "start": 19.16,
+        "end": 19.3,
+        "probability": 0.9890327453613281
+      },
+      {
+        "word": " a",
+        "start": 19.3,
+        "end": 19.44,
+        "probability": 0.998415470123291
+      },
+      {
+        "word": " final",
+        "start": 19.44,
+        "end": 19.72,
+        "probability": 0.9988077878952026
+      },
+      {
+        "word": " warning.",
+        "start": 19.72,
+        "end": 20.1,
+        "probability": 0.9989226460456848
+      }
+    ]
+  },
+  {
+    "start": 20.3,
+    "end": 25.22,
+    "text": "A powerful wave of stamina, vitality, and full body wellness is heading your way.",
+    "words": [
+      {
+        "word": " A",
+        "start": 20.3,
+        "end": 20.4,
+        "probability": 0.9897018671035767
+      },
+      {
+        "word": " powerful",
+        "start": 20.4,
+        "end": 20.78,
+        "probability": 0.999782383441925
+      },
+      {
+        "word": " wave",
+        "start": 20.78,
+        "end": 21.22,
+        "probability": 0.9979002475738525
+      },
+      {
+        "word": " of",
+        "start": 21.22,
+        "end": 21.46,
+        "probability": 0.9997568726539612
+      },
+      {
+        "word": " stamina,",
+        "start": 21.46,
+        "end": 22.0,
+        "probability": 0.992679238319397
+      },
+      {
+        "word": " vitality,",
+        "start": 22.18,
+        "end": 22.66,
+        "probability": 0.9988521337509155
+      },
+      {
+        "word": " and",
+        "start": 22.98,
+        "end": 23.16,
+        "probability": 0.999104917049408
+      },
+      {
+        "word": " full",
+        "start": 23.16,
+        "end": 23.42,
+        "probability": 0.9991462230682373
+      },
+      {
+        "word": " body",
+        "start": 23.42,
+        "end": 23.7,
+        "probability": 0.8142698407173157
+      },
+      {
+        "word": " wellness",
+        "start": 23.7,
+        "end": 24.16,
+        "probability": 0.9983468055725098
+      },
+      {
+        "word": " is",
+        "start": 24.16,
+        "end": 24.44,
+        "probability": 0.9934640526771545
+      },
+      {
+        "word": " heading",
+        "start": 24.44,
+        "end": 24.64,
+        "probability": 0.9976897239685059
+      },
+      {
+        "word": " your",
+        "start": 24.64,
+        "end": 24.92,
+        "probability": 0.9987063407897949
+      },
+      {
+        "word": " way.",
+        "start": 24.92,
+        "end": 25.22,
+        "probability": 0.9988473653793335
+      }
+    ]
+  },
+  {
+    "start": 25.48,
+    "end": 27.92,
+    "text": "Don't tell anyone, but the health portal has opened.",
+    "words": [
+      {
+        "word": " Don't",
+        "start": 25.48,
+        "end": 25.68,
+        "probability": 0.9966665506362915
+      },
+      {
+        "word": " tell",
+        "start": 25.68,
+        "end": 25.86,
+        "probability": 0.9995385408401489
+      },
+      {
+        "word": " anyone,",
+        "start": 25.86,
+        "end": 26.32,
+        "probability": 0.9992781281471252
+      },
+      {
+        "word": " but",
+        "start": 26.32,
+        "end": 26.62,
+        "probability": 0.9985678195953369
+      },
+      {
+        "word": " the",
+        "start": 26.62,
+        "end": 26.78,
+        "probability": 0.9984371066093445
+      },
+      {
+        "word": " health",
+        "start": 26.78,
+        "end": 26.98,
+        "probability": 0.9448205232620239
+      },
+      {
+        "word": " portal",
+        "start": 26.98,
+        "end": 27.3,
+        "probability": 0.9988253712654114
+      },
+      {
+        "word": " has",
+        "start": 27.3,
+        "end": 27.56,
+        "probability": 0.998965859413147
+      },
+      {
+        "word": " opened.",
+        "start": 27.56,
+        "end": 27.92,
+        "probability": 0.9986767172813416
+      }
+    ]
+  },
+  {
+    "start": 27.92,
+    "end": 31.08,
+    "text": "The constant fatigue and strain are finally over.",
+    "words": [
+      {
+        "word": " The",
+        "start": 27.92,
+        "end": 28.24,
+        "probability": 0.5807093977928162
+      },
+      {
+        "word": " constant",
+        "start": 28.24,
+        "end": 28.7,
+        "probability": 0.9898334741592407
+      },
+      {
+        "word": " fatigue",
+        "start": 28.7,
+        "end": 29.2,
+        "probability": 0.9951926469802856
+      },
+      {
+        "word": " and",
+        "start": 29.2,
+        "end": 29.54,
+        "probability": 0.9944075345993042
+      },
+      {
+        "word": " strain",
+        "start": 29.54,
+        "end": 29.92,
+        "probability": 0.9947669506072998
+      },
+      {
+        "word": " are",
+        "start": 29.92,
+        "end": 30.22,
+        "probability": 0.9936354160308838
+      },
+      {
+        "word": " finally",
+        "start": 30.22,
+        "end": 30.64,
+        "probability": 0.9979248046875
+      },
+      {
+        "word": " over.",
+        "start": 30.64,
+        "end": 31.08,
+        "probability": 0.998956561088562
+      }
+    ]
+  },
+  {
+    "start": 31.46,
+    "end": 35.64,
+    "text": "I see a lot of energy, physical healing, and deep recovery walking into your life.",
+    "words": [
+      {
+        "word": " I",
+        "start": 31.46,
+        "end": 31.48,
+        "probability": 0.9936695694923401
+      },
+      {
+        "word": " see",
+        "start": 31.48,
+        "end": 31.64,
+        "probability": 0.9990203380584717
+      },
+      {
+        "word": " a",
+        "start": 31.64,
+        "end": 31.76,
+        "probability": 0.9977117776870728
+      },
+      {
+        "word": " lot",
+        "start": 31.76,
+        "end": 31.9,
+        "probability": 0.9990972280502319
+      },
+      {
+        "word": " of",
+        "start": 31.9,
+        "end": 32.1,
+        "probability": 0.9986525177955627
+      },
+      {
+        "word": " energy,",
+        "start": 32.1,
+        "end": 32.44,
+        "probability": 0.9988148212432861
+      },
+      {
+        "word": " physical",
+        "start": 32.68,
+        "end": 32.9,
+        "probability": 0.9985226988792419
+      },
+      {
+        "word": " healing,",
+        "start": 32.9,
+        "end": 33.36,
+        "probability": 0.9968306422233582
+      },
+      {
+        "word": " and",
+        "start": 33.66,
+        "end": 33.78,
+        "probability": 0.9977760910987854
+      },
+      {
+        "word": " deep",
+        "start": 33.78,
+        "end": 34.0,
+        "probability": 0.9989994168281555
+      },
+      {
+        "word": " recovery",
+        "start": 34.0,
+        "end": 34.52,
+        "probability": 0.9984148740768433
+      },
+      {
+        "word": " walking",
+        "start": 34.52,
+        "end": 34.88,
+        "probability": 0.9667372107505798
+      },
+      {
+        "word": " into",
+        "start": 34.88,
+        "end": 35.22,
+        "probability": 0.9926250576972961
+      },
+      {
+        "word": " your",
+        "start": 35.22,
+        "end": 35.4,
+        "probability": 0.9981471300125122
+      },
+      {
+        "word": " life.",
+        "start": 35.4,
+        "end": 35.64,
+        "probability": 0.998856782913208
+      }
+    ]
+  },
+  {
+    "start": 35.82,
+    "end": 38.76,
+    "text": "Before you scroll, close your right hand and listen until the end.",
+    "words": [
+      {
+        "word": " Before",
+        "start": 35.82,
+        "end": 36.02,
+        "probability": 0.9923559427261353
+      },
+      {
+        "word": " you",
+        "start": 36.02,
+        "end": 36.22,
+        "probability": 0.999434769153595
+      },
+      {
+        "word": " scroll,",
+        "start": 36.22,
+        "end": 36.54,
+        "probability": 0.9976658821105957
+      },
+      {
+        "word": " close",
+        "start": 36.74,
+        "end": 36.86,
+        "probability": 0.9972785115242004
+      },
+      {
+        "word": " your",
+        "start": 36.86,
+        "end": 37.08,
+        "probability": 0.996085524559021
+      },
+      {
+        "word": " right",
+        "start": 37.08,
+        "end": 37.28,
+        "probability": 0.9968823194503784
+      },
+      {
+        "word": " hand",
+        "start": 37.28,
+        "end": 37.56,
+        "probability": 0.9978840947151184
+      },
+      {
+        "word": " and",
+        "start": 37.56,
+        "end": 37.74,
+        "probability": 0.9328628778457642
+      },
+      {
+        "word": " listen",
+        "start": 37.74,
+        "end": 37.96,
+        "probability": 0.9991557598114014
+      },
+      {
+        "word": " until",
+        "start": 37.96,
+        "end": 38.3,
+        "probability": 0.9823985695838928
+      },
+      {
+        "word": " the",
+        "start": 38.3,
+        "end": 38.5,
+        "probability": 0.9992338418960571
+      },
+      {
+        "word": " end.",
+        "start": 38.5,
+        "end": 38.76,
+        "probability": 0.9997077584266663
+      }
+    ]
+  },
+  {
+    "start": 38.96,
+    "end": 40.48,
+    "text": "This video isn't for everyone.",
+    "words": [
+      {
+        "word": " This",
+        "start": 38.96,
+        "end": 39.12,
+        "probability": 0.9903711676597595
+      },
+      {
+        "word": " video",
+        "start": 39.12,
+        "end": 39.44,
+        "probability": 0.9994959831237793
+      },
+      {
+        "word": " isn't",
+        "start": 39.44,
+        "end": 39.86,
+        "probability": 0.9975475966930389
+      },
+      {
+        "word": " for",
+        "start": 39.86,
+        "end": 40.04,
+        "probability": 0.9990906715393066
+      },
+      {
+        "word": " everyone.",
+        "start": 40.04,
+        "end": 40.48,
+        "probability": 0.997848629951477
+      }
+    ]
+  },
+  {
+    "start": 40.7,
+    "end": 42.06,
+    "text": "The universe chose you.",
+    "words": [
+      {
+        "word": " The",
+        "start": 40.7,
+        "end": 40.88,
+        "probability": 0.9953438639640808
+      },
+      {
+        "word": " universe",
+        "start": 40.88,
+        "end": 41.28,
+        "probability": 0.9166535139083862
+      },
+      {
+        "word": " chose",
+        "start": 41.28,
+        "end": 41.66,
+        "probability": 0.9392879605293274
+      },
+      {
+        "word": " you.",
+        "start": 41.66,
+        "end": 42.06,
+        "probability": 0.9965071082115173
+      }
+    ]
+  },
+  {
+    "start": 42.24,
+    "end": 44.42,
+    "text": "If you skip right now, the energy breaks.",
+    "words": [
+      {
+        "word": " If",
+        "start": 42.24,
+        "end": 42.38,
+        "probability": 0.990253210067749
+      },
+      {
+        "word": " you",
+        "start": 42.38,
+        "end": 42.56,
+        "probability": 0.9995100498199463
+      },
+      {
+        "word": " skip",
+        "start": 42.56,
+        "end": 42.84,
+        "probability": 0.9965470433235168
+      },
+      {
+        "word": " right",
+        "start": 42.84,
+        "end": 43.08,
+        "probability": 0.9911327958106995
+      },
+      {
+        "word": " now,",
+        "start": 43.08,
+        "end": 43.4,
+        "probability": 0.9992076754570007
+      },
+      {
+        "word": " the",
+        "start": 43.58,
+        "end": 43.68,
+        "probability": 0.9976958632469177
+      },
+      {
+        "word": " energy",
+        "start": 43.68,
+        "end": 44.02,
+        "probability": 0.9994370341300964
+      },
+      {
+        "word": " breaks.",
+        "start": 44.02,
+        "end": 44.42,
+        "probability": 0.9979612827301025
+      }
+    ]
+  },
+  {
+    "start": 44.8,
+    "end": 48.12,
+    "text": "I feel something very unusual happening to your health right now.",
+    "words": [
+      {
+        "word": " I",
+        "start": 44.8,
+        "end": 44.92,
+        "probability": 0.9971413016319275
+      },
+      {
+        "word": " feel",
+        "start": 44.92,
+        "end": 45.1,
+        "probability": 0.9973496198654175
+      },
+      {
+        "word": " something",
+        "start": 45.1,
+        "end": 45.4,
+        "probability": 0.9989849925041199
+      },
+      {
+        "word": " very",
+        "start": 45.4,
+        "end": 45.84,
+        "probability": 0.9949458241462708
+      },
+      {
+        "word": " unusual",
+        "start": 45.84,
+        "end": 46.34,
+        "probability": 0.9995375871658325
+      },
+      {
+        "word": " happening",
+        "start": 46.34,
+        "end": 46.86,
+        "probability": 0.9981434345245361
+      },
+      {
+        "word": " to",
+        "start": 46.86,
+        "end": 47.14,
+        "probability": 0.9979423880577087
+      },
+      {
+        "word": " your",
+        "start": 47.14,
+        "end": 47.3,
+        "probability": 0.9971051812171936
+      },
+      {
+        "word": " health",
+        "start": 47.3,
+        "end": 47.58,
+        "probability": 0.9988483190536499
+      },
+      {
+        "word": " right",
+        "start": 47.58,
+        "end": 47.82,
+        "probability": 0.9953972697257996
+      },
+      {
+        "word": " now.",
+        "start": 47.82,
+        "end": 48.12,
+        "probability": 0.9995599389076233
+      }
+    ]
+  },
+  {
+    "start": 48.24,
+    "end": 51.64,
+    "text": "I see the inflammation keeping you trapped in daily fatigue being broken.",
+    "words": [
+      {
+        "word": " I",
+        "start": 48.24,
+        "end": 48.3,
+        "probability": 0.9970665574073792
+      },
+      {
+        "word": " see",
+        "start": 48.3,
+        "end": 48.46,
+        "probability": 0.9994004964828491
+      },
+      {
+        "word": " the",
+        "start": 48.46,
+        "end": 48.62,
+        "probability": 0.9982494115829468
+      },
+      {
+        "word": " inflammation",
+        "start": 48.62,
+        "end": 49.12,
+        "probability": 0.997799813747406
+      },
+      {
+        "word": " keeping",
+        "start": 49.12,
+        "end": 49.5,
+        "probability": 0.9847701787948608
+      },
+      {
+        "word": " you",
+        "start": 49.5,
+        "end": 49.8,
+        "probability": 0.997905969619751
+      },
+      {
+        "word": " trapped",
+        "start": 49.8,
+        "end": 50.06,
+        "probability": 0.9990418553352356
+      },
+      {
+        "word": " in",
+        "start": 50.06,
+        "end": 50.32,
+        "probability": 0.9254955053329468
+      },
+      {
+        "word": " daily",
+        "start": 50.32,
+        "end": 50.58,
+        "probability": 0.9987863898277283
+      },
+      {
+        "word": " fatigue",
+        "start": 50.58,
+        "end": 51.02,
+        "probability": 0.9965338706970215
+      },
+      {
+        "word": " being",
+        "start": 51.02,
+        "end": 51.28,
+        "probability": 0.9778923392295837
+      },
+      {
+        "word": " broken.",
+        "start": 51.28,
+        "end": 51.64,
+        "probability": 0.999234676361084
+      }
+    ]
+  },
+  {
+    "start": 51.84,
+    "end": 54.56,
+    "text": "The physical strain placed on your body is going straight out.",
+    "words": [
+      {
+        "word": " The",
+        "start": 51.84,
+        "end": 51.96,
+        "probability": 0.9977567791938782
+      },
+      {
+        "word": " physical",
+        "start": 51.96,
+        "end": 52.28,
+        "probability": 0.9994933605194092
+      },
+      {
+        "word": " strain",
+        "start": 52.28,
+        "end": 52.72,
+        "probability": 0.9976117610931396
+      },
+      {
+        "word": " placed",
+        "start": 52.72,
+        "end": 53.0,
+        "probability": 0.9971978664398193
+      },
+      {
+        "word": " on",
+        "start": 53.0,
+        "end": 53.22,
+        "probability": 0.9990555644035339
+      },
+      {
+        "word": " your",
+        "start": 53.22,
+        "end": 53.34,
+        "probability": 0.9990189075469971
+      },
+      {
+        "word": " body",
+        "start": 53.34,
+        "end": 53.58,
+        "probability": 0.9996758699417114
+      },
+      {
+        "word": " is",
+        "start": 53.58,
+        "end": 53.76,
+        "probability": 0.9984190464019775
+      },
+      {
+        "word": " going",
+        "start": 53.76,
+        "end": 53.98,
+        "probability": 0.9992522597312927
+      },
+      {
+        "word": " straight",
+        "start": 53.98,
+        "end": 54.3,
+        "probability": 0.9991864562034607
+      },
+      {
+        "word": " out.",
+        "start": 54.3,
+        "end": 54.56,
+        "probability": 0.9973251819610596
+      }
+    ]
+  },
+  {
+    "start": 54.56,
+    "end": 58.52,
+    "text": "In the next seven minutes, the low energy that was following you",
+    "words": [
+      {
+        "word": " In",
+        "start": 54.56,
+        "end": 54.88,
+        "probability": 0.7361299991607666
+      },
+      {
+        "word": " the",
+        "start": 54.88,
+        "end": 55.02,
+        "probability": 0.9951135516166687
+      },
+      {
+        "word": " next",
+        "start": 55.02,
+        "end": 55.28,
+        "probability": 0.9977942705154419
+      },
+      {
+        "word": " seven",
+        "start": 55.28,
+        "end": 55.6,
+        "probability": 0.5365042686462402
+      },
+      {
+        "word": " minutes,",
+        "start": 55.6,
+        "end": 56.04,
+        "probability": 0.9951576590538025
+      },
+      {
+        "word": " the",
+        "start": 56.36,
+        "end": 56.56,
+        "probability": 0.9931273460388184
+      },
+      {
+        "word": " low",
+        "start": 56.56,
+        "end": 56.78,
+        "probability": 0.9808103442192078
+      },
+      {
+        "word": " energy",
+        "start": 56.78,
+        "end": 57.26,
+        "probability": 0.9953398704528809
+      },
+      {
+        "word": " that",
+        "start": 57.26,
+        "end": 57.5,
+        "probability": 0.9905417561531067
+      },
+      {
+        "word": " was",
+        "start": 57.5,
+        "end": 57.72,
+        "probability": 0.9960947632789612
+      },
+      {
+        "word": " following",
+        "start": 57.72,
+        "end": 58.12,
+        "probability": 0.9981570839881897
+      },
+      {
+        "word": " you",
+        "start": 58.12,
+        "end": 58.52,
+        "probability": 0.998023271560669
+      }
+    ]
+  },
+  {
+    "start": 58.52,
+    "end": 60.74,
+    "text": "is going to be destroyed forever.",
+    "words": [
+      {
+        "word": " is",
+        "start": 58.52,
+        "end": 58.96,
+        "probability": 0.897014319896698
+      },
+      {
+        "word": " going",
+        "start": 58.96,
+        "end": 59.2,
+        "probability": 0.9977099895477295
+      },
+      {
+        "word": " to",
+        "start": 59.2,
+        "end": 59.38,
+        "probability": 0.9988935589790344
+      },
+      {
+        "word": " be",
+        "start": 59.38,
+        "end": 59.58,
+        "probability": 0.9968631267547607
+      },
+      {
+        "word": " destroyed",
+        "start": 59.58,
+        "end": 60.14,
+        "probability": 0.998233437538147
+      },
+      {
+        "word": " forever.",
+        "start": 60.14,
+        "end": 60.74,
+        "probability": 0.9851589798927307
+      }
+    ]
+  },
+  {
+    "start": 61.24,
+    "end": 64.14,
+    "text": "So send this video to yourself right now because in seven minutes,",
+    "words": [
+      {
+        "word": " So",
+        "start": 61.24,
+        "end": 61.28,
+        "probability": 0.9808432459831238
+      },
+      {
+        "word": " send",
+        "start": 61.28,
+        "end": 61.5,
+        "probability": 0.9341530799865723
+      },
+      {
+        "word": " this",
+        "start": 61.5,
+        "end": 61.72,
+        "probability": 0.9988214373588562
+      },
+      {
+        "word": " video",
+        "start": 61.72,
+        "end": 61.94,
+        "probability": 0.9993970394134521
+      },
+      {
+        "word": " to",
+        "start": 61.94,
+        "end": 62.2,
+        "probability": 0.9983144998550415
+      },
+      {
+        "word": " yourself",
+        "start": 62.2,
+        "end": 62.54,
+        "probability": 0.9969011545181274
+      },
+      {
+        "word": " right",
+        "start": 62.54,
+        "end": 62.74,
+        "probability": 0.9901331663131714
+      },
+      {
+        "word": " now",
+        "start": 62.74,
+        "end": 63.0,
+        "probability": 0.9994322657585144
+      },
+      {
+        "word": " because",
+        "start": 63.0,
+        "end": 63.26,
+        "probability": 0.6179372668266296
+      },
+      {
+        "word": " in",
+        "start": 63.26,
+        "end": 63.46,
+        "probability": 0.9810034036636353
+      },
+      {
+        "word": " seven",
+        "start": 63.46,
+        "end": 63.74,
+        "probability": 0.9721885919570923
+      },
+      {
+        "word": " minutes,",
+        "start": 63.74,
+        "end": 64.14,
+        "probability": 0.9977856874465942
+      }
+    ]
+  },
+  {
+    "start": 64.14,
+    "end": 67.28,
+    "text": "you're going to come back to confirm the energetic shift for yourself.",
+    "words": [
+      {
+        "word": " you're",
+        "start": 64.14,
+        "end": 64.54,
+        "probability": 0.9889044761657715
+      },
+      {
+        "word": " going",
+        "start": 64.54,
+        "end": 64.6,
+        "probability": 0.7280924916267395
+      },
+      {
+        "word": " to",
+        "start": 64.6,
+        "end": 64.72,
+        "probability": 0.997788667678833
+      },
+      {
+        "word": " come",
+        "start": 64.72,
+        "end": 64.88,
+        "probability": 0.9961490631103516
+      },
+      {
+        "word": " back",
+        "start": 64.88,
+        "end": 65.1,
+        "probability": 0.9994850158691406
+      },
+      {
+        "word": " to",
+        "start": 65.1,
+        "end": 65.28,
+        "probability": 0.9977444410324097
+      },
+      {
+        "word": " confirm",
+        "start": 65.28,
+        "end": 65.68,
+        "probability": 0.9989917874336243
+      },
+      {
+        "word": " the",
+        "start": 65.68,
+        "end": 65.88,
+        "probability": 0.9984467625617981
+      },
+      {
+        "word": " energetic",
+        "start": 65.88,
+        "end": 66.3,
+        "probability": 0.990476131439209
+      },
+      {
+        "word": " shift",
+        "start": 66.3,
+        "end": 66.66,
+        "probability": 0.9967026114463806
+      },
+      {
+        "word": " for",
+        "start": 66.66,
+        "end": 66.9,
+        "probability": 0.9978281855583191
+      },
+      {
+        "word": " yourself.",
+        "start": 66.9,
+        "end": 67.28,
+        "probability": 0.9988942742347717
+      }
+    ]
+  },
+  {
+    "start": 67.64,
+    "end": 69.84,
+    "text": "Now open your hand and save this video.",
+    "words": [
+      {
+        "word": " Now",
+        "start": 67.64,
+        "end": 67.72,
+        "probability": 0.9903016686439514
+      },
+      {
+        "word": " open",
+        "start": 67.72,
+        "end": 68.04,
+        "probability": 0.6999297738075256
+      },
+      {
+        "word": " your",
+        "start": 68.04,
+        "end": 68.26,
+        "probability": 0.9981916546821594
+      },
+      {
+        "word": " hand",
+        "start": 68.26,
+        "end": 68.6,
+        "probability": 0.9976782202720642
+      },
+      {
+        "word": " and",
+        "start": 68.6,
+        "end": 68.82,
+        "probability": 0.9886802434921265
+      },
+      {
+        "word": " save",
+        "start": 68.82,
+        "end": 69.12,
+        "probability": 0.9966578483581543
+      },
+      {
+        "word": " this",
+        "start": 69.12,
+        "end": 69.4,
+        "probability": 0.9989540576934814
+      },
+      {
+        "word": " video.",
+        "start": 69.4,
+        "end": 69.84,
+        "probability": 0.9997503161430359
+      }
+    ]
+  },
+  {
+    "start": 70.16,
+    "end": 71.5,
+    "text": "That will be your first seal.",
+    "words": [
+      {
+        "word": " That",
+        "start": 70.16,
+        "end": 70.26,
+        "probability": 0.9935823082923889
+      },
+      {
+        "word": " will",
+        "start": 70.26,
+        "end": 70.44,
+        "probability": 0.998664379119873
+      },
+      {
+        "word": " be",
+        "start": 70.44,
+        "end": 70.64,
+        "probability": 0.9995279312133789
+      },
+      {
+        "word": " your",
+        "start": 70.64,
+        "end": 70.86,
+        "probability": 0.9985471367835999
+      },
+      {
+        "word": " first",
+        "start": 70.86,
+        "end": 71.14,
+        "probability": 0.9947896003723145
+      },
+      {
+        "word": " seal.",
+        "start": 71.14,
+        "end": 71.5,
+        "probability": 0.9631179571151733
+      }
+    ]
+  },
+  {
+    "start": 71.88,
+    "end": 73.38,
+    "text": "Double tap quickly on your screen.",
+    "words": [
+      {
+        "word": " Double",
+        "start": 71.88,
+        "end": 72.02,
+        "probability": 0.9875854253768921
+      },
+      {
+        "word": " tap",
+        "start": 72.02,
+        "end": 72.26,
+        "probability": 0.9211164116859436
+      },
+      {
+        "word": " quickly",
+        "start": 72.26,
+        "end": 72.6,
+        "probability": 0.9961614608764648
+      },
+      {
+        "word": " on",
+        "start": 72.6,
+        "end": 72.9,
+        "probability": 0.9984884262084961
+      },
+      {
+        "word": " your",
+        "start": 72.9,
+        "end": 73.06,
+        "probability": 0.9992675185203552
+      },
+      {
+        "word": " screen.",
+        "start": 73.06,
+        "end": 73.38,
+        "probability": 0.999647855758667
+      }
+    ]
+  },
+  {
+    "start": 73.58,
+    "end": 74.78,
+    "text": "That'll be your second seal.",
+    "words": [
+      {
+        "word": " That'll",
+        "start": 73.58,
+        "end": 73.76,
+        "probability": 0.8989591300487518
+      },
+      {
+        "word": " be",
+        "start": 73.76,
+        "end": 73.9,
+        "probability": 0.9994286894798279
+      },
+      {
+        "word": " your",
+        "start": 73.9,
+        "end": 74.1,
+        "probability": 0.9992807507514954
+      },
+      {
+        "word": " second",
+        "start": 74.1,
+        "end": 74.38,
+        "probability": 0.9988918900489807
+      },
+      {
+        "word": " seal.",
+        "start": 74.38,
+        "end": 74.78,
+        "probability": 0.993867814540863
+      }
+    ]
+  },
+  {
+    "start": 75.1,
+    "end": 77.72,
+    "text": "Type health in the comments so I can see you did everything.",
+    "words": [
+      {
+        "word": " Type",
+        "start": 75.1,
+        "end": 75.22,
+        "probability": 0.9872302412986755
+      },
+      {
+        "word": " health",
+        "start": 75.22,
+        "end": 75.52,
+        "probability": 0.5551024079322815
+      },
+      {
+        "word": " in",
+        "start": 75.52,
+        "end": 75.74,
+        "probability": 0.996829092502594
+      },
+      {
+        "word": " the",
+        "start": 75.74,
+        "end": 75.88,
+        "probability": 0.9996055960655212
+      },
+      {
+        "word": " comments",
+        "start": 75.88,
+        "end": 76.22,
+        "probability": 0.8816288709640503
+      },
+      {
+        "word": " so",
+        "start": 76.22,
+        "end": 76.46,
+        "probability": 0.8383532762527466
+      },
+      {
+        "word": " I",
+        "start": 76.46,
+        "end": 76.58,
+        "probability": 0.9950065612792969
+      },
+      {
+        "word": " can",
+        "start": 76.58,
+        "end": 76.7,
+        "probability": 0.9993213415145874
+      },
+      {
+        "word": " see",
+        "start": 76.7,
+        "end": 76.92,
+        "probability": 0.997951328754425
+      },
+      {
+        "word": " you",
+        "start": 76.92,
+        "end": 77.08,
+        "probability": 0.9914543628692627
+      },
+      {
+        "word": " did",
+        "start": 77.08,
+        "end": 77.26,
+        "probability": 0.9973410964012146
+      },
+      {
+        "word": " everything.",
+        "start": 77.26,
+        "end": 77.72,
+        "probability": 0.9993913173675537
+      }
+    ]
+  },
+  {
+    "start": 78.04,
+    "end": 79.0,
+    "text": "But pay close attention.",
+    "words": [
+      {
+        "word": " But",
+        "start": 78.04,
+        "end": 78.14,
+        "probability": 0.9911907911300659
+      },
+      {
+        "word": " pay",
+        "start": 78.14,
+        "end": 78.34,
+        "probability": 0.9936127066612244
+      },
+      {
+        "word": " close",
+        "start": 78.34,
+        "end": 78.62,
+        "probability": 0.9970968961715698
+      },
+      {
+        "word": " attention.",
+        "start": 78.62,
+        "end": 79.0,
+        "probability": 0.9997369647026062
+      }
+    ]
+  },
+  {
+    "start": 79.6,
+    "end": 81.22,
+    "text": "This energy is highly sensitive,",
+    "words": [
+      {
+        "word": " This",
+        "start": 79.6,
+        "end": 79.72,
+        "probability": 0.9970417618751526
+      },
+      {
+        "word": " energy",
+        "start": 79.72,
+        "end": 80.06,
+        "probability": 0.9990777969360352
+      },
+      {
+        "word": " is",
+        "start": 80.06,
+        "end": 80.32,
+        "probability": 0.9993489384651184
+      },
+      {
+        "word": " highly",
+        "start": 80.32,
+        "end": 80.6,
+        "probability": 0.9995660185813904
+      },
+      {
+        "word": " sensitive,",
+        "start": 80.6,
+        "end": 81.22,
+        "probability": 0.9990894794464111
+      }
+    ]
+  },
+  {
+    "start": 81.22,
+    "end": 84.68,
+    "text": "and poor habits or negativity can completely break it.",
+    "words": [
+      {
+        "word": " and",
+        "start": 81.22,
+        "end": 81.68,
+        "probability": 0.7973614931106567
+      },
+      {
+        "word": " poor",
+        "start": 81.68,
+        "end": 81.96,
+        "probability": 0.9929292798042297
+      },
+      {
+        "word": " habits",
+        "start": 81.96,
+        "end": 82.36,
+        "probability": 0.997890293598175
+      },
+      {
+        "word": " or",
+        "start": 82.36,
+        "end": 82.58,
+        "probability": 0.9685590863227844
+      },
+      {
+        "word": " negativity",
+        "start": 82.58,
+        "end": 83.1,
+        "probability": 0.9917718768119812
+      },
+      {
+        "word": " can",
+        "start": 83.1,
+        "end": 83.66,
+        "probability": 0.9753090739250183
+      },
+      {
+        "word": " completely",
+        "start": 83.66,
+        "end": 84.06,
+        "probability": 0.9962778687477112
+      },
+      {
+        "word": " break",
+        "start": 84.06,
+        "end": 84.46,
+        "probability": 0.9983478784561157
+      },
+      {
+        "word": " it.",
+        "start": 84.46,
+        "end": 84.68,
+        "probability": 0.9988216757774353
+      }
+    ]
+  },
+  {
+    "start": 84.82,
+    "end": 88.1,
+    "text": "So tap my profile picture and check my stories before they disappear",
+    "words": [
+      {
+        "word": " So",
+        "start": 84.82,
+        "end": 84.92,
+        "probability": 0.9861912727355957
+      },
+      {
+        "word": " tap",
+        "start": 84.92,
+        "end": 85.14,
+        "probability": 0.8801707625389099
+      },
+      {
+        "word": " my",
+        "start": 85.14,
+        "end": 85.36,
+        "probability": 0.9846077561378479
+      },
+      {
+        "word": " profile",
+        "start": 85.36,
+        "end": 85.74,
+        "probability": 0.9976339340209961
+      },
+      {
+        "word": " picture",
+        "start": 85.74,
+        "end": 86.14,
+        "probability": 0.9980239868164062
+      },
+      {
+        "word": " and",
+        "start": 86.14,
+        "end": 86.32,
+        "probability": 0.9669070243835449
+      },
+      {
+        "word": " check",
+        "start": 86.32,
+        "end": 86.52,
+        "probability": 0.995799720287323
+      },
+      {
+        "word": " my",
+        "start": 86.52,
+        "end": 86.74,
+        "probability": 0.995884120464325
+      },
+      {
+        "word": " stories",
+        "start": 86.74,
+        "end": 87.1,
+        "probability": 0.9769670963287354
+      },
+      {
+        "word": " before",
+        "start": 87.1,
+        "end": 87.48,
+        "probability": 0.9951397180557251
+      },
+      {
+        "word": " they",
+        "start": 87.48,
+        "end": 87.66,
+        "probability": 0.9985969662666321
+      },
+      {
+        "word": " disappear",
+        "start": 87.66,
+        "end": 88.1,
+        "probability": 0.9978348612785339
+      }
+    ]
+  },
+  {
+    "start": 88.1,
+    "end": 91.5,
+    "text": "because the second part of this sign is waiting for you there.",
+    "words": [
+      {
+        "word": " because",
+        "start": 88.1,
+        "end": 88.78,
+        "probability": 0.43864044547080994
+      },
+      {
+        "word": " the",
+        "start": 88.78,
+        "end": 88.98,
+        "probability": 0.9977759718894958
+      },
+      {
+        "word": " second",
+        "start": 88.98,
+        "end": 89.22,
+        "probability": 0.9919788837432861
+      },
+      {
+        "word": " part",
+        "start": 89.22,
+        "end": 89.52,
+        "probability": 0.9990467429161072
+      },
+      {
+        "word": " of",
+        "start": 89.52,
+        "end": 89.66,
+        "probability": 0.9989413619041443
+      },
+      {
+        "word": " this",
+        "start": 89.66,
+        "end": 89.8,
+        "probability": 0.9931206107139587
+      },
+      {
+        "word": " sign",
+        "start": 89.8,
+        "end": 90.16,
+        "probability": 0.9960777163505554
+      },
+      {
+        "word": " is",
+        "start": 90.16,
+        "end": 90.56,
+        "probability": 0.9926210641860962
+      },
+      {
+        "word": " waiting",
+        "start": 90.56,
+        "end": 90.8,
+        "probability": 0.9968206882476807
+      },
+      {
+        "word": " for",
+        "start": 90.8,
+        "end": 91.1,
+        "probability": 0.9994309544563293
+      },
+      {
+        "word": " you",
+        "start": 91.1,
+        "end": 91.26,
+        "probability": 0.9993019104003906
+      },
+      {
+        "word": " there.",
+        "start": 91.26,
+        "end": 91.5,
+        "probability": 0.9964015483856201
+      }
+    ]
+  }
+]

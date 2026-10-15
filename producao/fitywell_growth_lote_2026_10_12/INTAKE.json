@@ -1,0 +1,160 @@
+{
+  "date": "2026-10-12",
+  "angle": 2,
+  "objective": "growth",
+  "models": [
+    {
+      "id": "V01",
+      "source": "/Users/macbookairm2/Downloads/snapinsta-1791763449262.mp4",
+      "production": "producao/fitywell_growth_2026_10_12_v01_1791763449262",
+      "sha256": "5bf6a5bbe577fa8b46bc829dad4016f77c1cd83af3699d819cb9ff9746a66699",
+      "avatars": [
+        "Cassidy Hargrove",
+        "Marshall Beckett",
+        "Meredith Callahan"
+      ]
+    },
+    {
+      "id": "V02",
+      "source": "/Users/macbookairm2/Downloads/snapinsta-1791763354045.mp4",
+      "production": "producao/fitywell_growth_2026_10_12_v02_1791763354045",
+      "sha256": "a70b6548d69d928abe4f6f6e1e949ac5c5a904816e08d9047e2466577b614fb3",
+      "avatars": [
+        "Cassidy Hargrove",
+        "Marshall Beckett",
+        "Meredith Callahan"
+      ]
+    },
+    {
+      "id": "V03",
+      "source": "/Users/macbookairm2/Downloads/snapinsta-1791763254062.mp4",
+      "production": "producao/fitywell_growth_2026_10_12_v03_1791763254062",
+      "sha256": "0ebcaba72faa3ebe63cf6df44c431a9859052c45c8904562270d630e6f3e306f",
+      "avatars": [
+        "Cassidy Hargrove",
+        "Marshall Beckett",
+        "Meredith Callahan"
+      ]
+    },
+    {
+      "id": "V04",
+      "source": "/Users/macbookairm2/Downloads/snapinsta-1791763193912.mp4",
+      "production": "producao/fitywell_growth_2026_10_12_v04_1791763193912",
+      "sha256": "f23e8d20b1bcb4c903761c27209628e503ed05e34909df10d275f4a884e83244",
+      "avatars": [
+        "Cassidy Hargrove",
+        "Marshall Beckett",
+        "Meredith Callahan"
+      ]
+    }
+  ],
+  "avatars": [
+    {
+      "name": "Cassidy Hargrove",
+      "source": "/Users/macbookairm2/Desktop/AVATARES/avatares fitywell/cassidy hargrove .jpg",
+      "anchor": "producao/fitywell_growth_lote_2026_10_12/anchors/cassidy_hargrove.jpg",
+      "sha256": "66e71cec5eaba4924f01d3246de6c475fbae605eefb2321f4b167b6b82460ae9"
+    },
+    {
+      "name": "Marshall Beckett",
+      "source": "/Users/macbookairm2/Desktop/AVATARES/avatares fitywell/marshall beckett .jpg",
+      "anchor": "producao/fitywell_growth_lote_2026_10_12/anchors/marshall_beckett.jpg",
+      "sha256": "6d42ee9133bbbbe4000e6a9d893fda0f233ac16e3166ceecfce8524662da6b4c"
+    },
+    {
+      "name": "Meredith Callahan",
+      "source": "/Users/macbookairm2/Desktop/AVATARES/avatares fitywell/meredith callahan .png",
+      "anchor": "producao/fitywell_growth_lote_2026_10_12/anchors/meredith_callahan.png",
+      "sha256": "ac64dcc782c1651c46d3851c53f448b6199a7868f6f4ba7622c4f5bdb36ba528"
+    }
+  ],
+  "order": "MODEL_THEN_AVATAR",
+  "expected_combinations": 12,
+  "combinations": [
+    {
+      "model": "V01",
+      "avatar": "Cassidy Hargrove",
+      "package": "PENDING_SCRIPT_APPROVAL",
+      "takes": "NOT_GENERATED",
+      "edit": "NOT_STARTED"
+    },
+    {
+      "model": "V01",
+      "avatar": "Marshall Beckett",
+      "package": "PENDING_SCRIPT_APPROVAL",
+      "takes": "NOT_GENERATED",
+      "edit": "NOT_STARTED"
+    },
+    {
+      "model": "V01",
+      "avatar": "Meredith Callahan",
+      "package": "PENDING_SCRIPT_APPROVAL",
+      "takes": "NOT_GENERATED",
+      "edit": "NOT_STARTED"
+    },
+    {
+      "model": "V02",
+      "avatar": "Cassidy Hargrove",
+      "package": "PENDING_SCRIPT_APPROVAL",
+      "takes": "NOT_GENERATED",
+      "edit": "NOT_STARTED"
+    },
+    {
+      "model": "V02",
+      "avatar": "Marshall Beckett",
+      "package": "PENDING_SCRIPT_APPROVAL",
+      "takes": "NOT_GENERATED",
+      "edit": "NOT_STARTED"
+    },
+    {
+      "model": "V02",
+      "avatar": "Meredith Callahan",
+      "package": "PENDING_SCRIPT_APPROVAL",
+      "takes": "NOT_GENERATED",
+      "edit": "NOT_STARTED"
+    },
+    {
+      "model": "V03",
+      "avatar": "Cassidy Hargrove",
+      "package": "PENDING_SCRIPT_APPROVAL",
+      "takes": "NOT_GENERATED",
+      "edit": "NOT_STARTED"
+    },
+    {
+      "model": "V03",
+      "avatar": "Marshall Beckett",
+      "package": "PENDING_SCRIPT_APPROVAL",
+      "takes": "NOT_GENERATED",
+      "edit": "NOT_STARTED"
+    },
+    {
+      "model": "V03",
+      "avatar": "Meredith Callahan",
+      "package": "PENDING_SCRIPT_APPROVAL",
+      "takes": "NOT_GENERATED",
+      "edit": "NOT_STARTED"
+    },
+    {
+      "model": "V04",
+      "avatar": "Cassidy Hargrove",
+      "package": "PENDING_SCRIPT_APPROVAL",
+      "takes": "NOT_GENERATED",
+      "edit": "NOT_STARTED"
+    },
+    {
+      "model": "V04",
+      "avatar": "Marshall Beckett",
+      "package": "PENDING_SCRIPT_APPROVAL",
+      "takes": "NOT_GENERATED",
+      "edit": "NOT_STARTED"
+    },
+    {
+      "model": "V04",
+      "avatar": "Meredith Callahan",
+      "package": "PENDING_SCRIPT_APPROVAL",
+      "takes": "NOT_GENERATED",
+      "edit": "NOT_STARTED"
+    }
+  ],
+  "previous_sale_cta_applies": false
+}

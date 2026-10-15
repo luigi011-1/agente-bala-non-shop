@@ -1,0 +1,59 @@
+{
+  "task_id": "1e0daef9-6e94-403f-b81b-2984809751a5",
+  "reviewer": "bala-revisor",
+  "independent": true,
+  "status": "APPROVED",
+  "checks": [
+    {
+      "name": "integridade_e_delta_final",
+      "result": "PASS",
+      "evidence": "All SHA256 entries verified. Only checkpoint and aggregate changed since approved V01_r2; scripts/hooks/source evidence unchanged."
+    },
+    {
+      "name": "estado_e_aprovacao",
+      "result": "PASS",
+      "evidence": "WAITING_SCRIPT_APPROVAL, NOT_APPROVED; 3 avatars Avery/Devon/Jordan; prompts NOT_CREATED."
+    },
+    {
+      "name": "fonte_e_fidelidade",
+      "result": "PASS",
+      "evidence": "Personal visual review of timeline01-06,117 samples,frames0/19.6 and anchors. Nine fear/response pairs, exhortation and car selfie preserved. Explicit financial adaptation exception. Organic classification probabilistic."
+    },
+    {
+      "name": "copy_cta_idiomas_e_cobertura",
+      "result": "PASS",
+      "evidence": "7 takes EN/PT and ES/PT,151EN/157ES; no financial guarantee or fabricated testimonial. 222,like/save,Stories/profile,bio,followfinal. Checklist15/15 applicable12NA."
+    },
+    {
+      "name": "hooks_e_envio",
+      "result": "PASS",
+      "evidence": "One faithful VALIDATION hook, same action/camera,luxury equivalent Jordan; sending gate passed for current stage."
+    },
+    {
+      "name": "agregado_literal",
+      "result": "PASS",
+      "evidence": "All6 aggregate tables literally identical to source scripts:52 takes."
+    },
+    {
+      "name": "midia_final_e_escuta",
+      "result": "NOT_APPLICABLE",
+      "evidence": "No K/V or generated media; no direct listening certification; user approval pending."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "WARNING",
+      "message": "Estimated47-55s exceeds23.426s original; CTA extension and changed cadence disclosed.",
+      "evidence": "Script duration note and manifest."
+    },
+    {
+      "severity": "WARNING",
+      "message": "Analysis timestamps approximate, not word alignment.",
+      "evidence": "Analysis versus ASR timestamps; WhisperX not requested."
+    }
+  ],
+  "registered_at": "2026-10-11T00:09:11.405861+00:00",
+  "taskpack_sha256": "65e12eedc5bb8e35f33cc82fbaf286a6c585e74f4883d8b29ef6182b5276db05",
+  "artifacts_unchanged": true,
+  "user_script_approval_granted": false
+}

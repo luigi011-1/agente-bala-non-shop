@@ -1,0 +1,124 @@
+{
+ "videos": {
+  "cassidy_paes_batata_abacate/cassidy_paes_batata_abacate": {
+   "legenda": "padrao",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "meredith_bolo_coco/meredith_bolo_coco": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "marshall_cheesecake_chocolate/marshall_cheesecake_chocolate": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "auraly_prosperidade_2026_10_10_v01_1791676095556/v01_avery_prosperidade": {
+   "legenda": "padrao",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "auraly_prosperidade_2026_10_10_v03_1791675120440/v03_avery_prosperidade": {
+   "legenda": "caption-highlight",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "auraly_prosperidade_2026_10_10_v01_1791676095556_jordan_es/v01_jordan_prosperidade": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "auraly_prosperidade_2026_10_10_v03_1791675120440_jordan_es/v03_jordan_prosperidade": {
+   "legenda": "padrao",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "marshall_seamoss_seios_noticia/Marshall - V02": {
+   "legenda": "caption-highlight",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "meredith_seamoss_rins_noticia/Meredith - V01": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "marshall_seamoss_rins_noticia/Marshall - V01": {
+   "legenda": "padrao",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "meredith_seamoss_seios_noticia/Meredith - V02": {
+   "legenda": "caption-highlight",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "cassidy_seamoss_seios_noticia/Cassidy - V02": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "marshall_seamoss_canela_limao/Marshall - V01": {
+   "legenda": "padrao",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "cassidy_seamoss_canela_limao/Cassidy hargroove - V01": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "meredith_seamoss_wrap_lentilha/Meredith - V03": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "marshall_seamoss_wrap_lentilha/Marshall - V03": {
+   "legenda": "padrao",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "cassidy_seamoss_wrap_lentilha/Cassidy Hargrove - V03": {
+   "legenda": "caption-highlight",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "marshall_seamoss_sorvete_banana/Marshal - V04": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "cassidy_seamoss_sorvete_banana/Cassidy Hargrove - V04": {
+   "legenda": "padrao",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "meredith_seamoss_canela_limao/Meredith - V01": {
+   "legenda": "caption-highlight",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "meredith_seamoss_bolinho_maca/Meredith - V02": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "cassidy_seamoss_bolinho_maca/Cassidy Hargove - V02": {
+   "legenda": "padrao",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "meredith_seamoss_sorvete_banana/Meredith - V04": {
+   "legenda": "caption-highlight",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "marshall_seamoss_bolinho_maca/Marshall - V02": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  }
+ }
+}

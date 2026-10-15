@@ -1,0 +1,23 @@
+# Relatório de edição · Meredith - V04
+
+- Ordem dos takes (pela fala): 1. V01_20261014002846.mp4 (T1) → 2. V02_20261014002846.mp4 (T2) → 3. V03_20261014002846.mp4 (T3) → 4. V04_20261014002846.mp4 (T4) → 5. V05_20261014002846.mp4 (T5) → 6. V06_20261014002846.mp4 (T6) → 7. V07_20261014002846.mp4 (T7) → 8. V08_20261014002846.mp4 (T8) → 9. V09_20261014002846.mp4 (T9) → 10. V10_20261014002846.mp4 (T10) → 11. V11_20261014002846.mp4 (T11) → 12. V12_20261014002846.mp4 (T12) → 13. V13_20261014002846.mp4 (T13) → 14. V14_20261014002846.mp4 (T14) → 15. V15_20261014002846.mp4 (T15) → 16. V16_20261014002846.mp4 (T16) → 17. V17_20261014002846.mp4 (T17)
+- Produção: `meredith_seamoss_sorvete_banana` (`producao/meredith_seamoss_sorvete_banana/ENTREGA_MEREDITH.md`), semelhança 97%
+- Exceção autorizada por Luigi, take 12: trocou "eighties" por "80s"; áudio original mantido, legenda do roteiro aprovado.
+- Exceção autorizada por Luigi, take 14: trocou "rems" por "rimmed"; áudio original mantido, legenda do roteiro aprovado.
+- Exceção autorizada por Luigi, take 16: trocou "rems sea moss" por "rim cmos"; áudio original mantido, legenda do roteiro aprovado.
+- Fala dos takes contra o roteiro, palavra por palavra: OK
+  - aparado: 2. V02_20261014002846.mp4: cortado o que o Flow inventou ou repetiu: "Thank you. (4.9-5.9s, fala que o whisper tinha escondido)"; ouvir a emenda
+  - aparado: 17. V17_20261014002846.mp4: cortado o que o Flow inventou ou repetiu: "These are just dynamic for your daily routine."; ouvir a emenda
+- Variação deste vídeo (rodízio): legenda padrao · SFX nenhum · fonte do pico anton
+- Acabamento HyperFrames: zoom em butter 6.8s, zoom em cream 12.2s, zoom em minutes 22.6s, zoom em shop 28.6s, zoom em bananas 35.2s, zoom em nights 42.0s, zoom em eighties 47.1s, zoom em avoid 52.7s · zoom sim · grão não · SFX nenhum
+- Sem silêncio fora da rampa: FALHA
+- Sem quadro fantasma nos cortes: OK
+- Legenda com o texto do roteiro (contagem bateu): OK
+- Nenhuma legenda com menos de 0,1s: OK
+- Vídeo em 1080x1920: OK
+  - silêncios: [(5.95, 6.2), (13.55, 13.850000000000001), (20.3, 20.700000000000003), (24.35, 24.6)]
+- Duração 71.8s · 3.80 palavras/s · 50 trechos (2 rampas) · 89 legendas
+- Música: snowfall.mp3 (a partir de 3.2s, cama base -18 dB)
+- Estilo fitwell · fala a 1.18x (alvo 3.8 palavras/s) · light leak na entrada dos takes nenhum; rampa nos takes [1]; legenda alta nos takes [1]
+- Arquivo: `/tmp/edicao/Meredith - V04-a31ae863/Meredith - V04_editado.mp4` (88.4 MB) · tempo total 385s
+- Olhar antes de entregar: `cortes.png` (pulo) e `legendas.png` (nada sobre rosto ou herói)

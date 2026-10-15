@@ -1,0 +1,1488 @@
+{
+  "schema_version": 2,
+  "pipeline": "watch",
+  "run_id": "7c71d335-bfd8-4414-9452-e83a7184e2ec",
+  "status": "COMPLETE",
+  "analysis_status": "PENDING_VISUAL_REVIEW",
+  "video": "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/fitywell_growth_chips_azeite/input/modelo.mp4",
+  "outdir": "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/fitywell_growth_chips_azeite/_watch",
+  "info": {
+    "duration": 38.19542,
+    "fps": 30.0,
+    "width": 720,
+    "height": 1280,
+    "has_audio": true
+  },
+  "scenes": [
+    {
+      "file": "scene_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "scene_t00007.6333_000002.png",
+      "t": 7.633333
+    },
+    {
+      "file": "scene_t00015.3667_000003.png",
+      "t": 15.366667
+    },
+    {
+      "file": "scene_t00023.2000_000004.png",
+      "t": 23.2
+    },
+    {
+      "file": "scene_t00031.1667_000005.png",
+      "t": 31.166667
+    }
+  ],
+  "timeline": [
+    {
+      "file": "tl_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "tl_t00000.2500_000002.png",
+      "t": 0.25
+    },
+    {
+      "file": "tl_t00000.5000_000003.png",
+      "t": 0.5
+    },
+    {
+      "file": "tl_t00000.7500_000004.png",
+      "t": 0.75
+    },
+    {
+      "file": "tl_t00001.0000_000005.png",
+      "t": 1.0
+    },
+    {
+      "file": "tl_t00001.2500_000006.png",
+      "t": 1.25
+    },
+    {
+      "file": "tl_t00001.5000_000007.png",
+      "t": 1.5
+    },
+    {
+      "file": "tl_t00001.7500_000008.png",
+      "t": 1.75
+    },
+    {
+      "file": "tl_t00002.0000_000009.png",
+      "t": 2.0
+    },
+    {
+      "file": "tl_t00002.2500_000010.png",
+      "t": 2.25
+    },
+    {
+      "file": "tl_t00002.5000_000011.png",
+      "t": 2.5
+    },
+    {
+      "file": "tl_t00002.7500_000012.png",
+      "t": 2.75
+    },
+    {
+      "file": "tl_t00003.0000_000013.png",
+      "t": 3.0
+    },
+    {
+      "file": "tl_t00003.2500_000014.png",
+      "t": 3.25
+    },
+    {
+      "file": "tl_t00003.5000_000015.png",
+      "t": 3.5
+    },
+    {
+      "file": "tl_t00003.7500_000016.png",
+      "t": 3.75
+    },
+    {
+      "file": "tl_t00004.0000_000017.png",
+      "t": 4.0
+    },
+    {
+      "file": "tl_t00004.2500_000018.png",
+      "t": 4.25
+    },
+    {
+      "file": "tl_t00004.5000_000019.png",
+      "t": 4.5
+    },
+    {
+      "file": "tl_t00004.7500_000020.png",
+      "t": 4.75
+    },
+    {
+      "file": "tl_t00005.0000_000021.png",
+      "t": 5.0
+    },
+    {
+      "file": "tl_t00005.2500_000022.png",
+      "t": 5.25
+    },
+    {
+      "file": "tl_t00005.5000_000023.png",
+      "t": 5.5
+    },
+    {
+      "file": "tl_t00005.7500_000024.png",
+      "t": 5.75
+    },
+    {
+      "file": "tl_t00006.0000_000025.png",
+      "t": 6.0
+    },
+    {
+      "file": "tl_t00006.2500_000026.png",
+      "t": 6.25
+    },
+    {
+      "file": "tl_t00006.5000_000027.png",
+      "t": 6.5
+    },
+    {
+      "file": "tl_t00006.7500_000028.png",
+      "t": 6.75
+    },
+    {
+      "file": "tl_t00007.0000_000029.png",
+      "t": 7.0
+    },
+    {
+      "file": "tl_t00007.2500_000030.png",
+      "t": 7.25
+    },
+    {
+      "file": "tl_t00007.5000_000031.png",
+      "t": 7.5
+    },
+    {
+      "file": "tl_t00007.7500_000032.png",
+      "t": 7.75
+    },
+    {
+      "file": "tl_t00008.0000_000033.png",
+      "t": 8.0
+    },
+    {
+      "file": "tl_t00008.2500_000034.png",
+      "t": 8.25
+    },
+    {
+      "file": "tl_t00008.5000_000035.png",
+      "t": 8.5
+    },
+    {
+      "file": "tl_t00008.7500_000036.png",
+      "t": 8.75
+    },
+    {
+      "file": "tl_t00009.0000_000037.png",
+      "t": 9.0
+    },
+    {
+      "file": "tl_t00009.2500_000038.png",
+      "t": 9.25
+    },
+    {
+      "file": "tl_t00009.5000_000039.png",
+      "t": 9.5
+    },
+    {
+      "file": "tl_t00009.7500_000040.png",
+      "t": 9.75
+    },
+    {
+      "file": "tl_t00010.0000_000041.png",
+      "t": 10.0
+    },
+    {
+      "file": "tl_t00010.2500_000042.png",
+      "t": 10.25
+    },
+    {
+      "file": "tl_t00010.5000_000043.png",
+      "t": 10.5
+    },
+    {
+      "file": "tl_t00010.7500_000044.png",
+      "t": 10.75
+    },
+    {
+      "file": "tl_t00011.0000_000045.png",
+      "t": 11.0
+    },
+    {
+      "file": "tl_t00011.2500_000046.png",
+      "t": 11.25
+    },
+    {
+      "file": "tl_t00011.5000_000047.png",
+      "t": 11.5
+    },
+    {
+      "file": "tl_t00011.7500_000048.png",
+      "t": 11.75
+    },
+    {
+      "file": "tl_t00012.0000_000049.png",
+      "t": 12.0
+    },
+    {
+      "file": "tl_t00012.2500_000050.png",
+      "t": 12.25
+    },
+    {
+      "file": "tl_t00012.5000_000051.png",
+      "t": 12.5
+    },
+    {
+      "file": "tl_t00012.7500_000052.png",
+      "t": 12.75
+    },
+    {
+      "file": "tl_t00013.0000_000053.png",
+      "t": 13.0
+    },
+    {
+      "file": "tl_t00013.2500_000054.png",
+      "t": 13.25
+    },
+    {
+      "file": "tl_t00013.5000_000055.png",
+      "t": 13.5
+    },
+    {
+      "file": "tl_t00013.7500_000056.png",
+      "t": 13.75
+    },
+    {
+      "file": "tl_t00014.0000_000057.png",
+      "t": 14.0
+    },
+    {
+      "file": "tl_t00014.2500_000058.png",
+      "t": 14.25
+    },
+    {
+      "file": "tl_t00014.5000_000059.png",
+      "t": 14.5
+    },
+    {
+      "file": "tl_t00014.7500_000060.png",
+      "t": 14.75
+    },
+    {
+      "file": "tl_t00015.0000_000061.png",
+      "t": 15.0
+    },
+    {
+      "file": "tl_t00015.2500_000062.png",
+      "t": 15.25
+    },
+    {
+      "file": "tl_t00015.5000_000063.png",
+      "t": 15.5
+    },
+    {
+      "file": "tl_t00015.7500_000064.png",
+      "t": 15.75
+    },
+    {
+      "file": "tl_t00016.0000_000065.png",
+      "t": 16.0
+    },
+    {
+      "file": "tl_t00016.2500_000066.png",
+      "t": 16.25
+    },
+    {
+      "file": "tl_t00016.5000_000067.png",
+      "t": 16.5
+    },
+    {
+      "file": "tl_t00016.7500_000068.png",
+      "t": 16.75
+    },
+    {
+      "file": "tl_t00017.0000_000069.png",
+      "t": 17.0
+    },
+    {
+      "file": "tl_t00017.2500_000070.png",
+      "t": 17.25
+    },
+    {
+      "file": "tl_t00017.5000_000071.png",
+      "t": 17.5
+    },
+    {
+      "file": "tl_t00017.7500_000072.png",
+      "t": 17.75
+    },
+    {
+      "file": "tl_t00018.0000_000073.png",
+      "t": 18.0
+    },
+    {
+      "file": "tl_t00018.2500_000074.png",
+      "t": 18.25
+    },
+    {
+      "file": "tl_t00018.5000_000075.png",
+      "t": 18.5
+    },
+    {
+      "file": "tl_t00018.7500_000076.png",
+      "t": 18.75
+    },
+    {
+      "file": "tl_t00019.0000_000077.png",
+      "t": 19.0
+    },
+    {
+      "file": "tl_t00019.2500_000078.png",
+      "t": 19.25
+    },
+    {
+      "file": "tl_t00019.5000_000079.png",
+      "t": 19.5
+    },
+    {
+      "file": "tl_t00019.7500_000080.png",
+      "t": 19.75
+    },
+    {
+      "file": "tl_t00020.0000_000081.png",
+      "t": 20.0
+    },
+    {
+      "file": "tl_t00020.2500_000082.png",
+      "t": 20.25
+    },
+    {
+      "file": "tl_t00020.5000_000083.png",
+      "t": 20.5
+    },
+    {
+      "file": "tl_t00020.7500_000084.png",
+      "t": 20.75
+    },
+    {
+      "file": "tl_t00021.0000_000085.png",
+      "t": 21.0
+    },
+    {
+      "file": "tl_t00021.2500_000086.png",
+      "t": 21.25
+    },
+    {
+      "file": "tl_t00021.5000_000087.png",
+      "t": 21.5
+    },
+    {
+      "file": "tl_t00021.7500_000088.png",
+      "t": 21.75
+    },
+    {
+      "file": "tl_t00022.0000_000089.png",
+      "t": 22.0
+    },
+    {
+      "file": "tl_t00022.2500_000090.png",
+      "t": 22.25
+    },
+    {
+      "file": "tl_t00022.5000_000091.png",
+      "t": 22.5
+    },
+    {
+      "file": "tl_t00022.7500_000092.png",
+      "t": 22.75
+    },
+    {
+      "file": "tl_t00023.0000_000093.png",
+      "t": 23.0
+    },
+    {
+      "file": "tl_t00023.2500_000094.png",
+      "t": 23.25
+    },
+    {
+      "file": "tl_t00023.5000_000095.png",
+      "t": 23.5
+    },
+    {
+      "file": "tl_t00023.7500_000096.png",
+      "t": 23.75
+    },
+    {
+      "file": "tl_t00024.0000_000097.png",
+      "t": 24.0
+    },
+    {
+      "file": "tl_t00024.2500_000098.png",
+      "t": 24.25
+    },
+    {
+      "file": "tl_t00024.5000_000099.png",
+      "t": 24.5
+    },
+    {
+      "file": "tl_t00024.7500_000100.png",
+      "t": 24.75
+    },
+    {
+      "file": "tl_t00025.0000_000101.png",
+      "t": 25.0
+    },
+    {
+      "file": "tl_t00025.2500_000102.png",
+      "t": 25.25
+    },
+    {
+      "file": "tl_t00025.5000_000103.png",
+      "t": 25.5
+    },
+    {
+      "file": "tl_t00025.7500_000104.png",
+      "t": 25.75
+    },
+    {
+      "file": "tl_t00026.0000_000105.png",
+      "t": 26.0
+    },
+    {
+      "file": "tl_t00026.2500_000106.png",
+      "t": 26.25
+    },
+    {
+      "file": "tl_t00026.5000_000107.png",
+      "t": 26.5
+    },
+    {
+      "file": "tl_t00026.7500_000108.png",
+      "t": 26.75
+    },
+    {
+      "file": "tl_t00027.0000_000109.png",
+      "t": 27.0
+    },
+    {
+      "file": "tl_t00027.2500_000110.png",
+      "t": 27.25
+    },
+    {
+      "file": "tl_t00027.5000_000111.png",
+      "t": 27.5
+    },
+    {
+      "file": "tl_t00027.7500_000112.png",
+      "t": 27.75
+    },
+    {
+      "file": "tl_t00028.0000_000113.png",
+      "t": 28.0
+    },
+    {
+      "file": "tl_t00028.2500_000114.png",
+      "t": 28.25
+    },
+    {
+      "file": "tl_t00028.5000_000115.png",
+      "t": 28.5
+    },
+    {
+      "file": "tl_t00028.7500_000116.png",
+      "t": 28.75
+    },
+    {
+      "file": "tl_t00029.0000_000117.png",
+      "t": 29.0
+    },
+    {
+      "file": "tl_t00029.2500_000118.png",
+      "t": 29.25
+    },
+    {
+      "file": "tl_t00029.5000_000119.png",
+      "t": 29.5
+    },
+    {
+      "file": "tl_t00029.7500_000120.png",
+      "t": 29.75
+    },
+    {
+      "file": "tl_t00030.0000_000121.png",
+      "t": 30.0
+    },
+    {
+      "file": "tl_t00030.2500_000122.png",
+      "t": 30.25
+    },
+    {
+      "file": "tl_t00030.5000_000123.png",
+      "t": 30.5
+    },
+    {
+      "file": "tl_t00030.7500_000124.png",
+      "t": 30.75
+    },
+    {
+      "file": "tl_t00031.0000_000125.png",
+      "t": 31.0
+    },
+    {
+      "file": "tl_t00031.2500_000126.png",
+      "t": 31.25
+    },
+    {
+      "file": "tl_t00031.5000_000127.png",
+      "t": 31.5
+    },
+    {
+      "file": "tl_t00031.7500_000128.png",
+      "t": 31.75
+    },
+    {
+      "file": "tl_t00032.0000_000129.png",
+      "t": 32.0
+    },
+    {
+      "file": "tl_t00032.2500_000130.png",
+      "t": 32.25
+    },
+    {
+      "file": "tl_t00032.5000_000131.png",
+      "t": 32.5
+    },
+    {
+      "file": "tl_t00032.7500_000132.png",
+      "t": 32.75
+    },
+    {
+      "file": "tl_t00033.0000_000133.png",
+      "t": 33.0
+    },
+    {
+      "file": "tl_t00033.2500_000134.png",
+      "t": 33.25
+    },
+    {
+      "file": "tl_t00033.5000_000135.png",
+      "t": 33.5
+    },
+    {
+      "file": "tl_t00033.7500_000136.png",
+      "t": 33.75
+    },
+    {
+      "file": "tl_t00034.0000_000137.png",
+      "t": 34.0
+    },
+    {
+      "file": "tl_t00034.2500_000138.png",
+      "t": 34.25
+    },
+    {
+      "file": "tl_t00034.5000_000139.png",
+      "t": 34.5
+    },
+    {
+      "file": "tl_t00034.7500_000140.png",
+      "t": 34.75
+    },
+    {
+      "file": "tl_t00035.0000_000141.png",
+      "t": 35.0
+    },
+    {
+      "file": "tl_t00035.2500_000142.png",
+      "t": 35.25
+    },
+    {
+      "file": "tl_t00035.5000_000143.png",
+      "t": 35.5
+    },
+    {
+      "file": "tl_t00035.7500_000144.png",
+      "t": 35.75
+    },
+    {
+      "file": "tl_t00036.0000_000145.png",
+      "t": 36.0
+    },
+    {
+      "file": "tl_t00036.2500_000146.png",
+      "t": 36.25
+    },
+    {
+      "file": "tl_t00036.5000_000147.png",
+      "t": 36.5
+    },
+    {
+      "file": "tl_t00036.7500_000148.png",
+      "t": 36.75
+    },
+    {
+      "file": "tl_t00037.0000_000149.png",
+      "t": 37.0
+    },
+    {
+      "file": "tl_t00037.2500_000150.png",
+      "t": 37.25
+    },
+    {
+      "file": "tl_t00037.5000_000151.png",
+      "t": 37.5
+    },
+    {
+      "file": "tl_t00037.7500_000152.png",
+      "t": 37.75
+    }
+  ],
+  "overview": {
+    "scenes": [
+      "overview_scenes_01.png"
+    ],
+    "timeline": [
+      "overview_timeline_01.png",
+      "overview_timeline_02.png",
+      "overview_timeline_03.png",
+      "overview_timeline_04.png",
+      "overview_timeline_05.png",
+      "overview_timeline_06.png",
+      "overview_timeline_07.png",
+      "overview_timeline_08.png"
+    ]
+  },
+  "transcript": true,
+  "audio": {
+    "status": "SUCCEEDED",
+    "backend": "faster-whisper",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.02,
+        "end": 7.28,
+        "text": "Hold a flame to a potato chip if it burns like a candle it is loaded with oil and your gut cannot break it down",
+        "words": [
+          {
+            "word": " Hold",
+            "start": 0.02,
+            "end": 0.54,
+            "probability": 0.6793769001960754
+          },
+          {
+            "word": " a",
+            "start": 0.54,
+            "end": 0.74,
+            "probability": 0.5956881046295166
+          },
+          {
+            "word": " flame",
+            "start": 0.74,
+            "end": 1.0,
+            "probability": 0.9947916269302368
+          },
+          {
+            "word": " to",
+            "start": 1.0,
+            "end": 1.26,
+            "probability": 0.9962983727455139
+          },
+          {
+            "word": " a",
+            "start": 1.26,
+            "end": 1.36,
+            "probability": 0.9975631237030029
+          },
+          {
+            "word": " potato",
+            "start": 1.36,
+            "end": 1.66,
+            "probability": 0.995973527431488
+          },
+          {
+            "word": " chip",
+            "start": 1.66,
+            "end": 2.0,
+            "probability": 0.9969124794006348
+          },
+          {
+            "word": " if",
+            "start": 2.0,
+            "end": 2.8,
+            "probability": 0.3893820643424988
+          },
+          {
+            "word": " it",
+            "start": 2.8,
+            "end": 2.92,
+            "probability": 0.9834031462669373
+          },
+          {
+            "word": " burns",
+            "start": 2.92,
+            "end": 3.16,
+            "probability": 0.9918003678321838
+          },
+          {
+            "word": " like",
+            "start": 3.16,
+            "end": 3.36,
+            "probability": 0.9894709587097168
+          },
+          {
+            "word": " a",
+            "start": 3.36,
+            "end": 3.5,
+            "probability": 0.9991239905357361
+          },
+          {
+            "word": " candle",
+            "start": 3.5,
+            "end": 3.86,
+            "probability": 0.9972690939903259
+          },
+          {
+            "word": " it",
+            "start": 3.86,
+            "end": 4.24,
+            "probability": 0.7549172639846802
+          },
+          {
+            "word": " is",
+            "start": 4.24,
+            "end": 4.36,
+            "probability": 0.990233302116394
+          },
+          {
+            "word": " loaded",
+            "start": 4.36,
+            "end": 4.7,
+            "probability": 0.9928309321403503
+          },
+          {
+            "word": " with",
+            "start": 4.7,
+            "end": 4.96,
+            "probability": 0.9983986020088196
+          },
+          {
+            "word": " oil",
+            "start": 4.96,
+            "end": 5.28,
+            "probability": 0.9971190690994263
+          },
+          {
+            "word": " and",
+            "start": 5.28,
+            "end": 5.62,
+            "probability": 0.9393253922462463
+          },
+          {
+            "word": " your",
+            "start": 5.62,
+            "end": 5.76,
+            "probability": 0.996384859085083
+          },
+          {
+            "word": " gut",
+            "start": 5.76,
+            "end": 6.04,
+            "probability": 0.9948533177375793
+          },
+          {
+            "word": " cannot",
+            "start": 6.04,
+            "end": 6.32,
+            "probability": 0.9789785742759705
+          },
+          {
+            "word": " break",
+            "start": 6.32,
+            "end": 6.58,
+            "probability": 0.9835026860237122
+          },
+          {
+            "word": " it",
+            "start": 6.58,
+            "end": 6.74,
+            "probability": 0.9525208473205566
+          },
+          {
+            "word": " down",
+            "start": 6.74,
+            "end": 7.28,
+            "probability": 0.9773484468460083
+          }
+        ]
+      },
+      {
+        "start": 7.28,
+        "end": 13.54,
+        "text": "Number two olive oil chill it overnight real extra virgin turns cloudy if it stays clear",
+        "words": [
+          {
+            "word": " Number",
+            "start": 7.28,
+            "end": 7.9,
+            "probability": 0.43481573462486267
+          },
+          {
+            "word": " two",
+            "start": 7.9,
+            "end": 8.26,
+            "probability": 0.8658804893493652
+          },
+          {
+            "word": " olive",
+            "start": 8.26,
+            "end": 8.68,
+            "probability": 0.9244186878204346
+          },
+          {
+            "word": " oil",
+            "start": 8.68,
+            "end": 9.02,
+            "probability": 0.9939990043640137
+          },
+          {
+            "word": " chill",
+            "start": 9.02,
+            "end": 9.5,
+            "probability": 0.8331587314605713
+          },
+          {
+            "word": " it",
+            "start": 9.5,
+            "end": 9.64,
+            "probability": 0.9858698844909668
+          },
+          {
+            "word": " overnight",
+            "start": 9.64,
+            "end": 10.04,
+            "probability": 0.9908862113952637
+          },
+          {
+            "word": " real",
+            "start": 10.04,
+            "end": 10.7,
+            "probability": 0.8434140682220459
+          },
+          {
+            "word": " extra",
+            "start": 10.7,
+            "end": 11.06,
+            "probability": 0.9302557110786438
+          },
+          {
+            "word": " virgin",
+            "start": 11.06,
+            "end": 11.42,
+            "probability": 0.9110724925994873
+          },
+          {
+            "word": " turns",
+            "start": 11.42,
+            "end": 11.78,
+            "probability": 0.987589418888092
+          },
+          {
+            "word": " cloudy",
+            "start": 11.78,
+            "end": 12.16,
+            "probability": 0.9908444285392761
+          },
+          {
+            "word": " if",
+            "start": 12.16,
+            "end": 12.76,
+            "probability": 0.8857613205909729
+          },
+          {
+            "word": " it",
+            "start": 12.76,
+            "end": 12.88,
+            "probability": 0.997734546661377
+          },
+          {
+            "word": " stays",
+            "start": 12.88,
+            "end": 13.14,
+            "probability": 0.996874213218689
+          },
+          {
+            "word": " clear",
+            "start": 13.14,
+            "end": 13.54,
+            "probability": 0.9894334673881531
+          }
+        ]
+      },
+      {
+        "start": 13.54,
+        "end": 16.84,
+        "text": "It was cut with seed oils number three vanilla",
+        "words": [
+          {
+            "word": " It",
+            "start": 13.54,
+            "end": 14.06,
+            "probability": 0.5802997946739197
+          },
+          {
+            "word": " was",
+            "start": 14.06,
+            "end": 14.2,
+            "probability": 0.9992979764938354
+          },
+          {
+            "word": " cut",
+            "start": 14.2,
+            "end": 14.48,
+            "probability": 0.9993102550506592
+          },
+          {
+            "word": " with",
+            "start": 14.48,
+            "end": 14.7,
+            "probability": 0.9995187520980835
+          },
+          {
+            "word": " seed",
+            "start": 14.7,
+            "end": 14.96,
+            "probability": 0.9846048951148987
+          },
+          {
+            "word": " oils",
+            "start": 14.96,
+            "end": 15.34,
+            "probability": 0.9830214977264404
+          },
+          {
+            "word": " number",
+            "start": 15.34,
+            "end": 15.62,
+            "probability": 0.8985971212387085
+          },
+          {
+            "word": " three",
+            "start": 15.62,
+            "end": 16.1,
+            "probability": 0.9114661812782288
+          },
+          {
+            "word": " vanilla",
+            "start": 16.1,
+            "end": 16.84,
+            "probability": 0.9473974108695984
+          }
+        ]
+      },
+      {
+        "start": 16.84,
+        "end": 21.86,
+        "text": "Light some on a spoon real vanilla burns blue if it smokes yellow",
+        "words": [
+          {
+            "word": " Light",
+            "start": 16.84,
+            "end": 17.76,
+            "probability": 0.3337492048740387
+          },
+          {
+            "word": " some",
+            "start": 17.76,
+            "end": 17.98,
+            "probability": 0.971710741519928
+          },
+          {
+            "word": " on",
+            "start": 17.98,
+            "end": 18.12,
+            "probability": 0.9989879727363586
+          },
+          {
+            "word": " a",
+            "start": 18.12,
+            "end": 18.24,
+            "probability": 0.9992663264274597
+          },
+          {
+            "word": " spoon",
+            "start": 18.24,
+            "end": 18.58,
+            "probability": 0.9986461997032166
+          },
+          {
+            "word": " real",
+            "start": 18.58,
+            "end": 19.4,
+            "probability": 0.93306565284729
+          },
+          {
+            "word": " vanilla",
+            "start": 19.4,
+            "end": 19.74,
+            "probability": 0.980637788772583
+          },
+          {
+            "word": " burns",
+            "start": 19.74,
+            "end": 20.16,
+            "probability": 0.9129469990730286
+          },
+          {
+            "word": " blue",
+            "start": 20.16,
+            "end": 20.54,
+            "probability": 0.976346492767334
+          },
+          {
+            "word": " if",
+            "start": 20.54,
+            "end": 21.06,
+            "probability": 0.9529669880867004
+          },
+          {
+            "word": " it",
+            "start": 21.06,
+            "end": 21.2,
+            "probability": 0.9954385161399841
+          },
+          {
+            "word": " smokes",
+            "start": 21.2,
+            "end": 21.5,
+            "probability": 0.9854082465171814
+          },
+          {
+            "word": " yellow",
+            "start": 21.5,
+            "end": 21.86,
+            "probability": 0.9778347611427307
+          }
+        ]
+      },
+      {
+        "start": 21.86,
+        "end": 29.06,
+        "text": "It is imitation number four maple syrup pour some on a cold plate real syrup falls in a thick amber ribbon if it spreads",
+        "words": [
+          {
+            "word": " It",
+            "start": 21.86,
+            "end": 22.24,
+            "probability": 0.35034576058387756
+          },
+          {
+            "word": " is",
+            "start": 22.24,
+            "end": 22.4,
+            "probability": 0.9995265007019043
+          },
+          {
+            "word": " imitation",
+            "start": 22.4,
+            "end": 22.92,
+            "probability": 0.9324831366539001
+          },
+          {
+            "word": " number",
+            "start": 22.92,
+            "end": 23.44,
+            "probability": 0.9694221019744873
+          },
+          {
+            "word": " four",
+            "start": 23.44,
+            "end": 23.86,
+            "probability": 0.9225848317146301
+          },
+          {
+            "word": " maple",
+            "start": 23.86,
+            "end": 24.28,
+            "probability": 0.9768566489219666
+          },
+          {
+            "word": " syrup",
+            "start": 24.28,
+            "end": 24.72,
+            "probability": 0.9884832501411438
+          },
+          {
+            "word": " pour",
+            "start": 24.72,
+            "end": 25.1,
+            "probability": 0.9737564325332642
+          },
+          {
+            "word": " some",
+            "start": 25.1,
+            "end": 25.28,
+            "probability": 0.9915415644645691
+          },
+          {
+            "word": " on",
+            "start": 25.28,
+            "end": 25.42,
+            "probability": 0.999390721321106
+          },
+          {
+            "word": " a",
+            "start": 25.42,
+            "end": 25.52,
+            "probability": 0.9996793270111084
+          },
+          {
+            "word": " cold",
+            "start": 25.52,
+            "end": 25.76,
+            "probability": 0.9963261485099792
+          },
+          {
+            "word": " plate",
+            "start": 25.76,
+            "end": 26.08,
+            "probability": 0.9843405485153198
+          },
+          {
+            "word": " real",
+            "start": 26.08,
+            "end": 26.58,
+            "probability": 0.8373306393623352
+          },
+          {
+            "word": " syrup",
+            "start": 26.58,
+            "end": 26.9,
+            "probability": 0.9863070845603943
+          },
+          {
+            "word": " falls",
+            "start": 26.9,
+            "end": 27.2,
+            "probability": 0.8971273303031921
+          },
+          {
+            "word": " in",
+            "start": 27.2,
+            "end": 27.38,
+            "probability": 0.9959775805473328
+          },
+          {
+            "word": " a",
+            "start": 27.38,
+            "end": 27.5,
+            "probability": 0.989189624786377
+          },
+          {
+            "word": " thick",
+            "start": 27.5,
+            "end": 27.76,
+            "probability": 0.9986913800239563
+          },
+          {
+            "word": " amber",
+            "start": 27.76,
+            "end": 28.14,
+            "probability": 0.959435760974884
+          },
+          {
+            "word": " ribbon",
+            "start": 28.14,
+            "end": 28.44,
+            "probability": 0.8867870569229126
+          },
+          {
+            "word": " if",
+            "start": 28.44,
+            "end": 28.72,
+            "probability": 0.9524483680725098
+          },
+          {
+            "word": " it",
+            "start": 28.72,
+            "end": 28.84,
+            "probability": 0.9962334036827087
+          },
+          {
+            "word": " spreads",
+            "start": 28.84,
+            "end": 29.06,
+            "probability": 0.9967984557151794
+          }
+        ]
+      },
+      {
+        "start": 29.06,
+        "end": 31.78,
+        "text": "Like water it is colored sugar syrup in Japan",
+        "words": [
+          {
+            "word": " Like",
+            "start": 29.06,
+            "end": 29.26,
+            "probability": 0.08237616717815399
+          },
+          {
+            "word": " water",
+            "start": 29.26,
+            "end": 29.64,
+            "probability": 0.9697096347808838
+          },
+          {
+            "word": " it",
+            "start": 29.64,
+            "end": 29.88,
+            "probability": 0.5740242600440979
+          },
+          {
+            "word": " is",
+            "start": 29.88,
+            "end": 30.02,
+            "probability": 0.9975237250328064
+          },
+          {
+            "word": " colored",
+            "start": 30.02,
+            "end": 30.3,
+            "probability": 0.8804003596305847
+          },
+          {
+            "word": " sugar",
+            "start": 30.3,
+            "end": 30.66,
+            "probability": 0.9872386455535889
+          },
+          {
+            "word": " syrup",
+            "start": 30.66,
+            "end": 31.04,
+            "probability": 0.9899691939353943
+          },
+          {
+            "word": " in",
+            "start": 31.04,
+            "end": 31.5,
+            "probability": 0.6938332319259644
+          },
+          {
+            "word": " Japan",
+            "start": 31.5,
+            "end": 31.78,
+            "probability": 0.8905912637710571
+          }
+        ]
+      },
+      {
+        "start": 31.78,
+        "end": 34.78,
+        "text": "We trust food that behaves the way nature made it comment",
+        "words": [
+          {
+            "word": " We",
+            "start": 31.78,
+            "end": 32.12,
+            "probability": 0.1499047726392746
+          },
+          {
+            "word": " trust",
+            "start": 32.12,
+            "end": 32.36,
+            "probability": 0.9955910444259644
+          },
+          {
+            "word": " food",
+            "start": 32.36,
+            "end": 32.66,
+            "probability": 0.9988369345664978
+          },
+          {
+            "word": " that",
+            "start": 32.66,
+            "end": 32.84,
+            "probability": 0.9948609471321106
+          },
+          {
+            "word": " behaves",
+            "start": 32.84,
+            "end": 33.2,
+            "probability": 0.9996453523635864
+          },
+          {
+            "word": " the",
+            "start": 33.2,
+            "end": 33.4,
+            "probability": 0.9969467520713806
+          },
+          {
+            "word": " way",
+            "start": 33.4,
+            "end": 33.54,
+            "probability": 0.9990381002426147
+          },
+          {
+            "word": " nature",
+            "start": 33.54,
+            "end": 33.84,
+            "probability": 0.9801944494247437
+          },
+          {
+            "word": " made",
+            "start": 33.84,
+            "end": 34.1,
+            "probability": 0.9984784722328186
+          },
+          {
+            "word": " it",
+            "start": 34.1,
+            "end": 34.44,
+            "probability": 0.9974656105041504
+          },
+          {
+            "word": " comment",
+            "start": 34.44,
+            "end": 34.78,
+            "probability": 0.8592584729194641
+          }
+        ]
+      },
+      {
+        "start": 34.78,
+        "end": 37.96,
+        "text": "Yes for more and follow me so you do not miss one",
+        "words": [
+          {
+            "word": " Yes",
+            "start": 34.78,
+            "end": 35.16,
+            "probability": 0.29286134243011475
+          },
+          {
+            "word": " for",
+            "start": 35.16,
+            "end": 35.5,
+            "probability": 0.9492372274398804
+          },
+          {
+            "word": " more",
+            "start": 35.5,
+            "end": 35.76,
+            "probability": 0.9969839453697205
+          },
+          {
+            "word": " and",
+            "start": 35.76,
+            "end": 36.22,
+            "probability": 0.9843235611915588
+          },
+          {
+            "word": " follow",
+            "start": 36.22,
+            "end": 36.48,
+            "probability": 0.9953896999359131
+          },
+          {
+            "word": " me",
+            "start": 36.48,
+            "end": 36.7,
+            "probability": 0.9983298182487488
+          },
+          {
+            "word": " so",
+            "start": 36.7,
+            "end": 36.96,
+            "probability": 0.6937079429626465
+          },
+          {
+            "word": " you",
+            "start": 36.96,
+            "end": 37.1,
+            "probability": 0.9989882111549377
+          },
+          {
+            "word": " do",
+            "start": 37.1,
+            "end": 37.26,
+            "probability": 0.9980553388595581
+          },
+          {
+            "word": " not",
+            "start": 37.26,
+            "end": 37.46,
+            "probability": 0.9986953139305115
+          },
+          {
+            "word": " miss",
+            "start": 37.46,
+            "end": 37.68,
+            "probability": 0.9969943761825562
+          },
+          {
+            "word": " one",
+            "start": 37.68,
+            "end": 37.96,
+            "probability": 0.9951565861701965
+          }
+        ]
+      }
+    ],
+    "text": "Hold a flame to a potato chip if it burns like a candle it is loaded with oil and your gut cannot break it down Number two olive oil chill it overnight real extra virgin turns cloudy if it stays clear It was cut with seed oils number three vanilla Light some on a spoon real vanilla burns blue if it smokes yellow It is imitation number four maple syrup pour some on a cold plate real syrup falls in a thick amber ribbon if it spreads Like water it is colored sugar syrup in Japan We trust food that behaves the way nature made it comment Yes for more and follow me so you do not miss one"
+  },
+  "alignment": {
+    "status": "NOT_REQUESTED",
+    "backend": null
+  },
+  "params": {
+    "timeline_fps": 4.0,
+    "scene_threshold": 0.2,
+    "model": "small.en",
+    "language": "en",
+    "device": "cpu",
+    "compute_type": "int8",
+    "cpu_threads": 4,
+    "jobs": 4,
+    "alignment": "none",
+    "align_model": null,
+    "word_timestamps": true,
+    "no_audio": false,
+    "allow_no_audio": false,
+    "max_frames": 20000,
+    "command_timeout": 300
+  },
+  "environment": {
+    "os": "macOS-27.0.1-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.15",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "whisperx": "3.8.6",
+      "ctranslate2": "4.8.2",
+      "Pillow": "12.3.0",
+      "av": "18.0.0",
+      "torch": "2.8.0",
+      "torchaudio": "2.8.0"
+    },
+    "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+    "ffprobe": "/opt/homebrew/bin/ffprobe"
+  },
+  "errors": [],
+  "coverage": {
+    "source_duration_s": 38.19542,
+    "sample_interval_s": 0.25,
+    "timeline_count": 152,
+    "timestamp_basis": "fps_filter_sampling_grid",
+    "visual_review_performed": false
+  },
+  "elapsed_seconds": 36.541
+}

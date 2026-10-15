@@ -1,0 +1,31 @@
+{
+  "reviewer": "root",
+  "date": "2026-10-11",
+  "sampling_fps": 5,
+  "visual_review_performed": true,
+  "full_video_playback": false,
+  "opened_scene_grids": [
+    "/tmp/bala-edicao-2026-10-11/v01/overview/overview_scenes_01.png"
+  ],
+  "opened_timeline_grids": [
+    "/tmp/bala-edicao-2026-10-11/v01/overview/overview_timeline_01.png",
+    "/tmp/bala-edicao-2026-10-11/v01/overview/overview_timeline_02.png",
+    "/tmp/bala-edicao-2026-10-11/v01/overview/overview_timeline_03.png",
+    "/tmp/bala-edicao-2026-10-11/v01/overview/overview_timeline_04.png",
+    "/tmp/bala-edicao-2026-10-11/v01/overview/overview_timeline_05.png",
+    "/tmp/bala-edicao-2026-10-11/v01/overview/overview_timeline_06.png",
+    "/tmp/bala-edicao-2026-10-11/v01/overview/overview_timeline_07.png",
+    "/tmp/bala-edicao-2026-10-11/v01/overview/overview_timeline_08.png",
+    "/tmp/bala-edicao-2026-10-11/v01/overview/overview_timeline_09.png",
+    "/tmp/bala-edicao-2026-10-11/v01/overview/overview_timeline_10.png",
+    "/tmp/bala-edicao-2026-10-11/v01/overview/overview_timeline_11.png"
+  ],
+  "opened_critical_frames": [
+    "/tmp/bala-edicao-2026-10-11/v01/critical-11.8.jpg",
+    "/tmp/bala-edicao-2026-10-11/v01/critical-17.4.jpg",
+    "/tmp/bala-edicao-2026-10-11/v01/critical-2.8.jpg",
+    "/tmp/bala-edicao-2026-10-11/v01/critical-38.2.jpg"
+  ],
+  "audio_listened": false,
+  "scope": "Referência de edição, sem adaptação da copy"
+}

@@ -34,3 +34,9 @@ uploads/
 # frames e grades do /watch (evidencia local, regeneravel); ficam so manifest e transcricao
 producao/*/input/modelo_watch/frames/
 producao/*/input/modelo_watch/overview/
+
+# mesma saida pesada do /watch no layout producao/<slug>/watch/ (2026-10-13)
+producao/*/watch/frames/
+producao/*/watch/overview/
+producao/**/watch/frames/
+producao/**/watch/overview/

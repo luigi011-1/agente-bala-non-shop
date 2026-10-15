@@ -1,0 +1,21 @@
+{
+ "items": [
+  {
+   "file": "/Users/macbookairm2/Desktop/Marshal - V04/V14_20261014003950.mp4",
+   "sha256": "4966ef4b1e9d16a2687998f818577993b000333a50ee53d086a3575966f27264",
+   "approved_script": "The one I trust is Natural Rems Sea Moss. Wild Irish sea moss and sixteen ingredients, with less than one gram of sugar and four calories.",
+   "allowed_problems": [
+    "trocou \"rems\" por \"rem\""
+   ]
+  },
+  {
+   "file": "/Users/macbookairm2/Desktop/Marshal - V04/V16_20261014003950.mp4",
+   "sha256": "5a9a81e09ec809a77bd1f13fb7db292ee38beece90767386fea773e6a0c2a830",
+   "approved_script": "Search Natural Rems Sea Moss on Amazon. Or tap my profile picture, the link is waiting in my stories, or right there in my bio.",
+   "allowed_problems": [
+    "trocou \"rems sea moss\" por \"rem's cmos\""
+   ]
+  }
+ ],
+ "user_authorization": "Luigi, 2026-10-14: 'resolva tudo isso e n\u00e3o me pe\u00e7a mais aux\u00edlio'; exce\u00e7\u00e3o s\u00f3 para erro de escuta do whisper small conferido com o medium.en no take inteiro e em trechos"
+}

@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-12",
+  "angle": 2,
+  "objective": "growth",
+  "model": {
+    "id": "V04",
+    "source": "/Users/macbookairm2/Downloads/snapinsta-1791763193912.mp4",
+    "production": "producao/fitywell_growth_2026_10_12_v04_1791763193912",
+    "sha256": "f23e8d20b1bcb4c903761c27209628e503ed05e34909df10d275f4a884e83244",
+    "avatars": [
+      "Cassidy Hargrove",
+      "Marshall Beckett",
+      "Meredith Callahan"
+    ]
+  },
+  "avatars": [
+    {
+      "name": "Cassidy Hargrove",
+      "source": "/Users/macbookairm2/Desktop/AVATARES/avatares fitywell/cassidy hargrove .jpg",
+      "anchor": "producao/fitywell_growth_lote_2026_10_12/anchors/cassidy_hargrove.jpg",
+      "sha256": "66e71cec5eaba4924f01d3246de6c475fbae605eefb2321f4b167b6b82460ae9"
+    },
+    {
+      "name": "Marshall Beckett",
+      "source": "/Users/macbookairm2/Desktop/AVATARES/avatares fitywell/marshall beckett .jpg",
+      "anchor": "producao/fitywell_growth_lote_2026_10_12/anchors/marshall_beckett.jpg",
+      "sha256": "6d42ee9133bbbbe4000e6a9d893fda0f233ac16e3166ceecfce8524662da6b4c"
+    },
+    {
+      "name": "Meredith Callahan",
+      "source": "/Users/macbookairm2/Desktop/AVATARES/avatares fitywell/meredith callahan .png",
+      "anchor": "producao/fitywell_growth_lote_2026_10_12/anchors/meredith_callahan.png",
+      "sha256": "ac64dcc782c1651c46d3851c53f448b6199a7868f6f4ba7622c4f5bdb36ba528"
+    }
+  ],
+  "expected_combinations": 3
+}

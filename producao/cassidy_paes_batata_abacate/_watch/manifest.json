@@ -1,0 +1,2003 @@
+{
+  "schema_version": 2,
+  "pipeline": "watch",
+  "run_id": "17e67369-f2a9-478a-90e7-5541b4b372d9",
+  "status": "COMPLETE",
+  "analysis_status": "PENDING_VISUAL_REVIEW",
+  "video": "/Users/macbookairm2/Downloads/snapinsta-1791658826972.mp4",
+  "outdir": "/private/tmp/claude-501/-Users-macbookairm2-agente-bala-non-shop-agente-bala-non-shop/d6f73abb-f8ba-4ee9-ac63-61676e6456e2/scratchpad/watch_1791658826972",
+  "info": {
+    "duration": 36.289932,
+    "fps": 30.0,
+    "width": 720,
+    "height": 1280,
+    "has_audio": true
+  },
+  "scenes": [
+    {
+      "file": "scene_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "scene_t00001.8000_000002.png",
+      "t": 1.8
+    },
+    {
+      "file": "scene_t00003.4667_000003.png",
+      "t": 3.466667
+    },
+    {
+      "file": "scene_t00004.7333_000004.png",
+      "t": 4.733333
+    },
+    {
+      "file": "scene_t00005.7000_000005.png",
+      "t": 5.7
+    },
+    {
+      "file": "scene_t00006.6667_000006.png",
+      "t": 6.666667
+    },
+    {
+      "file": "scene_t00008.1667_000007.png",
+      "t": 8.166667
+    },
+    {
+      "file": "scene_t00010.5333_000008.png",
+      "t": 10.533333
+    },
+    {
+      "file": "scene_t00012.2000_000009.png",
+      "t": 12.2
+    },
+    {
+      "file": "scene_t00013.3333_000010.png",
+      "t": 13.333333
+    },
+    {
+      "file": "scene_t00013.4000_000011.png",
+      "t": 13.4
+    },
+    {
+      "file": "scene_t00015.3667_000012.png",
+      "t": 15.366667
+    },
+    {
+      "file": "scene_t00017.5000_000013.png",
+      "t": 17.5
+    },
+    {
+      "file": "scene_t00019.4667_000014.png",
+      "t": 19.466667
+    },
+    {
+      "file": "scene_t00021.0000_000015.png",
+      "t": 21.0
+    },
+    {
+      "file": "scene_t00021.2667_000016.png",
+      "t": 21.266667
+    },
+    {
+      "file": "scene_t00029.0667_000017.png",
+      "t": 29.066667
+    },
+    {
+      "file": "scene_t00030.7000_000018.png",
+      "t": 30.7
+    },
+    {
+      "file": "scene_t00034.7000_000019.png",
+      "t": 34.7
+    }
+  ],
+  "timeline": [
+    {
+      "file": "tl_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "tl_t00000.2000_000002.png",
+      "t": 0.2
+    },
+    {
+      "file": "tl_t00000.4000_000003.png",
+      "t": 0.4
+    },
+    {
+      "file": "tl_t00000.6000_000004.png",
+      "t": 0.6
+    },
+    {
+      "file": "tl_t00000.8000_000005.png",
+      "t": 0.8
+    },
+    {
+      "file": "tl_t00001.0000_000006.png",
+      "t": 1.0
+    },
+    {
+      "file": "tl_t00001.2000_000007.png",
+      "t": 1.2
+    },
+    {
+      "file": "tl_t00001.4000_000008.png",
+      "t": 1.4
+    },
+    {
+      "file": "tl_t00001.6000_000009.png",
+      "t": 1.6
+    },
+    {
+      "file": "tl_t00001.8000_000010.png",
+      "t": 1.8
+    },
+    {
+      "file": "tl_t00002.0000_000011.png",
+      "t": 2.0
+    },
+    {
+      "file": "tl_t00002.2000_000012.png",
+      "t": 2.2
+    },
+    {
+      "file": "tl_t00002.4000_000013.png",
+      "t": 2.4
+    },
+    {
+      "file": "tl_t00002.6000_000014.png",
+      "t": 2.6
+    },
+    {
+      "file": "tl_t00002.8000_000015.png",
+      "t": 2.8
+    },
+    {
+      "file": "tl_t00003.0000_000016.png",
+      "t": 3.0
+    },
+    {
+      "file": "tl_t00003.2000_000017.png",
+      "t": 3.2
+    },
+    {
+      "file": "tl_t00003.4000_000018.png",
+      "t": 3.4
+    },
+    {
+      "file": "tl_t00003.6000_000019.png",
+      "t": 3.6
+    },
+    {
+      "file": "tl_t00003.8000_000020.png",
+      "t": 3.8
+    },
+    {
+      "file": "tl_t00004.0000_000021.png",
+      "t": 4.0
+    },
+    {
+      "file": "tl_t00004.2000_000022.png",
+      "t": 4.2
+    },
+    {
+      "file": "tl_t00004.4000_000023.png",
+      "t": 4.4
+    },
+    {
+      "file": "tl_t00004.6000_000024.png",
+      "t": 4.6
+    },
+    {
+      "file": "tl_t00004.8000_000025.png",
+      "t": 4.8
+    },
+    {
+      "file": "tl_t00005.0000_000026.png",
+      "t": 5.0
+    },
+    {
+      "file": "tl_t00005.2000_000027.png",
+      "t": 5.2
+    },
+    {
+      "file": "tl_t00005.4000_000028.png",
+      "t": 5.4
+    },
+    {
+      "file": "tl_t00005.6000_000029.png",
+      "t": 5.6
+    },
+    {
+      "file": "tl_t00005.8000_000030.png",
+      "t": 5.8
+    },
+    {
+      "file": "tl_t00006.0000_000031.png",
+      "t": 6.0
+    },
+    {
+      "file": "tl_t00006.2000_000032.png",
+      "t": 6.2
+    },
+    {
+      "file": "tl_t00006.4000_000033.png",
+      "t": 6.4
+    },
+    {
+      "file": "tl_t00006.6000_000034.png",
+      "t": 6.6
+    },
+    {
+      "file": "tl_t00006.8000_000035.png",
+      "t": 6.8
+    },
+    {
+      "file": "tl_t00007.0000_000036.png",
+      "t": 7.0
+    },
+    {
+      "file": "tl_t00007.2000_000037.png",
+      "t": 7.2
+    },
+    {
+      "file": "tl_t00007.4000_000038.png",
+      "t": 7.4
+    },
+    {
+      "file": "tl_t00007.6000_000039.png",
+      "t": 7.6
+    },
+    {
+      "file": "tl_t00007.8000_000040.png",
+      "t": 7.8
+    },
+    {
+      "file": "tl_t00008.0000_000041.png",
+      "t": 8.0
+    },
+    {
+      "file": "tl_t00008.2000_000042.png",
+      "t": 8.2
+    },
+    {
+      "file": "tl_t00008.4000_000043.png",
+      "t": 8.4
+    },
+    {
+      "file": "tl_t00008.6000_000044.png",
+      "t": 8.6
+    },
+    {
+      "file": "tl_t00008.8000_000045.png",
+      "t": 8.8
+    },
+    {
+      "file": "tl_t00009.0000_000046.png",
+      "t": 9.0
+    },
+    {
+      "file": "tl_t00009.2000_000047.png",
+      "t": 9.2
+    },
+    {
+      "file": "tl_t00009.4000_000048.png",
+      "t": 9.4
+    },
+    {
+      "file": "tl_t00009.6000_000049.png",
+      "t": 9.6
+    },
+    {
+      "file": "tl_t00009.8000_000050.png",
+      "t": 9.8
+    },
+    {
+      "file": "tl_t00010.0000_000051.png",
+      "t": 10.0
+    },
+    {
+      "file": "tl_t00010.2000_000052.png",
+      "t": 10.2
+    },
+    {
+      "file": "tl_t00010.4000_000053.png",
+      "t": 10.4
+    },
+    {
+      "file": "tl_t00010.6000_000054.png",
+      "t": 10.6
+    },
+    {
+      "file": "tl_t00010.8000_000055.png",
+      "t": 10.8
+    },
+    {
+      "file": "tl_t00011.0000_000056.png",
+      "t": 11.0
+    },
+    {
+      "file": "tl_t00011.2000_000057.png",
+      "t": 11.2
+    },
+    {
+      "file": "tl_t00011.4000_000058.png",
+      "t": 11.4
+    },
+    {
+      "file": "tl_t00011.6000_000059.png",
+      "t": 11.6
+    },
+    {
+      "file": "tl_t00011.8000_000060.png",
+      "t": 11.8
+    },
+    {
+      "file": "tl_t00012.0000_000061.png",
+      "t": 12.0
+    },
+    {
+      "file": "tl_t00012.2000_000062.png",
+      "t": 12.2
+    },
+    {
+      "file": "tl_t00012.4000_000063.png",
+      "t": 12.4
+    },
+    {
+      "file": "tl_t00012.6000_000064.png",
+      "t": 12.6
+    },
+    {
+      "file": "tl_t00012.8000_000065.png",
+      "t": 12.8
+    },
+    {
+      "file": "tl_t00013.0000_000066.png",
+      "t": 13.0
+    },
+    {
+      "file": "tl_t00013.2000_000067.png",
+      "t": 13.2
+    },
+    {
+      "file": "tl_t00013.4000_000068.png",
+      "t": 13.4
+    },
+    {
+      "file": "tl_t00013.6000_000069.png",
+      "t": 13.6
+    },
+    {
+      "file": "tl_t00013.8000_000070.png",
+      "t": 13.8
+    },
+    {
+      "file": "tl_t00014.0000_000071.png",
+      "t": 14.0
+    },
+    {
+      "file": "tl_t00014.2000_000072.png",
+      "t": 14.2
+    },
+    {
+      "file": "tl_t00014.4000_000073.png",
+      "t": 14.4
+    },
+    {
+      "file": "tl_t00014.6000_000074.png",
+      "t": 14.6
+    },
+    {
+      "file": "tl_t00014.8000_000075.png",
+      "t": 14.8
+    },
+    {
+      "file": "tl_t00015.0000_000076.png",
+      "t": 15.0
+    },
+    {
+      "file": "tl_t00015.2000_000077.png",
+      "t": 15.2
+    },
+    {
+      "file": "tl_t00015.4000_000078.png",
+      "t": 15.4
+    },
+    {
+      "file": "tl_t00015.6000_000079.png",
+      "t": 15.6
+    },
+    {
+      "file": "tl_t00015.8000_000080.png",
+      "t": 15.8
+    },
+    {
+      "file": "tl_t00016.0000_000081.png",
+      "t": 16.0
+    },
+    {
+      "file": "tl_t00016.2000_000082.png",
+      "t": 16.2
+    },
+    {
+      "file": "tl_t00016.4000_000083.png",
+      "t": 16.4
+    },
+    {
+      "file": "tl_t00016.6000_000084.png",
+      "t": 16.6
+    },
+    {
+      "file": "tl_t00016.8000_000085.png",
+      "t": 16.8
+    },
+    {
+      "file": "tl_t00017.0000_000086.png",
+      "t": 17.0
+    },
+    {
+      "file": "tl_t00017.2000_000087.png",
+      "t": 17.2
+    },
+    {
+      "file": "tl_t00017.4000_000088.png",
+      "t": 17.4
+    },
+    {
+      "file": "tl_t00017.6000_000089.png",
+      "t": 17.6
+    },
+    {
+      "file": "tl_t00017.8000_000090.png",
+      "t": 17.8
+    },
+    {
+      "file": "tl_t00018.0000_000091.png",
+      "t": 18.0
+    },
+    {
+      "file": "tl_t00018.2000_000092.png",
+      "t": 18.2
+    },
+    {
+      "file": "tl_t00018.4000_000093.png",
+      "t": 18.4
+    },
+    {
+      "file": "tl_t00018.6000_000094.png",
+      "t": 18.6
+    },
+    {
+      "file": "tl_t00018.8000_000095.png",
+      "t": 18.8
+    },
+    {
+      "file": "tl_t00019.0000_000096.png",
+      "t": 19.0
+    },
+    {
+      "file": "tl_t00019.2000_000097.png",
+      "t": 19.2
+    },
+    {
+      "file": "tl_t00019.4000_000098.png",
+      "t": 19.4
+    },
+    {
+      "file": "tl_t00019.6000_000099.png",
+      "t": 19.6
+    },
+    {
+      "file": "tl_t00019.8000_000100.png",
+      "t": 19.8
+    },
+    {
+      "file": "tl_t00020.0000_000101.png",
+      "t": 20.0
+    },
+    {
+      "file": "tl_t00020.2000_000102.png",
+      "t": 20.2
+    },
+    {
+      "file": "tl_t00020.4000_000103.png",
+      "t": 20.4
+    },
+    {
+      "file": "tl_t00020.6000_000104.png",
+      "t": 20.6
+    },
+    {
+      "file": "tl_t00020.8000_000105.png",
+      "t": 20.8
+    },
+    {
+      "file": "tl_t00021.0000_000106.png",
+      "t": 21.0
+    },
+    {
+      "file": "tl_t00021.2000_000107.png",
+      "t": 21.2
+    },
+    {
+      "file": "tl_t00021.4000_000108.png",
+      "t": 21.4
+    },
+    {
+      "file": "tl_t00021.6000_000109.png",
+      "t": 21.6
+    },
+    {
+      "file": "tl_t00021.8000_000110.png",
+      "t": 21.8
+    },
+    {
+      "file": "tl_t00022.0000_000111.png",
+      "t": 22.0
+    },
+    {
+      "file": "tl_t00022.2000_000112.png",
+      "t": 22.2
+    },
+    {
+      "file": "tl_t00022.4000_000113.png",
+      "t": 22.4
+    },
+    {
+      "file": "tl_t00022.6000_000114.png",
+      "t": 22.6
+    },
+    {
+      "file": "tl_t00022.8000_000115.png",
+      "t": 22.8
+    },
+    {
+      "file": "tl_t00023.0000_000116.png",
+      "t": 23.0
+    },
+    {
+      "file": "tl_t00023.2000_000117.png",
+      "t": 23.2
+    },
+    {
+      "file": "tl_t00023.4000_000118.png",
+      "t": 23.4
+    },
+    {
+      "file": "tl_t00023.6000_000119.png",
+      "t": 23.6
+    },
+    {
+      "file": "tl_t00023.8000_000120.png",
+      "t": 23.8
+    },
+    {
+      "file": "tl_t00024.0000_000121.png",
+      "t": 24.0
+    },
+    {
+      "file": "tl_t00024.2000_000122.png",
+      "t": 24.2
+    },
+    {
+      "file": "tl_t00024.4000_000123.png",
+      "t": 24.4
+    },
+    {
+      "file": "tl_t00024.6000_000124.png",
+      "t": 24.6
+    },
+    {
+      "file": "tl_t00024.8000_000125.png",
+      "t": 24.8
+    },
+    {
+      "file": "tl_t00025.0000_000126.png",
+      "t": 25.0
+    },
+    {
+      "file": "tl_t00025.2000_000127.png",
+      "t": 25.2
+    },
+    {
+      "file": "tl_t00025.4000_000128.png",
+      "t": 25.4
+    },
+    {
+      "file": "tl_t00025.6000_000129.png",
+      "t": 25.6
+    },
+    {
+      "file": "tl_t00025.8000_000130.png",
+      "t": 25.8
+    },
+    {
+      "file": "tl_t00026.0000_000131.png",
+      "t": 26.0
+    },
+    {
+      "file": "tl_t00026.2000_000132.png",
+      "t": 26.2
+    },
+    {
+      "file": "tl_t00026.4000_000133.png",
+      "t": 26.4
+    },
+    {
+      "file": "tl_t00026.6000_000134.png",
+      "t": 26.6
+    },
+    {
+      "file": "tl_t00026.8000_000135.png",
+      "t": 26.8
+    },
+    {
+      "file": "tl_t00027.0000_000136.png",
+      "t": 27.0
+    },
+    {
+      "file": "tl_t00027.2000_000137.png",
+      "t": 27.2
+    },
+    {
+      "file": "tl_t00027.4000_000138.png",
+      "t": 27.4
+    },
+    {
+      "file": "tl_t00027.6000_000139.png",
+      "t": 27.6
+    },
+    {
+      "file": "tl_t00027.8000_000140.png",
+      "t": 27.8
+    },
+    {
+      "file": "tl_t00028.0000_000141.png",
+      "t": 28.0
+    },
+    {
+      "file": "tl_t00028.2000_000142.png",
+      "t": 28.2
+    },
+    {
+      "file": "tl_t00028.4000_000143.png",
+      "t": 28.4
+    },
+    {
+      "file": "tl_t00028.6000_000144.png",
+      "t": 28.6
+    },
+    {
+      "file": "tl_t00028.8000_000145.png",
+      "t": 28.8
+    },
+    {
+      "file": "tl_t00029.0000_000146.png",
+      "t": 29.0
+    },
+    {
+      "file": "tl_t00029.2000_000147.png",
+      "t": 29.2
+    },
+    {
+      "file": "tl_t00029.4000_000148.png",
+      "t": 29.4
+    },
+    {
+      "file": "tl_t00029.6000_000149.png",
+      "t": 29.6
+    },
+    {
+      "file": "tl_t00029.8000_000150.png",
+      "t": 29.8
+    },
+    {
+      "file": "tl_t00030.0000_000151.png",
+      "t": 30.0
+    },
+    {
+      "file": "tl_t00030.2000_000152.png",
+      "t": 30.2
+    },
+    {
+      "file": "tl_t00030.4000_000153.png",
+      "t": 30.4
+    },
+    {
+      "file": "tl_t00030.6000_000154.png",
+      "t": 30.6
+    },
+    {
+      "file": "tl_t00030.8000_000155.png",
+      "t": 30.8
+    },
+    {
+      "file": "tl_t00031.0000_000156.png",
+      "t": 31.0
+    },
+    {
+      "file": "tl_t00031.2000_000157.png",
+      "t": 31.2
+    },
+    {
+      "file": "tl_t00031.4000_000158.png",
+      "t": 31.4
+    },
+    {
+      "file": "tl_t00031.6000_000159.png",
+      "t": 31.6
+    },
+    {
+      "file": "tl_t00031.8000_000160.png",
+      "t": 31.8
+    },
+    {
+      "file": "tl_t00032.0000_000161.png",
+      "t": 32.0
+    },
+    {
+      "file": "tl_t00032.2000_000162.png",
+      "t": 32.2
+    },
+    {
+      "file": "tl_t00032.4000_000163.png",
+      "t": 32.4
+    },
+    {
+      "file": "tl_t00032.6000_000164.png",
+      "t": 32.6
+    },
+    {
+      "file": "tl_t00032.8000_000165.png",
+      "t": 32.8
+    },
+    {
+      "file": "tl_t00033.0000_000166.png",
+      "t": 33.0
+    },
+    {
+      "file": "tl_t00033.2000_000167.png",
+      "t": 33.2
+    },
+    {
+      "file": "tl_t00033.4000_000168.png",
+      "t": 33.4
+    },
+    {
+      "file": "tl_t00033.6000_000169.png",
+      "t": 33.6
+    },
+    {
+      "file": "tl_t00033.8000_000170.png",
+      "t": 33.8
+    },
+    {
+      "file": "tl_t00034.0000_000171.png",
+      "t": 34.0
+    },
+    {
+      "file": "tl_t00034.2000_000172.png",
+      "t": 34.2
+    },
+    {
+      "file": "tl_t00034.4000_000173.png",
+      "t": 34.4
+    },
+    {
+      "file": "tl_t00034.6000_000174.png",
+      "t": 34.6
+    },
+    {
+      "file": "tl_t00034.8000_000175.png",
+      "t": 34.8
+    },
+    {
+      "file": "tl_t00035.0000_000176.png",
+      "t": 35.0
+    },
+    {
+      "file": "tl_t00035.2000_000177.png",
+      "t": 35.2
+    },
+    {
+      "file": "tl_t00035.4000_000178.png",
+      "t": 35.4
+    },
+    {
+      "file": "tl_t00035.6000_000179.png",
+      "t": 35.6
+    },
+    {
+      "file": "tl_t00035.8000_000180.png",
+      "t": 35.8
+    },
+    {
+      "file": "tl_t00036.0000_000181.png",
+      "t": 36.0
+    }
+  ],
+  "overview": {
+    "scenes": [
+      "overview_scenes_01.png",
+      "overview_scenes_02.png"
+    ],
+    "timeline": [
+      "overview_timeline_01.png",
+      "overview_timeline_02.png",
+      "overview_timeline_03.png",
+      "overview_timeline_04.png",
+      "overview_timeline_05.png",
+      "overview_timeline_06.png",
+      "overview_timeline_07.png",
+      "overview_timeline_08.png",
+      "overview_timeline_09.png",
+      "overview_timeline_10.png"
+    ]
+  },
+  "transcript": true,
+  "audio": {
+    "status": "SUCCEEDED",
+    "backend": "faster-whisper",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 7.52,
+        "text": "Did you know that if you mash one boiled potato with avocado, add eggs, Greek yogurt,"
+      },
+      {
+        "start": 8.08,
+        "end": 14.88,
+        "text": "baking powder, and salt, and mix the whole lot together until smooth. Then shape it into buns,"
+      },
+      {
+        "start": 15.44,
+        "end": 22.16,
+        "text": "brush the tops with egg yolk, chuck sesame seeds over, and bake until golden. What you get are"
+      },
+      {
+        "start": 22.16,
+        "end": 29.68,
+        "text": "incredibly soft fluffy avocado potato buns with zero flour anywhere near them. Click the link in"
+      },
+      {
+        "start": 29.68,
+        "end": 36.0,
+        "text": "my bio to get my book full of healthy recipes, and don't forget to follow me for more."
+      }
+    ],
+    "text": "Did you know that if you mash one boiled potato with avocado, add eggs, Greek yogurt, baking powder, and salt, and mix the whole lot together until smooth. Then shape it into buns, brush the tops with egg yolk, chuck sesame seeds over, and bake until golden. What you get are incredibly soft fluffy avocado potato buns with zero flour anywhere near them. Click the link in my bio to get my book full of healthy recipes, and don't forget to follow me for more."
+  },
+  "alignment": {
+    "status": "SUCCEEDED",
+    "backend": "whisperx",
+    "language": "en",
+    "word_count": 85,
+    "expected_word_count": 85,
+    "timed_word_count": 85,
+    "unaligned_word_count": 0,
+    "segments": [
+      {
+        "start": 0.18,
+        "end": 7.52,
+        "text": "Did you know that if you mash one boiled potato with avocado, add eggs, Greek yogurt,",
+        "words": [
+          {
+            "word": "Did",
+            "start": 0.18,
+            "end": 0.321,
+            "score": 0.788
+          },
+          {
+            "word": "you",
+            "start": 0.341,
+            "end": 0.441,
+            "score": 0.836
+          },
+          {
+            "word": "know",
+            "start": 0.481,
+            "end": 0.702,
+            "score": 0.6
+          },
+          {
+            "word": "that",
+            "start": 0.802,
+            "end": 0.943,
+            "score": 0.84
+          },
+          {
+            "word": "if",
+            "start": 1.003,
+            "end": 1.083,
+            "score": 0.926
+          },
+          {
+            "word": "you",
+            "start": 1.123,
+            "end": 1.283,
+            "score": 0.869
+          },
+          {
+            "word": "mash",
+            "start": 1.344,
+            "end": 1.745,
+            "score": 0.725
+          },
+          {
+            "word": "one",
+            "start": 2.146,
+            "end": 2.286,
+            "score": 0.699
+          },
+          {
+            "word": "boiled",
+            "start": 2.386,
+            "end": 2.707,
+            "score": 0.809
+          },
+          {
+            "word": "potato",
+            "start": 2.747,
+            "end": 3.249,
+            "score": 0.836
+          },
+          {
+            "word": "with",
+            "start": 3.529,
+            "end": 3.71,
+            "score": 0.771
+          },
+          {
+            "word": "avocado,",
+            "start": 3.81,
+            "end": 4.392,
+            "score": 0.934
+          },
+          {
+            "word": "add",
+            "start": 4.412,
+            "end": 5.094,
+            "score": 0.806
+          },
+          {
+            "word": "eggs,",
+            "start": 5.254,
+            "end": 5.495,
+            "score": 0.878
+          },
+          {
+            "word": "Greek",
+            "start": 6.858,
+            "end": 7.119,
+            "score": 0.933
+          },
+          {
+            "word": "yogurt,",
+            "start": 7.179,
+            "end": 7.52,
+            "score": 0.65
+          }
+        ]
+      },
+      {
+        "start": 8.24,
+        "end": 13.055,
+        "text": "baking powder, and salt, and mix the whole lot together until smooth.",
+        "words": [
+          {
+            "word": "baking",
+            "start": 8.24,
+            "end": 8.561,
+            "score": 0.931
+          },
+          {
+            "word": "powder,",
+            "start": 8.602,
+            "end": 8.963,
+            "score": 0.911
+          },
+          {
+            "word": "and",
+            "start": 8.983,
+            "end": 9.645,
+            "score": 0.796
+          },
+          {
+            "word": "salt,",
+            "start": 9.765,
+            "end": 10.166,
+            "score": 0.815
+          },
+          {
+            "word": "and",
+            "start": 10.688,
+            "end": 10.768,
+            "score": 0.837
+          },
+          {
+            "word": "mix",
+            "start": 10.828,
+            "end": 11.049,
+            "score": 0.943
+          },
+          {
+            "word": "the",
+            "start": 11.069,
+            "end": 11.169,
+            "score": 0.695
+          },
+          {
+            "word": "whole",
+            "start": 11.209,
+            "end": 11.41,
+            "score": 0.691
+          },
+          {
+            "word": "lot",
+            "start": 11.45,
+            "end": 11.651,
+            "score": 0.831
+          },
+          {
+            "word": "together",
+            "start": 11.691,
+            "end": 12.072,
+            "score": 0.894
+          },
+          {
+            "word": "until",
+            "start": 12.292,
+            "end": 12.573,
+            "score": 0.788
+          },
+          {
+            "word": "smooth.",
+            "start": 12.653,
+            "end": 13.055,
+            "score": 0.769
+          }
+        ]
+      },
+      {
+        "start": 13.416,
+        "end": 14.86,
+        "text": "Then shape it into buns,",
+        "words": [
+          {
+            "word": "Then",
+            "start": 13.416,
+            "end": 13.636,
+            "score": 0.893
+          },
+          {
+            "word": "shape",
+            "start": 13.837,
+            "end": 14.118,
+            "score": 0.887
+          },
+          {
+            "word": "it",
+            "start": 14.158,
+            "end": 14.198,
+            "score": 0.982
+          },
+          {
+            "word": "into",
+            "start": 14.278,
+            "end": 14.499,
+            "score": 0.872
+          },
+          {
+            "word": "buns,",
+            "start": 14.539,
+            "end": 14.86,
+            "score": 0.73
+          }
+        ]
+      },
+      {
+        "start": 15.54,
+        "end": 20.997,
+        "text": "brush the tops with egg yolk, chuck sesame seeds over, and bake until golden.",
+        "words": [
+          {
+            "word": "brush",
+            "start": 15.54,
+            "end": 15.861,
+            "score": 0.717
+          },
+          {
+            "word": "the",
+            "start": 15.901,
+            "end": 15.982,
+            "score": 0.853
+          },
+          {
+            "word": "tops",
+            "start": 16.022,
+            "end": 16.363,
+            "score": 0.894
+          },
+          {
+            "word": "with",
+            "start": 16.423,
+            "end": 16.583,
+            "score": 0.716
+          },
+          {
+            "word": "egg",
+            "start": 16.704,
+            "end": 16.864,
+            "score": 0.996
+          },
+          {
+            "word": "yolk,",
+            "start": 16.904,
+            "end": 17.225,
+            "score": 0.843
+          },
+          {
+            "word": "chuck",
+            "start": 17.526,
+            "end": 17.807,
+            "score": 0.893
+          },
+          {
+            "word": "sesame",
+            "start": 17.847,
+            "end": 18.288,
+            "score": 0.901
+          },
+          {
+            "word": "seeds",
+            "start": 18.329,
+            "end": 18.629,
+            "score": 0.901
+          },
+          {
+            "word": "over,",
+            "start": 18.77,
+            "end": 19.071,
+            "score": 0.866
+          },
+          {
+            "word": "and",
+            "start": 19.632,
+            "end": 19.733,
+            "score": 0.887
+          },
+          {
+            "word": "bake",
+            "start": 19.813,
+            "end": 20.114,
+            "score": 0.922
+          },
+          {
+            "word": "until",
+            "start": 20.214,
+            "end": 20.515,
+            "score": 0.79
+          },
+          {
+            "word": "golden.",
+            "start": 20.575,
+            "end": 20.997,
+            "score": 0.899
+          }
+        ]
+      },
+      {
+        "start": 21.358,
+        "end": 22.12,
+        "text": "What you get are",
+        "words": [
+          {
+            "word": "What",
+            "start": 21.358,
+            "end": 21.498,
+            "score": 0.858
+          },
+          {
+            "word": "you",
+            "start": 21.518,
+            "end": 21.638,
+            "score": 0.869
+          },
+          {
+            "word": "get",
+            "start": 21.679,
+            "end": 21.879,
+            "score": 0.696
+          },
+          {
+            "word": "are",
+            "start": 22.04,
+            "end": 22.12,
+            "score": 0.923
+          }
+        ]
+      },
+      {
+        "start": 22.22,
+        "end": 28.717,
+        "text": "incredibly soft fluffy avocado potato buns with zero flour anywhere near them.",
+        "words": [
+          {
+            "word": "incredibly",
+            "start": 22.22,
+            "end": 22.962,
+            "score": 0.846
+          },
+          {
+            "word": "soft",
+            "start": 23.163,
+            "end": 23.644,
+            "score": 0.823
+          },
+          {
+            "word": "fluffy",
+            "start": 23.945,
+            "end": 24.446,
+            "score": 0.899
+          },
+          {
+            "word": "avocado",
+            "start": 24.867,
+            "end": 25.369,
+            "score": 0.818
+          },
+          {
+            "word": "potato",
+            "start": 25.429,
+            "end": 25.81,
+            "score": 0.966
+          },
+          {
+            "word": "buns",
+            "start": 25.85,
+            "end": 26.191,
+            "score": 0.813
+          },
+          {
+            "word": "with",
+            "start": 26.592,
+            "end": 26.752,
+            "score": 0.822
+          },
+          {
+            "word": "zero",
+            "start": 26.913,
+            "end": 27.294,
+            "score": 0.908
+          },
+          {
+            "word": "flour",
+            "start": 27.374,
+            "end": 27.775,
+            "score": 0.745
+          },
+          {
+            "word": "anywhere",
+            "start": 27.935,
+            "end": 28.256,
+            "score": 0.862
+          },
+          {
+            "word": "near",
+            "start": 28.316,
+            "end": 28.497,
+            "score": 0.723
+          },
+          {
+            "word": "them.",
+            "start": 28.557,
+            "end": 28.717,
+            "score": 0.997
+          }
+        ]
+      },
+      {
+        "start": 29.119,
+        "end": 29.68,
+        "text": "Click the link in",
+        "words": [
+          {
+            "word": "Click",
+            "start": 29.119,
+            "end": 29.319,
+            "score": 0.977
+          },
+          {
+            "word": "the",
+            "start": 29.359,
+            "end": 29.439,
+            "score": 0.858
+          },
+          {
+            "word": "link",
+            "start": 29.459,
+            "end": 29.62,
+            "score": 0.814
+          },
+          {
+            "word": "in",
+            "start": 29.64,
+            "end": 29.68,
+            "score": 0.0
+          }
+        ]
+      },
+      {
+        "start": 29.8,
+        "end": 35.699,
+        "text": "my bio to get my book full of healthy recipes, and don't forget to follow me for more.",
+        "words": [
+          {
+            "word": "my",
+            "start": 29.8,
+            "end": 29.921,
+            "score": 0.966
+          },
+          {
+            "word": "bio",
+            "start": 29.961,
+            "end": 30.382,
+            "score": 0.938
+          },
+          {
+            "word": "to",
+            "start": 30.483,
+            "end": 30.563,
+            "score": 1.0
+          },
+          {
+            "word": "get",
+            "start": 30.623,
+            "end": 30.783,
+            "score": 0.889
+          },
+          {
+            "word": "my",
+            "start": 30.844,
+            "end": 30.984,
+            "score": 0.779
+          },
+          {
+            "word": "book",
+            "start": 31.064,
+            "end": 31.285,
+            "score": 0.879
+          },
+          {
+            "word": "full",
+            "start": 31.446,
+            "end": 31.726,
+            "score": 0.885
+          },
+          {
+            "word": "of",
+            "start": 31.787,
+            "end": 31.847,
+            "score": 0.75
+          },
+          {
+            "word": "healthy",
+            "start": 31.927,
+            "end": 32.228,
+            "score": 0.869
+          },
+          {
+            "word": "recipes,",
+            "start": 32.288,
+            "end": 32.85,
+            "score": 0.855
+          },
+          {
+            "word": "and",
+            "start": 33.432,
+            "end": 33.612,
+            "score": 0.478
+          },
+          {
+            "word": "don't",
+            "start": 33.833,
+            "end": 34.054,
+            "score": 0.85
+          },
+          {
+            "word": "forget",
+            "start": 34.134,
+            "end": 34.475,
+            "score": 0.853
+          },
+          {
+            "word": "to",
+            "start": 34.575,
+            "end": 34.676,
+            "score": 0.997
+          },
+          {
+            "word": "follow",
+            "start": 34.756,
+            "end": 35.077,
+            "score": 0.926
+          },
+          {
+            "word": "me",
+            "start": 35.097,
+            "end": 35.218,
+            "score": 0.832
+          },
+          {
+            "word": "for",
+            "start": 35.298,
+            "end": 35.438,
+            "score": 0.716
+          },
+          {
+            "word": "more.",
+            "start": 35.478,
+            "end": 35.699,
+            "score": 0.847
+          }
+        ]
+      }
+    ],
+    "words": [
+      {
+        "word": "Did",
+        "start": 0.18,
+        "end": 0.321,
+        "score": 0.788
+      },
+      {
+        "word": "you",
+        "start": 0.341,
+        "end": 0.441,
+        "score": 0.836
+      },
+      {
+        "word": "know",
+        "start": 0.481,
+        "end": 0.702,
+        "score": 0.6
+      },
+      {
+        "word": "that",
+        "start": 0.802,
+        "end": 0.943,
+        "score": 0.84
+      },
+      {
+        "word": "if",
+        "start": 1.003,
+        "end": 1.083,
+        "score": 0.926
+      },
+      {
+        "word": "you",
+        "start": 1.123,
+        "end": 1.283,
+        "score": 0.869
+      },
+      {
+        "word": "mash",
+        "start": 1.344,
+        "end": 1.745,
+        "score": 0.725
+      },
+      {
+        "word": "one",
+        "start": 2.146,
+        "end": 2.286,
+        "score": 0.699
+      },
+      {
+        "word": "boiled",
+        "start": 2.386,
+        "end": 2.707,
+        "score": 0.809
+      },
+      {
+        "word": "potato",
+        "start": 2.747,
+        "end": 3.249,
+        "score": 0.836
+      },
+      {
+        "word": "with",
+        "start": 3.529,
+        "end": 3.71,
+        "score": 0.771
+      },
+      {
+        "word": "avocado,",
+        "start": 3.81,
+        "end": 4.392,
+        "score": 0.934
+      },
+      {
+        "word": "add",
+        "start": 4.412,
+        "end": 5.094,
+        "score": 0.806
+      },
+      {
+        "word": "eggs,",
+        "start": 5.254,
+        "end": 5.495,
+        "score": 0.878
+      },
+      {
+        "word": "Greek",
+        "start": 6.858,
+        "end": 7.119,
+        "score": 0.933
+      },
+      {
+        "word": "yogurt,",
+        "start": 7.179,
+        "end": 7.52,
+        "score": 0.65
+      },
+      {
+        "word": "baking",
+        "start": 8.24,
+        "end": 8.561,
+        "score": 0.931
+      },
+      {
+        "word": "powder,",
+        "start": 8.602,
+        "end": 8.963,
+        "score": 0.911
+      },
+      {
+        "word": "and",
+        "start": 8.983,
+        "end": 9.645,
+        "score": 0.796
+      },
+      {
+        "word": "salt,",
+        "start": 9.765,
+        "end": 10.166,
+        "score": 0.815
+      },
+      {
+        "word": "and",
+        "start": 10.688,
+        "end": 10.768,
+        "score": 0.837
+      },
+      {
+        "word": "mix",
+        "start": 10.828,
+        "end": 11.049,
+        "score": 0.943
+      },
+      {
+        "word": "the",
+        "start": 11.069,
+        "end": 11.169,
+        "score": 0.695
+      },
+      {
+        "word": "whole",
+        "start": 11.209,
+        "end": 11.41,
+        "score": 0.691
+      },
+      {
+        "word": "lot",
+        "start": 11.45,
+        "end": 11.651,
+        "score": 0.831
+      },
+      {
+        "word": "together",
+        "start": 11.691,
+        "end": 12.072,
+        "score": 0.894
+      },
+      {
+        "word": "until",
+        "start": 12.292,
+        "end": 12.573,
+        "score": 0.788
+      },
+      {
+        "word": "smooth.",
+        "start": 12.653,
+        "end": 13.055,
+        "score": 0.769
+      },
+      {
+        "word": "Then",
+        "start": 13.416,
+        "end": 13.636,
+        "score": 0.893
+      },
+      {
+        "word": "shape",
+        "start": 13.837,
+        "end": 14.118,
+        "score": 0.887
+      },
+      {
+        "word": "it",
+        "start": 14.158,
+        "end": 14.198,
+        "score": 0.982
+      },
+      {
+        "word": "into",
+        "start": 14.278,
+        "end": 14.499,
+        "score": 0.872
+      },
+      {
+        "word": "buns,",
+        "start": 14.539,
+        "end": 14.86,
+        "score": 0.73
+      },
+      {
+        "word": "brush",
+        "start": 15.54,
+        "end": 15.861,
+        "score": 0.717
+      },
+      {
+        "word": "the",
+        "start": 15.901,
+        "end": 15.982,
+        "score": 0.853
+      },
+      {
+        "word": "tops",
+        "start": 16.022,
+        "end": 16.363,
+        "score": 0.894
+      },
+      {
+        "word": "with",
+        "start": 16.423,
+        "end": 16.583,
+        "score": 0.716
+      },
+      {
+        "word": "egg",
+        "start": 16.704,
+        "end": 16.864,
+        "score": 0.996
+      },
+      {
+        "word": "yolk,",
+        "start": 16.904,
+        "end": 17.225,
+        "score": 0.843
+      },
+      {
+        "word": "chuck",
+        "start": 17.526,
+        "end": 17.807,
+        "score": 0.893
+      },
+      {
+        "word": "sesame",
+        "start": 17.847,
+        "end": 18.288,
+        "score": 0.901
+      },
+      {
+        "word": "seeds",
+        "start": 18.329,
+        "end": 18.629,
+        "score": 0.901
+      },
+      {
+        "word": "over,",
+        "start": 18.77,
+        "end": 19.071,
+        "score": 0.866
+      },
+      {
+        "word": "and",
+        "start": 19.632,
+        "end": 19.733,
+        "score": 0.887
+      },
+      {
+        "word": "bake",
+        "start": 19.813,
+        "end": 20.114,
+        "score": 0.922
+      },
+      {
+        "word": "until",
+        "start": 20.214,
+        "end": 20.515,
+        "score": 0.79
+      },
+      {
+        "word": "golden.",
+        "start": 20.575,
+        "end": 20.997,
+        "score": 0.899
+      },
+      {
+        "word": "What",
+        "start": 21.358,
+        "end": 21.498,
+        "score": 0.858
+      },
+      {
+        "word": "you",
+        "start": 21.518,
+        "end": 21.638,
+        "score": 0.869
+      },
+      {
+        "word": "get",
+        "start": 21.679,
+        "end": 21.879,
+        "score": 0.696
+      },
+      {
+        "word": "are",
+        "start": 22.04,
+        "end": 22.12,
+        "score": 0.923
+      },
+      {
+        "word": "incredibly",
+        "start": 22.22,
+        "end": 22.962,
+        "score": 0.846
+      },
+      {
+        "word": "soft",
+        "start": 23.163,
+        "end": 23.644,
+        "score": 0.823
+      },
+      {
+        "word": "fluffy",
+        "start": 23.945,
+        "end": 24.446,
+        "score": 0.899
+      },
+      {
+        "word": "avocado",
+        "start": 24.867,
+        "end": 25.369,
+        "score": 0.818
+      },
+      {
+        "word": "potato",
+        "start": 25.429,
+        "end": 25.81,
+        "score": 0.966
+      },
+      {
+        "word": "buns",
+        "start": 25.85,
+        "end": 26.191,
+        "score": 0.813
+      },
+      {
+        "word": "with",
+        "start": 26.592,
+        "end": 26.752,
+        "score": 0.822
+      },
+      {
+        "word": "zero",
+        "start": 26.913,
+        "end": 27.294,
+        "score": 0.908
+      },
+      {
+        "word": "flour",
+        "start": 27.374,
+        "end": 27.775,
+        "score": 0.745
+      },
+      {
+        "word": "anywhere",
+        "start": 27.935,
+        "end": 28.256,
+        "score": 0.862
+      },
+      {
+        "word": "near",
+        "start": 28.316,
+        "end": 28.497,
+        "score": 0.723
+      },
+      {
+        "word": "them.",
+        "start": 28.557,
+        "end": 28.717,
+        "score": 0.997
+      },
+      {
+        "word": "Click",
+        "start": 29.119,
+        "end": 29.319,
+        "score": 0.977
+      },
+      {
+        "word": "the",
+        "start": 29.359,
+        "end": 29.439,
+        "score": 0.858
+      },
+      {
+        "word": "link",
+        "start": 29.459,
+        "end": 29.62,
+        "score": 0.814
+      },
+      {
+        "word": "in",
+        "start": 29.64,
+        "end": 29.68,
+        "score": 0.0
+      },
+      {
+        "word": "my",
+        "start": 29.8,
+        "end": 29.921,
+        "score": 0.966
+      },
+      {
+        "word": "bio",
+        "start": 29.961,
+        "end": 30.382,
+        "score": 0.938
+      },
+      {
+        "word": "to",
+        "start": 30.483,
+        "end": 30.563,
+        "score": 1.0
+      },
+      {
+        "word": "get",
+        "start": 30.623,
+        "end": 30.783,
+        "score": 0.889
+      },
+      {
+        "word": "my",
+        "start": 30.844,
+        "end": 30.984,
+        "score": 0.779
+      },
+      {
+        "word": "book",
+        "start": 31.064,
+        "end": 31.285,
+        "score": 0.879
+      },
+      {
+        "word": "full",
+        "start": 31.446,
+        "end": 31.726,
+        "score": 0.885
+      },
+      {
+        "word": "of",
+        "start": 31.787,
+        "end": 31.847,
+        "score": 0.75
+      },
+      {
+        "word": "healthy",
+        "start": 31.927,
+        "end": 32.228,
+        "score": 0.869
+      },
+      {
+        "word": "recipes,",
+        "start": 32.288,
+        "end": 32.85,
+        "score": 0.855
+      },
+      {
+        "word": "and",
+        "start": 33.432,
+        "end": 33.612,
+        "score": 0.478
+      },
+      {
+        "word": "don't",
+        "start": 33.833,
+        "end": 34.054,
+        "score": 0.85
+      },
+      {
+        "word": "forget",
+        "start": 34.134,
+        "end": 34.475,
+        "score": 0.853
+      },
+      {
+        "word": "to",
+        "start": 34.575,
+        "end": 34.676,
+        "score": 0.997
+      },
+      {
+        "word": "follow",
+        "start": 34.756,
+        "end": 35.077,
+        "score": 0.926
+      },
+      {
+        "word": "me",
+        "start": 35.097,
+        "end": 35.218,
+        "score": 0.832
+      },
+      {
+        "word": "for",
+        "start": 35.298,
+        "end": 35.438,
+        "score": 0.716
+      },
+      {
+        "word": "more.",
+        "start": 35.478,
+        "end": 35.699,
+        "score": 0.847
+      }
+    ]
+  },
+  "params": {
+    "timeline_fps": 5,
+    "scene_threshold": 0.2,
+    "model": "small.en",
+    "language": "en",
+    "device": "cpu",
+    "compute_type": "int8",
+    "cpu_threads": 4,
+    "jobs": 4,
+    "alignment": "whisperx",
+    "align_model": null,
+    "word_timestamps": false,
+    "no_audio": false,
+    "allow_no_audio": false,
+    "max_frames": 20000,
+    "command_timeout": 300
+  },
+  "environment": {
+    "os": "macOS-27.0.1-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.15",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "whisperx": "3.8.6",
+      "ctranslate2": "4.8.2",
+      "Pillow": "12.3.0",
+      "av": "18.0.0",
+      "torch": "2.8.0",
+      "torchaudio": "2.8.0"
+    },
+    "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+    "ffprobe": "/opt/homebrew/bin/ffprobe"
+  },
+  "errors": [],
+  "coverage": {
+    "source_duration_s": 36.289932,
+    "sample_interval_s": 0.2,
+    "timeline_count": 181,
+    "timestamp_basis": "fps_filter_sampling_grid",
+    "visual_review_performed": false
+  },
+  "elapsed_seconds": 44.424
+}

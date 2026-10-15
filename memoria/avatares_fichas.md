@@ -1,6 +1,6 @@
 ---
 name: avatares-fichas
-description: "Fichas canonicas dos avatares de IA. ANGULO 3 (Auraly), roster desde 2026-09-22, mais Morgan Vance em 2026-09-30 (mulher negra ~25, trancas knotless, blusa azul-cobalto, quarto branco com bandeira grande na parede, selfie com a carta SOULMATE, conta organica nova; mesmo sobrenome da Lorraine, contas diferentes): Walt Hensley (homem 58, barba longa grisalha, antebracos tatuados, colete de couro, varanda com moto), Darlene Pruitt (56, cabelao platinado texano, turquesa e prata, cozinha rustica) e Lorraine Vance (52, cabeca raspada, argolas de prata, oculos de leitura, cozinha branca, selfie). Ancora oficial = imagem de teste em cena real, nunca fingerprint. Todos os outros avatares do Angulo 3 foram descartados em 2026-09-22 e so existem em _arquivo/. FITYWELL (Angulos 2 e 4): Dana Morrison (52, OG de do-rag, correntes de ouro e tatuagens, garagem com lowrider, âncora nova de 2026-09-23), Jamie Anderson (55, apicultor, fazenda com colmeias, âncora nova de 2026-09-23) e Lynn Parker (70, locs brancas, monge zen no jardim de chá, âncora nova de 2026-09-23), HOMENS negros de nome unissex, COACH no A2 e PAR no A4. KORELLA (Angulo 1): Melody Carter (HOMEM, garagem, cruz de prata) e holistic.trevor (homem ruivo, cozinha, sem cruz). holistic.brandon (mulher ~30, trancas com micangas, regata branca, cruz de OURO, box de treino com neon TRAIN PRAY REPEAT) REATIVADA no Angulo 2 em 2026-09-29, COACH, ancora em producao/_ancoras/holistic_brandon_ancora.jpg. Tracos exatos pros prompts."
+description: "Fichas canonicas dos avatares de IA. SEA MOSS + FITYWELL desde 2026-10-10: Meredith Callahan (~71, avo jamaicana do Brooklyn, turbante verde e acafrao, dentes de ouro, cozinha com potes de sea moss), Marshall Beckett (MULHER ~74, ex-mergulhadora ama no Havai, roupa branca, mascara de latao) e Cassidy Hargrove (~63, ruiva coletora de Irish moss no Maine, macacao amarelo); ancoras em producao/_ancoras/<nome>_ancora.*. ANGULO 3 (Auraly), roster desde 2026-09-22, mais Morgan Vance em 2026-09-30 (mulher negra ~25, trancas knotless, blusa azul-cobalto, quarto branco com bandeira grande na parede, selfie com a carta SOULMATE, conta organica nova; mesmo sobrenome da Lorraine, contas diferentes): Walt Hensley (homem 58, barba longa grisalha, antebracos tatuados, colete de couro, varanda com moto), Darlene Pruitt (56, cabelao platinado texano, turquesa e prata, cozinha rustica) e Lorraine Vance (52, cabeca raspada, argolas de prata, oculos de leitura, cozinha branca, selfie). Ancora oficial = imagem de teste em cena real, nunca fingerprint. Todos os outros avatares do Angulo 3 foram descartados em 2026-09-22 e so existem em _arquivo/. FITYWELL (Angulos 2 e 4): Dana Morrison (52, OG de do-rag, correntes de ouro e tatuagens, garagem com lowrider, âncora nova de 2026-09-23), Jamie Anderson (55, apicultor, fazenda com colmeias, âncora nova de 2026-09-23) e Lynn Parker (70, locs brancas, monge zen no jardim de chá, âncora nova de 2026-09-23), HOMENS negros de nome unissex, COACH no A2 e PAR no A4. KORELLA (Angulo 1): Melody Carter (HOMEM, garagem, cruz de prata) e holistic.trevor (homem ruivo, cozinha, sem cruz). holistic.brandon (mulher ~30, trancas com micangas, regata branca, cruz de OURO, box de treino com neon TRAIN PRAY REPEAT) REATIVADA no Angulo 2 em 2026-09-29, COACH, ancora em producao/_ancoras/holistic_brandon_ancora.jpg. Tracos exatos pros prompts."
 metadata: 
   node_type: memory
   type: reference
@@ -345,6 +345,82 @@ Nunca figura médica.
 | Bandeira US | em pé na prateleira | na parede do celeiro | junto à porta da casa de chá |
 | Registro | blue-collar urgente | apicultor, autoridade por ofício | monge zen, ancião sereno |
 | Comum aos três | homem negro americano 50+, luz neutra de dia, bandeira US discreta e em foco, cara de UGC de celular | | |
+
+## 🌊 ROSTER SEA MOSS + FITYWELL, ENTRADA DE 2026-10-10 (Ângulos 1 e 2)
+
+**Decisão do Luigi, 2026-10-10:** *"avatares definidos, todos esses servirão para o fitywell e também
+natural rems"*. Três MULHERES 60+ com autoridade de OFÍCIO com alga marinha, nada médico. Cada uma
+roda as duas ofertas (Sea Moss e FityWell) na conta dela, como a Brandon; copy de uma oferta nunca
+vaza para a outra (`checar_frases.py`). Âncora em cena real, nunca fingerprint. Prompts que geraram as
+imagens em `producao/_ancoras/PROMPTS_ANCORA_SEAMOSS_2026-10-10.md`.
+⚠️ **Os NOMES não seguem os conceitos sugeridos:** o sobrenome Callahan, que eu tinha dado à coletora do
+Maine, ficou com a avó do Brooklyn. Casar sempre pela IMAGEM, nunca pelo conceito antigo
+([[feedback-ancora-ler-uma-por-vez]]).
+**Congruência (Luigi, 2026-10-10): 1ª PESSOA LIBERADA nas duas ofertas.** Sea Moss e FityWell =
+USUÁRIA / PAR (60+, idade vivida: joelho, sono, menopausa, metabolismo, "after 40 my body changed").
+Exceção à regra "no Ângulo 2 todos são COACH", só para estas três.
+**Contas (Luigi, 2026-10-10): cada uma tem a SUA conta**, separada das outras e da Brandon. O mesmo
+rosto nunca roda em outra conta; `checar_frases.py` compara dentro da conta de cada uma.
+
+### Meredith Callahan (MULHER, ~71) · a avó jamaicana do Brooklyn
+- **Âncora:** `producao/_ancoras/meredith_callahan_ancora.png`
+- **Traços:** mulher negra de pele marrom-escura, ~70 anos, sardas escuras nas maçãs, rugas de riso
+  fundas, **dentes da frente com coroas de ouro** que aparecem quando ela ri, **locs grisalhas presas no
+  alto** dentro de um **turbante alto de estampa africana verde-esmeralda e amarelo-açafrão**,
+  **óculos de leitura vermelhos** apoiados na frente do turbante.
+- **Roupa e joias:** blusa creme de algodão leve, manga curta, decote redondo com **bordado de folhinhas
+  verdes** e laço; **avental laranja-ferrugem** amarrado na cintura; **argolas grandes de ouro estilo
+  bambu**; **pilha de pulseiras finas de ouro no pulso esquerdo**.
+- **Cenário:** cozinha pequena de apartamento no Brooklyn, armários de madeira, **mesa de fórmica
+  verde-menta** no primeiro plano (mãos apoiadas nela), **fileira de potes de vidro com sea moss
+  dourado** e **liquidificador de copo de vidro com base cromada** no balcão à esquerda, planta pendente
+  em cima do armário, **janela com prédio de tijolo vermelho e escada de incêndio**, céu nublado
+  azul-acinzentado, **bandeirinha dos EUA num vaso de planta no parapeito**, pia à direita.
+- **Registro:** avó calorosa que dá bronca, risada larga; inglês americano com **sotaque jamaicano
+  leve**. Autoridade: 40 anos fazendo o sea moss drink do bairro.
+
+### Marshall Beckett (MULHER, ~74, nome é "Marshall" mas é MULHER) · ex-mergulhadora ama no Havaí
+- **Âncora:** `producao/_ancoras/marshall_beckett_ancora.jpg`
+- Gerada pelo prompt de "a 74-year-old Japanese-American woman"; a voz é feminina.
+- **Traços:** nipo-americana, ~74, pele muito bronzeada com manchas de sol e sardas escuras, rugas
+  fundas, olhos escuros estreitos e calmos, cabelo branco curto quase todo coberto, corpo magro e
+  firme, antebraços com marcas de sal.
+- **Roupa:** **conjunto branco de algodão de ama** (casaco transpassado amarrado na cintura, calça
+  branca), **lenço branco (tenugui) amarrado na testa**, **máscara de mergulho antiga redonda com aro de
+  latão erguida na testa**, **pingente de abalone num cordão preto**.
+- **Cenário:** galpão aberto com **telhado de zinco ondulado enferrujado** e pilares de madeira, **mesa
+  de tábua cinza gasta** no primeiro plano (mãos apoiadas), **duas bancadas com esteiras de bambu
+  secando alga verde (esquerda e direita) e alga vermelho-escura (esquerda)**, **tina de madeira** à
+  direita, **pedras de lava preta**, **mar turquesa com espuma branca**, céu nublado azul-acinzentado,
+  **bandeira dos EUA presa no pilar da direita**.
+- **Registro:** serena, precisa, fala pouco e baixo, meio sorriso; inglês americano com **leve sotaque
+  japonês**. Autoridade: 50 anos colhendo alga no fundo do mar, condicionamento físico raro para a idade.
+
+### Cassidy Hargrove (MULHER, ~63) · coletora de Irish moss no Maine
+- **Âncora:** `producao/_ancoras/cassidy_hargrove_ancora.jpg`
+- **Traços:** irlandesa-americana, ~60, **cabelo ruivo-acobreado** solto e despenteado pelo vento com
+  **uma trança grossa caindo sobre o ombro esquerdo dela** (lado direito da imagem), **sardas densas** no
+  rosto e antebraços, pele curtida de vento, **marquinha avermelhada no queixo**, olhos claros, sem
+  maquiagem, mãos fortes e sardentas.
+- **Roupa:** **suéter Aran creme de tricô trançado**, mangas levemente puxadas; **macacão/avental de
+  oleado amarelo** com fivelas pretas nas alças; **anel Claddagh de prata na mão esquerda**.
+- **Cenário:** cais de madeira na frente de um **galpão de telhas de cedro cinza**, porta aberta com
+  **ancinhos encostados** lá dentro, **bandeira dos EUA presa na parede ao lado da porta**, **estante de
+  madeira com alga roxo-avermelhada secando** à esquerda, **bancada de tábua gasta** no primeiro plano
+  (mãos apoiadas), **mar cinza-azulado e pedras escuras** à direita, céu nublado com textura.
+- **Registro:** seca, direta, humor de pescador, zero paciência para modinha; inglês americano com
+  **sotaque do litoral do Maine (Downeast)**. Autoridade: família que tira Irish moss das pedras há gerações.
+
+| | Meredith Callahan | Marshall Beckett | Cassidy Hargrove |
+|---|---|---|---|
+| Idade | ~71 | ~74 | ~63 |
+| Origem | jamaicana, Brooklyn | nipo-americana, Havaí | irlandesa-americana, Maine |
+| Cabeça | turbante verde e açafrão, óculos vermelhos | lenço branco + máscara de latão | ruiva com trança |
+| Cenário | cozinha com potes de sea moss | galpão de zinco na lava | galpão de cedro no cais |
+| Bandeira US | vaso no parapeito da janela | pilar da direita | parede ao lado da porta |
+| Primeiro plano | mesa de fórmica verde-menta | mesa de tábua cinza | bancada de tábua gasta |
+
+---
 
 ## holistic.trevor (masculino)
 - **Aparência:** homem branco, cabelo ruivo/vermelho ondulado médio, barba ruiva cheia com fios grisalhos, olhos claros, pele sardenta.

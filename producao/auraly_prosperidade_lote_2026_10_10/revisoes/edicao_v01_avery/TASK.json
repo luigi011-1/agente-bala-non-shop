@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "task_id": "d783597c-485e-4db9-9f97-9c0eea9a7bf0",
+  "created_at": "2026-10-11T20:50:35.777594+00:00",
+  "repo_root": "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop",
+  "angle": {
+    "id": "3",
+    "slug": "auraly",
+    "name": "Auraly APP",
+    "aliases": [
+      "3",
+      "angle 3",
+      "ângulo 3",
+      "angulo 3",
+      "auraly",
+      "auraly app",
+      "manifestação",
+      "manifestacao",
+      "manifestation",
+      "soulmate"
+    ],
+    "historical_aliases": [],
+    "product_type": "app_manifestation_soulmate",
+    "audience": "Público dos EUA interessado em manifestação, conexão romântica e sinais",
+    "canonical_router": "WORKFLOW_AURALY.md",
+    "doctrine": [
+      "memoria/angulo3_copy_auraly.md",
+      "memoria/angulo3_swipe_padroes.md"
+    ],
+    "niches": [
+      "manifestation",
+      "soulmate",
+      "synchronicity",
+      "signs from the universe",
+      "prosperity"
+    ],
+    "optional_niches": [
+      "tarot"
+    ],
+    "optional_niches_rule": "Tarot exige pedido explícito; nunca define outro ângulo nem muda a oferta Auraly.",
+    "country": "US",
+    "content_language": "en-US",
+    "mining_defaults": {
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "min_views": 800000,
+      "min_views_operator": "gt",
+      "lookback_days": 2,
+      "max_profile_age_days": 30,
+      "country": "US",
+      "ai_avatar_only": true,
+      "timezone": "America/New_York"
+    }
+  },
+  "task": "revisar",
+  "worker": "bala-revisor",
+  "reviewer": "bala-revisor",
+  "production": null,
+  "current_stage": null,
+  "next_action": null,
+  "checkpoint": null,
+  "routing_state": "READY",
+  "reference_fingerprints": {
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/AGENTS.md": "568ec07c571e292f72b2f631a424a55b61df7f96ebf81678d2c1a2d01fee765c",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/WORKFLOW_AURALY.md": "0234d1d366f2d9d46c8cab27700e773341515a634fc15b0927c5372abd803a56",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/operacao/schema_revisao.json": "11eb6f5967b00fbbb9cb37981f1d03a259fbcfd2db2894fdefb460b1f1438226",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/operacao/angulos.json": "ede34c126a6094d566fbaba88d654b69779ec06e17fa187d36e10742f3200aac",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/.agents/skills/revisar-producao/SKILL.md": "629141bf44cf046929eaa6851b4ba13f0c065ab800e3150ba63928eed0cf5826",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/.codex/agents/bala-revisor.toml": "4591f4d8e7f8418c9b4b2d6887da5efde4be87784dc447dc043a104a5ec97880",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/memoria/angulo3_copy_auraly.md": "c00a64643ecc0e221013852842c7b273260aa8307af9b27efe3c96d0f7fb15c9",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/memoria/angulo3_swipe_padroes.md": "bebbe1e6f1c5b1e57ce320878d838290fcf82d9622c98c846105132c78a8e5ae",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/GATE_VISUAL.md": "8a34815c51b27089b1a44f2a64aba55e35ceb3307be7a55494023ff899368ac0",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/PERFIL_ORGANICO.md": "835eed7b49d177cc6bc2120ba73ec8628e3868dae45b3758059623cc906e37b3",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/_flow/INSTRUCOES_AGENTE_FLOW.md": "b9c4bf3dac579a928b966af4fa8d51e26a95b46aecf000539afe14ce8ce29f7f"
+  },
+  "production_fingerprints": {},
+  "deliverable_fingerprints": {
+    "/private/tmp/edicao/v01_avery_prosperidade-ebd1b64b/v01_avery_prosperidade_entrega.mp4": "68209d43fc88608ba2e58bd535666caf4394436cb9451e233464a0f39f9e15e8",
+    "/private/tmp/edicao/v01_avery_prosperidade-ebd1b64b/RELATORIO.md": "5b5a9e9f5297682f0282ef2c2125fec84e95f3e628248ecd85fa9de7cbc29af2",
+    "/private/tmp/edicao/v01_avery_prosperidade-ebd1b64b/cortes.png": "e733e3978a89c0f586853eae4d8bf5a5a444648ddfc9ef247a96a88ebb6731d1",
+    "/private/tmp/edicao/v01_avery_prosperidade-ebd1b64b/legendas.png": "682653aab1e009247761f4630e7f40ba49997671641863f4ca98808f90e8486e",
+    "/private/tmp/edicao/v01_avery_prosperidade-ebd1b64b/ghost_verificado.json": "3d689d8fb2068302dbd3953e1ec6b995bd9997007f99d4f7d05fd28b34a649dd"
+  },
+  "review_schema": "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/operacao/schema_revisao.json",
+  "approval_boundary": "Revisão técnica não aprova roteiro, seleção, publicação ou merge."
+}

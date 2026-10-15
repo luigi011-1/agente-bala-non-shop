@@ -1,0 +1,60 @@
+{
+  "task_id": "21442fec-ae7c-4061-9ffa-fd1391ff2a0a",
+  "reviewer": "bala-revisor",
+  "independent": true,
+  "status": "APPROVED",
+  "checks": [
+    {
+      "name": "estado_produto_aprovacao",
+      "result": "PASS",
+      "evidence": "AGENTS/workflow/checkpoint/snapshot confirmados: SALE ORGANIC VALIDATION, aprovação real10/10 e exceção temática."
+    },
+    {
+      "name": "integridade_taskpack",
+      "result": "PASS",
+      "evidence": "Todos fingerprints conferidos sem drift."
+    },
+    {
+      "name": "cobertura_literal_e_idioma",
+      "result": "PASS",
+      "evidence": "PROMPTS/FLOW/ENTREGA3avatares,7Vcada; falas exatamente iguais ao snapshot,EN/ES corretos.21takes únicos."
+    },
+    {
+      "name": "ficha_fontes_visuais_anchor",
+      "result": "PASS",
+      "evidence": "Revisor abriu pessoalmente3framesK e3anchors;3K/14itens por ficha, estimativas declaradas; carro e aproximação final,Jordan luxo."
+    },
+    {
+      "name": "K_V_mapa_e_entrega",
+      "result": "PASS",
+      "evidence": "3Kcada;V01K01,V02-03K02,V04-07K03. JSON interno,K curto,V mínimo,Qualvídeo/CenaPT fora de blocos."
+    },
+    {
+      "name": "validadores",
+      "result": "PASS",
+      "evidence": "Strictbase/ES0falhas;ES1aviso follow-fim falso positivo. flow_seguro0achadosambos."
+    },
+    {
+      "name": "contrato_executor_e_CTA",
+      "result": "PASS",
+      "evidence": "Currentcombinação única,sheet4K9:16,manual,selectedINITIAL FRAME1V9:16,closedbatch<=7,repetiçãoexataerros,destinosforagit. CTA aprovado intacto."
+    },
+    {
+      "name": "midia_editada_realismo_performance",
+      "result": "NOT_APPLICABLE",
+      "evidence": "Pacote textual; nenhuma mídia gerada,editada ou desempenho certificado."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "WARNING",
+      "message": "Fidelidade da câmera descendente,mãos,realismo,lip sync e palavras depende dos resultados gerados.",
+      "evidence": "Vmínimo porAGENTS,sem mídia; números técnicos inferidos."
+    },
+    {
+      "severity": "WARNING",
+      "message": "Follow-fimES é falso positivo de idioma.",
+      "evidence": "FechoESaprovado: Y no olvides darle al botón de seguir."
+    }
+  ]
+}

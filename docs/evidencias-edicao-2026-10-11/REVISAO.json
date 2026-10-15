@@ -1,0 +1,85 @@
+{
+  "task_id": "51c98d47-8a3b-4ba6-884e-ead50cc16b5c",
+  "reviewer": "bala-revisor",
+  "independent": true,
+  "status": "INCOMPLETE",
+  "checks": [
+    {
+      "name": "Escopo e fontes canônicas",
+      "result": "PASS",
+      "evidence": "Lidos AGENTS.md, CLAUDE.md, skill revisar-producao, schema, taskpack final e regras de edição. Escopo FitWell/Sea Moss; sem produção comercial ou mistura de ofertas."
+    },
+    {
+      "name": "Integridade dos artefatos finais",
+      "result": "PASS",
+      "evidence": "Todos os fingerprints do taskpack confrontados com SHA256 atual sem divergência; hashes dos cinco MP4 coincidem com metricas.json."
+    },
+    {
+      "name": "Cobertura mecânica das cinco referências",
+      "result": "PASS",
+      "evidence": "Manifests/transcrições/métricas/revisão V01–V05 examinados. Timelines 217/275/244/285/358 amostras; recontagem lexical 132/185/180/193/249 palavras."
+    },
+    {
+      "name": "Evidências visuais principais",
+      "result": "PASS",
+      "evidence": "Revisor abriu 20 JPG críticos e oito grades dos hooks: proximidade/ação inicial V01/V02, desobstrução V03 3.4–3.8s, água e reação V04, objeto ao copo V05, produto em uso/overhead. Relatórios sustentados pelas amostras."
+    },
+    {
+      "name": "Observação e inferência",
+      "result": "PASS",
+      "evidence": "Relatórios distinguem gaps ASR de silêncio, palavras/s de aceleração, candidatos de cena de cortes e medidas do mix de música isolada."
+    },
+    {
+      "name": "Proteção, ritmo e duração",
+      "result": "PASS",
+      "evidence": "Recusa intervalos fora da fonte, take ausente, valores inválidos/proteção subdoisframes e fonte aparada com marcação antiga. Overrides 1–1.25x, offsets/duração recalculados, rampas preservadas."
+    },
+    {
+      "name": "Isolamento Auraly",
+      "result": "PASS",
+      "evidence": "validar_contexto impede bypass --estilo fitwell; Auraly exige rationale e recusa captions desse plano. Regressão passou."
+    },
+    {
+      "name": "Legendas e QA",
+      "result": "PASS",
+      "evidence": "Primeira legenda inicia na fala, união não atravessa takes; max_words alvo flexível documentado. QA une proteções/rampas e exige contenção inteira, tolerância um frame."
+    },
+    {
+      "name": "Mix implementado",
+      "result": "PASS",
+      "evidence": "Sem music mantém baseline; defaults fades0.3/0.8, zero explícito válido. FFmpeg real comprovou envelope/duração/loop de fonte curta; offset/curva fora limite recusados."
+    },
+    {
+      "name": "Código selecionado e dependências HEAD",
+      "result": "PASS",
+      "evidence": "Revisor executou 32/32 testes em TemporaryDirectory com editor/módulo/testes do índice e demais dependências template HEAD. git diff --cached --check sem achados."
+    },
+    {
+      "name": "Investigação musical perceptiva",
+      "result": "UNKNOWN",
+      "evidence": "audio_listened=false nos cinco vídeos; sem escuta/stems confiáveis. Emoção, instrumentos, BPM, crescendos, sincronização musical e nível isolado da cama não certificados."
+    },
+    {
+      "name": "Validação comercial audiovisual",
+      "result": "UNKNOWN",
+      "evidence": "Sem render comercial/escuta com novos parâmetros. Testes sintéticos não certificam colisões, emendas e emoção; VALIDACAO.md explicita."
+    },
+    {
+      "name": "Aprovação de roteiro/pacote/publicação",
+      "result": "NOT_APPLICABLE",
+      "evidence": "Etapa de aprendizado editorial e implementação; parecer não substitui Luigi nem autoriza publicação/merge."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "WARNING",
+      "message": "Cobertura musical solicitada incompleta; commit técnico permitido com limitação explícita, sem apresentar aprendizado emocional completo.",
+      "evidence": "Relatório consolidado, seção Música; visual_review.json V01–V05 audio_listened=false."
+    },
+    {
+      "severity": "WARNING",
+      "message": "Novas capacidades exigem QA audiovisual na primeira prática. Nenhum bloqueio técnico restante identificado.",
+      "evidence": "VALIDACAO.md; revisor examinou amostras críticas e grades dos hooks, não playback integral."
+    }
+  ]
+}

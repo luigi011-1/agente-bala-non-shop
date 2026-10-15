@@ -91,7 +91,7 @@ browser automation sao historicos, salvo pedido explicito do usuario.
   `CHECKLIST_COPY_VENDA.md` antes de ir para aprovacao do Luigi (decisao 2026-10-08, origem em
   `analises/ANALISE_COPY_ritual_matinal_figado.md`). A entrega leva "Checklist de copy de venda: X/Y".
   Growth nao muda. Origem organica (`PERFIL_ORGANICO.md`) continua copia literal, so o CTA muda. Nao
-  altera CTA (organico = link da legenda, pago = botao), limites de tom da Auraly nem as travas de marca.
+  altera CTA (organico = Stories + bio desde 2026-10-10, pago = botao), limites de tom da Auraly nem as travas de marca.
 
 ## Padrao unico de prompt do Flow (Luigi, 2026-10-09, confirmado: resolveu as falhas de censura)
 - O Flow devolvia "This generation might violate our policies" em todo prompt. Sem campo de negative prompt, a lista
@@ -151,6 +151,14 @@ ou growth. Quando o Luigi manda a pasta com os takes do Flow, rodar o comando un
   `docs/pos-producao-casos.md`). Skill: `.claude/skills/edicao/SKILL.md`.
 - A ORDEM dos takes vem da fala de cada um comparada com o roteiro da producao, nao do nome do
   arquivo. Take mudo (sem fala) precisa do numero no nome. Frase repetida em dois takes gera aviso.
+- Cada take e conferido PALAVRA POR PALAVRA com o roteiro (Luigi, 2026-10-09: o Flow inventa, remove e
+  repete falas). O que ele inventou, repetiu ou deixou em silencio e cortado em qualquer ponto do take;
+  palavra que faltou ou foi trocada para a edicao daquele video e o take volta para o Flow.
+- **Take mudo so quando NAO ha fala por cima** (Luigi, 2026-10-09), em todo angulo: linha de roteiro com
+  fala em cima de uma acao vira take FALADO com a acao junto. Ganchos mudos do Auraly e takes realmente
+  sem voz continuam. Nunca "voz-over" em take mudo. Memoria `take-mudo-so-sem-voz`.
+- Lote: os videos sao editados um em seguida do outro, sem parar para perguntar, avisando o Luigi a
+  cada video concluido (Luigi, 2026-10-09). No Mac, uma edicao por vez.
 - Estilo v3: sem silencio, fala 1,12x, legenda serifada branca no centro com o texto do roteiro,
   light leak em 2 trocas, take-heroi com pausa acelerada em vez de cortada.
 - Musica SEMPRE 25 dB abaixo da voz (Luigi; -10 dB atrapalhou a fala). Faixas dele em
@@ -172,7 +180,8 @@ quando o assunto pedir.
 - **Aprovacao de roteiro e a trava de qualidade:** apresentar sempre o roteiro final COMPLETO numa tabela
   bilingue (`take | English | Portugues`), com todos os takes, inclusive os inserts mudos. Esperar a
   aprovacao ou os ajustes dele antes de montar o pacote.
-- Lote: quando ele manda varios videos modelo, produzir um por video, em paralelo. Formato combinado:
+- Lote: quando ele manda varios videos modelo, criar uma producao por video, com todos os avatares
+  aplicaveis na fila de cada producao; seguir a regra modelos x avatares abaixo. Formato combinado:
   `/watch lote`, um bloco numerado por video com `video` (anexo), `conta`, `angulo`, `tipo`
   (venda/growth), `avatar` (anexo ou "o de sempre da conta"), `obs`. Campos comuns vao uma vez em
   `todos: ...`. Videos entram como arquivo; caminho local do Mac nao e legivel na nuvem.
@@ -185,9 +194,38 @@ quando o assunto pedir.
   extrair as dores, o mecanismo e os nomes fortes e reescrever para o NOSSO formato e produto. Nunca
   copiar fala nem gancho literal da referencia.
 
+### Lote: todos os modelos para todos os avatares (Luigi, 2026-10-10)
+- Quando Luigi envia N videos modelo e M avatares como um conjunto comum, produzir cada modelo para
+  TODOS os avatares desse conjunto: total esperado = N x M videos finais. Exemplo: 3 modelos e
+  3 avatares = 9 videos, 3 para cada avatar. Nunca parear modelo e avatar pela ordem dos anexos nem
+  assumir um modelo exclusivo por avatar porque as quantidades coincidem.
+- Ordem da fila (Luigi, 2026-10-10): primeiro modelo, depois avatar. Seguir V01/avatar 1,
+  V01/avatar 2, V01/avatar 3; depois V02/avatar 1, V02/avatar 2, V02/avatar 3; e assim por diante.
+  Preservar a ordem de modelos e avatares definida no intake. Concluir a fila de pacotes do modelo
+  atual antes de entregar os pacotes do proximo; analises independentes e aprovacoes agrupadas
+  continuam permitidas. Na edicao, usar a mesma ordem entre os itens prontos; se um take bloquear
+  um item, registrar a pendencia e seguir ao proximo, como exige a regra de edicao.
+- Um pareamento exclusivo (video 1 para avatar A, video 2 para avatar B) so vale quando Luigi o
+  declarar explicitamente. Escopos explicitos por video/conta/angulo continuam valendo; nao cruzar
+  ofertas nem atribuir avatar a outro angulo. No Auraly, preservar o roster obrigatorio e o Jordan ES.
+- No intake, registrar os modelos, os avatares aplicaveis a cada modelo, todas as combinacoes e o
+  total esperado nos arquivos do lote/producao. Criar uma pasta por modelo e uma fila completa por
+  modelo, com identidade, anchor e estado de cada avatar. No Auraly, o CHECKPOINT de cada producao
+  continua sendo a fonte de estado; qualquer matriz do lote e uma vista derivada desses checkpoints.
+- Analisar/transcrever cada modelo uma vez, aprovar o roteiro de cada modelo e depois entregar o
+  pacote de cada combinacao modelo x avatar, respeitando congruencia e idioma. Nunca reutilizar a
+  aprovacao de um modelo como aprovacao dos outros modelos.
+- Conferir combinacoes esperadas, entregues e pendentes antes de encerrar o lote. Pacote entregue,
+  takes gerados e video editado sao marcos distintos. Um pacote por avatar ou o fim de uma producao
+  nao encerra o lote enquanto faltarem combinacoes das outras producoes.
+
 ### Contas, CTA e organico x pago
-- Decisao 2026-10-05: o CTA manda para o link da LEGENDA, nao para comentario fixado, em todas as contas,
-  ate o Luigi dizer o contrario. Vale so para posts ORGANICOS.
+- Decisao 2026-10-10 (revoga a de 2026-10-05, link da LEGENDA): nos posts ORGANICOS de venda o destino e o
+  STORIES (toque na foto de perfil) e a BIO como segunda opcao; o link sai da legenda. Sea Moss: "Search
+  Natural Rems Sea Moss on Amazon" primeiro, depois Stories e bio. Memorias `angulo1-copy-seamoss` e
+  `fitywell-venda-cta-comentario-fixado`.
+- Decisao 2026-10-10: TODO video, todos os angulos, growth ou venda, termina com o lembrete do botao de
+  follow como ultima frase ("And don't forget to hit that follow button."). Memoria `cta-follow-no-fim`.
 - Decisao 2026-10-06: anuncio PAGO (trafego pago) termina com CTA apontando para o botao do anuncio
   (ex.: "Tap below to get your personalized FityWell plan 👇"). Sem CTA de legenda e sem "comment".
 - Auraly e sempre o Angulo 3. Ate 2026-10-05 nenhum video Auraly viralizou; hipotese do Luigi: o avatar
@@ -269,7 +307,9 @@ Espelho das decisoes duraveis da memoria do projeto no claude.ai que ainda nao e
 ### Edicao dos takes sem pausa
 - Na edicao de takes do Flow, nao parar esperando resposta do Luigi ate entregar o video final: decidir
   pelo que da o melhor resultado, registrar a decisao e seguir. Pedidos de ok (merge de PR, por exemplo)
-  so depois do video entregue. Um video = uma frente de edicao; varias podem rodar em paralelo.
+  so depois do video entregue. Um video = uma frente de edicao. Neste Mac, editar um video por vez,
+  na ordem modelos x avatares acima; o editor pode processar trechos do mesmo video em paralelo.
+  Frentes de videos distintos em paralelo so em ambiente com recursos verificados para isso.
 - Copia das 9 faixas de musica do Luigi tambem no repo, em `edicao/musicas/`, e os `RELATORIO.md` das
   edicoes ja entregues em `edicao/<producao>/`. Os videos editados continuam fora do git.
 - Pasta do Mac: o Luigi pode mandar o caminho de uma pasta do Mac com os takes ou com o video modelo; o
@@ -308,3 +348,10 @@ Espelho das decisoes duraveis da memoria do projeto no claude.ai que ainda nao e
   pedido dele.
 - Fonte de verdade para o Codex: tudo que o projeto Claude produz entra no main (pacotes, analises,
   instrucoes do agente Flow). Regra nova e duravel vai tambem para este arquivo.
+
+## Aprendizado editorial FitWell e Sea Moss (Luigi, 2026-10-11)
+
+- Referências de edição fornecidas em 2026-10-11: `docs/pos-producao-aprendizado-2026-10-11.md`.
+- Aplicação principal: FitWell e Sea Moss; Auraly exige adaptação específica, sem herança automática.
+- Na edição, consultar esse aprendizado e preparar plano editorial por produção quando ação, ritmo, legenda ou música exigirem marcação. `editar.py --plano-editorial` complementa o comando único; não substitui conferência de fala nem QA.
+- Proteger ações/payoffs úteis sem fala só com intervalo e razão observados. A escuta emocional da música das referências não foi confirmada; não tratar medidas do mix como prova de trilha isolada.

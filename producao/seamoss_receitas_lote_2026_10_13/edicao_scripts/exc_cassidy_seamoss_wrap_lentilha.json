@@ -1,0 +1,30 @@
+{
+ "items": [
+  {
+   "file": "/Users/macbookairm2/Desktop/Cassidy Hargrove - V03/V11_20261014001358.mp4",
+   "sha256": "87d931e5336348a7370097d5728b5b9fc6c443746497a3fde76ce7439eb3fc27",
+   "approved_script": "So for the bloating and my immune system, I lean on what my family has hauled out of the Atlantic for generations, sea moss.",
+   "allowed_problems": [
+    "trocou \"sea moss\" por \"cmos\""
+   ]
+  },
+  {
+   "file": "/Users/macbookairm2/Desktop/Cassidy Hargrove - V03/V16_20261014001358.mp4",
+   "sha256": "42362b0c7055be4d7e3dcd467ce01a478ca97e34111f41bb9b5d1a4c87a118f5",
+   "approved_script": "Search Natural Rems Sea Moss on Amazon. Or tap my profile picture, the link is waiting in my stories, or right there in my bio.",
+   "allowed_problems": [
+    "trocou \"rems sea moss\" por \"rem cmos\""
+   ]
+  },
+  {
+   "file": "/Users/macbookairm2/Desktop/Cassidy Hargrove - V03/V13_20261014001358.mp4",
+   "sha256": "10f34e8554a7a2bd71fae3f6e363e1be6298b10f811b3d4eb898bae446d164ae",
+   "approved_script": "The one I keep is Natural Rems Sea Moss. Wild Irish sea moss, elderberry, vitamin C and D3, and ginger for your gut.",
+   "allowed_problems": [
+    "trocou \"rems sea moss\" por \"rem seamos\"",
+    "trocou \"sea moss\" por \"seamos\""
+   ]
+  }
+ ],
+ "user_authorization": "Luigi, 2026-10-14: 'resolva tudo isso e n\u00e3o me pe\u00e7a mais aux\u00edlio'; exce\u00e7\u00e3o s\u00f3 para erro de escuta do whisper small conferido com o medium.en no take inteiro e em trechos"
+}

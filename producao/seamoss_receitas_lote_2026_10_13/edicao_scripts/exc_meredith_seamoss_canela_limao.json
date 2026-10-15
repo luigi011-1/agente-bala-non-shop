@@ -1,0 +1,21 @@
+{
+ "items": [
+  {
+   "file": "/Users/macbookairm2/Desktop/Meredith - V01/V10_20261013193721.mp4",
+   "sha256": "d6990206850c77ac7382c53d4c3fa8d251b8243659d9d57717d3dfb7849a9931",
+   "approved_script": "That's why I just chew one Natural Rems Sea Moss gummy. Ginger, turmeric, manuka honey and vitamin C, all in one gummy.",
+   "allowed_problems": [
+    "trocou \"rems sea moss\" por \"remms seamoss\""
+   ]
+  },
+  {
+   "file": "/Users/macbookairm2/Desktop/Meredith - V01/V14_20261013193721.mp4",
+   "sha256": "be811d6736e4574675209f05fadf6308101618530b64fceb03e1787c27810ab9",
+   "approved_script": "Search Natural Rems Sea Moss on Amazon. Or tap my profile picture, the link is waiting in my stories, or right there in my bio.",
+   "allowed_problems": [
+    "trocou \"rems sea moss\" por \"rim cmos\""
+   ]
+  }
+ ],
+ "user_authorization": "Luigi, 2026-10-14: 'resolva tudo isso e n\u00e3o me pe\u00e7a mais aux\u00edlio'; exce\u00e7\u00e3o s\u00f3 para erro de escuta do whisper small conferido com o medium.en no take inteiro e em trechos"
+}

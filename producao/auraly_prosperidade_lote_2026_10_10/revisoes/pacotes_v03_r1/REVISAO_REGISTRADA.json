@@ -1,0 +1,64 @@
+{
+  "task_id": "521f6abb-5123-4f27-8c68-f86fe10eb882",
+  "reviewer": "bala-revisor",
+  "independent": true,
+  "status": "APPROVED",
+  "checks": [
+    {
+      "name": "estado_aprovacao_integridade",
+      "result": "PASS",
+      "evidence": "AGENTS/workflow/checkpoint/snapshot verificados:SALE ORGANIC VALIDATION,aprovação real10/10 e exceção temática;fingerprints sem drift."
+    },
+    {
+      "name": "fala_cobertura_idioma",
+      "result": "PASS",
+      "evidence": "PROMPTS/FLOW/ENTREGA cadaavatar9falas naordem iguais ao snapshot;EN/ES corretos,27takes únicos,todosfalados;semfuncionalidadeTova fabricada."
+    },
+    {
+      "name": "fontes_visuais_fichas",
+      "result": "PASS",
+      "evidence": "Revisorabriupessoalmente3framesK;selfie/tetocinza/alça/janela/banco,sem borboleta física.3K/14itens comalvos inferidos e evidências. Jordan luxo mantém tipo/ação/composição."
+    },
+    {
+      "name": "K_V_mapa_entrega",
+      "result": "PASS",
+      "evidence": "3K/9Vcada:V01-02K01,V03-05K02,V06-09K03. JSON interno,Kshortsafe,V mínimoexato. ENTREGA Qualvídeo e12CenaPT."
+    },
+    {
+      "name": "validadores_checklist",
+      "result": "PASS",
+      "evidence": "Strictbase/ES0falhas,ESfollowENaviso. Flow_seguro0achados. Checklist29/29aplicáveis13NA."
+    },
+    {
+      "name": "CTA_executor_destino",
+      "result": "PASS",
+      "evidence": "CTAaprovado222/like/save/Stories/bio/follow,semgarantiamonetária. Executorcombinaçãoúnica,sheet4K/selected1V9:16,manual,initialK,batches01-07/08-09,retryliteral+erro,destinos07/08/09foragit."
+    },
+    {
+      "name": "midia_realismo_resultados",
+      "result": "NOT_APPLICABLE",
+      "evidence": "Nenhuma candidata/take/edição/renderização ou performance certificada."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "WARNING",
+      "message": "Mídia futura requerconferênciavisual e palavra porpalavra.",
+      "evidence": "Apenasframesmodelopessoalmentevistos;medidasinferidas."
+    },
+    {
+      "severity": "WARNING",
+      "message": "Follow-fimES aviso é falso positivo EN.",
+      "evidence": "T09fechoESaprovado."
+    },
+    {
+      "severity": "WARNING",
+      "message": "LimparPendinghistóricoroteiroparaaprovação na atualização deestado.",
+      "evidence": "PendingcontradizAPPROVED_BY_LUIGI,aprovação válida10/10."
+    }
+  ],
+  "registered_at": "2026-10-11T17:03:53.824712+00:00",
+  "taskpack_sha256": "c224079f4cae67741ed16906afdcce41e8e5fce902722d2ed22c87967167bdff",
+  "artifacts_unchanged": true,
+  "user_script_approval_granted": false
+}

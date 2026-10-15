@@ -1,0 +1,817 @@
+[
+  {
+    "start": 0.0,
+    "end": 4.24,
+    "text": "If you bought black pepper from the store, drop a spoonful into cold water.",
+    "words": [
+      {
+        "word": " If",
+        "start": 0.0,
+        "end": 0.22,
+        "probability": 0.6290574669837952
+      },
+      {
+        "word": " you",
+        "start": 0.22,
+        "end": 0.34,
+        "probability": 0.9961084723472595
+      },
+      {
+        "word": " bought",
+        "start": 0.34,
+        "end": 0.6,
+        "probability": 0.9636281728744507
+      },
+      {
+        "word": " black",
+        "start": 0.6,
+        "end": 0.88,
+        "probability": 0.9656991958618164
+      },
+      {
+        "word": " pepper",
+        "start": 0.88,
+        "end": 1.2,
+        "probability": 0.9990246295928955
+      },
+      {
+        "word": " from",
+        "start": 1.2,
+        "end": 1.42,
+        "probability": 0.9953088164329529
+      },
+      {
+        "word": " the",
+        "start": 1.42,
+        "end": 1.58,
+        "probability": 0.9939019680023193
+      },
+      {
+        "word": " store,",
+        "start": 1.58,
+        "end": 1.94,
+        "probability": 0.998740017414093
+      },
+      {
+        "word": " drop",
+        "start": 2.44,
+        "end": 2.56,
+        "probability": 0.969728946685791
+      },
+      {
+        "word": " a",
+        "start": 2.56,
+        "end": 2.74,
+        "probability": 0.6469531655311584
+      },
+      {
+        "word": " spoonful",
+        "start": 2.74,
+        "end": 3.26,
+        "probability": 0.9910129308700562
+      },
+      {
+        "word": " into",
+        "start": 3.26,
+        "end": 3.46,
+        "probability": 0.9888660311698914
+      },
+      {
+        "word": " cold",
+        "start": 3.46,
+        "end": 3.8,
+        "probability": 0.9947766065597534
+      },
+      {
+        "word": " water.",
+        "start": 3.8,
+        "end": 4.24,
+        "probability": 0.9980286955833435
+      }
+    ]
+  },
+  {
+    "start": 4.88,
+    "end": 10.68,
+    "text": "Real peppercorns sink. If some float, those are dried papaya seeds mixed in to fill the jar.",
+    "words": [
+      {
+        "word": " Real",
+        "start": 4.88,
+        "end": 4.96,
+        "probability": 0.9364108443260193
+      },
+      {
+        "word": " peppercorns",
+        "start": 4.96,
+        "end": 5.6,
+        "probability": 0.9307058056195577
+      },
+      {
+        "word": " sink.",
+        "start": 5.6,
+        "end": 6.0,
+        "probability": 0.9686296582221985
+      },
+      {
+        "word": " If",
+        "start": 6.64,
+        "end": 6.8,
+        "probability": 0.9891440272331238
+      },
+      {
+        "word": " some",
+        "start": 6.8,
+        "end": 7.06,
+        "probability": 0.9988168478012085
+      },
+      {
+        "word": " float,",
+        "start": 7.06,
+        "end": 7.44,
+        "probability": 0.9987943172454834
+      },
+      {
+        "word": " those",
+        "start": 7.84,
+        "end": 7.94,
+        "probability": 0.991226851940155
+      },
+      {
+        "word": " are",
+        "start": 7.94,
+        "end": 8.12,
+        "probability": 0.9979107975959778
+      },
+      {
+        "word": " dried",
+        "start": 8.12,
+        "end": 8.48,
+        "probability": 0.9813428521156311
+      },
+      {
+        "word": " papaya",
+        "start": 8.48,
+        "end": 8.94,
+        "probability": 0.9908746182918549
+      },
+      {
+        "word": " seeds",
+        "start": 8.94,
+        "end": 9.28,
+        "probability": 0.9993715882301331
+      },
+      {
+        "word": " mixed",
+        "start": 9.28,
+        "end": 9.54,
+        "probability": 0.993540346622467
+      },
+      {
+        "word": " in",
+        "start": 9.54,
+        "end": 9.86,
+        "probability": 0.9672247767448425
+      },
+      {
+        "word": " to",
+        "start": 9.86,
+        "end": 10.02,
+        "probability": 0.9951112866401672
+      },
+      {
+        "word": " fill",
+        "start": 10.02,
+        "end": 10.22,
+        "probability": 0.9971765279769897
+      },
+      {
+        "word": " the",
+        "start": 10.22,
+        "end": 10.4,
+        "probability": 0.9921078085899353
+      },
+      {
+        "word": " jar.",
+        "start": 10.4,
+        "end": 10.68,
+        "probability": 0.9993512034416199
+      }
+    ]
+  },
+  {
+    "start": 10.96,
+    "end": 15.38,
+    "text": "Why? Papaya seeds are cheap filler. Sold at pepper prices.",
+    "words": [
+      {
+        "word": " Why?",
+        "start": 10.96,
+        "end": 11.16,
+        "probability": 0.9837834239006042
+      },
+      {
+        "word": " Papaya",
+        "start": 11.7,
+        "end": 12.04,
+        "probability": 0.9645757973194122
+      },
+      {
+        "word": " seeds",
+        "start": 12.04,
+        "end": 12.34,
+        "probability": 0.996644914150238
+      },
+      {
+        "word": " are",
+        "start": 12.34,
+        "end": 12.52,
+        "probability": 0.9984889030456543
+      },
+      {
+        "word": " cheap",
+        "start": 12.52,
+        "end": 12.8,
+        "probability": 0.9860490560531616
+      },
+      {
+        "word": " filler.",
+        "start": 12.8,
+        "end": 13.28,
+        "probability": 0.9924707412719727
+      },
+      {
+        "word": " Sold",
+        "start": 14.0,
+        "end": 14.22,
+        "probability": 0.9700932502746582
+      },
+      {
+        "word": " at",
+        "start": 14.22,
+        "end": 14.52,
+        "probability": 0.9969978332519531
+      },
+      {
+        "word": " pepper",
+        "start": 14.52,
+        "end": 14.86,
+        "probability": 0.9857390522956848
+      },
+      {
+        "word": " prices.",
+        "start": 14.86,
+        "end": 15.38,
+        "probability": 0.9987205266952515
+      }
+    ]
+  },
+  {
+    "start": 15.84,
+    "end": 20.34,
+    "text": "Turmeric. Stir a spoonful into warm water. Real turmeric slowly settles.",
+    "words": [
+      {
+        "word": " Turmeric.",
+        "start": 15.84,
+        "end": 16.12,
+        "probability": 0.9032895565032959
+      },
+      {
+        "word": " Stir",
+        "start": 16.58,
+        "end": 16.62,
+        "probability": 0.9823618531227112
+      },
+      {
+        "word": " a",
+        "start": 16.62,
+        "end": 16.84,
+        "probability": 0.9920389652252197
+      },
+      {
+        "word": " spoonful",
+        "start": 16.84,
+        "end": 17.28,
+        "probability": 0.995873898267746
+      },
+      {
+        "word": " into",
+        "start": 17.28,
+        "end": 17.54,
+        "probability": 0.9945747256278992
+      },
+      {
+        "word": " warm",
+        "start": 17.54,
+        "end": 17.88,
+        "probability": 0.993911862373352
+      },
+      {
+        "word": " water.",
+        "start": 17.88,
+        "end": 18.3,
+        "probability": 0.9996905326843262
+      },
+      {
+        "word": " Real",
+        "start": 18.6,
+        "end": 18.84,
+        "probability": 0.9913022518157959
+      },
+      {
+        "word": " turmeric",
+        "start": 18.84,
+        "end": 19.32,
+        "probability": 0.9971317946910858
+      },
+      {
+        "word": " slowly",
+        "start": 19.32,
+        "end": 19.78,
+        "probability": 0.9979956150054932
+      },
+      {
+        "word": " settles.",
+        "start": 19.78,
+        "end": 20.34,
+        "probability": 0.9995380640029907
+      }
+    ]
+  },
+  {
+    "start": 20.7,
+    "end": 23.6,
+    "text": "If the water turns bright yellow right away, it has been dyed.",
+    "words": [
+      {
+        "word": " If",
+        "start": 20.7,
+        "end": 20.78,
+        "probability": 0.994568943977356
+      },
+      {
+        "word": " the",
+        "start": 20.78,
+        "end": 20.94,
+        "probability": 0.9957913160324097
+      },
+      {
+        "word": " water",
+        "start": 20.94,
+        "end": 21.18,
+        "probability": 0.9996645450592041
+      },
+      {
+        "word": " turns",
+        "start": 21.18,
+        "end": 21.5,
+        "probability": 0.9976074695587158
+      },
+      {
+        "word": " bright",
+        "start": 21.5,
+        "end": 21.82,
+        "probability": 0.9958592057228088
+      },
+      {
+        "word": " yellow",
+        "start": 21.82,
+        "end": 22.1,
+        "probability": 0.9973088502883911
+      },
+      {
+        "word": " right",
+        "start": 22.1,
+        "end": 22.36,
+        "probability": 0.990581214427948
+      },
+      {
+        "word": " away,",
+        "start": 22.36,
+        "end": 22.68,
+        "probability": 0.9990726709365845
+      },
+      {
+        "word": " it",
+        "start": 22.88,
+        "end": 22.98,
+        "probability": 0.995175838470459
+      },
+      {
+        "word": " has",
+        "start": 22.98,
+        "end": 23.1,
+        "probability": 0.9797397255897522
+      },
+      {
+        "word": " been",
+        "start": 23.1,
+        "end": 23.32,
+        "probability": 0.9974544644355774
+      },
+      {
+        "word": " dyed.",
+        "start": 23.32,
+        "end": 23.6,
+        "probability": 0.9878723621368408
+      }
+    ]
+  },
+  {
+    "start": 23.6,
+    "end": 27.48,
+    "text": "Why? Dye hides old, weak powder. Cinnamon sticks.",
+    "words": [
+      {
+        "word": " Why?",
+        "start": 23.6,
+        "end": 24.2,
+        "probability": 0.7341334223747253
+      },
+      {
+        "word": " Dye",
+        "start": 24.66,
+        "end": 24.92,
+        "probability": 0.503783829510212
+      },
+      {
+        "word": " hides",
+        "start": 24.92,
+        "end": 25.26,
+        "probability": 0.9925466179847717
+      },
+      {
+        "word": " old,",
+        "start": 25.26,
+        "end": 25.7,
+        "probability": 0.9873818755149841
+      },
+      {
+        "word": " weak",
+        "start": 25.8,
+        "end": 26.06,
+        "probability": 0.9900722503662109
+      },
+      {
+        "word": " powder.",
+        "start": 26.06,
+        "end": 26.52,
+        "probability": 0.986666738986969
+      },
+      {
+        "word": " Cinnamon",
+        "start": 27.06,
+        "end": 27.06,
+        "probability": 0.9236983060836792
+      },
+      {
+        "word": " sticks.",
+        "start": 27.06,
+        "end": 27.48,
+        "probability": 0.9918505549430847
+      }
+    ]
+  },
+  {
+    "start": 28.26,
+    "end": 31.26,
+    "text": "Real cinnamon has thin paper layers. Like a cigar.",
+    "words": [
+      {
+        "word": " Real",
+        "start": 28.26,
+        "end": 28.46,
+        "probability": 0.9778597354888916
+      },
+      {
+        "word": " cinnamon",
+        "start": 28.46,
+        "end": 28.78,
+        "probability": 0.9954352974891663
+      },
+      {
+        "word": " has",
+        "start": 28.78,
+        "end": 29.1,
+        "probability": 0.9973247051239014
+      },
+      {
+        "word": " thin",
+        "start": 29.1,
+        "end": 29.48,
+        "probability": 0.997724711894989
+      },
+      {
+        "word": " paper",
+        "start": 29.48,
+        "end": 29.84,
+        "probability": 0.9895666837692261
+      },
+      {
+        "word": " layers.",
+        "start": 29.84,
+        "end": 30.24,
+        "probability": 0.9984151124954224
+      },
+      {
+        "word": " Like",
+        "start": 30.72,
+        "end": 30.82,
+        "probability": 0.9853969216346741
+      },
+      {
+        "word": " a",
+        "start": 30.82,
+        "end": 30.94,
+        "probability": 0.9980033040046692
+      },
+      {
+        "word": " cigar.",
+        "start": 30.94,
+        "end": 31.26,
+        "probability": 0.998307466506958
+      }
+    ]
+  },
+  {
+    "start": 32.16,
+    "end": 36.66,
+    "text": "One thick, hard curl is cassia. The cheaper kind. Why?",
+    "words": [
+      {
+        "word": " One",
+        "start": 32.16,
+        "end": 32.38,
+        "probability": 0.9855712652206421
+      },
+      {
+        "word": " thick,",
+        "start": 32.38,
+        "end": 32.78,
+        "probability": 0.9895880222320557
+      },
+      {
+        "word": " hard",
+        "start": 32.94,
+        "end": 33.34,
+        "probability": 0.9993029832839966
+      },
+      {
+        "word": " curl",
+        "start": 33.34,
+        "end": 33.74,
+        "probability": 0.9785796403884888
+      },
+      {
+        "word": " is",
+        "start": 33.74,
+        "end": 34.3,
+        "probability": 0.9463231563568115
+      },
+      {
+        "word": " cassia.",
+        "start": 34.3,
+        "end": 34.86,
+        "probability": 0.9066934287548065
+      },
+      {
+        "word": " The",
+        "start": 35.4,
+        "end": 35.52,
+        "probability": 0.9831027388572693
+      },
+      {
+        "word": " cheaper",
+        "start": 35.52,
+        "end": 35.76,
+        "probability": 0.9777598977088928
+      },
+      {
+        "word": " kind.",
+        "start": 35.76,
+        "end": 36.14,
+        "probability": 0.9988023042678833
+      },
+      {
+        "word": " Why?",
+        "start": 36.42,
+        "end": 36.66,
+        "probability": 0.9971795082092285
+      }
+    ]
+  },
+  {
+    "start": 37.68,
+    "end": 41.16,
+    "text": "Cassia is high in coumarin, which constrain the liver.",
+    "words": [
+      {
+        "word": " Cassia",
+        "start": 37.68,
+        "end": 38.08,
+        "probability": 0.9729162752628326
+      },
+      {
+        "word": " is",
+        "start": 38.08,
+        "end": 38.32,
+        "probability": 0.9977911710739136
+      },
+      {
+        "word": " high",
+        "start": 38.32,
+        "end": 38.72,
+        "probability": 0.9869824051856995
+      },
+      {
+        "word": " in",
+        "start": 38.72,
+        "end": 38.98,
+        "probability": 0.9852839708328247
+      },
+      {
+        "word": " coumarin,",
+        "start": 38.98,
+        "end": 39.66,
+        "probability": 0.8408849040667216
+      },
+      {
+        "word": " which",
+        "start": 40.02,
+        "end": 40.22,
+        "probability": 0.996211051940918
+      },
+      {
+        "word": " constrain",
+        "start": 40.22,
+        "end": 40.74,
+        "probability": 0.684519499540329
+      },
+      {
+        "word": " the",
+        "start": 40.74,
+        "end": 40.92,
+        "probability": 0.9962288737297058
+      },
+      {
+        "word": " liver.",
+        "start": 40.92,
+        "end": 41.16,
+        "probability": 0.999656081199646
+      }
+    ]
+  },
+  {
+    "start": 41.66,
+    "end": 47.08,
+    "text": "In Japan, we study our food closely. Because what we eat becomes us.",
+    "words": [
+      {
+        "word": " In",
+        "start": 41.66,
+        "end": 41.78,
+        "probability": 0.991807758808136
+      },
+      {
+        "word": " Japan,",
+        "start": 41.78,
+        "end": 42.08,
+        "probability": 0.9909312725067139
+      },
+      {
+        "word": " we",
+        "start": 42.4,
+        "end": 42.5,
+        "probability": 0.9971092343330383
+      },
+      {
+        "word": " study",
+        "start": 42.5,
+        "end": 42.82,
+        "probability": 0.9978210926055908
+      },
+      {
+        "word": " our",
+        "start": 42.82,
+        "end": 43.04,
+        "probability": 0.9969832301139832
+      },
+      {
+        "word": " food",
+        "start": 43.04,
+        "end": 43.28,
+        "probability": 0.9982183575630188
+      },
+      {
+        "word": " closely.",
+        "start": 43.28,
+        "end": 43.8,
+        "probability": 0.9991082549095154
+      },
+      {
+        "word": " Because",
+        "start": 44.42,
+        "end": 44.8,
+        "probability": 0.9881615042686462
+      },
+      {
+        "word": " what",
+        "start": 44.8,
+        "end": 45.5,
+        "probability": 0.8288331031799316
+      },
+      {
+        "word": " we",
+        "start": 45.5,
+        "end": 45.7,
+        "probability": 0.9989172220230103
+      },
+      {
+        "word": " eat",
+        "start": 45.7,
+        "end": 46.02,
+        "probability": 0.9992432594299316
+      },
+      {
+        "word": " becomes",
+        "start": 46.02,
+        "end": 46.64,
+        "probability": 0.865222692489624
+      },
+      {
+        "word": " us.",
+        "start": 46.64,
+        "end": 47.08,
+        "probability": 0.9932771325111389
+      }
+    ]
+  },
+  {
+    "start": 47.6,
+    "end": 50.16,
+    "text": "Comment yes for more and follow for the next one.",
+    "words": [
+      {
+        "word": " Comment",
+        "start": 47.6,
+        "end": 47.74,
+        "probability": 0.9968578815460205
+      },
+      {
+        "word": " yes",
+        "start": 47.74,
+        "end": 48.0,
+        "probability": 0.3350324034690857
+      },
+      {
+        "word": " for",
+        "start": 48.0,
+        "end": 48.24,
+        "probability": 0.9928804039955139
+      },
+      {
+        "word": " more",
+        "start": 48.24,
+        "end": 48.52,
+        "probability": 0.999303936958313
+      },
+      {
+        "word": " and",
+        "start": 48.52,
+        "end": 49.06,
+        "probability": 0.609961986541748
+      },
+      {
+        "word": " follow",
+        "start": 49.06,
+        "end": 49.36,
+        "probability": 0.9968482851982117
+      },
+      {
+        "word": " for",
+        "start": 49.36,
+        "end": 49.64,
+        "probability": 0.9934834837913513
+      },
+      {
+        "word": " the",
+        "start": 49.64,
+        "end": 49.76,
+        "probability": 0.9979269504547119
+      },
+      {
+        "word": " next",
+        "start": 49.76,
+        "end": 49.92,
+        "probability": 0.9995487332344055
+      },
+      {
+        "word": " one.",
+        "start": 49.92,
+        "end": 50.16,
+        "probability": 0.9977428913116455
+      }
+    ]
+  }
+]

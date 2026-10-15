@@ -17,6 +17,13 @@ Resolver a raiz real por este `SKILL.md`. Ler `AGENTS.md`, identificar o ângulo
 python3 "<raiz>/scripts/dispatch.py" preparar --angle 2 --task adaptar --production "<pasta-da-producao>" --out "<pasta-do-job>"
 ```
 
+## Lote e fila
+
+Aplicar a regra modelos x avatares de `AGENTS.md`: cada modelo tem produção própria e a fila
+completa dos avatares aplicáveis. Um conjunto comum de 3 modelos e 3 avatares prevê 9 vídeos.
+Não parear pela ordem dos anexos. Recuperar a combinação modelo/avatar e a fila dos arquivos de
+intake/checkpoint; conferir o total esperado e as combinações pendentes antes de encerrar o lote.
+
 ## Executar a próxima etapa
 
 - Se o vídeo ainda não foi decomposto, usar `$watch` antes de afirmar ações, herói do hook ou reveals. Transcrição não substitui frames; WhisperX melhora o alinhamento da fala, sem interpretar o visual.

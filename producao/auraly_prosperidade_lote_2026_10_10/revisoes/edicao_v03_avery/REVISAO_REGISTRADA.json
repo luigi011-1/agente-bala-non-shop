@@ -1,0 +1,64 @@
+{
+  "task_id": "e70f8717-1d39-42bb-a3ca-cb9c6dc40ed7",
+  "reviewer": "bala-revisor",
+  "independent": true,
+  "status": "APPROVED",
+  "checks": [
+    {
+      "name": "Escopo e autorização",
+      "result": "PASS",
+      "evidence": "V03/Avery somente; CHECKPOINT e ROTEIRO: Auraly, venda orgânica prosperidade, roteiro e adaptação aprovados."
+    },
+    {
+      "name": "Integridade",
+      "result": "PASS",
+      "evidence": "Revisor conferiu os 5 SHA256 e TASK.json; todos iguais aos fingerprints."
+    },
+    {
+      "name": "Formato e tamanho",
+      "result": "PASS",
+      "evidence": "ffprobe independente H264/AAC 1080x1920 30fps 1524 quadros 50.8s 26314448 bytes <30MB."
+    },
+    {
+      "name": "Relatório e fala primária",
+      "result": "PASS",
+      "evidence": "Todos gates OK, sem aviso lexical ou aparagem; 9 takes ordenados e semelhança100%."
+    },
+    {
+      "name": "Cortes",
+      "result": "PASS",
+      "evidence": "cortes.png aberto pessoalmente pelo revisor; nenhum quadro misturado evidente nas amostras."
+    },
+    {
+      "name": "Legendas",
+      "result": "PASS",
+      "evidence": "legendas.png6x6 aberto pessoalmente, início/corpo/CTA; face/boca livres; 777/222/bandeiras visíveis."
+    },
+    {
+      "name": "Picos fora de CTA",
+      "result": "PASS",
+      "evidence": "picos.json e segs.json: scrolling T01, overlooking T03, butterfly T05, reading T06; nenhum T07–T09."
+    },
+    {
+      "name": "Escuta direta integral",
+      "result": "NOT_APPLICABLE",
+      "evidence": "QA visual/relatório; sem escuta direta integral ou segunda transcrição do MP4 final."
+    },
+    {
+      "name": "Outras combinações",
+      "result": "NOT_APPLICABLE",
+      "evidence": "Não aprova Jordan/Devon/V01/V02 nem fecha o lote."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "WARNING",
+      "message": "Amostragem não certifica cada quadro ou escuta integral, publicação, desempenho ou conclusão do lote.",
+      "evidence": "Contact sheets, hashes, metadados e picos; conferência automatizada da fala documentada."
+    }
+  ],
+  "registered_at": "2026-10-11T21:08:22.176322+00:00",
+  "taskpack_sha256": "222c31a75aa98dc0af2ecff8acace9090eb4e413e1b3322d67c6e4c048806398",
+  "artifacts_unchanged": true,
+  "user_script_approval_granted": false
+}

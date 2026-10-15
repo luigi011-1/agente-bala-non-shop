@@ -1,0 +1,1360 @@
+{
+  "schema_version": 2,
+  "pipeline": "watch",
+  "run_id": "30255310-f586-46f4-ae5b-bff136952ce9",
+  "status": "COMPLETE",
+  "analysis_status": "PENDING_VISUAL_REVIEW",
+  "video": "/Users/macbookairm2/Downloads/snapinsta-1791763254062.mp4",
+  "outdir": "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/fitywell_growth_2026_10_12_v03_1791763254062/input/modelo_watch",
+  "info": {
+    "duration": 27.241375,
+    "fps": 30.0,
+    "width": 720,
+    "height": 1280,
+    "has_audio": true
+  },
+  "scenes": [
+    {
+      "file": "scene_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "scene_t00003.7667_000002.png",
+      "t": 3.766667
+    },
+    {
+      "file": "scene_t00005.0333_000003.png",
+      "t": 5.033333
+    },
+    {
+      "file": "scene_t00006.2667_000004.png",
+      "t": 6.266667
+    },
+    {
+      "file": "scene_t00006.8000_000005.png",
+      "t": 6.8
+    },
+    {
+      "file": "scene_t00008.2000_000006.png",
+      "t": 8.2
+    },
+    {
+      "file": "scene_t00009.7000_000007.png",
+      "t": 9.7
+    },
+    {
+      "file": "scene_t00016.1000_000008.png",
+      "t": 16.1
+    },
+    {
+      "file": "scene_t00021.0333_000009.png",
+      "t": 21.033333
+    }
+  ],
+  "timeline": [
+    {
+      "file": "tl_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "tl_t00000.2000_000002.png",
+      "t": 0.2
+    },
+    {
+      "file": "tl_t00000.4000_000003.png",
+      "t": 0.4
+    },
+    {
+      "file": "tl_t00000.6000_000004.png",
+      "t": 0.6
+    },
+    {
+      "file": "tl_t00000.8000_000005.png",
+      "t": 0.8
+    },
+    {
+      "file": "tl_t00001.0000_000006.png",
+      "t": 1.0
+    },
+    {
+      "file": "tl_t00001.2000_000007.png",
+      "t": 1.2
+    },
+    {
+      "file": "tl_t00001.4000_000008.png",
+      "t": 1.4
+    },
+    {
+      "file": "tl_t00001.6000_000009.png",
+      "t": 1.6
+    },
+    {
+      "file": "tl_t00001.8000_000010.png",
+      "t": 1.8
+    },
+    {
+      "file": "tl_t00002.0000_000011.png",
+      "t": 2.0
+    },
+    {
+      "file": "tl_t00002.2000_000012.png",
+      "t": 2.2
+    },
+    {
+      "file": "tl_t00002.4000_000013.png",
+      "t": 2.4
+    },
+    {
+      "file": "tl_t00002.6000_000014.png",
+      "t": 2.6
+    },
+    {
+      "file": "tl_t00002.8000_000015.png",
+      "t": 2.8
+    },
+    {
+      "file": "tl_t00003.0000_000016.png",
+      "t": 3.0
+    },
+    {
+      "file": "tl_t00003.2000_000017.png",
+      "t": 3.2
+    },
+    {
+      "file": "tl_t00003.4000_000018.png",
+      "t": 3.4
+    },
+    {
+      "file": "tl_t00003.6000_000019.png",
+      "t": 3.6
+    },
+    {
+      "file": "tl_t00003.8000_000020.png",
+      "t": 3.8
+    },
+    {
+      "file": "tl_t00004.0000_000021.png",
+      "t": 4.0
+    },
+    {
+      "file": "tl_t00004.2000_000022.png",
+      "t": 4.2
+    },
+    {
+      "file": "tl_t00004.4000_000023.png",
+      "t": 4.4
+    },
+    {
+      "file": "tl_t00004.6000_000024.png",
+      "t": 4.6
+    },
+    {
+      "file": "tl_t00004.8000_000025.png",
+      "t": 4.8
+    },
+    {
+      "file": "tl_t00005.0000_000026.png",
+      "t": 5.0
+    },
+    {
+      "file": "tl_t00005.2000_000027.png",
+      "t": 5.2
+    },
+    {
+      "file": "tl_t00005.4000_000028.png",
+      "t": 5.4
+    },
+    {
+      "file": "tl_t00005.6000_000029.png",
+      "t": 5.6
+    },
+    {
+      "file": "tl_t00005.8000_000030.png",
+      "t": 5.8
+    },
+    {
+      "file": "tl_t00006.0000_000031.png",
+      "t": 6.0
+    },
+    {
+      "file": "tl_t00006.2000_000032.png",
+      "t": 6.2
+    },
+    {
+      "file": "tl_t00006.4000_000033.png",
+      "t": 6.4
+    },
+    {
+      "file": "tl_t00006.6000_000034.png",
+      "t": 6.6
+    },
+    {
+      "file": "tl_t00006.8000_000035.png",
+      "t": 6.8
+    },
+    {
+      "file": "tl_t00007.0000_000036.png",
+      "t": 7.0
+    },
+    {
+      "file": "tl_t00007.2000_000037.png",
+      "t": 7.2
+    },
+    {
+      "file": "tl_t00007.4000_000038.png",
+      "t": 7.4
+    },
+    {
+      "file": "tl_t00007.6000_000039.png",
+      "t": 7.6
+    },
+    {
+      "file": "tl_t00007.8000_000040.png",
+      "t": 7.8
+    },
+    {
+      "file": "tl_t00008.0000_000041.png",
+      "t": 8.0
+    },
+    {
+      "file": "tl_t00008.2000_000042.png",
+      "t": 8.2
+    },
+    {
+      "file": "tl_t00008.4000_000043.png",
+      "t": 8.4
+    },
+    {
+      "file": "tl_t00008.6000_000044.png",
+      "t": 8.6
+    },
+    {
+      "file": "tl_t00008.8000_000045.png",
+      "t": 8.8
+    },
+    {
+      "file": "tl_t00009.0000_000046.png",
+      "t": 9.0
+    },
+    {
+      "file": "tl_t00009.2000_000047.png",
+      "t": 9.2
+    },
+    {
+      "file": "tl_t00009.4000_000048.png",
+      "t": 9.4
+    },
+    {
+      "file": "tl_t00009.6000_000049.png",
+      "t": 9.6
+    },
+    {
+      "file": "tl_t00009.8000_000050.png",
+      "t": 9.8
+    },
+    {
+      "file": "tl_t00010.0000_000051.png",
+      "t": 10.0
+    },
+    {
+      "file": "tl_t00010.2000_000052.png",
+      "t": 10.2
+    },
+    {
+      "file": "tl_t00010.4000_000053.png",
+      "t": 10.4
+    },
+    {
+      "file": "tl_t00010.6000_000054.png",
+      "t": 10.6
+    },
+    {
+      "file": "tl_t00010.8000_000055.png",
+      "t": 10.8
+    },
+    {
+      "file": "tl_t00011.0000_000056.png",
+      "t": 11.0
+    },
+    {
+      "file": "tl_t00011.2000_000057.png",
+      "t": 11.2
+    },
+    {
+      "file": "tl_t00011.4000_000058.png",
+      "t": 11.4
+    },
+    {
+      "file": "tl_t00011.6000_000059.png",
+      "t": 11.6
+    },
+    {
+      "file": "tl_t00011.8000_000060.png",
+      "t": 11.8
+    },
+    {
+      "file": "tl_t00012.0000_000061.png",
+      "t": 12.0
+    },
+    {
+      "file": "tl_t00012.2000_000062.png",
+      "t": 12.2
+    },
+    {
+      "file": "tl_t00012.4000_000063.png",
+      "t": 12.4
+    },
+    {
+      "file": "tl_t00012.6000_000064.png",
+      "t": 12.6
+    },
+    {
+      "file": "tl_t00012.8000_000065.png",
+      "t": 12.8
+    },
+    {
+      "file": "tl_t00013.0000_000066.png",
+      "t": 13.0
+    },
+    {
+      "file": "tl_t00013.2000_000067.png",
+      "t": 13.2
+    },
+    {
+      "file": "tl_t00013.4000_000068.png",
+      "t": 13.4
+    },
+    {
+      "file": "tl_t00013.6000_000069.png",
+      "t": 13.6
+    },
+    {
+      "file": "tl_t00013.8000_000070.png",
+      "t": 13.8
+    },
+    {
+      "file": "tl_t00014.0000_000071.png",
+      "t": 14.0
+    },
+    {
+      "file": "tl_t00014.2000_000072.png",
+      "t": 14.2
+    },
+    {
+      "file": "tl_t00014.4000_000073.png",
+      "t": 14.4
+    },
+    {
+      "file": "tl_t00014.6000_000074.png",
+      "t": 14.6
+    },
+    {
+      "file": "tl_t00014.8000_000075.png",
+      "t": 14.8
+    },
+    {
+      "file": "tl_t00015.0000_000076.png",
+      "t": 15.0
+    },
+    {
+      "file": "tl_t00015.2000_000077.png",
+      "t": 15.2
+    },
+    {
+      "file": "tl_t00015.4000_000078.png",
+      "t": 15.4
+    },
+    {
+      "file": "tl_t00015.6000_000079.png",
+      "t": 15.6
+    },
+    {
+      "file": "tl_t00015.8000_000080.png",
+      "t": 15.8
+    },
+    {
+      "file": "tl_t00016.0000_000081.png",
+      "t": 16.0
+    },
+    {
+      "file": "tl_t00016.2000_000082.png",
+      "t": 16.2
+    },
+    {
+      "file": "tl_t00016.4000_000083.png",
+      "t": 16.4
+    },
+    {
+      "file": "tl_t00016.6000_000084.png",
+      "t": 16.6
+    },
+    {
+      "file": "tl_t00016.8000_000085.png",
+      "t": 16.8
+    },
+    {
+      "file": "tl_t00017.0000_000086.png",
+      "t": 17.0
+    },
+    {
+      "file": "tl_t00017.2000_000087.png",
+      "t": 17.2
+    },
+    {
+      "file": "tl_t00017.4000_000088.png",
+      "t": 17.4
+    },
+    {
+      "file": "tl_t00017.6000_000089.png",
+      "t": 17.6
+    },
+    {
+      "file": "tl_t00017.8000_000090.png",
+      "t": 17.8
+    },
+    {
+      "file": "tl_t00018.0000_000091.png",
+      "t": 18.0
+    },
+    {
+      "file": "tl_t00018.2000_000092.png",
+      "t": 18.2
+    },
+    {
+      "file": "tl_t00018.4000_000093.png",
+      "t": 18.4
+    },
+    {
+      "file": "tl_t00018.6000_000094.png",
+      "t": 18.6
+    },
+    {
+      "file": "tl_t00018.8000_000095.png",
+      "t": 18.8
+    },
+    {
+      "file": "tl_t00019.0000_000096.png",
+      "t": 19.0
+    },
+    {
+      "file": "tl_t00019.2000_000097.png",
+      "t": 19.2
+    },
+    {
+      "file": "tl_t00019.4000_000098.png",
+      "t": 19.4
+    },
+    {
+      "file": "tl_t00019.6000_000099.png",
+      "t": 19.6
+    },
+    {
+      "file": "tl_t00019.8000_000100.png",
+      "t": 19.8
+    },
+    {
+      "file": "tl_t00020.0000_000101.png",
+      "t": 20.0
+    },
+    {
+      "file": "tl_t00020.2000_000102.png",
+      "t": 20.2
+    },
+    {
+      "file": "tl_t00020.4000_000103.png",
+      "t": 20.4
+    },
+    {
+      "file": "tl_t00020.6000_000104.png",
+      "t": 20.6
+    },
+    {
+      "file": "tl_t00020.8000_000105.png",
+      "t": 20.8
+    },
+    {
+      "file": "tl_t00021.0000_000106.png",
+      "t": 21.0
+    },
+    {
+      "file": "tl_t00021.2000_000107.png",
+      "t": 21.2
+    },
+    {
+      "file": "tl_t00021.4000_000108.png",
+      "t": 21.4
+    },
+    {
+      "file": "tl_t00021.6000_000109.png",
+      "t": 21.6
+    },
+    {
+      "file": "tl_t00021.8000_000110.png",
+      "t": 21.8
+    },
+    {
+      "file": "tl_t00022.0000_000111.png",
+      "t": 22.0
+    },
+    {
+      "file": "tl_t00022.2000_000112.png",
+      "t": 22.2
+    },
+    {
+      "file": "tl_t00022.4000_000113.png",
+      "t": 22.4
+    },
+    {
+      "file": "tl_t00022.6000_000114.png",
+      "t": 22.6
+    },
+    {
+      "file": "tl_t00022.8000_000115.png",
+      "t": 22.8
+    },
+    {
+      "file": "tl_t00023.0000_000116.png",
+      "t": 23.0
+    },
+    {
+      "file": "tl_t00023.2000_000117.png",
+      "t": 23.2
+    },
+    {
+      "file": "tl_t00023.4000_000118.png",
+      "t": 23.4
+    },
+    {
+      "file": "tl_t00023.6000_000119.png",
+      "t": 23.6
+    },
+    {
+      "file": "tl_t00023.8000_000120.png",
+      "t": 23.8
+    },
+    {
+      "file": "tl_t00024.0000_000121.png",
+      "t": 24.0
+    },
+    {
+      "file": "tl_t00024.2000_000122.png",
+      "t": 24.2
+    },
+    {
+      "file": "tl_t00024.4000_000123.png",
+      "t": 24.4
+    },
+    {
+      "file": "tl_t00024.6000_000124.png",
+      "t": 24.6
+    },
+    {
+      "file": "tl_t00024.8000_000125.png",
+      "t": 24.8
+    },
+    {
+      "file": "tl_t00025.0000_000126.png",
+      "t": 25.0
+    },
+    {
+      "file": "tl_t00025.2000_000127.png",
+      "t": 25.2
+    },
+    {
+      "file": "tl_t00025.4000_000128.png",
+      "t": 25.4
+    },
+    {
+      "file": "tl_t00025.6000_000129.png",
+      "t": 25.6
+    },
+    {
+      "file": "tl_t00025.8000_000130.png",
+      "t": 25.8
+    },
+    {
+      "file": "tl_t00026.0000_000131.png",
+      "t": 26.0
+    },
+    {
+      "file": "tl_t00026.2000_000132.png",
+      "t": 26.2
+    },
+    {
+      "file": "tl_t00026.4000_000133.png",
+      "t": 26.4
+    },
+    {
+      "file": "tl_t00026.6000_000134.png",
+      "t": 26.6
+    },
+    {
+      "file": "tl_t00026.8000_000135.png",
+      "t": 26.8
+    },
+    {
+      "file": "tl_t00027.0000_000136.png",
+      "t": 27.0
+    }
+  ],
+  "overview": {
+    "scenes": [
+      "overview_scenes_01.png"
+    ],
+    "timeline": [
+      "overview_timeline_01.png",
+      "overview_timeline_02.png",
+      "overview_timeline_03.png",
+      "overview_timeline_04.png",
+      "overview_timeline_05.png",
+      "overview_timeline_06.png",
+      "overview_timeline_07.png"
+    ]
+  },
+  "transcript": true,
+  "audio": {
+    "status": "SUCCEEDED",
+    "backend": "faster-whisper",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.72,
+        "text": "This is what cinnamon does to the sugar in your body.",
+        "words": [
+          {
+            "word": " This",
+            "start": 0.0,
+            "end": 0.26,
+            "probability": 0.9304645657539368
+          },
+          {
+            "word": " is",
+            "start": 0.26,
+            "end": 0.5,
+            "probability": 0.9960220456123352
+          },
+          {
+            "word": " what",
+            "start": 0.5,
+            "end": 0.68,
+            "probability": 0.9962600469589233
+          },
+          {
+            "word": " cinnamon",
+            "start": 0.68,
+            "end": 1.02,
+            "probability": 0.9765041470527649
+          },
+          {
+            "word": " does",
+            "start": 1.02,
+            "end": 1.42,
+            "probability": 0.9954248070716858
+          },
+          {
+            "word": " to",
+            "start": 1.42,
+            "end": 1.64,
+            "probability": 0.9963046312332153
+          },
+          {
+            "word": " the",
+            "start": 1.64,
+            "end": 1.74,
+            "probability": 0.9904420971870422
+          },
+          {
+            "word": " sugar",
+            "start": 1.74,
+            "end": 2.0,
+            "probability": 0.9992244243621826
+          },
+          {
+            "word": " in",
+            "start": 2.0,
+            "end": 2.26,
+            "probability": 0.9986637830734253
+          },
+          {
+            "word": " your",
+            "start": 2.26,
+            "end": 2.36,
+            "probability": 0.997582197189331
+          },
+          {
+            "word": " body.",
+            "start": 2.36,
+            "end": 2.72,
+            "probability": 0.9994082450866699
+          }
+        ]
+      },
+      {
+        "start": 3.76,
+        "end": 6.18,
+        "text": "In a glass of warm water, mix one teaspoon of cinnamon,",
+        "words": [
+          {
+            "word": " In",
+            "start": 3.76,
+            "end": 3.84,
+            "probability": 0.8237613439559937
+          },
+          {
+            "word": " a",
+            "start": 3.84,
+            "end": 3.94,
+            "probability": 0.998273491859436
+          },
+          {
+            "word": " glass",
+            "start": 3.94,
+            "end": 4.1,
+            "probability": 0.9990686774253845
+          },
+          {
+            "word": " of",
+            "start": 4.1,
+            "end": 4.34,
+            "probability": 0.9985038042068481
+          },
+          {
+            "word": " warm",
+            "start": 4.34,
+            "end": 4.54,
+            "probability": 0.9985684156417847
+          },
+          {
+            "word": " water,",
+            "start": 4.54,
+            "end": 4.92,
+            "probability": 0.9973371624946594
+          },
+          {
+            "word": " mix",
+            "start": 5.1,
+            "end": 5.2,
+            "probability": 0.9890028238296509
+          },
+          {
+            "word": " one",
+            "start": 5.2,
+            "end": 5.46,
+            "probability": 0.7262016534805298
+          },
+          {
+            "word": " teaspoon",
+            "start": 5.46,
+            "end": 5.72,
+            "probability": 0.9871014356613159
+          },
+          {
+            "word": " of",
+            "start": 5.72,
+            "end": 5.92,
+            "probability": 0.99781334400177
+          },
+          {
+            "word": " cinnamon,",
+            "start": 5.92,
+            "end": 6.18,
+            "probability": 0.9973806738853455
+          }
+        ]
+      },
+      {
+        "start": 6.8,
+        "end": 8.04,
+        "text": "a squeeze of fresh lemon juice,",
+        "words": [
+          {
+            "word": " a",
+            "start": 6.8,
+            "end": 6.9,
+            "probability": 0.9788605570793152
+          },
+          {
+            "word": " squeeze",
+            "start": 6.9,
+            "end": 7.1,
+            "probability": 0.9963713884353638
+          },
+          {
+            "word": " of",
+            "start": 7.1,
+            "end": 7.32,
+            "probability": 0.9963763356208801
+          },
+          {
+            "word": " fresh",
+            "start": 7.32,
+            "end": 7.52,
+            "probability": 0.9927729964256287
+          },
+          {
+            "word": " lemon",
+            "start": 7.52,
+            "end": 7.76,
+            "probability": 0.9983391761779785
+          },
+          {
+            "word": " juice,",
+            "start": 7.76,
+            "end": 8.04,
+            "probability": 0.9990561604499817
+          }
+        ]
+      },
+      {
+        "start": 8.26,
+        "end": 9.54,
+        "text": "and one tablespoon of raw honey.",
+        "words": [
+          {
+            "word": " and",
+            "start": 8.26,
+            "end": 8.32,
+            "probability": 0.9978220462799072
+          },
+          {
+            "word": " one",
+            "start": 8.32,
+            "end": 8.52,
+            "probability": 0.9679314494132996
+          },
+          {
+            "word": " tablespoon",
+            "start": 8.52,
+            "end": 8.78,
+            "probability": 0.9851546883583069
+          },
+          {
+            "word": " of",
+            "start": 8.78,
+            "end": 9.14,
+            "probability": 0.9984354376792908
+          },
+          {
+            "word": " raw",
+            "start": 9.14,
+            "end": 9.32,
+            "probability": 0.9944828748703003
+          },
+          {
+            "word": " honey.",
+            "start": 9.32,
+            "end": 9.54,
+            "probability": 0.9977805018424988
+          }
+        ]
+      },
+      {
+        "start": 9.76,
+        "end": 11.38,
+        "text": "Drink this every morning on an empty stomach.",
+        "words": [
+          {
+            "word": " Drink",
+            "start": 9.76,
+            "end": 9.86,
+            "probability": 0.9861517548561096
+          },
+          {
+            "word": " this",
+            "start": 9.86,
+            "end": 10.06,
+            "probability": 0.9987658262252808
+          },
+          {
+            "word": " every",
+            "start": 10.06,
+            "end": 10.28,
+            "probability": 0.9945981502532959
+          },
+          {
+            "word": " morning",
+            "start": 10.28,
+            "end": 10.54,
+            "probability": 0.9991222023963928
+          },
+          {
+            "word": " on",
+            "start": 10.54,
+            "end": 10.76,
+            "probability": 0.9925988912582397
+          },
+          {
+            "word": " an",
+            "start": 10.76,
+            "end": 10.86,
+            "probability": 0.9970375299453735
+          },
+          {
+            "word": " empty",
+            "start": 10.86,
+            "end": 11.06,
+            "probability": 0.9998195767402649
+          },
+          {
+            "word": " stomach.",
+            "start": 11.06,
+            "end": 11.38,
+            "probability": 0.9999669790267944
+          }
+        ]
+      },
+      {
+        "start": 11.76,
+        "end": 12.86,
+        "text": "Your energy starts coming back,",
+        "words": [
+          {
+            "word": " Your",
+            "start": 11.76,
+            "end": 11.82,
+            "probability": 0.994874894618988
+          },
+          {
+            "word": " energy",
+            "start": 11.82,
+            "end": 12.14,
+            "probability": 0.9942159056663513
+          },
+          {
+            "word": " starts",
+            "start": 12.14,
+            "end": 12.36,
+            "probability": 0.9968363046646118
+          },
+          {
+            "word": " coming",
+            "start": 12.36,
+            "end": 12.6,
+            "probability": 0.99798583984375
+          },
+          {
+            "word": " back,",
+            "start": 12.6,
+            "end": 12.86,
+            "probability": 0.9996490478515625
+          }
+        ]
+      },
+      {
+        "start": 13.12,
+        "end": 14.08,
+        "text": "your clothes start fitting better,",
+        "words": [
+          {
+            "word": " your",
+            "start": 13.12,
+            "end": 13.18,
+            "probability": 0.9931212067604065
+          },
+          {
+            "word": " clothes",
+            "start": 13.18,
+            "end": 13.42,
+            "probability": 0.9992671608924866
+          },
+          {
+            "word": " start",
+            "start": 13.42,
+            "end": 13.64,
+            "probability": 0.9877724051475525
+          },
+          {
+            "word": " fitting",
+            "start": 13.64,
+            "end": 13.84,
+            "probability": 0.9901185631752014
+          },
+          {
+            "word": " better,",
+            "start": 13.84,
+            "end": 14.08,
+            "probability": 0.9993414282798767
+          }
+        ]
+      },
+      {
+        "start": 14.38,
+        "end": 15.98,
+        "text": "and you finally start feeling like yourself again.",
+        "words": [
+          {
+            "word": " and",
+            "start": 14.38,
+            "end": 14.46,
+            "probability": 0.9974554181098938
+          },
+          {
+            "word": " you",
+            "start": 14.46,
+            "end": 14.54,
+            "probability": 0.997063934803009
+          },
+          {
+            "word": " finally",
+            "start": 14.54,
+            "end": 14.8,
+            "probability": 0.9955850839614868
+          },
+          {
+            "word": " start",
+            "start": 14.8,
+            "end": 15.02,
+            "probability": 0.9978317618370056
+          },
+          {
+            "word": " feeling",
+            "start": 15.02,
+            "end": 15.24,
+            "probability": 0.9982497096061707
+          },
+          {
+            "word": " like",
+            "start": 15.24,
+            "end": 15.42,
+            "probability": 0.9979939460754395
+          },
+          {
+            "word": " yourself",
+            "start": 15.42,
+            "end": 15.68,
+            "probability": 0.9941986799240112
+          },
+          {
+            "word": " again.",
+            "start": 15.68,
+            "end": 15.98,
+            "probability": 0.9978926777839661
+          }
+        ]
+      },
+      {
+        "start": 16.2,
+        "end": 18.74,
+        "text": "Nobody can patent cinnamon, lemon, or honey,",
+        "words": [
+          {
+            "word": " Nobody",
+            "start": 16.2,
+            "end": 16.4,
+            "probability": 0.9938010573387146
+          },
+          {
+            "word": " can",
+            "start": 16.4,
+            "end": 16.68,
+            "probability": 0.9971494078636169
+          },
+          {
+            "word": " patent",
+            "start": 16.68,
+            "end": 16.96,
+            "probability": 0.9765288233757019
+          },
+          {
+            "word": " cinnamon,",
+            "start": 16.96,
+            "end": 17.36,
+            "probability": 0.9925779700279236
+          },
+          {
+            "word": " lemon,",
+            "start": 17.78,
+            "end": 17.98,
+            "probability": 0.9968147873878479
+          },
+          {
+            "word": " or",
+            "start": 18.4,
+            "end": 18.48,
+            "probability": 0.9994162321090698
+          },
+          {
+            "word": " honey,",
+            "start": 18.48,
+            "end": 18.74,
+            "probability": 0.9982613921165466
+          }
+        ]
+      },
+      {
+        "start": 18.96,
+        "end": 20.94,
+        "text": "so nobody spends millions telling you about them.",
+        "words": [
+          {
+            "word": " so",
+            "start": 18.96,
+            "end": 19.04,
+            "probability": 0.9947463274002075
+          },
+          {
+            "word": " nobody",
+            "start": 19.04,
+            "end": 19.3,
+            "probability": 0.9964726567268372
+          },
+          {
+            "word": " spends",
+            "start": 19.3,
+            "end": 19.58,
+            "probability": 0.9982435703277588
+          },
+          {
+            "word": " millions",
+            "start": 19.58,
+            "end": 20.0,
+            "probability": 0.9984134435653687
+          },
+          {
+            "word": " telling",
+            "start": 20.0,
+            "end": 20.36,
+            "probability": 0.9955574870109558
+          },
+          {
+            "word": " you",
+            "start": 20.36,
+            "end": 20.56,
+            "probability": 0.996220052242279
+          },
+          {
+            "word": " about",
+            "start": 20.56,
+            "end": 20.72,
+            "probability": 0.9996628761291504
+          },
+          {
+            "word": " them.",
+            "start": 20.72,
+            "end": 20.94,
+            "probability": 0.9994101524353027
+          }
+        ]
+      },
+      {
+        "start": 21.06,
+        "end": 23.96,
+        "text": "This is one of 53 remedies in our Ancient Remedies Bible.",
+        "words": [
+          {
+            "word": " This",
+            "start": 21.06,
+            "end": 21.22,
+            "probability": 0.9966769218444824
+          },
+          {
+            "word": " is",
+            "start": 21.22,
+            "end": 21.34,
+            "probability": 0.9907247424125671
+          },
+          {
+            "word": " one",
+            "start": 21.34,
+            "end": 21.58,
+            "probability": 0.9967729449272156
+          },
+          {
+            "word": " of",
+            "start": 21.58,
+            "end": 21.68,
+            "probability": 0.9991841912269592
+          },
+          {
+            "word": " 53",
+            "start": 21.68,
+            "end": 22.08,
+            "probability": 0.9500257968902588
+          },
+          {
+            "word": " remedies",
+            "start": 22.08,
+            "end": 22.5,
+            "probability": 0.9625065922737122
+          },
+          {
+            "word": " in",
+            "start": 22.5,
+            "end": 22.86,
+            "probability": 0.9975255131721497
+          },
+          {
+            "word": " our",
+            "start": 22.86,
+            "end": 22.98,
+            "probability": 0.9962205290794373
+          },
+          {
+            "word": " Ancient",
+            "start": 22.98,
+            "end": 23.26,
+            "probability": 0.35441502928733826
+          },
+          {
+            "word": " Remedies",
+            "start": 23.26,
+            "end": 23.7,
+            "probability": 0.9833895365397135
+          },
+          {
+            "word": " Bible.",
+            "start": 23.7,
+            "end": 23.96,
+            "probability": 0.9894576668739319
+          }
+        ]
+      },
+      {
+        "start": 24.3,
+        "end": 25.68,
+        "text": "Comment, book, and we'll send it to you.",
+        "words": [
+          {
+            "word": " Comment,",
+            "start": 24.3,
+            "end": 24.54,
+            "probability": 0.9940654039382935
+          },
+          {
+            "word": " book,",
+            "start": 24.68,
+            "end": 24.78,
+            "probability": 0.9126113653182983
+          },
+          {
+            "word": " and",
+            "start": 24.92,
+            "end": 25.0,
+            "probability": 0.9990447163581848
+          },
+          {
+            "word": " we'll",
+            "start": 25.0,
+            "end": 25.12,
+            "probability": 0.9960567951202393
+          },
+          {
+            "word": " send",
+            "start": 25.12,
+            "end": 25.28,
+            "probability": 0.9986135959625244
+          },
+          {
+            "word": " it",
+            "start": 25.28,
+            "end": 25.4,
+            "probability": 0.9985747337341309
+          },
+          {
+            "word": " to",
+            "start": 25.4,
+            "end": 25.52,
+            "probability": 0.9972366094589233
+          },
+          {
+            "word": " you.",
+            "start": 25.52,
+            "end": 25.68,
+            "probability": 0.9996459484100342
+          }
+        ]
+      },
+      {
+        "start": 25.88,
+        "end": 27.0,
+        "text": "Follow us so it reaches you.",
+        "words": [
+          {
+            "word": " Follow",
+            "start": 25.88,
+            "end": 26.12,
+            "probability": 0.9974377155303955
+          },
+          {
+            "word": " us",
+            "start": 26.12,
+            "end": 26.32,
+            "probability": 0.9992073178291321
+          },
+          {
+            "word": " so",
+            "start": 26.32,
+            "end": 26.44,
+            "probability": 0.9002162218093872
+          },
+          {
+            "word": " it",
+            "start": 26.44,
+            "end": 26.54,
+            "probability": 0.9985803365707397
+          },
+          {
+            "word": " reaches",
+            "start": 26.54,
+            "end": 26.76,
+            "probability": 0.9986929297447205
+          },
+          {
+            "word": " you.",
+            "start": 26.76,
+            "end": 27.0,
+            "probability": 0.9992645382881165
+          }
+        ]
+      }
+    ],
+    "text": "This is what cinnamon does to the sugar in your body. In a glass of warm water, mix one teaspoon of cinnamon, a squeeze of fresh lemon juice, and one tablespoon of raw honey. Drink this every morning on an empty stomach. Your energy starts coming back, your clothes start fitting better, and you finally start feeling like yourself again. Nobody can patent cinnamon, lemon, or honey, so nobody spends millions telling you about them. This is one of 53 remedies in our Ancient Remedies Bible. Comment, book, and we'll send it to you. Follow us so it reaches you."
+  },
+  "alignment": {
+    "status": "NOT_REQUESTED",
+    "backend": null
+  },
+  "params": {
+    "timeline_fps": 5,
+    "scene_threshold": 0.2,
+    "model": "small",
+    "language": "auto",
+    "device": "cpu",
+    "compute_type": "int8",
+    "cpu_threads": 2,
+    "jobs": 2,
+    "alignment": "none",
+    "align_model": null,
+    "word_timestamps": true,
+    "no_audio": false,
+    "allow_no_audio": false,
+    "max_frames": 20000,
+    "command_timeout": 300
+  },
+  "environment": {
+    "os": "macOS-27.0.1-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.15",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "whisperx": "3.8.6",
+      "ctranslate2": "4.8.2",
+      "Pillow": "12.3.0",
+      "av": "18.0.0",
+      "torch": "2.8.0",
+      "torchaudio": "2.8.0"
+    },
+    "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+    "ffprobe": "/opt/homebrew/bin/ffprobe"
+  },
+  "errors": [],
+  "coverage": {
+    "source_duration_s": 27.241375,
+    "sample_interval_s": 0.2,
+    "timeline_count": 136,
+    "timestamp_basis": "fps_filter_sampling_grid",
+    "visual_review_performed": false
+  },
+  "elapsed_seconds": 11.542
+}

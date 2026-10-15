@@ -1,0 +1,1415 @@
+[
+  {
+    "start": 0.0,
+    "end": 2.5,
+    "text": "This is what cinnamon does to the sugar in your body.",
+    "words": [
+      {
+        "word": " This",
+        "start": 0.0,
+        "end": 0.14,
+        "probability": 0.8673236966133118
+      },
+      {
+        "word": " is",
+        "start": 0.14,
+        "end": 0.28,
+        "probability": 0.998199462890625
+      },
+      {
+        "word": " what",
+        "start": 0.28,
+        "end": 0.44,
+        "probability": 0.9983577132225037
+      },
+      {
+        "word": " cinnamon",
+        "start": 0.44,
+        "end": 0.74,
+        "probability": 0.9900484085083008
+      },
+      {
+        "word": " does",
+        "start": 0.74,
+        "end": 1.1,
+        "probability": 0.9987209439277649
+      },
+      {
+        "word": " to",
+        "start": 1.1,
+        "end": 1.32,
+        "probability": 0.9980064034461975
+      },
+      {
+        "word": " the",
+        "start": 1.32,
+        "end": 1.46,
+        "probability": 0.9990702271461487
+      },
+      {
+        "word": " sugar",
+        "start": 1.46,
+        "end": 1.7,
+        "probability": 0.9992892742156982
+      },
+      {
+        "word": " in",
+        "start": 1.7,
+        "end": 2.02,
+        "probability": 0.9985142350196838
+      },
+      {
+        "word": " your",
+        "start": 2.02,
+        "end": 2.16,
+        "probability": 0.9988897442817688
+      },
+      {
+        "word": " body.",
+        "start": 2.16,
+        "end": 2.5,
+        "probability": 0.9990063309669495
+      }
+    ]
+  },
+  {
+    "start": 5.47,
+    "end": 8.43,
+    "text": "In a glass of warm water, mix one teaspoon of cinnamon,",
+    "words": [
+      {
+        "word": " In",
+        "start": 5.47,
+        "end": 5.49,
+        "probability": 0.8236628770828247
+      },
+      {
+        "word": " a",
+        "start": 5.49,
+        "end": 5.61,
+        "probability": 0.9992232322692871
+      },
+      {
+        "word": " glass",
+        "start": 5.61,
+        "end": 5.81,
+        "probability": 0.9987215399742126
+      },
+      {
+        "word": " of",
+        "start": 5.81,
+        "end": 6.03,
+        "probability": 0.9993896484375
+      },
+      {
+        "word": " warm",
+        "start": 6.03,
+        "end": 6.29,
+        "probability": 0.9982934594154358
+      },
+      {
+        "word": " water,",
+        "start": 6.29,
+        "end": 6.67,
+        "probability": 0.9989826083183289
+      },
+      {
+        "word": " mix",
+        "start": 7.01,
+        "end": 7.11,
+        "probability": 0.9940714240074158
+      },
+      {
+        "word": " one",
+        "start": 7.11,
+        "end": 7.49,
+        "probability": 0.9042657017707825
+      },
+      {
+        "word": " teaspoon",
+        "start": 7.49,
+        "end": 7.81,
+        "probability": 0.9965503215789795
+      },
+      {
+        "word": " of",
+        "start": 7.81,
+        "end": 8.07,
+        "probability": 0.9992891550064087
+      },
+      {
+        "word": " cinnamon,",
+        "start": 8.07,
+        "end": 8.43,
+        "probability": 0.9990174770355225
+      }
+    ]
+  },
+  {
+    "start": 8.69,
+    "end": 10.15,
+    "text": "a squeeze of fresh lemon juice,",
+    "words": [
+      {
+        "word": " a",
+        "start": 8.69,
+        "end": 8.79,
+        "probability": 0.99644935131073
+      },
+      {
+        "word": " squeeze",
+        "start": 8.79,
+        "end": 9.07,
+        "probability": 0.998826801776886
+      },
+      {
+        "word": " of",
+        "start": 9.07,
+        "end": 9.29,
+        "probability": 0.9988508224487305
+      },
+      {
+        "word": " fresh",
+        "start": 9.29,
+        "end": 9.53,
+        "probability": 0.9979477524757385
+      },
+      {
+        "word": " lemon",
+        "start": 9.53,
+        "end": 9.79,
+        "probability": 0.9993543028831482
+      },
+      {
+        "word": " juice,",
+        "start": 9.79,
+        "end": 10.15,
+        "probability": 0.9997228980064392
+      }
+    ]
+  },
+  {
+    "start": 10.43,
+    "end": 12.25,
+    "text": "and one tablespoon of raw honey.",
+    "words": [
+      {
+        "word": " and",
+        "start": 10.43,
+        "end": 10.61,
+        "probability": 0.9985890984535217
+      },
+      {
+        "word": " one",
+        "start": 10.61,
+        "end": 10.89,
+        "probability": 0.9887497425079346
+      },
+      {
+        "word": " tablespoon",
+        "start": 10.89,
+        "end": 11.29,
+        "probability": 0.9984787106513977
+      },
+      {
+        "word": " of",
+        "start": 11.29,
+        "end": 11.73,
+        "probability": 0.9982280135154724
+      },
+      {
+        "word": " raw",
+        "start": 11.73,
+        "end": 11.97,
+        "probability": 0.9975208640098572
+      },
+      {
+        "word": " honey.",
+        "start": 11.97,
+        "end": 12.25,
+        "probability": 0.9987322688102722
+      }
+    ]
+  },
+  {
+    "start": 12.47,
+    "end": 14.29,
+    "text": "Now, if you wanna take this to the next level,",
+    "words": [
+      {
+        "word": " Now,",
+        "start": 12.47,
+        "end": 12.61,
+        "probability": 0.982998251914978
+      },
+      {
+        "word": " if",
+        "start": 12.63,
+        "end": 12.75,
+        "probability": 0.9980862140655518
+      },
+      {
+        "word": " you",
+        "start": 12.75,
+        "end": 12.87,
+        "probability": 0.9995368719100952
+      },
+      {
+        "word": " wanna",
+        "start": 12.87,
+        "end": 12.99,
+        "probability": 0.3877560496330261
+      },
+      {
+        "word": " take",
+        "start": 12.99,
+        "end": 13.23,
+        "probability": 0.996692419052124
+      },
+      {
+        "word": " this",
+        "start": 13.23,
+        "end": 13.41,
+        "probability": 0.9989987015724182
+      },
+      {
+        "word": " to",
+        "start": 13.41,
+        "end": 13.57,
+        "probability": 0.9983450174331665
+      },
+      {
+        "word": " the",
+        "start": 13.57,
+        "end": 13.69,
+        "probability": 0.9993315935134888
+      },
+      {
+        "word": " next",
+        "start": 13.69,
+        "end": 13.93,
+        "probability": 0.9997208714485168
+      },
+      {
+        "word": " level,",
+        "start": 13.93,
+        "end": 14.29,
+        "probability": 0.9998487234115601
+      }
+    ]
+  },
+  {
+    "start": 14.55,
+    "end": 17.17,
+    "text": "add a slice of fresh ginger to get your digestion moving,",
+    "words": [
+      {
+        "word": " add",
+        "start": 14.55,
+        "end": 14.69,
+        "probability": 0.9970239996910095
+      },
+      {
+        "word": " a",
+        "start": 14.69,
+        "end": 14.83,
+        "probability": 0.9989650249481201
+      },
+      {
+        "word": " slice",
+        "start": 14.83,
+        "end": 15.05,
+        "probability": 0.99913090467453
+      },
+      {
+        "word": " of",
+        "start": 15.05,
+        "end": 15.27,
+        "probability": 0.9992601275444031
+      },
+      {
+        "word": " fresh",
+        "start": 15.27,
+        "end": 15.49,
+        "probability": 0.9987314343452454
+      },
+      {
+        "word": " ginger",
+        "start": 15.49,
+        "end": 15.87,
+        "probability": 0.9982863068580627
+      },
+      {
+        "word": " to",
+        "start": 15.87,
+        "end": 16.07,
+        "probability": 0.9932368397712708
+      },
+      {
+        "word": " get",
+        "start": 16.07,
+        "end": 16.17,
+        "probability": 0.9995262622833252
+      },
+      {
+        "word": " your",
+        "start": 16.17,
+        "end": 16.31,
+        "probability": 0.9979485869407654
+      },
+      {
+        "word": " digestion",
+        "start": 16.31,
+        "end": 16.69,
+        "probability": 0.9994968175888062
+      },
+      {
+        "word": " moving,",
+        "start": 16.69,
+        "end": 17.17,
+        "probability": 0.9996089339256287
+      }
+    ]
+  },
+  {
+    "start": 17.43,
+    "end": 19.45,
+    "text": "a pinch of turmeric to calm the inflammation,",
+    "words": [
+      {
+        "word": " a",
+        "start": 17.43,
+        "end": 17.53,
+        "probability": 0.9986785054206848
+      },
+      {
+        "word": " pinch",
+        "start": 17.53,
+        "end": 17.73,
+        "probability": 0.9995469450950623
+      },
+      {
+        "word": " of",
+        "start": 17.73,
+        "end": 17.91,
+        "probability": 0.9987620115280151
+      },
+      {
+        "word": " turmeric",
+        "start": 17.91,
+        "end": 18.23,
+        "probability": 0.9902171492576599
+      },
+      {
+        "word": " to",
+        "start": 18.23,
+        "end": 18.51,
+        "probability": 0.9974155426025391
+      },
+      {
+        "word": " calm",
+        "start": 18.51,
+        "end": 18.75,
+        "probability": 0.9974749684333801
+      },
+      {
+        "word": " the",
+        "start": 18.75,
+        "end": 18.91,
+        "probability": 0.9990168809890747
+      },
+      {
+        "word": " inflammation,",
+        "start": 18.91,
+        "end": 19.45,
+        "probability": 0.9979636669158936
+      }
+    ]
+  },
+  {
+    "start": 19.71,
+    "end": 21.59,
+    "text": "and a tiny pinch of pink salt",
+    "words": [
+      {
+        "word": " and",
+        "start": 19.71,
+        "end": 19.85,
+        "probability": 0.9984866380691528
+      },
+      {
+        "word": " a",
+        "start": 19.85,
+        "end": 19.99,
+        "probability": 0.9972557425498962
+      },
+      {
+        "word": " tiny",
+        "start": 19.99,
+        "end": 20.33,
+        "probability": 0.9997714161872864
+      },
+      {
+        "word": " pinch",
+        "start": 20.33,
+        "end": 20.71,
+        "probability": 0.9983515739440918
+      },
+      {
+        "word": " of",
+        "start": 20.71,
+        "end": 20.97,
+        "probability": 0.9992720484733582
+      },
+      {
+        "word": " pink",
+        "start": 20.97,
+        "end": 21.19,
+        "probability": 0.9974008798599243
+      },
+      {
+        "word": " salt",
+        "start": 21.19,
+        "end": 21.59,
+        "probability": 0.9993867874145508
+      }
+    ]
+  },
+  {
+    "start": 21.59,
+    "end": 24.27,
+    "text": "so your body holds onto water instead of bloat.",
+    "words": [
+      {
+        "word": " so",
+        "start": 21.59,
+        "end": 21.87,
+        "probability": 0.7877252697944641
+      },
+      {
+        "word": " your",
+        "start": 21.87,
+        "end": 22.01,
+        "probability": 0.9932530522346497
+      },
+      {
+        "word": " body",
+        "start": 22.01,
+        "end": 22.27,
+        "probability": 0.9994927644729614
+      },
+      {
+        "word": " holds",
+        "start": 22.27,
+        "end": 22.59,
+        "probability": 0.9976807832717896
+      },
+      {
+        "word": " onto",
+        "start": 22.59,
+        "end": 22.85,
+        "probability": 0.8087526559829712
+      },
+      {
+        "word": " water",
+        "start": 22.85,
+        "end": 23.33,
+        "probability": 0.9987838864326477
+      },
+      {
+        "word": " instead",
+        "start": 23.33,
+        "end": 23.79,
+        "probability": 0.9558761119842529
+      },
+      {
+        "word": " of",
+        "start": 23.79,
+        "end": 23.97,
+        "probability": 0.9993306398391724
+      },
+      {
+        "word": " bloat.",
+        "start": 23.97,
+        "end": 24.27,
+        "probability": 0.9815915524959564
+      }
+    ]
+  },
+  {
+    "start": 24.51,
+    "end": 26.77,
+    "text": "Mix it well, then drink this on an empty stomach",
+    "words": [
+      {
+        "word": " Mix",
+        "start": 24.51,
+        "end": 24.65,
+        "probability": 0.9967470169067383
+      },
+      {
+        "word": " it",
+        "start": 24.65,
+        "end": 24.85,
+        "probability": 0.9992499947547913
+      },
+      {
+        "word": " well,",
+        "start": 24.85,
+        "end": 25.11,
+        "probability": 0.9993103742599487
+      },
+      {
+        "word": " then",
+        "start": 25.25,
+        "end": 25.43,
+        "probability": 0.9903990030288696
+      },
+      {
+        "word": " drink",
+        "start": 25.43,
+        "end": 25.61,
+        "probability": 0.9954848289489746
+      },
+      {
+        "word": " this",
+        "start": 25.61,
+        "end": 25.87,
+        "probability": 0.9988710284233093
+      },
+      {
+        "word": " on",
+        "start": 25.87,
+        "end": 26.03,
+        "probability": 0.9985993504524231
+      },
+      {
+        "word": " an",
+        "start": 26.03,
+        "end": 26.15,
+        "probability": 0.9956046342849731
+      },
+      {
+        "word": " empty",
+        "start": 26.15,
+        "end": 26.43,
+        "probability": 0.9997674822807312
+      },
+      {
+        "word": " stomach",
+        "start": 26.43,
+        "end": 26.77,
+        "probability": 0.9995972514152527
+      }
+    ]
+  },
+  {
+    "start": 26.77,
+    "end": 27.89,
+    "text": "every single morning.",
+    "words": [
+      {
+        "word": " every",
+        "start": 26.77,
+        "end": 27.23,
+        "probability": 0.9840226173400879
+      },
+      {
+        "word": " single",
+        "start": 27.23,
+        "end": 27.55,
+        "probability": 0.9982084035873413
+      },
+      {
+        "word": " morning.",
+        "start": 27.55,
+        "end": 27.89,
+        "probability": 0.9998496770858765
+      }
+    ]
+  },
+  {
+    "start": 28.05,
+    "end": 30.53,
+    "text": "By day three, your energy starts coming back.",
+    "words": [
+      {
+        "word": " By",
+        "start": 28.05,
+        "end": 28.21,
+        "probability": 0.9976880550384521
+      },
+      {
+        "word": " day",
+        "start": 28.21,
+        "end": 28.39,
+        "probability": 0.9796828627586365
+      },
+      {
+        "word": " three,",
+        "start": 28.39,
+        "end": 28.85,
+        "probability": 0.9837459325790405
+      },
+      {
+        "word": " your",
+        "start": 29.07,
+        "end": 29.23,
+        "probability": 0.9946852922439575
+      },
+      {
+        "word": " energy",
+        "start": 29.23,
+        "end": 29.55,
+        "probability": 0.9989625215530396
+      },
+      {
+        "word": " starts",
+        "start": 29.55,
+        "end": 29.87,
+        "probability": 0.9980705380439758
+      },
+      {
+        "word": " coming",
+        "start": 29.87,
+        "end": 30.19,
+        "probability": 0.9993625283241272
+      },
+      {
+        "word": " back.",
+        "start": 30.19,
+        "end": 30.53,
+        "probability": 0.9997875094413757
+      }
+    ]
+  },
+  {
+    "start": 30.53,
+    "end": 32.83,
+    "text": "Day five, your clothes start fitting better.",
+    "words": [
+      {
+        "word": " Day",
+        "start": 30.53,
+        "end": 30.83,
+        "probability": 0.8755322694778442
+      },
+      {
+        "word": " five,",
+        "start": 30.83,
+        "end": 31.27,
+        "probability": 0.6217904090881348
+      },
+      {
+        "word": " your",
+        "start": 31.55,
+        "end": 31.63,
+        "probability": 0.9885823726654053
+      },
+      {
+        "word": " clothes",
+        "start": 31.63,
+        "end": 31.93,
+        "probability": 0.998729407787323
+      },
+      {
+        "word": " start",
+        "start": 31.93,
+        "end": 32.21,
+        "probability": 0.9981383085250854
+      },
+      {
+        "word": " fitting",
+        "start": 32.21,
+        "end": 32.51,
+        "probability": 0.9922257661819458
+      },
+      {
+        "word": " better.",
+        "start": 32.51,
+        "end": 32.83,
+        "probability": 0.9986446499824524
+      }
+    ]
+  },
+  {
+    "start": 32.99,
+    "end": 34.05,
+    "text": "And after only a week,",
+    "words": [
+      {
+        "word": " And",
+        "start": 32.99,
+        "end": 33.11,
+        "probability": 0.9449054598808289
+      },
+      {
+        "word": " after",
+        "start": 33.11,
+        "end": 33.33,
+        "probability": 0.9817280769348145
+      },
+      {
+        "word": " only",
+        "start": 33.33,
+        "end": 33.61,
+        "probability": 0.9975226521492004
+      },
+      {
+        "word": " a",
+        "start": 33.61,
+        "end": 33.79,
+        "probability": 0.9982314705848694
+      },
+      {
+        "word": " week,",
+        "start": 33.79,
+        "end": 34.05,
+        "probability": 0.9995760321617126
+      }
+    ]
+  },
+  {
+    "start": 34.23,
+    "end": 36.55,
+    "text": "you'll finally start feeling like yourself again.",
+    "words": [
+      {
+        "word": " you'll",
+        "start": 34.23,
+        "end": 34.49,
+        "probability": 0.992114394903183
+      },
+      {
+        "word": " finally",
+        "start": 34.49,
+        "end": 34.75,
+        "probability": 0.9989896416664124
+      },
+      {
+        "word": " start",
+        "start": 34.75,
+        "end": 35.21,
+        "probability": 0.9986294507980347
+      },
+      {
+        "word": " feeling",
+        "start": 35.21,
+        "end": 35.51,
+        "probability": 0.998450756072998
+      },
+      {
+        "word": " like",
+        "start": 35.51,
+        "end": 35.81,
+        "probability": 0.9856001138687134
+      },
+      {
+        "word": " yourself",
+        "start": 35.81,
+        "end": 36.17,
+        "probability": 0.9966189861297607
+      },
+      {
+        "word": " again.",
+        "start": 36.17,
+        "end": 36.55,
+        "probability": 0.9958418011665344
+      }
+    ]
+  },
+  {
+    "start": 36.75,
+    "end": 38.73,
+    "text": "But let's be honest, grating ginger",
+    "words": [
+      {
+        "word": " But",
+        "start": 36.75,
+        "end": 36.83,
+        "probability": 0.9942554831504822
+      },
+      {
+        "word": " let's",
+        "start": 36.83,
+        "end": 37.09,
+        "probability": 0.9859563708305359
+      },
+      {
+        "word": " be",
+        "start": 37.09,
+        "end": 37.21,
+        "probability": 0.9991576671600342
+      },
+      {
+        "word": " honest,",
+        "start": 37.21,
+        "end": 37.57,
+        "probability": 0.9998582601547241
+      },
+      {
+        "word": " grating",
+        "start": 37.89,
+        "end": 38.27,
+        "probability": 0.9156871140003204
+      },
+      {
+        "word": " ginger",
+        "start": 38.27,
+        "end": 38.73,
+        "probability": 0.9940168857574463
+      }
+    ]
+  },
+  {
+    "start": 38.73,
+    "end": 41.79,
+    "text": "and measuring six ingredients every morning is annoying",
+    "words": [
+      {
+        "word": " and",
+        "start": 38.73,
+        "end": 39.05,
+        "probability": 0.9866754412651062
+      },
+      {
+        "word": " measuring",
+        "start": 39.05,
+        "end": 39.43,
+        "probability": 0.9993009567260742
+      },
+      {
+        "word": " six",
+        "start": 39.43,
+        "end": 39.77,
+        "probability": 0.9256698489189148
+      },
+      {
+        "word": " ingredients",
+        "start": 39.77,
+        "end": 40.27,
+        "probability": 0.9978505373001099
+      },
+      {
+        "word": " every",
+        "start": 40.27,
+        "end": 40.71,
+        "probability": 0.9954076409339905
+      },
+      {
+        "word": " morning",
+        "start": 40.71,
+        "end": 41.05,
+        "probability": 0.9998754262924194
+      },
+      {
+        "word": " is",
+        "start": 41.05,
+        "end": 41.37,
+        "probability": 0.9846919178962708
+      },
+      {
+        "word": " annoying",
+        "start": 41.37,
+        "end": 41.79,
+        "probability": 0.9987058639526367
+      }
+    ]
+  },
+  {
+    "start": 41.79,
+    "end": 43.33,
+    "text": "and nobody sticks with that.",
+    "words": [
+      {
+        "word": " and",
+        "start": 41.79,
+        "end": 42.19,
+        "probability": 0.4849309027194977
+      },
+      {
+        "word": " nobody",
+        "start": 42.19,
+        "end": 42.55,
+        "probability": 0.9981775283813477
+      },
+      {
+        "word": " sticks",
+        "start": 42.55,
+        "end": 42.87,
+        "probability": 0.9991866946220398
+      },
+      {
+        "word": " with",
+        "start": 42.87,
+        "end": 43.11,
+        "probability": 0.9995443224906921
+      },
+      {
+        "word": " that.",
+        "start": 43.11,
+        "end": 43.33,
+        "probability": 0.99874347448349
+      }
+    ]
+  },
+  {
+    "start": 43.37,
+    "end": 45.81,
+    "text": "That's why I just add one scoop of Jupy Hydration,",
+    "words": [
+      {
+        "word": " That's",
+        "start": 43.37,
+        "end": 43.61,
+        "probability": 0.9978398978710175
+      },
+      {
+        "word": " why",
+        "start": 43.61,
+        "end": 43.73,
+        "probability": 0.9995617270469666
+      },
+      {
+        "word": " I",
+        "start": 43.73,
+        "end": 43.85,
+        "probability": 0.9956185221672058
+      },
+      {
+        "word": " just",
+        "start": 43.85,
+        "end": 44.01,
+        "probability": 0.9987577199935913
+      },
+      {
+        "word": " add",
+        "start": 44.01,
+        "end": 44.25,
+        "probability": 0.9900272488594055
+      },
+      {
+        "word": " one",
+        "start": 44.25,
+        "end": 44.47,
+        "probability": 0.9969281554222107
+      },
+      {
+        "word": " scoop",
+        "start": 44.47,
+        "end": 44.77,
+        "probability": 0.9995668530464172
+      },
+      {
+        "word": " of",
+        "start": 44.77,
+        "end": 45.07,
+        "probability": 0.9993529915809631
+      },
+      {
+        "word": " Jupy",
+        "start": 45.07,
+        "end": 45.27,
+        "probability": 0.7320105830828348
+      },
+      {
+        "word": " Hydration,",
+        "start": 45.27,
+        "end": 45.81,
+        "probability": 0.789966493844986
+      }
+    ]
+  },
+  {
+    "start": 46.05,
+    "end": 47.77,
+    "text": "all important ingredients in one scoop.",
+    "words": [
+      {
+        "word": " all",
+        "start": 46.05,
+        "end": 46.21,
+        "probability": 0.9898608922958374
+      },
+      {
+        "word": " important",
+        "start": 46.21,
+        "end": 46.53,
+        "probability": 0.8329352736473083
+      },
+      {
+        "word": " ingredients",
+        "start": 46.53,
+        "end": 46.97,
+        "probability": 0.9982315897941589
+      },
+      {
+        "word": " in",
+        "start": 46.97,
+        "end": 47.25,
+        "probability": 0.9746688008308411
+      },
+      {
+        "word": " one",
+        "start": 47.25,
+        "end": 47.45,
+        "probability": 0.9991006851196289
+      },
+      {
+        "word": " scoop.",
+        "start": 47.45,
+        "end": 47.77,
+        "probability": 0.9993044137954712
+      }
+    ]
+  },
+  {
+    "start": 47.95,
+    "end": 49.33,
+    "text": "It goes right into my morning water",
+    "words": [
+      {
+        "word": " It",
+        "start": 47.95,
+        "end": 48.03,
+        "probability": 0.996496856212616
+      },
+      {
+        "word": " goes",
+        "start": 48.03,
+        "end": 48.15,
+        "probability": 0.9996554851531982
+      },
+      {
+        "word": " right",
+        "start": 48.15,
+        "end": 48.43,
+        "probability": 0.9980024695396423
+      },
+      {
+        "word": " into",
+        "start": 48.43,
+        "end": 48.61,
+        "probability": 0.9980826377868652
+      },
+      {
+        "word": " my",
+        "start": 48.61,
+        "end": 48.79,
+        "probability": 0.9991894364356995
+      },
+      {
+        "word": " morning",
+        "start": 48.79,
+        "end": 49.01,
+        "probability": 0.9970144033432007
+      },
+      {
+        "word": " water",
+        "start": 49.01,
+        "end": 49.33,
+        "probability": 0.9990398287773132
+      }
+    ]
+  },
+  {
+    "start": 49.33,
+    "end": 50.91,
+    "text": "and tastes like fresh blood orange.",
+    "words": [
+      {
+        "word": " and",
+        "start": 49.33,
+        "end": 49.65,
+        "probability": 0.933167040348053
+      },
+      {
+        "word": " tastes",
+        "start": 49.65,
+        "end": 49.83,
+        "probability": 0.9845908880233765
+      },
+      {
+        "word": " like",
+        "start": 49.83,
+        "end": 50.07,
+        "probability": 0.9991163611412048
+      },
+      {
+        "word": " fresh",
+        "start": 50.07,
+        "end": 50.33,
+        "probability": 0.9908071160316467
+      },
+      {
+        "word": " blood",
+        "start": 50.33,
+        "end": 50.59,
+        "probability": 0.9856709837913513
+      },
+      {
+        "word": " orange.",
+        "start": 50.59,
+        "end": 50.91,
+        "probability": 0.9947634935379028
+      }
+    ]
+  },
+  {
+    "start": 51.15,
+    "end": 52.75,
+    "text": "If you're dealing with bloating every day,",
+    "words": [
+      {
+        "word": " If",
+        "start": 51.15,
+        "end": 51.29,
+        "probability": 0.9959548711776733
+      },
+      {
+        "word": " you're",
+        "start": 51.29,
+        "end": 51.45,
+        "probability": 0.9987516403198242
+      },
+      {
+        "word": " dealing",
+        "start": 51.45,
+        "end": 51.67,
+        "probability": 0.9995703101158142
+      },
+      {
+        "word": " with",
+        "start": 51.67,
+        "end": 51.87,
+        "probability": 0.9997956156730652
+      },
+      {
+        "word": " bloating",
+        "start": 51.87,
+        "end": 52.23,
+        "probability": 0.9986239969730377
+      },
+      {
+        "word": " every",
+        "start": 52.23,
+        "end": 52.47,
+        "probability": 0.9497889280319214
+      },
+      {
+        "word": " day,",
+        "start": 52.47,
+        "end": 52.75,
+        "probability": 0.999648928642273
+      }
+    ]
+  },
+  {
+    "start": 52.91,
+    "end": 55.53,
+    "text": "you can find it by searching Jupy Hydration on Amazon",
+    "words": [
+      {
+        "word": " you",
+        "start": 52.91,
+        "end": 53.03,
+        "probability": 0.9969406127929688
+      },
+      {
+        "word": " can",
+        "start": 53.03,
+        "end": 53.17,
+        "probability": 0.9993316531181335
+      },
+      {
+        "word": " find",
+        "start": 53.17,
+        "end": 53.39,
+        "probability": 0.9993519186973572
+      },
+      {
+        "word": " it",
+        "start": 53.39,
+        "end": 53.53,
+        "probability": 0.9993795156478882
+      },
+      {
+        "word": " by",
+        "start": 53.53,
+        "end": 53.67,
+        "probability": 0.9994038343429565
+      },
+      {
+        "word": " searching",
+        "start": 53.67,
+        "end": 53.97,
+        "probability": 0.9992771744728088
+      },
+      {
+        "word": " Jupy",
+        "start": 53.97,
+        "end": 54.45,
+        "probability": 0.9172576069831848
+      },
+      {
+        "word": " Hydration",
+        "start": 54.45,
+        "end": 54.89,
+        "probability": 0.9598118960857391
+      },
+      {
+        "word": " on",
+        "start": 54.89,
+        "end": 55.07,
+        "probability": 0.9984216690063477
+      },
+      {
+        "word": " Amazon",
+        "start": 55.07,
+        "end": 55.53,
+        "probability": 0.986599326133728
+      }
+    ]
+  },
+  {
+    "start": 55.53,
+    "end": 57.13,
+    "text": "or just check the link in my bio.",
+    "words": [
+      {
+        "word": " or",
+        "start": 55.53,
+        "end": 55.91,
+        "probability": 0.6726574301719666
+      },
+      {
+        "word": " just",
+        "start": 55.91,
+        "end": 56.11,
+        "probability": 0.996295154094696
+      },
+      {
+        "word": " check",
+        "start": 56.11,
+        "end": 56.29,
+        "probability": 0.9975335597991943
+      },
+      {
+        "word": " the",
+        "start": 56.29,
+        "end": 56.45,
+        "probability": 0.998808741569519
+      },
+      {
+        "word": " link",
+        "start": 56.45,
+        "end": 56.57,
+        "probability": 0.999610960483551
+      },
+      {
+        "word": " in",
+        "start": 56.57,
+        "end": 56.71,
+        "probability": 0.9983270764350891
+      },
+      {
+        "word": " my",
+        "start": 56.71,
+        "end": 56.87,
+        "probability": 0.9989737272262573
+      },
+      {
+        "word": " bio.",
+        "start": 56.87,
+        "end": 57.13,
+        "probability": 0.998115062713623
+      }
+    ]
+  },
+  {
+    "start": 57.35,
+    "end": 58.39,
+    "text": "And if you're watching on Facebook,",
+    "words": [
+      {
+        "word": " And",
+        "start": 57.35,
+        "end": 57.45,
+        "probability": 0.9922468662261963
+      },
+      {
+        "word": " if",
+        "start": 57.45,
+        "end": 57.55,
+        "probability": 0.9973502159118652
+      },
+      {
+        "word": " you're",
+        "start": 57.55,
+        "end": 57.67,
+        "probability": 0.9995260238647461
+      },
+      {
+        "word": " watching",
+        "start": 57.67,
+        "end": 57.91,
+        "probability": 0.9987480640411377
+      },
+      {
+        "word": " on",
+        "start": 57.91,
+        "end": 58.13,
+        "probability": 0.9990843534469604
+      },
+      {
+        "word": " Facebook,",
+        "start": 58.13,
+        "end": 58.39,
+        "probability": 0.9952660799026489
+      }
+    ]
+  },
+  {
+    "start": 58.61,
+    "end": 59.67,
+    "text": "the link is in the description.",
+    "words": [
+      {
+        "word": " the",
+        "start": 58.61,
+        "end": 58.83,
+        "probability": 0.9985155463218689
+      },
+      {
+        "word": " link",
+        "start": 58.83,
+        "end": 58.97,
+        "probability": 0.9997003078460693
+      },
+      {
+        "word": " is",
+        "start": 58.97,
+        "end": 59.13,
+        "probability": 0.998945415019989
+      },
+      {
+        "word": " in",
+        "start": 59.13,
+        "end": 59.25,
+        "probability": 0.9992616772651672
+      },
+      {
+        "word": " the",
+        "start": 59.25,
+        "end": 59.35,
+        "probability": 0.9998103976249695
+      },
+      {
+        "word": " description.",
+        "start": 59.35,
+        "end": 59.67,
+        "probability": 0.9993358254432678
+      }
+    ]
+  }
+]
