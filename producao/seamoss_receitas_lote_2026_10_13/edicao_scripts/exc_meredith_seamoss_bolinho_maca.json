@@ -1,0 +1,30 @@
+{
+ "items": [
+  {
+   "file": "/Users/macbookairm2/Desktop/Meredith - V02/V21_20261013222115.mp4",
+   "sha256": "08f1eda2e3a44db466d817e01951d787c35086456c45c50dab63286ed7d7b259",
+   "approved_script": "Search Natural Rems Sea Moss on Amazon. Or tap my profile picture, the link is waiting in my stories, or right there in my bio.",
+   "allowed_problems": [
+    "trocou \"rems sea moss\" por \"rem's cmos\""
+   ]
+  },
+  {
+   "file": "/Users/macbookairm2/Desktop/Meredith - V02/V18_20261013222115.mp4",
+   "sha256": "ba40743c1309f7bcca7a0df3d5010aa179be0a674ba1eb311f4726489da80bd1",
+   "approved_script": "The one I trust is Natural Rems Sea Moss. Wild Irish sea moss, apple, apple cider vinegar, ginger and dandelion, sixteen in one gummy.",
+   "allowed_problems": [
+    "trocou \"rems sea moss\" por \"rim seamaw\"",
+    "trocou \"dandelion\" por \"dandelions\""
+   ]
+  },
+  {
+   "file": "/Users/macbookairm2/Desktop/Meredith - V02/V16_20261013222115.mp4",
+   "sha256": "38acfc47b25183b59506c13241132133129b544effd959c5015b505e960230c6",
+   "approved_script": "So on busy days, baby, I reach for what my grandmother gave me back in Kingston, sea moss. It feeds that same gut.",
+   "allowed_problems": [
+    "trocou \"sea moss\" por \"cmos\""
+   ]
+  }
+ ],
+ "user_authorization": "Luigi, 2026-10-14: 'resolva tudo isso e n\u00e3o me pe\u00e7a mais aux\u00edlio'; exce\u00e7\u00e3o s\u00f3 para erro de escuta do whisper small conferido com o medium.en no take inteiro e em trechos"
+}

@@ -1,0 +1,24 @@
+# Relatório de edição · Meredith - V03
+
+- Ordem dos takes (pela fala): 1. V01_20261013232036.mp4 (T1) → 2. V02_20261013232036.mp4 (T2) → 3. V03_20261013232036.mp4 (T3) → 4. V04_20261013232036.mp4 (T4) → 5. V05_20261013232036.mp4 (T5) → 6. V06_20261013232036.mp4 (T6) → 7. V07_20261013232036.mp4 (T7) → 8. V08_20261013232036.mp4 (T8) → 9. V09_20261013232036.mp4 (T9) → 10. V10_20261013232036.mp4 (T10) → 11. V11_20261013232036.mp4 (T11) → 12. V12_20261013232036.mp4 (T12) → 13. V13_20261013232036.mp4 (T13) → 14. V14_20261013232036.mp4 (T14) → 15. V15_20261013232036.mp4 (T15) → 16. V16_20261013232036.mp4 (T16) → 17. V17_20261013232036.mp4 (T17)
+- Produção: `meredith_seamoss_wrap_lentilha` (`producao/meredith_seamoss_wrap_lentilha/ENTREGA_MEREDITH.md`), semelhança 99%
+- Exceção autorizada por Luigi, take 11: trocou "sea moss" por "cmos"; áudio original mantido, legenda do roteiro aprovado.
+- Exceção autorizada por Luigi, take 13: trocou "rems" por "rim"; áudio original mantido, legenda do roteiro aprovado.
+- Exceção autorizada por Luigi, take 16: trocou "rems sea moss" por "rem's cmos"; áudio original mantido, legenda do roteiro aprovado.
+- Fala dos takes contra o roteiro, palavra por palavra: OK
+  - aparado: 1. V01_20261013232036.mp4: cortado o que o Flow inventou ou repetiu: "- (0.4-1.2s, fala que o whisper tinha escondido)"; ouvir a emenda
+  - aparado: 3. V03_20261013232036.mp4: cortado o que o Flow inventou ou repetiu: "You (3.2-3.9s, fala que o whisper tinha escondido) / You (4.2-6.2s, fala que o whisper tinha escondido)"; ouvir a emenda
+  - aviso: takes sem alinhamento forçado (corte pelo método antigo): [5, 6, 7, 8, 9]
+- Variação deste vídeo (rodízio): legenda padrao · SFX nenhum · fonte do pico anton
+- Acabamento HyperFrames: zoom em side 10.4s, zoom em dairy 16.4s, zoom em hours 24.4s, zoom em weekday 32.7s, zoom em moss 38.3s, zoom em taste 51.5s · zoom sim · grão não · SFX nenhum
+- Sem silêncio fora da rampa: FALHA
+- Sem quadro fantasma nos cortes: OK
+- Legenda com o texto do roteiro (contagem bateu): FALHA
+- Nenhuma legenda com menos de 0,1s: OK
+- Vídeo em 1080x1920: OK
+  - silêncios: [(28.1, 28.400000000000002), (60.2, 60.5)]
+- Duração 68.3s · 3.82 palavras/s · 42 trechos (0 rampas) · 82 legendas
+- Música: musica 2.mp3 (a partir de 0.0s, cama base -18 dB)
+- Estilo fitwell · fala a 1.20x (alvo 3.8 palavras/s) · light leak na entrada dos takes nenhum; rampa nos takes [1]; legenda alta nos takes [1]
+- Arquivo: `/tmp/edicao/Meredith - V03-cf9325ff/Meredith - V03_editado.mp4` (85.0 MB) · tempo total 299s
+- Olhar antes de entregar: `cortes.png` (pulo) e `legendas.png` (nada sobre rosto ou herói)

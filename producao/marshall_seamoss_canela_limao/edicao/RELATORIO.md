@@ -1,0 +1,41 @@
+# Relatório de edição · Marshall - V01
+
+- Ordem dos takes (pela fala): 1. V01_20261013213039.mp4 (T1) → 2. V03_20261013213039.mp4 (T3) → 3. V04_20261013213039.mp4 (T4) → 4. V05_20261013213039.mp4 (T5) → 5. V06_20261013213039.mp4 (T6) → 6. V07_20261013213039.mp4 (T7) → 7. V08_20261013213039.mp4 (T8) → 8. V09_20261013213039.mp4 (T9) → 9. V10_20261013213039.mp4 (T10) → 10. V11_20261013213039.mp4 (T11) → 11. V12_20261013213039.mp4 (T12) → 12. V13_20261013213039.mp4 (T13) → 13. V14_20261013213039.mp4 (T14) → 14. V15_20261013213039.mp4 (T15)
+  - aviso: V03_20261013213039.mp4 foi para a posição 2 pela fala (o nome dizia 3)
+  - aviso: V04_20261013213039.mp4 foi para a posição 3 pela fala (o nome dizia 4)
+  - aviso: V05_20261013213039.mp4 foi para a posição 4 pela fala (o nome dizia 5)
+  - aviso: V06_20261013213039.mp4 foi para a posição 5 pela fala (o nome dizia 6)
+  - aviso: V07_20261013213039.mp4 foi para a posição 6 pela fala (o nome dizia 7)
+  - aviso: V08_20261013213039.mp4 foi para a posição 7 pela fala (o nome dizia 8)
+  - aviso: V09_20261013213039.mp4 foi para a posição 8 pela fala (o nome dizia 9)
+  - aviso: V10_20261013213039.mp4 foi para a posição 9 pela fala (o nome dizia 10)
+  - aviso: V11_20261013213039.mp4 foi para a posição 10 pela fala (o nome dizia 11)
+  - aviso: V12_20261013213039.mp4 foi para a posição 11 pela fala (o nome dizia 12)
+  - aviso: V13_20261013213039.mp4 foi para a posição 12 pela fala (o nome dizia 13)
+  - aviso: V14_20261013213039.mp4 foi para a posição 13 pela fala (o nome dizia 14)
+  - aviso: V15_20261013213039.mp4 foi para a posição 14 pela fala (o nome dizia 15)
+- Produção: `marshall_seamoss_canela_limao` (`producao/marshall_seamoss_canela_limao/ENTREGA_MARSHALL.md`), semelhança 96%
+- Exceção autorizada por Luigi, take 4: trocou "wanna" por "want to"; áudio original mantido, legenda do roteiro aprovado.
+- Exceção autorizada por Luigi, take 9: trocou "rems" por "rem"; áudio original mantido, legenda do roteiro aprovado.
+- Exceção autorizada por Luigi, take 13: trocou "rems sea moss" por "rem's cmos"; áudio original mantido, legenda do roteiro aprovado.
+- Fala dos takes contra o roteiro, palavra por palavra: OK
+  - aparado: 1. V01_20261013213039.mp4: cortado o que o Flow inventou ou repetiu: "Thanks for watching! (5.0-8.0s, fala que o whisper tinha escondido)"; ouvir a emenda
+  - aparado: 2. V03_20261013213039.mp4: cortado o que o Flow inventou ou repetiu: "one teaspoon"; ouvir a emenda
+  - aparado: 6. V07_20261013213039.mp4: cortado o que o Flow inventou ou repetiu: "You (6.9-8.0s, fala que o whisper tinha escondido)"; ouvir a emenda
+  - aparado: 8. V09_20261013213039.mp4: cortado o que o Flow inventou ou repetiu: "and no"; ouvir a emenda
+  - aparado: 14. V15_20261013213039.mp4: cortado o que o Flow inventou ou repetiu: "You (4.8-8.0s, fala que o whisper tinha escondido)"; ouvir a emenda
+  - aviso: 4. transcrição refeita por trechos (no take inteiro o whisper perdeu: faltou "and")
+  - aviso: 8. transcrição refeita por trechos (no take inteiro o whisper perdeu: faltou "but let's be honest"; faltou "is annoying")
+- Variação deste vídeo (rodízio): legenda padrao · SFX nenhum · fonte do pico anton
+- Acabamento HyperFrames: zoom em body 2.5s, zoom em honey 10.7s, zoom em inflammation 17.7s, zoom em morning 23.3s, zoom em again 28.3s, zoom em annoying 34.1s, zoom em gummy 40.3s, zoom em drink 46.0s, zoom em apple 51.4s · zoom sim · grão não · SFX nenhum
+- Sem silêncio fora da rampa: FALHA
+- Sem quadro fantasma nos cortes: OK
+- Legenda com o texto do roteiro (contagem bateu): OK
+- Nenhuma legenda com menos de 0,1s: OK
+- Vídeo em 1080x1920: OK
+  - silêncios: [(8.6, 8.950000000000001), (64.2, 64.5)]
+- Duração 64.5s · 3.80 palavras/s · 38 trechos (0 rampas) · 78 legendas
+- Música: musica 2.mp3 (a partir de 0.0s, cama base -18 dB)
+- Estilo fitwell · fala a 1.14x (alvo 3.8 palavras/s) · light leak na entrada dos takes nenhum; rampa nos takes [1]; legenda alta nos takes [1]
+- Arquivo: `/tmp/edicao/Marshall - V01-685174d4/Marshall - V01_editado.mp4` (70.4 MB) · tempo total 295s
+- Olhar antes de entregar: `cortes.png` (pulo) e `legendas.png` (nada sobre rosto ou herói)

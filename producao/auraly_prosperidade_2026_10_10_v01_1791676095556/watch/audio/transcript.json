@@ -1,0 +1,450 @@
+[
+  {
+    "start": 0.11,
+    "end": 7.13,
+    "text": "What the fuck are you afraid of? Death? It's part of life. Bankruptcy? You can make it back. Shame? Everyone will forget.",
+    "words": [
+      {
+        "word": " What",
+        "start": 0.11,
+        "end": 0.59,
+        "probability": 0.9023930430412292
+      },
+      {
+        "word": " the",
+        "start": 0.59,
+        "end": 0.77,
+        "probability": 0.9978905320167542
+      },
+      {
+        "word": " fuck",
+        "start": 0.77,
+        "end": 1.01,
+        "probability": 0.9849039316177368
+      },
+      {
+        "word": " are",
+        "start": 1.01,
+        "end": 1.21,
+        "probability": 0.9734299778938293
+      },
+      {
+        "word": " you",
+        "start": 1.21,
+        "end": 1.35,
+        "probability": 0.9995296001434326
+      },
+      {
+        "word": " afraid",
+        "start": 1.35,
+        "end": 1.65,
+        "probability": 0.9969509840011597
+      },
+      {
+        "word": " of?",
+        "start": 1.65,
+        "end": 2.01,
+        "probability": 0.9940763711929321
+      },
+      {
+        "word": " Death?",
+        "start": 2.31,
+        "end": 2.47,
+        "probability": 0.9269508719444275
+      },
+      {
+        "word": " It's",
+        "start": 2.87,
+        "end": 2.95,
+        "probability": 0.9571875631809235
+      },
+      {
+        "word": " part",
+        "start": 2.95,
+        "end": 3.13,
+        "probability": 0.9874234795570374
+      },
+      {
+        "word": " of",
+        "start": 3.13,
+        "end": 3.25,
+        "probability": 0.9981533885002136
+      },
+      {
+        "word": " life.",
+        "start": 3.25,
+        "end": 3.47,
+        "probability": 0.9971170425415039
+      },
+      {
+        "word": " Bankruptcy?",
+        "start": 3.91,
+        "end": 4.31,
+        "probability": 0.9888901511828104
+      },
+      {
+        "word": " You",
+        "start": 4.53,
+        "end": 4.55,
+        "probability": 0.9657613635063171
+      },
+      {
+        "word": " can",
+        "start": 4.55,
+        "end": 4.69,
+        "probability": 0.995677649974823
+      },
+      {
+        "word": " make",
+        "start": 4.69,
+        "end": 4.85,
+        "probability": 0.9983898401260376
+      },
+      {
+        "word": " it",
+        "start": 4.85,
+        "end": 4.97,
+        "probability": 0.9452258348464966
+      },
+      {
+        "word": " back.",
+        "start": 4.97,
+        "end": 5.25,
+        "probability": 0.9990625977516174
+      },
+      {
+        "word": " Shame?",
+        "start": 5.79,
+        "end": 5.87,
+        "probability": 0.9796468019485474
+      },
+      {
+        "word": " Everyone",
+        "start": 6.39,
+        "end": 6.57,
+        "probability": 0.9832828044891357
+      },
+      {
+        "word": " will",
+        "start": 6.57,
+        "end": 6.79,
+        "probability": 0.9973534345626831
+      },
+      {
+        "word": " forget.",
+        "start": 6.79,
+        "end": 7.13,
+        "probability": 0.9990929365158081
+      }
+    ]
+  },
+  {
+    "start": 7.57,
+    "end": 13.65,
+    "text": "Rejection? It happens to everyone. Failure? It's part of growth. Judgment? They'll judge you anyways. Losing people?",
+    "words": [
+      {
+        "word": " Rejection?",
+        "start": 7.57,
+        "end": 7.97,
+        "probability": 0.9922203421592712
+      },
+      {
+        "word": " It",
+        "start": 8.31,
+        "end": 8.39,
+        "probability": 0.9820484519004822
+      },
+      {
+        "word": " happens",
+        "start": 8.39,
+        "end": 8.71,
+        "probability": 0.9966036081314087
+      },
+      {
+        "word": " to",
+        "start": 8.71,
+        "end": 8.93,
+        "probability": 0.9985054731369019
+      },
+      {
+        "word": " everyone.",
+        "start": 8.93,
+        "end": 9.23,
+        "probability": 0.9986306428909302
+      },
+      {
+        "word": " Failure?",
+        "start": 9.61,
+        "end": 9.71,
+        "probability": 0.7322754859924316
+      },
+      {
+        "word": " It's",
+        "start": 10.07,
+        "end": 10.15,
+        "probability": 0.988691508769989
+      },
+      {
+        "word": " part",
+        "start": 10.15,
+        "end": 10.33,
+        "probability": 0.9751257300376892
+      },
+      {
+        "word": " of",
+        "start": 10.33,
+        "end": 10.45,
+        "probability": 0.9984937906265259
+      },
+      {
+        "word": " growth.",
+        "start": 10.45,
+        "end": 10.67,
+        "probability": 0.9961620569229126
+      },
+      {
+        "word": " Judgment?",
+        "start": 11.19,
+        "end": 11.37,
+        "probability": 0.9303097128868103
+      },
+      {
+        "word": " They'll",
+        "start": 11.87,
+        "end": 12.01,
+        "probability": 0.9823804795742035
+      },
+      {
+        "word": " judge",
+        "start": 12.01,
+        "end": 12.19,
+        "probability": 0.9976816177368164
+      },
+      {
+        "word": " you",
+        "start": 12.19,
+        "end": 12.35,
+        "probability": 0.9994049072265625
+      },
+      {
+        "word": " anyways.",
+        "start": 12.35,
+        "end": 12.63,
+        "probability": 0.9463463425636292
+      },
+      {
+        "word": " Losing",
+        "start": 13.17,
+        "end": 13.35,
+        "probability": 0.9954686462879181
+      },
+      {
+        "word": " people?",
+        "start": 13.35,
+        "end": 13.65,
+        "probability": 0.997192919254303
+      }
+    ]
+  },
+  {
+    "start": 13.79,
+    "end": 17.85,
+    "text": "Not all are meant to stay. Mistakes? You'll learn from them. Taking risks?",
+    "words": [
+      {
+        "word": " Not",
+        "start": 13.79,
+        "end": 14.01,
+        "probability": 0.9861132502555847
+      },
+      {
+        "word": " all",
+        "start": 14.01,
+        "end": 14.21,
+        "probability": 0.9988580942153931
+      },
+      {
+        "word": " are",
+        "start": 14.21,
+        "end": 14.33,
+        "probability": 0.9953481554985046
+      },
+      {
+        "word": " meant",
+        "start": 14.33,
+        "end": 14.45,
+        "probability": 0.9975905418395996
+      },
+      {
+        "word": " to",
+        "start": 14.45,
+        "end": 14.63,
+        "probability": 0.9995893836021423
+      },
+      {
+        "word": " stay.",
+        "start": 14.63,
+        "end": 14.89,
+        "probability": 0.9949123859405518
+      },
+      {
+        "word": " Mistakes?",
+        "start": 15.35,
+        "end": 15.79,
+        "probability": 0.989507257938385
+      },
+      {
+        "word": " You'll",
+        "start": 16.17,
+        "end": 16.35,
+        "probability": 0.9923588633537292
+      },
+      {
+        "word": " learn",
+        "start": 16.35,
+        "end": 16.47,
+        "probability": 0.9992934465408325
+      },
+      {
+        "word": " from",
+        "start": 16.47,
+        "end": 16.67,
+        "probability": 0.998589813709259
+      },
+      {
+        "word": " them.",
+        "start": 16.67,
+        "end": 16.87,
+        "probability": 0.9989033937454224
+      },
+      {
+        "word": " Taking",
+        "start": 17.17,
+        "end": 17.41,
+        "probability": 0.9894644021987915
+      },
+      {
+        "word": " risks?",
+        "start": 17.41,
+        "end": 17.85,
+        "probability": 0.9984748959541321
+      }
+    ]
+  },
+  {
+    "start": 18.41,
+    "end": 22.99,
+    "text": "Regret hurts more. Live every day like at your last, my friend. You really have nothing to lose.",
+    "words": [
+      {
+        "word": " Regret",
+        "start": 18.41,
+        "end": 18.67,
+        "probability": 0.9695241153240204
+      },
+      {
+        "word": " hurts",
+        "start": 18.67,
+        "end": 19.01,
+        "probability": 0.9957606196403503
+      },
+      {
+        "word": " more.",
+        "start": 19.01,
+        "end": 19.37,
+        "probability": 0.9986912608146667
+      },
+      {
+        "word": " Live",
+        "start": 19.71,
+        "end": 19.83,
+        "probability": 0.993838369846344
+      },
+      {
+        "word": " every",
+        "start": 19.83,
+        "end": 20.13,
+        "probability": 0.7479454278945923
+      },
+      {
+        "word": " day",
+        "start": 20.13,
+        "end": 20.39,
+        "probability": 0.9990228414535522
+      },
+      {
+        "word": " like",
+        "start": 20.39,
+        "end": 20.65,
+        "probability": 0.8090347647666931
+      },
+      {
+        "word": " at",
+        "start": 20.65,
+        "end": 20.79,
+        "probability": 0.4222220480442047
+      },
+      {
+        "word": " your",
+        "start": 20.79,
+        "end": 20.89,
+        "probability": 0.9945182204246521
+      },
+      {
+        "word": " last,",
+        "start": 20.89,
+        "end": 21.11,
+        "probability": 0.9975211024284363
+      },
+      {
+        "word": " my",
+        "start": 21.21,
+        "end": 21.31,
+        "probability": 0.9972171783447266
+      },
+      {
+        "word": " friend.",
+        "start": 21.31,
+        "end": 21.55,
+        "probability": 0.9984833598136902
+      },
+      {
+        "word": " You",
+        "start": 21.73,
+        "end": 21.85,
+        "probability": 0.9962635636329651
+      },
+      {
+        "word": " really",
+        "start": 21.85,
+        "end": 22.13,
+        "probability": 0.994840681552887
+      },
+      {
+        "word": " have",
+        "start": 22.13,
+        "end": 22.37,
+        "probability": 0.9985207915306091
+      },
+      {
+        "word": " nothing",
+        "start": 22.37,
+        "end": 22.61,
+        "probability": 0.9988771080970764
+      },
+      {
+        "word": " to",
+        "start": 22.61,
+        "end": 22.83,
+        "probability": 0.9986655712127686
+      },
+      {
+        "word": " lose.",
+        "start": 22.83,
+        "end": 22.99,
+        "probability": 0.993893563747406
+      }
+    ]
+  }
+]

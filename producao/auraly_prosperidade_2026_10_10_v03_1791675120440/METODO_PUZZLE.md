@@ -1,0 +1,11 @@
+# Método Puzzle V03
+
+Base: ANALISE_MODELO.md e watch; fontes mínimas ANALYSIS/METHOD_PUZZLE do WORKFLOW consultadas. Duração 50.663084 s. Origem ORGANIC visual, sem procedência externa; exceção autorizada de Luigi neste lote permite transpor falas para prosperidade/dinheiro preservando visual/estrutura.
+
+Esqueleto: céticos podem sair→quem fica escolhido→salve/volte hoje com resultado→repita comigo→TRÊS afirmações em série→sinal como confirmação hoje→pode vir de qualquer modo→QUATRO vias do sinal (menção, desenho, palavra, feed)→uso pessoal de app/mecanismo→origem→volte e conte→keyword para selar. Mesma ordem, ritmo, pausas e funções, sem encurtar as vias do sinal. Três afirmações aparecem também escritas como lista numerada (edição); não inserir texto em imagem gerada.
+
+Herói hook: rosto íntimo na selfie/carro + olhar seletivo e título desejo/prazo. Não tem borboleta no primeiro frame nem posterior, moeda, nota ou carta. Preservar ausência de prop e câmera lateral próxima; sem criar ritual, reveal sobrenatural ou T1 mudo. O open loop é o sinal antes da noite, fecha verbalmente com borboleta depois de três afirmações; o retorno/comentário projeta confirmação futura, não prova que ocorreu. Retenção hipotética, não chamar performance comprovada.
+
+Transposição financeira: seleção pessoal e prazo; três afirmações correspondem a abertura, percepção e prontidão para oportunidades; sinal simbólico e quatro maneiras de notar permanecem, sem virar pagamento garantido. O app original Tova e claim de própria voz/lista não autorizam recursos equivalentes Auraly; preservar função de ponte para oferta com recurso realmente respaldado pelas fontes de copy. Keyword mine→222; destino Stories/bio; follow última frase. Não trocar todas as vias do sinal por um único resultado ou criar história testemunhal.
+
+Sheets atuais Avery/Devon/Jordan preservam roupa. Todos ficam no carro com mesmo enquadramento; Jordan equivalente luxuoso, ES latino neutro, mesma progressão. VALIDATION = um hook fiel, nenhum degrau, sem pacote antes de aprovação. Próxima ação SCRIPT_MODELLING completos EN/PT e ES/PT com declaração de desvios (identidade, idioma, luxo, transposição autorizada, marca/destino/keyword/follow).

@@ -1,0 +1,29 @@
+{
+ "items": [
+  {
+   "file": "/Users/macbookairm2/Desktop/Meredith - V04/V14_20261014002846.mp4",
+   "sha256": "6c86f1643b64643d8d0e83b88ec3117f95ca47390859a27f64fd86162c6170d7",
+   "approved_script": "The one I trust is Natural Rems Sea Moss. Wild Irish sea moss and sixteen ingredients, with less than one gram of sugar and four calories.",
+   "allowed_problems": [
+    "trocou \"rems\" por \"rimmed\""
+   ]
+  },
+  {
+   "file": "/Users/macbookairm2/Desktop/Meredith - V04/V16_20261014002846.mp4",
+   "sha256": "9108d96aa00bfb12c0dbfb5a229e9a3116a3fe30c99282295a1632a7f74f8df7",
+   "approved_script": "Search Natural Rems Sea Moss on Amazon. Or tap my profile picture, the link is waiting in my stories, or right there in my bio.",
+   "allowed_problems": [
+    "trocou \"rems sea moss\" por \"rim cmos\""
+   ]
+  },
+  {
+   "file": "/Users/macbookairm2/Desktop/Meredith - V04/V12_20261014002846.mp4",
+   "sha256": "837a5a15c7fc8d0d0a4c77509513474210815c2a18bbc5a37736c43855834828",
+   "approved_script": "So on those nights, baby, I chew one green apple gummy instead. It's sea moss, the same thing I've been blending in my kitchen since the eighties.",
+   "allowed_problems": [
+    "trocou \"eighties\" por \"80s\""
+   ]
+  }
+ ],
+ "user_authorization": "Luigi, 2026-10-14: 'resolva tudo isso e n\u00e3o me pe\u00e7a mais aux\u00edlio'; exce\u00e7\u00e3o s\u00f3 para erro de escuta do whisper small conferido com o medium.en no take inteiro e em trechos"
+}

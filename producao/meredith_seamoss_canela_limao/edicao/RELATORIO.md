@@ -1,0 +1,24 @@
+# Relatório de edição · Meredith - V01
+
+- Ordem dos takes (pela fala): 1. V01_20261013193721.mp4 (T1) → 2. t02_acucar.mp4 (T2) → 3. V03_20261013193721.mp4 (T3) → 4. V04_20261013193721.mp4 (T4) → 5. V05_20261013193721.mp4 (T5) → 6. V06_20261013193721.mp4 (T6) → 7. V07_20261013193721.mp4 (T7) → 8. V08_20261013193721.mp4 (T8) → 9. V09_20261013193721.mp4 (T9) → 10. V10_20261013193721.mp4 (T10) → 11. V11_20261013193721.mp4 (T11) → 12. V12_20261013193721.mp4 (T12) → 13. V13_20261013193721.mp4 (T13) → 14. V14_20261013193721.mp4 (T14) → 15. V15_20261013193721.mp4 (T15)
+  - aviso: t02_acucar.mp4 é mudo: posição pelo nome (2), conferir no cortes.png
+- Produção: `meredith_seamoss_canela_limao` (`producao/meredith_seamoss_canela_limao/ENTREGA_MEREDITH.md`), semelhança 93%
+- Exceção autorizada por Luigi, take 10: trocou "rems sea moss" por "remms seamoss"; áudio original mantido, legenda do roteiro aprovado.
+- Exceção autorizada por Luigi, take 14: trocou "rems sea moss" por "rim cmos"; áudio original mantido, legenda do roteiro aprovado.
+- Fala dos takes contra o roteiro, palavra por palavra: OK
+  - aparado: 1. V01_20261013193721.mp4: cortado o que o Flow inventou ou repetiu: "It helps process it naturally, visual scene."; ouvir a emenda
+  - aparado: 15. V15_20261013193721.mp4: cortado o que o Flow inventou ou repetiu: "visual visual / and don't forget to hit that follow button"; ouvir a emenda
+  - aviso: 5. transcrição refeita por trechos (no take inteiro o whisper perdeu: faltou "and one tablespoon"; trocou "wanna" por "want to")
+- Variação deste vídeo (rodízio): legenda padrao · SFX nenhum · fonte do pico montserrat
+- Acabamento HyperFrames: zoom em body 2.1s, zoom em honey 13.0s, zoom em inflammation 19.6s, zoom em morning 25.2s, zoom em again 30.4s, zoom em gummy 39.1s, zoom em drink 48.1s, zoom em apple 53.7s · zoom sim · grão não · SFX nenhum
+- Sem silêncio fora da rampa: FALHA
+- Sem quadro fantasma nos cortes: OK
+- Legenda com o texto do roteiro (contagem bateu): OK
+- Nenhuma legenda com menos de 0,1s: OK
+- Vídeo em 1080x1920: OK
+  - silêncios: [(6.800000000000001, 7.2)]
+- Duração 66.2s · 3.81 palavras/s · 42 trechos (1 rampas) · 80 legendas
+- Música: musica 2.mp3 (a partir de 0.0s, cama base -18 dB)
+- Estilo fitwell · fala a 1.23x (alvo 3.8 palavras/s) · light leak na entrada dos takes nenhum; rampa nos takes [1]; legenda alta nos takes [1]
+- Arquivo: `/tmp/edicao/Meredith - V01-6f1da398/Meredith - V01_editado.mp4` (84.5 MB) · tempo total 257s
+- Olhar antes de entregar: `cortes.png` (pulo) e `legendas.png` (nada sobre rosto ou herói)

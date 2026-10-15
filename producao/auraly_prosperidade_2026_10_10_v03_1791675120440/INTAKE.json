@@ -1,0 +1,36 @@
+{
+  "angle": 3,
+  "objective": "SALE",
+  "theme": "prosperidade e dinheiro",
+  "traffic": "ORGANIC_DEFAULT",
+  "round": "VALIDATION",
+  "batch": "producao/auraly_prosperidade_lote_2026_10_10",
+  "model_order": 3,
+  "reference_video": "/Users/macbookairm2/Downloads/snapinsta-1791675120440.mp4",
+  "avatars": [
+    {
+      "id": "avery_knox",
+      "name": "Avery Knox",
+      "language": "en-US",
+      "source_anchor": "/Users/macbookairm2/Desktop/AVATARES/avatares appyon/Avery Knox.jpg",
+      "anchor": "producao/auraly_prosperidade_2026_10_10_v03_1791675120440/anchors/avery_knox.jpg"
+    },
+    {
+      "id": "devon_price",
+      "name": "Devon Price",
+      "language": "en-US",
+      "source_anchor": "/Users/macbookairm2/Desktop/AVATARES/avatares appyon/devon price.jpg",
+      "anchor": "producao/auraly_prosperidade_2026_10_10_v03_1791675120440/anchors/devon_price.jpg"
+    },
+    {
+      "id": "jordan_vale",
+      "name": "Jordan Vale",
+      "language": "es-419",
+      "source_anchor": "/Users/macbookairm2/Desktop/AVATARES/avatares appyon/jordan vale.jpg",
+      "anchor": "producao/auraly_prosperidade_2026_10_10_v03_1791675120440/anchors/jordan_vale.jpg"
+    }
+  ],
+  "expected_combinations": 3,
+  "jordan_es_production": "auraly_prosperidade_2026_10_10_v03_1791675120440_jordan_es",
+  "user_authorized_exception": "Adaptar falas para dinheiro e prosperidade mesmo em origem organica, mantendo gancho visual, estrutura e progressao; confirmacao explicita de Luigi nesta sessao, 2026-10-10"
+}

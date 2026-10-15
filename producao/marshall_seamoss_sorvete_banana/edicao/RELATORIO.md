@@ -1,0 +1,22 @@
+# Relatório de edição · Marshal - V04
+
+- Ordem dos takes (pela fala): 1. V01_20261014003950.mp4 (T1) → 2. V02_20261014003950.mp4 (T2) → 3. V03_20261014003950.mp4 (T3) → 4. V04_20261014003950.mp4 (T4) → 5. V05_20261014003950.mp4 (T5) → 6. V06_20261014003950.mp4 (T6) → 7. V07_20261014003950.mp4 (T7) → 8. V08_20261014003950.mp4 (T8) → 9. V09_20261014003950.mp4 (T9) → 10. V10_20261014003950.mp4 (T10) → 11. V11_20261014003950.mp4 (T11) → 12. V12_20261014003950.mp4 (T12) → 13. V13_20261014003950.mp4 (T13) → 14. V14_20261014003950.mp4 (T14) → 15. V15_20261014003950.mp4 (T15) → 16. V16_20261014003950.mp4 (T16) → 17. V17_20261014003950.mp4 (T17)
+- Produção: `marshall_seamoss_sorvete_banana` (`producao/marshall_seamoss_sorvete_banana/ENTREGA_MARSHALL.md`), semelhança 99%
+- Exceção autorizada por Luigi, take 14: trocou "rems" por "rem"; áudio original mantido, legenda do roteiro aprovado.
+- Exceção autorizada por Luigi, take 16: trocou "rems sea moss" por "rem's cmos"; áudio original mantido, legenda do roteiro aprovado.
+- Fala dos takes contra o roteiro, palavra por palavra: OK
+  - aparado: 2. V02_20261014003950.mp4: cortado o que o Flow inventou ou repetiu: "You (6.7-8.0s, fala que o whisper tinha escondido)"; ouvir a emenda
+  - aparado: 15. V15_20261014003950.mp4: cortado o que o Flow inventou ou repetiu: "sweet"; ouvir a emenda
+- Variação deste vídeo (rodízio): legenda padrao · SFX nenhum · fonte do pico montserrat
+- Acabamento HyperFrames: zoom em cream 11.8s, zoom em minutes 22.0s, zoom em shop 27.8s, zoom em bananas 34.7s, zoom em instead 43.6s, zoom em avoid 52.5s · zoom sim · grão não · SFX nenhum
+- Sem silêncio fora da rampa: FALHA
+- Sem quadro fantasma nos cortes: OK
+- Legenda com o texto do roteiro (contagem bateu): OK
+- Nenhuma legenda com menos de 0,1s: OK
+- Vídeo em 1080x1920: OK
+  - silêncios: [(6.15, 6.550000000000001), (7.15, 7.45), (13.200000000000001, 13.5), (18.25, 18.55), (22.200000000000003, 22.5), (23.650000000000002, 23.950000000000003), (71.3, 71.6)]
+- Duração 71.6s · 3.80 palavras/s · 50 trechos (2 rampas) · 90 legendas
+- Música: type beat lo-fi .mp3 (a partir de 0.0s, cama base -18 dB)
+- Estilo fitwell · fala a 1.15x (alvo 3.8 palavras/s) · light leak na entrada dos takes nenhum; rampa nos takes [1]; legenda alta nos takes [1]
+- Arquivo: `/tmp/edicao/Marshal - V04-5295696a/Marshal - V04_editado.mp4` (77.9 MB) · tempo total 239s
+- Olhar antes de entregar: `cortes.png` (pulo) e `legendas.png` (nada sobre rosto ou herói)

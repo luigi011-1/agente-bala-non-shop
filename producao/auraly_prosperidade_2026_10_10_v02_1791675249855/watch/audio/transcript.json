@@ -1,0 +1,1029 @@
+[
+  {
+    "start": 0.98,
+    "end": 4.56,
+    "text": "Okay, do not move because you are gonna get that future, babe.",
+    "words": [
+      {
+        "word": " Okay,",
+        "start": 0.98,
+        "end": 1.64,
+        "probability": 0.5001630783081055
+      },
+      {
+        "word": " do",
+        "start": 2.0,
+        "end": 2.18,
+        "probability": 0.9228289127349854
+      },
+      {
+        "word": " not",
+        "start": 2.18,
+        "end": 2.4,
+        "probability": 0.9942764639854431
+      },
+      {
+        "word": " move",
+        "start": 2.4,
+        "end": 2.6,
+        "probability": 0.9932536482810974
+      },
+      {
+        "word": " because",
+        "start": 2.6,
+        "end": 2.86,
+        "probability": 0.9364955425262451
+      },
+      {
+        "word": " you",
+        "start": 2.86,
+        "end": 3.06,
+        "probability": 0.9947503209114075
+      },
+      {
+        "word": " are",
+        "start": 3.06,
+        "end": 3.2,
+        "probability": 0.9876042604446411
+      },
+      {
+        "word": " gonna",
+        "start": 3.2,
+        "end": 3.3,
+        "probability": 0.6237249374389648
+      },
+      {
+        "word": " get",
+        "start": 3.3,
+        "end": 3.58,
+        "probability": 0.9953805208206177
+      },
+      {
+        "word": " that",
+        "start": 3.58,
+        "end": 3.86,
+        "probability": 0.9967045187950134
+      },
+      {
+        "word": " future,",
+        "start": 3.86,
+        "end": 4.26,
+        "probability": 0.985832691192627
+      },
+      {
+        "word": " babe.",
+        "start": 4.4,
+        "end": 4.56,
+        "probability": 0.9217513203620911
+      }
+    ]
+  },
+  {
+    "start": 5.02,
+    "end": 7.96,
+    "text": "You are going to get that future that you want.",
+    "words": [
+      {
+        "word": " You",
+        "start": 5.02,
+        "end": 5.34,
+        "probability": 0.9889667630195618
+      },
+      {
+        "word": " are",
+        "start": 5.34,
+        "end": 5.58,
+        "probability": 0.9978579878807068
+      },
+      {
+        "word": " going",
+        "start": 5.58,
+        "end": 5.78,
+        "probability": 0.9856772422790527
+      },
+      {
+        "word": " to",
+        "start": 5.78,
+        "end": 5.98,
+        "probability": 0.9974097609519958
+      },
+      {
+        "word": " get",
+        "start": 5.98,
+        "end": 6.3,
+        "probability": 0.9979277849197388
+      },
+      {
+        "word": " that",
+        "start": 6.3,
+        "end": 6.58,
+        "probability": 0.9973378777503967
+      },
+      {
+        "word": " future",
+        "start": 6.58,
+        "end": 6.92,
+        "probability": 0.9978814721107483
+      },
+      {
+        "word": " that",
+        "start": 6.92,
+        "end": 7.38,
+        "probability": 0.9815804362297058
+      },
+      {
+        "word": " you",
+        "start": 7.38,
+        "end": 7.64,
+        "probability": 0.9983032941818237
+      },
+      {
+        "word": " want.",
+        "start": 7.64,
+        "end": 7.96,
+        "probability": 0.9970384836196899
+      }
+    ]
+  },
+  {
+    "start": 8.44,
+    "end": 10.32,
+    "text": "You are getting that future that you want.",
+    "words": [
+      {
+        "word": " You",
+        "start": 8.44,
+        "end": 8.72,
+        "probability": 0.9823966026306152
+      },
+      {
+        "word": " are",
+        "start": 8.72,
+        "end": 8.92,
+        "probability": 0.9943135976791382
+      },
+      {
+        "word": " getting",
+        "start": 8.92,
+        "end": 9.18,
+        "probability": 0.981674075126648
+      },
+      {
+        "word": " that",
+        "start": 9.18,
+        "end": 9.44,
+        "probability": 0.9978864789009094
+      },
+      {
+        "word": " future",
+        "start": 9.44,
+        "end": 9.64,
+        "probability": 0.9990369081497192
+      },
+      {
+        "word": " that",
+        "start": 9.64,
+        "end": 9.9,
+        "probability": 0.9968745708465576
+      },
+      {
+        "word": " you",
+        "start": 9.9,
+        "end": 10.08,
+        "probability": 0.999293327331543
+      },
+      {
+        "word": " want.",
+        "start": 10.08,
+        "end": 10.32,
+        "probability": 0.998043417930603
+      }
+    ]
+  },
+  {
+    "start": 10.92,
+    "end": 13.36,
+    "text": "You're not even gonna have to work that hard for it, okay?",
+    "words": [
+      {
+        "word": " You're",
+        "start": 10.92,
+        "end": 11.22,
+        "probability": 0.6710378527641296
+      },
+      {
+        "word": " not",
+        "start": 11.22,
+        "end": 11.58,
+        "probability": 0.9945301413536072
+      },
+      {
+        "word": " even",
+        "start": 11.58,
+        "end": 11.74,
+        "probability": 0.9853727221488953
+      },
+      {
+        "word": " gonna",
+        "start": 11.74,
+        "end": 11.88,
+        "probability": 0.9060418009757996
+      },
+      {
+        "word": " have",
+        "start": 11.88,
+        "end": 12.06,
+        "probability": 0.9944792985916138
+      },
+      {
+        "word": " to",
+        "start": 12.06,
+        "end": 12.18,
+        "probability": 0.9980446100234985
+      },
+      {
+        "word": " work",
+        "start": 12.18,
+        "end": 12.32,
+        "probability": 0.9987252354621887
+      },
+      {
+        "word": " that",
+        "start": 12.32,
+        "end": 12.52,
+        "probability": 0.9982208609580994
+      },
+      {
+        "word": " hard",
+        "start": 12.52,
+        "end": 12.74,
+        "probability": 0.9997621178627014
+      },
+      {
+        "word": " for",
+        "start": 12.74,
+        "end": 12.96,
+        "probability": 0.9980108141899109
+      },
+      {
+        "word": " it,",
+        "start": 12.96,
+        "end": 13.1,
+        "probability": 0.9984914064407349
+      },
+      {
+        "word": " okay?",
+        "start": 13.1,
+        "end": 13.36,
+        "probability": 0.9860938787460327
+      }
+    ]
+  },
+  {
+    "start": 13.78,
+    "end": 16.16,
+    "text": "You are going to get that soft life.",
+    "words": [
+      {
+        "word": " You",
+        "start": 13.78,
+        "end": 14.08,
+        "probability": 0.9953945279121399
+      },
+      {
+        "word": " are",
+        "start": 14.08,
+        "end": 14.36,
+        "probability": 0.9981375932693481
+      },
+      {
+        "word": " going",
+        "start": 14.36,
+        "end": 14.6,
+        "probability": 0.997218132019043
+      },
+      {
+        "word": " to",
+        "start": 14.6,
+        "end": 14.86,
+        "probability": 0.9991905093193054
+      },
+      {
+        "word": " get",
+        "start": 14.86,
+        "end": 15.1,
+        "probability": 0.9995620846748352
+      },
+      {
+        "word": " that",
+        "start": 15.1,
+        "end": 15.52,
+        "probability": 0.9980084300041199
+      },
+      {
+        "word": " soft",
+        "start": 15.52,
+        "end": 15.84,
+        "probability": 0.9588965177536011
+      },
+      {
+        "word": " life.",
+        "start": 15.84,
+        "end": 16.16,
+        "probability": 0.9732509851455688
+      }
+    ]
+  },
+  {
+    "start": 16.56,
+    "end": 18.3,
+    "text": "This is the Empress, okay?",
+    "words": [
+      {
+        "word": " This",
+        "start": 16.56,
+        "end": 16.82,
+        "probability": 0.9927086234092712
+      },
+      {
+        "word": " is",
+        "start": 16.82,
+        "end": 17.24,
+        "probability": 0.9948166012763977
+      },
+      {
+        "word": " the",
+        "start": 17.24,
+        "end": 17.42,
+        "probability": 0.9432212710380554
+      },
+      {
+        "word": " Empress,",
+        "start": 17.42,
+        "end": 17.84,
+        "probability": 0.7923293709754944
+      },
+      {
+        "word": " okay?",
+        "start": 18.02,
+        "end": 18.3,
+        "probability": 0.9898512363433838
+      }
+    ]
+  },
+  {
+    "start": 18.68,
+    "end": 24.64,
+    "text": "This is abundance, nurturing, fertility, feminine, good parenting, development, accomplishment,",
+    "words": [
+      {
+        "word": " This",
+        "start": 18.68,
+        "end": 18.86,
+        "probability": 0.9944918155670166
+      },
+      {
+        "word": " is",
+        "start": 18.86,
+        "end": 19.12,
+        "probability": 0.9975572824478149
+      },
+      {
+        "word": " abundance,",
+        "start": 19.12,
+        "end": 19.52,
+        "probability": 0.9424431324005127
+      },
+      {
+        "word": " nurturing,",
+        "start": 19.94,
+        "end": 20.5,
+        "probability": 0.9992159605026245
+      },
+      {
+        "word": " fertility,",
+        "start": 20.74,
+        "end": 21.1,
+        "probability": 0.9994874000549316
+      },
+      {
+        "word": " feminine,",
+        "start": 21.46,
+        "end": 21.84,
+        "probability": 0.9605289697647095
+      },
+      {
+        "word": " good",
+        "start": 22.26,
+        "end": 22.44,
+        "probability": 0.9832444190979004
+      },
+      {
+        "word": " parenting,",
+        "start": 22.44,
+        "end": 23.14,
+        "probability": 0.9977166652679443
+      },
+      {
+        "word": " development,",
+        "start": 23.46,
+        "end": 23.88,
+        "probability": 0.9966530203819275
+      },
+      {
+        "word": " accomplishment,",
+        "start": 24.24,
+        "end": 24.64,
+        "probability": 0.9954433441162109
+      }
+    ]
+  },
+  {
+    "start": 24.84,
+    "end": 27.58,
+    "text": "growth, evolution, and action.",
+    "words": [
+      {
+        "word": " growth,",
+        "start": 24.84,
+        "end": 25.12,
+        "probability": 0.99856036901474
+      },
+      {
+        "word": " evolution,",
+        "start": 25.34,
+        "end": 25.74,
+        "probability": 0.997928261756897
+      },
+      {
+        "word": " and",
+        "start": 26.46,
+        "end": 26.66,
+        "probability": 0.9982707500457764
+      },
+      {
+        "word": " action.",
+        "start": 26.66,
+        "end": 27.58,
+        "probability": 0.9657591581344604
+      }
+    ]
+  },
+  {
+    "start": 28.24,
+    "end": 30.04,
+    "text": "You want to be wifey.",
+    "words": [
+      {
+        "word": " You",
+        "start": 28.24,
+        "end": 28.58,
+        "probability": 0.9948158860206604
+      },
+      {
+        "word": " want",
+        "start": 28.58,
+        "end": 28.82,
+        "probability": 0.9992378950119019
+      },
+      {
+        "word": " to",
+        "start": 28.82,
+        "end": 29.06,
+        "probability": 0.9994593262672424
+      },
+      {
+        "word": " be",
+        "start": 29.06,
+        "end": 29.4,
+        "probability": 0.9993072748184204
+      },
+      {
+        "word": " wifey.",
+        "start": 29.4,
+        "end": 30.04,
+        "probability": 0.9583074748516083
+      }
+    ]
+  },
+  {
+    "start": 30.04,
+    "end": 31.14,
+    "text": "You want to be a mom.",
+    "words": [
+      {
+        "word": " You",
+        "start": 30.04,
+        "end": 30.24,
+        "probability": 0.6323509812355042
+      },
+      {
+        "word": " want",
+        "start": 30.24,
+        "end": 30.44,
+        "probability": 0.998239278793335
+      },
+      {
+        "word": " to",
+        "start": 30.44,
+        "end": 30.6,
+        "probability": 0.9993300437927246
+      },
+      {
+        "word": " be",
+        "start": 30.6,
+        "end": 30.76,
+        "probability": 0.9988316893577576
+      },
+      {
+        "word": " a",
+        "start": 30.76,
+        "end": 30.88,
+        "probability": 0.9980758428573608
+      },
+      {
+        "word": " mom.",
+        "start": 30.88,
+        "end": 31.14,
+        "probability": 0.9829147458076477
+      }
+    ]
+  },
+  {
+    "start": 31.36,
+    "end": 32.66,
+    "text": "You want to be a homemaker.",
+    "words": [
+      {
+        "word": " You",
+        "start": 31.36,
+        "end": 31.38,
+        "probability": 0.9919850826263428
+      },
+      {
+        "word": " want",
+        "start": 31.38,
+        "end": 31.54,
+        "probability": 0.9991146922111511
+      },
+      {
+        "word": " to",
+        "start": 31.54,
+        "end": 31.68,
+        "probability": 0.999650239944458
+      },
+      {
+        "word": " be",
+        "start": 31.68,
+        "end": 31.82,
+        "probability": 0.9991453886032104
+      },
+      {
+        "word": " a",
+        "start": 31.82,
+        "end": 32.02,
+        "probability": 0.9989637136459351
+      },
+      {
+        "word": " homemaker.",
+        "start": 32.02,
+        "end": 32.66,
+        "probability": 0.9768043756484985
+      }
+    ]
+  },
+  {
+    "start": 33.3,
+    "end": 38.54,
+    "text": "You want to have a beautiful, peaceful home where you don't have to worry about anything",
+    "words": [
+      {
+        "word": " You",
+        "start": 33.3,
+        "end": 33.32,
+        "probability": 0.9953749775886536
+      },
+      {
+        "word": " want",
+        "start": 33.32,
+        "end": 33.5,
+        "probability": 0.9990373849868774
+      },
+      {
+        "word": " to",
+        "start": 33.5,
+        "end": 33.66,
+        "probability": 0.9991111159324646
+      },
+      {
+        "word": " have",
+        "start": 33.66,
+        "end": 33.92,
+        "probability": 0.9994589686393738
+      },
+      {
+        "word": " a",
+        "start": 33.92,
+        "end": 34.22,
+        "probability": 0.9984097480773926
+      },
+      {
+        "word": " beautiful,",
+        "start": 34.22,
+        "end": 34.78,
+        "probability": 0.9960755705833435
+      },
+      {
+        "word": " peaceful",
+        "start": 35.0,
+        "end": 35.32,
+        "probability": 0.998150646686554
+      },
+      {
+        "word": " home",
+        "start": 35.32,
+        "end": 35.86,
+        "probability": 0.9849358201026917
+      },
+      {
+        "word": " where",
+        "start": 35.86,
+        "end": 36.36,
+        "probability": 0.6787500977516174
+      },
+      {
+        "word": " you",
+        "start": 36.36,
+        "end": 37.02,
+        "probability": 0.9703720211982727
+      },
+      {
+        "word": " don't",
+        "start": 37.02,
+        "end": 37.2,
+        "probability": 0.9984012544155121
+      },
+      {
+        "word": " have",
+        "start": 37.2,
+        "end": 37.36,
+        "probability": 0.9985334873199463
+      },
+      {
+        "word": " to",
+        "start": 37.36,
+        "end": 37.52,
+        "probability": 0.9991840720176697
+      },
+      {
+        "word": " worry",
+        "start": 37.52,
+        "end": 37.7,
+        "probability": 0.9994831085205078
+      },
+      {
+        "word": " about",
+        "start": 37.7,
+        "end": 37.96,
+        "probability": 0.9973284006118774
+      },
+      {
+        "word": " anything",
+        "start": 37.96,
+        "end": 38.54,
+        "probability": 0.9977855682373047
+      }
+    ]
+  },
+  {
+    "start": 38.54,
+    "end": 41.22,
+    "text": "but maybe your health and your family's health.",
+    "words": [
+      {
+        "word": " but",
+        "start": 38.54,
+        "end": 38.94,
+        "probability": 0.5732748508453369
+      },
+      {
+        "word": " maybe",
+        "start": 38.94,
+        "end": 39.18,
+        "probability": 0.942089319229126
+      },
+      {
+        "word": " your",
+        "start": 39.18,
+        "end": 39.42,
+        "probability": 0.991194486618042
+      },
+      {
+        "word": " health",
+        "start": 39.42,
+        "end": 39.76,
+        "probability": 0.9993579983711243
+      },
+      {
+        "word": " and",
+        "start": 39.76,
+        "end": 40.14,
+        "probability": 0.9759383797645569
+      },
+      {
+        "word": " your",
+        "start": 40.14,
+        "end": 40.3,
+        "probability": 0.9929226636886597
+      },
+      {
+        "word": " family's",
+        "start": 40.3,
+        "end": 40.92,
+        "probability": 0.9834291636943817
+      },
+      {
+        "word": " health.",
+        "start": 40.92,
+        "end": 41.22,
+        "probability": 0.9991870522499084
+      }
+    ]
+  },
+  {
+    "start": 41.6,
+    "end": 44.28,
+    "text": "So you need to send this to yourself right now, okay?",
+    "words": [
+      {
+        "word": " So",
+        "start": 41.6,
+        "end": 41.68,
+        "probability": 0.9769143462181091
+      },
+      {
+        "word": " you",
+        "start": 41.68,
+        "end": 41.8,
+        "probability": 0.8657152652740479
+      },
+      {
+        "word": " need",
+        "start": 41.8,
+        "end": 41.92,
+        "probability": 0.9991499185562134
+      },
+      {
+        "word": " to",
+        "start": 41.92,
+        "end": 42.06,
+        "probability": 0.9982231259346008
+      },
+      {
+        "word": " send",
+        "start": 42.06,
+        "end": 42.46,
+        "probability": 0.998256504535675
+      },
+      {
+        "word": " this",
+        "start": 42.46,
+        "end": 42.76,
+        "probability": 0.9981881976127625
+      },
+      {
+        "word": " to",
+        "start": 42.76,
+        "end": 42.92,
+        "probability": 0.9852128028869629
+      },
+      {
+        "word": " yourself",
+        "start": 42.92,
+        "end": 43.2,
+        "probability": 0.9982396364212036
+      },
+      {
+        "word": " right",
+        "start": 43.2,
+        "end": 43.6,
+        "probability": 0.9839686155319214
+      },
+      {
+        "word": " now,",
+        "start": 43.6,
+        "end": 44.02,
+        "probability": 0.9988038539886475
+      },
+      {
+        "word": " okay?",
+        "start": 44.22,
+        "end": 44.28,
+        "probability": 0.8392791748046875
+      }
+    ]
+  },
+  {
+    "start": 44.92,
+    "end": 45.9,
+    "text": "Listen to this twice.",
+    "words": [
+      {
+        "word": " Listen",
+        "start": 44.92,
+        "end": 44.92,
+        "probability": 0.9921072125434875
+      },
+      {
+        "word": " to",
+        "start": 44.92,
+        "end": 45.3,
+        "probability": 0.9985643029212952
+      },
+      {
+        "word": " this",
+        "start": 45.3,
+        "end": 45.5,
+        "probability": 0.995974600315094
+      },
+      {
+        "word": " twice.",
+        "start": 45.5,
+        "end": 45.9,
+        "probability": 0.9977587461471558
+      }
+    ]
+  },
+  {
+    "start": 46.7,
+    "end": 47.64,
+    "text": "Everything always works out.",
+    "words": [
+      {
+        "word": " Everything",
+        "start": 46.7,
+        "end": 46.7,
+        "probability": 0.04779284819960594
+      },
+      {
+        "word": " always",
+        "start": 46.7,
+        "end": 47.1,
+        "probability": 0.9686115384101868
+      },
+      {
+        "word": " works",
+        "start": 47.1,
+        "end": 47.4,
+        "probability": 0.8551883697509766
+      },
+      {
+        "word": " out.",
+        "start": 47.4,
+        "end": 47.64,
+        "probability": 0.9841837882995605
+      }
+    ]
+  },
+  {
+    "start": 50.56,
+    "end": 52.82,
+    "text": "Whatever I desire, desire me.",
+    "words": [
+      {
+        "word": " Whatever",
+        "start": 50.56,
+        "end": 50.76,
+        "probability": 0.9734461307525635
+      },
+      {
+        "word": " I",
+        "start": 50.76,
+        "end": 51.06,
+        "probability": 0.99439537525177
+      },
+      {
+        "word": " desire,",
+        "start": 51.06,
+        "end": 51.46,
+        "probability": 0.4875931143760681
+      },
+      {
+        "word": " desire",
+        "start": 52.06,
+        "end": 52.32,
+        "probability": 0.6887184381484985
+      },
+      {
+        "word": " me.",
+        "start": 52.32,
+        "end": 52.82,
+        "probability": 0.408444881439209
+      }
+    ]
+  },
+  {
+    "start": 53.76,
+    "end": 54.04,
+    "text": "That's right.",
+    "words": [
+      {
+        "word": " That's",
+        "start": 53.76,
+        "end": 53.82,
+        "probability": 0.7723201215267181
+      },
+      {
+        "word": " right.",
+        "start": 53.82,
+        "end": 54.04,
+        "probability": 0.8262631893157959
+      }
+    ]
+  },
+  {
+    "start": 55.0,
+    "end": 58.76,
+    "text": "You can listen to these custom audios on Aya and thank you later.",
+    "words": [
+      {
+        "word": " You",
+        "start": 55.0,
+        "end": 55.52,
+        "probability": 0.5933667421340942
+      },
+      {
+        "word": " can",
+        "start": 55.52,
+        "end": 55.72,
+        "probability": 0.9972133040428162
+      },
+      {
+        "word": " listen",
+        "start": 55.72,
+        "end": 55.94,
+        "probability": 0.9988579750061035
+      },
+      {
+        "word": " to",
+        "start": 55.94,
+        "end": 56.14,
+        "probability": 0.9988743662834167
+      },
+      {
+        "word": " these",
+        "start": 56.14,
+        "end": 56.32,
+        "probability": 0.9920284152030945
+      },
+      {
+        "word": " custom",
+        "start": 56.32,
+        "end": 56.62,
+        "probability": 0.9916388392448425
+      },
+      {
+        "word": " audios",
+        "start": 56.62,
+        "end": 57.06,
+        "probability": 0.9855304956436157
+      },
+      {
+        "word": " on",
+        "start": 57.06,
+        "end": 57.22,
+        "probability": 0.9902190566062927
+      },
+      {
+        "word": " Aya",
+        "start": 57.22,
+        "end": 57.56,
+        "probability": 0.6837440133094788
+      },
+      {
+        "word": " and",
+        "start": 57.56,
+        "end": 57.98,
+        "probability": 0.9097840189933777
+      },
+      {
+        "word": " thank",
+        "start": 57.98,
+        "end": 58.36,
+        "probability": 0.524328351020813
+      },
+      {
+        "word": " you",
+        "start": 58.36,
+        "end": 58.52,
+        "probability": 0.9830690622329712
+      },
+      {
+        "word": " later.",
+        "start": 58.52,
+        "end": 58.76,
+        "probability": 0.9681226015090942
+      }
+    ]
+  }
+]

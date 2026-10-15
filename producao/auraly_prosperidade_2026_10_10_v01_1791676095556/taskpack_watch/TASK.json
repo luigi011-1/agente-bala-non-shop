@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "task_id": "f4cde42b-0d45-4414-b5bc-5c897965316c",
+  "created_at": "2026-10-10T23:51:21.328537+00:00",
+  "repo_root": "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop",
+  "angle": {
+    "id": "3",
+    "slug": "auraly",
+    "name": "Auraly APP",
+    "aliases": [
+      "3",
+      "angle 3",
+      "ângulo 3",
+      "angulo 3",
+      "auraly",
+      "auraly app",
+      "manifestação",
+      "manifestacao",
+      "manifestation",
+      "soulmate"
+    ],
+    "historical_aliases": [],
+    "product_type": "app_manifestation_soulmate",
+    "audience": "Público dos EUA interessado em manifestação, conexão romântica e sinais",
+    "canonical_router": "WORKFLOW_AURALY.md",
+    "doctrine": [
+      "memoria/angulo3_copy_auraly.md",
+      "memoria/angulo3_swipe_padroes.md"
+    ],
+    "niches": [
+      "manifestation",
+      "soulmate",
+      "synchronicity",
+      "signs from the universe",
+      "prosperity"
+    ],
+    "optional_niches": [
+      "tarot"
+    ],
+    "optional_niches_rule": "Tarot exige pedido explícito; nunca define outro ângulo nem muda a oferta Auraly.",
+    "country": "US",
+    "content_language": "en-US",
+    "mining_defaults": {
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "min_views": 800000,
+      "min_views_operator": "gt",
+      "lookback_days": 2,
+      "max_profile_age_days": 30,
+      "country": "US",
+      "ai_avatar_only": true,
+      "timezone": "America/New_York"
+    }
+  },
+  "task": "watch",
+  "worker": "bala-pesquisador",
+  "reviewer": "bala-revisor",
+  "production": "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/auraly_prosperidade_2026_10_10_v01_1791676095556",
+  "current_stage": "ANALYSIS",
+  "next_action": "Executar /watch deste video e abrir todas as grades/frames criticos para escrever ANALISE_MODELO.md; depois registrar METHOD_PUZZLE.",
+  "checkpoint": "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/auraly_prosperidade_2026_10_10_v01_1791676095556/CHECKPOINT.md",
+  "routing_state": "READY",
+  "reference_fingerprints": {
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/AGENTS.md": "568ec07c571e292f72b2f631a424a55b61df7f96ebf81678d2c1a2d01fee765c",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/WORKFLOW_AURALY.md": "0234d1d366f2d9d46c8cab27700e773341515a634fc15b0927c5372abd803a56",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/operacao/schema_revisao.json": "11eb6f5967b00fbbb9cb37981f1d03a259fbcfd2db2894fdefb460b1f1438226",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/operacao/angulos.json": "ede34c126a6094d566fbaba88d654b69779ec06e17fa187d36e10742f3200aac",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/.agents/skills/revisar-producao/SKILL.md": "629141bf44cf046929eaa6851b4ba13f0c065ab800e3150ba63928eed0cf5826",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/.codex/agents/bala-revisor.toml": "4591f4d8e7f8418c9b4b2d6887da5efde4be87784dc447dc043a104a5ec97880",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/auraly_prosperidade_2026_10_10_v01_1791676095556/CHECKPOINT.md": "55f556da905927f1e0788dfafab277f36e7b018f140aac35038d8fb02f0ad9a4"
+  },
+  "production_fingerprints": {
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/auraly_prosperidade_2026_10_10_v01_1791676095556/CHECKPOINT.md": "55f556da905927f1e0788dfafab277f36e7b018f140aac35038d8fb02f0ad9a4",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/auraly_prosperidade_2026_10_10_v01_1791676095556/INTAKE.json": "f0cc9d651e3cd1f2baa21375066b90f356c539b5d08b77e9d498651a4342a586",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/auraly_prosperidade_2026_10_10_v01_1791676095556/anchors/avery_knox.jpg": "946e2db14ff0f6d5a6eaeac8ab31ef6657e3104d61ba3f12699ec7de67e35c6a",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/auraly_prosperidade_2026_10_10_v01_1791676095556/anchors/devon_price.jpg": "960101003312c94164aac7d3ccfe399153c1fd7627ef41bde0e9f0e174260ec2",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/auraly_prosperidade_2026_10_10_v01_1791676095556/anchors/jordan_vale.jpg": "1a69d97548bbaa96657b09e3708b42904613ee33c5eba6e939454372e7ddf5d6"
+  },
+  "deliverable_fingerprints": {},
+  "review_schema": "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/operacao/schema_revisao.json",
+  "approval_boundary": "Revisão técnica não aprova roteiro, seleção, publicação ou merge."
+}

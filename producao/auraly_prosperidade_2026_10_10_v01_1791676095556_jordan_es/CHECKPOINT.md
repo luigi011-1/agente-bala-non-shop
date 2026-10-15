@@ -1,0 +1,1 @@
+../auraly_prosperidade_2026_10_10_v01_1791676095556/CHECKPOINT.md

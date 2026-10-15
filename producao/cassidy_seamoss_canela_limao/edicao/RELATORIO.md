@@ -1,0 +1,24 @@
+# Relatório de edição · Cassidy hargroove - V01
+
+- Ordem dos takes (pela fala): 1. V01_20261013220227.mp4 (T1) → 2. t02_acucar.mp4 (T2) → 3. V03_20261013220227.mp4 (T3) → 4. V04_20261013220227.mp4 (T4) → 5. V05_20261013220227.mp4 (T5) → 6. V06_20261013220227.mp4 (T6) → 7. V07_20261013220227.mp4 (T7) → 8. V08_20261013220227.mp4 (T8) → 9. V09_20261013220227.mp4 (T9) → 10. V10_20261013220227.mp4 (T10) → 11. V11_20261013220227.mp4 (T11) → 12. V12_20261013220227.mp4 (T12) → 13. V13_20261013220227.mp4 (T13) → 14. V14_20261013220227.mp4 (T14) → 15. V15_20261013220227.mp4 (T15)
+  - aviso: t02_acucar.mp4 é mudo: posição pelo nome (2), conferir no cortes.png
+- Produção: `cassidy_seamoss_canela_limao` (`producao/cassidy_seamoss_canela_limao/ENTREGA_CASSIDY.md`), semelhança 97%
+- Exceção autorizada por Luigi, take 5: trocou "wanna" por "want to"; áudio original mantido, legenda do roteiro aprovado.
+- Exceção autorizada por Luigi, take 10: trocou "rems" por "rem"; áudio original mantido, legenda do roteiro aprovado.
+- Exceção autorizada por Luigi, take 14: trocou "rems sea moss" por "rem's cmos"; trocou "bio" por "body"; áudio original mantido, legenda do roteiro aprovado.
+- Fala dos takes contra o roteiro, palavra por palavra: OK
+  - aparado: 9. V09_20261013220227.mp4: cortado o que o Flow inventou ou repetiu: "and no"; ouvir a emenda
+  - aviso: 5. transcrição refeita por trechos (no take inteiro o whisper perdeu: faltou "and one tablespoon")
+- Variação deste vídeo (rodízio): legenda padrao · SFX nenhum · fonte do pico montserrat
+- Acabamento HyperFrames: zoom em body 2.3s, zoom em honey 11.6s, zoom em inflammation 18.2s, zoom em morning 23.7s, zoom em annoying 34.3s, zoom em gummy 40.2s, zoom em drink 46.1s, zoom em apple 51.7s · zoom sim · grão não · SFX nenhum
+- Sem silêncio fora da rampa: FALHA
+- Sem quadro fantasma nos cortes: OK
+- Legenda com o texto do roteiro (contagem bateu): OK
+- Nenhuma legenda com menos de 0,1s: OK
+- Vídeo em 1080x1920: OK
+  - silêncios: [(2.6500000000000004, 5.050000000000001), (65.10000000000001, 65.333333)]
+- Duração 65.3s · 3.80 palavras/s · 40 trechos (1 rampas) · 76 legendas
+- Música: type beat lo-fi .mp3 (a partir de 0.0s, cama base -18 dB)
+- Estilo fitwell · fala a 1.16x (alvo 3.8 palavras/s) · light leak na entrada dos takes nenhum; rampa nos takes [1]; legenda alta nos takes [1]
+- Arquivo: `/tmp/edicao/Cassidy hargroove - V01-c2ddf31e/Cassidy hargroove - V01_editado.mp4` (93.4 MB) · tempo total 315s
+- Olhar antes de entregar: `cortes.png` (pulo) e `legendas.png` (nada sobre rosto ou herói)

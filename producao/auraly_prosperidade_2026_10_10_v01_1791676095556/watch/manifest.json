@@ -1,0 +1,1020 @@
+{
+  "schema_version": 2,
+  "pipeline": "watch",
+  "run_id": "d28c4fb8-a046-412d-8cf1-099c5cb2cdf8",
+  "status": "COMPLETE",
+  "analysis_status": "PENDING_VISUAL_REVIEW",
+  "video": "/Users/macbookairm2/Downloads/snapinsta-1791676095556.mp4",
+  "outdir": "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/auraly_prosperidade_2026_10_10_v01_1791676095556/watch",
+  "info": {
+    "duration": 23.426077,
+    "fps": 30.0,
+    "width": 720,
+    "height": 1280,
+    "has_audio": true
+  },
+  "scenes": [
+    {
+      "file": "scene_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "scene_t00000.0333_000002.png",
+      "t": 0.033333
+    },
+    {
+      "file": "scene_t00019.5000_000003.png",
+      "t": 19.5
+    },
+    {
+      "file": "scene_t00019.5333_000004.png",
+      "t": 19.533333
+    }
+  ],
+  "timeline": [
+    {
+      "file": "tl_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "tl_t00000.2000_000002.png",
+      "t": 0.2
+    },
+    {
+      "file": "tl_t00000.4000_000003.png",
+      "t": 0.4
+    },
+    {
+      "file": "tl_t00000.6000_000004.png",
+      "t": 0.6
+    },
+    {
+      "file": "tl_t00000.8000_000005.png",
+      "t": 0.8
+    },
+    {
+      "file": "tl_t00001.0000_000006.png",
+      "t": 1.0
+    },
+    {
+      "file": "tl_t00001.2000_000007.png",
+      "t": 1.2
+    },
+    {
+      "file": "tl_t00001.4000_000008.png",
+      "t": 1.4
+    },
+    {
+      "file": "tl_t00001.6000_000009.png",
+      "t": 1.6
+    },
+    {
+      "file": "tl_t00001.8000_000010.png",
+      "t": 1.8
+    },
+    {
+      "file": "tl_t00002.0000_000011.png",
+      "t": 2.0
+    },
+    {
+      "file": "tl_t00002.2000_000012.png",
+      "t": 2.2
+    },
+    {
+      "file": "tl_t00002.4000_000013.png",
+      "t": 2.4
+    },
+    {
+      "file": "tl_t00002.6000_000014.png",
+      "t": 2.6
+    },
+    {
+      "file": "tl_t00002.8000_000015.png",
+      "t": 2.8
+    },
+    {
+      "file": "tl_t00003.0000_000016.png",
+      "t": 3.0
+    },
+    {
+      "file": "tl_t00003.2000_000017.png",
+      "t": 3.2
+    },
+    {
+      "file": "tl_t00003.4000_000018.png",
+      "t": 3.4
+    },
+    {
+      "file": "tl_t00003.6000_000019.png",
+      "t": 3.6
+    },
+    {
+      "file": "tl_t00003.8000_000020.png",
+      "t": 3.8
+    },
+    {
+      "file": "tl_t00004.0000_000021.png",
+      "t": 4.0
+    },
+    {
+      "file": "tl_t00004.2000_000022.png",
+      "t": 4.2
+    },
+    {
+      "file": "tl_t00004.4000_000023.png",
+      "t": 4.4
+    },
+    {
+      "file": "tl_t00004.6000_000024.png",
+      "t": 4.6
+    },
+    {
+      "file": "tl_t00004.8000_000025.png",
+      "t": 4.8
+    },
+    {
+      "file": "tl_t00005.0000_000026.png",
+      "t": 5.0
+    },
+    {
+      "file": "tl_t00005.2000_000027.png",
+      "t": 5.2
+    },
+    {
+      "file": "tl_t00005.4000_000028.png",
+      "t": 5.4
+    },
+    {
+      "file": "tl_t00005.6000_000029.png",
+      "t": 5.6
+    },
+    {
+      "file": "tl_t00005.8000_000030.png",
+      "t": 5.8
+    },
+    {
+      "file": "tl_t00006.0000_000031.png",
+      "t": 6.0
+    },
+    {
+      "file": "tl_t00006.2000_000032.png",
+      "t": 6.2
+    },
+    {
+      "file": "tl_t00006.4000_000033.png",
+      "t": 6.4
+    },
+    {
+      "file": "tl_t00006.6000_000034.png",
+      "t": 6.6
+    },
+    {
+      "file": "tl_t00006.8000_000035.png",
+      "t": 6.8
+    },
+    {
+      "file": "tl_t00007.0000_000036.png",
+      "t": 7.0
+    },
+    {
+      "file": "tl_t00007.2000_000037.png",
+      "t": 7.2
+    },
+    {
+      "file": "tl_t00007.4000_000038.png",
+      "t": 7.4
+    },
+    {
+      "file": "tl_t00007.6000_000039.png",
+      "t": 7.6
+    },
+    {
+      "file": "tl_t00007.8000_000040.png",
+      "t": 7.8
+    },
+    {
+      "file": "tl_t00008.0000_000041.png",
+      "t": 8.0
+    },
+    {
+      "file": "tl_t00008.2000_000042.png",
+      "t": 8.2
+    },
+    {
+      "file": "tl_t00008.4000_000043.png",
+      "t": 8.4
+    },
+    {
+      "file": "tl_t00008.6000_000044.png",
+      "t": 8.6
+    },
+    {
+      "file": "tl_t00008.8000_000045.png",
+      "t": 8.8
+    },
+    {
+      "file": "tl_t00009.0000_000046.png",
+      "t": 9.0
+    },
+    {
+      "file": "tl_t00009.2000_000047.png",
+      "t": 9.2
+    },
+    {
+      "file": "tl_t00009.4000_000048.png",
+      "t": 9.4
+    },
+    {
+      "file": "tl_t00009.6000_000049.png",
+      "t": 9.6
+    },
+    {
+      "file": "tl_t00009.8000_000050.png",
+      "t": 9.8
+    },
+    {
+      "file": "tl_t00010.0000_000051.png",
+      "t": 10.0
+    },
+    {
+      "file": "tl_t00010.2000_000052.png",
+      "t": 10.2
+    },
+    {
+      "file": "tl_t00010.4000_000053.png",
+      "t": 10.4
+    },
+    {
+      "file": "tl_t00010.6000_000054.png",
+      "t": 10.6
+    },
+    {
+      "file": "tl_t00010.8000_000055.png",
+      "t": 10.8
+    },
+    {
+      "file": "tl_t00011.0000_000056.png",
+      "t": 11.0
+    },
+    {
+      "file": "tl_t00011.2000_000057.png",
+      "t": 11.2
+    },
+    {
+      "file": "tl_t00011.4000_000058.png",
+      "t": 11.4
+    },
+    {
+      "file": "tl_t00011.6000_000059.png",
+      "t": 11.6
+    },
+    {
+      "file": "tl_t00011.8000_000060.png",
+      "t": 11.8
+    },
+    {
+      "file": "tl_t00012.0000_000061.png",
+      "t": 12.0
+    },
+    {
+      "file": "tl_t00012.2000_000062.png",
+      "t": 12.2
+    },
+    {
+      "file": "tl_t00012.4000_000063.png",
+      "t": 12.4
+    },
+    {
+      "file": "tl_t00012.6000_000064.png",
+      "t": 12.6
+    },
+    {
+      "file": "tl_t00012.8000_000065.png",
+      "t": 12.8
+    },
+    {
+      "file": "tl_t00013.0000_000066.png",
+      "t": 13.0
+    },
+    {
+      "file": "tl_t00013.2000_000067.png",
+      "t": 13.2
+    },
+    {
+      "file": "tl_t00013.4000_000068.png",
+      "t": 13.4
+    },
+    {
+      "file": "tl_t00013.6000_000069.png",
+      "t": 13.6
+    },
+    {
+      "file": "tl_t00013.8000_000070.png",
+      "t": 13.8
+    },
+    {
+      "file": "tl_t00014.0000_000071.png",
+      "t": 14.0
+    },
+    {
+      "file": "tl_t00014.2000_000072.png",
+      "t": 14.2
+    },
+    {
+      "file": "tl_t00014.4000_000073.png",
+      "t": 14.4
+    },
+    {
+      "file": "tl_t00014.6000_000074.png",
+      "t": 14.6
+    },
+    {
+      "file": "tl_t00014.8000_000075.png",
+      "t": 14.8
+    },
+    {
+      "file": "tl_t00015.0000_000076.png",
+      "t": 15.0
+    },
+    {
+      "file": "tl_t00015.2000_000077.png",
+      "t": 15.2
+    },
+    {
+      "file": "tl_t00015.4000_000078.png",
+      "t": 15.4
+    },
+    {
+      "file": "tl_t00015.6000_000079.png",
+      "t": 15.6
+    },
+    {
+      "file": "tl_t00015.8000_000080.png",
+      "t": 15.8
+    },
+    {
+      "file": "tl_t00016.0000_000081.png",
+      "t": 16.0
+    },
+    {
+      "file": "tl_t00016.2000_000082.png",
+      "t": 16.2
+    },
+    {
+      "file": "tl_t00016.4000_000083.png",
+      "t": 16.4
+    },
+    {
+      "file": "tl_t00016.6000_000084.png",
+      "t": 16.6
+    },
+    {
+      "file": "tl_t00016.8000_000085.png",
+      "t": 16.8
+    },
+    {
+      "file": "tl_t00017.0000_000086.png",
+      "t": 17.0
+    },
+    {
+      "file": "tl_t00017.2000_000087.png",
+      "t": 17.2
+    },
+    {
+      "file": "tl_t00017.4000_000088.png",
+      "t": 17.4
+    },
+    {
+      "file": "tl_t00017.6000_000089.png",
+      "t": 17.6
+    },
+    {
+      "file": "tl_t00017.8000_000090.png",
+      "t": 17.8
+    },
+    {
+      "file": "tl_t00018.0000_000091.png",
+      "t": 18.0
+    },
+    {
+      "file": "tl_t00018.2000_000092.png",
+      "t": 18.2
+    },
+    {
+      "file": "tl_t00018.4000_000093.png",
+      "t": 18.4
+    },
+    {
+      "file": "tl_t00018.6000_000094.png",
+      "t": 18.6
+    },
+    {
+      "file": "tl_t00018.8000_000095.png",
+      "t": 18.8
+    },
+    {
+      "file": "tl_t00019.0000_000096.png",
+      "t": 19.0
+    },
+    {
+      "file": "tl_t00019.2000_000097.png",
+      "t": 19.2
+    },
+    {
+      "file": "tl_t00019.4000_000098.png",
+      "t": 19.4
+    },
+    {
+      "file": "tl_t00019.6000_000099.png",
+      "t": 19.6
+    },
+    {
+      "file": "tl_t00019.8000_000100.png",
+      "t": 19.8
+    },
+    {
+      "file": "tl_t00020.0000_000101.png",
+      "t": 20.0
+    },
+    {
+      "file": "tl_t00020.2000_000102.png",
+      "t": 20.2
+    },
+    {
+      "file": "tl_t00020.4000_000103.png",
+      "t": 20.4
+    },
+    {
+      "file": "tl_t00020.6000_000104.png",
+      "t": 20.6
+    },
+    {
+      "file": "tl_t00020.8000_000105.png",
+      "t": 20.8
+    },
+    {
+      "file": "tl_t00021.0000_000106.png",
+      "t": 21.0
+    },
+    {
+      "file": "tl_t00021.2000_000107.png",
+      "t": 21.2
+    },
+    {
+      "file": "tl_t00021.4000_000108.png",
+      "t": 21.4
+    },
+    {
+      "file": "tl_t00021.6000_000109.png",
+      "t": 21.6
+    },
+    {
+      "file": "tl_t00021.8000_000110.png",
+      "t": 21.8
+    },
+    {
+      "file": "tl_t00022.0000_000111.png",
+      "t": 22.0
+    },
+    {
+      "file": "tl_t00022.2000_000112.png",
+      "t": 22.2
+    },
+    {
+      "file": "tl_t00022.4000_000113.png",
+      "t": 22.4
+    },
+    {
+      "file": "tl_t00022.6000_000114.png",
+      "t": 22.6
+    },
+    {
+      "file": "tl_t00022.8000_000115.png",
+      "t": 22.8
+    },
+    {
+      "file": "tl_t00023.0000_000116.png",
+      "t": 23.0
+    },
+    {
+      "file": "tl_t00023.2000_000117.png",
+      "t": 23.2
+    }
+  ],
+  "overview": {
+    "scenes": [
+      "overview_scenes_01.png"
+    ],
+    "timeline": [
+      "overview_timeline_01.png",
+      "overview_timeline_02.png",
+      "overview_timeline_03.png",
+      "overview_timeline_04.png",
+      "overview_timeline_05.png",
+      "overview_timeline_06.png"
+    ]
+  },
+  "transcript": true,
+  "audio": {
+    "status": "SUCCEEDED",
+    "backend": "faster-whisper",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.11,
+        "end": 7.13,
+        "text": "What the fuck are you afraid of? Death? It's part of life. Bankruptcy? You can make it back. Shame? Everyone will forget.",
+        "words": [
+          {
+            "word": " What",
+            "start": 0.11,
+            "end": 0.59,
+            "probability": 0.9023930430412292
+          },
+          {
+            "word": " the",
+            "start": 0.59,
+            "end": 0.77,
+            "probability": 0.9978905320167542
+          },
+          {
+            "word": " fuck",
+            "start": 0.77,
+            "end": 1.01,
+            "probability": 0.9849039316177368
+          },
+          {
+            "word": " are",
+            "start": 1.01,
+            "end": 1.21,
+            "probability": 0.9734299778938293
+          },
+          {
+            "word": " you",
+            "start": 1.21,
+            "end": 1.35,
+            "probability": 0.9995296001434326
+          },
+          {
+            "word": " afraid",
+            "start": 1.35,
+            "end": 1.65,
+            "probability": 0.9969509840011597
+          },
+          {
+            "word": " of?",
+            "start": 1.65,
+            "end": 2.01,
+            "probability": 0.9940763711929321
+          },
+          {
+            "word": " Death?",
+            "start": 2.31,
+            "end": 2.47,
+            "probability": 0.9269508719444275
+          },
+          {
+            "word": " It's",
+            "start": 2.87,
+            "end": 2.95,
+            "probability": 0.9571875631809235
+          },
+          {
+            "word": " part",
+            "start": 2.95,
+            "end": 3.13,
+            "probability": 0.9874234795570374
+          },
+          {
+            "word": " of",
+            "start": 3.13,
+            "end": 3.25,
+            "probability": 0.9981533885002136
+          },
+          {
+            "word": " life.",
+            "start": 3.25,
+            "end": 3.47,
+            "probability": 0.9971170425415039
+          },
+          {
+            "word": " Bankruptcy?",
+            "start": 3.91,
+            "end": 4.31,
+            "probability": 0.9888901511828104
+          },
+          {
+            "word": " You",
+            "start": 4.53,
+            "end": 4.55,
+            "probability": 0.9657613635063171
+          },
+          {
+            "word": " can",
+            "start": 4.55,
+            "end": 4.69,
+            "probability": 0.995677649974823
+          },
+          {
+            "word": " make",
+            "start": 4.69,
+            "end": 4.85,
+            "probability": 0.9983898401260376
+          },
+          {
+            "word": " it",
+            "start": 4.85,
+            "end": 4.97,
+            "probability": 0.9452258348464966
+          },
+          {
+            "word": " back.",
+            "start": 4.97,
+            "end": 5.25,
+            "probability": 0.9990625977516174
+          },
+          {
+            "word": " Shame?",
+            "start": 5.79,
+            "end": 5.87,
+            "probability": 0.9796468019485474
+          },
+          {
+            "word": " Everyone",
+            "start": 6.39,
+            "end": 6.57,
+            "probability": 0.9832828044891357
+          },
+          {
+            "word": " will",
+            "start": 6.57,
+            "end": 6.79,
+            "probability": 0.9973534345626831
+          },
+          {
+            "word": " forget.",
+            "start": 6.79,
+            "end": 7.13,
+            "probability": 0.9990929365158081
+          }
+        ]
+      },
+      {
+        "start": 7.57,
+        "end": 13.65,
+        "text": "Rejection? It happens to everyone. Failure? It's part of growth. Judgment? They'll judge you anyways. Losing people?",
+        "words": [
+          {
+            "word": " Rejection?",
+            "start": 7.57,
+            "end": 7.97,
+            "probability": 0.9922203421592712
+          },
+          {
+            "word": " It",
+            "start": 8.31,
+            "end": 8.39,
+            "probability": 0.9820484519004822
+          },
+          {
+            "word": " happens",
+            "start": 8.39,
+            "end": 8.71,
+            "probability": 0.9966036081314087
+          },
+          {
+            "word": " to",
+            "start": 8.71,
+            "end": 8.93,
+            "probability": 0.9985054731369019
+          },
+          {
+            "word": " everyone.",
+            "start": 8.93,
+            "end": 9.23,
+            "probability": 0.9986306428909302
+          },
+          {
+            "word": " Failure?",
+            "start": 9.61,
+            "end": 9.71,
+            "probability": 0.7322754859924316
+          },
+          {
+            "word": " It's",
+            "start": 10.07,
+            "end": 10.15,
+            "probability": 0.988691508769989
+          },
+          {
+            "word": " part",
+            "start": 10.15,
+            "end": 10.33,
+            "probability": 0.9751257300376892
+          },
+          {
+            "word": " of",
+            "start": 10.33,
+            "end": 10.45,
+            "probability": 0.9984937906265259
+          },
+          {
+            "word": " growth.",
+            "start": 10.45,
+            "end": 10.67,
+            "probability": 0.9961620569229126
+          },
+          {
+            "word": " Judgment?",
+            "start": 11.19,
+            "end": 11.37,
+            "probability": 0.9303097128868103
+          },
+          {
+            "word": " They'll",
+            "start": 11.87,
+            "end": 12.01,
+            "probability": 0.9823804795742035
+          },
+          {
+            "word": " judge",
+            "start": 12.01,
+            "end": 12.19,
+            "probability": 0.9976816177368164
+          },
+          {
+            "word": " you",
+            "start": 12.19,
+            "end": 12.35,
+            "probability": 0.9994049072265625
+          },
+          {
+            "word": " anyways.",
+            "start": 12.35,
+            "end": 12.63,
+            "probability": 0.9463463425636292
+          },
+          {
+            "word": " Losing",
+            "start": 13.17,
+            "end": 13.35,
+            "probability": 0.9954686462879181
+          },
+          {
+            "word": " people?",
+            "start": 13.35,
+            "end": 13.65,
+            "probability": 0.997192919254303
+          }
+        ]
+      },
+      {
+        "start": 13.79,
+        "end": 17.85,
+        "text": "Not all are meant to stay. Mistakes? You'll learn from them. Taking risks?",
+        "words": [
+          {
+            "word": " Not",
+            "start": 13.79,
+            "end": 14.01,
+            "probability": 0.9861132502555847
+          },
+          {
+            "word": " all",
+            "start": 14.01,
+            "end": 14.21,
+            "probability": 0.9988580942153931
+          },
+          {
+            "word": " are",
+            "start": 14.21,
+            "end": 14.33,
+            "probability": 0.9953481554985046
+          },
+          {
+            "word": " meant",
+            "start": 14.33,
+            "end": 14.45,
+            "probability": 0.9975905418395996
+          },
+          {
+            "word": " to",
+            "start": 14.45,
+            "end": 14.63,
+            "probability": 0.9995893836021423
+          },
+          {
+            "word": " stay.",
+            "start": 14.63,
+            "end": 14.89,
+            "probability": 0.9949123859405518
+          },
+          {
+            "word": " Mistakes?",
+            "start": 15.35,
+            "end": 15.79,
+            "probability": 0.989507257938385
+          },
+          {
+            "word": " You'll",
+            "start": 16.17,
+            "end": 16.35,
+            "probability": 0.9923588633537292
+          },
+          {
+            "word": " learn",
+            "start": 16.35,
+            "end": 16.47,
+            "probability": 0.9992934465408325
+          },
+          {
+            "word": " from",
+            "start": 16.47,
+            "end": 16.67,
+            "probability": 0.998589813709259
+          },
+          {
+            "word": " them.",
+            "start": 16.67,
+            "end": 16.87,
+            "probability": 0.9989033937454224
+          },
+          {
+            "word": " Taking",
+            "start": 17.17,
+            "end": 17.41,
+            "probability": 0.9894644021987915
+          },
+          {
+            "word": " risks?",
+            "start": 17.41,
+            "end": 17.85,
+            "probability": 0.9984748959541321
+          }
+        ]
+      },
+      {
+        "start": 18.41,
+        "end": 22.99,
+        "text": "Regret hurts more. Live every day like at your last, my friend. You really have nothing to lose.",
+        "words": [
+          {
+            "word": " Regret",
+            "start": 18.41,
+            "end": 18.67,
+            "probability": 0.9695241153240204
+          },
+          {
+            "word": " hurts",
+            "start": 18.67,
+            "end": 19.01,
+            "probability": 0.9957606196403503
+          },
+          {
+            "word": " more.",
+            "start": 19.01,
+            "end": 19.37,
+            "probability": 0.9986912608146667
+          },
+          {
+            "word": " Live",
+            "start": 19.71,
+            "end": 19.83,
+            "probability": 0.993838369846344
+          },
+          {
+            "word": " every",
+            "start": 19.83,
+            "end": 20.13,
+            "probability": 0.7479454278945923
+          },
+          {
+            "word": " day",
+            "start": 20.13,
+            "end": 20.39,
+            "probability": 0.9990228414535522
+          },
+          {
+            "word": " like",
+            "start": 20.39,
+            "end": 20.65,
+            "probability": 0.8090347647666931
+          },
+          {
+            "word": " at",
+            "start": 20.65,
+            "end": 20.79,
+            "probability": 0.4222220480442047
+          },
+          {
+            "word": " your",
+            "start": 20.79,
+            "end": 20.89,
+            "probability": 0.9945182204246521
+          },
+          {
+            "word": " last,",
+            "start": 20.89,
+            "end": 21.11,
+            "probability": 0.9975211024284363
+          },
+          {
+            "word": " my",
+            "start": 21.21,
+            "end": 21.31,
+            "probability": 0.9972171783447266
+          },
+          {
+            "word": " friend.",
+            "start": 21.31,
+            "end": 21.55,
+            "probability": 0.9984833598136902
+          },
+          {
+            "word": " You",
+            "start": 21.73,
+            "end": 21.85,
+            "probability": 0.9962635636329651
+          },
+          {
+            "word": " really",
+            "start": 21.85,
+            "end": 22.13,
+            "probability": 0.994840681552887
+          },
+          {
+            "word": " have",
+            "start": 22.13,
+            "end": 22.37,
+            "probability": 0.9985207915306091
+          },
+          {
+            "word": " nothing",
+            "start": 22.37,
+            "end": 22.61,
+            "probability": 0.9988771080970764
+          },
+          {
+            "word": " to",
+            "start": 22.61,
+            "end": 22.83,
+            "probability": 0.9986655712127686
+          },
+          {
+            "word": " lose.",
+            "start": 22.83,
+            "end": 22.99,
+            "probability": 0.993893563747406
+          }
+        ]
+      }
+    ],
+    "text": "What the fuck are you afraid of? Death? It's part of life. Bankruptcy? You can make it back. Shame? Everyone will forget. Rejection? It happens to everyone. Failure? It's part of growth. Judgment? They'll judge you anyways. Losing people? Not all are meant to stay. Mistakes? You'll learn from them. Taking risks? Regret hurts more. Live every day like at your last, my friend. You really have nothing to lose."
+  },
+  "alignment": {
+    "status": "NOT_REQUESTED",
+    "backend": null
+  },
+  "params": {
+    "timeline_fps": 5,
+    "scene_threshold": 0.2,
+    "model": "small.en",
+    "language": "en",
+    "device": "cpu",
+    "compute_type": "int8",
+    "cpu_threads": 4,
+    "jobs": 4,
+    "alignment": "none",
+    "align_model": null,
+    "word_timestamps": true,
+    "no_audio": false,
+    "allow_no_audio": false,
+    "max_frames": 20000,
+    "command_timeout": 300
+  },
+  "environment": {
+    "os": "macOS-27.0.1-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.15",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "whisperx": "3.8.6",
+      "ctranslate2": "4.8.2",
+      "Pillow": "12.3.0",
+      "av": "18.0.0",
+      "torch": "2.8.0",
+      "torchaudio": "2.8.0"
+    },
+    "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+    "ffprobe": "/opt/homebrew/bin/ffprobe"
+  },
+  "errors": [],
+  "coverage": {
+    "source_duration_s": 23.426077,
+    "sample_interval_s": 0.2,
+    "timeline_count": 117,
+    "timestamp_basis": "fps_filter_sampling_grid",
+    "visual_review_performed": false
+  },
+  "elapsed_seconds": 7.394
+}
