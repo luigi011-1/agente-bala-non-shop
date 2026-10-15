@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "task_id": "86719a8a-4b29-4173-bf41-2534d61bda9d",
+  "created_at": "2026-10-12T03:28:20.474599+00:00",
+  "repo_root": "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop",
+  "angle": {
+    "id": "2",
+    "slug": "fitwell",
+    "name": "FitWell / FityWell APP",
+    "aliases": [
+      "2",
+      "angle 2",
+      "ângulo 2",
+      "angulo 2",
+      "fitwell",
+      "fitywell",
+      "fity well"
+    ],
+    "historical_aliases": [],
+    "product_type": "app_health_weight_loss",
+    "audience": "Homens e mulheres dos EUA, 40+",
+    "canonical_router": "CLAUDE.md",
+    "doctrine": [
+      "memoria/angulo2_copy_fitywell.md"
+    ],
+    "niches": [
+      "health",
+      "fitness",
+      "weight loss",
+      "healthy aging",
+      "fitness over 40"
+    ],
+    "country": "US",
+    "content_language": "en-US",
+    "mining_defaults": {
+      "platforms": [
+        "instagram",
+        "facebook"
+      ],
+      "min_views": 800000,
+      "min_views_operator": "gt",
+      "lookback_days": 2,
+      "max_profile_age_days": 30,
+      "country": "US",
+      "ai_avatar_only": true,
+      "timezone": "America/New_York"
+    }
+  },
+  "task": "watch",
+  "worker": "bala-pesquisador",
+  "reviewer": "bala-revisor",
+  "production": "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/fitywell_growth_2026_10_12_v01_1791763449262",
+  "current_stage": "ANALYSIS_IN_PROGRESS",
+  "next_action": "Decompor referência com /watch, classificar origem e preparar roteiro completo para aprovação.",
+  "checkpoint": "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/fitywell_growth_2026_10_12_v01_1791763449262/CHECKPOINT.md",
+  "routing_state": "READY",
+  "reference_fingerprints": {
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/AGENTS.md": "d2ec89c7a3c8273566fdc197e4d3c6c75778c403e04be73d422507db04bbbad1",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/CLAUDE.md": "b2432a8589511b88626555f23877f5d89099204af8e9f23de9790a43cbe9e14d",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/operacao/schema_revisao.json": "11eb6f5967b00fbbb9cb37981f1d03a259fbcfd2db2894fdefb460b1f1438226",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/operacao/angulos.json": "ede34c126a6094d566fbaba88d654b69779ec06e17fa187d36e10742f3200aac",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/.agents/skills/revisar-producao/SKILL.md": "629141bf44cf046929eaa6851b4ba13f0c065ab800e3150ba63928eed0cf5826",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/.codex/agents/bala-revisor.toml": "4591f4d8e7f8418c9b4b2d6887da5efde4be87784dc447dc043a104a5ec97880",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/fitywell_growth_2026_10_12_v01_1791763449262/CHECKPOINT.md": "301b0065723f98aa4a824eef29a7a2c5574f33e5727898e54aad79fdf25c853b"
+  },
+  "production_fingerprints": {
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/fitywell_growth_2026_10_12_v01_1791763449262/AVATAR_QUEUE.md": "21d504b8029a205e8405fd6608878c3ea2a4cf6bc5bc29ecdff751937f15806e",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/fitywell_growth_2026_10_12_v01_1791763449262/CHECKPOINT.md": "301b0065723f98aa4a824eef29a7a2c5574f33e5727898e54aad79fdf25c853b",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/fitywell_growth_2026_10_12_v01_1791763449262/INTAKE.json": "f23fd2c91834b32ace94745e1b1dfd040deb309e02f171c083eaa0207ff0cb70",
+    "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/fitywell_growth_2026_10_12_v01_1791763449262/input/modelo.mp4": "5bf6a5bbe577fa8b46bc829dad4016f77c1cd83af3699d819cb9ff9746a66699"
+  },
+  "deliverable_fingerprints": {},
+  "review_schema": "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/operacao/schema_revisao.json",
+  "approval_boundary": "Revisão técnica não aprova roteiro, seleção, publicação ou merge."
+}

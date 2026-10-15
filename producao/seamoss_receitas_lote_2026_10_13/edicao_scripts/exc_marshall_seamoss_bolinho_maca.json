@@ -1,0 +1,38 @@
+{
+ "items": [
+  {
+   "file": "/Users/macbookairm2/Desktop/Marshall - V02/V18_20261013223938.mp4",
+   "sha256": "c1910a47481874b1dcb5df44d6296e761999ec1fee49abcdbd2c73c74322e639",
+   "approved_script": "The one I trust is Natural Rems Sea Moss. Wild Irish sea moss, apple, apple cider vinegar, ginger and dandelion, sixteen in one gummy.",
+   "allowed_problems": [
+    "trocou \"rems\" por \"rem\"",
+    "trocou \"dandelion\" por \"dandelions\""
+   ]
+  },
+  {
+   "file": "/Users/macbookairm2/Desktop/Marshall - V02/V21_20261013223938.mp4",
+   "sha256": "e9a800123d00f084df9ee54dd99fb9ea81fa6cfda92c6504699955e91fee24c0",
+   "approved_script": "Search Natural Rems Sea Moss on Amazon. Or tap my profile picture, the link is waiting in my stories, or right there in my bio.",
+   "allowed_problems": [
+    "trocou \"rems sea moss\" por \"rem's cmos\""
+   ]
+  },
+  {
+   "file": "/Users/macbookairm2/Desktop/Marshall - V02/V15_20261013223938.mp4",
+   "sha256": "aed9917b6738a166712e33d6f70a5bdfc4d6a9eb75d78f28f130cae1633104f6",
+   "approved_script": "But let's be real. Dicing, mixing and baking a whole tray every time the craving hits takes an hour.",
+   "allowed_problems": [
+    "faltou \"an hour\""
+   ]
+  },
+  {
+   "file": "/Users/macbookairm2/Desktop/Marshall - V02/V16_20261013223938.mp4",
+   "sha256": "dbec67250b277b47fcd4c7445214114392e9638169497fa9de4d6eb51d659cd7",
+   "approved_script": "So on busy days I reach for what the ocean has given me for fifty years, sea moss. It feeds that same gut.",
+   "allowed_problems": [
+    "faltou \"that same gut\""
+   ]
+  }
+ ],
+ "user_authorization": "Luigi, 2026-10-14: 'resolva tudo isso e n\u00e3o me pe\u00e7a mais aux\u00edlio'; exce\u00e7\u00e3o s\u00f3 para erro de escuta do whisper small conferido com o medium.en no take inteiro e em trechos"
+}

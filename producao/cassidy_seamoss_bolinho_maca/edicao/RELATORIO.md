@@ -1,0 +1,22 @@
+# Relatório de edição · Cassidy Hargove - V02
+
+- Ordem dos takes (pela fala): 1. V01_20261013225536.mp4 (T1) → 2. V02_20261013225536.mp4 (T2) → 3. V03_20261013225536.mp4 (T3) → 4. V04_20261013225536.mp4 (T4) → 5. V05_20261013225536.mp4 (T5) → 6. V06_20261013225536.mp4 (T6) → 7. V07_20261013225536.mp4 (T7) → 8. V08_20261013225536.mp4 (T8) → 9. V09_20261013225536.mp4 (T9) → 10. V10_20261013225536.mp4 (T10) → 11. V11_20261013225536.mp4 (T11) → 12. V12_20261013225536.mp4 (T12) → 13. V13_20261013225536.mp4 (T13) → 14. V14_20261013225536.mp4 (T14) → 15. V15_20261013225536.mp4 (T15) → 16. V16_20261013225536.mp4 (T16) → 17. V17_20261013225536.mp4 (T17) → 18. V18_20261013225536.mp4 (T18) → 19. V19_20261013225536.mp4 (T19) → 20. V20_20261013225536.mp4 (T20) → 21. V21_20261013225536.mp4 (T21) → 22. V22_20261013225536.mp4 (T22)
+- Produção: `cassidy_seamoss_bolinho_maca` (`producao/cassidy_seamoss_bolinho_maca/ENTREGA_CASSIDY.md`), semelhança 93%
+- Exceção autorizada por Luigi, take 18: faltou "the one i trust is"; trocou "rems" por "rem"; áudio original mantido, legenda do roteiro aprovado.
+- Exceção autorizada por Luigi, take 21: trocou "rems sea moss" por "rem's cmos"; áudio original mantido, legenda do roteiro aprovado.
+- Fala dos takes contra o roteiro, palavra por palavra: OK
+  - aparado: 1. V01_20261013225536.mp4: cortado o que o Flow inventou ou repetiu: "apples are part of the rose family? It takes about 30 leaves to make just one."; ouvir a emenda
+  - aparado: 5. V05_20261013225536.mp4: cortado o que o Flow inventou ou repetiu: "First we pour in some oats,"; ouvir a emenda
+- Variação deste vídeo (rodízio): legenda padrao · SFX nenhum · fonte do pico montserrat
+- Acabamento HyperFrames: zoom em bowl 2.2s, zoom em powder 7.9s, zoom em brown 13.9s, zoom em them 20.0s, zoom em craving 25.0s, zoom em make 32.9s, zoom em have 38.4s, zoom em oven 44.1s, zoom em dandelion 53.7s · zoom sim · grão não · SFX nenhum
+- Sem silêncio fora da rampa: FALHA
+- Sem quadro fantasma nos cortes: OK
+- Legenda com o texto do roteiro (contagem bateu): OK
+- Nenhuma legenda com menos de 0,1s: OK
+- Vídeo em 1080x1920: OK
+  - silêncios: [(2.6, 2.85), (3.5, 3.75), (5.300000000000001, 5.7), (6.6000000000000005, 6.8500000000000005), (8.15, 8.4), (11.25, 11.5), (12.3, 12.65), (17.35, 17.650000000000002), (20.150000000000002, 20.400000000000002), (68.65, 68.9), (70.55, 70.8)]
+- Duração 70.8s · 3.79 palavras/s · 46 trechos (0 rampas) · 89 legendas
+- Música: type beat lo-fi .mp3 (a partir de 0.0s, cama base -18 dB)
+- Estilo fitwell · fala a 1.15x (alvo 3.8 palavras/s) · light leak na entrada dos takes nenhum; rampa nos takes [1]; legenda alta nos takes [1]
+- Arquivo: `/tmp/edicao/Cassidy Hargove - V02-af85846e/Cassidy Hargove - V02_editado.mp4` (100.1 MB) · tempo total 492s
+- Olhar antes de entregar: `cortes.png` (pulo) e `legendas.png` (nada sobre rosto ou herói)

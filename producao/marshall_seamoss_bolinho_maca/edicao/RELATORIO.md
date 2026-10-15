@@ -1,0 +1,26 @@
+# Relatório de edição · Marshall - V02
+
+- Ordem dos takes (pela fala): 1. V01_20261013223938.mp4 (T1) → 2. V02_20261013223938.mp4 (T2) → 3. V03_20261013223938.mp4 (T3) → 4. V04_20261013223938.mp4 (T4) → 5. V05_20261013223938.mp4 (T5) → 6. V06_20261013223938.mp4 (T6) → 7. V07_20261013223938.mp4 (T7) → 8. V08_20261013223938.mp4 (T8) → 9. V09_20261013223938.mp4 (T9) → 10. V10_20261013223938.mp4 (T10) → 11. V11_20261013223938.mp4 (T11) → 12. V12_20261013223938.mp4 (T12) → 13. V13_20261013223938.mp4 (T13) → 14. V14_20261013223938.mp4 (T14) → 15. V15_20261013223938.mp4 (T15) → 16. V16_20261013223938.mp4 (T16) → 17. V17_20261013223938.mp4 (T17) → 18. V18_20261013223938.mp4 (T18) → 19. V19_20261013223938.mp4 (T19) → 20. V20_20261013223938.mp4 (T20) → 21. V21_20261013223938.mp4 (T21) → 22. V22_20261013223938.mp4 (T22)
+- Produção: `marshall_seamoss_bolinho_maca` (`producao/marshall_seamoss_bolinho_maca/ENTREGA_MARSHALL.md`), semelhança 96%
+- Exceção autorizada por Luigi, take 15: faltou "an hour"; áudio original mantido, legenda do roteiro aprovado.
+- Exceção autorizada por Luigi, take 16: faltou "that same gut"; áudio original mantido, legenda do roteiro aprovado.
+- Exceção autorizada por Luigi, take 18: trocou "rems" por "rem"; trocou "dandelion" por "dandelions"; áudio original mantido, legenda do roteiro aprovado.
+- Exceção autorizada por Luigi, take 21: trocou "rems sea moss" por "rem's cmos"; áudio original mantido, legenda do roteiro aprovado.
+- Fala dos takes contra o roteiro, palavra por palavra: OK
+  - aparado: 1. V01_20261013223938.mp4: cortado o que o Flow inventou ou repetiu: "did you know that the / you (1.2-1.3s, fala que o whisper tinha escondido)"; ouvir a emenda
+  - aparado: 2. V02_20261013223938.mp4: cortado o que o Flow inventou ou repetiu: "Thanks for watching! (3.1-3.5s, fala que o whisper tinha escondido) / Thanks for watching! (3.6-6.5s, fala que o whisper tinha escondido)"; ouvir a emenda
+  - aparado: 11. V11_20261013223938.mp4: cortado o que o Flow inventou ou repetiu: "Hahaha (4.9-8.0s, fala que o whisper tinha escondido)"; ouvir a emenda
+  - aviso: 8. transcrição refeita por trechos (no take inteiro o whisper perdeu: trocou "and" por "then")
+- Variação deste vídeo (rodízio): legenda padrao · SFX nenhum · fonte do pico montserrat
+- Acabamento HyperFrames: zoom em bowl 2.5s, zoom em powder 8.1s, zoom em brown 18.0s, zoom em craving 29.0s, zoom em make 37.3s, zoom em moss 45.7s, zoom em kill 51.1s, zoom em gummy 57.1s · zoom sim · grão não · SFX nenhum
+- Sem silêncio fora da rampa: FALHA
+- Sem quadro fantasma nos cortes: OK
+- Legenda com o texto do roteiro (contagem bateu): OK
+- Nenhuma legenda com menos de 0,1s: OK
+- Vídeo em 1080x1920: OK
+  - silêncios: [(3.8000000000000003, 4.05), (6.15, 7.1000000000000005), (14.05, 14.4), (15.450000000000001, 15.700000000000001), (20.1, 20.450000000000003), (72.95, 73.233333)]
+- Duração 73.2s · 3.74 palavras/s · 50 trechos (0 rampas) · 82 legendas
+- Música: musica 2.mp3 (a partir de 0.0s, cama base -18 dB)
+- Estilo fitwell · fala a 1.25x (alvo 3.8 palavras/s) · light leak na entrada dos takes nenhum; rampa nos takes [1]; legenda alta nos takes [1]
+- Arquivo: `/tmp/edicao/Marshall - V02-8b6fd43d/Marshall - V02_editado.mp4` (82.8 MB) · tempo total 371s
+- Olhar antes de entregar: `cortes.png` (pulo) e `legendas.png` (nada sobre rosto ou herói)

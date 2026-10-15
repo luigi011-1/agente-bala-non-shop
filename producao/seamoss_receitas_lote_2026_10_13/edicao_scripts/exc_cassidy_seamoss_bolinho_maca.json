@@ -1,0 +1,22 @@
+{
+ "items": [
+  {
+   "file": "/Users/macbookairm2/Desktop/Cassidy Hargove - V02/V18_20261013225536.mp4",
+   "sha256": "db2b365f336d4eaf71a6d7f150580e3879d8a70703164c04ad70208620c4cce7",
+   "approved_script": "The one I trust is Natural Rems Sea Moss. Wild Irish sea moss, apple, apple cider vinegar, ginger and dandelion.",
+   "allowed_problems": [
+    "faltou \"the one i trust is\"",
+    "trocou \"rems\" por \"rem\""
+   ]
+  },
+  {
+   "file": "/Users/macbookairm2/Desktop/Cassidy Hargove - V02/V21_20261013225536.mp4",
+   "sha256": "95f992e41326d7827042713ff07b259b0be129b7f390d24e378c29e524950839",
+   "approved_script": "Search Natural Rems Sea Moss on Amazon. Or tap my profile picture, the link is waiting in my stories.",
+   "allowed_problems": [
+    "trocou \"rems sea moss\" por \"rem's cmos\""
+   ]
+  }
+ ],
+ "user_authorization": "Luigi, 2026-10-14: 'resolva tudo isso e n\u00e3o me pe\u00e7a mais aux\u00edlio'; exce\u00e7\u00e3o s\u00f3 para erro de escuta do whisper small conferido com o medium.en no take inteiro e em trechos"
+}

@@ -1,0 +1,29 @@
+{
+ "items": [
+  {
+   "file": "/Users/macbookairm2/Desktop/Marshall - V01/V10_20261013213039.mp4",
+   "sha256": "60997ebb7300a198fa6630e761c81433193298d3932d4c1547dcfac502af4189",
+   "approved_script": "That's why I just chew one Natural Rems Sea Moss gummy. Ginger, turmeric, manuka honey and vitamin C, all in one gummy.",
+   "allowed_problems": [
+    "trocou \"rems\" por \"rem\""
+   ]
+  },
+  {
+   "file": "/Users/macbookairm2/Desktop/Marshall - V01/V14_20261013213039.mp4",
+   "sha256": "d21c7ddae54c43e8694efd1136911890ad46b51b7a2e3c53ffa4f901c9b344ba",
+   "approved_script": "Search Natural Rems Sea Moss on Amazon. Or tap my profile picture, the link is waiting in my stories, or right there in my bio.",
+   "allowed_problems": [
+    "trocou \"rems sea moss\" por \"rem's cmos\""
+   ]
+  },
+  {
+   "file": "/Users/macbookairm2/Desktop/Marshall - V01/V05_20261013213039.mp4",
+   "sha256": "c24795b27cd4746cc647ec8a7d353957b38d4ca44e2ee360c827e00d2acbfe56",
+   "approved_script": "and one tablespoon of raw honey. Now, if you wanna take this to the next level,",
+   "allowed_problems": [
+    "trocou \"wanna\" por \"want to\""
+   ]
+  }
+ ],
+ "user_authorization": "Luigi, 2026-10-14: 'resolva tudo isso e n\u00e3o me pe\u00e7a mais aux\u00edlio'; exce\u00e7\u00e3o s\u00f3 para erro de escuta do whisper small conferido com o medium.en no take inteiro e em trechos"
+}

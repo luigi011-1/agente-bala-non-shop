@@ -1,0 +1,1802 @@
+{
+  "schema_version": 2,
+  "pipeline": "watch",
+  "run_id": "d1f68195-44a9-4a41-8e85-75043ce59056",
+  "status": "COMPLETE",
+  "analysis_status": "PENDING_VISUAL_REVIEW",
+  "video": "/Users/macbookairm2/Downloads/snapinsta-1791763193912.mp4",
+  "outdir": "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/fitywell_growth_2026_10_12_v04_1791763193912/input/modelo_watch",
+  "info": {
+    "duration": 37.19551,
+    "fps": 30.0,
+    "width": 720,
+    "height": 1280,
+    "has_audio": true
+  },
+  "scenes": [
+    {
+      "file": "scene_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "scene_t00002.6667_000002.png",
+      "t": 2.666667
+    },
+    {
+      "file": "scene_t00003.4667_000003.png",
+      "t": 3.466667
+    },
+    {
+      "file": "scene_t00003.6333_000004.png",
+      "t": 3.633333
+    },
+    {
+      "file": "scene_t00004.1667_000005.png",
+      "t": 4.166667
+    },
+    {
+      "file": "scene_t00006.0000_000006.png",
+      "t": 6.0
+    },
+    {
+      "file": "scene_t00007.8000_000007.png",
+      "t": 7.8
+    },
+    {
+      "file": "scene_t00010.1333_000008.png",
+      "t": 10.133333
+    },
+    {
+      "file": "scene_t00012.1667_000009.png",
+      "t": 12.166667
+    },
+    {
+      "file": "scene_t00015.0667_000010.png",
+      "t": 15.066667
+    },
+    {
+      "file": "scene_t00017.0333_000011.png",
+      "t": 17.033333
+    },
+    {
+      "file": "scene_t00021.0000_000012.png",
+      "t": 21.0
+    },
+    {
+      "file": "scene_t00032.5333_000013.png",
+      "t": 32.533333
+    }
+  ],
+  "timeline": [
+    {
+      "file": "tl_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "tl_t00000.2000_000002.png",
+      "t": 0.2
+    },
+    {
+      "file": "tl_t00000.4000_000003.png",
+      "t": 0.4
+    },
+    {
+      "file": "tl_t00000.6000_000004.png",
+      "t": 0.6
+    },
+    {
+      "file": "tl_t00000.8000_000005.png",
+      "t": 0.8
+    },
+    {
+      "file": "tl_t00001.0000_000006.png",
+      "t": 1.0
+    },
+    {
+      "file": "tl_t00001.2000_000007.png",
+      "t": 1.2
+    },
+    {
+      "file": "tl_t00001.4000_000008.png",
+      "t": 1.4
+    },
+    {
+      "file": "tl_t00001.6000_000009.png",
+      "t": 1.6
+    },
+    {
+      "file": "tl_t00001.8000_000010.png",
+      "t": 1.8
+    },
+    {
+      "file": "tl_t00002.0000_000011.png",
+      "t": 2.0
+    },
+    {
+      "file": "tl_t00002.2000_000012.png",
+      "t": 2.2
+    },
+    {
+      "file": "tl_t00002.4000_000013.png",
+      "t": 2.4
+    },
+    {
+      "file": "tl_t00002.6000_000014.png",
+      "t": 2.6
+    },
+    {
+      "file": "tl_t00002.8000_000015.png",
+      "t": 2.8
+    },
+    {
+      "file": "tl_t00003.0000_000016.png",
+      "t": 3.0
+    },
+    {
+      "file": "tl_t00003.2000_000017.png",
+      "t": 3.2
+    },
+    {
+      "file": "tl_t00003.4000_000018.png",
+      "t": 3.4
+    },
+    {
+      "file": "tl_t00003.6000_000019.png",
+      "t": 3.6
+    },
+    {
+      "file": "tl_t00003.8000_000020.png",
+      "t": 3.8
+    },
+    {
+      "file": "tl_t00004.0000_000021.png",
+      "t": 4.0
+    },
+    {
+      "file": "tl_t00004.2000_000022.png",
+      "t": 4.2
+    },
+    {
+      "file": "tl_t00004.4000_000023.png",
+      "t": 4.4
+    },
+    {
+      "file": "tl_t00004.6000_000024.png",
+      "t": 4.6
+    },
+    {
+      "file": "tl_t00004.8000_000025.png",
+      "t": 4.8
+    },
+    {
+      "file": "tl_t00005.0000_000026.png",
+      "t": 5.0
+    },
+    {
+      "file": "tl_t00005.2000_000027.png",
+      "t": 5.2
+    },
+    {
+      "file": "tl_t00005.4000_000028.png",
+      "t": 5.4
+    },
+    {
+      "file": "tl_t00005.6000_000029.png",
+      "t": 5.6
+    },
+    {
+      "file": "tl_t00005.8000_000030.png",
+      "t": 5.8
+    },
+    {
+      "file": "tl_t00006.0000_000031.png",
+      "t": 6.0
+    },
+    {
+      "file": "tl_t00006.2000_000032.png",
+      "t": 6.2
+    },
+    {
+      "file": "tl_t00006.4000_000033.png",
+      "t": 6.4
+    },
+    {
+      "file": "tl_t00006.6000_000034.png",
+      "t": 6.6
+    },
+    {
+      "file": "tl_t00006.8000_000035.png",
+      "t": 6.8
+    },
+    {
+      "file": "tl_t00007.0000_000036.png",
+      "t": 7.0
+    },
+    {
+      "file": "tl_t00007.2000_000037.png",
+      "t": 7.2
+    },
+    {
+      "file": "tl_t00007.4000_000038.png",
+      "t": 7.4
+    },
+    {
+      "file": "tl_t00007.6000_000039.png",
+      "t": 7.6
+    },
+    {
+      "file": "tl_t00007.8000_000040.png",
+      "t": 7.8
+    },
+    {
+      "file": "tl_t00008.0000_000041.png",
+      "t": 8.0
+    },
+    {
+      "file": "tl_t00008.2000_000042.png",
+      "t": 8.2
+    },
+    {
+      "file": "tl_t00008.4000_000043.png",
+      "t": 8.4
+    },
+    {
+      "file": "tl_t00008.6000_000044.png",
+      "t": 8.6
+    },
+    {
+      "file": "tl_t00008.8000_000045.png",
+      "t": 8.8
+    },
+    {
+      "file": "tl_t00009.0000_000046.png",
+      "t": 9.0
+    },
+    {
+      "file": "tl_t00009.2000_000047.png",
+      "t": 9.2
+    },
+    {
+      "file": "tl_t00009.4000_000048.png",
+      "t": 9.4
+    },
+    {
+      "file": "tl_t00009.6000_000049.png",
+      "t": 9.6
+    },
+    {
+      "file": "tl_t00009.8000_000050.png",
+      "t": 9.8
+    },
+    {
+      "file": "tl_t00010.0000_000051.png",
+      "t": 10.0
+    },
+    {
+      "file": "tl_t00010.2000_000052.png",
+      "t": 10.2
+    },
+    {
+      "file": "tl_t00010.4000_000053.png",
+      "t": 10.4
+    },
+    {
+      "file": "tl_t00010.6000_000054.png",
+      "t": 10.6
+    },
+    {
+      "file": "tl_t00010.8000_000055.png",
+      "t": 10.8
+    },
+    {
+      "file": "tl_t00011.0000_000056.png",
+      "t": 11.0
+    },
+    {
+      "file": "tl_t00011.2000_000057.png",
+      "t": 11.2
+    },
+    {
+      "file": "tl_t00011.4000_000058.png",
+      "t": 11.4
+    },
+    {
+      "file": "tl_t00011.6000_000059.png",
+      "t": 11.6
+    },
+    {
+      "file": "tl_t00011.8000_000060.png",
+      "t": 11.8
+    },
+    {
+      "file": "tl_t00012.0000_000061.png",
+      "t": 12.0
+    },
+    {
+      "file": "tl_t00012.2000_000062.png",
+      "t": 12.2
+    },
+    {
+      "file": "tl_t00012.4000_000063.png",
+      "t": 12.4
+    },
+    {
+      "file": "tl_t00012.6000_000064.png",
+      "t": 12.6
+    },
+    {
+      "file": "tl_t00012.8000_000065.png",
+      "t": 12.8
+    },
+    {
+      "file": "tl_t00013.0000_000066.png",
+      "t": 13.0
+    },
+    {
+      "file": "tl_t00013.2000_000067.png",
+      "t": 13.2
+    },
+    {
+      "file": "tl_t00013.4000_000068.png",
+      "t": 13.4
+    },
+    {
+      "file": "tl_t00013.6000_000069.png",
+      "t": 13.6
+    },
+    {
+      "file": "tl_t00013.8000_000070.png",
+      "t": 13.8
+    },
+    {
+      "file": "tl_t00014.0000_000071.png",
+      "t": 14.0
+    },
+    {
+      "file": "tl_t00014.2000_000072.png",
+      "t": 14.2
+    },
+    {
+      "file": "tl_t00014.4000_000073.png",
+      "t": 14.4
+    },
+    {
+      "file": "tl_t00014.6000_000074.png",
+      "t": 14.6
+    },
+    {
+      "file": "tl_t00014.8000_000075.png",
+      "t": 14.8
+    },
+    {
+      "file": "tl_t00015.0000_000076.png",
+      "t": 15.0
+    },
+    {
+      "file": "tl_t00015.2000_000077.png",
+      "t": 15.2
+    },
+    {
+      "file": "tl_t00015.4000_000078.png",
+      "t": 15.4
+    },
+    {
+      "file": "tl_t00015.6000_000079.png",
+      "t": 15.6
+    },
+    {
+      "file": "tl_t00015.8000_000080.png",
+      "t": 15.8
+    },
+    {
+      "file": "tl_t00016.0000_000081.png",
+      "t": 16.0
+    },
+    {
+      "file": "tl_t00016.2000_000082.png",
+      "t": 16.2
+    },
+    {
+      "file": "tl_t00016.4000_000083.png",
+      "t": 16.4
+    },
+    {
+      "file": "tl_t00016.6000_000084.png",
+      "t": 16.6
+    },
+    {
+      "file": "tl_t00016.8000_000085.png",
+      "t": 16.8
+    },
+    {
+      "file": "tl_t00017.0000_000086.png",
+      "t": 17.0
+    },
+    {
+      "file": "tl_t00017.2000_000087.png",
+      "t": 17.2
+    },
+    {
+      "file": "tl_t00017.4000_000088.png",
+      "t": 17.4
+    },
+    {
+      "file": "tl_t00017.6000_000089.png",
+      "t": 17.6
+    },
+    {
+      "file": "tl_t00017.8000_000090.png",
+      "t": 17.8
+    },
+    {
+      "file": "tl_t00018.0000_000091.png",
+      "t": 18.0
+    },
+    {
+      "file": "tl_t00018.2000_000092.png",
+      "t": 18.2
+    },
+    {
+      "file": "tl_t00018.4000_000093.png",
+      "t": 18.4
+    },
+    {
+      "file": "tl_t00018.6000_000094.png",
+      "t": 18.6
+    },
+    {
+      "file": "tl_t00018.8000_000095.png",
+      "t": 18.8
+    },
+    {
+      "file": "tl_t00019.0000_000096.png",
+      "t": 19.0
+    },
+    {
+      "file": "tl_t00019.2000_000097.png",
+      "t": 19.2
+    },
+    {
+      "file": "tl_t00019.4000_000098.png",
+      "t": 19.4
+    },
+    {
+      "file": "tl_t00019.6000_000099.png",
+      "t": 19.6
+    },
+    {
+      "file": "tl_t00019.8000_000100.png",
+      "t": 19.8
+    },
+    {
+      "file": "tl_t00020.0000_000101.png",
+      "t": 20.0
+    },
+    {
+      "file": "tl_t00020.2000_000102.png",
+      "t": 20.2
+    },
+    {
+      "file": "tl_t00020.4000_000103.png",
+      "t": 20.4
+    },
+    {
+      "file": "tl_t00020.6000_000104.png",
+      "t": 20.6
+    },
+    {
+      "file": "tl_t00020.8000_000105.png",
+      "t": 20.8
+    },
+    {
+      "file": "tl_t00021.0000_000106.png",
+      "t": 21.0
+    },
+    {
+      "file": "tl_t00021.2000_000107.png",
+      "t": 21.2
+    },
+    {
+      "file": "tl_t00021.4000_000108.png",
+      "t": 21.4
+    },
+    {
+      "file": "tl_t00021.6000_000109.png",
+      "t": 21.6
+    },
+    {
+      "file": "tl_t00021.8000_000110.png",
+      "t": 21.8
+    },
+    {
+      "file": "tl_t00022.0000_000111.png",
+      "t": 22.0
+    },
+    {
+      "file": "tl_t00022.2000_000112.png",
+      "t": 22.2
+    },
+    {
+      "file": "tl_t00022.4000_000113.png",
+      "t": 22.4
+    },
+    {
+      "file": "tl_t00022.6000_000114.png",
+      "t": 22.6
+    },
+    {
+      "file": "tl_t00022.8000_000115.png",
+      "t": 22.8
+    },
+    {
+      "file": "tl_t00023.0000_000116.png",
+      "t": 23.0
+    },
+    {
+      "file": "tl_t00023.2000_000117.png",
+      "t": 23.2
+    },
+    {
+      "file": "tl_t00023.4000_000118.png",
+      "t": 23.4
+    },
+    {
+      "file": "tl_t00023.6000_000119.png",
+      "t": 23.6
+    },
+    {
+      "file": "tl_t00023.8000_000120.png",
+      "t": 23.8
+    },
+    {
+      "file": "tl_t00024.0000_000121.png",
+      "t": 24.0
+    },
+    {
+      "file": "tl_t00024.2000_000122.png",
+      "t": 24.2
+    },
+    {
+      "file": "tl_t00024.4000_000123.png",
+      "t": 24.4
+    },
+    {
+      "file": "tl_t00024.6000_000124.png",
+      "t": 24.6
+    },
+    {
+      "file": "tl_t00024.8000_000125.png",
+      "t": 24.8
+    },
+    {
+      "file": "tl_t00025.0000_000126.png",
+      "t": 25.0
+    },
+    {
+      "file": "tl_t00025.2000_000127.png",
+      "t": 25.2
+    },
+    {
+      "file": "tl_t00025.4000_000128.png",
+      "t": 25.4
+    },
+    {
+      "file": "tl_t00025.6000_000129.png",
+      "t": 25.6
+    },
+    {
+      "file": "tl_t00025.8000_000130.png",
+      "t": 25.8
+    },
+    {
+      "file": "tl_t00026.0000_000131.png",
+      "t": 26.0
+    },
+    {
+      "file": "tl_t00026.2000_000132.png",
+      "t": 26.2
+    },
+    {
+      "file": "tl_t00026.4000_000133.png",
+      "t": 26.4
+    },
+    {
+      "file": "tl_t00026.6000_000134.png",
+      "t": 26.6
+    },
+    {
+      "file": "tl_t00026.8000_000135.png",
+      "t": 26.8
+    },
+    {
+      "file": "tl_t00027.0000_000136.png",
+      "t": 27.0
+    },
+    {
+      "file": "tl_t00027.2000_000137.png",
+      "t": 27.2
+    },
+    {
+      "file": "tl_t00027.4000_000138.png",
+      "t": 27.4
+    },
+    {
+      "file": "tl_t00027.6000_000139.png",
+      "t": 27.6
+    },
+    {
+      "file": "tl_t00027.8000_000140.png",
+      "t": 27.8
+    },
+    {
+      "file": "tl_t00028.0000_000141.png",
+      "t": 28.0
+    },
+    {
+      "file": "tl_t00028.2000_000142.png",
+      "t": 28.2
+    },
+    {
+      "file": "tl_t00028.4000_000143.png",
+      "t": 28.4
+    },
+    {
+      "file": "tl_t00028.6000_000144.png",
+      "t": 28.6
+    },
+    {
+      "file": "tl_t00028.8000_000145.png",
+      "t": 28.8
+    },
+    {
+      "file": "tl_t00029.0000_000146.png",
+      "t": 29.0
+    },
+    {
+      "file": "tl_t00029.2000_000147.png",
+      "t": 29.2
+    },
+    {
+      "file": "tl_t00029.4000_000148.png",
+      "t": 29.4
+    },
+    {
+      "file": "tl_t00029.6000_000149.png",
+      "t": 29.6
+    },
+    {
+      "file": "tl_t00029.8000_000150.png",
+      "t": 29.8
+    },
+    {
+      "file": "tl_t00030.0000_000151.png",
+      "t": 30.0
+    },
+    {
+      "file": "tl_t00030.2000_000152.png",
+      "t": 30.2
+    },
+    {
+      "file": "tl_t00030.4000_000153.png",
+      "t": 30.4
+    },
+    {
+      "file": "tl_t00030.6000_000154.png",
+      "t": 30.6
+    },
+    {
+      "file": "tl_t00030.8000_000155.png",
+      "t": 30.8
+    },
+    {
+      "file": "tl_t00031.0000_000156.png",
+      "t": 31.0
+    },
+    {
+      "file": "tl_t00031.2000_000157.png",
+      "t": 31.2
+    },
+    {
+      "file": "tl_t00031.4000_000158.png",
+      "t": 31.4
+    },
+    {
+      "file": "tl_t00031.6000_000159.png",
+      "t": 31.6
+    },
+    {
+      "file": "tl_t00031.8000_000160.png",
+      "t": 31.8
+    },
+    {
+      "file": "tl_t00032.0000_000161.png",
+      "t": 32.0
+    },
+    {
+      "file": "tl_t00032.2000_000162.png",
+      "t": 32.2
+    },
+    {
+      "file": "tl_t00032.4000_000163.png",
+      "t": 32.4
+    },
+    {
+      "file": "tl_t00032.6000_000164.png",
+      "t": 32.6
+    },
+    {
+      "file": "tl_t00032.8000_000165.png",
+      "t": 32.8
+    },
+    {
+      "file": "tl_t00033.0000_000166.png",
+      "t": 33.0
+    },
+    {
+      "file": "tl_t00033.2000_000167.png",
+      "t": 33.2
+    },
+    {
+      "file": "tl_t00033.4000_000168.png",
+      "t": 33.4
+    },
+    {
+      "file": "tl_t00033.6000_000169.png",
+      "t": 33.6
+    },
+    {
+      "file": "tl_t00033.8000_000170.png",
+      "t": 33.8
+    },
+    {
+      "file": "tl_t00034.0000_000171.png",
+      "t": 34.0
+    },
+    {
+      "file": "tl_t00034.2000_000172.png",
+      "t": 34.2
+    },
+    {
+      "file": "tl_t00034.4000_000173.png",
+      "t": 34.4
+    },
+    {
+      "file": "tl_t00034.6000_000174.png",
+      "t": 34.6
+    },
+    {
+      "file": "tl_t00034.8000_000175.png",
+      "t": 34.8
+    },
+    {
+      "file": "tl_t00035.0000_000176.png",
+      "t": 35.0
+    },
+    {
+      "file": "tl_t00035.2000_000177.png",
+      "t": 35.2
+    },
+    {
+      "file": "tl_t00035.4000_000178.png",
+      "t": 35.4
+    },
+    {
+      "file": "tl_t00035.6000_000179.png",
+      "t": 35.6
+    },
+    {
+      "file": "tl_t00035.8000_000180.png",
+      "t": 35.8
+    },
+    {
+      "file": "tl_t00036.0000_000181.png",
+      "t": 36.0
+    },
+    {
+      "file": "tl_t00036.2000_000182.png",
+      "t": 36.2
+    },
+    {
+      "file": "tl_t00036.4000_000183.png",
+      "t": 36.4
+    },
+    {
+      "file": "tl_t00036.6000_000184.png",
+      "t": 36.6
+    },
+    {
+      "file": "tl_t00036.8000_000185.png",
+      "t": 36.8
+    }
+  ],
+  "overview": {
+    "scenes": [
+      "overview_scenes_01.png",
+      "overview_scenes_02.png"
+    ],
+    "timeline": [
+      "overview_timeline_01.png",
+      "overview_timeline_02.png",
+      "overview_timeline_03.png",
+      "overview_timeline_04.png",
+      "overview_timeline_05.png",
+      "overview_timeline_06.png",
+      "overview_timeline_07.png",
+      "overview_timeline_08.png",
+      "overview_timeline_09.png",
+      "overview_timeline_10.png"
+    ]
+  },
+  "transcript": true,
+  "audio": {
+    "status": "SUCCEEDED",
+    "backend": "faster-whisper",
+    "language": "en",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.5,
+        "text": "Did you know that if you blend one can of black beans",
+        "words": [
+          {
+            "word": " Did",
+            "start": 0.0,
+            "end": 0.12,
+            "probability": 0.7208541631698608
+          },
+          {
+            "word": " you",
+            "start": 0.12,
+            "end": 0.24,
+            "probability": 0.9978221654891968
+          },
+          {
+            "word": " know",
+            "start": 0.24,
+            "end": 0.38,
+            "probability": 0.9976730942726135
+          },
+          {
+            "word": " that",
+            "start": 0.38,
+            "end": 0.52,
+            "probability": 0.9772840738296509
+          },
+          {
+            "word": " if",
+            "start": 0.52,
+            "end": 0.66,
+            "probability": 0.9730070233345032
+          },
+          {
+            "word": " you",
+            "start": 0.66,
+            "end": 0.74,
+            "probability": 0.9960461258888245
+          },
+          {
+            "word": " blend",
+            "start": 0.74,
+            "end": 1.04,
+            "probability": 0.9814401268959045
+          },
+          {
+            "word": " one",
+            "start": 1.04,
+            "end": 1.34,
+            "probability": 0.8118380308151245
+          },
+          {
+            "word": " can",
+            "start": 1.34,
+            "end": 1.66,
+            "probability": 0.9929317235946655
+          },
+          {
+            "word": " of",
+            "start": 1.66,
+            "end": 1.8,
+            "probability": 0.9918134212493896
+          },
+          {
+            "word": " black",
+            "start": 1.8,
+            "end": 2.04,
+            "probability": 0.9547818303108215
+          },
+          {
+            "word": " beans",
+            "start": 2.04,
+            "end": 2.5,
+            "probability": 0.9844880700111389
+          }
+        ]
+      },
+      {
+        "start": 3.07,
+        "end": 5.76,
+        "text": "with two eggs, three tablespoons of cocoa powder,",
+        "words": [
+          {
+            "word": " with",
+            "start": 3.07,
+            "end": 3.32,
+            "probability": 0.8339757919311523
+          },
+          {
+            "word": " two",
+            "start": 3.32,
+            "end": 3.58,
+            "probability": 0.9421486258506775
+          },
+          {
+            "word": " eggs,",
+            "start": 3.58,
+            "end": 3.98,
+            "probability": 0.9970706701278687
+          },
+          {
+            "word": " three",
+            "start": 4.14,
+            "end": 4.36,
+            "probability": 0.9237759709358215
+          },
+          {
+            "word": " tablespoons",
+            "start": 4.36,
+            "end": 4.74,
+            "probability": 0.9852842688560486
+          },
+          {
+            "word": " of",
+            "start": 4.74,
+            "end": 5.08,
+            "probability": 0.99693763256073
+          },
+          {
+            "word": " cocoa",
+            "start": 5.08,
+            "end": 5.32,
+            "probability": 0.9711658358573914
+          },
+          {
+            "word": " powder,",
+            "start": 5.32,
+            "end": 5.76,
+            "probability": 0.9971827268600464
+          }
+        ]
+      },
+      {
+        "start": 6.0,
+        "end": 8.96,
+        "text": "a quarter cup of raw honey, and one teaspoon of vanilla,",
+        "words": [
+          {
+            "word": " a",
+            "start": 6.0,
+            "end": 6.16,
+            "probability": 0.8828670382499695
+          },
+          {
+            "word": " quarter",
+            "start": 6.16,
+            "end": 6.4,
+            "probability": 0.9838411211967468
+          },
+          {
+            "word": " cup",
+            "start": 6.4,
+            "end": 6.66,
+            "probability": 0.9908885955810547
+          },
+          {
+            "word": " of",
+            "start": 6.66,
+            "end": 6.98,
+            "probability": 0.9976904392242432
+          },
+          {
+            "word": " raw",
+            "start": 6.98,
+            "end": 7.24,
+            "probability": 0.9938284754753113
+          },
+          {
+            "word": " honey,",
+            "start": 7.24,
+            "end": 7.54,
+            "probability": 0.9925519227981567
+          },
+          {
+            "word": " and",
+            "start": 7.76,
+            "end": 7.92,
+            "probability": 0.9966805577278137
+          },
+          {
+            "word": " one",
+            "start": 7.92,
+            "end": 8.14,
+            "probability": 0.9839808344841003
+          },
+          {
+            "word": " teaspoon",
+            "start": 8.14,
+            "end": 8.44,
+            "probability": 0.9931920170783997
+          },
+          {
+            "word": " of",
+            "start": 8.44,
+            "end": 8.66,
+            "probability": 0.9955239295959473
+          },
+          {
+            "word": " vanilla,",
+            "start": 8.66,
+            "end": 8.96,
+            "probability": 0.9961646795272827
+          }
+        ]
+      },
+      {
+        "start": 10.06,
+        "end": 12.08,
+        "text": "then pour the mixture into a baking pan",
+        "words": [
+          {
+            "word": " then",
+            "start": 10.06,
+            "end": 10.38,
+            "probability": 0.8678776621818542
+          },
+          {
+            "word": " pour",
+            "start": 10.38,
+            "end": 10.66,
+            "probability": 0.9976305961608887
+          },
+          {
+            "word": " the",
+            "start": 10.66,
+            "end": 10.78,
+            "probability": 0.9984681010246277
+          },
+          {
+            "word": " mixture",
+            "start": 10.78,
+            "end": 11.08,
+            "probability": 0.9990352392196655
+          },
+          {
+            "word": " into",
+            "start": 11.08,
+            "end": 11.32,
+            "probability": 0.9985067248344421
+          },
+          {
+            "word": " a",
+            "start": 11.32,
+            "end": 11.52,
+            "probability": 0.9993242025375366
+          },
+          {
+            "word": " baking",
+            "start": 11.52,
+            "end": 11.7,
+            "probability": 0.9992502331733704
+          },
+          {
+            "word": " pan",
+            "start": 11.7,
+            "end": 12.08,
+            "probability": 0.99580317735672
+          }
+        ]
+      },
+      {
+        "start": 12.08,
+        "end": 14.8,
+        "text": "and bake it for 20 minutes until the top cracks.",
+        "words": [
+          {
+            "word": " and",
+            "start": 12.08,
+            "end": 12.38,
+            "probability": 0.9638586044311523
+          },
+          {
+            "word": " bake",
+            "start": 12.38,
+            "end": 12.62,
+            "probability": 0.9960010647773743
+          },
+          {
+            "word": " it",
+            "start": 12.62,
+            "end": 12.74,
+            "probability": 0.995893120765686
+          },
+          {
+            "word": " for",
+            "start": 12.74,
+            "end": 12.88,
+            "probability": 0.9994705319404602
+          },
+          {
+            "word": " 20",
+            "start": 12.88,
+            "end": 13.2,
+            "probability": 0.9872912764549255
+          },
+          {
+            "word": " minutes",
+            "start": 13.2,
+            "end": 13.56,
+            "probability": 0.9992696642875671
+          },
+          {
+            "word": " until",
+            "start": 13.56,
+            "end": 14.0,
+            "probability": 0.9501885771751404
+          },
+          {
+            "word": " the",
+            "start": 14.0,
+            "end": 14.16,
+            "probability": 0.9994478821754456
+          },
+          {
+            "word": " top",
+            "start": 14.16,
+            "end": 14.44,
+            "probability": 0.9989736080169678
+          },
+          {
+            "word": " cracks.",
+            "start": 14.44,
+            "end": 14.8,
+            "probability": 0.9945472478866577
+          }
+        ]
+      },
+      {
+        "start": 15.06,
+        "end": 17.02,
+        "text": "You end up with rich, fudgy brownies",
+        "words": [
+          {
+            "word": " You",
+            "start": 15.06,
+            "end": 15.22,
+            "probability": 0.9925327897071838
+          },
+          {
+            "word": " end",
+            "start": 15.22,
+            "end": 15.4,
+            "probability": 0.995685338973999
+          },
+          {
+            "word": " up",
+            "start": 15.4,
+            "end": 15.52,
+            "probability": 0.9996377229690552
+          },
+          {
+            "word": " with",
+            "start": 15.52,
+            "end": 15.66,
+            "probability": 0.9982420206069946
+          },
+          {
+            "word": " rich,",
+            "start": 15.66,
+            "end": 16.0,
+            "probability": 0.9911642670631409
+          },
+          {
+            "word": " fudgy",
+            "start": 16.16,
+            "end": 16.52,
+            "probability": 0.9741171995798746
+          },
+          {
+            "word": " brownies",
+            "start": 16.52,
+            "end": 17.02,
+            "probability": 0.9889537394046783
+          }
+        ]
+      },
+      {
+        "start": 17.02,
+        "end": 18.54,
+        "text": "that taste like a bakery made them,",
+        "words": [
+          {
+            "word": " that",
+            "start": 17.02,
+            "end": 17.22,
+            "probability": 0.886248767375946
+          },
+          {
+            "word": " taste",
+            "start": 17.22,
+            "end": 17.5,
+            "probability": 0.6447297930717468
+          },
+          {
+            "word": " like",
+            "start": 17.5,
+            "end": 17.66,
+            "probability": 0.9987648725509644
+          },
+          {
+            "word": " a",
+            "start": 17.66,
+            "end": 17.76,
+            "probability": 0.9968012571334839
+          },
+          {
+            "word": " bakery",
+            "start": 17.76,
+            "end": 18.0,
+            "probability": 0.9941936135292053
+          },
+          {
+            "word": " made",
+            "start": 18.0,
+            "end": 18.3,
+            "probability": 0.9696283936500549
+          },
+          {
+            "word": " them,",
+            "start": 18.3,
+            "end": 18.54,
+            "probability": 0.9919635057449341
+          }
+        ]
+      },
+      {
+        "start": 18.64,
+        "end": 20.8,
+        "text": "but with no flour and no refined sugar.",
+        "words": [
+          {
+            "word": " but",
+            "start": 18.64,
+            "end": 18.74,
+            "probability": 0.998807430267334
+          },
+          {
+            "word": " with",
+            "start": 18.74,
+            "end": 18.92,
+            "probability": 0.998435914516449
+          },
+          {
+            "word": " no",
+            "start": 18.92,
+            "end": 19.1,
+            "probability": 0.9991946816444397
+          },
+          {
+            "word": " flour",
+            "start": 19.1,
+            "end": 19.52,
+            "probability": 0.9926203489303589
+          },
+          {
+            "word": " and",
+            "start": 19.52,
+            "end": 19.94,
+            "probability": 0.9822976589202881
+          },
+          {
+            "word": " no",
+            "start": 19.94,
+            "end": 20.12,
+            "probability": 0.9978220462799072
+          },
+          {
+            "word": " refined",
+            "start": 20.12,
+            "end": 20.46,
+            "probability": 0.9993770718574524
+          },
+          {
+            "word": " sugar.",
+            "start": 20.46,
+            "end": 20.8,
+            "probability": 0.9993126392364502
+          }
+        ]
+      },
+      {
+        "start": 21.08,
+        "end": 23.46,
+        "text": "The resistant starch feeds good bacteria in your gut,",
+        "words": [
+          {
+            "word": " The",
+            "start": 21.08,
+            "end": 21.2,
+            "probability": 0.9944084286689758
+          },
+          {
+            "word": " resistant",
+            "start": 21.2,
+            "end": 21.58,
+            "probability": 0.7853091359138489
+          },
+          {
+            "word": " starch",
+            "start": 21.58,
+            "end": 21.9,
+            "probability": 0.9984007477760315
+          },
+          {
+            "word": " feeds",
+            "start": 21.9,
+            "end": 22.22,
+            "probability": 0.9942997694015503
+          },
+          {
+            "word": " good",
+            "start": 22.22,
+            "end": 22.48,
+            "probability": 0.985621988773346
+          },
+          {
+            "word": " bacteria",
+            "start": 22.48,
+            "end": 22.86,
+            "probability": 0.9987208247184753
+          },
+          {
+            "word": " in",
+            "start": 22.86,
+            "end": 23.12,
+            "probability": 0.9961079955101013
+          },
+          {
+            "word": " your",
+            "start": 23.12,
+            "end": 23.22,
+            "probability": 0.9983091354370117
+          },
+          {
+            "word": " gut,",
+            "start": 23.22,
+            "end": 23.46,
+            "probability": 0.9989405274391174
+          }
+        ]
+      },
+      {
+        "start": 23.76,
+        "end": 25.06,
+        "text": "the fiber slows digestion",
+        "words": [
+          {
+            "word": " the",
+            "start": 23.76,
+            "end": 23.84,
+            "probability": 0.9972545504570007
+          },
+          {
+            "word": " fiber",
+            "start": 23.84,
+            "end": 24.18,
+            "probability": 0.7818537354469299
+          },
+          {
+            "word": " slows",
+            "start": 24.18,
+            "end": 24.48,
+            "probability": 0.9955905675888062
+          },
+          {
+            "word": " digestion",
+            "start": 24.48,
+            "end": 25.06,
+            "probability": 0.9960975050926208
+          }
+        ]
+      },
+      {
+        "start": 25.06,
+        "end": 26.68,
+        "text": "so your blood sugar stays speedy",
+        "words": [
+          {
+            "word": " so",
+            "start": 25.06,
+            "end": 25.36,
+            "probability": 0.4344784617424011
+          },
+          {
+            "word": " your",
+            "start": 25.36,
+            "end": 25.48,
+            "probability": 0.9947716593742371
+          },
+          {
+            "word": " blood",
+            "start": 25.48,
+            "end": 25.68,
+            "probability": 0.9991267323493958
+          },
+          {
+            "word": " sugar",
+            "start": 25.68,
+            "end": 25.92,
+            "probability": 0.9954537153244019
+          },
+          {
+            "word": " stays",
+            "start": 25.92,
+            "end": 26.18,
+            "probability": 0.8857928514480591
+          },
+          {
+            "word": " speedy",
+            "start": 26.18,
+            "end": 26.68,
+            "probability": 0.9838591814041138
+          }
+        ]
+      },
+      {
+        "start": 26.68,
+        "end": 28.1,
+        "text": "and you stay full for hours.",
+        "words": [
+          {
+            "word": " and",
+            "start": 26.68,
+            "end": 27.0,
+            "probability": 0.8942025303840637
+          },
+          {
+            "word": " you",
+            "start": 27.0,
+            "end": 27.08,
+            "probability": 0.9992995262145996
+          },
+          {
+            "word": " stay",
+            "start": 27.08,
+            "end": 27.28,
+            "probability": 0.9969603419303894
+          },
+          {
+            "word": " full",
+            "start": 27.28,
+            "end": 27.58,
+            "probability": 0.9965857267379761
+          },
+          {
+            "word": " for",
+            "start": 27.58,
+            "end": 27.78,
+            "probability": 0.9993517994880676
+          },
+          {
+            "word": " hours.",
+            "start": 27.78,
+            "end": 28.1,
+            "probability": 0.9987730383872986
+          }
+        ]
+      },
+      {
+        "start": 28.38,
+        "end": 29.46,
+        "text": "If you crave something sweet,",
+        "words": [
+          {
+            "word": " If",
+            "start": 28.38,
+            "end": 28.5,
+            "probability": 0.9927863478660583
+          },
+          {
+            "word": " you",
+            "start": 28.5,
+            "end": 28.6,
+            "probability": 0.9991176724433899
+          },
+          {
+            "word": " crave",
+            "start": 28.6,
+            "end": 28.82,
+            "probability": 0.9981245398521423
+          },
+          {
+            "word": " something",
+            "start": 28.82,
+            "end": 29.06,
+            "probability": 0.9991469383239746
+          },
+          {
+            "word": " sweet,",
+            "start": 29.06,
+            "end": 29.46,
+            "probability": 0.9991415739059448
+          }
+        ]
+      },
+      {
+        "start": 29.46,
+        "end": 30.5,
+        "text": "but you're trying to lose weight,",
+        "words": [
+          {
+            "word": " but",
+            "start": 29.46,
+            "end": 29.64,
+            "probability": 0.8250038623809814
+          },
+          {
+            "word": " you're",
+            "start": 29.64,
+            "end": 29.78,
+            "probability": 0.9956425130367279
+          },
+          {
+            "word": " trying",
+            "start": 29.78,
+            "end": 29.96,
+            "probability": 0.9891017079353333
+          },
+          {
+            "word": " to",
+            "start": 29.96,
+            "end": 30.06,
+            "probability": 0.9992235898971558
+          },
+          {
+            "word": " lose",
+            "start": 30.06,
+            "end": 30.24,
+            "probability": 0.996069073677063
+          },
+          {
+            "word": " weight,",
+            "start": 30.24,
+            "end": 30.5,
+            "probability": 0.9997619986534119
+          }
+        ]
+      },
+      {
+        "start": 30.72,
+        "end": 32.46,
+        "text": "these are genuinely the ones to make.",
+        "words": [
+          {
+            "word": " these",
+            "start": 30.72,
+            "end": 30.98,
+            "probability": 0.9966224431991577
+          },
+          {
+            "word": " are",
+            "start": 30.98,
+            "end": 31.14,
+            "probability": 0.9995632767677307
+          },
+          {
+            "word": " genuinely",
+            "start": 31.14,
+            "end": 31.56,
+            "probability": 0.9983774423599243
+          },
+          {
+            "word": " the",
+            "start": 31.56,
+            "end": 31.88,
+            "probability": 0.998049259185791
+          },
+          {
+            "word": " ones",
+            "start": 31.88,
+            "end": 32.08,
+            "probability": 0.9944022297859192
+          },
+          {
+            "word": " to",
+            "start": 32.08,
+            "end": 32.26,
+            "probability": 0.999601423740387
+          },
+          {
+            "word": " make.",
+            "start": 32.26,
+            "end": 32.46,
+            "probability": 0.9996607303619385
+          }
+        ]
+      },
+      {
+        "start": 32.64,
+        "end": 34.96,
+        "text": "Comment yes if you'd like more recipes like this",
+        "words": [
+          {
+            "word": " Comment",
+            "start": 32.64,
+            "end": 32.94,
+            "probability": 0.9814745187759399
+          },
+          {
+            "word": " yes",
+            "start": 32.94,
+            "end": 33.32,
+            "probability": 0.5092519521713257
+          },
+          {
+            "word": " if",
+            "start": 33.32,
+            "end": 33.56,
+            "probability": 0.8297655582427979
+          },
+          {
+            "word": " you'd",
+            "start": 33.56,
+            "end": 33.72,
+            "probability": 0.990810364484787
+          },
+          {
+            "word": " like",
+            "start": 33.72,
+            "end": 33.84,
+            "probability": 0.9982865452766418
+          },
+          {
+            "word": " more",
+            "start": 33.84,
+            "end": 34.02,
+            "probability": 0.9979668259620667
+          },
+          {
+            "word": " recipes",
+            "start": 34.02,
+            "end": 34.38,
+            "probability": 0.9984551668167114
+          },
+          {
+            "word": " like",
+            "start": 34.38,
+            "end": 34.68,
+            "probability": 0.9994038343429565
+          },
+          {
+            "word": " this",
+            "start": 34.68,
+            "end": 34.96,
+            "probability": 0.9923923015594482
+          }
+        ]
+      },
+      {
+        "start": 34.96,
+        "end": 36.92,
+        "text": "and follow me so you don't miss the next one.",
+        "words": [
+          {
+            "word": " and",
+            "start": 34.96,
+            "end": 35.3,
+            "probability": 0.5894016027450562
+          },
+          {
+            "word": " follow",
+            "start": 35.3,
+            "end": 35.62,
+            "probability": 0.9979000091552734
+          },
+          {
+            "word": " me",
+            "start": 35.62,
+            "end": 35.82,
+            "probability": 0.999518871307373
+          },
+          {
+            "word": " so",
+            "start": 35.82,
+            "end": 36.04,
+            "probability": 0.8836536407470703
+          },
+          {
+            "word": " you",
+            "start": 36.04,
+            "end": 36.14,
+            "probability": 0.9972242116928101
+          },
+          {
+            "word": " don't",
+            "start": 36.14,
+            "end": 36.3,
+            "probability": 0.9992532730102539
+          },
+          {
+            "word": " miss",
+            "start": 36.3,
+            "end": 36.4,
+            "probability": 0.999358594417572
+          },
+          {
+            "word": " the",
+            "start": 36.4,
+            "end": 36.54,
+            "probability": 0.9994723200798035
+          },
+          {
+            "word": " next",
+            "start": 36.54,
+            "end": 36.72,
+            "probability": 0.9998168349266052
+          },
+          {
+            "word": " one.",
+            "start": 36.72,
+            "end": 36.92,
+            "probability": 0.9985308647155762
+          }
+        ]
+      }
+    ],
+    "text": "Did you know that if you blend one can of black beans with two eggs, three tablespoons of cocoa powder, a quarter cup of raw honey, and one teaspoon of vanilla, then pour the mixture into a baking pan and bake it for 20 minutes until the top cracks. You end up with rich, fudgy brownies that taste like a bakery made them, but with no flour and no refined sugar. The resistant starch feeds good bacteria in your gut, the fiber slows digestion so your blood sugar stays speedy and you stay full for hours. If you crave something sweet, but you're trying to lose weight, these are genuinely the ones to make. Comment yes if you'd like more recipes like this and follow me so you don't miss the next one."
+  },
+  "alignment": {
+    "status": "NOT_REQUESTED",
+    "backend": null
+  },
+  "params": {
+    "timeline_fps": 5,
+    "scene_threshold": 0.2,
+    "model": "small",
+    "language": "auto",
+    "device": "cpu",
+    "compute_type": "int8",
+    "cpu_threads": 2,
+    "jobs": 2,
+    "alignment": "none",
+    "align_model": null,
+    "word_timestamps": true,
+    "no_audio": false,
+    "allow_no_audio": false,
+    "max_frames": 20000,
+    "command_timeout": 300
+  },
+  "environment": {
+    "os": "macOS-27.0.1-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.15",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "whisperx": "3.8.6",
+      "ctranslate2": "4.8.2",
+      "Pillow": "12.3.0",
+      "av": "18.0.0",
+      "torch": "2.8.0",
+      "torchaudio": "2.8.0"
+    },
+    "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+    "ffprobe": "/opt/homebrew/bin/ffprobe"
+  },
+  "errors": [],
+  "coverage": {
+    "source_duration_s": 37.19551,
+    "sample_interval_s": 0.2,
+    "timeline_count": 185,
+    "timestamp_basis": "fps_filter_sampling_grid",
+    "visual_review_performed": false
+  },
+  "elapsed_seconds": 16.729
+}

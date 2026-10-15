@@ -99,7 +99,14 @@ def gerar(pasta, titulo, qual, mapa, takes, ks, ficha_cam, notas_capcut, avatar=
     grupos = {}
     for t in takes:
         grupos.setdefault(t[5], []).append(f"V{int(t[0][1:]):02d}")
-    mapa_ag = "; ".join((f"{g[0]} usa K{k:02d}" if len(g) == 1 else f"{g[0]} a {g[-1]} usam todos a mesma imagem escolhida do K{k:02d}")
+    def _lista(g):
+        ns = [int(x[1:]) for x in g]
+        if len(g) == 1:
+            return f"{g[0]} usa"
+        if ns == list(range(ns[0], ns[-1] + 1)):
+            return f"{g[0]} a {g[-1]} usam todos"
+        return ", ".join(g[:-1]) + f" e {g[-1]} usam todos"
+    mapa_ag = "; ".join((f"{_lista(g)} K{k:02d}" if len(g) == 1 else f"{_lista(g)} a mesma imagem escolhida do K{k:02d}")
                         for k, g in grupos.items())
     regra_v = (f"Mapa: {mapa_ag}." if any(
         int(t[0][1:]) != t[5] for t in takes) else "Cada V usa a imagem que sobrou do K de mesmo número (V01 usa K01).")

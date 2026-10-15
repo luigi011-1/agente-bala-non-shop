@@ -1,0 +1,29 @@
+# Relatório de edição · Meredith - V02
+
+- Ordem dos takes (pela fala): 1. V01_20261013222115.mp4 (T1) → 2. V02_20261013222115.mp4 (T2) → 3. V03_20261013222115.mp4 (T3) → 4. V04_20261013222115.mp4 (T4) → 5. V05_20261013222115.mp4 (T5) → 6. V06_20261013222115.mp4 (T6) → 7. V07_20261013222115.mp4 (T7) → 8. V08_20261013222115.mp4 (T8) → 9. V09_20261013222115.mp4 (T9) → 10. V10_20261013222115.mp4 (T10) → 11. V11_20261013222115.mp4 (T11) → 12. V12_20261013222115.mp4 (T12) → 13. V13_20261013222115.mp4 (T13) → 14. V14_20261013222115.mp4 (T14) → 15. V15_20261013222115.mp4 (T15) → 16. V16_20261013222115.mp4 (T16) → 17. V17_20261013222115.mp4 (T17) → 18. V18_20261013222115.mp4 (T18) → 19. V19_20261013222115.mp4 (T19) → 20. V20_20261013222115.mp4 (T20) → 21. V21_20261013222115.mp4 (T21) → 22. V22_20261013222115.mp4 (T22)
+- Produção: `meredith_seamoss_bolinho_maca` (`producao/meredith_seamoss_bolinho_maca/ENTREGA_MEREDITH.md`), semelhança 91%
+- Exceção autorizada por Luigi, take 16: trocou "sea moss" por "cmos"; áudio original mantido, legenda do roteiro aprovado.
+- Exceção autorizada por Luigi, take 18: trocou "rems sea moss" por "rim seamaw"; trocou "dandelion" por "dandelions"; áudio original mantido, legenda do roteiro aprovado.
+- Exceção autorizada por Luigi, take 21: trocou "rems sea moss" por "rem's cmos"; áudio original mantido, legenda do roteiro aprovado.
+- Fala dos takes contra o roteiro, palavra por palavra: OK
+  - aparado: 1. V01_20261013222115.mp4: cortado o que o Flow inventou ou repetiu: "An apple a day keeps the doctor away."; ouvir a emenda
+  - aparado: 3. V03_20261013222115.mp4: cortado o que o Flow inventou ou repetiu: "we"; ouvir a emenda
+  - aparado: 4. V04_20261013222115.mp4: cortado o que o Flow inventou ou repetiu: "And a couple of eggs."; ouvir a emenda
+  - aparado: 6. V06_20261013222115.mp4: cortado o que o Flow inventou ou repetiu: "up. (0.6-1.8s, fala que o whisper tinha escondido)"; ouvir a emenda
+  - aparado: 14. V14_20261013222115.mp4: cortado o que o Flow inventou ou repetiu: "-mm (0.8-1.1s, fala que o whisper tinha escondido)"; ouvir a emenda
+  - aparado: 22. V22_20261013222115.mp4: cortado o que o Flow inventou ou repetiu: "I hope this helps you out on your health journey"; ouvir a emenda
+  - aviso: 11. transcrição refeita por trechos (no take inteiro o whisper perdeu: faltou "and")
+  - aviso: 18. transcrição refeita por trechos (no take inteiro o whisper perdeu: trocou "rems sea moss" por "rim seamoss"; trocou "sea moss" por "seamoss"; inventou "the one i trust is natural rim seamoss")
+- Variação deste vídeo (rodízio): legenda padrao · SFX nenhum · fonte do pico anton
+- Acabamento HyperFrames: zoom em powder 7.4s, zoom em brown 13.7s, zoom em craving 25.2s, zoom em make 33.2s, zoom em have 39.0s, zoom em kill 49.3s, zoom em gummy 55.5s · zoom sim · grão não · SFX nenhum
+- Sem silêncio fora da rampa: FALHA
+- Sem quadro fantasma nos cortes: OK
+- Legenda com o texto do roteiro (contagem bateu): OK
+- Nenhuma legenda com menos de 0,1s: OK
+- Vídeo em 1080x1920: OK
+  - silêncios: [(5.7, 6.050000000000001), (7.6000000000000005, 7.95), (25.450000000000003, 25.700000000000003), (29.05, 29.3), (71.75, 72.05)]
+- Duração 73.3s · 3.78 palavras/s · 52 trechos (0 rampas) · 91 legendas
+- Música: snowfall.mp3 (a partir de 3.2s, cama base -18 dB)
+- Estilo fitwell · fala a 1.20x (alvo 3.8 palavras/s) · light leak na entrada dos takes nenhum; rampa nos takes [1]; legenda alta nos takes [1]
+- Arquivo: `/tmp/edicao/Meredith - V02-e44e0524/Meredith - V02_editado.mp4` (93.2 MB) · tempo total 382s
+- Olhar antes de entregar: `cortes.png` (pulo) e `legendas.png` (nada sobre rosto ou herói)
