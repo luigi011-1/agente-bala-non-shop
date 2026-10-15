@@ -301,6 +301,21 @@ Produções novas do roster Walt, Darlene e Lorraine entram aqui com o caminho `
 
 ---
 
+## 58-61. Receitas virais → venda Sea Moss · `producao/<avatar>_seamoss_<receita>/` · 2026-10-13/14
+- **Formato:** [[formato-receita-ponte-venda]]. Avatares: Meredith, Marshall, Cassidy (12 vídeos, editados).
+- **58 canela** (`snapinsta-1791928587628`, Jupi): boneco de açúcar recebendo canela → água de canela, limão, mel,
+  gengibre, cúrcuma, sal → "grating ginger and measuring six ingredients... annoying" → goma com gengibre,
+  cúrcuma, manuka e vitamina C. Mudo do boneco não gerou na Marshall.
+- **59 bolinho de maçã** (`...442044`, homem de regata): 9 cenas curtas de receita → "baking a whole tray every
+  time the craving hits" → sea moss "feeds that same gut, no oven" → maçã + vinagre de maçã na goma.
+- **60 wrap de lentilha** (`...495894`, motorhome): lentilha de molho → frigideira → "soaking three hours ahead
+  and flipping one by one" → inchaço e imunidade (sabugueiro, C, D3) → queda de açúcar do pão.
+- **61 sorvete de banana** (`...419561`, espanhol): banana congelada no liquidificador → freezer → "no effort...
+  Okay, a little effort" → goma de maçã verde com <1 g de açúcar e 4 calorias.
+- **Não repetir nas mesmas contas:** estas quatro fricções, as linhas de autoridade de [[angulo1-copy-seamoss]]
+  e os CTAs de comentário ("bloating every day", "sugar craving every afternoon", "bread leaves you bloated",
+  "sweet tooth every night"). Canela e sorvete também viraram growth FityWell em 12/10 (v01/v02, sem decisão).
+
 ## Padrões de esqueleto que se repetem (atalhos mentais)
 
 ### Inspeção de comida

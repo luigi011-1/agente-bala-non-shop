@@ -46,3 +46,5 @@ NÃO FAZER (erros cometidos)
 - Não montar laço de shell com `set -- $var` no zsh (não separa os argumentos): rodar os comandos explícitos.
 - Não reaproveitar itens velhos do checklist de envio que o padrão novo do Flow revogou (C2 voz no V, C8
   5 blocos): marcar N/A com o motivo.
+
+Próximo lote (receitas → Sea Moss, 2026-10-14): erros e acertos em [[producao-licoes-lote-1014]].

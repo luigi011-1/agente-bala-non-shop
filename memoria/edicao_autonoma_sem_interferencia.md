@@ -25,3 +25,20 @@ I keep"), o que fez o editor cortar fala real e custou ~20 min de reedição cad
 - Avisar o Luigi a cada vídeo pronto, sem pedir nada; só parar para perguntar se a decisão for dele (take para
   regerar no Flow quando ele não autorizou "do jeito que tá").
 Relacionado: [[edicao-licoes-teste]], [[edicao-prioridade-hyperframes]].
+
+**Lote Sea Moss receitas (2026-10-14, 12 vídeos, Luigi ausente: "resolva tudo e não me peça auxílio"):**
+o `auto.py` do lote (`producao/seamoss_receitas_lote_2026_10_13/edicao_scripts/`) resolve sozinho, nesta ordem:
+erro de escuta (medium.en no take inteiro + trechos) → exceção; fala inventada/repetida → corta o take no trecho
+da fala do roteiro (original em `_originais/`), NUNCA exceção (a invenção ficaria no vídeo); ponta da frase cortada
+pelo Flow → fala termina na vírgula/ponto anterior (ou na última palavra ouvida se a vírgula jogar fora >3 palavras,
+nunca terminando em palavra solta "one/than/of/with"); palavra inicial faltando (1-2) → fala começa no take.
+Nunca perde Natural Rems, Amazon, yes, follow, stories (a bio pode cair). Toda fala ajustada vira OVR em textos.py.
+- Take mudo com som ambiente: o whisper "ouve" fala no ruído e o editor casa o take com uma fala. Tirar a trilha
+  de áudio do take mudo (`-an`) antes de editar; renomear para `tNN_` também.
+- Desktop do Mac é iCloud com disco cheio: takes e editados ficam `dataless` e a leitura falha no meio. `brctl
+  download` + leitura completa antes de editar; vídeo entregue pode virar dataless depois (abre normal pelo Finder).
+- Conferência de silêncio com ressalva não bloqueia entrega se a fala passou (mesma prática do lote anterior).
+- Auditar a lista de OVR no fim: a regra de encurtar já gerou "Dicing." e "with less than one." antes de ser
+  corrigida. Olhar `legendas.png` de cada vídeo antes de dizer pronto.
+
+Erros e acertos do lote inteiro (roteiro, pacote, Flow e edição) em [[producao-licoes-lote-1014]].

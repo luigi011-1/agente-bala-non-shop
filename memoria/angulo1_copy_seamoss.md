@@ -200,3 +200,17 @@ Por enquanto só ela roda o Sea Moss, em paralelo com FityWell e Body Hacks na m
   Fichas e âncoras em [[avatares-fichas]]; os nomes não seguem os conceitos sugeridos, casar pela imagem.
 - Avatares Melody Carter e holistic.trevor eram da Korella. O Sea Moss roda com a holistic.brandon
   (item 6.1); outro avatar só se o Luigi anexar ([[avatar-so-o-que-o-luigi-mandar]]).
+
+## 8. Linhas de autoridade já usadas por conta (não repetir na mesma conta)
+
+- **Meredith:** "Forty years I have been making sea moss for this whole neighborhood" (rins); "Forty years making
+  sea moss for every woman on this block" (seios); "I have made sea moss my whole life, baby" (canela); "what my
+  grandmother gave me back in Kingston" (bolinho); "what every auntie in my building swears by" (wrap); "blending
+  in my kitchen since the eighties" (sorvete).
+- **Marshall:** "For fifty years I have dived for seaweed in this ocean" (rins); "gathered seaweed from this ocean
+  my whole life" (canela); "what the ocean has given me for fifty years" (bolinho); "the divers of my village have
+  trusted for generations" (wrap); "the plant I have dived for since I was a girl" (sorvete).
+- **Cassidy:** "Thirty years I have been pulling Irish moss off these rocks" (rins); "raking Irish moss off these
+  rocks since I was a kid" (canela); "what I rake off these rocks every summer" (bolinho); "what my family has
+  hauled out of the Atlantic for generations" (wrap); "the same stuff my dad taught me to rake off these rocks" (sorvete).
+- Formato de receita com ponte em [[formato-receita-ponte-venda]].
