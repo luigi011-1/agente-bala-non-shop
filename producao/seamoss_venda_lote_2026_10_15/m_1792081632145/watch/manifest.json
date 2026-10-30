@@ -1,0 +1,1414 @@
+{
+  "schema_version": 2,
+  "pipeline": "watch",
+  "run_id": "b2a909d9-1847-472e-894a-6705822a017f",
+  "status": "COMPLETE",
+  "analysis_status": "PENDING_VISUAL_REVIEW",
+  "video": "/Users/macbookairm2/Downloads/snapinsta-1792081632145.mp4",
+  "outdir": "/Users/macbookairm2/agente bala non-shop/agente-bala-non-shop/producao/seamoss_venda_lote_2026_10_15/m_1792081632145/watch",
+  "info": {
+    "duration": 33.689297,
+    "fps": 30.0,
+    "width": 720,
+    "height": 1280,
+    "has_audio": true
+  },
+  "scenes": [
+    {
+      "file": "scene_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "scene_t00006.8333_000002.png",
+      "t": 6.833333
+    },
+    {
+      "file": "scene_t00010.1000_000003.png",
+      "t": 10.1
+    },
+    {
+      "file": "scene_t00016.4000_000004.png",
+      "t": 16.4
+    },
+    {
+      "file": "scene_t00026.1000_000005.png",
+      "t": 26.1
+    }
+  ],
+  "timeline": [
+    {
+      "file": "tl_t00000.0000_000001.png",
+      "t": 0.0
+    },
+    {
+      "file": "tl_t00000.2000_000002.png",
+      "t": 0.2
+    },
+    {
+      "file": "tl_t00000.4000_000003.png",
+      "t": 0.4
+    },
+    {
+      "file": "tl_t00000.6000_000004.png",
+      "t": 0.6
+    },
+    {
+      "file": "tl_t00000.8000_000005.png",
+      "t": 0.8
+    },
+    {
+      "file": "tl_t00001.0000_000006.png",
+      "t": 1.0
+    },
+    {
+      "file": "tl_t00001.2000_000007.png",
+      "t": 1.2
+    },
+    {
+      "file": "tl_t00001.4000_000008.png",
+      "t": 1.4
+    },
+    {
+      "file": "tl_t00001.6000_000009.png",
+      "t": 1.6
+    },
+    {
+      "file": "tl_t00001.8000_000010.png",
+      "t": 1.8
+    },
+    {
+      "file": "tl_t00002.0000_000011.png",
+      "t": 2.0
+    },
+    {
+      "file": "tl_t00002.2000_000012.png",
+      "t": 2.2
+    },
+    {
+      "file": "tl_t00002.4000_000013.png",
+      "t": 2.4
+    },
+    {
+      "file": "tl_t00002.6000_000014.png",
+      "t": 2.6
+    },
+    {
+      "file": "tl_t00002.8000_000015.png",
+      "t": 2.8
+    },
+    {
+      "file": "tl_t00003.0000_000016.png",
+      "t": 3.0
+    },
+    {
+      "file": "tl_t00003.2000_000017.png",
+      "t": 3.2
+    },
+    {
+      "file": "tl_t00003.4000_000018.png",
+      "t": 3.4
+    },
+    {
+      "file": "tl_t00003.6000_000019.png",
+      "t": 3.6
+    },
+    {
+      "file": "tl_t00003.8000_000020.png",
+      "t": 3.8
+    },
+    {
+      "file": "tl_t00004.0000_000021.png",
+      "t": 4.0
+    },
+    {
+      "file": "tl_t00004.2000_000022.png",
+      "t": 4.2
+    },
+    {
+      "file": "tl_t00004.4000_000023.png",
+      "t": 4.4
+    },
+    {
+      "file": "tl_t00004.6000_000024.png",
+      "t": 4.6
+    },
+    {
+      "file": "tl_t00004.8000_000025.png",
+      "t": 4.8
+    },
+    {
+      "file": "tl_t00005.0000_000026.png",
+      "t": 5.0
+    },
+    {
+      "file": "tl_t00005.2000_000027.png",
+      "t": 5.2
+    },
+    {
+      "file": "tl_t00005.4000_000028.png",
+      "t": 5.4
+    },
+    {
+      "file": "tl_t00005.6000_000029.png",
+      "t": 5.6
+    },
+    {
+      "file": "tl_t00005.8000_000030.png",
+      "t": 5.8
+    },
+    {
+      "file": "tl_t00006.0000_000031.png",
+      "t": 6.0
+    },
+    {
+      "file": "tl_t00006.2000_000032.png",
+      "t": 6.2
+    },
+    {
+      "file": "tl_t00006.4000_000033.png",
+      "t": 6.4
+    },
+    {
+      "file": "tl_t00006.6000_000034.png",
+      "t": 6.6
+    },
+    {
+      "file": "tl_t00006.8000_000035.png",
+      "t": 6.8
+    },
+    {
+      "file": "tl_t00007.0000_000036.png",
+      "t": 7.0
+    },
+    {
+      "file": "tl_t00007.2000_000037.png",
+      "t": 7.2
+    },
+    {
+      "file": "tl_t00007.4000_000038.png",
+      "t": 7.4
+    },
+    {
+      "file": "tl_t00007.6000_000039.png",
+      "t": 7.6
+    },
+    {
+      "file": "tl_t00007.8000_000040.png",
+      "t": 7.8
+    },
+    {
+      "file": "tl_t00008.0000_000041.png",
+      "t": 8.0
+    },
+    {
+      "file": "tl_t00008.2000_000042.png",
+      "t": 8.2
+    },
+    {
+      "file": "tl_t00008.4000_000043.png",
+      "t": 8.4
+    },
+    {
+      "file": "tl_t00008.6000_000044.png",
+      "t": 8.6
+    },
+    {
+      "file": "tl_t00008.8000_000045.png",
+      "t": 8.8
+    },
+    {
+      "file": "tl_t00009.0000_000046.png",
+      "t": 9.0
+    },
+    {
+      "file": "tl_t00009.2000_000047.png",
+      "t": 9.2
+    },
+    {
+      "file": "tl_t00009.4000_000048.png",
+      "t": 9.4
+    },
+    {
+      "file": "tl_t00009.6000_000049.png",
+      "t": 9.6
+    },
+    {
+      "file": "tl_t00009.8000_000050.png",
+      "t": 9.8
+    },
+    {
+      "file": "tl_t00010.0000_000051.png",
+      "t": 10.0
+    },
+    {
+      "file": "tl_t00010.2000_000052.png",
+      "t": 10.2
+    },
+    {
+      "file": "tl_t00010.4000_000053.png",
+      "t": 10.4
+    },
+    {
+      "file": "tl_t00010.6000_000054.png",
+      "t": 10.6
+    },
+    {
+      "file": "tl_t00010.8000_000055.png",
+      "t": 10.8
+    },
+    {
+      "file": "tl_t00011.0000_000056.png",
+      "t": 11.0
+    },
+    {
+      "file": "tl_t00011.2000_000057.png",
+      "t": 11.2
+    },
+    {
+      "file": "tl_t00011.4000_000058.png",
+      "t": 11.4
+    },
+    {
+      "file": "tl_t00011.6000_000059.png",
+      "t": 11.6
+    },
+    {
+      "file": "tl_t00011.8000_000060.png",
+      "t": 11.8
+    },
+    {
+      "file": "tl_t00012.0000_000061.png",
+      "t": 12.0
+    },
+    {
+      "file": "tl_t00012.2000_000062.png",
+      "t": 12.2
+    },
+    {
+      "file": "tl_t00012.4000_000063.png",
+      "t": 12.4
+    },
+    {
+      "file": "tl_t00012.6000_000064.png",
+      "t": 12.6
+    },
+    {
+      "file": "tl_t00012.8000_000065.png",
+      "t": 12.8
+    },
+    {
+      "file": "tl_t00013.0000_000066.png",
+      "t": 13.0
+    },
+    {
+      "file": "tl_t00013.2000_000067.png",
+      "t": 13.2
+    },
+    {
+      "file": "tl_t00013.4000_000068.png",
+      "t": 13.4
+    },
+    {
+      "file": "tl_t00013.6000_000069.png",
+      "t": 13.6
+    },
+    {
+      "file": "tl_t00013.8000_000070.png",
+      "t": 13.8
+    },
+    {
+      "file": "tl_t00014.0000_000071.png",
+      "t": 14.0
+    },
+    {
+      "file": "tl_t00014.2000_000072.png",
+      "t": 14.2
+    },
+    {
+      "file": "tl_t00014.4000_000073.png",
+      "t": 14.4
+    },
+    {
+      "file": "tl_t00014.6000_000074.png",
+      "t": 14.6
+    },
+    {
+      "file": "tl_t00014.8000_000075.png",
+      "t": 14.8
+    },
+    {
+      "file": "tl_t00015.0000_000076.png",
+      "t": 15.0
+    },
+    {
+      "file": "tl_t00015.2000_000077.png",
+      "t": 15.2
+    },
+    {
+      "file": "tl_t00015.4000_000078.png",
+      "t": 15.4
+    },
+    {
+      "file": "tl_t00015.6000_000079.png",
+      "t": 15.6
+    },
+    {
+      "file": "tl_t00015.8000_000080.png",
+      "t": 15.8
+    },
+    {
+      "file": "tl_t00016.0000_000081.png",
+      "t": 16.0
+    },
+    {
+      "file": "tl_t00016.2000_000082.png",
+      "t": 16.2
+    },
+    {
+      "file": "tl_t00016.4000_000083.png",
+      "t": 16.4
+    },
+    {
+      "file": "tl_t00016.6000_000084.png",
+      "t": 16.6
+    },
+    {
+      "file": "tl_t00016.8000_000085.png",
+      "t": 16.8
+    },
+    {
+      "file": "tl_t00017.0000_000086.png",
+      "t": 17.0
+    },
+    {
+      "file": "tl_t00017.2000_000087.png",
+      "t": 17.2
+    },
+    {
+      "file": "tl_t00017.4000_000088.png",
+      "t": 17.4
+    },
+    {
+      "file": "tl_t00017.6000_000089.png",
+      "t": 17.6
+    },
+    {
+      "file": "tl_t00017.8000_000090.png",
+      "t": 17.8
+    },
+    {
+      "file": "tl_t00018.0000_000091.png",
+      "t": 18.0
+    },
+    {
+      "file": "tl_t00018.2000_000092.png",
+      "t": 18.2
+    },
+    {
+      "file": "tl_t00018.4000_000093.png",
+      "t": 18.4
+    },
+    {
+      "file": "tl_t00018.6000_000094.png",
+      "t": 18.6
+    },
+    {
+      "file": "tl_t00018.8000_000095.png",
+      "t": 18.8
+    },
+    {
+      "file": "tl_t00019.0000_000096.png",
+      "t": 19.0
+    },
+    {
+      "file": "tl_t00019.2000_000097.png",
+      "t": 19.2
+    },
+    {
+      "file": "tl_t00019.4000_000098.png",
+      "t": 19.4
+    },
+    {
+      "file": "tl_t00019.6000_000099.png",
+      "t": 19.6
+    },
+    {
+      "file": "tl_t00019.8000_000100.png",
+      "t": 19.8
+    },
+    {
+      "file": "tl_t00020.0000_000101.png",
+      "t": 20.0
+    },
+    {
+      "file": "tl_t00020.2000_000102.png",
+      "t": 20.2
+    },
+    {
+      "file": "tl_t00020.4000_000103.png",
+      "t": 20.4
+    },
+    {
+      "file": "tl_t00020.6000_000104.png",
+      "t": 20.6
+    },
+    {
+      "file": "tl_t00020.8000_000105.png",
+      "t": 20.8
+    },
+    {
+      "file": "tl_t00021.0000_000106.png",
+      "t": 21.0
+    },
+    {
+      "file": "tl_t00021.2000_000107.png",
+      "t": 21.2
+    },
+    {
+      "file": "tl_t00021.4000_000108.png",
+      "t": 21.4
+    },
+    {
+      "file": "tl_t00021.6000_000109.png",
+      "t": 21.6
+    },
+    {
+      "file": "tl_t00021.8000_000110.png",
+      "t": 21.8
+    },
+    {
+      "file": "tl_t00022.0000_000111.png",
+      "t": 22.0
+    },
+    {
+      "file": "tl_t00022.2000_000112.png",
+      "t": 22.2
+    },
+    {
+      "file": "tl_t00022.4000_000113.png",
+      "t": 22.4
+    },
+    {
+      "file": "tl_t00022.6000_000114.png",
+      "t": 22.6
+    },
+    {
+      "file": "tl_t00022.8000_000115.png",
+      "t": 22.8
+    },
+    {
+      "file": "tl_t00023.0000_000116.png",
+      "t": 23.0
+    },
+    {
+      "file": "tl_t00023.2000_000117.png",
+      "t": 23.2
+    },
+    {
+      "file": "tl_t00023.4000_000118.png",
+      "t": 23.4
+    },
+    {
+      "file": "tl_t00023.6000_000119.png",
+      "t": 23.6
+    },
+    {
+      "file": "tl_t00023.8000_000120.png",
+      "t": 23.8
+    },
+    {
+      "file": "tl_t00024.0000_000121.png",
+      "t": 24.0
+    },
+    {
+      "file": "tl_t00024.2000_000122.png",
+      "t": 24.2
+    },
+    {
+      "file": "tl_t00024.4000_000123.png",
+      "t": 24.4
+    },
+    {
+      "file": "tl_t00024.6000_000124.png",
+      "t": 24.6
+    },
+    {
+      "file": "tl_t00024.8000_000125.png",
+      "t": 24.8
+    },
+    {
+      "file": "tl_t00025.0000_000126.png",
+      "t": 25.0
+    },
+    {
+      "file": "tl_t00025.2000_000127.png",
+      "t": 25.2
+    },
+    {
+      "file": "tl_t00025.4000_000128.png",
+      "t": 25.4
+    },
+    {
+      "file": "tl_t00025.6000_000129.png",
+      "t": 25.6
+    },
+    {
+      "file": "tl_t00025.8000_000130.png",
+      "t": 25.8
+    },
+    {
+      "file": "tl_t00026.0000_000131.png",
+      "t": 26.0
+    },
+    {
+      "file": "tl_t00026.2000_000132.png",
+      "t": 26.2
+    },
+    {
+      "file": "tl_t00026.4000_000133.png",
+      "t": 26.4
+    },
+    {
+      "file": "tl_t00026.6000_000134.png",
+      "t": 26.6
+    },
+    {
+      "file": "tl_t00026.8000_000135.png",
+      "t": 26.8
+    },
+    {
+      "file": "tl_t00027.0000_000136.png",
+      "t": 27.0
+    },
+    {
+      "file": "tl_t00027.2000_000137.png",
+      "t": 27.2
+    },
+    {
+      "file": "tl_t00027.4000_000138.png",
+      "t": 27.4
+    },
+    {
+      "file": "tl_t00027.6000_000139.png",
+      "t": 27.6
+    },
+    {
+      "file": "tl_t00027.8000_000140.png",
+      "t": 27.8
+    },
+    {
+      "file": "tl_t00028.0000_000141.png",
+      "t": 28.0
+    },
+    {
+      "file": "tl_t00028.2000_000142.png",
+      "t": 28.2
+    },
+    {
+      "file": "tl_t00028.4000_000143.png",
+      "t": 28.4
+    },
+    {
+      "file": "tl_t00028.6000_000144.png",
+      "t": 28.6
+    },
+    {
+      "file": "tl_t00028.8000_000145.png",
+      "t": 28.8
+    },
+    {
+      "file": "tl_t00029.0000_000146.png",
+      "t": 29.0
+    },
+    {
+      "file": "tl_t00029.2000_000147.png",
+      "t": 29.2
+    },
+    {
+      "file": "tl_t00029.4000_000148.png",
+      "t": 29.4
+    },
+    {
+      "file": "tl_t00029.6000_000149.png",
+      "t": 29.6
+    },
+    {
+      "file": "tl_t00029.8000_000150.png",
+      "t": 29.8
+    },
+    {
+      "file": "tl_t00030.0000_000151.png",
+      "t": 30.0
+    },
+    {
+      "file": "tl_t00030.2000_000152.png",
+      "t": 30.2
+    },
+    {
+      "file": "tl_t00030.4000_000153.png",
+      "t": 30.4
+    },
+    {
+      "file": "tl_t00030.6000_000154.png",
+      "t": 30.6
+    },
+    {
+      "file": "tl_t00030.8000_000155.png",
+      "t": 30.8
+    },
+    {
+      "file": "tl_t00031.0000_000156.png",
+      "t": 31.0
+    },
+    {
+      "file": "tl_t00031.2000_000157.png",
+      "t": 31.2
+    },
+    {
+      "file": "tl_t00031.4000_000158.png",
+      "t": 31.4
+    },
+    {
+      "file": "tl_t00031.6000_000159.png",
+      "t": 31.6
+    },
+    {
+      "file": "tl_t00031.8000_000160.png",
+      "t": 31.8
+    },
+    {
+      "file": "tl_t00032.0000_000161.png",
+      "t": 32.0
+    },
+    {
+      "file": "tl_t00032.2000_000162.png",
+      "t": 32.2
+    },
+    {
+      "file": "tl_t00032.4000_000163.png",
+      "t": 32.4
+    },
+    {
+      "file": "tl_t00032.6000_000164.png",
+      "t": 32.6
+    },
+    {
+      "file": "tl_t00032.8000_000165.png",
+      "t": 32.8
+    },
+    {
+      "file": "tl_t00033.0000_000166.png",
+      "t": 33.0
+    },
+    {
+      "file": "tl_t00033.2000_000167.png",
+      "t": 33.2
+    },
+    {
+      "file": "tl_t00033.4000_000168.png",
+      "t": 33.4
+    }
+  ],
+  "overview": {
+    "scenes": [
+      "overview_scenes_01.png"
+    ],
+    "timeline": [
+      "overview_timeline_01.png",
+      "overview_timeline_02.png",
+      "overview_timeline_03.png",
+      "overview_timeline_04.png",
+      "overview_timeline_05.png",
+      "overview_timeline_06.png",
+      "overview_timeline_07.png",
+      "overview_timeline_08.png",
+      "overview_timeline_09.png"
+    ]
+  },
+  "transcript": true,
+  "audio": {
+    "status": "SUCCEEDED",
+    "backend": "faster-whisper",
+    "language": "es",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 5.88,
+        "text": "Mezcla vaselina con bicarbonato de sodio y no vas a poder creerlo, las farmacias no quieren",
+        "words": [
+          {
+            "word": " Mezcla",
+            "start": 0.0,
+            "end": 0.4,
+            "probability": 0.7726839979489645
+          },
+          {
+            "word": " vaselina",
+            "start": 0.4,
+            "end": 0.98,
+            "probability": 0.8190042575200399
+          },
+          {
+            "word": " con",
+            "start": 0.98,
+            "end": 1.3,
+            "probability": 0.9835764765739441
+          },
+          {
+            "word": " bicarbonato",
+            "start": 1.3,
+            "end": 1.92,
+            "probability": 0.9907377064228058
+          },
+          {
+            "word": " de",
+            "start": 1.92,
+            "end": 2.06,
+            "probability": 0.9974225759506226
+          },
+          {
+            "word": " sodio",
+            "start": 2.06,
+            "end": 2.46,
+            "probability": 0.9897111356258392
+          },
+          {
+            "word": " y",
+            "start": 2.46,
+            "end": 3.08,
+            "probability": 0.8796014785766602
+          },
+          {
+            "word": " no",
+            "start": 3.08,
+            "end": 3.22,
+            "probability": 0.9966984391212463
+          },
+          {
+            "word": " vas",
+            "start": 3.22,
+            "end": 3.38,
+            "probability": 0.989575207233429
+          },
+          {
+            "word": " a",
+            "start": 3.38,
+            "end": 3.48,
+            "probability": 0.9974285960197449
+          },
+          {
+            "word": " poder",
+            "start": 3.48,
+            "end": 3.74,
+            "probability": 0.9968162178993225
+          },
+          {
+            "word": " creerlo,",
+            "start": 3.74,
+            "end": 4.26,
+            "probability": 0.9911071459452311
+          },
+          {
+            "word": " las",
+            "start": 4.76,
+            "end": 4.92,
+            "probability": 0.9389683604240417
+          },
+          {
+            "word": " farmacias",
+            "start": 4.92,
+            "end": 5.42,
+            "probability": 0.9728931585947672
+          },
+          {
+            "word": " no",
+            "start": 5.42,
+            "end": 5.62,
+            "probability": 0.9909123182296753
+          },
+          {
+            "word": " quieren",
+            "start": 5.62,
+            "end": 5.88,
+            "probability": 0.9986861348152161
+          }
+        ]
+      },
+      {
+        "start": 5.88,
+        "end": 11.3,
+        "text": "que sepas esto. Una cucharadita de vaselina, una cucharadita de miel, de una a dos cucharaditas",
+        "words": [
+          {
+            "word": " que",
+            "start": 5.88,
+            "end": 6.04,
+            "probability": 0.9938753247261047
+          },
+          {
+            "word": " sepas",
+            "start": 6.04,
+            "end": 6.34,
+            "probability": 0.9947530329227448
+          },
+          {
+            "word": " esto.",
+            "start": 6.34,
+            "end": 6.68,
+            "probability": 0.9914548397064209
+          },
+          {
+            "word": " Una",
+            "start": 6.86,
+            "end": 7.0,
+            "probability": 0.5684571266174316
+          },
+          {
+            "word": " cucharadita",
+            "start": 7.0,
+            "end": 7.6,
+            "probability": 0.9956252872943878
+          },
+          {
+            "word": " de",
+            "start": 7.6,
+            "end": 7.72,
+            "probability": 0.9924599528312683
+          },
+          {
+            "word": " vaselina,",
+            "start": 7.72,
+            "end": 8.22,
+            "probability": 0.9926906029383341
+          },
+          {
+            "word": " una",
+            "start": 8.76,
+            "end": 8.88,
+            "probability": 0.9831031560897827
+          },
+          {
+            "word": " cucharadita",
+            "start": 8.88,
+            "end": 9.5,
+            "probability": 0.9956671595573425
+          },
+          {
+            "word": " de",
+            "start": 9.5,
+            "end": 9.64,
+            "probability": 0.9978451728820801
+          },
+          {
+            "word": " miel,",
+            "start": 9.64,
+            "end": 9.86,
+            "probability": 0.98148512840271
+          },
+          {
+            "word": " de",
+            "start": 10.18,
+            "end": 10.32,
+            "probability": 0.9845442175865173
+          },
+          {
+            "word": " una",
+            "start": 10.32,
+            "end": 10.54,
+            "probability": 0.867387056350708
+          },
+          {
+            "word": " a",
+            "start": 10.54,
+            "end": 10.64,
+            "probability": 0.974743127822876
+          },
+          {
+            "word": " dos",
+            "start": 10.64,
+            "end": 10.76,
+            "probability": 0.9897128343582153
+          },
+          {
+            "word": " cucharaditas",
+            "start": 10.76,
+            "end": 11.3,
+            "probability": 0.9895891398191452
+          }
+        ]
+      },
+      {
+        "start": 11.3,
+        "end": 15.64,
+        "text": "de bicarbonato de sodio y una cucharadita de aceite de coco en un tazón. Mezcla durante",
+        "words": [
+          {
+            "word": " de",
+            "start": 11.3,
+            "end": 11.42,
+            "probability": 0.9884471297264099
+          },
+          {
+            "word": " bicarbonato",
+            "start": 11.42,
+            "end": 11.86,
+            "probability": 0.9979660660028458
+          },
+          {
+            "word": " de",
+            "start": 11.86,
+            "end": 11.98,
+            "probability": 0.989649772644043
+          },
+          {
+            "word": " sodio",
+            "start": 11.98,
+            "end": 12.26,
+            "probability": 0.9991195797920227
+          },
+          {
+            "word": " y",
+            "start": 12.26,
+            "end": 12.44,
+            "probability": 0.7315076589584351
+          },
+          {
+            "word": " una",
+            "start": 12.44,
+            "end": 12.58,
+            "probability": 0.9961841702461243
+          },
+          {
+            "word": " cucharadita",
+            "start": 12.58,
+            "end": 13.2,
+            "probability": 0.997565507888794
+          },
+          {
+            "word": " de",
+            "start": 13.2,
+            "end": 13.32,
+            "probability": 0.9951872825622559
+          },
+          {
+            "word": " aceite",
+            "start": 13.32,
+            "end": 13.54,
+            "probability": 0.9973492622375488
+          },
+          {
+            "word": " de",
+            "start": 13.54,
+            "end": 13.8,
+            "probability": 0.9978325963020325
+          },
+          {
+            "word": " coco",
+            "start": 13.8,
+            "end": 14.06,
+            "probability": 0.9867799878120422
+          },
+          {
+            "word": " en",
+            "start": 14.06,
+            "end": 14.36,
+            "probability": 0.9870914220809937
+          },
+          {
+            "word": " un",
+            "start": 14.36,
+            "end": 14.48,
+            "probability": 0.9951791763305664
+          },
+          {
+            "word": " tazón.",
+            "start": 14.48,
+            "end": 14.82,
+            "probability": 0.9810031652450562
+          },
+          {
+            "word": " Mezcla",
+            "start": 15.06,
+            "end": 15.4,
+            "probability": 0.9874330560366312
+          },
+          {
+            "word": " durante",
+            "start": 15.4,
+            "end": 15.64,
+            "probability": 0.9960476756095886
+          }
+        ]
+      },
+      {
+        "start": 15.64,
+        "end": 20.96,
+        "text": "un minuto, aplícalo en tu cara, déjalo por 15 minutos, enjuaga con agua tibia, esto",
+        "words": [
+          {
+            "word": " un",
+            "start": 15.64,
+            "end": 15.92,
+            "probability": 0.9275513887405396
+          },
+          {
+            "word": " minuto,",
+            "start": 15.92,
+            "end": 16.3,
+            "probability": 0.99356609582901
+          },
+          {
+            "word": " aplícalo",
+            "start": 16.44,
+            "end": 16.82,
+            "probability": 0.8597191423177719
+          },
+          {
+            "word": " en",
+            "start": 16.82,
+            "end": 16.88,
+            "probability": 0.9936330318450928
+          },
+          {
+            "word": " tu",
+            "start": 16.88,
+            "end": 16.98,
+            "probability": 0.9966663718223572
+          },
+          {
+            "word": " cara,",
+            "start": 16.98,
+            "end": 17.2,
+            "probability": 0.9989944100379944
+          },
+          {
+            "word": " déjalo",
+            "start": 17.88,
+            "end": 18.12,
+            "probability": 0.9493211309115092
+          },
+          {
+            "word": " por",
+            "start": 18.12,
+            "end": 18.32,
+            "probability": 0.9949216246604919
+          },
+          {
+            "word": " 15",
+            "start": 18.32,
+            "end": 18.56,
+            "probability": 0.8791165351867676
+          },
+          {
+            "word": " minutos,",
+            "start": 18.56,
+            "end": 19.0,
+            "probability": 0.9827784895896912
+          },
+          {
+            "word": " enjuaga",
+            "start": 19.32,
+            "end": 19.66,
+            "probability": 0.96359916528066
+          },
+          {
+            "word": " con",
+            "start": 19.66,
+            "end": 19.88,
+            "probability": 0.9978073239326477
+          },
+          {
+            "word": " agua",
+            "start": 19.88,
+            "end": 20.06,
+            "probability": 0.9983147382736206
+          },
+          {
+            "word": " tibia,",
+            "start": 20.06,
+            "end": 20.5,
+            "probability": 0.9918085336685181
+          },
+          {
+            "word": " esto",
+            "start": 20.78,
+            "end": 20.96,
+            "probability": 0.9875470995903015
+          }
+        ]
+      },
+      {
+        "start": 20.96,
+        "end": 26.0,
+        "text": "elimina la piel muerta, aclara tu rostro, desvanece manchas y te da un brillo natural.",
+        "words": [
+          {
+            "word": " elimina",
+            "start": 20.96,
+            "end": 21.34,
+            "probability": 0.9967116117477417
+          },
+          {
+            "word": " la",
+            "start": 21.34,
+            "end": 21.46,
+            "probability": 0.9868491888046265
+          },
+          {
+            "word": " piel",
+            "start": 21.46,
+            "end": 21.66,
+            "probability": 0.9998569488525391
+          },
+          {
+            "word": " muerta,",
+            "start": 21.66,
+            "end": 22.1,
+            "probability": 0.9853513836860657
+          },
+          {
+            "word": " aclara",
+            "start": 22.46,
+            "end": 22.68,
+            "probability": 0.935127466917038
+          },
+          {
+            "word": " tu",
+            "start": 22.68,
+            "end": 22.9,
+            "probability": 0.9670480489730835
+          },
+          {
+            "word": " rostro,",
+            "start": 22.9,
+            "end": 23.32,
+            "probability": 0.9975818792978922
+          },
+          {
+            "word": " desvanece",
+            "start": 23.48,
+            "end": 23.92,
+            "probability": 0.9784121960401535
+          },
+          {
+            "word": " manchas",
+            "start": 23.92,
+            "end": 24.3,
+            "probability": 0.9948005676269531
+          },
+          {
+            "word": " y",
+            "start": 24.3,
+            "end": 25.02,
+            "probability": 0.7931464314460754
+          },
+          {
+            "word": " te",
+            "start": 25.02,
+            "end": 25.14,
+            "probability": 0.9978553652763367
+          },
+          {
+            "word": " da",
+            "start": 25.14,
+            "end": 25.26,
+            "probability": 0.9968547821044922
+          },
+          {
+            "word": " un",
+            "start": 25.26,
+            "end": 25.36,
+            "probability": 0.9979683756828308
+          },
+          {
+            "word": " brillo",
+            "start": 25.36,
+            "end": 25.62,
+            "probability": 0.9873332977294922
+          },
+          {
+            "word": " natural.",
+            "start": 25.62,
+            "end": 26.0,
+            "probability": 0.9981021285057068
+          }
+        ]
+      },
+      {
+        "start": 26.0,
+        "end": 32.06,
+        "text": "Comenta libro y te enviaré mi antigua Biblia de sanación. Pero tienes que seguirme o no",
+        "words": [
+          {
+            "word": " Comenta",
+            "start": 26.0,
+            "end": 26.52,
+            "probability": 0.8876497447490692
+          },
+          {
+            "word": " libro",
+            "start": 26.52,
+            "end": 26.84,
+            "probability": 0.16978023946285248
+          },
+          {
+            "word": " y",
+            "start": 26.84,
+            "end": 27.16,
+            "probability": 0.9628027677536011
+          },
+          {
+            "word": " te",
+            "start": 27.16,
+            "end": 27.26,
+            "probability": 0.9946895837783813
+          },
+          {
+            "word": " enviaré",
+            "start": 27.26,
+            "end": 27.72,
+            "probability": 0.9583902557690939
+          },
+          {
+            "word": " mi",
+            "start": 27.72,
+            "end": 28.14,
+            "probability": 0.9776520133018494
+          },
+          {
+            "word": " antigua",
+            "start": 28.14,
+            "end": 28.62,
+            "probability": 0.8963691592216492
+          },
+          {
+            "word": " Biblia",
+            "start": 28.62,
+            "end": 29.0,
+            "probability": 0.9338171680768331
+          },
+          {
+            "word": " de",
+            "start": 29.0,
+            "end": 29.1,
+            "probability": 0.9906436800956726
+          },
+          {
+            "word": " sanación.",
+            "start": 29.1,
+            "end": 29.58,
+            "probability": 0.9375078678131104
+          },
+          {
+            "word": " Pero",
+            "start": 30.2,
+            "end": 30.58,
+            "probability": 0.7474681735038757
+          },
+          {
+            "word": " tienes",
+            "start": 30.58,
+            "end": 30.84,
+            "probability": 0.9798135161399841
+          },
+          {
+            "word": " que",
+            "start": 30.84,
+            "end": 31.02,
+            "probability": 0.9985809326171875
+          },
+          {
+            "word": " seguirme",
+            "start": 31.02,
+            "end": 31.56,
+            "probability": 0.9967397749423981
+          },
+          {
+            "word": " o",
+            "start": 31.56,
+            "end": 31.94,
+            "probability": 0.5945225954055786
+          },
+          {
+            "word": " no",
+            "start": 31.94,
+            "end": 32.06,
+            "probability": 0.9973973035812378
+          }
+        ]
+      },
+      {
+        "start": 32.06,
+        "end": 33.46,
+        "text": "podré comunicarme contigo.",
+        "words": [
+          {
+            "word": " podré",
+            "start": 32.06,
+            "end": 32.38,
+            "probability": 0.9799838662147522
+          },
+          {
+            "word": " comunicarme",
+            "start": 32.38,
+            "end": 33.0,
+            "probability": 0.9964494903882345
+          },
+          {
+            "word": " contigo.",
+            "start": 33.0,
+            "end": 33.46,
+            "probability": 0.9981261491775513
+          }
+        ]
+      }
+    ],
+    "text": "Mezcla vaselina con bicarbonato de sodio y no vas a poder creerlo, las farmacias no quieren que sepas esto. Una cucharadita de vaselina, una cucharadita de miel, de una a dos cucharaditas de bicarbonato de sodio y una cucharadita de aceite de coco en un tazón. Mezcla durante un minuto, aplícalo en tu cara, déjalo por 15 minutos, enjuaga con agua tibia, esto elimina la piel muerta, aclara tu rostro, desvanece manchas y te da un brillo natural. Comenta libro y te enviaré mi antigua Biblia de sanación. Pero tienes que seguirme o no podré comunicarme contigo."
+  },
+  "alignment": {
+    "status": "NOT_REQUESTED",
+    "backend": null
+  },
+  "params": {
+    "timeline_fps": 5,
+    "scene_threshold": 0.2,
+    "model": "small",
+    "language": "es",
+    "device": "cpu",
+    "compute_type": "int8",
+    "cpu_threads": 4,
+    "jobs": 4,
+    "alignment": "none",
+    "align_model": null,
+    "word_timestamps": true,
+    "no_audio": false,
+    "allow_no_audio": false,
+    "max_frames": 20000,
+    "command_timeout": 300
+  },
+  "environment": {
+    "os": "macOS-27.0.1-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.15",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "whisperx": "3.8.6",
+      "ctranslate2": "4.8.2",
+      "Pillow": "12.3.0",
+      "av": "18.0.0",
+      "torch": "2.8.0",
+      "torchaudio": "2.8.0"
+    },
+    "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+    "ffprobe": "/opt/homebrew/bin/ffprobe"
+  },
+  "errors": [],
+  "coverage": {
+    "source_duration_s": 33.689297,
+    "sample_interval_s": 0.2,
+    "timeline_count": 168,
+    "timestamp_basis": "fps_filter_sampling_grid",
+    "visual_review_performed": false
+  },
+  "elapsed_seconds": 27.766
+}

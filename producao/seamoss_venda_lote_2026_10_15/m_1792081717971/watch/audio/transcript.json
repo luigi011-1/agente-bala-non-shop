@@ -1,0 +1,760 @@
+[
+  {
+    "start": 0.0,
+    "end": 2.76,
+    "text": "Put cinnamon on a banana and just watch what happens.",
+    "words": [
+      {
+        "word": " Put",
+        "start": 0.0,
+        "end": 0.12,
+        "probability": 0.9092184901237488
+      },
+      {
+        "word": " cinnamon",
+        "start": 0.12,
+        "end": 0.46,
+        "probability": 0.9812431931495667
+      },
+      {
+        "word": " on",
+        "start": 0.46,
+        "end": 0.82,
+        "probability": 0.9980880618095398
+      },
+      {
+        "word": " a",
+        "start": 0.82,
+        "end": 0.94,
+        "probability": 0.9962618947029114
+      },
+      {
+        "word": " banana",
+        "start": 0.94,
+        "end": 1.28,
+        "probability": 0.9989719390869141
+      },
+      {
+        "word": " and",
+        "start": 1.28,
+        "end": 1.66,
+        "probability": 0.858622133731842
+      },
+      {
+        "word": " just",
+        "start": 1.66,
+        "end": 1.82,
+        "probability": 0.9916459918022156
+      },
+      {
+        "word": " watch",
+        "start": 1.82,
+        "end": 2.12,
+        "probability": 0.9956464171409607
+      },
+      {
+        "word": " what",
+        "start": 2.12,
+        "end": 2.32,
+        "probability": 0.9991372227668762
+      },
+      {
+        "word": " happens.",
+        "start": 2.32,
+        "end": 2.76,
+        "probability": 0.9990703463554382
+      }
+    ]
+  },
+  {
+    "start": 3.74,
+    "end": 5.94,
+    "text": "Big Pharma does not want you to know this",
+    "words": [
+      {
+        "word": " Big",
+        "start": 3.74,
+        "end": 3.84,
+        "probability": 0.9910249710083008
+      },
+      {
+        "word": " Pharma",
+        "start": 3.84,
+        "end": 4.18,
+        "probability": 0.9403280019760132
+      },
+      {
+        "word": " does",
+        "start": 4.18,
+        "end": 4.48,
+        "probability": 0.9887203574180603
+      },
+      {
+        "word": " not",
+        "start": 4.48,
+        "end": 4.78,
+        "probability": 0.9963249564170837
+      },
+      {
+        "word": " want",
+        "start": 4.78,
+        "end": 5.02,
+        "probability": 0.9971641898155212
+      },
+      {
+        "word": " you",
+        "start": 5.02,
+        "end": 5.2,
+        "probability": 0.9986421465873718
+      },
+      {
+        "word": " to",
+        "start": 5.2,
+        "end": 5.32,
+        "probability": 0.9979841709136963
+      },
+      {
+        "word": " know",
+        "start": 5.32,
+        "end": 5.5,
+        "probability": 0.998593270778656
+      },
+      {
+        "word": " this",
+        "start": 5.5,
+        "end": 5.94,
+        "probability": 0.9992141723632812
+      }
+    ]
+  },
+  {
+    "start": 6.54,
+    "end": 9.2,
+    "text": "because they would lose billions of dollars overnight.",
+    "words": [
+      {
+        "word": " because",
+        "start": 6.54,
+        "end": 6.8,
+        "probability": 0.581938624382019
+      },
+      {
+        "word": " they",
+        "start": 6.8,
+        "end": 7.0,
+        "probability": 0.9988270401954651
+      },
+      {
+        "word": " would",
+        "start": 7.0,
+        "end": 7.18,
+        "probability": 0.9912497997283936
+      },
+      {
+        "word": " lose",
+        "start": 7.18,
+        "end": 7.48,
+        "probability": 0.9931483864784241
+      },
+      {
+        "word": " billions",
+        "start": 7.48,
+        "end": 7.92,
+        "probability": 0.9984166622161865
+      },
+      {
+        "word": " of",
+        "start": 7.92,
+        "end": 8.28,
+        "probability": 0.9995293617248535
+      },
+      {
+        "word": " dollars",
+        "start": 8.28,
+        "end": 8.66,
+        "probability": 0.9995574355125427
+      },
+      {
+        "word": " overnight.",
+        "start": 8.66,
+        "end": 9.2,
+        "probability": 0.951393187046051
+      }
+    ]
+  },
+  {
+    "start": 9.56,
+    "end": 11.14,
+    "text": "Add one fresh banana to a blender,",
+    "words": [
+      {
+        "word": " Add",
+        "start": 9.56,
+        "end": 9.72,
+        "probability": 0.9830242395401001
+      },
+      {
+        "word": " one",
+        "start": 9.72,
+        "end": 9.96,
+        "probability": 0.9327760338783264
+      },
+      {
+        "word": " fresh",
+        "start": 9.96,
+        "end": 10.22,
+        "probability": 0.998561680316925
+      },
+      {
+        "word": " banana",
+        "start": 10.22,
+        "end": 10.54,
+        "probability": 0.9989606142044067
+      },
+      {
+        "word": " to",
+        "start": 10.54,
+        "end": 10.78,
+        "probability": 0.9988645315170288
+      },
+      {
+        "word": " a",
+        "start": 10.78,
+        "end": 10.9,
+        "probability": 0.9977229237556458
+      },
+      {
+        "word": " blender,",
+        "start": 10.9,
+        "end": 11.14,
+        "probability": 0.9986642599105835
+      }
+    ]
+  },
+  {
+    "start": 11.5,
+    "end": 14.04,
+    "text": "a teaspoon of cinnamon, squeeze in half a lemon,",
+    "words": [
+      {
+        "word": " a",
+        "start": 11.5,
+        "end": 11.62,
+        "probability": 0.9942715167999268
+      },
+      {
+        "word": " teaspoon",
+        "start": 11.62,
+        "end": 11.88,
+        "probability": 0.997128427028656
+      },
+      {
+        "word": " of",
+        "start": 11.88,
+        "end": 12.22,
+        "probability": 0.9991864562034607
+      },
+      {
+        "word": " cinnamon,",
+        "start": 12.22,
+        "end": 12.62,
+        "probability": 0.9991986155509949
+      },
+      {
+        "word": " squeeze",
+        "start": 13.0,
+        "end": 13.16,
+        "probability": 0.9978694915771484
+      },
+      {
+        "word": " in",
+        "start": 13.16,
+        "end": 13.4,
+        "probability": 0.9986696243286133
+      },
+      {
+        "word": " half",
+        "start": 13.4,
+        "end": 13.66,
+        "probability": 0.9663383364677429
+      },
+      {
+        "word": " a",
+        "start": 13.66,
+        "end": 13.84,
+        "probability": 0.9693302512168884
+      },
+      {
+        "word": " lemon,",
+        "start": 13.84,
+        "end": 14.04,
+        "probability": 0.9978501796722412
+      }
+    ]
+  },
+  {
+    "start": 14.36,
+    "end": 15.54,
+    "text": "add a glass of water,",
+    "words": [
+      {
+        "word": " add",
+        "start": 14.36,
+        "end": 14.7,
+        "probability": 0.9978711605072021
+      },
+      {
+        "word": " a",
+        "start": 14.7,
+        "end": 14.86,
+        "probability": 0.9990682005882263
+      },
+      {
+        "word": " glass",
+        "start": 14.86,
+        "end": 15.04,
+        "probability": 0.9994691014289856
+      },
+      {
+        "word": " of",
+        "start": 15.04,
+        "end": 15.24,
+        "probability": 0.9960164427757263
+      },
+      {
+        "word": " water,",
+        "start": 15.24,
+        "end": 15.54,
+        "probability": 0.999896764755249
+      }
+    ]
+  },
+  {
+    "start": 15.78,
+    "end": 17.86,
+    "text": "and blend this whole thing until it is smooth.",
+    "words": [
+      {
+        "word": " and",
+        "start": 15.78,
+        "end": 16.02,
+        "probability": 0.9980018734931946
+      },
+      {
+        "word": " blend",
+        "start": 16.02,
+        "end": 16.22,
+        "probability": 0.9990442395210266
+      },
+      {
+        "word": " this",
+        "start": 16.22,
+        "end": 16.44,
+        "probability": 0.9970248341560364
+      },
+      {
+        "word": " whole",
+        "start": 16.44,
+        "end": 16.68,
+        "probability": 0.9991102814674377
+      },
+      {
+        "word": " thing",
+        "start": 16.68,
+        "end": 16.98,
+        "probability": 0.9982934594154358
+      },
+      {
+        "word": " until",
+        "start": 16.98,
+        "end": 17.3,
+        "probability": 0.9906209707260132
+      },
+      {
+        "word": " it",
+        "start": 17.3,
+        "end": 17.44,
+        "probability": 0.9986473917961121
+      },
+      {
+        "word": " is",
+        "start": 17.44,
+        "end": 17.6,
+        "probability": 0.996301531791687
+      },
+      {
+        "word": " smooth.",
+        "start": 17.6,
+        "end": 17.86,
+        "probability": 0.9769443869590759
+      }
+    ]
+  },
+  {
+    "start": 18.18,
+    "end": 20.94,
+    "text": "This smoothie hits your insides like a reset button",
+    "words": [
+      {
+        "word": " This",
+        "start": 18.18,
+        "end": 18.4,
+        "probability": 0.9005576372146606
+      },
+      {
+        "word": " smoothie",
+        "start": 18.4,
+        "end": 18.88,
+        "probability": 0.9807518720626831
+      },
+      {
+        "word": " hits",
+        "start": 18.88,
+        "end": 19.04,
+        "probability": 0.8949046730995178
+      },
+      {
+        "word": " your",
+        "start": 19.04,
+        "end": 19.24,
+        "probability": 0.9973975419998169
+      },
+      {
+        "word": " insides",
+        "start": 19.24,
+        "end": 19.8,
+        "probability": 0.9964178204536438
+      },
+      {
+        "word": " like",
+        "start": 19.8,
+        "end": 20.02,
+        "probability": 0.9850614666938782
+      },
+      {
+        "word": " a",
+        "start": 20.02,
+        "end": 20.16,
+        "probability": 0.9954694509506226
+      },
+      {
+        "word": " reset",
+        "start": 20.16,
+        "end": 20.58,
+        "probability": 0.9975550770759583
+      },
+      {
+        "word": " button",
+        "start": 20.58,
+        "end": 20.94,
+        "probability": 0.9977491497993469
+      }
+    ]
+  },
+  {
+    "start": 20.94,
+    "end": 22.14,
+    "text": "you never knew existed.",
+    "words": [
+      {
+        "word": " you",
+        "start": 20.94,
+        "end": 21.12,
+        "probability": 0.980933666229248
+      },
+      {
+        "word": " never",
+        "start": 21.12,
+        "end": 21.4,
+        "probability": 0.9995324611663818
+      },
+      {
+        "word": " knew",
+        "start": 21.4,
+        "end": 21.6,
+        "probability": 0.9959854483604431
+      },
+      {
+        "word": " existed.",
+        "start": 21.6,
+        "end": 22.14,
+        "probability": 0.999327540397644
+      }
+    ]
+  },
+  {
+    "start": 22.68,
+    "end": 25.68,
+    "text": "It calms inflammation, detoxes your liver,",
+    "words": [
+      {
+        "word": " It",
+        "start": 22.68,
+        "end": 22.92,
+        "probability": 0.9983394145965576
+      },
+      {
+        "word": " calms",
+        "start": 22.92,
+        "end": 23.34,
+        "probability": 0.9962762594223022
+      },
+      {
+        "word": " inflammation,",
+        "start": 23.34,
+        "end": 24.0,
+        "probability": 0.9970613121986389
+      },
+      {
+        "word": " detoxes",
+        "start": 24.52,
+        "end": 25.24,
+        "probability": 0.9910336136817932
+      },
+      {
+        "word": " your",
+        "start": 25.24,
+        "end": 25.38,
+        "probability": 0.9986864924430847
+      },
+      {
+        "word": " liver,",
+        "start": 25.38,
+        "end": 25.68,
+        "probability": 0.9997487664222717
+      }
+    ]
+  },
+  {
+    "start": 25.96,
+    "end": 27.68,
+    "text": "and keeps your cholesterol in check.",
+    "words": [
+      {
+        "word": " and",
+        "start": 25.96,
+        "end": 26.18,
+        "probability": 0.9995108842849731
+      },
+      {
+        "word": " keeps",
+        "start": 26.18,
+        "end": 26.4,
+        "probability": 0.994317352771759
+      },
+      {
+        "word": " your",
+        "start": 26.4,
+        "end": 26.56,
+        "probability": 0.9977189898490906
+      },
+      {
+        "word": " cholesterol",
+        "start": 26.56,
+        "end": 27.02,
+        "probability": 0.9985585808753967
+      },
+      {
+        "word": " in",
+        "start": 27.02,
+        "end": 27.42,
+        "probability": 0.9984573125839233
+      },
+      {
+        "word": " check.",
+        "start": 27.42,
+        "end": 27.68,
+        "probability": 0.9979897737503052
+      }
+    ]
+  },
+  {
+    "start": 27.68,
+    "end": 29.92,
+    "text": "If you want more simple weight loss recipes",
+    "words": [
+      {
+        "word": " If",
+        "start": 27.68,
+        "end": 28.02,
+        "probability": 0.8176218271255493
+      },
+      {
+        "word": " you",
+        "start": 28.02,
+        "end": 28.14,
+        "probability": 0.9985005855560303
+      },
+      {
+        "word": " want",
+        "start": 28.14,
+        "end": 28.3,
+        "probability": 0.9976980090141296
+      },
+      {
+        "word": " more",
+        "start": 28.3,
+        "end": 28.52,
+        "probability": 0.9928212761878967
+      },
+      {
+        "word": " simple",
+        "start": 28.52,
+        "end": 28.92,
+        "probability": 0.9834837317466736
+      },
+      {
+        "word": " weight",
+        "start": 28.92,
+        "end": 29.14,
+        "probability": 0.9465867280960083
+      },
+      {
+        "word": " loss",
+        "start": 29.14,
+        "end": 29.4,
+        "probability": 0.900933563709259
+      },
+      {
+        "word": " recipes",
+        "start": 29.4,
+        "end": 29.92,
+        "probability": 0.9946913123130798
+      }
+    ]
+  },
+  {
+    "start": 29.92,
+    "end": 32.32,
+    "text": "that kill your cravings in a healthy way,",
+    "words": [
+      {
+        "word": " that",
+        "start": 29.92,
+        "end": 30.48,
+        "probability": 0.9349269866943359
+      },
+      {
+        "word": " kill",
+        "start": 30.48,
+        "end": 30.72,
+        "probability": 0.9913120865821838
+      },
+      {
+        "word": " your",
+        "start": 30.72,
+        "end": 30.92,
+        "probability": 0.990474283695221
+      },
+      {
+        "word": " cravings",
+        "start": 30.92,
+        "end": 31.34,
+        "probability": 0.9962798058986664
+      },
+      {
+        "word": " in",
+        "start": 31.34,
+        "end": 31.5,
+        "probability": 0.9931480288505554
+      },
+      {
+        "word": " a",
+        "start": 31.5,
+        "end": 31.64,
+        "probability": 0.9968076944351196
+      },
+      {
+        "word": " healthy",
+        "start": 31.64,
+        "end": 31.86,
+        "probability": 0.9968165755271912
+      },
+      {
+        "word": " way,",
+        "start": 31.86,
+        "end": 32.32,
+        "probability": 0.998672366142273
+      }
+    ]
+  },
+  {
+    "start": 32.72,
+    "end": 35.34,
+    "text": "comment yes and follow me so you don't miss the next one.",
+    "words": [
+      {
+        "word": " comment",
+        "start": 32.72,
+        "end": 32.94,
+        "probability": 0.9841104745864868
+      },
+      {
+        "word": " yes",
+        "start": 32.94,
+        "end": 33.28,
+        "probability": 0.4219279885292053
+      },
+      {
+        "word": " and",
+        "start": 33.28,
+        "end": 33.74,
+        "probability": 0.9359681606292725
+      },
+      {
+        "word": " follow",
+        "start": 33.74,
+        "end": 33.98,
+        "probability": 0.9974284768104553
+      },
+      {
+        "word": " me",
+        "start": 33.98,
+        "end": 34.22,
+        "probability": 0.9988962411880493
+      },
+      {
+        "word": " so",
+        "start": 34.22,
+        "end": 34.44,
+        "probability": 0.9434252381324768
+      },
+      {
+        "word": " you",
+        "start": 34.44,
+        "end": 34.54,
+        "probability": 0.990528404712677
+      },
+      {
+        "word": " don't",
+        "start": 34.54,
+        "end": 34.66,
+        "probability": 0.9955812692642212
+      },
+      {
+        "word": " miss",
+        "start": 34.66,
+        "end": 34.8,
+        "probability": 0.9991212487220764
+      },
+      {
+        "word": " the",
+        "start": 34.8,
+        "end": 34.96,
+        "probability": 0.9977147579193115
+      },
+      {
+        "word": " next",
+        "start": 34.96,
+        "end": 35.14,
+        "probability": 0.9993933439254761
+      },
+      {
+        "word": " one.",
+        "start": 35.14,
+        "end": 35.34,
+        "probability": 0.9967092275619507
+      }
+    ]
+  }
+]

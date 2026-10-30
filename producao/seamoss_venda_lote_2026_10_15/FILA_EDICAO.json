@@ -1,0 +1,139 @@
+{
+  "batch": "seamoss_venda_lote_2026_10_15",
+  "parallel": 3,
+  "execution": "batches_of_3",
+  "items": [
+    {
+      "order": 1,
+      "model": "V01",
+      "avatar": "cassidy",
+      "production": "producao/cassidy_seamoss_crosta_limao",
+      "nome": "v01_crosta_cassidy",
+      "takes_folder": "~/Desktop/seamoss_venda_lote_2026_10_15/01_V01_cassidy",
+      "take_count": 17,
+      "takes_status": "NOT_RECEIVED",
+      "editing_status": "PENDING"
+    },
+    {
+      "order": 2,
+      "model": "V01",
+      "avatar": "marshall",
+      "production": "producao/marshall_seamoss_crosta_limao",
+      "nome": "v01_crosta_marshall",
+      "takes_folder": "~/Desktop/seamoss_venda_lote_2026_10_15/02_V01_marshall",
+      "take_count": 17,
+      "takes_status": "NOT_RECEIVED",
+      "editing_status": "PENDING"
+    },
+    {
+      "order": 3,
+      "model": "V01",
+      "avatar": "meredith",
+      "production": "producao/meredith_seamoss_crosta_limao",
+      "nome": "v01_crosta_meredith",
+      "takes_folder": "~/Desktop/seamoss_venda_lote_2026_10_15/03_V01_meredith",
+      "take_count": 17,
+      "takes_status": "NOT_RECEIVED",
+      "editing_status": "PENDING"
+    },
+    {
+      "order": 4,
+      "model": "V02",
+      "avatar": "cassidy",
+      "production": "producao/cassidy_seamoss_intestino_chia",
+      "nome": "v02_intestino_cassidy",
+      "takes_folder": "~/Desktop/seamoss_venda_lote_2026_10_15/04_V02_cassidy",
+      "take_count": 20,
+      "takes_status": "NOT_RECEIVED",
+      "editing_status": "PENDING"
+    },
+    {
+      "order": 5,
+      "model": "V02",
+      "avatar": "marshall",
+      "production": "producao/marshall_seamoss_intestino_chia",
+      "nome": "v02_intestino_marshall",
+      "takes_folder": "~/Desktop/seamoss_venda_lote_2026_10_15/05_V02_marshall",
+      "take_count": 20,
+      "takes_status": "NOT_RECEIVED",
+      "editing_status": "PENDING"
+    },
+    {
+      "order": 6,
+      "model": "V02",
+      "avatar": "meredith",
+      "production": "producao/meredith_seamoss_intestino_chia",
+      "nome": "v02_intestino_meredith",
+      "takes_folder": "~/Desktop/seamoss_venda_lote_2026_10_15/06_V02_meredith",
+      "take_count": 20,
+      "takes_status": "NOT_RECEIVED",
+      "editing_status": "PENDING"
+    },
+    {
+      "order": 7,
+      "model": "V03",
+      "avatar": "cassidy",
+      "production": "producao/cassidy_seamoss_banana_canela",
+      "nome": "v03_banana_cassidy",
+      "takes_folder": "~/Desktop/seamoss_venda_lote_2026_10_15/07_V03_cassidy",
+      "take_count": 16,
+      "takes_status": "NOT_RECEIVED",
+      "editing_status": "PENDING"
+    },
+    {
+      "order": 8,
+      "model": "V03",
+      "avatar": "marshall",
+      "production": "producao/marshall_seamoss_banana_canela",
+      "nome": "v03_banana_marshall",
+      "takes_folder": "~/Desktop/seamoss_venda_lote_2026_10_15/08_V03_marshall",
+      "take_count": 16,
+      "takes_status": "NOT_RECEIVED",
+      "editing_status": "PENDING"
+    },
+    {
+      "order": 9,
+      "model": "V03",
+      "avatar": "meredith",
+      "production": "producao/meredith_seamoss_banana_canela",
+      "nome": "v03_banana_meredith",
+      "takes_folder": "~/Desktop/seamoss_venda_lote_2026_10_15/09_V03_meredith",
+      "take_count": 16,
+      "takes_status": "NOT_RECEIVED",
+      "editing_status": "PENDING"
+    },
+    {
+      "order": 10,
+      "model": "V04",
+      "avatar": "cassidy",
+      "production": "producao/cassidy_seamoss_mascara_vaselina",
+      "nome": "v04_mascara_cassidy",
+      "takes_folder": "~/Desktop/seamoss_venda_lote_2026_10_15/10_V04_cassidy",
+      "take_count": 13,
+      "takes_status": "NOT_RECEIVED",
+      "editing_status": "PENDING"
+    },
+    {
+      "order": 11,
+      "model": "V04",
+      "avatar": "marshall",
+      "production": "producao/marshall_seamoss_mascara_vaselina",
+      "nome": "v04_mascara_marshall",
+      "takes_folder": "~/Desktop/seamoss_venda_lote_2026_10_15/11_V04_marshall",
+      "take_count": 13,
+      "takes_status": "NOT_RECEIVED",
+      "editing_status": "PENDING"
+    },
+    {
+      "order": 12,
+      "model": "V04",
+      "avatar": "meredith",
+      "production": "producao/meredith_seamoss_mascara_vaselina",
+      "nome": "v04_mascara_meredith",
+      "takes_folder": "~/Desktop/seamoss_venda_lote_2026_10_15/12_V04_meredith",
+      "take_count": 13,
+      "takes_status": "NOT_RECEIVED",
+      "editing_status": "PENDING"
+    }
+  ]
+}

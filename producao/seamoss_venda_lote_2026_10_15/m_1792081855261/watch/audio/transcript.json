@@ -1,0 +1,802 @@
+[
+  {
+    "start": 0.0,
+    "end": 5.94,
+    "text": "Dejen de tomar agua con limón, no es suficiente, puedes tomar agua con limón, agregarle vinagre",
+    "words": [
+      {
+        "word": " Dejen",
+        "start": 0.0,
+        "end": 0.26,
+        "probability": 0.6824290752410889
+      },
+      {
+        "word": " de",
+        "start": 0.26,
+        "end": 0.42,
+        "probability": 0.9483570456504822
+      },
+      {
+        "word": " tomar",
+        "start": 0.42,
+        "end": 0.62,
+        "probability": 0.9693508148193359
+      },
+      {
+        "word": " agua",
+        "start": 0.62,
+        "end": 0.88,
+        "probability": 0.9879429936408997
+      },
+      {
+        "word": " con",
+        "start": 0.88,
+        "end": 1.06,
+        "probability": 0.9855136871337891
+      },
+      {
+        "word": " limón,",
+        "start": 1.06,
+        "end": 1.42,
+        "probability": 0.9811486005783081
+      },
+      {
+        "word": " no",
+        "start": 1.56,
+        "end": 1.76,
+        "probability": 0.9364742040634155
+      },
+      {
+        "word": " es",
+        "start": 1.76,
+        "end": 1.92,
+        "probability": 0.9949352145195007
+      },
+      {
+        "word": " suficiente,",
+        "start": 1.92,
+        "end": 2.36,
+        "probability": 0.9909433722496033
+      },
+      {
+        "word": " puedes",
+        "start": 2.66,
+        "end": 2.84,
+        "probability": 0.9191806316375732
+      },
+      {
+        "word": " tomar",
+        "start": 2.84,
+        "end": 3.26,
+        "probability": 0.9852674007415771
+      },
+      {
+        "word": " agua",
+        "start": 3.26,
+        "end": 3.88,
+        "probability": 0.9739351868629456
+      },
+      {
+        "word": " con",
+        "start": 3.88,
+        "end": 4.12,
+        "probability": 0.9831863641738892
+      },
+      {
+        "word": " limón,",
+        "start": 4.12,
+        "end": 4.62,
+        "probability": 0.9913715422153473
+      },
+      {
+        "word": " agregarle",
+        "start": 4.72,
+        "end": 5.36,
+        "probability": 0.9805751045544943
+      },
+      {
+        "word": " vinagre",
+        "start": 5.36,
+        "end": 5.94,
+        "probability": 0.9729188084602356
+      }
+    ]
+  },
+  {
+    "start": 5.94,
+    "end": 11.4,
+    "text": "de manzana, fibra en polvo lo que sea y no va a limpiar, lo que lleva años acumulado adentro,",
+    "words": [
+      {
+        "word": " de",
+        "start": 5.94,
+        "end": 6.06,
+        "probability": 0.9935423135757446
+      },
+      {
+        "word": " manzana,",
+        "start": 6.06,
+        "end": 6.56,
+        "probability": 0.9846177299817404
+      },
+      {
+        "word": " fibra",
+        "start": 6.74,
+        "end": 6.96,
+        "probability": 0.6916492730379105
+      },
+      {
+        "word": " en",
+        "start": 6.96,
+        "end": 7.08,
+        "probability": 0.9738022089004517
+      },
+      {
+        "word": " polvo",
+        "start": 7.08,
+        "end": 7.44,
+        "probability": 0.998005598783493
+      },
+      {
+        "word": " lo",
+        "start": 7.44,
+        "end": 7.58,
+        "probability": 0.39717549085617065
+      },
+      {
+        "word": " que",
+        "start": 7.58,
+        "end": 7.72,
+        "probability": 0.9943142533302307
+      },
+      {
+        "word": " sea",
+        "start": 7.72,
+        "end": 7.96,
+        "probability": 0.994724690914154
+      },
+      {
+        "word": " y",
+        "start": 7.96,
+        "end": 8.42,
+        "probability": 0.7032540440559387
+      },
+      {
+        "word": " no",
+        "start": 8.42,
+        "end": 8.58,
+        "probability": 0.9883236885070801
+      },
+      {
+        "word": " va",
+        "start": 8.58,
+        "end": 8.7,
+        "probability": 0.9945389628410339
+      },
+      {
+        "word": " a",
+        "start": 8.7,
+        "end": 8.78,
+        "probability": 0.9909675717353821
+      },
+      {
+        "word": " limpiar,",
+        "start": 8.78,
+        "end": 9.16,
+        "probability": 0.9897044003009796
+      },
+      {
+        "word": " lo",
+        "start": 9.42,
+        "end": 9.54,
+        "probability": 0.9858270287513733
+      },
+      {
+        "word": " que",
+        "start": 9.54,
+        "end": 9.68,
+        "probability": 0.9936675429344177
+      },
+      {
+        "word": " lleva",
+        "start": 9.68,
+        "end": 9.9,
+        "probability": 0.9934245347976685
+      },
+      {
+        "word": " años",
+        "start": 9.9,
+        "end": 10.3,
+        "probability": 0.9815621972084045
+      },
+      {
+        "word": " acumulado",
+        "start": 10.3,
+        "end": 10.9,
+        "probability": 0.9918739199638367
+      },
+      {
+        "word": " adentro,",
+        "start": 10.9,
+        "end": 11.4,
+        "probability": 0.9938557744026184
+      }
+    ]
+  },
+  {
+    "start": 11.52,
+    "end": 17.74,
+    "text": "déjenme mostrarles, que sí funciona. Pongan una olla con agua, piquen un limón fresco",
+    "words": [
+      {
+        "word": " déjenme",
+        "start": 11.52,
+        "end": 11.78,
+        "probability": 0.8998863697052002
+      },
+      {
+        "word": " mostrarles,",
+        "start": 11.78,
+        "end": 12.38,
+        "probability": 0.9940267205238342
+      },
+      {
+        "word": " que",
+        "start": 13.1,
+        "end": 13.26,
+        "probability": 0.6541839241981506
+      },
+      {
+        "word": " sí",
+        "start": 13.26,
+        "end": 13.48,
+        "probability": 0.5551748871803284
+      },
+      {
+        "word": " funciona.",
+        "start": 13.48,
+        "end": 14.0,
+        "probability": 0.9901238083839417
+      },
+      {
+        "word": " Pongan",
+        "start": 14.84,
+        "end": 15.12,
+        "probability": 0.8826152682304382
+      },
+      {
+        "word": " una",
+        "start": 15.12,
+        "end": 15.32,
+        "probability": 0.9943357110023499
+      },
+      {
+        "word": " olla",
+        "start": 15.32,
+        "end": 15.52,
+        "probability": 0.9868656992912292
+      },
+      {
+        "word": " con",
+        "start": 15.52,
+        "end": 15.78,
+        "probability": 0.9954556226730347
+      },
+      {
+        "word": " agua,",
+        "start": 15.78,
+        "end": 16.04,
+        "probability": 0.9995731711387634
+      },
+      {
+        "word": " piquen",
+        "start": 16.42,
+        "end": 16.68,
+        "probability": 0.9790627161661783
+      },
+      {
+        "word": " un",
+        "start": 16.68,
+        "end": 16.94,
+        "probability": 0.9810209274291992
+      },
+      {
+        "word": " limón",
+        "start": 16.94,
+        "end": 17.2,
+        "probability": 0.9968996047973633
+      },
+      {
+        "word": " fresco",
+        "start": 17.2,
+        "end": 17.74,
+        "probability": 0.9959810078144073
+      }
+    ]
+  },
+  {
+    "start": 17.74,
+    "end": 22.5,
+    "text": "y échenlo en el agua hirviendo. Agreganle una cucharadita de chia, una de cúrcuma,",
+    "words": [
+      {
+        "word": " y",
+        "start": 17.74,
+        "end": 18.32,
+        "probability": 0.9455732703208923
+      },
+      {
+        "word": " échenlo",
+        "start": 18.32,
+        "end": 18.74,
+        "probability": 0.7591367165247599
+      },
+      {
+        "word": " en",
+        "start": 18.74,
+        "end": 18.94,
+        "probability": 0.9874414205551147
+      },
+      {
+        "word": " el",
+        "start": 18.94,
+        "end": 19.06,
+        "probability": 0.9981347322463989
+      },
+      {
+        "word": " agua",
+        "start": 19.06,
+        "end": 19.22,
+        "probability": 0.9995761513710022
+      },
+      {
+        "word": " hirviendo.",
+        "start": 19.22,
+        "end": 19.68,
+        "probability": 0.9878574907779694
+      },
+      {
+        "word": " Agreganle",
+        "start": 19.88,
+        "end": 20.36,
+        "probability": 0.5875169336795807
+      },
+      {
+        "word": " una",
+        "start": 20.36,
+        "end": 20.52,
+        "probability": 0.9450201988220215
+      },
+      {
+        "word": " cucharadita",
+        "start": 20.52,
+        "end": 21.1,
+        "probability": 0.9931214451789856
+      },
+      {
+        "word": " de",
+        "start": 21.1,
+        "end": 21.22,
+        "probability": 0.9937683343887329
+      },
+      {
+        "word": " chia,",
+        "start": 21.22,
+        "end": 21.48,
+        "probability": 0.6012731194496155
+      },
+      {
+        "word": " una",
+        "start": 21.8,
+        "end": 21.9,
+        "probability": 0.989055871963501
+      },
+      {
+        "word": " de",
+        "start": 21.9,
+        "end": 22.06,
+        "probability": 0.9816229343414307
+      },
+      {
+        "word": " cúrcuma,",
+        "start": 22.06,
+        "end": 22.5,
+        "probability": 0.9569526314735413
+      }
+    ]
+  },
+  {
+    "start": 22.86,
+    "end": 27.16,
+    "text": "una de jengibre natural y terminen con una pizca de pimienta negra. Dejen que hierva",
+    "words": [
+      {
+        "word": " una",
+        "start": 22.86,
+        "end": 22.96,
+        "probability": 0.9941316246986389
+      },
+      {
+        "word": " de",
+        "start": 22.96,
+        "end": 23.08,
+        "probability": 0.9965839385986328
+      },
+      {
+        "word": " jengibre",
+        "start": 23.08,
+        "end": 23.56,
+        "probability": 0.9315023571252823
+      },
+      {
+        "word": " natural",
+        "start": 23.56,
+        "end": 23.96,
+        "probability": 0.9901713728904724
+      },
+      {
+        "word": " y",
+        "start": 23.96,
+        "end": 24.44,
+        "probability": 0.8424908518791199
+      },
+      {
+        "word": " terminen",
+        "start": 24.44,
+        "end": 24.8,
+        "probability": 0.9046503007411957
+      },
+      {
+        "word": " con",
+        "start": 24.8,
+        "end": 25.0,
+        "probability": 0.9974479675292969
+      },
+      {
+        "word": " una",
+        "start": 25.0,
+        "end": 25.16,
+        "probability": 0.976289689540863
+      },
+      {
+        "word": " pizca",
+        "start": 25.16,
+        "end": 25.54,
+        "probability": 0.9204148848851522
+      },
+      {
+        "word": " de",
+        "start": 25.54,
+        "end": 25.66,
+        "probability": 0.998282790184021
+      },
+      {
+        "word": " pimienta",
+        "start": 25.66,
+        "end": 26.06,
+        "probability": 0.9864427049954733
+      },
+      {
+        "word": " negra.",
+        "start": 26.06,
+        "end": 26.4,
+        "probability": 0.9975896775722504
+      },
+      {
+        "word": " Dejen",
+        "start": 26.6,
+        "end": 26.72,
+        "probability": 0.9917439520359039
+      },
+      {
+        "word": " que",
+        "start": 26.72,
+        "end": 26.88,
+        "probability": 0.9926262497901917
+      },
+      {
+        "word": " hierva",
+        "start": 26.88,
+        "end": 27.16,
+        "probability": 0.9396101832389832
+      }
+    ]
+  },
+  {
+    "start": 27.16,
+    "end": 32.56,
+    "text": "10 minutos y cuélenlo. Esto despierta todo su sistema, la inflamación desaparece, el intestino",
+    "words": [
+      {
+        "word": " 10",
+        "start": 27.16,
+        "end": 27.38,
+        "probability": 0.48847728967666626
+      },
+      {
+        "word": " minutos",
+        "start": 27.38,
+        "end": 27.78,
+        "probability": 0.9730467796325684
+      },
+      {
+        "word": " y",
+        "start": 27.78,
+        "end": 28.16,
+        "probability": 0.9793850183486938
+      },
+      {
+        "word": " cuélenlo.",
+        "start": 28.16,
+        "end": 28.66,
+        "probability": 0.9259077310562134
+      },
+      {
+        "word": " Esto",
+        "start": 28.74,
+        "end": 28.9,
+        "probability": 0.955025315284729
+      },
+      {
+        "word": " despierta",
+        "start": 28.9,
+        "end": 29.46,
+        "probability": 0.9773202141125997
+      },
+      {
+        "word": " todo",
+        "start": 29.46,
+        "end": 29.68,
+        "probability": 0.9692019820213318
+      },
+      {
+        "word": " su",
+        "start": 29.68,
+        "end": 29.88,
+        "probability": 0.9889706373214722
+      },
+      {
+        "word": " sistema,",
+        "start": 29.88,
+        "end": 30.28,
+        "probability": 0.9973180890083313
+      },
+      {
+        "word": " la",
+        "start": 30.56,
+        "end": 30.6,
+        "probability": 0.9853107929229736
+      },
+      {
+        "word": " inflamación",
+        "start": 30.6,
+        "end": 31.2,
+        "probability": 0.9954785704612732
+      },
+      {
+        "word": " desaparece,",
+        "start": 31.2,
+        "end": 31.98,
+        "probability": 0.8772724270820618
+      },
+      {
+        "word": " el",
+        "start": 32.1,
+        "end": 32.12,
+        "probability": 0.996698260307312
+      },
+      {
+        "word": " intestino",
+        "start": 32.12,
+        "end": 32.56,
+        "probability": 0.9958783984184265
+      }
+    ]
+  },
+  {
+    "start": 32.56,
+    "end": 37.06,
+    "text": "se limpia de verdad y el cuerpo queda sintiéndose más ligero y mejor. Si quieren más recetas como",
+    "words": [
+      {
+        "word": " se",
+        "start": 32.56,
+        "end": 32.68,
+        "probability": 0.9990394711494446
+      },
+      {
+        "word": " limpia",
+        "start": 32.68,
+        "end": 33.04,
+        "probability": 0.9459786415100098
+      },
+      {
+        "word": " de",
+        "start": 33.04,
+        "end": 33.12,
+        "probability": 0.9969809651374817
+      },
+      {
+        "word": " verdad",
+        "start": 33.12,
+        "end": 33.36,
+        "probability": 0.997434675693512
+      },
+      {
+        "word": " y",
+        "start": 33.36,
+        "end": 33.68,
+        "probability": 0.819362461566925
+      },
+      {
+        "word": " el",
+        "start": 33.68,
+        "end": 33.76,
+        "probability": 0.9964706897735596
+      },
+      {
+        "word": " cuerpo",
+        "start": 33.76,
+        "end": 33.98,
+        "probability": 0.9997206330299377
+      },
+      {
+        "word": " queda",
+        "start": 33.98,
+        "end": 34.24,
+        "probability": 0.9773396849632263
+      },
+      {
+        "word": " sintiéndose",
+        "start": 34.24,
+        "end": 34.78,
+        "probability": 0.9954631477594376
+      },
+      {
+        "word": " más",
+        "start": 34.78,
+        "end": 34.96,
+        "probability": 0.9228849411010742
+      },
+      {
+        "word": " ligero",
+        "start": 34.96,
+        "end": 35.36,
+        "probability": 0.982186496257782
+      },
+      {
+        "word": " y",
+        "start": 35.36,
+        "end": 35.44,
+        "probability": 0.9948365688323975
+      },
+      {
+        "word": " mejor.",
+        "start": 35.44,
+        "end": 35.68,
+        "probability": 0.9991350769996643
+      },
+      {
+        "word": " Si",
+        "start": 35.9,
+        "end": 35.98,
+        "probability": 0.9868460893630981
+      },
+      {
+        "word": " quieren",
+        "start": 35.98,
+        "end": 36.2,
+        "probability": 0.995357096195221
+      },
+      {
+        "word": " más",
+        "start": 36.2,
+        "end": 36.4,
+        "probability": 0.9699351191520691
+      },
+      {
+        "word": " recetas",
+        "start": 36.4,
+        "end": 36.82,
+        "probability": 0.991049587726593
+      },
+      {
+        "word": " como",
+        "start": 36.82,
+        "end": 37.06,
+        "probability": 0.9864367842674255
+      }
+    ]
+  },
+  {
+    "start": 37.06,
+    "end": 41.92,
+    "text": "esta comente el libro abajo, pero primero asegúrense de seguirme para que pueda llegarles.",
+    "words": [
+      {
+        "word": " esta",
+        "start": 37.06,
+        "end": 37.38,
+        "probability": 0.6910334825515747
+      },
+      {
+        "word": " comente",
+        "start": 37.38,
+        "end": 38.0,
+        "probability": 0.4606008380651474
+      },
+      {
+        "word": " el",
+        "start": 38.0,
+        "end": 38.12,
+        "probability": 0.7664961218833923
+      },
+      {
+        "word": " libro",
+        "start": 38.12,
+        "end": 38.36,
+        "probability": 0.9944856762886047
+      },
+      {
+        "word": " abajo,",
+        "start": 38.36,
+        "end": 38.72,
+        "probability": 0.9836865067481995
+      },
+      {
+        "word": " pero",
+        "start": 38.86,
+        "end": 38.94,
+        "probability": 0.9603714346885681
+      },
+      {
+        "word": " primero",
+        "start": 38.94,
+        "end": 39.3,
+        "probability": 0.9897779822349548
+      },
+      {
+        "word": " asegúrense",
+        "start": 39.3,
+        "end": 39.94,
+        "probability": 0.9642950296401978
+      },
+      {
+        "word": " de",
+        "start": 39.94,
+        "end": 40.04,
+        "probability": 0.9981428384780884
+      },
+      {
+        "word": " seguirme",
+        "start": 40.04,
+        "end": 40.56,
+        "probability": 0.9943840205669403
+      },
+      {
+        "word": " para",
+        "start": 40.56,
+        "end": 40.98,
+        "probability": 0.9225369095802307
+      },
+      {
+        "word": " que",
+        "start": 40.98,
+        "end": 41.14,
+        "probability": 0.9963221549987793
+      },
+      {
+        "word": " pueda",
+        "start": 41.14,
+        "end": 41.36,
+        "probability": 0.990330696105957
+      },
+      {
+        "word": " llegarles.",
+        "start": 41.36,
+        "end": 41.92,
+        "probability": 0.9889950752258301
+      }
+    ]
+  }
+]

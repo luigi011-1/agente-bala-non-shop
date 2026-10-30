@@ -19,7 +19,14 @@ Regra do método puzzle: muda **uma** variável por vez — aqui, só o hook. Co
 4. Renderize cada variação como `<nome>_hook01.mp4`, `_hook02.mp4`… ao lado do original. Reencode só o necessário; o restante deve ficar visualmente idêntico.
 5. Confira cada saída com `ffprobe` (1080x1920, mesma duração do original ±0,05s) e um frame em 1,0s.
 
+## Para onde as variações vão (aula 002, 2026-10-22)
+O Facebook reconhece o CONTEÚDO, não o arquivo: reeditar ou trocar só a abertura conta como o mesmo vídeo.
+As versões `_hookNN` servem para testar abertura **na mesma página** em que o original foi (ou vai) — nunca para
+levar o vídeo a outra página. A agenda da HIDRA e o `~/Postador/direto/plano.mjs` já travam a família
+`<nome>_hookNN` na página da 1ª versão; não renomear para fugir disso.
+
 ## NÃO FAZER
+- Não entregar variação de hook como "vídeo novo" para outra página, nem renomear o arquivo tirando o `_hookNN`.
 - Não mexer em nada depois dos primeiros ~2,5s: corpo, legenda, áudio e CTA ficam idênticos.
 - Não trocar mais de uma variável por variação (só o texto do hook).
 - Não escrever hook com claim de cura, tratamento ou resultado garantido, nem que contradiga a fala.

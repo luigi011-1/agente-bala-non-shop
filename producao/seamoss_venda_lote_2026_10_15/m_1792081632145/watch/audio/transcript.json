@@ -1,0 +1,633 @@
+[
+  {
+    "start": 0.0,
+    "end": 5.88,
+    "text": "Mezcla vaselina con bicarbonato de sodio y no vas a poder creerlo, las farmacias no quieren",
+    "words": [
+      {
+        "word": " Mezcla",
+        "start": 0.0,
+        "end": 0.4,
+        "probability": 0.7726839979489645
+      },
+      {
+        "word": " vaselina",
+        "start": 0.4,
+        "end": 0.98,
+        "probability": 0.8190042575200399
+      },
+      {
+        "word": " con",
+        "start": 0.98,
+        "end": 1.3,
+        "probability": 0.9835764765739441
+      },
+      {
+        "word": " bicarbonato",
+        "start": 1.3,
+        "end": 1.92,
+        "probability": 0.9907377064228058
+      },
+      {
+        "word": " de",
+        "start": 1.92,
+        "end": 2.06,
+        "probability": 0.9974225759506226
+      },
+      {
+        "word": " sodio",
+        "start": 2.06,
+        "end": 2.46,
+        "probability": 0.9897111356258392
+      },
+      {
+        "word": " y",
+        "start": 2.46,
+        "end": 3.08,
+        "probability": 0.8796014785766602
+      },
+      {
+        "word": " no",
+        "start": 3.08,
+        "end": 3.22,
+        "probability": 0.9966984391212463
+      },
+      {
+        "word": " vas",
+        "start": 3.22,
+        "end": 3.38,
+        "probability": 0.989575207233429
+      },
+      {
+        "word": " a",
+        "start": 3.38,
+        "end": 3.48,
+        "probability": 0.9974285960197449
+      },
+      {
+        "word": " poder",
+        "start": 3.48,
+        "end": 3.74,
+        "probability": 0.9968162178993225
+      },
+      {
+        "word": " creerlo,",
+        "start": 3.74,
+        "end": 4.26,
+        "probability": 0.9911071459452311
+      },
+      {
+        "word": " las",
+        "start": 4.76,
+        "end": 4.92,
+        "probability": 0.9389683604240417
+      },
+      {
+        "word": " farmacias",
+        "start": 4.92,
+        "end": 5.42,
+        "probability": 0.9728931585947672
+      },
+      {
+        "word": " no",
+        "start": 5.42,
+        "end": 5.62,
+        "probability": 0.9909123182296753
+      },
+      {
+        "word": " quieren",
+        "start": 5.62,
+        "end": 5.88,
+        "probability": 0.9986861348152161
+      }
+    ]
+  },
+  {
+    "start": 5.88,
+    "end": 11.3,
+    "text": "que sepas esto. Una cucharadita de vaselina, una cucharadita de miel, de una a dos cucharaditas",
+    "words": [
+      {
+        "word": " que",
+        "start": 5.88,
+        "end": 6.04,
+        "probability": 0.9938753247261047
+      },
+      {
+        "word": " sepas",
+        "start": 6.04,
+        "end": 6.34,
+        "probability": 0.9947530329227448
+      },
+      {
+        "word": " esto.",
+        "start": 6.34,
+        "end": 6.68,
+        "probability": 0.9914548397064209
+      },
+      {
+        "word": " Una",
+        "start": 6.86,
+        "end": 7.0,
+        "probability": 0.5684571266174316
+      },
+      {
+        "word": " cucharadita",
+        "start": 7.0,
+        "end": 7.6,
+        "probability": 0.9956252872943878
+      },
+      {
+        "word": " de",
+        "start": 7.6,
+        "end": 7.72,
+        "probability": 0.9924599528312683
+      },
+      {
+        "word": " vaselina,",
+        "start": 7.72,
+        "end": 8.22,
+        "probability": 0.9926906029383341
+      },
+      {
+        "word": " una",
+        "start": 8.76,
+        "end": 8.88,
+        "probability": 0.9831031560897827
+      },
+      {
+        "word": " cucharadita",
+        "start": 8.88,
+        "end": 9.5,
+        "probability": 0.9956671595573425
+      },
+      {
+        "word": " de",
+        "start": 9.5,
+        "end": 9.64,
+        "probability": 0.9978451728820801
+      },
+      {
+        "word": " miel,",
+        "start": 9.64,
+        "end": 9.86,
+        "probability": 0.98148512840271
+      },
+      {
+        "word": " de",
+        "start": 10.18,
+        "end": 10.32,
+        "probability": 0.9845442175865173
+      },
+      {
+        "word": " una",
+        "start": 10.32,
+        "end": 10.54,
+        "probability": 0.867387056350708
+      },
+      {
+        "word": " a",
+        "start": 10.54,
+        "end": 10.64,
+        "probability": 0.974743127822876
+      },
+      {
+        "word": " dos",
+        "start": 10.64,
+        "end": 10.76,
+        "probability": 0.9897128343582153
+      },
+      {
+        "word": " cucharaditas",
+        "start": 10.76,
+        "end": 11.3,
+        "probability": 0.9895891398191452
+      }
+    ]
+  },
+  {
+    "start": 11.3,
+    "end": 15.64,
+    "text": "de bicarbonato de sodio y una cucharadita de aceite de coco en un tazón. Mezcla durante",
+    "words": [
+      {
+        "word": " de",
+        "start": 11.3,
+        "end": 11.42,
+        "probability": 0.9884471297264099
+      },
+      {
+        "word": " bicarbonato",
+        "start": 11.42,
+        "end": 11.86,
+        "probability": 0.9979660660028458
+      },
+      {
+        "word": " de",
+        "start": 11.86,
+        "end": 11.98,
+        "probability": 0.989649772644043
+      },
+      {
+        "word": " sodio",
+        "start": 11.98,
+        "end": 12.26,
+        "probability": 0.9991195797920227
+      },
+      {
+        "word": " y",
+        "start": 12.26,
+        "end": 12.44,
+        "probability": 0.7315076589584351
+      },
+      {
+        "word": " una",
+        "start": 12.44,
+        "end": 12.58,
+        "probability": 0.9961841702461243
+      },
+      {
+        "word": " cucharadita",
+        "start": 12.58,
+        "end": 13.2,
+        "probability": 0.997565507888794
+      },
+      {
+        "word": " de",
+        "start": 13.2,
+        "end": 13.32,
+        "probability": 0.9951872825622559
+      },
+      {
+        "word": " aceite",
+        "start": 13.32,
+        "end": 13.54,
+        "probability": 0.9973492622375488
+      },
+      {
+        "word": " de",
+        "start": 13.54,
+        "end": 13.8,
+        "probability": 0.9978325963020325
+      },
+      {
+        "word": " coco",
+        "start": 13.8,
+        "end": 14.06,
+        "probability": 0.9867799878120422
+      },
+      {
+        "word": " en",
+        "start": 14.06,
+        "end": 14.36,
+        "probability": 0.9870914220809937
+      },
+      {
+        "word": " un",
+        "start": 14.36,
+        "end": 14.48,
+        "probability": 0.9951791763305664
+      },
+      {
+        "word": " tazón.",
+        "start": 14.48,
+        "end": 14.82,
+        "probability": 0.9810031652450562
+      },
+      {
+        "word": " Mezcla",
+        "start": 15.06,
+        "end": 15.4,
+        "probability": 0.9874330560366312
+      },
+      {
+        "word": " durante",
+        "start": 15.4,
+        "end": 15.64,
+        "probability": 0.9960476756095886
+      }
+    ]
+  },
+  {
+    "start": 15.64,
+    "end": 20.96,
+    "text": "un minuto, aplícalo en tu cara, déjalo por 15 minutos, enjuaga con agua tibia, esto",
+    "words": [
+      {
+        "word": " un",
+        "start": 15.64,
+        "end": 15.92,
+        "probability": 0.9275513887405396
+      },
+      {
+        "word": " minuto,",
+        "start": 15.92,
+        "end": 16.3,
+        "probability": 0.99356609582901
+      },
+      {
+        "word": " aplícalo",
+        "start": 16.44,
+        "end": 16.82,
+        "probability": 0.8597191423177719
+      },
+      {
+        "word": " en",
+        "start": 16.82,
+        "end": 16.88,
+        "probability": 0.9936330318450928
+      },
+      {
+        "word": " tu",
+        "start": 16.88,
+        "end": 16.98,
+        "probability": 0.9966663718223572
+      },
+      {
+        "word": " cara,",
+        "start": 16.98,
+        "end": 17.2,
+        "probability": 0.9989944100379944
+      },
+      {
+        "word": " déjalo",
+        "start": 17.88,
+        "end": 18.12,
+        "probability": 0.9493211309115092
+      },
+      {
+        "word": " por",
+        "start": 18.12,
+        "end": 18.32,
+        "probability": 0.9949216246604919
+      },
+      {
+        "word": " 15",
+        "start": 18.32,
+        "end": 18.56,
+        "probability": 0.8791165351867676
+      },
+      {
+        "word": " minutos,",
+        "start": 18.56,
+        "end": 19.0,
+        "probability": 0.9827784895896912
+      },
+      {
+        "word": " enjuaga",
+        "start": 19.32,
+        "end": 19.66,
+        "probability": 0.96359916528066
+      },
+      {
+        "word": " con",
+        "start": 19.66,
+        "end": 19.88,
+        "probability": 0.9978073239326477
+      },
+      {
+        "word": " agua",
+        "start": 19.88,
+        "end": 20.06,
+        "probability": 0.9983147382736206
+      },
+      {
+        "word": " tibia,",
+        "start": 20.06,
+        "end": 20.5,
+        "probability": 0.9918085336685181
+      },
+      {
+        "word": " esto",
+        "start": 20.78,
+        "end": 20.96,
+        "probability": 0.9875470995903015
+      }
+    ]
+  },
+  {
+    "start": 20.96,
+    "end": 26.0,
+    "text": "elimina la piel muerta, aclara tu rostro, desvanece manchas y te da un brillo natural.",
+    "words": [
+      {
+        "word": " elimina",
+        "start": 20.96,
+        "end": 21.34,
+        "probability": 0.9967116117477417
+      },
+      {
+        "word": " la",
+        "start": 21.34,
+        "end": 21.46,
+        "probability": 0.9868491888046265
+      },
+      {
+        "word": " piel",
+        "start": 21.46,
+        "end": 21.66,
+        "probability": 0.9998569488525391
+      },
+      {
+        "word": " muerta,",
+        "start": 21.66,
+        "end": 22.1,
+        "probability": 0.9853513836860657
+      },
+      {
+        "word": " aclara",
+        "start": 22.46,
+        "end": 22.68,
+        "probability": 0.935127466917038
+      },
+      {
+        "word": " tu",
+        "start": 22.68,
+        "end": 22.9,
+        "probability": 0.9670480489730835
+      },
+      {
+        "word": " rostro,",
+        "start": 22.9,
+        "end": 23.32,
+        "probability": 0.9975818792978922
+      },
+      {
+        "word": " desvanece",
+        "start": 23.48,
+        "end": 23.92,
+        "probability": 0.9784121960401535
+      },
+      {
+        "word": " manchas",
+        "start": 23.92,
+        "end": 24.3,
+        "probability": 0.9948005676269531
+      },
+      {
+        "word": " y",
+        "start": 24.3,
+        "end": 25.02,
+        "probability": 0.7931464314460754
+      },
+      {
+        "word": " te",
+        "start": 25.02,
+        "end": 25.14,
+        "probability": 0.9978553652763367
+      },
+      {
+        "word": " da",
+        "start": 25.14,
+        "end": 25.26,
+        "probability": 0.9968547821044922
+      },
+      {
+        "word": " un",
+        "start": 25.26,
+        "end": 25.36,
+        "probability": 0.9979683756828308
+      },
+      {
+        "word": " brillo",
+        "start": 25.36,
+        "end": 25.62,
+        "probability": 0.9873332977294922
+      },
+      {
+        "word": " natural.",
+        "start": 25.62,
+        "end": 26.0,
+        "probability": 0.9981021285057068
+      }
+    ]
+  },
+  {
+    "start": 26.0,
+    "end": 32.06,
+    "text": "Comenta libro y te enviaré mi antigua Biblia de sanación. Pero tienes que seguirme o no",
+    "words": [
+      {
+        "word": " Comenta",
+        "start": 26.0,
+        "end": 26.52,
+        "probability": 0.8876497447490692
+      },
+      {
+        "word": " libro",
+        "start": 26.52,
+        "end": 26.84,
+        "probability": 0.16978023946285248
+      },
+      {
+        "word": " y",
+        "start": 26.84,
+        "end": 27.16,
+        "probability": 0.9628027677536011
+      },
+      {
+        "word": " te",
+        "start": 27.16,
+        "end": 27.26,
+        "probability": 0.9946895837783813
+      },
+      {
+        "word": " enviaré",
+        "start": 27.26,
+        "end": 27.72,
+        "probability": 0.9583902557690939
+      },
+      {
+        "word": " mi",
+        "start": 27.72,
+        "end": 28.14,
+        "probability": 0.9776520133018494
+      },
+      {
+        "word": " antigua",
+        "start": 28.14,
+        "end": 28.62,
+        "probability": 0.8963691592216492
+      },
+      {
+        "word": " Biblia",
+        "start": 28.62,
+        "end": 29.0,
+        "probability": 0.9338171680768331
+      },
+      {
+        "word": " de",
+        "start": 29.0,
+        "end": 29.1,
+        "probability": 0.9906436800956726
+      },
+      {
+        "word": " sanación.",
+        "start": 29.1,
+        "end": 29.58,
+        "probability": 0.9375078678131104
+      },
+      {
+        "word": " Pero",
+        "start": 30.2,
+        "end": 30.58,
+        "probability": 0.7474681735038757
+      },
+      {
+        "word": " tienes",
+        "start": 30.58,
+        "end": 30.84,
+        "probability": 0.9798135161399841
+      },
+      {
+        "word": " que",
+        "start": 30.84,
+        "end": 31.02,
+        "probability": 0.9985809326171875
+      },
+      {
+        "word": " seguirme",
+        "start": 31.02,
+        "end": 31.56,
+        "probability": 0.9967397749423981
+      },
+      {
+        "word": " o",
+        "start": 31.56,
+        "end": 31.94,
+        "probability": 0.5945225954055786
+      },
+      {
+        "word": " no",
+        "start": 31.94,
+        "end": 32.06,
+        "probability": 0.9973973035812378
+      }
+    ]
+  },
+  {
+    "start": 32.06,
+    "end": 33.46,
+    "text": "podré comunicarme contigo.",
+    "words": [
+      {
+        "word": " podré",
+        "start": 32.06,
+        "end": 32.38,
+        "probability": 0.9799838662147522
+      },
+      {
+        "word": " comunicarme",
+        "start": 32.38,
+        "end": 33.0,
+        "probability": 0.9964494903882345
+      },
+      {
+        "word": " contigo.",
+        "start": 33.0,
+        "end": 33.46,
+        "probability": 0.9981261491775513
+      }
+    ]
+  }
+]

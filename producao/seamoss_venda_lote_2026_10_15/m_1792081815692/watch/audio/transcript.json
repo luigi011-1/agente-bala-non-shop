@@ -1,0 +1,918 @@
+[
+  {
+    "start": 0.0,
+    "end": 4.66,
+    "text": "Stop drinking chia seeds, they don't fix your constipation.",
+    "words": [
+      {
+        "word": " Stop",
+        "start": 0.0,
+        "end": 0.44,
+        "probability": 0.6966022849082947
+      },
+      {
+        "word": " drinking",
+        "start": 0.44,
+        "end": 0.92,
+        "probability": 0.9864017367362976
+      },
+      {
+        "word": " chia",
+        "start": 0.92,
+        "end": 1.24,
+        "probability": 0.9078054130077362
+      },
+      {
+        "word": " seeds,",
+        "start": 1.24,
+        "end": 1.64,
+        "probability": 0.9987747073173523
+      },
+      {
+        "word": " they",
+        "start": 1.98,
+        "end": 3.26,
+        "probability": 0.9675406217575073
+      },
+      {
+        "word": " don't",
+        "start": 3.26,
+        "end": 3.48,
+        "probability": 0.9932532906532288
+      },
+      {
+        "word": " fix",
+        "start": 3.48,
+        "end": 3.74,
+        "probability": 0.9957323670387268
+      },
+      {
+        "word": " your",
+        "start": 3.74,
+        "end": 3.96,
+        "probability": 0.9958517551422119
+      },
+      {
+        "word": " constipation.",
+        "start": 3.96,
+        "end": 4.66,
+        "probability": 0.9940141439437866
+      }
+    ]
+  },
+  {
+    "start": 5.24,
+    "end": 8.4,
+    "text": "The best drink for constipation is not apple cider vinegar.",
+    "words": [
+      {
+        "word": " The",
+        "start": 5.24,
+        "end": 5.26,
+        "probability": 0.9541565775871277
+      },
+      {
+        "word": " best",
+        "start": 5.26,
+        "end": 5.54,
+        "probability": 0.9987257122993469
+      },
+      {
+        "word": " drink",
+        "start": 5.54,
+        "end": 5.82,
+        "probability": 0.9968042373657227
+      },
+      {
+        "word": " for",
+        "start": 5.82,
+        "end": 6.04,
+        "probability": 0.9963274598121643
+      },
+      {
+        "word": " constipation",
+        "start": 6.04,
+        "end": 6.7,
+        "probability": 0.9971649050712585
+      },
+      {
+        "word": " is",
+        "start": 6.7,
+        "end": 7.14,
+        "probability": 0.9884088635444641
+      },
+      {
+        "word": " not",
+        "start": 7.14,
+        "end": 7.5,
+        "probability": 0.9972710013389587
+      },
+      {
+        "word": " apple",
+        "start": 7.5,
+        "end": 7.84,
+        "probability": 0.973233163356781
+      },
+      {
+        "word": " cider",
+        "start": 7.84,
+        "end": 8.12,
+        "probability": 0.9993201494216919
+      },
+      {
+        "word": " vinegar.",
+        "start": 8.12,
+        "end": 8.4,
+        "probability": 0.9973112344741821
+      }
+    ]
+  },
+  {
+    "start": 8.72,
+    "end": 11.8,
+    "text": "It's not lemon water, and it's definitely not prune juice.",
+    "words": [
+      {
+        "word": " It's",
+        "start": 8.72,
+        "end": 8.86,
+        "probability": 0.9939472079277039
+      },
+      {
+        "word": " not",
+        "start": 8.86,
+        "end": 9.08,
+        "probability": 0.9993983507156372
+      },
+      {
+        "word": " lemon",
+        "start": 9.08,
+        "end": 9.36,
+        "probability": 0.9960015416145325
+      },
+      {
+        "word": " water,",
+        "start": 9.36,
+        "end": 9.76,
+        "probability": 0.9934964179992676
+      },
+      {
+        "word": " and",
+        "start": 10.22,
+        "end": 10.32,
+        "probability": 0.9940704703330994
+      },
+      {
+        "word": " it's",
+        "start": 10.32,
+        "end": 10.54,
+        "probability": 0.9960297346115112
+      },
+      {
+        "word": " definitely",
+        "start": 10.54,
+        "end": 10.9,
+        "probability": 0.9975959658622742
+      },
+      {
+        "word": " not",
+        "start": 10.9,
+        "end": 11.2,
+        "probability": 0.9987248778343201
+      },
+      {
+        "word": " prune",
+        "start": 11.2,
+        "end": 11.5,
+        "probability": 0.9709430932998657
+      },
+      {
+        "word": " juice.",
+        "start": 11.5,
+        "end": 11.8,
+        "probability": 0.9992275238037109
+      }
+    ]
+  },
+  {
+    "start": 12.34,
+    "end": 13.78,
+    "text": "Chia on its own does nothing.",
+    "words": [
+      {
+        "word": " Chia",
+        "start": 12.34,
+        "end": 12.48,
+        "probability": 0.9888149499893188
+      },
+      {
+        "word": " on",
+        "start": 12.48,
+        "end": 12.68,
+        "probability": 0.8483733534812927
+      },
+      {
+        "word": " its",
+        "start": 12.68,
+        "end": 12.84,
+        "probability": 0.946294367313385
+      },
+      {
+        "word": " own",
+        "start": 12.84,
+        "end": 13.12,
+        "probability": 0.9963474869728088
+      },
+      {
+        "word": " does",
+        "start": 13.12,
+        "end": 13.36,
+        "probability": 0.9687597751617432
+      },
+      {
+        "word": " nothing.",
+        "start": 13.36,
+        "end": 13.78,
+        "probability": 0.9991558790206909
+      }
+    ]
+  },
+  {
+    "start": 14.1,
+    "end": 15.74,
+    "text": "Here is what actually works.",
+    "words": [
+      {
+        "word": " Here",
+        "start": 14.1,
+        "end": 14.26,
+        "probability": 0.9859543442726135
+      },
+      {
+        "word": " is",
+        "start": 14.26,
+        "end": 14.5,
+        "probability": 0.9893843531608582
+      },
+      {
+        "word": " what",
+        "start": 14.5,
+        "end": 14.7,
+        "probability": 0.9986432194709778
+      },
+      {
+        "word": " actually",
+        "start": 14.7,
+        "end": 15.22,
+        "probability": 0.9989702701568604
+      },
+      {
+        "word": " works.",
+        "start": 15.22,
+        "end": 15.74,
+        "probability": 0.9994460940361023
+      }
+    ]
+  },
+  {
+    "start": 17.68,
+    "end": 19.56,
+    "text": "Get a pot of water going and squeeze in a lemon.",
+    "words": [
+      {
+        "word": " Get",
+        "start": 17.68,
+        "end": 17.74,
+        "probability": 0.7854127287864685
+      },
+      {
+        "word": " a",
+        "start": 17.74,
+        "end": 17.88,
+        "probability": 0.9987918734550476
+      },
+      {
+        "word": " pot",
+        "start": 17.88,
+        "end": 18.0,
+        "probability": 0.9931715726852417
+      },
+      {
+        "word": " of",
+        "start": 18.0,
+        "end": 18.12,
+        "probability": 0.9918632507324219
+      },
+      {
+        "word": " water",
+        "start": 18.12,
+        "end": 18.3,
+        "probability": 0.9991477727890015
+      },
+      {
+        "word": " going",
+        "start": 18.3,
+        "end": 18.64,
+        "probability": 0.9960020184516907
+      },
+      {
+        "word": " and",
+        "start": 18.64,
+        "end": 18.84,
+        "probability": 0.8450773358345032
+      },
+      {
+        "word": " squeeze",
+        "start": 18.84,
+        "end": 19.1,
+        "probability": 0.9988180994987488
+      },
+      {
+        "word": " in",
+        "start": 19.1,
+        "end": 19.26,
+        "probability": 0.9963298439979553
+      },
+      {
+        "word": " a",
+        "start": 19.26,
+        "end": 19.38,
+        "probability": 0.9933047890663147
+      },
+      {
+        "word": " lemon.",
+        "start": 19.38,
+        "end": 19.56,
+        "probability": 0.999061644077301
+      }
+    ]
+  },
+  {
+    "start": 19.82,
+    "end": 22.64,
+    "text": "Add a tablespoon of chia seeds, a thumb of fresh grated ginger,",
+    "words": [
+      {
+        "word": " Add",
+        "start": 19.82,
+        "end": 19.96,
+        "probability": 0.9920552372932434
+      },
+      {
+        "word": " a",
+        "start": 19.96,
+        "end": 20.12,
+        "probability": 0.9800776243209839
+      },
+      {
+        "word": " tablespoon",
+        "start": 20.12,
+        "end": 20.4,
+        "probability": 0.9903815388679504
+      },
+      {
+        "word": " of",
+        "start": 20.4,
+        "end": 20.66,
+        "probability": 0.995417594909668
+      },
+      {
+        "word": " chia",
+        "start": 20.66,
+        "end": 20.88,
+        "probability": 0.9960386455059052
+      },
+      {
+        "word": " seeds,",
+        "start": 20.88,
+        "end": 21.16,
+        "probability": 0.9903809428215027
+      },
+      {
+        "word": " a",
+        "start": 21.28,
+        "end": 21.36,
+        "probability": 0.9958838820457458
+      },
+      {
+        "word": " thumb",
+        "start": 21.36,
+        "end": 21.56,
+        "probability": 0.9927369952201843
+      },
+      {
+        "word": " of",
+        "start": 21.56,
+        "end": 21.74,
+        "probability": 0.9930387139320374
+      },
+      {
+        "word": " fresh",
+        "start": 21.74,
+        "end": 21.94,
+        "probability": 0.9978578686714172
+      },
+      {
+        "word": " grated",
+        "start": 21.94,
+        "end": 22.28,
+        "probability": 0.8912517130374908
+      },
+      {
+        "word": " ginger,",
+        "start": 22.28,
+        "end": 22.64,
+        "probability": 0.9980378746986389
+      }
+    ]
+  },
+  {
+    "start": 22.78,
+    "end": 24.02,
+    "text": "and a teaspoon of turmeric.",
+    "words": [
+      {
+        "word": " and",
+        "start": 22.78,
+        "end": 23.02,
+        "probability": 0.9974619150161743
+      },
+      {
+        "word": " a",
+        "start": 23.02,
+        "end": 23.18,
+        "probability": 0.9969589710235596
+      },
+      {
+        "word": " teaspoon",
+        "start": 23.18,
+        "end": 23.42,
+        "probability": 0.9961054921150208
+      },
+      {
+        "word": " of",
+        "start": 23.42,
+        "end": 23.7,
+        "probability": 0.9979167580604553
+      },
+      {
+        "word": " turmeric.",
+        "start": 23.7,
+        "end": 24.02,
+        "probability": 0.9916975498199463
+      }
+    ]
+  },
+  {
+    "start": 24.34,
+    "end": 26.54,
+    "text": "Let it simmer for 10 minutes, then strain it.",
+    "words": [
+      {
+        "word": " Let",
+        "start": 24.34,
+        "end": 24.44,
+        "probability": 0.9974130988121033
+      },
+      {
+        "word": " it",
+        "start": 24.44,
+        "end": 24.58,
+        "probability": 0.9988583326339722
+      },
+      {
+        "word": " simmer",
+        "start": 24.58,
+        "end": 24.74,
+        "probability": 0.999242901802063
+      },
+      {
+        "word": " for",
+        "start": 24.74,
+        "end": 25.0,
+        "probability": 0.9988564252853394
+      },
+      {
+        "word": " 10",
+        "start": 25.0,
+        "end": 25.2,
+        "probability": 0.870841920375824
+      },
+      {
+        "word": " minutes,",
+        "start": 25.2,
+        "end": 25.54,
+        "probability": 0.9977926015853882
+      },
+      {
+        "word": " then",
+        "start": 25.74,
+        "end": 25.96,
+        "probability": 0.9952269792556763
+      },
+      {
+        "word": " strain",
+        "start": 25.96,
+        "end": 26.34,
+        "probability": 0.9952508211135864
+      },
+      {
+        "word": " it.",
+        "start": 26.34,
+        "end": 26.54,
+        "probability": 0.9965043067932129
+      }
+    ]
+  },
+  {
+    "start": 26.76,
+    "end": 29.16,
+    "text": "This feeds your gut and gets everything moving.",
+    "words": [
+      {
+        "word": " This",
+        "start": 26.76,
+        "end": 26.96,
+        "probability": 0.9944449067115784
+      },
+      {
+        "word": " feeds",
+        "start": 26.96,
+        "end": 27.3,
+        "probability": 0.9975301623344421
+      },
+      {
+        "word": " your",
+        "start": 27.3,
+        "end": 27.52,
+        "probability": 0.997586727142334
+      },
+      {
+        "word": " gut",
+        "start": 27.52,
+        "end": 27.78,
+        "probability": 0.9988981485366821
+      },
+      {
+        "word": " and",
+        "start": 27.78,
+        "end": 28.02,
+        "probability": 0.9377014636993408
+      },
+      {
+        "word": " gets",
+        "start": 28.02,
+        "end": 28.22,
+        "probability": 0.9911065697669983
+      },
+      {
+        "word": " everything",
+        "start": 28.22,
+        "end": 28.68,
+        "probability": 0.9992801547050476
+      },
+      {
+        "word": " moving.",
+        "start": 28.68,
+        "end": 29.16,
+        "probability": 0.9995285272598267
+      }
+    ]
+  },
+  {
+    "start": 29.16,
+    "end": 32.78,
+    "text": "The bloating clears, and your whole body feels lighter.",
+    "words": [
+      {
+        "word": " The",
+        "start": 29.16,
+        "end": 29.56,
+        "probability": 0.538081705570221
+      },
+      {
+        "word": " bloating",
+        "start": 29.56,
+        "end": 30.0,
+        "probability": 0.9935247302055359
+      },
+      {
+        "word": " clears,",
+        "start": 30.0,
+        "end": 30.32,
+        "probability": 0.990426778793335
+      },
+      {
+        "word": " and",
+        "start": 30.9,
+        "end": 31.04,
+        "probability": 0.9957759976387024
+      },
+      {
+        "word": " your",
+        "start": 31.04,
+        "end": 31.34,
+        "probability": 0.989118218421936
+      },
+      {
+        "word": " whole",
+        "start": 31.34,
+        "end": 31.66,
+        "probability": 0.9981980919837952
+      },
+      {
+        "word": " body",
+        "start": 31.66,
+        "end": 32.02,
+        "probability": 0.9994291663169861
+      },
+      {
+        "word": " feels",
+        "start": 32.02,
+        "end": 32.34,
+        "probability": 0.9968715310096741
+      },
+      {
+        "word": " lighter.",
+        "start": 32.34,
+        "end": 32.78,
+        "probability": 0.9981456995010376
+      }
+    ]
+  },
+  {
+    "start": 33.24,
+    "end": 36.34,
+    "text": "Nobody can patent ginger, turmeric, or lemon,",
+    "words": [
+      {
+        "word": " Nobody",
+        "start": 33.24,
+        "end": 33.46,
+        "probability": 0.9935600757598877
+      },
+      {
+        "word": " can",
+        "start": 33.46,
+        "end": 33.74,
+        "probability": 0.9993537068367004
+      },
+      {
+        "word": " patent",
+        "start": 33.74,
+        "end": 34.2,
+        "probability": 0.9989074468612671
+      },
+      {
+        "word": " ginger,",
+        "start": 34.2,
+        "end": 34.82,
+        "probability": 0.9484227895736694
+      },
+      {
+        "word": " turmeric,",
+        "start": 35.2,
+        "end": 35.6,
+        "probability": 0.9090728461742401
+      },
+      {
+        "word": " or",
+        "start": 36.0,
+        "end": 36.04,
+        "probability": 0.998426079750061
+      },
+      {
+        "word": " lemon,",
+        "start": 36.04,
+        "end": 36.34,
+        "probability": 0.996279776096344
+      }
+    ]
+  },
+  {
+    "start": 36.72,
+    "end": 39.48,
+    "text": "so nobody spends millions telling you about them.",
+    "words": [
+      {
+        "word": " so",
+        "start": 36.72,
+        "end": 36.92,
+        "probability": 0.9966063499450684
+      },
+      {
+        "word": " nobody",
+        "start": 36.92,
+        "end": 37.28,
+        "probability": 0.9950742125511169
+      },
+      {
+        "word": " spends",
+        "start": 37.28,
+        "end": 37.66,
+        "probability": 0.9981496334075928
+      },
+      {
+        "word": " millions",
+        "start": 37.66,
+        "end": 38.12,
+        "probability": 0.9976849555969238
+      },
+      {
+        "word": " telling",
+        "start": 38.12,
+        "end": 38.78,
+        "probability": 0.9957680702209473
+      },
+      {
+        "word": " you",
+        "start": 38.78,
+        "end": 39.04,
+        "probability": 0.9983699917793274
+      },
+      {
+        "word": " about",
+        "start": 39.04,
+        "end": 39.24,
+        "probability": 0.999451220035553
+      },
+      {
+        "word": " them.",
+        "start": 39.24,
+        "end": 39.48,
+        "probability": 0.9985837936401367
+      }
+    ]
+  },
+  {
+    "start": 39.74,
+    "end": 43.02,
+    "text": "This is one of 53 remedies in my ancient remedies Bible.",
+    "words": [
+      {
+        "word": " This",
+        "start": 39.74,
+        "end": 39.88,
+        "probability": 0.9896827936172485
+      },
+      {
+        "word": " is",
+        "start": 39.88,
+        "end": 40.02,
+        "probability": 0.9970561265945435
+      },
+      {
+        "word": " one",
+        "start": 40.02,
+        "end": 40.22,
+        "probability": 0.9921401143074036
+      },
+      {
+        "word": " of",
+        "start": 40.22,
+        "end": 40.4,
+        "probability": 0.9973616003990173
+      },
+      {
+        "word": " 53",
+        "start": 40.4,
+        "end": 40.94,
+        "probability": 0.9592784643173218
+      },
+      {
+        "word": " remedies",
+        "start": 40.94,
+        "end": 41.34,
+        "probability": 0.9943206310272217
+      },
+      {
+        "word": " in",
+        "start": 41.34,
+        "end": 41.7,
+        "probability": 0.994231104850769
+      },
+      {
+        "word": " my",
+        "start": 41.7,
+        "end": 41.88,
+        "probability": 0.9826450347900391
+      },
+      {
+        "word": " ancient",
+        "start": 41.88,
+        "end": 42.28,
+        "probability": 0.730194091796875
+      },
+      {
+        "word": " remedies",
+        "start": 42.28,
+        "end": 42.7,
+        "probability": 0.9643838405609131
+      },
+      {
+        "word": " Bible.",
+        "start": 42.7,
+        "end": 43.02,
+        "probability": 0.7481852173805237
+      }
+    ]
+  },
+  {
+    "start": 43.54,
+    "end": 45.1,
+    "text": "Comment, book, and I'll send it to you.",
+    "words": [
+      {
+        "word": " Comment,",
+        "start": 43.54,
+        "end": 43.7,
+        "probability": 0.9957238435745239
+      },
+      {
+        "word": " book,",
+        "start": 43.82,
+        "end": 44.0,
+        "probability": 0.9260773658752441
+      },
+      {
+        "word": " and",
+        "start": 44.22,
+        "end": 44.3,
+        "probability": 0.9978099465370178
+      },
+      {
+        "word": " I'll",
+        "start": 44.3,
+        "end": 44.44,
+        "probability": 0.9940718710422516
+      },
+      {
+        "word": " send",
+        "start": 44.44,
+        "end": 44.62,
+        "probability": 0.9984900951385498
+      },
+      {
+        "word": " it",
+        "start": 44.62,
+        "end": 44.76,
+        "probability": 0.9976638555526733
+      },
+      {
+        "word": " to",
+        "start": 44.76,
+        "end": 44.9,
+        "probability": 0.997075080871582
+      },
+      {
+        "word": " you.",
+        "start": 44.9,
+        "end": 45.1,
+        "probability": 0.9990366697311401
+      }
+    ]
+  },
+  {
+    "start": 45.5,
+    "end": 46.66,
+    "text": "Follow me so it reaches you.",
+    "words": [
+      {
+        "word": " Follow",
+        "start": 45.5,
+        "end": 45.64,
+        "probability": 0.997755229473114
+      },
+      {
+        "word": " me",
+        "start": 45.64,
+        "end": 45.84,
+        "probability": 0.9984577894210815
+      },
+      {
+        "word": " so",
+        "start": 45.84,
+        "end": 46.02,
+        "probability": 0.9599912762641907
+      },
+      {
+        "word": " it",
+        "start": 46.02,
+        "end": 46.16,
+        "probability": 0.997215747833252
+      },
+      {
+        "word": " reaches",
+        "start": 46.16,
+        "end": 46.4,
+        "probability": 0.9985826015472412
+      },
+      {
+        "word": " you.",
+        "start": 46.4,
+        "end": 46.66,
+        "probability": 0.999231219291687
+      }
+    ]
+  }
+]

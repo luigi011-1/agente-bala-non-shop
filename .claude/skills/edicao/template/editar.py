@@ -744,6 +744,10 @@ def main():
     ap.add_argument("--up", default="1", help="takes com legenda mais alta")
     # 1300 (Luigi, 2026-10-15): nas duas entregas Avery aprovadas a legenda foi descida à mão de 960 para 1300 (lábios livres)
     ap.add_argument("--legenda-topo", type=int, default=1300, help="topo da legenda Auraly em pixels; ajustar após conferir rosto")
+    # Luigi, 2026-10-23 (HIDRA): legenda pequena e baixa em todos os takes, nunca sobre o herói do gancho nem rosto
+    ap.add_argument("--legenda-tam", type=int, default=86, help="tamanho da fonte da legenda dinâmica (padrão 86)")
+    ap.add_argument("--legenda-fixa", type=int, default=None, help="topo da legenda em px em TODOS os takes (ignora --up)")
+    ap.add_argument("--legenda-gancho", type=int, default=None, help="com --legenda-fixa: topo da legenda nos takes de --up (gancho), longe do herói")
     ap.add_argument("--nome", default=None); ap.add_argument("--trabalho", default=None)
     ap.add_argument("--excecoes-fala", help="JSON de exceções explícitas por arquivo/hash/roteiro; sem alterar prompts")
     ap.add_argument("--nota-minima", type=float, default=0.85)
@@ -982,13 +986,16 @@ def main():
             topo_leg = pos_legenda.get("hero_top", 760) if p[0]["k"] in up else pos_legenda.get("top", 880)
             if p[0]["k"] in produto:
                 topo_leg = PRODUTO_TOPO
+            if a.legenda_fixa:
+                fixa = a.legenda_gancho if (a.legenda_gancho and p[0]["k"] in up) else a.legenda_fixa
+                topo_leg = max(topo_leg, fixa) if p[0]["k"] in produto else fixa
             if LEGENDA_DINAMICA:  # palavra falada em amarelo, troca no tempo da fala
                 pal = [re.sub(r"[.,!?;:]$", "", w["w"]) for w in p]
                 for j in range(len(p)):
                     a2 = st if j == 0 else max(st, p[j]["t"] - 0.03)
                     b2 = en if j == len(p) - 1 else max(a2, p[j + 1]["t"] - 0.03)
                     pj = f"{tmp}/leg_{n:03d}_{j}.png"
-                    motor.png_dinamica(pal, j, topo_leg, pj)
+                    motor.png_dinamica(pal, j, topo_leg, pj, tam=a.legenda_tam)
                     eventos.append((a2, b2, pj))
             else:
                 motor.png_fitwell(txt, topo_leg, png)

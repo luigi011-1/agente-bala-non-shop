@@ -213,4 +213,9 @@ Por enquanto só ela roda o Sea Moss, em paralelo com FityWell e Body Hacks na m
 - **Cassidy:** "Thirty years I have been pulling Irish moss off these rocks" (rins); "raking Irish moss off these
   rocks since I was a kid" (canela); "what I rake off these rocks every summer" (bolinho); "what my family has
   hauled out of the Atlantic for generations" (wrap); "the same stuff my dad taught me to rake off these rocks" (sorvete).
+- **Lote 2026-10-15 (crosta, intestino, banana, máscara):** Cassidy "grows on the rocks right under this dock", "dries
+  on that rack behind me every August", "what I haul up every low tide", "forty winters of wind on this dock";
+  Marshall "the tide brings to this shore every morning", "I still pull off the reef by hand", "dried on these bamboo
+  mats for decades", "a lifetime of salt and sun"; Meredith "every Jamaican kitchen kept in a jar", "what my mama
+  soaked every Sunday", "Jamaicans have stirred into drinks for generations", "the sea moss I've had in my tea for decades".
 - Formato de receita com ponte em [[formato-receita-ponte-venda]].

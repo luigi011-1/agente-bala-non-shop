@@ -316,6 +316,22 @@ Produções novas do roster Walt, Darlene e Lorraine entram aqui com o caminho `
   e os CTAs de comentário ("bloating every day", "sugar craving every afternoon", "bread leaves you bloated",
   "sweet tooth every night"). Canela e sorvete também viraram growth FityWell em 12/10 (v01/v02, sem decisão).
 
+## 62-65. Receitas virais → venda Sea Moss, lote 2 · `producao/<avatar>_seamoss_<receita>/` · 2026-10-15
+- **Formato:** [[formato-receita-ponte-venda]]. Avatares: Cassidy, Marshall, Meredith (12 vídeos). CTA deste lote:
+  comment yes → Amazon → link na bio → follow (Luigi, 2026-10-15, sem Stories). Lote em `producao/seamoss_venda_lote_2026_10_15/`.
+- **62 crosta na calha** (`snapinsta-1792081855261`, espanhol): água de limão e fibra sem efeito na crosta rachada →
+  líquido amarelo derrete → chá de limão, chia, cúrcuma, gengibre, pimenta → "buying fresh lemon and ginger every
+  week adds up, and half of it goes bad" → gomas "bury your gut right back under the crust" → gengibre, cúrcuma, pimenta.
+- **63 intestino transparente** (`...815692`, homem de polo preta): chia, água de limão, ameixa entrando no modelo →
+  mesmo chá → "straining chia slime... turmeric stains everything yellow" → "the last thing a stuck gut needs".
+- **64 banana com canela** (`...717971`, homem de boné): canela nas bananas, "Big Pharma" → vitamina no liquidificador →
+  "bananas go brown in two days, scrubbing a blender" → ashwagandha, vinagre de maçã, vitamina C. Fígado e colesterol saíram.
+- **65 máscara de vaselina** (`...632145`, espanhol, varanda): vaselina + bicarbonato (sem marca, "petroleum jelly") →
+  "baking soda stings, fifteen minutes with goo" → pele por dentro → vitamina C, manuka, bardana.
+- **Não repetir nas mesmas contas:** estas quatro fricções e os comentários ("heavy and bloated no matter how clean you
+  eat", "gut feels stuck no matter what you drink", "sugar cravings win every night", "skin looks tired no matter what
+  you put on it"). 62 e 63 têm a mesma receita base: postar com distância.
+
 ## Padrões de esqueleto que se repetem (atalhos mentais)
 
 ### Inspeção de comida

@@ -40,3 +40,5 @@ producao/*/watch/frames/
 producao/*/watch/overview/
 producao/**/watch/frames/
 producao/**/watch/overview/
+
+.DS_Store
