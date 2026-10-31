@@ -1134,6 +1134,146 @@
    "legenda": "caption-highlight",
    "sfx": "pop",
    "fonte_pico": "anton"
+  },
+  "hidra_L-20261030-001639-2-002/L-20261030-001639-2-002__Megan15": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261030-001639-006/L-20261030-001639-006__Marvin16": {
+   "legenda": "padrao",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261029-235914-006/L-20261029-235914-006__Mae10": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261029-235914-005/L-20261029-235914-005__Vivian18": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261029-235915-005/L-20261029-235915-005__Brandon7": {
+   "legenda": "padrao",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261029-235915-2-003/L-20261029-235915-2-003__Paula15": {
+   "legenda": "caption-highlight",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261029-235915-2-001/L-20261029-235915-2-001__Raven13": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261029-235915-3-005/L-20261029-235915-3-005__Crystal16": {
+   "legenda": "padrao",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261029-235935-005/L-20261029-235935-005__Theo4": {
+   "legenda": "caption-highlight",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261029-235914-007/L-20261029-235914-007__Tammy13": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261029-235914-2-007/L-20261029-235914-2-007__Leon6": {
+   "legenda": "padrao",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261029-235914-2-008/L-20261029-235914-2-008__Frank10": {
+   "legenda": "caption-highlight",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261029-235914-2-006/L-20261029-235914-2-006__Ray8": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261029-235914-2-009/L-20261029-235914-2-009__Roy7": {
+   "legenda": "padrao",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261029-235915-006/L-20261029-235915-006__Marvin12": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261029-235915-3-007/L-20261029-235915-3-007__Kimberly11": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261029-235915-3-006/L-20261029-235915-3-006__Paula17": {
+   "legenda": "padrao",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261029-235935-006/L-20261029-235935-006__Earl12": {
+   "legenda": "caption-highlight",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261029-235935-007/L-20261029-235935-007__Hector11": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261029-235936-005/L-20261029-235936-005__Otis10": {
+   "legenda": "padrao",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261029-235936-006/L-20261029-235936-006__Theo5": {
+   "legenda": "caption-highlight",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261030-001639-008/L-20261030-001639-008__Hector12": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261030-001639-007/L-20261030-001639-007__Arnold8": {
+   "legenda": "padrao",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261030-001639-2-005/L-20261030-001639-2-005__Gloria16": {
+   "legenda": "caption-highlight",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261030-001639-2-006/L-20261030-001639-2-006__Amber10": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261030-001639-3-008/L-20261030-001639-3-008__Otis11": {
+   "legenda": "padrao",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261030-001639-3-006/L-20261030-001639-3-006__Luis10": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261030-001639-3-007/L-20261030-001639-3-007__Earl13": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
   }
  }
 }
