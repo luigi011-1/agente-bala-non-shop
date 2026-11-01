@@ -1304,6 +1304,36 @@
    "legenda": "caption-pill-karaoke",
    "sfx": "sutil",
    "fonte_pico": "anton"
+  },
+  "hidra_L-20261031-173124-2-001/L-20261031-173124-2-001__Amber11": {
+   "legenda": "padrao",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261031-173124-2-002/L-20261031-173124-2-002__Rhonda15": {
+   "legenda": "caption-highlight",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261031-173124-2-003/L-20261031-173124-2-003__Heather21": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261031-173124-2-006/L-20261031-173124-2-006__Vivian20": {
+   "legenda": "padrao",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261031-173124-2-005/L-20261031-173124-2-005__Heather22": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261031-173124-2-004/L-20261031-173124-2-004__Dolores27": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
   }
  }
 }
