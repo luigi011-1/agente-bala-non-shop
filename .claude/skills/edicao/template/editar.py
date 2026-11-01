@@ -723,7 +723,7 @@ def fantasmas(video, cortes_q, segs=None, src=None):
                 achados.append(round((ini + j) / FPS, 2))
     return sorted(set(achados))
 
-def silencios(video, d=0.25):
+def silencios(video, d=0.45):
     return [tuple(x) for x in silencio_rms(video, d)]
 
 def sheet(video, tempos, saida, cols=12, larg=120):

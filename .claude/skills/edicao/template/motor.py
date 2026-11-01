@@ -67,7 +67,7 @@ def alinhar_forcado(f, fala, ws_asr):
     return out
 
 
-def ilhas_v4(f, aw, gap=0.12, pre=0.03, pos=0.05, cauda=0.30, ataque=0.12):
+def ilhas_v4(f, aw, gap=0.50, pre=0.10, pos=0.15, cauda=0.35, ataque=0.20):
     """Trechos a manter: cada palavra do alinhamento com a borda refinada pelo volume (estende o fim enquanto ainda
     há voz, até `cauda` s, sem invadir a próxima palavra; idem o início, até `ataque` s). Palavras com intervalo
     até `gap` s ficam juntas; o resto do intervalo sai. Folga final `pre`/`pos` s."""
