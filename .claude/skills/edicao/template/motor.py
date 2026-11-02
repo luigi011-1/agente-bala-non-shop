@@ -55,6 +55,78 @@ def alinhar_forcado(f, fala, ws_asr):
                 return dc["out"]
     except Exception:
         chave = None
+    if ws_asr and any(x[1] is not None for x in ws_asr):
+        import difflib
+        def _lim(s):
+            return re.sub(r"[^a-z0-9']", "", s.lower())
+        rot = fala.split()
+        if rot:
+            h_norm = [_lim(x[0]) for x in ws_asr]
+            r_norm = [_lim(w) for w in rot]
+            ops = difflib.SequenceMatcher(None, h_norm, r_norm, autojunk=False).get_opcodes()
+            out = [[w, None, None] for w in rot]
+            for op, i1, i2, j1, j2 in ops:
+                if op == "equal":
+                    for d_i in range(j2 - j1):
+                        out[j1 + d_i][1] = round(float(ws_asr[i1 + d_i][1]), 3)
+                        out[j1 + d_i][2] = round(float(ws_asr[i1 + d_i][2]), 3)
+                elif op in ("replace", "insert") and (j2 > j1):
+                    a_span = float(ws_asr[i1][1]) if i1 < len(ws_asr) else (float(ws_asr[-1][2]) if ws_asr else 0.0)
+                    b_span = (float(ws_asr[i2 - 1][2])
+                              if (op == "replace" and i2 > i1 and i2 - 1 < len(ws_asr))
+                              else min(a_span + 0.18 * (j2 - j1), float(ws_asr[i1][2]) if i1 < len(ws_asr) else a_span + 0.25))
+                    if b_span <= a_span:
+                        b_span = a_span + 0.12 * (j2 - j1)
+                    passo = (b_span - a_span) / max(1, j2 - j1)
+                    for d_i in range(j2 - j1):
+                        out[j1 + d_i][1] = round(a_span + d_i * passo, 3)
+                        out[j1 + d_i][2] = round(a_span + (d_i + 1) * passo, 3)
+            if any(w[1] is not None for w in out):
+                a0 = max(0.0, float(ws_asr[0][1]))
+                b0 = float(ws_asr[-1][2])
+                for i, w in enumerate(out):
+                    if w[1] is None:
+                        ant = out[i - 1][2] if i and out[i - 1][2] is not None else a0
+                        prox = next((x[1] for x in out[i + 1:] if x[1] is not None), b0)
+                        w[1], w[2] = round(ant, 3), round(ant + max(0.08, (prox - ant) * 0.8), 3)
+                # Refina início/fim de cada palavra pelo volume real (rms10), removendo silêncio ou respiro isolado que o Whisper cola no span
+                r10 = rms10(f)
+                if len(r10) >= 20:
+                    sr = sorted(r10)
+                    lim_w = max(-38.0, min(sr[len(sr) * 7 // 10] - 12, sr[len(sr) // 10] + 8))
+                    niv_w = lambda t: r10[int(t / 0.01)] if 0 <= int(t / 0.01) < len(r10) else -120.0
+                    for w in out:
+                        wa, wb = float(w[1]), float(w[2])
+                        if wb - wa > 0.35:
+                            # Se houver silêncio >= 0.18s dentro de uma única palavra (ex.: respiro + pausa + palavra), fica com a ilha de voz principal
+                            i0, i1 = max(0, int(wa / 0.01)), min(len(r10), int(wb / 0.01))
+                            sub, st_i, sil_cnt = [], None, 0
+                            for idx_r in range(i0, i1):
+                                if r10[idx_r] >= lim_w:
+                                    if st_i is None:
+                                        st_i = idx_r
+                                    sil_cnt = 0
+                                elif st_i is not None:
+                                    sil_cnt += 1
+                                    if sil_cnt >= 18:
+                                        sub.append((st_i, idx_r - sil_cnt + 1))
+                                        st_i, sil_cnt = None, 0
+                            if st_i is not None:
+                                sub.append((st_i, i1 - sil_cnt))
+                            if sub:
+                                melhor = max(sub, key=lambda ab: sum(max(0.0, r10[k] - lim_w) for k in range(ab[0], max(ab[0] + 1, ab[1]))))
+                                wa, wb = max(wa, melhor[0] * 0.01), min(wb, melhor[1] * 0.01)
+                        while wa < wb - 0.12 and niv_w(wa) < lim_w:
+                            wa += 0.01
+                        while wb > wa + 0.12 and niv_w(wb - 0.01) < lim_w:
+                            wb -= 0.01
+                        w[1], w[2] = round(wa, 3), round(wb, 3)
+                if chave:
+                    try:
+                        json.dump({"k": chave, "out": out}, open(cache_p, "w"))
+                    except Exception:
+                        pass
+                return out
     try:
         import torch, whisperx
         torch.set_num_threads(2)
@@ -98,15 +170,37 @@ def ilhas_v4(f, aw, gap=0.50, pre=0.10, pos=0.15, cauda=0.35, ataque=0.20):
     s = sorted(r)
     fundo, fala = s[n // 10], s[n * 7 // 10]
     limiar = min(fala - 10, max(fundo + 8, -55))  # acima do fundo do take, abaixo da fala
+    lim_voz = max(-38.0, limiar)
     nivel = lambda t: r[int(t / 0.01)] if 0 <= int(t / 0.01) < n else -120.0
     spans = []
     for i, (_, a, b) in enumerate(aw):
         ant = aw[i - 1][2] if i else 0.0
         prox = aw[i + 1][1] if i + 1 < len(aw) else d
-        e = b
+        s0, e = a, b
+        if e - s0 > 0.35:
+            i0, i1 = max(0, int(s0 / 0.01)), min(n, int(e / 0.01))
+            sub, st_i, sil_cnt = [], None, 0
+            for idx_r in range(i0, i1):
+                if r[idx_r] >= lim_voz:
+                    if st_i is None:
+                        st_i = idx_r
+                    sil_cnt = 0
+                elif st_i is not None:
+                    sil_cnt += 1
+                    if sil_cnt >= 18:
+                        sub.append((st_i, idx_r - sil_cnt + 1))
+                        st_i, sil_cnt = None, 0
+            if st_i is not None:
+                sub.append((st_i, i1 - sil_cnt))
+            if sub:
+                melhor = max(sub, key=lambda ab: sum(max(0.0, r[k] - lim_voz) for k in range(ab[0], max(ab[0] + 1, ab[1]))))
+                s0, e = max(s0, melhor[0] * 0.01), min(e, melhor[1] * 0.01)
+        while s0 < e - 0.12 and nivel(s0) < lim_voz:
+            s0 += 0.01
+        while e > s0 + 0.12 and nivel(e - 0.01) < lim_voz:
+            e -= 0.01
         while e < min(b + cauda, prox) and nivel(e) >= limiar:
             e += 0.01
-        s0 = a
         while s0 > max(a - ataque, ant) and nivel(s0 - 0.01) >= limiar:
             s0 -= 0.01
         spans.append([s0, e])
@@ -127,9 +221,9 @@ def ilhas_v4(f, aw, gap=0.50, pre=0.10, pos=0.15, cauda=0.35, ataque=0.20):
 
 
 def filtro_trecho(a, b, sp, d_saida):
-    """Vídeo do trecho: corte, velocidade, 30 fps sem interpolação, 1080x1920 com nitidez leve."""
+    """Vídeo do trecho: corte, velocidade, 30 fps sem interpolação, 1080x1920 rápido."""
     return (f"[0:v]trim=start={a:.3f}:end={b:.3f},setpts=(PTS-STARTPTS)/{sp},fps={FPS},"
-            f"scale={W}:{H}:flags=lanczos,unsharp=5:5:0.55:5:5:0,setsar=1,"
+            f"scale={W}:{H}:flags=bicubic,setsar=1,"
             f"tpad=stop_mode=clone:stop_duration=0.2,trim=end_frame={max(1, round(d_saida * FPS))},"
             f"setpts=N/({FPS}*TB)[v]")
 
@@ -325,7 +419,7 @@ def render_final(base, lista_leg, mix, total, saida, flashes=(), selos=None, cam
         fil = ["[0:v]null[vn]"]; ult = "vn"
     v_enc = (["-c:v", "h264_videotoolbox", "-q:v", "68", "-profile:v", "high"]
              if usa_vt else ["-c:v", "libx264", "-crf", "17", "-preset", "veryfast", "-threads", "2", "-profile:v", "high"])
-    _sh(["ffmpeg", "-y", "-loglevel", "error", "-filter_threads", "2", "-filter_complex_threads", "2", *ins,
+    _sh(["ffmpeg", "-y", "-loglevel", "error", "-filter_threads", "4", "-filter_complex_threads", "4", *ins,
          "-filter_complex", ";".join(fil), "-map", f"[{ult}]", "-map", "1:a",
          "-t", f"{total:.3f}", *v_enc,
          "-pix_fmt", "yuv420p", "-r", str(FPS), "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", saida])

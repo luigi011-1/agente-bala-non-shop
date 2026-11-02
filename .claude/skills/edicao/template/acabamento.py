@@ -298,27 +298,26 @@ def _z(t, picos):
 
 
 def compor_apenas_picos(base, picos, total, tmp):
-    """Recorta e aplica zoom APENAS nos ~0,6s (18 quadros) de cada pico em vez de recodificar os 540 quadros de base.mp4."""
+    """Recorta e aplica zoom APENAS nas janelas de cada pico em paralelo, sem disputar fila do VideoToolbox."""
+    import concurrent.futures as cf
     import cv2
-    usa_vt = sys.platform == "darwin"
-    hw_in = ["-hwaccel", "videotoolbox"] if usa_vt else []
-    v_enc = (["-c:v", "h264_videotoolbox", "-q:v", "76", "-profile:v", "high", "-bf", "0"]
-             if usa_vt else ["-c:v", "libx264", "-crf", "12", "-preset", "veryfast", "-threads", "1"])
     tam = W * H * 3
-    clips = []
-    for idx, p in enumerate(picos):
+
+    def _um_pico(arg):
+        idx, p = arg
         f_ini = max(0, int(p["a"] * FPS))
         f_fim = min(round(total * FPS), int(math.ceil((p["b"] + 0.18) * FPS)))
         if f_fim <= f_ini:
-            continue
+            return None
         a0, b0 = f_ini / FPS, f_fim / FPS
         n_frames = f_fim - f_ini
         zmp4 = f"{tmp}/assets/zoom_{idx}.mp4"
-        lb = subprocess.Popen(["ffmpeg", "-loglevel", "error", *hw_in, "-ss", f"{a0:.4f}", "-i", base,
+        lb = subprocess.Popen(["ffmpeg", "-loglevel", "error", "-threads", "2", "-ss", f"{a0:.4f}", "-i", base,
                                "-frames:v", str(n_frames), "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
                               stdout=subprocess.PIPE)
-        enc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
-                                "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", *v_enc, "-pix_fmt", "yuv420p", zmp4],
+        enc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-threads", "2", "-f", "rawvideo", "-pix_fmt", "rgb24",
+                                "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
+                                "-c:v", "libx264", "-crf", "16", "-preset", "ultrafast", "-pix_fmt", "yuv420p", zmp4],
                                stdin=subprocess.PIPE)
         for i in range(n_frames):
             buf = lb.stdout.read(tam)
@@ -333,8 +332,12 @@ def compor_apenas_picos(base, picos, total, tmp):
             enc.stdin.write(q_u8.tobytes())
         enc.stdin.close(); enc.wait(); lb.wait()
         if enc.returncode == 0 and os.path.exists(zmp4):
-            clips.append([zmp4, round(a0, 4), round(b0, 4)])
-    return clips
+            return [zmp4, round(a0, 4), round(b0, 4)]
+        return None
+
+    with cf.ThreadPoolExecutor(max_workers=max(1, min(3, len(picos)))) as ex:
+        res = list(ex.map(_um_pico, enumerate(picos)))
+    return [r for r in res if r is not None]
 
 
 def compor(base, picos_webm, picos, total, saida, zoom=True, log=print):
