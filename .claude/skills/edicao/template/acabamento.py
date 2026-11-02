@@ -18,6 +18,7 @@ Uso dentro do editar.py (--acabamento) ou sozinho, numa pasta de trabalho já ed
                            [--sem-zoom] [--grao]
 """
 import json
+import math
 import os
 import re
 import shutil
@@ -296,15 +297,62 @@ def _z(t, picos):
     return z, cx, cy
 
 
+def compor_apenas_picos(base, picos, total, tmp):
+    """Recorta e aplica zoom APENAS nos ~0,6s (18 quadros) de cada pico em vez de recodificar os 540 quadros de base.mp4."""
+    import cv2
+    usa_vt = sys.platform == "darwin"
+    hw_in = ["-hwaccel", "videotoolbox"] if usa_vt else []
+    v_enc = (["-c:v", "h264_videotoolbox", "-q:v", "76", "-profile:v", "high", "-bf", "0"]
+             if usa_vt else ["-c:v", "libx264", "-crf", "12", "-preset", "veryfast", "-threads", "1"])
+    tam = W * H * 3
+    clips = []
+    for idx, p in enumerate(picos):
+        f_ini = max(0, int(p["a"] * FPS))
+        f_fim = min(round(total * FPS), int(math.ceil((p["b"] + 0.18) * FPS)))
+        if f_fim <= f_ini:
+            continue
+        a0, b0 = f_ini / FPS, f_fim / FPS
+        n_frames = f_fim - f_ini
+        zmp4 = f"{tmp}/assets/zoom_{idx}.mp4"
+        lb = subprocess.Popen(["ffmpeg", "-loglevel", "error", *hw_in, "-ss", f"{a0:.4f}", "-i", base,
+                               "-frames:v", str(n_frames), "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
+                              stdout=subprocess.PIPE)
+        enc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
+                                "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", *v_enc, "-pix_fmt", "yuv420p", zmp4],
+                               stdin=subprocess.PIPE)
+        for i in range(n_frames):
+            buf = lb.stdout.read(tam)
+            if len(buf) < tam:
+                break
+            t = a0 + (i / FPS)
+            z, cx, cy = _z(t, [p])
+            q_u8 = np.frombuffer(buf, np.uint8).reshape(H, W, 3)
+            if z > 1.0005:
+                m = np.float32([[z, 0, cx - cx * z], [0, z, cy - cy * z]])
+                q_u8 = cv2.warpAffine(q_u8, m, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+            enc.stdin.write(q_u8.tobytes())
+        enc.stdin.close(); enc.wait(); lb.wait()
+        if enc.returncode == 0 and os.path.exists(zmp4):
+            clips.append([zmp4, round(a0, 4), round(b0, 4)])
+    return clips
+
+
 def compor(base, picos_webm, picos, total, saida, zoom=True, log=print):
+    if not picos_webm and (not zoom or not picos):
+        shutil.copy2(base, saida)
+        return
     import cv2
     n = round(total * FPS)
-    lb = subprocess.Popen(["ffmpeg", "-loglevel", "error", "-i", base, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
+    usa_vt = sys.platform == "darwin"
+    hw_in = ["-hwaccel", "videotoolbox"] if usa_vt else []
+    lb = subprocess.Popen(["ffmpeg", "-loglevel", "error", *hw_in, "-i", base, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
                           stdout=subprocess.PIPE)
     lp = subprocess.Popen(["ffmpeg", "-loglevel", "error", "-c:v", "libvpx-vp9", "-i", picos_webm, "-f", "rawvideo",
                            "-pix_fmt", "rgba", "-"], stdout=subprocess.PIPE) if picos_webm else None
+    v_enc = (["-c:v", "h264_videotoolbox", "-q:v", "74", "-profile:v", "high"]
+             if usa_vt else ["-c:v", "libx264", "-crf", "12", "-preset", "veryfast", "-threads", "2"])
     enc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
-                            "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-crf", "12", "-preset", "veryfast",
+                            "-r", str(FPS), "-i", "-", *v_enc,
                             "-pix_fmt", "yuv420p", "-g", "15", saida], stdin=subprocess.PIPE)
     alfas = {}
     tam = W * H * 3
@@ -319,8 +367,8 @@ def compor(base, picos_webm, picos, total, saida, zoom=True, log=print):
         if not ativo and z == 1.0:
             enc.stdin.write(buf)
             continue
-        q = np.frombuffer(buf, np.uint8).reshape(H, W, 3).astype(np.float32)
         if ativo and len(txt) == W * H * 4:
+            q = np.frombuffer(buf, np.uint8).reshape(H, W, 3).astype(np.float32)
             p = ativo[0]
             if id(p) not in alfas:
                 alfas.clear(); alfas[id(p)] = _alfas(p["fg"])
@@ -329,10 +377,16 @@ def compor(base, picos_webm, picos, total, saida, zoom=True, log=print):
             tx = np.frombuffer(txt, np.uint8).reshape(H, W, 4).astype(np.float32)
             a = (tx[..., 3] / 255) * (1 - corpo)       # a palavra só aparece fora do corpo
             q = q * (1 - a[..., None]) + tx[..., :3] * a[..., None]
-        if z != 1.0:
-            m = np.float32([[z, 0, cx - cx * z], [0, z, cy - cy * z]])
-            q = cv2.warpAffine(q, m, (W, H), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REFLECT)
-        enc.stdin.write(np.clip(q, 0, 255).astype(np.uint8).tobytes())
+            if z != 1.0:
+                m = np.float32([[z, 0, cx - cx * z], [0, z, cy - cy * z]])
+                q = cv2.warpAffine(q, m, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+            enc.stdin.write(np.clip(q, 0, 255).astype(np.uint8).tobytes())
+        else:
+            q_u8 = np.frombuffer(buf, np.uint8).reshape(H, W, 3)
+            if z != 1.0:
+                m = np.float32([[z, 0, cx - cx * z], [0, z, cy - cy * z]])
+                q_u8 = cv2.warpAffine(q_u8, m, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+            enc.stdin.write(q_u8.tobytes())
     enc.stdin.close(); enc.wait(); lb.wait()
     if lp:
         lp.stdout.close(); lp.wait()
@@ -422,9 +476,20 @@ def aplicar(tmp, ws, segs, total, estilo, flashes=(), forcados=None, zoom=True, 
             for p in picos:
                 p.update(f0=round(p["a"] * FPS), f1=round(p["b"] * FPS), cx=W / 2, cy=H * 0.35, occ=0, escuro=False)
     frente = camada_frente(total, list(flashes) if estilo == "auraly" else [], tmp, grao, log)
-    nova = f"{tmp}/assets/base_hf.mp4"
-    log("   compondo palavra atrás do avatar e zoom")
-    compor(base, pw, picos, total, nova, zoom, log)
+    zc_path = f"{tmp}/zoom_clips.json"
+    if os.path.exists(zc_path):
+        try: os.remove(zc_path)
+        except OSError: pass
+    if not PALAVRA_ATRAS and not pw:
+        if zoom and picos:
+            log("   recortando zoom apenas na fatia dos picos (sem recodificar base inteira)")
+            zc = compor_apenas_picos(base, picos, total, tmp)
+            json.dump(zc, open(zc_path, "w"))
+        nova = base
+    else:
+        nova = f"{tmp}/assets/base_hf.mp4"
+        log("   compondo palavra atrás do avatar e zoom")
+        compor(base, pw, picos, total, nova, zoom, log)
     mix = f"{tmp}/assets/mix_sfx.wav"
     sfx(f"{tmp}/assets/mix.wav", total, trocas, picos, mix, pacote)
     json.dump([{k: v for k, v in p.items() if k != "fg"} for p in picos], open(f"{tmp}/picos.json", "w"), indent=1)

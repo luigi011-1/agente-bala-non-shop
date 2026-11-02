@@ -55,7 +55,7 @@ _rms = {}
 def rms_janelas(f):
     """Volume médio (dB) de cada janela de 50 ms do áudio do take."""
     if f not in _rms:
-        e = sh_err(f'ffmpeg -hide_banner -i "{f}" -vn -af "aresample=16000,asetnsamples=800,astats=metadata=1:reset=1,'
+        e = sh_err(f'ffmpeg -hide_banner -threads 2 -i "{f}" -vn -af "aresample=16000,asetnsamples=800,astats=metadata=1:reset=1,'
                    f'ametadata=print:key=lavfi.astats.Overall.RMS_level" -f null -')
         _rms[f] = [float(x) if x != "-inf" else -120.0 for x in re.findall(r"RMS_level=(-?[\d.]+|-inf)", e)]
     return _rms[f]
@@ -126,22 +126,38 @@ def log(msg):
 
 # ---------- 1. transcrição ----------
 _modelo = None
-def palavras(f):
-    global _modelo
+_modelo_small = None
+def _obter_modelo(usar_small=False):
+    global _modelo, _modelo_small
+    from faster_whisper import WhisperModel
+    if usar_small:
+        if _modelo_small is None:
+            _modelo_small = WhisperModel("small.en" if IDIOMA == "en" else "small", device="cpu", compute_type="int8", cpu_threads=1)
+        return _modelo_small
+    if _modelo is None:
+        _modelo = WhisperModel("base.en" if IDIOMA == "en" else "base", device="cpu", compute_type="int8", cpu_threads=1)
+    return _modelo
+
+def palavras(f, usar_small=False):
     if not sh(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=index", "-of", "csv=p=0", f]).strip():
         return []  # sem trilha de áudio: take mudo
-    if _modelo is None:
-        from faster_whisper import WhisperModel
-        _modelo = WhisperModel("small.en" if IDIOMA == "en" else "small", device="cpu", compute_type="int8")
-    segs, _ = _modelo.transcribe(f, language=IDIOMA, word_timestamps=True)
+    mod = _obter_modelo(usar_small=usar_small)
+    segs, _ = mod.transcribe(f, language=IDIOMA, word_timestamps=True, beam_size=1)
     return [[w.word.strip(), round(w.start, 3), round(w.end, 3)] for s in segs for w in s.words]
 
 
 # ---------- 2. achar o roteiro ----------
 FALA = re.compile(r'(?:speaks|frase|says|line)[^"\n]{0,140}?:\s*"([^"]{12,})"', re.I)
 
-def falas_por_producao():
-    fontes = glob.glob(f"{REPO}/producao/*/**/*.md", recursive=True) + glob.glob(f"{ENTREGAS}/**/*.md", recursive=True)
+def falas_por_producao(forcada=None):
+    if forcada:
+        pasta_direta = os.path.join(REPO, "producao", os.path.basename(os.path.normpath(forcada)))
+        if os.path.isdir(pasta_direta):
+            fontes = glob.glob(f"{pasta_direta}/**/*.md", recursive=True)
+        else:
+            fontes = glob.glob(f"{REPO}/producao/*/**/*.md", recursive=True) + glob.glob(f"{ENTREGAS}/**/*.md", recursive=True)
+    else:
+        fontes = glob.glob(f"{REPO}/producao/*/**/*.md", recursive=True) + glob.glob(f"{ENTREGAS}/**/*.md", recursive=True)
     prod = {}
     for f in fontes:
         if "/_" in f.replace(REPO, "").replace(ENTREGAS, ""):
@@ -193,7 +209,7 @@ def achar_roteiro(ditos, forcada=None):
     """ditos: {take: texto ouvido} (só takes com fala). Devolve (pasta, arquivo, {take: fala}, nota, linhas)."""
     melhor = None
     forcada = os.path.basename(os.path.normpath(forcada)) if forcada else None  # nome ou caminho
-    for pasta, arqs in falas_por_producao().items():
+    for pasta, arqs in falas_por_producao(forcada).items():
         if forcada and os.path.basename(pasta.rstrip("/")) != forcada and pasta != forcada:
             continue
         for arq, linhas in arqs.items():
@@ -259,11 +275,16 @@ def aplicar_excecoes_fala(f, problemas, fala, registro):
     aceitos = [p for p in problemas if p in permitidos]
     return [p for p in problemas if p not in permitidos], aceitos
 
-def ouvir_trecho(f, a, b, tmp):
+def ouvir_trecho(f, a, b, tmp, com_tempos=True):
     """Transcreve um trecho sozinho e devolve as palavras com tempo absoluto: isolado, o whisper escreve o que
     foi dito (no take inteiro ele suprime a fala repetida)."""
     t = f"{tmp}/trecho_{hashlib.md5(f'{f}{a}{b}'.encode()).hexdigest()[:8]}.wav"
-    sh(["ffmpeg", "-loglevel", "error", "-y", "-i", f, "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-vn", "-ar", "16000", "-ac", "1", t])
+    if not os.path.exists(t):
+        sh(["ffmpeg", "-loglevel", "error", "-threads", "2", "-y", "-i", f, "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-vn", "-ar", "16000", "-ac", "1", t])
+    if not com_tempos:
+        mod = _obter_modelo(usar_small=False)
+        segs, _ = mod.transcribe(t, language=IDIOMA, word_timestamps=False, beam_size=1)
+        return [[w.strip(), a, b] for s in segs for w in s.text.strip().split() if w.strip()]
     return [[w, x + a, y + a] for w, x, y in palavras(t)]
 
 def palavras_por_trechos(f, tmp, pausa=0.3):
@@ -281,12 +302,16 @@ def palavras_por_trechos(f, tmp, pausa=0.3):
         out += ouvir_trecho(f, a, b, tmp)
     return out
 
+_cache_fst = {}
 def fala_sem_texto(f, ws, tmp, minimo=0.35):
     """Fala que está no áudio e não está na transcrição. O whisper SUPRIME fala repetida (teste 2026-10-09:
     "...from the store, bought black pepper from the store, drop..." saiu sem a repetição em todas as
     configurações) e esconde ela de dois jeitos: um trecho com som e sem palavra, ou uma palavra ESTICADA por
     cima dela ("store" durando 2,1s). Cada suspeito é transcrito sozinho; só vira corte se tiver palavra.
     Devolve [[início, fim, texto]]."""
+    chave = (f, len(ws), minimo)
+    if chave in _cache_fst:
+        return _cache_fst[chave]
     d = dur(f)
     sil = silencio_rms(f, GAP)
     som, pos = [], 0.0
@@ -312,18 +337,23 @@ def fala_sem_texto(f, ws, tmp, minimo=0.35):
     cortes = []
     for ach in achados:
         a, b = ach[0], ach[1]
-        ouvido = ouvir_trecho(f, max(0, a - 0.02), min(d, b + 0.02), tmp)
+        a_pad, b_pad = max(0, a - 0.02), min(d, b + 0.02)
+        ouvido_rapido = ouvir_trecho(f, a_pad, b_pad, tmp, com_tempos=False)
         if len(ach) == 3:  # esticada: a primeira palavra ouvida é a própria; o resto é sobra
-            resto = [o for o in ouvido if norm(o[0]) != norm(ach[2])][1:] if ouvido and norm(ouvido[0][0]) != norm(ach[2]) else ouvido[1:]
-            if resto: cortes.append([max(a, resto[0][1] - 0.05), b, " ".join(o[0] for o in resto)])
-        elif ouvido:
-            cortes.append([a, b, " ".join(o[0] for o in ouvido)])
+            resto_rap = [o for o in ouvido_rapido if norm(o[0]) != norm(ach[2])][1:] if ouvido_rapido and norm(ouvido_rapido[0][0]) != norm(ach[2]) else ouvido_rapido[1:]
+            if resto_rap:
+                ouvido = ouvir_trecho(f, a_pad, b_pad, tmp, com_tempos=True)
+                resto = [o for o in ouvido if norm(o[0]) != norm(ach[2])][1:] if ouvido and norm(ouvido[0][0]) != norm(ach[2]) else ouvido[1:]
+                if resto: cortes.append([max(a, resto[0][1] - 0.05), b, " ".join(o[0] for o in resto)])
+        elif ouvido_rapido:
+            cortes.append([a, b, " ".join(o[0] for o in ouvido_rapido)])
     junto = []  # o mesmo trecho achado pelos dois jeitos vira um corte só, com o texto mais longo
     for a, b, t in sorted((float(a), float(b), t) for a, b, t in cortes):
         if junto and a <= junto[-1][1]:
             junto[-1][1] = max(junto[-1][1], b)
             if len(t) > len(junto[-1][2]): junto[-1][2] = t
         else: junto.append([a, b, t])
+    _cache_fst[chave] = junto
     return junto
 
 def limpar(f, ws, fala, tmp, k):
@@ -357,8 +387,10 @@ def limpar(f, ws, fala, tmp, k):
                    f"[0:a]atrim=start={a:.3f}:end={b:.3f},asetpts=PTS-STARTPTS[a{n}];" for n, (a, b) in enumerate(faixas))
     filt += "".join(f"[v{n}][a{n}]" for n in range(len(faixas))) + f"concat=n={len(faixas)}:v=1:a=1[v][a]"
     saida = f"{tmp}/limpo_t{k:02d}.mp4"
+    v_enc = (["-c:v", "h264_videotoolbox", "-q:v", "72", "-profile:v", "high"]
+             if sys.platform == "darwin" else ["-c:v", "libx264", "-crf", "16", "-preset", "fast"])
     sh(["ffmpeg", "-loglevel", "error", "-y", "-i", f, "-filter_complex", filt, "-map", "[v]", "-map", "[a]",
-        "-c:v", "libx264", "-crf", "16", "-preset", "fast", "-c:a", "aac", "-b:a", "192k", saida])
+        *v_enc, "-c:a", "aac", "-b:a", "192k", saida])
     tirados, atual = [], []
     for n, (w, _, _) in enumerate(ws):
         if n in sobra: atual.append(w)
@@ -481,8 +513,12 @@ def um_trecho(arg):
         a = (f"[0:a]atrim=start={s['a']:.3f}:end={s['b']:.3f},asetpts=PTS-STARTPTS,atempo={s['sp']},"
              f"aformat=sample_rates=44100:channel_layouts=mono,afade=t=in:d=0.012,"
              f"afade=t=out:st={max(0, s['d'] - 0.02):.3f}:d=0.02[a0]")
-    sh(["ffmpeg", "-y", "-loglevel", "error", "-threads", "1", "-i", src, "-filter_complex", f"{v};{a}",
-        "-map", "[v]", "-map", "[a0]", "-c:v", "libx264", "-crf", "12", "-preset", "veryfast", "-pix_fmt", "yuv420p",
+    usa_vt = sys.platform == "darwin"
+    hw_in = ["-hwaccel", "videotoolbox"] if usa_vt else []
+    v_enc = (["-c:v", "h264_videotoolbox", "-q:v", "74", "-profile:v", "high", "-bf", "0"]
+             if usa_vt else ["-c:v", "libx264", "-crf", "12", "-preset", "veryfast"])
+    sh(["ffmpeg", "-y", "-loglevel", "error", "-threads", "1", *hw_in, "-i", src, "-filter_complex", f"{v};{a}",
+        "-map", "[v]", "-map", "[a0]", *v_enc, "-pix_fmt", "yuv420p",
         "-g", "15", "-r", str(FPS), "-c:a", "pcm_s16le", out])
     # áudio do trecho com a duração exata do vídeo do trecho (quadros inteiros): sem deriva de lábio ao juntar
     n = int(sh(["ffprobe", "-v", "error", "-count_packets", "-select_streams", "v:0", "-show_entries",
@@ -728,7 +764,8 @@ def silencios(video, d=0.45):
 
 def sheet(video, tempos, saida, cols=12, larg=120):
     expr = "+".join(f"between(t,{t - 0.1:.2f},{t + 0.1:.2f})" for t in tempos)
-    sh(["ffmpeg", "-loglevel", "error", "-y", "-i", video, "-vf", f"select='{expr}',scale={larg}:-1,tile={cols}x{-(-len(tempos) * 7 // cols)}",
+    hw_in = ["-hwaccel", "videotoolbox"] if sys.platform == "darwin" else []
+    sh(["ffmpeg", "-loglevel", "error", "-y", *hw_in, "-i", video, "-vf", f"select='{expr}',scale={larg}:-1,tile={cols}x{-(-len(tempos) * 7 // cols)}",
         "-frames:v", "1", saida])
 
 
@@ -793,6 +830,12 @@ def main():
 
     log("2/7 achando o roteiro e a ordem dos takes pela fala")
     achado = achar_roteiro(falantes, a.producao)
+    if not achado or achado[3] < a.nota_minima:
+        # Se base.en ficou abaixo da nota mínima, re-transcreve com small.en
+        w_arq = {f: palavras(f, usar_small=True) for f in arquivos}
+        d_arq = {f: " ".join(w for w, _, _ in w_arq[f]) for f in arquivos}
+        falantes = {f: t for f, t in d_arq.items() if len(norm(t)) >= 2}
+        achado = achar_roteiro(falantes, a.producao) if falantes else None
     if not achado: sys.exit("Nenhum roteiro encontrado")
     pasta, arq, falas_arq, nota, linhas = achado
     # posição de cada take = número do take (T__) da frase dele no pacote; mudo usa o número do nome do arquivo.
@@ -850,6 +893,12 @@ def main():
         f = dict(takes)[k]
         probs, esc = conferir_fala(words[k], falas[k])
         if any(p.startswith(("faltou", "trocou")) for p in probs):
+            # fallback rápido para small.en no take inteiro antes de fatiar por trechos
+            w_sm = palavras(f, usar_small=True)
+            probs_sm, esc_sm = conferir_fala(w_sm, falas[k])
+            if len(probs_sm) < len(probs):
+                words[k], ditos[k], probs, esc = w_sm, " ".join(w for w, _, _ in w_sm), probs_sm, esc_sm
+        if any(p.startswith(("faltou", "trocou")) for p in probs):
             # segunda escuta, por trechos: palavra "faltando" pode ser só o whisper comendo a ponta do take
             w2 = palavras_por_trechos(f, tmp)
             probs2, esc2 = conferir_fala(w2, falas[k])
@@ -902,8 +951,17 @@ def main():
     up = [int(x) for x in a.up.split(",") if x]
 
     log("4/7 alinhando as palavras do roteiro, cortando e montando a base em paralelo")
+    # Libera faster-whisper ANTES de carregar WhisperX/wav2vec2 (~650 MB), evitando pico duplo na RAM
+    global _modelo, _modelo_small
+    _modelo = None
+    _modelo_small = None
+    import gc
+    gc.collect()
     src = dict(takes)
     alinhado = {k: motor.alinhar_forcado(src[k], falas[k], words[k]) for k in falas}
+    # Libera imediatamente ~650 MB de RAM do modelo de alinhamento (wav2vec2) antes do ffmpeg/render
+    motor._al = None
+    gc.collect()
     sem_al = [k for k, v in alinhado.items() if not v]
     if sem_al:
         rel.append(f"  - aviso: takes sem alinhamento forçado (corte pelo método antigo): {sem_al}")
@@ -945,6 +1003,7 @@ def main():
     usa_rot = all(alinhado.get(k) for k in falas)
     inserts = {x["k"] for x in segs} - {x["k"] for x in segs if not x.get("mute")}
     eventos, duracoes = [], []
+    banda_leg = None
     if estilo == "auraly":
         pages, cur = [], []
         for i, w in enumerate(ws):
@@ -975,34 +1034,41 @@ def main():
                     or nx["k"] != w["k"]):
                 pages.append(cur); cur = []
         pages = juntar_curtas(pages)
-        for n, p in enumerate(pages):
-            st = p[0]["t"] if PLANO_EDITORIAL else (0 if n == 0 else p[0]["t"]); en = pages[n + 1][0]["t"] if n < len(pages) - 1 else total
-            en = min([en] + [x["o"] for x in segs if x["k"] in inserts and x["o"] > st + 0.01])
-            if PLANO_EDITORIAL:
-                en = min([en] + [x["o"] for x in segs if x["k"] != p[0]["k"] and x["o"] > st + 0.01])
-            txt = " ".join(re.sub(r"[.,!?]$", "", w["w"]) for w in p).lower()
-            png = f"{tmp}/leg_{n:03d}.png"
-            pos_legenda = PLANO_EDITORIAL.get("captions", {}) if PLANO_EDITORIAL else {}
+        pos_legenda = PLANO_EDITORIAL.get("captions", {}) if PLANO_EDITORIAL else {}
+        topos_pag = []
+        for p in pages:
             topo_leg = pos_legenda.get("hero_top", 760) if p[0]["k"] in up else pos_legenda.get("top", 880)
             if p[0]["k"] in produto:
                 topo_leg = PRODUTO_TOPO
             if a.legenda_fixa:
                 fixa = a.legenda_gancho if (a.legenda_gancho and p[0]["k"] in up) else a.legenda_fixa
                 topo_leg = max(topo_leg, fixa) if p[0]["k"] in produto else fixa
+            topos_pag.append(topo_leg)
+        if topos_pag:
+            y0_leg = max(0, (min(topos_pag) - 50) // 2 * 2)
+            y1_leg = min(H, (max(topos_pag) + 290 + 1) // 2 * 2)
+            banda_leg = (y0_leg, max(2, y1_leg - y0_leg))
+        for n, (p, topo_leg) in enumerate(zip(pages, topos_pag)):
+            st = p[0]["t"] if PLANO_EDITORIAL else (0 if n == 0 else p[0]["t"]); en = pages[n + 1][0]["t"] if n < len(pages) - 1 else total
+            en = min([en] + [x["o"] for x in segs if x["k"] in inserts and x["o"] > st + 0.01])
+            if PLANO_EDITORIAL:
+                en = min([en] + [x["o"] for x in segs if x["k"] != p[0]["k"] and x["o"] > st + 0.01])
+            txt = " ".join(re.sub(r"[.,!?]$", "", w["w"]) for w in p).lower()
+            png = f"{tmp}/leg_{n:03d}.png"
             if LEGENDA_DINAMICA:  # palavra falada em amarelo, troca no tempo da fala
                 pal = [re.sub(r"[.,!?;:]$", "", w["w"]) for w in p]
                 for j in range(len(p)):
                     a2 = st if j == 0 else max(st, p[j]["t"] - 0.03)
                     b2 = en if j == len(p) - 1 else max(a2, p[j + 1]["t"] - 0.03)
                     pj = f"{tmp}/leg_{n:03d}_{j}.png"
-                    motor.png_dinamica(pal, j, topo_leg, pj, tam=a.legenda_tam)
+                    motor.png_dinamica(pal, j, topo_leg, pj, tam=a.legenda_tam, banda=banda_leg)
                     eventos.append((a2, b2, pj))
             else:
-                motor.png_fitwell(txt, topo_leg, png)
+                motor.png_fitwell(txt, topo_leg, png, banda=banda_leg)
                 eventos.append((st, en, png))
             duracoes.append(en - st)
     npag = len(pages)
-    lista_leg = motor.faixa_legendas(eventos, total, tmp)
+    lista_leg = motor.faixa_legendas(eventos, total, tmp, banda=banda_leg)
     flashes = [max(0, x["o"] - 0.12) for i, x in enumerate(segs) if i > 0 and segs[i - 1]["k"] != x["k"] and x["k"] in leaks]
     selos = None
     if estilo == "auraly":
@@ -1042,7 +1108,8 @@ def main():
 
     log("6/7 render final (1080x1920, um passe)")
     saida = f"{tmp}/{nome}_editado.mp4"
-    motor.render_final(base_final, lista_leg, mix_final, total, saida, flashes, selos, camadas)
+    motor.render_final(base_final, lista_leg, mix_final, total, saida, flashes, selos, camadas,
+                       leg_y=banda_leg[0] if banda_leg else 0)
     heard = ws
 
     log("7/7 conferências")
@@ -1055,8 +1122,12 @@ def main():
         sil = plano_editorial.silencios_nao_autorizados(silencios(f"{tmp}/voz.wav"), segs, PLANO_EDITORIAL, tolerance=1 / FPS)
         rel.append(f"- Ações/pausas protegidas na saída (s): {janelas}; demais silêncios continuam bloqueantes")
     mb = os.path.getsize(saida) / 1e6
-    sheet(f"{tmp}/assets/base.mp4", cortes, f"{tmp}/cortes.png")
-    sh(["ffmpeg", "-loglevel", "error", "-y", "-i", saida, "-vf", "fps=0.7,scale=216:-1,tile=6x3", "-frames:v", "1", f"{tmp}/legendas.png"])
+    hw_in = ["-hwaccel", "videotoolbox"] if sys.platform == "darwin" else []
+    with cf.ThreadPoolExecutor(max_workers=2) as ex_sh:
+        f_c = ex_sh.submit(sheet, f"{tmp}/assets/base.mp4", cortes, f"{tmp}/cortes.png")
+        f_l = ex_sh.submit(sh, ["ffmpeg", "-loglevel", "error", *hw_in, "-threads", "2", "-y", "-i", saida,
+                                "-vf", "fps=0.7,scale=216:-1,tile=6x3", "-frames:v", "1", f"{tmp}/legendas.png"])
+        f_c.result(); f_l.result()
     ok = {
         "Sem silêncio fora da rampa/proteção editorial" if PLANO_EDITORIAL else "Sem silêncio fora da rampa": not sil,
         "Sem quadro fantasma nos cortes": not fant,

@@ -10,6 +10,7 @@ qualidade abaixo de 1080p e demora). Usado pelo editar.py.
 import os
 import re
 import subprocess
+import sys
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 W, H, FPS = 1080, 1920, 30
@@ -29,7 +30,7 @@ def _dur(f):
 _rms10 = {}
 def rms10(f):
     if f not in _rms10:
-        e = subprocess.run(["ffmpeg", "-hide_banner", "-i", f, "-vn", "-af",
+        e = subprocess.run(["ffmpeg", "-hide_banner", "-threads", "2", "-i", f, "-vn", "-af",
                             "aresample=16000,asetnsamples=160,astats=metadata=1:reset=1,"
                             "ametadata=print:key=lavfi.astats.Overall.RMS_level", "-f", "null", "-"],
                            capture_output=True, text=True).stderr
@@ -43,8 +44,20 @@ def alinhar_forcado(f, fala, ws_asr):
     """Tempo de cada palavra do ROTEIRO no take, por alinhamento forçado. Devolve [[palavra, início, fim]] ou None.
     A janela é a da fala que o whisper ouviu (com folga), para o alinhador não espalhar palavra no silêncio."""
     global _al
+    import json
+    cache_p = f"{f}.alinhado.json"
     try:
-        import whisperx
+        st = os.stat(f)
+        chave = f"{int(st.st_mtime)}:{st.st_size}:{fala}"
+        if os.path.exists(cache_p):
+            dc = json.load(open(cache_p))
+            if dc.get("k") == chave and dc.get("out"):
+                return dc["out"]
+    except Exception:
+        chave = None
+    try:
+        import torch, whisperx
+        torch.set_num_threads(2)
         if _al is None:
             _al = whisperx.load_align_model(language_code=IDIOMA, device="cpu")
         modelo, meta = _al
@@ -52,8 +65,9 @@ def alinhar_forcado(f, fala, ws_asr):
         d = len(audio) / 16000
         a0 = max(0.0, ws_asr[0][1] - 0.4) if ws_asr else 0.0
         b0 = min(d, ws_asr[-1][2] + 0.6) if ws_asr else d
-        res = whisperx.align([{"start": a0, "end": b0, "text": fala}], modelo, meta, audio, "cpu",
-                             return_char_alignments=False)
+        with torch.inference_mode():
+            res = whisperx.align([{"start": a0, "end": b0, "text": fala}], modelo, meta, audio, "cpu",
+                                 return_char_alignments=False)
         out = [[w["word"], w.get("start"), w.get("end")] for s in res["segments"] for w in s.get("words", [])]
     except Exception:
         return None
@@ -64,6 +78,11 @@ def alinhar_forcado(f, fala, ws_asr):
             ant = out[i - 1][2] if i else a0
             prox = next((x[1] for x in out[i + 1:] if x[1] is not None), b0)
             w[1], w[2] = ant, ant + max(0.08, (prox - ant) * 0.8)
+    if chave:
+        try:
+            json.dump({"k": chave, "out": out}, open(cache_p, "w"))
+        except Exception:
+            pass
     return out
 
 
@@ -121,23 +140,24 @@ def _fonte(tam):
     return ImageFont.truetype(FONTE, tam)
 
 
-def _desenhar(itens):
+def _desenhar(itens, banda=None):
     """itens: [(texto, x, y, tamanho)] em coordenadas do quadro. Branco com sombra suave (igual o CSS v3)."""
     from PIL import Image, ImageDraw, ImageFilter
-    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    sombra = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    y0, h_img = banda if banda else (0, H)
+    img = Image.new("RGBA", (W, h_img), (0, 0, 0, 0))
+    sombra = Image.new("RGBA", (W, h_img), (0, 0, 0, 0))
     ds = ImageDraw.Draw(sombra)
     for t, x, y, tam in itens:
-        ds.text((x, y + 3), t, font=_fonte(tam), fill=(0, 0, 0, 150))
+        ds.text((x, y + 3 - y0), t, font=_fonte(tam), fill=(0, 0, 0, 150))
     sombra = sombra.filter(ImageFilter.GaussianBlur(6))
     img.alpha_composite(sombra)
     dr = ImageDraw.Draw(img)
     for t, x, y, tam in itens:
-        dr.text((x, y), t, font=_fonte(tam), fill=(255, 255, 255, 255), stroke_width=1, stroke_fill=(0, 0, 0, 130))
+        dr.text((x, y - y0), t, font=_fonte(tam), fill=(255, 255, 255, 255), stroke_width=1, stroke_fill=(0, 0, 0, 130))
     return img
 
 
-def png_fitwell(texto, topo, caminho, tam=64, largura=940):
+def png_fitwell(texto, topo, caminho, tam=64, largura=940, banda=None):
     """Estilo FitWell v3: serifada branca, minúscula, centralizada, quebra em até 2 linhas."""
     f = _fonte(tam)
     palavras, linhas, cur = texto.split(), [], ""
@@ -151,7 +171,7 @@ def png_fitwell(texto, topo, caminho, tam=64, largura=940):
         linhas.append(cur)
     alt = int(tam * 1.15)
     itens = [(l, (W - f.getlength(l)) / 2, topo + i * alt, tam) for i, l in enumerate(linhas)]
-    _desenhar(itens).save(caminho)
+    _desenhar(itens, banda=banda).save(caminho)
 
 
 def layout_auraly(palavras, big, topo=960, larg=600, tam=66, tam_big=160, gap=20):
@@ -237,11 +257,12 @@ def png_selos(caminho):
     img.save(caminho)
 
 
-def faixa_legendas(eventos, total, tmp):
+def faixa_legendas(eventos, total, tmp, banda=None):
     """eventos: [(início, fim, png)] sem sobreposição. Escreve a lista do concat (com PNG vazio nos buracos)."""
     from PIL import Image
     vazio = os.path.join(tmp, "leg_vazio.png")
-    Image.new("RGBA", (W, H), (0, 0, 0, 0)).save(vazio)
+    h_img = banda[1] if banda else H
+    Image.new("RGBA", (W, h_img), (0, 0, 0, 0)).save(vazio, compress_level=1)
     linhas, t = ["ffconcat version 1.0"], 0.0
     for a, b, png in sorted(eventos):
         if a > t + 1e-3:
@@ -261,20 +282,38 @@ def _n_in(ins):
     return sum(1 for x in ins if x == "-i")
 
 
-def render_final(base, lista_leg, mix, total, saida, flashes=(), selos=None, camadas=()):
-    """Um passe: base 1080p + camadas transparentes da HyperFrames (webm, deslocamento vertical) + faixa de
-    legendas + selos + flash + mix -> H.264 CRF 17, 30 fps. `lista_leg` None = sem legenda Pillow."""
-    ins, fil, ult = ["-i", base, "-i", mix], [], "0:v"
+def render_final(base, lista_leg, mix, total, saida, flashes=(), selos=None, camadas=(), leg_y=0):
+    """Um passe: base 1080p + clipes curtos de zoom de pico + camadas transparentes da HyperFrames + faixa de
+    legendas + selos + flash + mix -> H.264, 30 fps. `lista_leg` None = sem legenda Pillow."""
+    import json
+    usa_vt = sys.platform == "darwin"
+    hw_in = ["-hwaccel", "videotoolbox"] if usa_vt else []
+    ins, fil, ult = [*hw_in, "-threads", "2", "-i", base, "-threads", "1", "-i", mix], [], "0:v"
+    if os.path.basename(base) == "base.mp4":
+        zc_file = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(base))), "zoom_clips.json")
+        if os.path.exists(zc_file):
+            try:
+                for idx_z, (zmp4, a0, b0) in enumerate(json.load(open(zc_file))):
+                    if os.path.exists(zmp4):
+                        ins += ["-threads", "1", "-i", zmp4]
+                        in_k = _n_in(ins) - 1
+                        fil.append(f"[{in_k}:v]setpts=PTS+{float(a0):.4f}/TB[zv{idx_z}];"
+                                   f"[{ult}][zv{idx_z}]overlay=0:0:enable='between(t,{float(a0):.4f},{float(b0):.4f})':eof_action=pass[vz{idx_z}]")
+                        ult = f"vz{idx_z}"
+            except Exception:
+                pass
     for i, (webm, dy) in enumerate(camadas):
-        ins += ["-c:v", "libvpx-vp9", "-i", webm]
-        fil.append(f"[{ult}][{2 + i}:v]overlay=0:{int(dy)}:format=auto:eof_action=pass[vc{i}]")
+        ins += ["-threads", "2", "-c:v", "libvpx-vp9", "-i", webm]
+        in_k = _n_in(ins) - 1
+        fil.append(f"[{ult}][{in_k}:v]overlay=0:{int(dy)}:format=auto:eof_action=pass[vc{i}]")
         ult = f"vc{i}"
     if lista_leg:
-        ins += ["-f", "concat", "-safe", "0", "-i", lista_leg]
-        fil += [f"[{2 + len(camadas)}:v]fps={FPS},format=rgba[lg]", f"[{ult}][lg]overlay=0:0:format=auto[v0]"]
+        ins += ["-threads", "2", "-f", "concat", "-safe", "0", "-i", lista_leg]
+        in_k = _n_in(ins) - 1
+        fil += [f"[{in_k}:v]fps={FPS},format=rgba[lg]", f"[{ult}][lg]overlay=0:{int(leg_y)}:format=auto[v0]"]
         ult = "v0"
     if selos:
-        ins += ["-loop", "1", "-i", selos]
+        ins += ["-threads", "1", "-loop", "1", "-i", selos]
         fil += [f"[{ult}][{_n_in(ins) - 1}:v]overlay=0:0:format=auto:shortest=1[vs]"]
         ult = "vs"
     for i, t in enumerate(flashes):
@@ -284,21 +323,28 @@ def render_final(base, lista_leg, mix, total, saida, flashes=(), selos=None, cam
         ult = f"vf{i}"
     if not fil:
         fil = ["[0:v]null[vn]"]; ult = "vn"
-    _sh(["ffmpeg", "-y", "-loglevel", "error", *ins, "-filter_complex", ";".join(fil), "-map", f"[{ult}]", "-map", "1:a",
-         "-t", f"{total:.3f}", "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-profile:v", "high",
+    v_enc = (["-c:v", "h264_videotoolbox", "-q:v", "68", "-profile:v", "high"]
+             if usa_vt else ["-c:v", "libx264", "-crf", "17", "-preset", "veryfast", "-threads", "2", "-profile:v", "high"])
+    _sh(["ffmpeg", "-y", "-loglevel", "error", "-filter_threads", "2", "-filter_complex_threads", "2", *ins,
+         "-filter_complex", ";".join(fil), "-map", f"[{ult}]", "-map", "1:a",
+         "-t", f"{total:.3f}", *v_enc,
          "-pix_fmt", "yuv420p", "-r", str(FPS), "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", saida])
 
 
 # ---------- legenda dinâmica (Luigi, 2026-10-13: "mais dinâmica, que chame atenção", sem render HyperFrames) ----------
 FONTE_DIN = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts", "Montserrat900.woff2")
 AMARELO = (255, 214, 10, 255)
+_cache_fontes_din = {}
 
 
-def png_dinamica(palavras, ativa, topo, caminho, tam=86, largura=960):
+def png_dinamica(palavras, ativa, topo, caminho, tam=86, largura=960, banda=None):
     """Caixa alta Montserrat 900, branca com contorno preto grosso; a palavra falada agora fica amarela e 15% maior.
     Uma imagem por palavra da página: troca no tempo da fala (efeito karaokê)."""
     from PIL import Image, ImageDraw, ImageFilter, ImageFont
-    fn = lambda t: ImageFont.truetype(FONTE_DIN, t)
+    def fn(t):
+        if t not in _cache_fontes_din:
+            _cache_fontes_din[t] = ImageFont.truetype(FONTE_DIN, t)
+        return _cache_fontes_din[t]
     ws = [p.upper() for p in palavras]
     tams = [int(tam * 1.15) if i == ativa else tam for i in range(len(ws))]
     esp = int(tam * 0.28)
@@ -310,8 +356,13 @@ def png_dinamica(palavras, ativa, topo, caminho, tam=86, largura=960):
         cur.append((i, w, lw)); larg += (esp if len(cur) > 1 else 0) + lw
     if cur:
         linhas.append(cur)
-    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    sombra = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    y_base, h_img = banda if banda else (0, H)
+    img = Image.new("RGBA", (W, h_img), (0, 0, 0, 0))
+    y_min = max(y_base, topo - 40)
+    alt_estimada = len(linhas) * int(max(tams or [tam]) * 1.3) + 100
+    y_max = min(y_base + h_img, topo + alt_estimada)
+    faixa_h = max(1, y_max - y_min)
+    sombra = Image.new("RGBA", (W, faixa_h), (0, 0, 0, 0))
     ds, y = ImageDraw.Draw(sombra), topo
     pos = []
     for ln in linhas:
@@ -321,12 +372,12 @@ def png_dinamica(palavras, ativa, topo, caminho, tam=86, largura=960):
         for i, w, lw in ln:
             yy = y + (alt - tams[i]) * 0.75
             pos.append((i, w, x, yy))
-            ds.text((x, yy + 6), w, font=fn(tams[i]), fill=(0, 0, 0, 170))
+            ds.text((x, yy + 6 - y_min), w, font=fn(tams[i]), fill=(0, 0, 0, 170))
             x += lw + esp
         y += int(alt * 1.12)
-    img.alpha_composite(sombra.filter(ImageFilter.GaussianBlur(8)))
+    img.alpha_composite(sombra.filter(ImageFilter.GaussianBlur(8)), (0, y_min - y_base))
     dr = ImageDraw.Draw(img)
     for i, w, x, yy in pos:
-        dr.text((x, yy), w, font=fn(tams[i]), fill=AMARELO if i == ativa else (255, 255, 255, 255),
+        dr.text((x, yy - y_base), w, font=fn(tams[i]), fill=AMARELO if i == ativa else (255, 255, 255, 255),
                 stroke_width=9, stroke_fill=(0, 0, 0, 255))
-    img.save(caminho)
+    img.save(caminho, compress_level=1)
