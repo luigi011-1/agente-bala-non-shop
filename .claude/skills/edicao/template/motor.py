@@ -18,8 +18,33 @@ IDIOMA = "en"
 FONTE = os.path.join(AQUI, "fonts", "Merriweather900.ttf")
 
 
+def _sem_vt(cmd):
+    """Mesmo comando ffmpeg sem VideoToolbox (decoder e encoder por hardware -> libx264)."""
+    out, i = [], 0
+    while i < len(cmd):
+        x = cmd[i]
+        if x == "-hwaccel" and i + 1 < len(cmd) and cmd[i + 1] == "videotoolbox":
+            i += 2; continue
+        if x == "-q:v" and i + 1 < len(cmd):
+            i += 2; continue
+        out += ["libx264", "-crf", "17", "-preset", "veryfast"] if x == "h264_videotoolbox" else [x]
+        i += 1
+    return out
+
+
 def _sh(cmd):
-    return subprocess.run(cmd, check=True, capture_output=True, text=True).stdout
+    """Roda e devolve o stdout. ffmpeg sempre com -nostdin (em segundo plano ele parava esperando teclado) e, se o
+    h264_videotoolbox falhar (sessão do Media Engine recusada com 3 edições + aparo em paralelo), refaz uma vez em
+    libx264 em vez de derrubar o vídeo inteiro."""
+    if cmd and cmd[0] == "ffmpeg" and "-nostdin" not in cmd:
+        cmd = [cmd[0], "-nostdin", *cmd[1:]]
+    try:
+        return subprocess.run(cmd, check=True, capture_output=True, text=True, stdin=subprocess.DEVNULL).stdout
+    except subprocess.CalledProcessError:
+        if not (cmd and cmd[0] == "ffmpeg" and "videotoolbox" in " ".join(cmd)):
+            raise
+        print("[aviso] VideoToolbox falhou; refazendo este passo em libx264", flush=True)
+        return subprocess.run(_sem_vt(cmd), check=True, capture_output=True, text=True, stdin=subprocess.DEVNULL).stdout
 
 
 def _dur(f):

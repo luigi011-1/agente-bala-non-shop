@@ -44,11 +44,14 @@ MUSICA_DB = -18  # Luigi, 2026-10-10: -18 dB (cama do media-use da HyperFrames, 
 
 
 def sh(cmd, **kw):
-    return subprocess.run(cmd, shell=isinstance(cmd, str), check=True, capture_output=True, text=True, **kw).stdout
+    if isinstance(cmd, list) and not kw:
+        return motor._sh(cmd)  # -nostdin + fallback libx264 se o h264_videotoolbox falhar
+    return subprocess.run(cmd, shell=isinstance(cmd, str), check=True, capture_output=True, text=True,
+                          stdin=subprocess.DEVNULL, **kw).stdout
 
 
 def sh_err(cmd):
-    return subprocess.run(cmd, shell=True, capture_output=True, text=True).stderr
+    return subprocess.run(cmd, shell=True, capture_output=True, text=True, stdin=subprocess.DEVNULL).stderr
 
 
 _rms = {}
