@@ -2704,6 +2704,71 @@
    "legenda": "padrao",
    "sfx": "sutil",
    "fonte_pico": "anton"
+  },
+  "hidra_L-20261103-154636-001/L-20261103-154636-001__Lorraine25": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261103-162149-001/L-20261103-162149-001__Nicole23": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261103-162149-004/L-20261103-162149-004__Dolores33": {
+   "legenda": "padrao",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261103-162149-003/L-20261103-162149-003__Kimberly18": {
+   "legenda": "caption-highlight",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261103-162149-007/L-20261103-162149-007__Megan24": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261103-162149-002/L-20261103-162149-002__Frank15": {
+   "legenda": "padrao",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261103-162149-005/L-20261103-162149-005__Raj15": {
+   "legenda": "caption-highlight",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261103-162149-008/L-20261103-162149-008__Wade13": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261103-162149-009/L-20261103-162149-009__Wendy31": {
+   "legenda": "padrao",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261103-162149-010/L-20261103-162149-010__Peggy34": {
+   "legenda": "caption-highlight",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261103-162149-006/L-20261103-162149-006__Wendy30": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261103-162149-011/L-20261103-162149-011__Roy14": {
+   "legenda": "padrao",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261103-162149-012/L-20261103-162149-012__Vivian27": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
   }
  }
 }
