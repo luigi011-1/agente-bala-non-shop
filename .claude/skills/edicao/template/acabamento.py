@@ -22,13 +22,16 @@ import math
 import os
 import re
 import shutil
+import signal
 import subprocess
 import sys
+import threading
 
 import numpy as np
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 W, H, FPS = 1080, 1920, 30
+PRAZO_FFMPEG = float(os.environ.get("ACABAMENTO_TIMEOUT") or 300)
 HF = ["npx", "-y", "hyperframes@0.8.153"]
 # fonte da palavra de pico: a do DNA "loud" do embedded-captions (Anton, caixa-alta condensada); serifada = a nossa
 FONTES_PICO = {"anton": ("Anton400.woff2", "Anton", 400), "serifada": ("Merriweather900.woff2", "Merri", 900),
@@ -47,11 +50,93 @@ VAZIAS.update({"el", "la", "los", "las", "un", "una", "y", "o", "de", "del", "en
                "con", "que", "te", "tu", "tus", "mi", "mis", "yo", "es", "no", "si", "se", "lo", "le", "les"})
 
 
+def _sem_vt(cmd):
+    """Mesmo comando ffmpeg sem VideoToolbox (decoder e encoder por hardware -> libx264)."""
+    out, i = [], 0
+    while i < len(cmd):
+        x = cmd[i]
+        if x == "-hwaccel" and i + 1 < len(cmd) and cmd[i + 1] == "videotoolbox":
+            i += 2; continue
+        if x in ("-q:v", "-bf") and i + 1 < len(cmd):
+            i += 2; continue
+        out += ["libx264", "-crf", "17", "-preset", "veryfast"] if "videotoolbox" in x else [x]
+        i += 1
+    return out
+
+
+def _vt_encoder():
+    """Encoder de hardware VideoToolbox; permite forçar falha em teste via ACABAMENTO_FORCAR_FALHA_VT=1 ou ACABAMENTO_VT_ENCODER."""
+    if os.environ.get("ACABAMENTO_FORCAR_FALHA_VT") == "1":
+        return "h264_videotoolbox_forcar_falha"
+    return os.environ.get("ACABAMENTO_VT_ENCODER") or "h264_videotoolbox"
+
+
+def _matar_grupo(*procs):
+    """Envia SIGKILL para o grupo de processos de cada Popen ainda ativo (seguro para chamar de thread de timer)."""
+    for p in procs:
+        if p is not None and p.poll() is None:
+            try:
+                os.killpg(p.pid, signal.SIGKILL)
+            except OSError:
+                try:
+                    p.kill()
+                except OSError:
+                    pass
+
+
+def _matar_pipeline(*procs):
+    """Fecha pipes, mata grupos de processos ainda vivos e colhe todos os filhos (sem processo órfão/zumbi)."""
+    _matar_grupo(*procs)
+    for p in procs:
+        if p is None:
+            continue
+        for s in (p.stdin, p.stdout, p.stderr):
+            if s is not None:
+                try:
+                    s.close()
+                except OSError:
+                    pass
+        try:
+            p.wait(timeout=5)
+        except Exception:
+            pass
+
+
+def _rodar(cmd, text=True, check=True, timeout=None, **kw):
+    """Roda subprocesso com -nostdin (no ffmpeg), stdin=DEVNULL, sessão própria e killpg no timeout/erro."""
+    if cmd and cmd[0] == "ffmpeg" and "-nostdin" not in cmd:
+        cmd = [cmd[0], "-nostdin", *cmd[1:]]
+    kw.setdefault("stdin", subprocess.DEVNULL)
+    kw.setdefault("stdout", subprocess.PIPE)
+    kw.setdefault("stderr", subprocess.PIPE)
+    prazo = float(os.environ.get("ACABAMENTO_TIMEOUT") or PRAZO_FFMPEG) if timeout is None else float(timeout)
+    with subprocess.Popen(cmd, text=text, start_new_session=True, **kw) as p:
+        try:
+            out, err = p.communicate(timeout=prazo)
+        except BaseException:
+            _matar_pipeline(p)
+            raise
+    r = subprocess.CompletedProcess(cmd, p.returncode, out, err)
+    if check:
+        r.check_returncode()
+    return r
+
+
 def _sh(cmd, **kw):
+    if cmd and cmd[0] == "ffmpeg" and "-nostdin" not in cmd:
+        cmd = [cmd[0], "-nostdin", *cmd[1:]]
     try:
-        return subprocess.run(cmd, check=True, capture_output=True, text=True, **kw).stdout
-    except subprocess.CalledProcessError as erro:
-        print((erro.stdout or "")[-4000:] + (erro.stderr or "")[-4000:], flush=True)
+        return _rodar(cmd, text=True, check=True, **kw).stdout
+    except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as erro:
+        if cmd and cmd[0] == "ffmpeg" and "videotoolbox" in " ".join(cmd):
+            print("[aviso] VideoToolbox falhou; refazendo este passo em libx264", flush=True)
+            try:
+                return _rodar(_sem_vt(cmd), text=True, check=True, **kw).stdout
+            except subprocess.CalledProcessError as erro2:
+                print((erro2.stdout or "")[-4000:] + (erro2.stderr or "")[-4000:], flush=True)
+                raise
+        if isinstance(erro, subprocess.CalledProcessError):
+            print((erro.stdout or "")[-4000:] + (erro.stderr or "")[-4000:], flush=True)
         raise
 
 
@@ -124,8 +209,8 @@ def recortar(base, picos, tmp, log=print):
 
 def _alfas(webm):
     """Todos os quadros de alfa (uint8, H x W) de um webm transparente."""
-    raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-c:v", "libvpx-vp9", "-i", webm, "-vf", "alphaextract",
-                          "-pix_fmt", "gray", "-f", "rawvideo", "-"], capture_output=True, check=True).stdout
+    raw = _rodar(["ffmpeg", "-nostdin", "-loglevel", "error", "-c:v", "libvpx-vp9", "-i", webm, "-vf", "alphaextract",
+                  "-pix_fmt", "gray", "-f", "rawvideo", "-"], text=False, check=True).stdout
     return np.frombuffer(raw, np.uint8).reshape(-1, H, W)
 
 
@@ -167,8 +252,8 @@ def medir(picos, base, fonte="anton"):
         _, cy, occ = melhor
         p.update(tam=tam, cy=int(cy), occ=round(occ, 2), fonte=fonte)
         # cor: fundo claro atrás da palavra pede texto escuro (screen em fundo claro some)
-        raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", f"{p['t']:.3f}", "-i", base, "-frames:v", "1",
-                              "-pix_fmt", "gray", "-f", "rawvideo", "-"], capture_output=True, check=True).stdout
+        raw = _rodar(["ffmpeg", "-nostdin", "-loglevel", "error", "-ss", f"{p['t']:.3f}", "-i", base, "-frames:v", "1",
+                      "-pix_fmt", "gray", "-f", "rawvideo", "-"], text=False, check=True).stdout
         cinza = np.frombuffer(raw, np.uint8).reshape(H, W)[cy - alt // 2:cy + alt // 2, x0:x1]
         fora = ~uniao[cy - alt // 2:cy + alt // 2, x0:x1]
         lum = float(cinza[fora].mean()) if fora.any() else 100.0
@@ -231,7 +316,7 @@ def _render(pasta, html, saida, log):
     for arq, _, _ in FONTES_PICO.values():
         shutil.copy(os.path.join(AQUI, "fonts", arq), f"{pasta}/fonts/")
     open(f"{pasta}/index.html", "w", encoding="utf8").write(html)
-    out = subprocess.run(HF + ["lint", "."], cwd=pasta, capture_output=True, text=True)
+    out = _rodar(HF + ["lint", "."], cwd=pasta, text=True, check=False)
     erros = re.search(r"(\d+) error\(s\)", out.stdout + out.stderr)
     if erros and int(erros.group(1)):
         raise RuntimeError(f"lint HyperFrames com erro em {pasta}:\n{out.stdout[-2000:]}")
@@ -303,6 +388,87 @@ def compor_apenas_picos(base, picos, total, tmp):
     import cv2
     tam = W * H * 3
 
+    def _rodar_pico(p, a0, n_frames, zmp4, usa_vt):
+        hw_in = ["-hwaccel", "videotoolbox"] if (usa_vt and sys.platform == "darwin") else []
+        v_enc = (["-c:v", _vt_encoder(), "-q:v", "76", "-profile:v", "high", "-bf", "0"]
+                 if usa_vt else ["-c:v", "libx264", "-crf", "16", "-preset", "ultrafast", "-profile:v", "high"])
+        lb = enc = None
+        estourou = [False]
+        prazo = float(os.environ.get("ACABAMENTO_TIMEOUT") or PRAZO_FFMPEG)
+
+        def _on_timeout():
+            estourou[0] = True
+            _matar_grupo(lb, enc)
+
+        timer = threading.Timer(prazo, _on_timeout)
+        timer.daemon = True
+        try:
+            lb = subprocess.Popen(
+                ["ffmpeg", "-nostdin", "-loglevel", "error", "-threads", "2", *hw_in,
+                 "-ss", f"{a0:.4f}", "-i", base, "-frames:v", str(n_frames),
+                 "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
+                stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE, start_new_session=True)
+            enc = subprocess.Popen(
+                ["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-threads", "2",
+                 "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
+                 *v_enc, "-pix_fmt", "yuv420p", zmp4],
+                stdin=subprocess.PIPE, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, start_new_session=True)
+            timer.start()
+            lidos = 0
+            lb_eof = False
+            try:
+                for i in range(n_frames):
+                    buf = lb.stdout.read(tam)
+                    if len(buf) < tam:
+                        lb_eof = True
+                        break
+                    t = a0 + (i / FPS)
+                    z, cx, cy = _z(t, [p])
+                    q_u8 = np.frombuffer(buf, np.uint8).reshape(H, W, 3)
+                    if z > 1.0005:
+                        m = np.float32([[z, 0, cx - cx * z], [0, z, cy - cy * z]])
+                        q_u8 = cv2.warpAffine(q_u8, m, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+                    enc.stdin.write(q_u8.tobytes())
+                    lidos += 1
+            except BrokenPipeError:
+                pass
+            if enc.stdin:
+                try:
+                    enc.stdin.close()
+                except OSError:
+                    pass
+            if lb.stdout:
+                try:
+                    lb.stdout.close()
+                except OSError:
+                    pass
+            enc.wait(timeout=max(1.0, prazo))
+            if lb_eof:
+                lb.wait(timeout=5)
+            if estourou[0]:
+                raise subprocess.TimeoutExpired("ffmpeg zoom pipeline", prazo)
+            if (n_frames > 0 and lidos == 0) or enc.returncode != 0 or (lb_eof and lb.returncode not in (0, None)):
+                err_msg = ""
+                for proc in (enc, lb):
+                    if proc and proc.stderr:
+                        try:
+                            err_msg += proc.stderr.read().decode("utf-8", errors="ignore")
+                        except Exception:
+                            pass
+                raise RuntimeError(f"falha no zoom_pico (lidos={lidos}/{n_frames}, enc={enc.returncode}, lb={lb.returncode}): {err_msg[-500:]}")
+            if not os.path.exists(zmp4) or os.path.getsize(zmp4) == 0:
+                raise RuntimeError("zoom_pico gerou arquivo vazio")
+        except BaseException:
+            if os.path.exists(zmp4):
+                try:
+                    os.remove(zmp4)
+                except OSError:
+                    pass
+            raise
+        finally:
+            timer.cancel()
+            _matar_pipeline(lb, enc)
+
     def _um_pico(arg):
         idx, p = arg
         f_ini = max(0, int(p["a"] * FPS))
@@ -312,89 +478,150 @@ def compor_apenas_picos(base, picos, total, tmp):
         a0, b0 = f_ini / FPS, f_fim / FPS
         n_frames = f_fim - f_ini
         zmp4 = f"{tmp}/assets/zoom_{idx}.mp4"
-        lb = subprocess.Popen(["ffmpeg", "-loglevel", "error", "-threads", "2", "-ss", f"{a0:.4f}", "-i", base,
-                               "-frames:v", str(n_frames), "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
-                              stdout=subprocess.PIPE)
-        enc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-threads", "2", "-f", "rawvideo", "-pix_fmt", "rgb24",
-                                "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-                                "-c:v", "libx264", "-crf", "16", "-preset", "ultrafast", "-pix_fmt", "yuv420p", zmp4],
-                               stdin=subprocess.PIPE)
-        for i in range(n_frames):
-            buf = lb.stdout.read(tam)
-            if len(buf) < tam:
-                break
-            t = a0 + (i / FPS)
-            z, cx, cy = _z(t, [p])
-            q_u8 = np.frombuffer(buf, np.uint8).reshape(H, W, 3)
-            if z > 1.0005:
-                m = np.float32([[z, 0, cx - cx * z], [0, z, cy - cy * z]])
-                q_u8 = cv2.warpAffine(q_u8, m, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
-            enc.stdin.write(q_u8.tobytes())
-        enc.stdin.close(); enc.wait(); lb.wait()
-        if enc.returncode == 0 and os.path.exists(zmp4):
-            return [zmp4, round(a0, 4), round(b0, 4)]
-        return None
+        tentar_vt = bool(os.environ.get("ACABAMENTO_FORCAR_FALHA_VT") == "1"
+                         or os.environ.get("ACABAMENTO_VT_ENCODER")
+                         or os.environ.get("ACABAMENTO_ZOOM_VT") == "1")
+        if tentar_vt:
+            try:
+                _rodar_pico(p, a0, n_frames, zmp4, usa_vt=True)
+                return [zmp4, round(a0, 4), round(b0, 4)]
+            except (RuntimeError, OSError, subprocess.SubprocessError) as erro:
+                print(f"[aviso] VideoToolbox falhou no zoom de pico ({type(erro).__name__}); refazendo em libx264", flush=True)
+        _rodar_pico(p, a0, n_frames, zmp4, usa_vt=False)
+        return [zmp4, round(a0, 4), round(b0, 4)]
 
     with cf.ThreadPoolExecutor(max_workers=max(1, min(3, len(picos)))) as ex:
         res = list(ex.map(_um_pico, enumerate(picos)))
     return [r for r in res if r is not None]
 
 
+def _compor_tentativa(base, picos_webm, picos, total, saida, zoom, usa_vt):
+    import cv2
+    n = round(total * FPS)
+    hw_in = ["-hwaccel", "videotoolbox"] if (usa_vt and sys.platform == "darwin") else []
+    v_enc = (["-c:v", _vt_encoder(), "-q:v", "74", "-profile:v", "high"]
+             if usa_vt else ["-c:v", "libx264", "-crf", "12", "-preset", "veryfast", "-threads", "2", "-profile:v", "high"])
+    lb = lp = enc = None
+    estourou = [False]
+    prazo = float(os.environ.get("ACABAMENTO_TIMEOUT") or PRAZO_FFMPEG)
+
+    def _on_timeout():
+        estourou[0] = True
+        _matar_grupo(lb, lp, enc)
+
+    timer = threading.Timer(prazo, _on_timeout)
+    timer.daemon = True
+    try:
+        lb = subprocess.Popen(
+            ["ffmpeg", "-nostdin", "-loglevel", "error", *hw_in, "-i", base, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
+            stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE, start_new_session=True)
+        lp = subprocess.Popen(
+            ["ffmpeg", "-nostdin", "-loglevel", "error", "-c:v", "libvpx-vp9", "-i", picos_webm, "-f", "rawvideo",
+             "-pix_fmt", "rgba", "-"],
+            stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE, start_new_session=True) if picos_webm else None
+        enc = subprocess.Popen(
+            ["ffmpeg", "-nostdin", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
+             "-r", str(FPS), "-i", "-", *v_enc, "-pix_fmt", "yuv420p", "-g", "15", saida],
+            stdin=subprocess.PIPE, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, start_new_session=True)
+        timer.start()
+        alfas = {}
+        tam = W * H * 3
+        lidos = 0
+        lb_eof = False
+        try:
+            for i in range(n):
+                buf = lb.stdout.read(tam)
+                if len(buf) < tam:
+                    lb_eof = True
+                    break
+                txt = lp.stdout.read(W * H * 4) if lp else b""
+                t = i / FPS
+                ativo = [p for p in picos if p["f0"] <= i < p["f1"]]
+                z, cx, cy = _z(t, picos) if zoom else (1.0, 0, 0)
+                if not ativo and z == 1.0:
+                    enc.stdin.write(buf)
+                    lidos += 1
+                    continue
+                if ativo and len(txt) == W * H * 4:
+                    q = np.frombuffer(buf, np.uint8).reshape(H, W, 3).astype(np.float32)
+                    p = ativo[0]
+                    if id(p) not in alfas:
+                        alfas.clear(); alfas[id(p)] = _alfas(p["fg"])
+                    al = alfas[id(p)]
+                    corpo = al[min(len(al) - 1, i - p["f0"])].astype(np.float32) / 255
+                    tx = np.frombuffer(txt, np.uint8).reshape(H, W, 4).astype(np.float32)
+                    a = (tx[..., 3] / 255) * (1 - corpo)       # a palavra só aparece fora do corpo
+                    q = q * (1 - a[..., None]) + tx[..., :3] * a[..., None]
+                    if z != 1.0:
+                        m = np.float32([[z, 0, cx - cx * z], [0, z, cy - cy * z]])
+                        q = cv2.warpAffine(q, m, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+                    enc.stdin.write(np.clip(q, 0, 255).astype(np.uint8).tobytes())
+                else:
+                    q_u8 = np.frombuffer(buf, np.uint8).reshape(H, W, 3)
+                    if z != 1.0:
+                        m = np.float32([[z, 0, cx - cx * z], [0, z, cy - cy * z]])
+                        q_u8 = cv2.warpAffine(q_u8, m, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+                    enc.stdin.write(q_u8.tobytes())
+                lidos += 1
+        except BrokenPipeError:
+            pass
+        if enc.stdin:
+            try:
+                enc.stdin.close()
+            except OSError:
+                pass
+        for proc in (lb, lp):
+            if proc and proc.stdout:
+                try:
+                    proc.stdout.close()
+                except OSError:
+                    pass
+        enc.wait(timeout=max(1.0, prazo))
+        if lb_eof:
+            lb.wait(timeout=5)
+        if lp:
+            try:
+                lp.wait(timeout=5)
+            except Exception:
+                pass
+        if estourou[0]:
+            raise subprocess.TimeoutExpired("ffmpeg compor pipeline", prazo)
+        if (n > 0 and lidos == 0) or enc.returncode != 0 or (lb_eof and lb.returncode not in (0, None)):
+            err_msg = ""
+            for proc in (enc, lb, lp):
+                if proc and proc.stderr:
+                    try:
+                        err_msg += proc.stderr.read().decode("utf-8", errors="ignore")
+                    except Exception:
+                        pass
+            raise RuntimeError(f"falha ao gravar a base com acabamento (lidos={lidos}/{n}, enc={enc.returncode}, lb={lb.returncode}): {err_msg[-500:]}")
+        if not os.path.exists(saida) or os.path.getsize(saida) == 0:
+            raise RuntimeError("falha ao gravar a base com acabamento (arquivo vazio)")
+    except BaseException:
+        if os.path.exists(saida):
+            try:
+                os.remove(saida)
+            except OSError:
+                pass
+        raise
+    finally:
+        timer.cancel()
+        _matar_pipeline(lb, lp, enc)
+
+
 def compor(base, picos_webm, picos, total, saida, zoom=True, log=print):
     if not picos_webm and (not zoom or not picos):
         shutil.copy2(base, saida)
         return
-    import cv2
-    n = round(total * FPS)
-    usa_vt = sys.platform == "darwin"
-    hw_in = ["-hwaccel", "videotoolbox"] if usa_vt else []
-    lb = subprocess.Popen(["ffmpeg", "-loglevel", "error", *hw_in, "-i", base, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
-                          stdout=subprocess.PIPE)
-    lp = subprocess.Popen(["ffmpeg", "-loglevel", "error", "-c:v", "libvpx-vp9", "-i", picos_webm, "-f", "rawvideo",
-                           "-pix_fmt", "rgba", "-"], stdout=subprocess.PIPE) if picos_webm else None
-    v_enc = (["-c:v", "h264_videotoolbox", "-q:v", "74", "-profile:v", "high"]
-             if usa_vt else ["-c:v", "libx264", "-crf", "12", "-preset", "veryfast", "-threads", "2"])
-    enc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
-                            "-r", str(FPS), "-i", "-", *v_enc,
-                            "-pix_fmt", "yuv420p", "-g", "15", saida], stdin=subprocess.PIPE)
-    alfas = {}
-    tam = W * H * 3
-    for i in range(n):
-        buf = lb.stdout.read(tam)
-        if len(buf) < tam:
-            break
-        txt = lp.stdout.read(W * H * 4) if lp else b""
-        t = i / FPS
-        ativo = [p for p in picos if p["f0"] <= i < p["f1"]]
-        z, cx, cy = _z(t, picos) if zoom else (1.0, 0, 0)
-        if not ativo and z == 1.0:
-            enc.stdin.write(buf)
-            continue
-        if ativo and len(txt) == W * H * 4:
-            q = np.frombuffer(buf, np.uint8).reshape(H, W, 3).astype(np.float32)
-            p = ativo[0]
-            if id(p) not in alfas:
-                alfas.clear(); alfas[id(p)] = _alfas(p["fg"])
-            al = alfas[id(p)]
-            corpo = al[min(len(al) - 1, i - p["f0"])].astype(np.float32) / 255
-            tx = np.frombuffer(txt, np.uint8).reshape(H, W, 4).astype(np.float32)
-            a = (tx[..., 3] / 255) * (1 - corpo)       # a palavra só aparece fora do corpo
-            q = q * (1 - a[..., None]) + tx[..., :3] * a[..., None]
-            if z != 1.0:
-                m = np.float32([[z, 0, cx - cx * z], [0, z, cy - cy * z]])
-                q = cv2.warpAffine(q, m, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
-            enc.stdin.write(np.clip(q, 0, 255).astype(np.uint8).tobytes())
-        else:
-            q_u8 = np.frombuffer(buf, np.uint8).reshape(H, W, 3)
-            if z != 1.0:
-                m = np.float32([[z, 0, cx - cx * z], [0, z, cy - cy * z]])
-                q_u8 = cv2.warpAffine(q_u8, m, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
-            enc.stdin.write(q_u8.tobytes())
-    enc.stdin.close(); enc.wait(); lb.wait()
-    if lp:
-        lp.stdout.close(); lp.wait()
-    if enc.returncode:
-        raise RuntimeError("falha ao gravar a base com acabamento")
+    usa_vt = (sys.platform == "darwin" and os.environ.get("ACABAMENTO_SEM_VT") != "1") or bool(
+        os.environ.get("ACABAMENTO_FORCAR_FALHA_VT") == "1" or os.environ.get("ACABAMENTO_VT_ENCODER"))
+    if usa_vt:
+        try:
+            _compor_tentativa(base, picos_webm, picos, total, saida, zoom, usa_vt=True)
+            return
+        except (RuntimeError, OSError, subprocess.SubprocessError) as erro:
+            log(f"[aviso] VideoToolbox falhou no acabamento ({type(erro).__name__}); refazendo em libx264")
+    _compor_tentativa(base, picos_webm, picos, total, saida, zoom, usa_vt=False)
 
 
 # ---------- 5. SFX ----------

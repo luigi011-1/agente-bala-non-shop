@@ -54,10 +54,20 @@ def sh_err(cmd):
     return subprocess.run(cmd, shell=True, capture_output=True, text=True, stdin=subprocess.DEVNULL).stderr
 
 
+def _chave_arq(f):
+    real = os.path.abspath(f)
+    try:
+        st = os.stat(real)
+        return (real, st.st_mtime_ns, st.st_size)
+    except OSError:
+        return (real, 0, 0)
+
+
 _rms = {}
 def rms_janelas(f):
     """Volume médio (dB) de cada janela de 50 ms do áudio do take (reaproveita motor.rms10 para não abrir ffmpeg 2x)."""
-    if f not in _rms:
+    kf = _chave_arq(f)
+    if kf not in _rms:
         import math
         r10 = motor.rms10(f)
         out = []
@@ -65,8 +75,8 @@ def rms_janelas(f):
             bloco = r10[i:i + 5]
             p_med = sum(10.0 ** (max(-120.0, x) / 10.0) for x in bloco) / len(bloco)
             out.append(round(10.0 * math.log10(p_med), 2) if p_med > 1e-12 else -120.0)
-        _rms[f] = out
-    return _rms[f]
+        _rms[kf] = out
+    return _rms[kf]
 
 _limiar = {}
 def limiar(f):
@@ -74,15 +84,16 @@ def limiar(f):
     gera intervalo longo entre duas falas do mesmo take, e todo silêncio no meio do take sai). Com -35 dB fixo, a
     pausa com som de ambiente ou chiado do Flow não era cortada. Agora: fundo do take (5% mais baixo) + 6 dB,
     nunca acima da fala - 12 dB, nunca abaixo de -35 dB."""
-    if f not in _limiar:
+    kf = _chave_arq(f)
+    if kf not in _limiar:
         v = sorted(rms_janelas(f))
-        if len(v) < 20: _limiar[f] = -35.0
+        if len(v) < 20: _limiar[kf] = -35.0
         else:
             fundo, fala = v[len(v) // 20], v[len(v) * 7 // 10]
             # piso -35: mais baixo, o ruído de sala das pausas virava "som" e as pausas ficavam (2026-10-10).
             # Palavra dita baixinho é protegida em `ilhas`, pelo tempo da palavra, não pelo limiar.
-            _limiar[f] = round(max(-35.0, min(fundo + 6, fala - 12)), 1)
-    return _limiar[f]
+            _limiar[kf] = round(max(-35.0, min(fundo + 6, fala - 12)), 1)
+    return _limiar[kf]
 
 def silencio_rms(f, minimo):
     """Trechos [início, fim] com volume médio abaixo do limiar do take por pelo menos `minimo` s. Mede pela média
@@ -157,14 +168,18 @@ def palavras(f, usar_small=False):
                 return dw["out"]
     except Exception:
         chave_w = None
-    if not sh(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=index", "-of", "csv=p=0", f]).strip():
+    wav = motor.wav16k(f)
+    if not wav:
         return []  # sem trilha de áudio: take mudo
     mod = _obter_modelo(usar_small=usar_small)
-    segs, _ = mod.transcribe(f, language=IDIOMA, word_timestamps=True, beam_size=1)
+    segs, _ = mod.transcribe(wav, language=IDIOMA, word_timestamps=True, beam_size=1)
     out = [[w.word.strip(), round(w.start, 3), round(w.end, 3)] for s in segs for w in s.words]
     if chave_w:
         try:
-            json.dump({"k": chave_w, "out": out}, open(cache_w, "w"))
+            tmp_cw = f"{cache_w}.{os.getpid()}.tmp"
+            with open(tmp_cw, "w") as fh:
+                json.dump({"k": chave_w, "out": out}, fh)
+            os.replace(tmp_cw, cache_w)
         except Exception:
             pass
     return out
@@ -305,8 +320,30 @@ def ouvir_trecho(f, a, b, tmp, com_tempos=True):
     """Transcreve um trecho sozinho e devolve as palavras com tempo absoluto: isolado, o whisper escreve o que
     foi dito (no take inteiro ele suprime a fala repetida)."""
     t = f"{tmp}/trecho_{hashlib.md5(f'{f}{a}{b}'.encode()).hexdigest()[:8]}.wav"
-    if not os.path.exists(t):
-        sh(["ffmpeg", "-loglevel", "error", "-threads", "2", "-y", "-i", f, "-ss", f"{a:.3f}", "-to", f"{b:.3f}", "-vn", "-ar", "16000", "-ac", "1", t])
+    wav_src = motor.wav16k(f, tmp)
+    if not wav_src:
+        return []
+    precisa = not os.path.exists(t)
+    if not precisa:
+        try:
+            precisa = os.path.getmtime(t) < os.path.getmtime(f) or os.path.getsize(t) <= 44
+        except OSError:
+            precisa = True
+    if precisa:
+        import wave
+        with wave.open(wav_src, "rb") as wf:
+            taxa = wf.getframerate()
+            i0 = max(0, min(wf.getnframes(), int(round(a * taxa))))
+            i1 = max(i0, min(wf.getnframes(), int(round(b * taxa))))
+            wf.setpos(i0)
+            fatia = wf.readframes(i1 - i0)
+        t_tmp = f"{t}.{os.getpid()}.tmp.wav"
+        with wave.open(t_tmp, "wb") as wf_out:
+            wf_out.setnchannels(1)
+            wf_out.setsampwidth(2)
+            wf_out.setframerate(16000)
+            wf_out.writeframes(fatia)
+        os.replace(t_tmp, t)
     if not com_tempos:
         mod = _obter_modelo(usar_small=False)
         segs, _ = mod.transcribe(t, language=IDIOMA, word_timestamps=False, beam_size=1)
@@ -866,8 +903,12 @@ def main():
     tag = hashlib.md5(os.path.abspath(a.pasta).encode()).hexdigest()[:8]
     tmp = a.trabalho or f"/tmp/edicao/{nome}-{tag}"
     os.makedirs(f"{tmp}/assets", exist_ok=True); shutil.copytree(os.path.join(AQUI, "fonts"), f"{tmp}/fonts", dirs_exist_ok=True)
+    motor.TRABALHO = tmp
 
     log(f"1/7 transcrevendo {len(arquivos)} takes")
+    # E1 + E3: extrai 1 único WAV 16kHz mono por take e pré-calcula rms10 em paralelo antes da transcrição
+    with cf.ThreadPoolExecutor(max_workers=min(4, max(1, len(arquivos)))) as ex_w:
+        list(ex_w.map(motor.rms10, arquivos))
     w_arq = {f: palavras(f) for f in arquivos}
     d_arq = {f: " ".join(w for w, _, _ in w_arq[f]) for f in arquivos}
     falantes = {f: t for f, t in d_arq.items() if len(norm(t)) >= 2}

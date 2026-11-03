@@ -7,15 +7,23 @@ qualidade abaixo de 1080p e demora). Usado pelo editar.py.
 3. Legenda desenhada como imagem (Pillow) e gravada pelo ffmpeg num passe só, sem render pelo navegador.
 4. Saída em 1080x1920, CRF 17 (sem o teto de 25 MB, que era da cópia na nuvem).
 """
+import hashlib
 import os
 import re
 import subprocess
 import sys
+import threading
+import wave
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 W, H, FPS = 1080, 1920, 30
 IDIOMA = "en"
 FONTE = os.path.join(AQUI, "fonts", "Merriweather900.ttf")
+TRABALHO = None
+_wav_locks = {}
+_wav_global_lock = threading.Lock()
+_sem_audio = set()
+WAV_STATS = {"extraidos": {}, "reutilizados": {}}
 
 
 def _sem_vt(cmd):
@@ -51,16 +59,174 @@ def _dur(f):
     return float(_sh(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f]))
 
 
-# ---------- volume em janelas de 10 ms ----------
+# ---------- E1: WAV 16kHz mono único por take + volume em janelas de 10 ms ----------
+def _eh_wav16k_mono(caminho):
+    if not caminho.lower().endswith(".wav") or not os.path.exists(caminho):
+        return False
+    try:
+        with wave.open(caminho, "rb") as wf:
+            return wf.getnchannels() == 1 and wf.getframerate() == 16000 and wf.getsampwidth() == 2
+    except Exception:
+        return False
+
+
+def caminho_wav16k(f, trabalho=None):
+    real = os.path.abspath(f)
+    pasta = trabalho or TRABALHO or os.environ.get("EDICAO_TRABALHO") or os.path.dirname(real)
+    os.makedirs(pasta, exist_ok=True)
+    base = re.sub(r"[^A-Za-z0-9_.-]+", "_", os.path.splitext(os.path.basename(real))[0])
+    tag = hashlib.md5(real.encode("utf-8")).hexdigest()[:8]
+    return os.path.join(os.path.abspath(pasta), f"wav16k_{base}_{tag}.wav")
+
+
+def wav16k(f, trabalho=None):
+    """Extrai (1x por take) e reutiliza WAV 16kHz mono no diretório de trabalho.
+    Escrita atômica (.tmp.wav -> os.replace) e invalidação automática se o arquivo fonte for mais novo."""
+    real = os.path.abspath(f)
+    if not os.path.exists(real):
+        return None
+    if _eh_wav16k_mono(real):
+        return real
+    wav = caminho_wav16k(real, trabalho)
+    with _wav_global_lock:
+        lk = _wav_locks.setdefault(wav, threading.Lock())
+    with lk:
+        try:
+            st_f = os.stat(real)
+        except OSError:
+            return None
+        chave_mudo = (real, st_f.st_mtime_ns, st_f.st_size)
+        if chave_mudo in _sem_audio:
+            return None
+        if os.path.exists(wav):
+            try:
+                st_w = os.stat(wav)
+                if st_w.st_mtime >= st_f.st_mtime and st_w.st_size > 44:
+                    WAV_STATS["reutilizados"][real] = WAV_STATS["reutilizados"].get(real, 0) + 1
+                    return wav
+            except OSError:
+                pass
+        tmp_wav = f"{wav}.{os.getpid()}.{threading.get_ident()}.tmp.wav"
+        try:
+            import av
+            import numpy as np
+            from faster_whisper.audio import _group_frames, _ignore_invalid_frames, _resample_frames
+            resampler_mono = av.audio.resampler.AudioResampler(format="s16", layout="mono", rate=16000)
+            resampler_st = av.audio.resampler.AudioResampler(format="fltp", rate=16000)
+            with av.open(real, mode="r", metadata_errors="ignore") as container:
+                if not container.streams.audio:
+                    _sem_audio.add(chave_mudo)
+                    return None
+                raw_frames = list(_ignore_invalid_frames(container.decode(audio=0)))
+            if not raw_frames:
+                _sem_audio.add(chave_mudo)
+                return None
+            st_chunks = []
+            for fr in raw_frames:
+                fr_cp = av.AudioFrame.from_ndarray(fr.to_ndarray(), format=fr.format.name, layout=fr.layout.name)
+                fr_cp.sample_rate = fr.sample_rate
+                fr_cp.pts = None
+                for rf in resampler_st.resample(fr_cp):
+                    st_chunks.append(rf.to_ndarray())
+            for rf in resampler_st.resample(None):
+                st_chunks.append(rf.to_ndarray())
+            mono_chunks = [rf.to_ndarray() for rf in _resample_frames(_group_frames(raw_frames, 500000), resampler_mono)]
+            if not mono_chunks:
+                _sem_audio.add(chave_mudo)
+                return None
+            pcm = np.concatenate([c.reshape(-1) for c in mono_chunks]).astype(np.int16)
+            with wave.open(tmp_wav, "wb") as wf:
+                wf.setnchannels(1)
+                wf.setsampwidth(2)
+                wf.setframerate(16000)
+                wf.writeframes(pcm.tobytes())
+            if st_chunks:
+                arr_st = np.concatenate(st_chunks, axis=1)
+                n_blk = arr_st.shape[1] // 160
+                if n_blk > 0:
+                    blks = arr_st[:, :n_blk * 160].astype(np.float64).reshape(arr_st.shape[0], n_blk, 160)
+                    ms = np.mean(blks * blks, axis=(0, 2))
+                    r_vals = [round(float(10.0 * np.log10(x)), 6) if x > 1e-12 else -120.0 for x in ms]
+                else:
+                    r_vals = []
+                _rms10[chave_mudo] = r_vals
+                try:
+                    import json
+                    tmp_r = f"{wav}.rms.{os.getpid()}.{threading.get_ident()}.tmp"
+                    with open(tmp_r, "w") as f_r:
+                        json.dump({"mtime_ns": st_f.st_mtime_ns, "size": st_f.st_size, "rms": r_vals}, f_r)
+                    os.replace(tmp_r, f"{wav}.rms.json")
+                except Exception:
+                    pass
+        except Exception:
+            tem = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=index",
+                                  "-of", "csv=p=0", real], capture_output=True, text=True, stdin=subprocess.DEVNULL).stdout.strip()
+            if not tem:
+                _sem_audio.add(chave_mudo)
+                try:
+                    os.unlink(tmp_wav)
+                except OSError:
+                    pass
+                return None
+            subprocess.run(["ffmpeg", "-nostdin", "-loglevel", "error", "-threads", "2", "-y", "-i", real,
+                            "-vn", "-ar", "16000", "-ac", "1", "-c:a", "pcm_s16le", tmp_wav],
+                           check=True, capture_output=True, stdin=subprocess.DEVNULL)
+        try:
+            os.replace(tmp_wav, wav)
+        except OSError:
+            try:
+                os.unlink(tmp_wav)
+            except OSError:
+                pass
+            raise
+        WAV_STATS["extraidos"][real] = WAV_STATS["extraidos"].get(real, 0) + 1
+        return wav
+
+
 _rms10 = {}
 def rms10(f):
-    if f not in _rms10:
-        e = subprocess.run(["ffmpeg", "-hide_banner", "-threads", "2", "-i", f, "-vn", "-af",
-                            "aresample=16000,asetnsamples=160,astats=metadata=1:reset=1,"
-                            "ametadata=print:key=lavfi.astats.Overall.RMS_level", "-f", "null", "-"],
-                           capture_output=True, text=True).stderr
-        _rms10[f] = [float(x) if x != "-inf" else -120.0 for x in re.findall(r"RMS_level=(-?[\d.]+|-inf)", e)]
-    return _rms10[f]
+    real = os.path.abspath(f)
+    try:
+        st = os.stat(real)
+        chave = (real, st.st_mtime_ns, st.st_size)
+    except OSError:
+        chave = (real, 0, 0)
+    if chave not in _rms10:
+        wav = wav16k(real)
+        if not wav or not os.path.exists(wav):
+            _rms10[chave] = []
+            return []
+        if chave in _rms10:
+            return _rms10[chave]
+        rms_cache = f"{wav}.rms.json"
+        if os.path.exists(rms_cache):
+            try:
+                import json
+                d_r = json.load(open(rms_cache))
+                if d_r.get("mtime_ns") == chave[1] and d_r.get("size") == chave[2] and "rms" in d_r:
+                    _rms10[chave] = d_r["rms"]
+                    return _rms10[chave]
+            except Exception:
+                pass
+        try:
+            import numpy as np
+            with wave.open(wav, "rb") as wf:
+                raw = wf.readframes(wf.getnframes())
+            s16 = np.frombuffer(raw, dtype=np.int16).astype(np.float64) / 32768.0
+            n_blk = len(s16) // 160
+            if n_blk > 0:
+                blks = s16[:n_blk * 160].reshape(n_blk, 160)
+                ms = np.mean(blks * blks, axis=1)
+                _rms10[chave] = [round(float(10.0 * np.log10(x)), 6) if x > 1e-12 else -120.0 for x in ms]
+            else:
+                _rms10[chave] = []
+        except Exception:
+            e = subprocess.run(["ffmpeg", "-nostdin", "-hide_banner", "-threads", "2", "-i", wav, "-vn", "-af",
+                                "aresample=16000,asetnsamples=160,astats=metadata=1:reset=1,"
+                                "ametadata=print:key=lavfi.astats.Overall.RMS_level", "-f", "null", "-"],
+                               capture_output=True, text=True, stdin=subprocess.DEVNULL).stderr
+            _rms10[chave] = [float(x) if x != "-inf" else -120.0 for x in re.findall(r"RMS_level=(-?[\d.]+|-inf)", e)]
+    return _rms10[chave]
 
 
 # ---------- alinhamento forçado ----------
@@ -148,7 +314,10 @@ def alinhar_forcado(f, fala, ws_asr):
                         w[1], w[2] = round(wa, 3), round(wb, 3)
                 if chave:
                     try:
-                        json.dump({"k": chave, "out": out}, open(cache_p, "w"))
+                        tmp_cp = f"{cache_p}.{os.getpid()}.tmp"
+                        with open(tmp_cp, "w") as fh:
+                            json.dump({"k": chave, "out": out}, fh)
+                        os.replace(tmp_cp, cache_p)
                     except Exception:
                         pass
                 return out
@@ -158,7 +327,8 @@ def alinhar_forcado(f, fala, ws_asr):
         if _al is None:
             _al = whisperx.load_align_model(language_code=IDIOMA, device="cpu")
         modelo, meta = _al
-        audio = whisperx.load_audio(f)
+        wav_al = wav16k(f)
+        audio = whisperx.load_audio(wav_al or f)
         d = len(audio) / 16000
         a0 = max(0.0, ws_asr[0][1] - 0.4) if ws_asr else 0.0
         b0 = min(d, ws_asr[-1][2] + 0.6) if ws_asr else d
@@ -177,7 +347,10 @@ def alinhar_forcado(f, fala, ws_asr):
             w[1], w[2] = ant, ant + max(0.08, (prox - ant) * 0.8)
     if chave:
         try:
-            json.dump({"k": chave, "out": out}, open(cache_p, "w"))
+            tmp_cp = f"{cache_p}.{os.getpid()}.tmp"
+            with open(tmp_cp, "w") as fh:
+                json.dump({"k": chave, "out": out}, fh)
+            os.replace(tmp_cp, cache_p)
         except Exception:
             pass
     return out
