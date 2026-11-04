@@ -669,15 +669,26 @@ ROTACAO = os.path.normpath(os.path.join(AQUI, "..", "rotacao.json"))
 
 def variacao(nome):
     """{legenda, sfx, fonte_pico} do vídeo `nome`, girando o cardápio a cada vídeo novo (registro em rotacao.json)."""
-    try:
-        reg = json.load(open(ROTACAO))
-    except (OSError, ValueError):
-        reg = {"videos": {}}
-    if nome not in reg["videos"]:
-        n = len(reg["videos"])
-        reg["videos"][nome] = {k: v[n % len(v)] for k, v in CARDAPIO.items()}
-        json.dump(reg, open(ROTACAO, "w"), indent=1, ensure_ascii=False)
-    return reg["videos"][nome]
+    import fcntl
+    os.makedirs(os.path.dirname(ROTACAO), exist_ok=True)
+    lock_path = f"{ROTACAO}.lock"
+    with open(lock_path, "a+") as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        try:
+            with open(ROTACAO, encoding="utf-8") as fh:
+                reg = json.load(fh)
+            if not isinstance(reg, dict) or not isinstance(reg.get("videos"), dict):
+                reg = {"videos": {}}
+        except (OSError, ValueError):
+            reg = {"videos": {}}
+        if nome not in reg["videos"]:
+            n = len(reg["videos"])
+            reg["videos"][nome] = {k: v[n % len(v)] for k, v in CARDAPIO.items()}
+            tmp_rot = f"{ROTACAO}.{os.getpid()}.tmp"
+            with open(tmp_rot, "w", encoding="utf-8") as fh:
+                json.dump(reg, fh, indent=1, ensure_ascii=False)
+            os.replace(tmp_rot, ROTACAO)
+        return reg["videos"][nome]
 
 
 # Luigi, 2026-10-13 (velocidade): sem palavra atrás do avatar; o zoom nos picos continua.

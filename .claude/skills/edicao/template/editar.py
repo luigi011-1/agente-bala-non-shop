@@ -152,18 +152,21 @@ def log(msg):
 
 
 # ---------- 1. transcrição ----------
+import threading
 _modelo = None
 _modelo_small = None
+_modelo_lock = threading.Lock()
 def _obter_modelo(usar_small=False):
     global _modelo, _modelo_small
     from faster_whisper import WhisperModel
-    if usar_small:
-        if _modelo_small is None:
-            _modelo_small = WhisperModel("small.en" if IDIOMA == "en" else "small", device="cpu", compute_type="int8", cpu_threads=2)
-        return _modelo_small
-    if _modelo is None:
-        _modelo = WhisperModel("base.en" if IDIOMA == "en" else "base", device="cpu", compute_type="int8", cpu_threads=2)
-    return _modelo
+    with _modelo_lock:
+        if usar_small:
+            if _modelo_small is None:
+                _modelo_small = WhisperModel("small.en" if IDIOMA == "en" else "small", device="cpu", compute_type="int8", cpu_threads=2)
+            return _modelo_small
+        if _modelo is None:
+            _modelo = WhisperModel("base.en" if IDIOMA == "en" else "base", device="cpu", compute_type="int8", cpu_threads=2)
+        return _modelo
 
 def palavras(f, usar_small=False):
     cache_w = f"{f}.words{'.sm' if usar_small else ''}.json"

@@ -356,7 +356,7 @@ def alinhar_forcado(f, fala, ws_asr):
     return out
 
 
-def ilhas_v4(f, aw, gap=0.50, pre=0.10, pos=0.15, cauda=0.35, ataque=0.20):
+def ilhas_v4(f, aw, gap=0.38, pre=0.10, pos=0.15, cauda=0.35, ataque=0.20):
     """Trechos a manter: cada palavra do alinhamento com a borda refinada pelo volume (estende o fim enquanto ainda
     há voz, até `cauda` s, sem invadir a próxima palavra; idem o início, até `ataque` s). Palavras com intervalo
     até `gap` s ficam juntas; o resto do intervalo sai. Folga final `pre`/`pos` s."""
@@ -367,7 +367,7 @@ def ilhas_v4(f, aw, gap=0.50, pre=0.10, pos=0.15, cauda=0.35, ataque=0.20):
         return [[0.0, d]]
     s = sorted(r)
     fundo, fala = s[n // 10], s[n * 7 // 10]
-    limiar = min(fala - 10, max(fundo + 8, -55))  # acima do fundo do take, abaixo da fala
+    limiar = max(-35.0, min(fala - 10, max(fundo + 8, -55)))  # acima do piso -35 dB de silencio_rms e do fundo do take
     lim_voz = max(-38.0, limiar)
     nivel = lambda t: r[int(t / 0.01)] if 0 <= int(t / 0.01) < n else -120.0
     spans = []
