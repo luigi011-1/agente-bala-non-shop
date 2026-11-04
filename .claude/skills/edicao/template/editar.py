@@ -132,9 +132,17 @@ def norm(t):
     if IDIOMA == "es":
         import unicodedata
         texto = "".join(c for c in unicodedata.normalize("NFD", texto) if not unicodedata.combining(c))
-        digitos = "cero uno dos tres cuatro cinco seis siete ocho nueve".split()
-        return [digitos[int(w)] if w.isdigit() and len(w) == 1 else w
-                for w in re.sub(r"[^a-z0-9' ]", " ", texto).split()]
+        # 03/11 (Slim Tide): o whisper escreve "20 minutos", "tus 40", "10 días"; o roteiro diz "veinte", "cuarenta", "diez"
+        uni = ("cero uno dos tres cuatro cinco seis siete ocho nueve diez once doce trece catorce quince dieciseis "
+               "diecisiete dieciocho diecinueve veinte veintiuno veintidos veintitres veinticuatro veinticinco "
+               "veintiseis veintisiete veintiocho veintinueve").split()
+        dez = "_ _ veinte treinta cuarenta cincuenta sesenta setenta ochenta noventa".split()
+        def es(w):
+            if not w.isdigit() or int(w) > 99:
+                return [w]
+            n = int(w)
+            return [uni[n]] if n < 30 else [dez[n // 10]] + (["y", uni[n % 10]] if n % 10 else [])
+        return [x for w in re.sub(r"[^a-z0-9' ]", " ", texto).split() for x in es(w)]
     ws = re.sub(r"[^a-z0-9' ]", " ", texto).split()
     return [x for w in ws for x in (por_extenso(int(w)) if w.isdigit() else [w])]
 
