@@ -2944,6 +2944,516 @@
    "legenda": "padrao",
    "sfx": "sutil",
    "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-5-001/L-20261105-011935-5-001__Mae24": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011936-2-001/L-20261105-011936-2-001__Shirley30": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-4-001/L-20261105-011935-4-001__Amber20": {
+   "legenda": "padrao",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-3-001/L-20261105-011935-3-001__Gloria27": {
+   "legenda": "caption-highlight",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-002/L-20261105-011935-002__Roy14": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-3-002/L-20261105-011935-3-002__Vernon8": {
+   "legenda": "padrao",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-5-002/L-20261105-011935-5-002__Calvin13": {
+   "legenda": "caption-highlight",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011936-2-007/L-20261105-011936-2-007__Kimberly19": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011936-001/L-20261105-011936-001__Wendy33": {
+   "legenda": "padrao",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-003/L-20261105-011935-003__Lorraine27": {
+   "legenda": "caption-highlight",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-5-003/L-20261105-011935-5-003__Vivian27": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-3-003/L-20261105-011935-3-003__Mae23": {
+   "legenda": "padrao",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011936-2-003/L-20261105-011936-2-003__Raven32": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011936-2-004/L-20261105-011936-2-004__Mae25": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-004/L-20261105-011935-004__Mae21": {
+   "legenda": "padrao",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-3-004/L-20261105-011935-3-004__Dolores35": {
+   "legenda": "caption-highlight",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-5-004/L-20261105-011935-5-004__Heather35": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011936-002/L-20261105-011936-002__Hector16": {
+   "legenda": "padrao",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-3-005/L-20261105-011935-3-005__Earl17": {
+   "legenda": "caption-highlight",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-3-006/L-20261105-011935-3-006__Jenna29": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011936-004/L-20261105-011936-004__Amber22": {
+   "legenda": "padrao",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011936-2-005/L-20261105-011936-2-005__Hector17": {
+   "legenda": "caption-highlight",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-2-003/L-20261105-011935-2-003__Erin25": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-012001-003/L-20261105-012001-003__Rocio": {
+   "legenda": "padrao",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-4-003/L-20261105-011935-4-003__Lucille23": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011936-2-006/L-20261105-011936-2-006__Vivian28": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011936-005/L-20261105-011936-005__Walt9": {
+   "legenda": "padrao",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-3-007/L-20261105-011935-3-007__Kelly24": {
+   "legenda": "caption-highlight",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-005/L-20261105-011935-005__Marvin19": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-5-006/L-20261105-011935-5-006__Dolores36": {
+   "legenda": "padrao",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-4-002/L-20261105-011935-4-002__Bruce16": {
+   "legenda": "caption-highlight",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-4-005/L-20261105-011935-4-005__Marvin20": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011936-006/L-20261105-011936-006__Megan25": {
+   "legenda": "padrao",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-5-005/L-20261105-011935-5-005__Floyd10": {
+   "legenda": "caption-highlight",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-007/L-20261105-011935-007__Paula26": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-3-008/L-20261105-011935-3-008__Hector15": {
+   "legenda": "padrao",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-4-004/L-20261105-011935-4-004__Amber21": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011936-007/L-20261105-011936-007__Raven31": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-008/L-20261105-011935-008__Calvin12": {
+   "legenda": "padrao",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-2-005/L-20261105-011935-2-005__Hank13": {
+   "legenda": "caption-highlight",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-006/L-20261105-011935-006__Gloria26": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-5-008/L-20261105-011935-5-008__Theo6": {
+   "legenda": "padrao",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-5-009/L-20261105-011935-5-009__Brenda24": {
+   "legenda": "caption-highlight",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-012001-007/L-20261105-012001-007__Mario": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-009/L-20261105-011935-009__Mae22": {
+   "legenda": "padrao",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-012001-002/L-20261105-012001-002__Liliana": {
+   "legenda": "caption-highlight",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-010/L-20261105-011935-010__Tammy20": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-2-001/L-20261105-011935-2-001__Amber19": {
+   "legenda": "padrao",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-3-009/L-20261105-011935-3-009__Darlene22": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-5-007/L-20261105-011935-5-007__Jenna30": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-012/L-20261105-011935-012__Jenna28": {
+   "legenda": "padrao",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011936-008/L-20261105-011936-008__Travis18": {
+   "legenda": "caption-highlight",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-012001-011/L-20261105-012001-011__Arturo": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-2-004/L-20261105-011935-2-004__Jasmine23": {
+   "legenda": "padrao",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011936-003/L-20261105-011936-003__Dolores37": {
+   "legenda": "caption-highlight",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-2-006/L-20261105-011935-2-006__Wendy30": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-012001-008/L-20261105-012001-008__Joaquin": {
+   "legenda": "padrao",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-2-002/L-20261105-011935-2-002__Dale12": {
+   "legenda": "caption-highlight",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-011935-2-009/L-20261105-011935-2-009__Bonnie24": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-011935-2-011/L-20261105-011935-2-011__Bruce15": {
+   "legenda": "padrao",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-012001-017/L-20261105-012001-017__Ernesto": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-012001-018/L-20261105-012001-018__Alfredo": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023921-2-001/L-20261105-023921-2-001__Shirley32": {
+   "legenda": "padrao",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023922-2-001/L-20261105-023922-2-001__Brenda31": {
+   "legenda": "caption-highlight",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023705-001/L-20261105-023705-001__Peggy35": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023923-001/L-20261105-023923-001__Heather40": {
+   "legenda": "padrao",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023923-5-001/L-20261105-023923-5-001__Paula31": {
+   "legenda": "caption-highlight",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023922-4-001/L-20261105-023922-4-001__Amber26": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023922-2-002/L-20261105-023922-2-002__Mae27": {
+   "legenda": "padrao",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023921-2-002/L-20261105-023921-2-002__Heather38": {
+   "legenda": "caption-highlight",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023705-002/L-20261105-023705-002__Kristen21": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023922-4-002/L-20261105-023922-4-002__Mae28": {
+   "legenda": "padrao",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023923-5-002/L-20261105-023923-5-002__Dolores40": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023923-002/L-20261105-023923-002__Megan27": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023921-2-003/L-20261105-023921-2-003__Tammy23": {
+   "legenda": "padrao",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023922-2-003/L-20261105-023922-2-003__Ruthie29": {
+   "legenda": "caption-highlight",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023923-003/L-20261105-023923-003__Jasmine26": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023922-4-003/L-20261105-023922-4-003__Wendy37": {
+   "legenda": "padrao",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023923-5-003/L-20261105-023923-5-003__Erin29": {
+   "legenda": "caption-highlight",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023923-3-002/L-20261105-023923-3-002__Walt11": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023922-2-004/L-20261105-023922-2-004__Jasmine25": {
+   "legenda": "padrao",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023921-2-004/L-20261105-023921-2-004__Crystal24": {
+   "legenda": "caption-highlight",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023923-004/L-20261105-023923-004__Jenna33": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023922-4-004/L-20261105-023922-4-004__Dolores38": {
+   "legenda": "padrao",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023921-2-005/L-20261105-023921-2-005__Shirley33": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023923-5-004/L-20261105-023923-5-004__Vivian30": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023705-004/L-20261105-023705-004__Mae26": {
+   "legenda": "padrao",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023922-2-005/L-20261105-023922-2-005__Peggy38": {
+   "legenda": "caption-highlight",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023923-005/L-20261105-023923-005__Megan28": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023922-3-001/L-20261105-023922-3-001__Margarita6": {
+   "legenda": "padrao",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023923-2-001/L-20261105-023923-2-001__Socorro8": {
+   "legenda": "caption-highlight",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023924-001/L-20261105-023924-001__Veronica8": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023921-002/L-20261105-023921-002__Yesenia2": {
+   "legenda": "padrao",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023922-3-002/L-20261105-023922-3-002__Veronica4": {
+   "legenda": "caption-highlight",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023924-002/L-20261105-023924-002__Irma9": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023922-003/L-20261105-023922-003__Elena8": {
+   "legenda": "padrao",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023923-4-001/L-20261105-023923-4-001__Irma8": {
+   "legenda": "caption-highlight",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023921-003/L-20261105-023921-003__Esperanza3": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "pop",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023922-004/L-20261105-023922-004__Socorro6": {
+   "legenda": "padrao",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023924-003/L-20261105-023924-003__Patricia8": {
+   "legenda": "caption-highlight",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261105-023924-004/L-20261105-023924-004__Brenda36": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261105-023922-3-005/L-20261105-023922-3-005__Beatriz3": {
+   "legenda": "padrao",
+   "sfx": "pop",
+   "fonte_pico": "anton"
   }
  }
 }
