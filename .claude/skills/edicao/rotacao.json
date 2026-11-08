@@ -3454,6 +3454,26 @@
    "legenda": "padrao",
    "sfx": "pop",
    "fonte_pico": "anton"
+  },
+  "hidra_L-20261108-142509-2-001/L-20261108-142509-2-001__Jenna44": {
+   "legenda": "caption-highlight",
+   "sfx": "brilho",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261108-143240-2-001/L-20261108-143240-2-001__Tammy28": {
+   "legenda": "caption-pill-karaoke",
+   "sfx": "sutil",
+   "fonte_pico": "anton"
+  },
+  "hidra_L-20261108-143817-002/L-20261108-143817-002__Brandon18": {
+   "legenda": "padrao",
+   "sfx": "cinema",
+   "fonte_pico": "montserrat"
+  },
+  "hidra_L-20261108-143240-003/L-20261108-143240-003__Ruthie38": {
+   "legenda": "caption-highlight",
+   "sfx": "pop",
+   "fonte_pico": "anton"
   }
  }
 }
