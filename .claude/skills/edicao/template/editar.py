@@ -871,6 +871,7 @@ def main():
     ap.add_argument("--leaks", default=None, help="takes com efeito na entrada (padrão: FitWell nenhum; Auraly o 2, saída do gancho)")
     ap.add_argument("--estilo", choices=["fitwell", "auraly"], default=None, help="padrão: auraly se a produção for Auraly")
     ap.add_argument("--ritmo", type=float, default=None, help="palavras/s alvo (padrão: 3,8 FitWell, 4,0 Auraly)")
+    ap.add_argument("--sem-acelerar", action="store_true", help="mantem velocidade 1.0x natural sem aceleracao de fala nem de inserts mudos")
     ap.add_argument("--up", default="1", help="takes com legenda mais alta")
     # 1300 (Luigi, 2026-10-15): nas duas entregas Avery aprovadas a legenda foi descida à mão de 960 para 1300 (lábios livres)
     ap.add_argument("--legenda-topo", type=int, default=1300, help="topo da legenda Auraly em pixels; ajustar após conferir rosto")
@@ -895,6 +896,8 @@ def main():
     globals()["IDIOMA"] = a.idioma
     motor.IDIOMA = a.idioma
     globals()["INSERT"] = a.insert
+    if a.sem_acelerar:
+        globals()["SP"] = 1.0
     t0 = time.time(); rel = []
     excecoes = {}
     if a.excecoes_fala:
@@ -917,10 +920,20 @@ def main():
     motor.TRABALHO = tmp
 
     log(f"1/7 transcrevendo {len(arquivos)} takes")
-    # E1 + E3: extrai 1 único WAV 16kHz mono por take e pré-calcula rms10 em paralelo antes da transcrição
-    with cf.ThreadPoolExecutor(max_workers=min(4, max(1, len(arquivos)))) as ex_w:
-        list(ex_w.map(motor.rms10, arquivos))
-    w_arq = {f: palavras(f) for f in arquivos}
+    # Identifica takes explicitamente mudos sem extrair WAV 16kHz nem rodar Whisper neles (ex.: Antes e Depois mudo):
+    def _tem_trilha_audio(arq_mp4):
+        try:
+            r_a = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=index",
+                                  "-of", "csv=p=0", arq_mp4], capture_output=True, text=True, timeout=10)
+            return bool((r_a.stdout or "").strip())
+        except Exception:
+            return True
+    arquivos_com_audio = [f for f in arquivos if _tem_trilha_audio(f)]
+    # E1 + E3: extrai 1 único WAV 16kHz mono por take com áudio e pré-calcula rms10 em paralelo antes da transcrição
+    if arquivos_com_audio:
+        with cf.ThreadPoolExecutor(max_workers=min(4, max(1, len(arquivos_com_audio)))) as ex_w:
+            list(ex_w.map(motor.rms10, arquivos_com_audio))
+    w_arq = {f: (palavras(f) if f in arquivos_com_audio else []) for f in arquivos}
     d_arq = {f: " ".join(w for w, _, _ in w_arq[f]) for f in arquivos}
     falantes = {f: t for f, t in d_arq.items() if len(norm(t)) >= 2}
     if not falantes: sys.exit("Nenhum take com fala")
@@ -929,7 +942,7 @@ def main():
     achado = achar_roteiro(falantes, a.producao)
     if not achado or achado[3] < a.nota_minima:
         # Se base.en ficou abaixo da nota mínima, re-transcreve com small.en
-        w_arq = {f: palavras(f, usar_small=True) for f in arquivos}
+        w_arq = {f: (palavras(f, usar_small=True) if f in arquivos_com_audio else []) for f in arquivos}
         d_arq = {f: " ".join(w for w, _, _ in w_arq[f]) for f in arquivos}
         falantes = {f: t for f, t in d_arq.items() if len(norm(t)) >= 2}
         achado = achar_roteiro(falantes, a.producao) if falantes else None
@@ -1090,16 +1103,18 @@ def main():
     sem_al = [k for k, v in alinhado.items() if not v]
     if sem_al:
         rel.append(f"  - aviso: takes sem alinhamento forçado (corte pelo método antigo): {sem_al}")
-    # Pré-calcula rms10 de todos os takes em paralelo antes de segmentos()
-    with cf.ThreadPoolExecutor(max_workers=min(4, max(1, len(src)))) as ex_r:
-        list(ex_r.map(motor.rms10, src.values()))
+    # Pré-calcula rms10 apenas dos takes com áudio em paralelo antes de segmentos() (takes mudos não usam rms10)
+    takes_com_audio = [p_tk for k_tk, p_tk in src.items() if k_tk in falas]
+    if takes_com_audio:
+        with cf.ThreadPoolExecutor(max_workers=min(4, max(1, len(takes_com_audio)))) as ex_r:
+            list(ex_r.map(motor.rms10, takes_com_audio))
     segs = segmentos(takes, words, ramp, alinhado)
     # ritmo dopaminérgico (Luigi, 2026-10-10): velocidade calculada por vídeo para chegar ao alvo de palavras/s das
     # referências dele (3,8 FitWell, 4,0 Auraly), entre 1,0x e 1,25x; a rampa do take-herói não muda
     nw = sum(len(norm(falas[k])) for k in falas)
-    vel = [s for s in segs if s["sp"] == SP]
-    fixo = sum((s["b"] - s["a"]) / s["sp"] for s in segs if s["sp"] != SP)
-    sp = min(1.25, max(1.0, sum(s["b"] - s["a"] for s in vel) / max(0.1, nw / alvo - fixo)))
+    vel = [] if a.sem_acelerar else [s for s in segs if s["sp"] == SP]
+    fixo = sum((s["b"] - s["a"]) / s["sp"] for s in segs if s not in vel)
+    sp = 1.0 if a.sem_acelerar else min(1.25, max(1.0, sum(s["b"] - s["a"] for s in vel) / max(0.1, nw / alvo - fixo)))
     o = 0.0
     for s in segs:
         if s in vel: s["sp"] = round(sp, 3)
@@ -1174,8 +1189,9 @@ def main():
             y1_leg = min(H, (max(topos_pag) + 290 + 1) // 2 * 2)
             banda_leg = (y0_leg, max(2, y1_leg - y0_leg))
         tarefas_png = []
+        inicio_fala_real = next((float(x["o"]) for x in segs if not x.get("mute")), 0.0)
         for n, (p, topo_leg) in enumerate(zip(pages, topos_pag)):
-            st = p[0]["t"] if PLANO_EDITORIAL else (0 if n == 0 else p[0]["t"]); en = pages[n + 1][0]["t"] if n < len(pages) - 1 else total
+            st = p[0]["t"] if PLANO_EDITORIAL else (inicio_fala_real if n == 0 else p[0]["t"]); en = pages[n + 1][0]["t"] if n < len(pages) - 1 else total
             en = min([en] + [x["o"] for x in segs if x["k"] in inserts and x["o"] > st + 0.01])
             if PLANO_EDITORIAL:
                 en = min([en] + [x["o"] for x in segs if x["k"] != p[0]["k"] and x["o"] > st + 0.01])
