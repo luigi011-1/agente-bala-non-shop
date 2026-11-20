@@ -129,6 +129,26 @@ def norm(t):
     texto = t.lower().replace("’", "'")
     # O CTA Auraly soletra o selo; os dois transcritores escrevem 222 em algarismos.
     texto = re.sub(r"\b222\b", "dos dos dos" if IDIOMA == "es" else "two two two", texto)
+    if IDIOMA == "de":
+        import unicodedata
+        texto = texto.replace("ß", "ss")
+        texto = "".join(c for c in unicodedata.normalize("NFD", texto) if not unicodedata.combining(c))
+        texto = re.sub(r"sss+", "ss", texto)
+        uni_de = ("null eins zwei drei vier funf sechs sieben acht neun zehn elf zwolf dreizehn vierzehn "
+                  "funfzehn sechzehn siebzehn achtzehn neunzehn zwanzig").split()
+        dez_de = "_ _ zwanzig dreissig vierzig funfzig sechzig siebzig achtzig neunzig".split()
+        def de_num(w):
+            if not w.isdigit() or int(w) > 99:
+                return [w]
+            n = int(w)
+            if n <= 20:
+                return [uni_de[n]]
+            d_n, u_n = n // 10, n % 10
+            if u_n == 0:
+                return [dez_de[d_n]]
+            pref = "ein" if u_n == 1 else uni_de[u_n]
+            return [f"{pref}und{dez_de[d_n]}"]
+        return [x for w in re.sub(r"[^a-z0-9' ]", " ", texto).split() for x in de_num(w)]
     if IDIOMA == "es":
         import unicodedata
         texto = "".join(c for c in unicodedata.normalize("NFD", texto) if not unicodedata.combining(c))
@@ -865,7 +885,7 @@ def sheet(video, tempos, saida, cols=12, larg=120):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--plano-editorial", help="JSON por produção: ações protegidas, ritmo e envelope musical")
-    ap.add_argument("--idioma", choices=["en", "es"], default="en", help="idioma da fala e do alinhamento (Jordan: es)")
+    ap.add_argument("--idioma", choices=["en", "es", "de"], default="en", help="idioma da fala e do alinhamento (es/de)")
     ap.add_argument("pasta"); ap.add_argument("--producao"); ap.add_argument("--musica"); ap.add_argument("--sem-musica", action="store_true")
     ap.add_argument("--ramp", default="1", help="takes-herói (pausa acelerada 5x em vez de cortada)")
     ap.add_argument("--leaks", default=None, help="takes com efeito na entrada (padrão: FitWell nenhum; Auraly o 2, saída do gancho)")

@@ -247,9 +247,10 @@ def alinhar_forcado(f, fala, ws_asr):
     except Exception:
         chave = None
     if ws_asr and any(x[1] is not None for x in ws_asr):
-        import difflib
+        import difflib, unicodedata
         def _lim(s):
-            return re.sub(r"[^a-z0-9']", "", s.lower())
+            sem = "".join(ch for ch in unicodedata.normalize("NFKD", s.lower().replace("ß", "ss")) if not unicodedata.combining(ch))
+            return re.sub(r"[^a-z0-9']", "", sem)
         rot = fala.split()
         if rot:
             h_norm = [_lim(x[0]) for x in ws_asr]
