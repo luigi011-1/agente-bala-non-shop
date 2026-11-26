@@ -394,20 +394,22 @@ def ilhas_v4(f, aw, gap=0.38, pre=0.10, pos=0.15, cauda=0.35, ataque=0.20):
             if sub:
                 melhor = max(sub, key=lambda ab: sum(max(0.0, r[k] - lim_voz) for k in range(ab[0], max(ab[0] + 1, ab[1]))))
                 s0, e = max(s0, melhor[0] * 0.01), min(e, melhor[1] * 0.01)
-        while s0 < e - 0.12 and nivel(s0) < lim_voz:
-            s0 += 0.01
-        while e > s0 + 0.12 and nivel(e - 0.01) < lim_voz:
-            e -= 0.01
-        while e < min(b + cauda, prox) and nivel(e) >= limiar:
+        # TODA palavra do take (Luigi 26/11/2026, estende a regra de 25/11 da última palavra para o meio do take):
+        # início e fim de palavra saem baixinhos da boca do avatar ("h-", "f-", "-st", "-s", "-m") e ficam abaixo
+        # do limiar; o recuo por volume e o recorte da sub-ilha mais alta comiam esses pedaços. Agora a palavra
+        # nunca começa depois do início alinhado nem termina antes do fim alinhado; o volume só ESTENDE, seguindo
+        # o decaimento da voz fraca (fundo + 4 dB), sem invadir a palavra vizinha.
+        # teto plausível da palavra: o alinhamento às vezes estica a palavra por cima de uma pausa; a proteção só
+        # cobre a duração plausível dela (mesma régua do editar.py/ilhas), para não devolver pausa ao vídeo.
+        teto = 0.45 + 0.09 * len(re.sub(r"[^a-z0-9]", "", str(aw[i][0]).lower()))
+        s0, e = min(s0, max(a, b - teto)), max(e, min(b, a + teto))
+        voz_fraca = fundo + 4
+        while e < min(b + cauda, prox) and nivel(e) >= voz_fraca:
             e += 0.01
         if i + 1 == len(aw):
-            # ÚLTIMA palavra do take (Luigi 25/11/2026): o final dela sai baixinho da boca do avatar ("-st", "-s",
-            # "-m") e fica abaixo do limiar; o recuo por volume comia esse final. Nunca termina antes do fim
-            # alinhado e segue o decaimento da voz fraca (fundo + 4 dB) até `cauda`.
-            e = max(e, b)
-            while e < min(b + cauda, d) and nivel(e) >= fundo + 4:
+            while e < min(b + cauda, d) and nivel(e) >= voz_fraca:
                 e += 0.01
-        while s0 > max(a - ataque, ant) and nivel(s0 - 0.01) >= limiar:
+        while s0 > max(a - ataque, ant) and nivel(s0 - 0.01) >= voz_fraca:
             s0 -= 0.01
         spans.append([s0, e])
     ilhas = []

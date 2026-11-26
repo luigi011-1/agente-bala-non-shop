@@ -614,8 +614,8 @@ def um_trecho(arg):
         a = f"aevalsrc=0:d={n / FPS:.6f}:s=44100,aformat=sample_rates=44100:channel_layouts=mono,atrim=end={n / FPS:.6f}[a0]"
     else:
         a = (f"[0:a]atrim=start={s['a']:.3f}:end={s['b']:.3f},asetpts=PTS-STARTPTS,atempo={s['sp']},"
-             f"aformat=sample_rates=44100:channel_layouts=mono,afade=t=in:d=0.012,"
-             f"afade=t=out:st={max(0, s['d'] - 0.02):.3f}:d=0.02,apad,atrim=end={n / FPS:.6f}[a0]")
+             f"aformat=sample_rates=44100:channel_layouts=mono,afade=t=in:d=0.04,"
+             f"afade=t=out:st={max(0, s['d'] - 0.06):.3f}:d=0.06,apad,atrim=end={n / FPS:.6f}[a0]")
     usa_vt = sys.platform == "darwin"
     hw_in = ["-hwaccel", "videotoolbox"] if usa_vt else []
     v_enc = (["-c:v", "h264_videotoolbox", "-q:v", "74", "-profile:v", "high", "-bf", "0"]
