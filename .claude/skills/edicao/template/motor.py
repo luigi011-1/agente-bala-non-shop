@@ -400,6 +400,13 @@ def ilhas_v4(f, aw, gap=0.38, pre=0.10, pos=0.15, cauda=0.35, ataque=0.20):
             e -= 0.01
         while e < min(b + cauda, prox) and nivel(e) >= limiar:
             e += 0.01
+        if i + 1 == len(aw):
+            # ÚLTIMA palavra do take (Luigi 25/11/2026): o final dela sai baixinho da boca do avatar ("-st", "-s",
+            # "-m") e fica abaixo do limiar; o recuo por volume comia esse final. Nunca termina antes do fim
+            # alinhado e segue o decaimento da voz fraca (fundo + 4 dB) até `cauda`.
+            e = max(e, b)
+            while e < min(b + cauda, d) and nivel(e) >= fundo + 4:
+                e += 0.01
         while s0 > max(a - ataque, ant) and nivel(s0 - 0.01) >= limiar:
             s0 -= 0.01
         spans.append([s0, e])
@@ -416,7 +423,12 @@ def ilhas_v4(f, aw, gap=0.38, pre=0.10, pos=0.15, cauda=0.35, ataque=0.20):
             out[-1][1] = x[1]
         else:
             out.append(x)
+    if out and ilhas:   # folga maior depois da última palavra do take (sem corte seco no final)
+        out[-1][1] = min(d, max(out[-1][1], ilhas[-1][1] + POS_FIM_TAKE))
     return out
+
+
+POS_FIM_TAKE = 0.25
 
 
 def filtro_trecho(a, b, sp, d_saida):
