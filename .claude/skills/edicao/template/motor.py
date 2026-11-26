@@ -357,6 +357,55 @@ def alinhar_forcado(f, fala, ws_asr):
     return out
 
 
+_voz10 = {}
+VAD_LIMIAR = float(os.environ.get("EDICAO_VAD_LIMIAR") or 0.35)  # baixo: final de palavra baixinho ainda é voz
+VAD_PAD_MS = 40
+
+
+def voz10(f):
+    """Voz humana a cada 10 ms (Silero VAD): separa a fala do avatar de música e som de ambiente que o Flow gera,
+    que o volume (RMS) não distingue (Luigi 26/11/2026). Devolve lista de bool; [] se o VAD não estiver disponível
+    (aí quem chama cai no critério só de volume, como antes)."""
+    real = os.path.abspath(f)
+    try:
+        st = os.stat(real)
+        chave = (real, st.st_mtime_ns, st.st_size)
+    except OSError:
+        return []
+    if chave in _voz10:
+        return _voz10[chave]
+    try:
+        from faster_whisper.audio import decode_audio
+        from faster_whisper.vad import VadOptions, get_speech_timestamps
+        audio = decode_audio(wav16k(real) or real, sampling_rate=16000)
+        opts = VadOptions(threshold=VAD_LIMIAR, min_silence_duration_ms=100, speech_pad_ms=VAD_PAD_MS,
+                          min_speech_duration_ms=60)
+        n = len(audio) // 160
+        marcas = [False] * n
+        for seg in get_speech_timestamps(audio, opts):
+            for k in range(seg["start"] // 160, min(n, seg["end"] // 160 + 1)):
+                marcas[k] = True
+    except Exception as e:  # sem VAD não trava a edição: volta ao critério de volume
+        print(f"[motor] VAD indisponível ({e}); usando só volume", file=sys.stderr)
+        marcas = []
+    _voz10[chave] = marcas
+    return marcas
+
+
+def buracos_sem_voz(f, minimo=0.45):
+    """Trechos >= `minimo` s sem voz humana (mesmo que tenham música/ambiente alto): o 'silêncio disfarçado'."""
+    v = voz10(f)
+    out, ini = [], None
+    for k, tem in enumerate(v + [True]):
+        if not tem and ini is None:
+            ini = k
+        elif tem and ini is not None:
+            if (k - ini) * 0.01 >= minimo:
+                out.append((round(ini * 0.01, 2), round(k * 0.01, 2)))
+            ini = None
+    return out
+
+
 def ilhas_v4(f, aw, gap=0.38, pre=0.10, pos=0.15, cauda=0.35, ataque=0.20):
     """Trechos a manter: cada palavra do alinhamento com a borda refinada pelo volume (estende o fim enquanto ainda
     há voz, até `cauda` s, sem invadir a próxima palavra; idem o início, até `ataque` s). Palavras com intervalo
@@ -371,6 +420,8 @@ def ilhas_v4(f, aw, gap=0.38, pre=0.10, pos=0.15, cauda=0.35, ataque=0.20):
     limiar = max(-35.0, min(fala - 10, max(fundo + 8, -55)))  # acima do piso -35 dB de silencio_rms e do fundo do take
     lim_voz = max(-38.0, limiar)
     nivel = lambda t: r[int(t / 0.01)] if 0 <= int(t / 0.01) < n else -120.0
+    voz = voz10(f)
+    tem_voz = (lambda t: 0 <= int(t / 0.01) < len(voz) and voz[int(t / 0.01)]) if voz else (lambda t: True)
     spans = []
     for i, (_, a, b) in enumerate(aw):
         ant = aw[i - 1][2] if i else 0.0
@@ -403,13 +454,21 @@ def ilhas_v4(f, aw, gap=0.38, pre=0.10, pos=0.15, cauda=0.35, ataque=0.20):
         # cobre a duração plausível dela (mesma régua do editar.py/ilhas), para não devolver pausa ao vídeo.
         teto = 0.45 + 0.09 * len(re.sub(r"[^a-z0-9]", "", str(aw[i][0]).lower()))
         s0, e = min(s0, max(a, b - teto)), max(e, min(b, a + teto))
+        # VOZ x AMBIENTE (Luigi 26/11/2026): música e som de ambiente do Flow ficam acima do fundo e enganavam o
+        # volume. Com o VAD, a borda só estica onde há VOZ, e a ponta da palavra que o alinhamento esticou por cima
+        # de som sem voz (>= 0,15 s contínuos) sai; o miolo falado da palavra nunca é cortado.
+        if voz:
+            while e - s0 > 0.20 and not any(tem_voz(e - 0.01 * k) for k in range(1, 16)):
+                e -= 0.15
+            while e - s0 > 0.20 and not any(tem_voz(s0 + 0.01 * k) for k in range(0, 15)):
+                s0 += 0.15
         voz_fraca = fundo + 4
-        while e < min(b + cauda, prox) and nivel(e) >= voz_fraca:
+        while e < min(b + cauda, prox) and nivel(e) >= voz_fraca and tem_voz(e):
             e += 0.01
         if i + 1 == len(aw):
-            while e < min(b + cauda, d) and nivel(e) >= voz_fraca:
+            while e < min(b + cauda, d) and nivel(e) >= voz_fraca and tem_voz(e):
                 e += 0.01
-        while s0 > max(a - ataque, ant) and nivel(s0 - 0.01) >= voz_fraca:
+        while s0 > max(a - ataque, ant) and nivel(s0 - 0.01) >= voz_fraca and tem_voz(s0 - 0.01):
             s0 -= 0.01
         spans.append([s0, e])
     ilhas = []

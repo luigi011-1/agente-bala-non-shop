@@ -37,6 +37,7 @@ MUSICAS = os.environ.get("EDICAO_MUSICAS") or next(
 ENTREGAS = "/mnt/project-files/entregas"
 
 SP, GAP, PAD_IN, PAD_OUT, MIN_ISLAND, JUNTA, W, H, FPS = 1.12, 0.15, 0.05, 0.11, 0.4, 0.05, 1080, 1920, 30
+PAD_OUT_FIM = 0.25  # folga após a ÚLTIMA palavra de cada take (final de palavra baixinho)
 INSERT = 2.5  # segundos do insert mudo (antes da aceleração); --insert 0 = inteiro
 IDIOMA = "en"
 LEGENDA_DINAMICA = True  # Luigi, 2026-10-13: legenda mais dinâmica (Montserrat caixa alta, palavra ativa amarela)
@@ -554,6 +555,10 @@ def ilhas(f, ws):
         x = [max(0, a - PAD_IN), min(d, b + PAD_OUT)]
         if sp and x[0] - sp[-1][1] < JUNTA: sp[-1][1] = x[1]
         else: sp.append(x)
+    # FIM DO TAKE (Luigi 25/11/2026): a última palavra termina baixinho ("-st", "-s", "-m") e fica abaixo do
+    # limiar; com só PAD_OUT o corte seco comia o final dela. A última ilha ganha folga maior.
+    if sp and merged:
+        sp[-1][1] = min(d, max(sp[-1][1], merged[-1][1] + PAD_OUT_FIM))
     return sp
 
 def janela_insert(f, maximo):
@@ -861,7 +866,13 @@ def fantasmas(video, cortes_q, segs=None, src=None):
     return sorted(set(achados))
 
 def silencios(video, d=0.45):
-    return [tuple(x) for x in silencio_rms(video, d)]
+    """Silêncio de verdade (volume baixo) + silêncio DISFARÇADO: trecho sem voz humana coberto por música ou som de
+    ambiente que o Flow gerou (Luigi 26/11/2026). Os dois reprovam fora da rampa/insert mudo."""
+    sil = [tuple(x) for x in silencio_rms(video, d)]
+    for a, b in motor.buracos_sem_voz(video, d):
+        if not any(a < y and b > x for x, y in sil):
+            sil.append((a, b))
+    return sorted(sil)
 
 def sheet(video, tempos, saida, cols=12, larg=120):
     if not tempos:
